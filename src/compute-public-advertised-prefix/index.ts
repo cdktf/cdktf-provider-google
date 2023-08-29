@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix
+// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface ComputePublicAdvertisedPrefixConfig extends cdktf.TerraformMeta
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#description ComputePublicAdvertisedPrefix#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#description ComputePublicAdvertisedPrefix#description}
   */
   readonly description?: string;
   /**
   * The IPv4 address to be used for reverse DNS verification.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#dns_verification_ip ComputePublicAdvertisedPrefix#dns_verification_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#dns_verification_ip ComputePublicAdvertisedPrefix#dns_verification_ip}
   */
   readonly dnsVerificationIp: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#id ComputePublicAdvertisedPrefix#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#id ComputePublicAdvertisedPrefix#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,7 +29,7 @@ export interface ComputePublicAdvertisedPrefixConfig extends cdktf.TerraformMeta
   /**
   * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#ip_cidr_range ComputePublicAdvertisedPrefix#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#ip_cidr_range ComputePublicAdvertisedPrefix#ip_cidr_range}
   */
   readonly ipCidrRange: string;
   /**
@@ -45,27 +40,27 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#name ComputePublicAdvertisedPrefix#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#name ComputePublicAdvertisedPrefix#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#project ComputePublicAdvertisedPrefix#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#project ComputePublicAdvertisedPrefix#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#timeouts ComputePublicAdvertisedPrefix#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#timeouts ComputePublicAdvertisedPrefix#timeouts}
   */
   readonly timeouts?: ComputePublicAdvertisedPrefixTimeouts;
 }
 export interface ComputePublicAdvertisedPrefixTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#create ComputePublicAdvertisedPrefix#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#create ComputePublicAdvertisedPrefix#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#delete ComputePublicAdvertisedPrefix#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix#delete ComputePublicAdvertisedPrefix#delete}
   */
   readonly delete?: string;
 }
@@ -163,7 +158,7 @@ export class ComputePublicAdvertisedPrefixTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix google_compute_public_advertised_prefix}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix google_compute_public_advertised_prefix}
 */
 export class ComputePublicAdvertisedPrefix extends cdktf.TerraformResource {
 
@@ -177,7 +172,7 @@ export class ComputePublicAdvertisedPrefix extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix google_compute_public_advertised_prefix} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_public_advertised_prefix google_compute_public_advertised_prefix} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -188,7 +183,7 @@ export class ComputePublicAdvertisedPrefix extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_public_advertised_prefix',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.79.0',
+        providerVersion: '4.80.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

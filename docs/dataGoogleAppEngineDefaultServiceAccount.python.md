@@ -1,6 +1,6 @@
 # `data_google_app_engine_default_service_account`
 
-Refer to the Terraform Registory for docs: [`data_google_app_engine_default_service_account`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account).
+Refer to the Terraform Registory for docs: [`data_google_app_engine_default_service_account`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account).
 
 # `dataGoogleAppEngineDefaultServiceAccount` Submodule <a name="`dataGoogleAppEngineDefaultServiceAccount` Submodule" id="@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_app_engine_default_serv
 
 ### DataGoogleAppEngineDefaultServiceAccount <a name="DataGoogleAppEngineDefaultServiceAccount" id="@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account google_app_engine_default_service_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account google_app_engine_default_service_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccoun
 | <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccount.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -121,7 +121,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}.
 
 ---
 
@@ -738,8 +738,8 @@ dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccoun
 | <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccountConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccountConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccountConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccountConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAppEngineDefaultServiceAccount.DataGoogleAppEngineDefaultServiceAccountConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}. |
 
 ---
 
@@ -821,7 +821,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#id DataGoogleAppEngineDefaultServiceAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -836,7 +836,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/app_engine_default_service_account#project DataGoogleAppEngineDefaultServiceAccount#project}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_folder_iam_audit_config`
 
-Refer to the Terraform Registory for docs: [`google_folder_iam_audit_config`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config).
+Refer to the Terraform Registory for docs: [`google_folder_iam_audit_config`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config).
 
 # `folderIamAuditConfig` Submodule <a name="`folderIamAuditConfig` Submodule" id="@cdktf/provider-google.folderIamAuditConfig"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_folder_iam_audit_config`](ht
 
 ### FolderIamAuditConfig <a name="FolderIamAuditConfig" id="@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config google_folder_iam_audit_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config google_folder_iam_audit_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer"></a>
 
@@ -47,9 +47,9 @@ FolderIamAuditConfig.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.auditLogConfig">auditLogConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigAuditLogConfig">FolderIamAuditConfigAuditLogConfig</a>></code> | audit_log_config block. |
-| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}. |
+| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}. |
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.service">service</a></code> | <code>java.lang.String</code> | Service which will be enabled for audit logging. The special value allServices covers all services. |
-| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}. |
+| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfig.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}. |
 
 ---
 
@@ -119,7 +119,7 @@ Must be unique amongst siblings in the same scope
 
 audit_log_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#audit_log_config FolderIamAuditConfig#audit_log_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#audit_log_config FolderIamAuditConfig#audit_log_config}
 
 ---
 
@@ -127,7 +127,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}.
 
 ---
 
@@ -137,7 +137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Service which will be enabled for audit logging. The special value allServices covers all services.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#service FolderIamAuditConfig#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#service FolderIamAuditConfig#service}
 
 ---
 
@@ -145,7 +145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -763,7 +763,7 @@ public java.lang.String getLogType();
 
 Permission type for which logging is to be configured. Must be one of DATA_READ, DATA_WRITE, or ADMIN_READ.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#log_type FolderIamAuditConfig#log_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#log_type FolderIamAuditConfig#log_type}
 
 ---
 
@@ -779,7 +779,7 @@ Identities that do not cause logging for this type of permission.
 
 Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#exempted_members FolderIamAuditConfig#exempted_members}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#exempted_members FolderIamAuditConfig#exempted_members}
 
 ---
 
@@ -822,9 +822,9 @@ FolderIamAuditConfigConfig.builder()
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.auditLogConfig">auditLogConfig</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigAuditLogConfig">FolderIamAuditConfigAuditLogConfig</a>></code> | audit_log_config block. |
-| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}. |
+| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}. |
 | <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.service">service</a></code> | <code>java.lang.String</code> | Service which will be enabled for audit logging. The special value allServices covers all services. |
-| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}. |
+| <code><a href="#@cdktf/provider-google.folderIamAuditConfig.FolderIamAuditConfigConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}. |
 
 ---
 
@@ -908,7 +908,7 @@ public java.lang.Object getAuditLogConfig();
 
 audit_log_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#audit_log_config FolderIamAuditConfig#audit_log_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#audit_log_config FolderIamAuditConfig#audit_log_config}
 
 ---
 
@@ -920,7 +920,7 @@ public java.lang.String getFolder();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#folder FolderIamAuditConfig#folder}.
 
 ---
 
@@ -934,7 +934,7 @@ public java.lang.String getService();
 
 Service which will be enabled for audit logging. The special value allServices covers all services.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#service FolderIamAuditConfig#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#service FolderIamAuditConfig#service}
 
 ---
 
@@ -946,7 +946,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_audit_config#id FolderIamAuditConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

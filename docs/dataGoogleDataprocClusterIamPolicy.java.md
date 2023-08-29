@@ -1,6 +1,6 @@
 # `data_google_dataproc_cluster_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_dataproc_cluster_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_dataproc_cluster_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy).
 
 # `dataGoogleDataprocClusterIamPolicy` Submodule <a name="`dataGoogleDataprocClusterIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_dataproc_cluster_iam_po
 
 ### DataGoogleDataprocClusterIamPolicy <a name="DataGoogleDataprocClusterIamPolicy" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy google_dataproc_cluster_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy google_dataproc_cluster_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer"></a>
 
@@ -45,10 +45,10 @@ DataGoogleDataprocClusterIamPolicy.Builder.create(Construct scope, java.lang.Str
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.cluster">cluster</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.cluster">cluster</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -135,7 +135,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}.
 
 ---
 
@@ -143,7 +143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}.
 
 ---
 
@@ -753,10 +753,10 @@ DataGoogleDataprocClusterIamPolicyConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.cluster">cluster</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.cluster">cluster</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}. |
 
 ---
 
@@ -838,7 +838,7 @@ public java.lang.String getCluster();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#cluster DataGoogleDataprocClusterIamPolicy#cluster}.
 
 ---
 
@@ -850,7 +850,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#id DataGoogleDataprocClusterIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -865,7 +865,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#project DataGoogleDataprocClusterIamPolicy#project}.
 
 ---
 
@@ -877,7 +877,7 @@ public java.lang.String getRegion();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/dataproc_cluster_iam_policy#region DataGoogleDataprocClusterIamPolicy#region}.
 
 ---
 

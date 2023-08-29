@@ -1,6 +1,6 @@
 # `data_google_projects`
 
-Refer to the Terraform Registory for docs: [`data_google_projects`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects).
+Refer to the Terraform Registory for docs: [`data_google_projects`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects).
 
 # `dataGoogleProjects` Submodule <a name="`dataGoogleProjects` Submodule" id="@cdktf/provider-google.dataGoogleProjects"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_projects`](https://regi
 
 ### DataGoogleProjects <a name="DataGoogleProjects" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects google_projects}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects google_projects}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleProjects.DataGoogleProjects(
 | <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer.parameter.filter">filter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#filter DataGoogleProjects#filter}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#id DataGoogleProjects#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer.parameter.filter">filter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#filter DataGoogleProjects#filter}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#id DataGoogleProjects#id}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#filter DataGoogleProjects#filter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#filter DataGoogleProjects#filter}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#id DataGoogleProjects#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#id DataGoogleProjects#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -687,8 +687,8 @@ dataGoogleProjects.DataGoogleProjectsConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.property.filter">filter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#filter DataGoogleProjects#filter}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#id DataGoogleProjects#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.property.filter">filter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#filter DataGoogleProjects#filter}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#id DataGoogleProjects#id}. |
 
 ---
 
@@ -770,7 +770,7 @@ filter: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#filter DataGoogleProjects#filter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#filter DataGoogleProjects#filter}.
 
 ---
 
@@ -782,7 +782,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/projects#id DataGoogleProjects#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/projects#id DataGoogleProjects#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

@@ -1,6 +1,6 @@
 # `google_compute_network_firewall_policy_rule`
 
-Refer to the Terraform Registory for docs: [`google_compute_network_firewall_policy_rule`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule).
+Refer to the Terraform Registory for docs: [`google_compute_network_firewall_policy_rule`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule).
 
 # `computeNetworkFirewallPolicyRule` Submodule <a name="`computeNetworkFirewallPolicyRule` Submodule" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_compute_network_firewall_pol
 
 ### ComputeNetworkFirewallPolicyRule <a name="ComputeNetworkFirewallPolicyRule" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule google_compute_network_firewall_policy_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule google_compute_network_firewall_policy_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRule(scope Construct, id *string, config ComputeNetworkFirewallPolicyRuleConfig) ComputeNetworkFirewallPolicyRule
 ```
@@ -372,7 +372,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRule_IsConstruct(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRule_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -947,7 +947,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 &computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRuleConfig {
 	Connection: interface{},
@@ -960,7 +960,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewa
 	Action: *string,
 	Direction: *string,
 	FirewallPolicy: *string,
-	Match: github.com/cdktf/cdktf-provider-google-go/google/v9.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatch,
+	Match: github.com/cdktf/cdktf-provider-google-go/google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatch,
 	Priority: *f64,
 	Description: *string,
 	Disabled: interface{},
@@ -970,7 +970,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewa
 	RuleName: *string,
 	TargetSecureTags: interface{},
 	TargetServiceAccounts: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts,
 }
 ```
 
@@ -993,7 +993,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewa
 | <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.description">Description</a></code> | <code>*string</code> | An optional description for this resource. |
 | <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | Denotes whether the firewall policy rule is disabled. |
 | <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.enableLogging">EnableLogging</a></code> | <code>interface{}</code> | Denotes whether to enable logging for a particular rule. |
-| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#id ComputeNetworkFirewallPolicyRule#id}. |
+| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#id ComputeNetworkFirewallPolicyRule#id}. |
 | <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.project">Project</a></code> | <code>*string</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.ruleName">RuleName</a></code> | <code>*string</code> | An optional name for the rule. This field is not a unique identifier and can be updated. |
 | <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleConfig.property.targetSecureTags">TargetSecureTags</a></code> | <code>interface{}</code> | target_secure_tags block. |
@@ -1082,7 +1082,7 @@ Action *string
 
 The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#action ComputeNetworkFirewallPolicyRule#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#action ComputeNetworkFirewallPolicyRule#action}
 
 ---
 
@@ -1096,7 +1096,7 @@ Direction *string
 
 The direction in which this rule applies. Possible values: INGRESS, EGRESS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#direction ComputeNetworkFirewallPolicyRule#direction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#direction ComputeNetworkFirewallPolicyRule#direction}
 
 ---
 
@@ -1110,7 +1110,7 @@ FirewallPolicy *string
 
 The firewall policy of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#firewall_policy ComputeNetworkFirewallPolicyRule#firewall_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#firewall_policy ComputeNetworkFirewallPolicyRule#firewall_policy}
 
 ---
 
@@ -1124,7 +1124,7 @@ Match ComputeNetworkFirewallPolicyRuleMatch
 
 match block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#match ComputeNetworkFirewallPolicyRule#match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#match ComputeNetworkFirewallPolicyRule#match}
 
 ---
 
@@ -1140,7 +1140,7 @@ An integer indicating the priority of a rule in the list.
 
 The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#priority ComputeNetworkFirewallPolicyRule#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#priority ComputeNetworkFirewallPolicyRule#priority}
 
 ---
 
@@ -1154,7 +1154,7 @@ Description *string
 
 An optional description for this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#description ComputeNetworkFirewallPolicyRule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#description ComputeNetworkFirewallPolicyRule#description}
 
 ---
 
@@ -1170,7 +1170,7 @@ Denotes whether the firewall policy rule is disabled.
 
 When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#disabled ComputeNetworkFirewallPolicyRule#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#disabled ComputeNetworkFirewallPolicyRule#disabled}
 
 ---
 
@@ -1186,7 +1186,7 @@ Denotes whether to enable logging for a particular rule.
 
 If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#enable_logging ComputeNetworkFirewallPolicyRule#enable_logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#enable_logging ComputeNetworkFirewallPolicyRule#enable_logging}
 
 ---
 
@@ -1198,7 +1198,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#id ComputeNetworkFirewallPolicyRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#id ComputeNetworkFirewallPolicyRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1215,7 +1215,7 @@ Project *string
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#project ComputeNetworkFirewallPolicyRule#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#project ComputeNetworkFirewallPolicyRule#project}
 
 ---
 
@@ -1229,7 +1229,7 @@ RuleName *string
 
 An optional name for the rule. This field is not a unique identifier and can be updated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#rule_name ComputeNetworkFirewallPolicyRule#rule_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#rule_name ComputeNetworkFirewallPolicyRule#rule_name}
 
 ---
 
@@ -1243,7 +1243,7 @@ TargetSecureTags interface{}
 
 target_secure_tags block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#target_secure_tags ComputeNetworkFirewallPolicyRule#target_secure_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#target_secure_tags ComputeNetworkFirewallPolicyRule#target_secure_tags}
 
 ---
 
@@ -1257,7 +1257,7 @@ TargetServiceAccounts *[]*string
 
 A list of service accounts indicating the sets of instances that are applied with this rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#target_service_accounts ComputeNetworkFirewallPolicyRule#target_service_accounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#target_service_accounts ComputeNetworkFirewallPolicyRule#target_service_accounts}
 
 ---
 
@@ -1271,7 +1271,7 @@ Timeouts ComputeNetworkFirewallPolicyRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#timeouts ComputeNetworkFirewallPolicyRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#timeouts ComputeNetworkFirewallPolicyRule#timeouts}
 
 ---
 
@@ -1280,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 &computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRuleMatch {
 	Layer4Configs: interface{},
@@ -1327,7 +1327,7 @@ Layer4Configs interface{}
 
 layer4_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#layer4_configs ComputeNetworkFirewallPolicyRule#layer4_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#layer4_configs ComputeNetworkFirewallPolicyRule#layer4_configs}
 
 ---
 
@@ -1343,7 +1343,7 @@ Address groups which should be matched against the traffic destination.
 
 Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#dest_address_groups ComputeNetworkFirewallPolicyRule#dest_address_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#dest_address_groups ComputeNetworkFirewallPolicyRule#dest_address_groups}
 
 ---
 
@@ -1359,7 +1359,7 @@ Domain names that will be used to match against the resolved domain name of dest
 
 Can only be specified if DIRECTION is egress.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#dest_fqdns ComputeNetworkFirewallPolicyRule#dest_fqdns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#dest_fqdns ComputeNetworkFirewallPolicyRule#dest_fqdns}
 
 ---
 
@@ -1373,7 +1373,7 @@ DestIpRanges *[]*string
 
 CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#dest_ip_ranges ComputeNetworkFirewallPolicyRule#dest_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#dest_ip_ranges ComputeNetworkFirewallPolicyRule#dest_ip_ranges}
 
 ---
 
@@ -1389,7 +1389,7 @@ The Unicode country codes whose IP addresses will be used to match against the s
 
 Can only be specified if DIRECTION is egress.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#dest_region_codes ComputeNetworkFirewallPolicyRule#dest_region_codes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#dest_region_codes ComputeNetworkFirewallPolicyRule#dest_region_codes}
 
 ---
 
@@ -1403,7 +1403,7 @@ DestThreatIntelligences *[]*string
 
 Name of the Google Cloud Threat Intelligence list.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#dest_threat_intelligences ComputeNetworkFirewallPolicyRule#dest_threat_intelligences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#dest_threat_intelligences ComputeNetworkFirewallPolicyRule#dest_threat_intelligences}
 
 ---
 
@@ -1419,7 +1419,7 @@ Address groups which should be matched against the traffic source.
 
 Maximum number of source address groups is 10. Source address groups is only supported in Ingress rules.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#src_address_groups ComputeNetworkFirewallPolicyRule#src_address_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#src_address_groups ComputeNetworkFirewallPolicyRule#src_address_groups}
 
 ---
 
@@ -1435,7 +1435,7 @@ Domain names that will be used to match against the resolved domain name of sour
 
 Can only be specified if DIRECTION is ingress.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#src_fqdns ComputeNetworkFirewallPolicyRule#src_fqdns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#src_fqdns ComputeNetworkFirewallPolicyRule#src_fqdns}
 
 ---
 
@@ -1449,7 +1449,7 @@ SrcIpRanges *[]*string
 
 CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#src_ip_ranges ComputeNetworkFirewallPolicyRule#src_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#src_ip_ranges ComputeNetworkFirewallPolicyRule#src_ip_ranges}
 
 ---
 
@@ -1465,7 +1465,7 @@ The Unicode country codes whose IP addresses will be used to match against the s
 
 Can only be specified if DIRECTION is ingress.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#src_region_codes ComputeNetworkFirewallPolicyRule#src_region_codes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#src_region_codes ComputeNetworkFirewallPolicyRule#src_region_codes}
 
 ---
 
@@ -1479,7 +1479,7 @@ SrcSecureTags interface{}
 
 src_secure_tags block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#src_secure_tags ComputeNetworkFirewallPolicyRule#src_secure_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#src_secure_tags ComputeNetworkFirewallPolicyRule#src_secure_tags}
 
 ---
 
@@ -1493,7 +1493,7 @@ SrcThreatIntelligences *[]*string
 
 Name of the Google Cloud Threat Intelligence list.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#src_threat_intelligences ComputeNetworkFirewallPolicyRule#src_threat_intelligences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#src_threat_intelligences ComputeNetworkFirewallPolicyRule#src_threat_intelligences}
 
 ---
 
@@ -1502,7 +1502,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatchLayer4Configs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 &computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRuleMatchLayer4Configs {
 	IpProtocol: *string,
@@ -1531,7 +1531,7 @@ The IP protocol to which this rule applies.
 
 The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#ip_protocol ComputeNetworkFirewallPolicyRule#ip_protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#ip_protocol ComputeNetworkFirewallPolicyRule#ip_protocol}
 
 ---
 
@@ -1547,7 +1547,7 @@ An optional list of ports to which this rule applies.
 
 This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#ports ComputeNetworkFirewallPolicyRule#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#ports ComputeNetworkFirewallPolicyRule#ports}
 
 ---
 
@@ -1556,7 +1556,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatchSrcSecureTags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 &computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRuleMatchSrcSecureTags {
 	Name: *string,
@@ -1588,7 +1588,7 @@ Name of the secure tag, created with TagManager's TagValue API.
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTargetSecureTags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 &computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRuleTargetSecureTags {
 	Name: *string,
@@ -1620,7 +1620,7 @@ Name of the secure tag, created with TagManager's TagValue API.
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 &computenetworkfirewallpolicyrule.ComputeNetworkFirewallPolicyRuleTimeouts {
 	Create: *string,
@@ -1633,9 +1633,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewa
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#create ComputeNetworkFirewallPolicyRule#create}. |
-| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#delete ComputeNetworkFirewallPolicyRule#delete}. |
-| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#update ComputeNetworkFirewallPolicyRule#update}. |
+| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#create ComputeNetworkFirewallPolicyRule#create}. |
+| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#delete ComputeNetworkFirewallPolicyRule#delete}. |
+| <code><a href="#@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#update ComputeNetworkFirewallPolicyRule#update}. |
 
 ---
 
@@ -1647,7 +1647,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#create ComputeNetworkFirewallPolicyRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#create ComputeNetworkFirewallPolicyRule#create}.
 
 ---
 
@@ -1659,7 +1659,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#delete ComputeNetworkFirewallPolicyRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#delete ComputeNetworkFirewallPolicyRule#delete}.
 
 ---
 
@@ -1671,7 +1671,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_firewall_policy_rule#update ComputeNetworkFirewallPolicyRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_network_firewall_policy_rule#update ComputeNetworkFirewallPolicyRule#update}.
 
 ---
 
@@ -1682,7 +1682,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatchLayer4ConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleMatchLayer4ConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeNetworkFirewallPolicyRuleMatchLayer4ConfigsList
 ```
@@ -1825,7 +1825,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatchLayer4ConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleMatchLayer4ConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeNetworkFirewallPolicyRuleMatchLayer4ConfigsOutputReference
 ```
@@ -2143,7 +2143,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleMatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNetworkFirewallPolicyRuleMatchOutputReference
 ```
@@ -2759,7 +2759,7 @@ func InternalValue() ComputeNetworkFirewallPolicyRuleMatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatchSrcSecureTagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleMatchSrcSecureTagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeNetworkFirewallPolicyRuleMatchSrcSecureTagsList
 ```
@@ -2902,7 +2902,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleMatchSrcSecureTagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleMatchSrcSecureTagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeNetworkFirewallPolicyRuleMatchSrcSecureTagsOutputReference
 ```
@@ -3202,7 +3202,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTargetSecureTagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleTargetSecureTagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeNetworkFirewallPolicyRuleTargetSecureTagsList
 ```
@@ -3345,7 +3345,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTargetSecureTagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleTargetSecureTagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeNetworkFirewallPolicyRuleTargetSecureTagsOutputReference
 ```
@@ -3645,7 +3645,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkFirewallPolicyRule.ComputeNetworkFirewallPolicyRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computenetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkfirewallpolicyrule"
 
 computenetworkfirewallpolicyrule.NewComputeNetworkFirewallPolicyRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNetworkFirewallPolicyRuleTimeoutsOutputReference
 ```

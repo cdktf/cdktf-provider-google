@@ -1,6 +1,6 @@
 # `google_logging_linked_dataset`
 
-Refer to the Terraform Registory for docs: [`google_logging_linked_dataset`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset).
+Refer to the Terraform Registory for docs: [`google_logging_linked_dataset`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset).
 
 # `loggingLinkedDataset` Submodule <a name="`loggingLinkedDataset` Submodule" id="@cdktf/provider-google.loggingLinkedDataset"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_logging_linked_dataset`](htt
 
 ### LoggingLinkedDataset <a name="LoggingLinkedDataset" id="@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDataset"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset google_logging_linked_dataset}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset google_logging_linked_dataset}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDataset.Initializer"></a>
 
@@ -823,7 +823,7 @@ const loggingLinkedDatasetConfig: loggingLinkedDataset.LoggingLinkedDatasetConfi
 | <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.linkId">linkId</a></code> | <code>string</code> | The id of the linked dataset. |
 | <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.bigqueryDataset">bigqueryDataset</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetBigqueryDataset">LoggingLinkedDatasetBigqueryDataset</a>[]</code> | bigquery_dataset block. |
 | <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.description">description</a></code> | <code>string</code> | Describes this link. The maximum length of the description is 8000 characters. |
-| <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#id LoggingLinkedDataset#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#id LoggingLinkedDataset#id}. |
 | <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.location">location</a></code> | <code>string</code> | The location of the linked dataset. |
 | <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.parent">parent</a></code> | <code>string</code> | The parent of the linked dataset. |
 | <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetTimeouts">LoggingLinkedDatasetTimeouts</a></code> | timeouts block. |
@@ -910,7 +910,7 @@ public readonly bucket: string;
 
 The bucket to which the linked dataset is attached.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#bucket LoggingLinkedDataset#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#bucket LoggingLinkedDataset#bucket}
 
 ---
 
@@ -924,7 +924,7 @@ public readonly linkId: string;
 
 The id of the linked dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#link_id LoggingLinkedDataset#link_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#link_id LoggingLinkedDataset#link_id}
 
 ---
 
@@ -938,7 +938,7 @@ public readonly bigqueryDataset: IResolvable | LoggingLinkedDatasetBigqueryDatas
 
 bigquery_dataset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#bigquery_dataset LoggingLinkedDataset#bigquery_dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#bigquery_dataset LoggingLinkedDataset#bigquery_dataset}
 
 ---
 
@@ -952,7 +952,7 @@ public readonly description: string;
 
 Describes this link. The maximum length of the description is 8000 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#description LoggingLinkedDataset#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#description LoggingLinkedDataset#description}
 
 ---
 
@@ -964,7 +964,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#id LoggingLinkedDataset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#id LoggingLinkedDataset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -981,7 +981,7 @@ public readonly location: string;
 
 The location of the linked dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#location LoggingLinkedDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#location LoggingLinkedDataset#location}
 
 ---
 
@@ -995,7 +995,7 @@ public readonly parent: string;
 
 The parent of the linked dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#parent LoggingLinkedDataset#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#parent LoggingLinkedDataset#parent}
 
 ---
 
@@ -1009,7 +1009,7 @@ public readonly timeouts: LoggingLinkedDatasetTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#timeouts LoggingLinkedDataset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#timeouts LoggingLinkedDataset#timeouts}
 
 ---
 
@@ -1027,8 +1027,8 @@ const loggingLinkedDatasetTimeouts: loggingLinkedDataset.LoggingLinkedDatasetTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#create LoggingLinkedDataset#create}. |
-| <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#delete LoggingLinkedDataset#delete}. |
+| <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#create LoggingLinkedDataset#create}. |
+| <code><a href="#@cdktf/provider-google.loggingLinkedDataset.LoggingLinkedDatasetTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#delete LoggingLinkedDataset#delete}. |
 
 ---
 
@@ -1040,7 +1040,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#create LoggingLinkedDataset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#create LoggingLinkedDataset#create}.
 
 ---
 
@@ -1052,7 +1052,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#delete LoggingLinkedDataset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/logging_linked_dataset#delete LoggingLinkedDataset#delete}.
 
 ---
 

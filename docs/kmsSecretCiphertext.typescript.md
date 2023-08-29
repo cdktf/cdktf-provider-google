@@ -1,6 +1,6 @@
 # `google_kms_secret_ciphertext`
 
-Refer to the Terraform Registory for docs: [`google_kms_secret_ciphertext`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext).
+Refer to the Terraform Registory for docs: [`google_kms_secret_ciphertext`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext).
 
 # `kmsSecretCiphertext` Submodule <a name="`kmsSecretCiphertext` Submodule" id="@cdktf/provider-google.kmsSecretCiphertext"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_kms_secret_ciphertext`](http
 
 ### KmsSecretCiphertext <a name="KmsSecretCiphertext" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext google_kms_secret_ciphertext}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext google_kms_secret_ciphertext}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext.Initializer"></a>
 
@@ -689,7 +689,7 @@ const kmsSecretCiphertextConfig: kmsSecretCiphertext.KmsSecretCiphertextConfig =
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.cryptoKey">cryptoKey</a></code> | <code>string</code> | The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''. |
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.plaintext">plaintext</a></code> | <code>string</code> | The plaintext to be encrypted. |
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.additionalAuthenticatedData">additionalAuthenticatedData</a></code> | <code>string</code> | The additional authenticated data used for integrity checks during encryption and decryption. |
-| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}. |
+| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}. |
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts">KmsSecretCiphertextTimeouts</a></code> | timeouts block. |
 
 ---
@@ -774,7 +774,7 @@ public readonly cryptoKey: string;
 
 The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#crypto_key KmsSecretCiphertext#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#crypto_key KmsSecretCiphertext#crypto_key}
 
 ---
 
@@ -788,7 +788,7 @@ public readonly plaintext: string;
 
 The plaintext to be encrypted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#plaintext KmsSecretCiphertext#plaintext}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#plaintext KmsSecretCiphertext#plaintext}
 
 ---
 
@@ -802,7 +802,7 @@ public readonly additionalAuthenticatedData: string;
 
 The additional authenticated data used for integrity checks during encryption and decryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#additional_authenticated_data KmsSecretCiphertext#additional_authenticated_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#additional_authenticated_data KmsSecretCiphertext#additional_authenticated_data}
 
 ---
 
@@ -814,7 +814,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -831,7 +831,7 @@ public readonly timeouts: KmsSecretCiphertextTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#timeouts KmsSecretCiphertext#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#timeouts KmsSecretCiphertext#timeouts}
 
 ---
 
@@ -849,8 +849,8 @@ const kmsSecretCiphertextTimeouts: kmsSecretCiphertext.KmsSecretCiphertextTimeou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}. |
-| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}. |
+| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}. |
+| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}. |
 
 ---
 
@@ -862,7 +862,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}.
 
 ---
 
@@ -874,7 +874,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}.
 
 ---
 
