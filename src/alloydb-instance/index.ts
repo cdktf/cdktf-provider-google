@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance
+// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface AlloydbInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#annotations AlloydbInstance#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#annotations AlloydbInstance#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -26,36 +26,36 @@ Zone is automatically chosen from the list of zones in the region specified.
 Read pool of size 1 can only have zonal availability. Read pools with node count of 2 or more
 can have regional availability (nodes are present in 2 or more zones in a region).' Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#availability_type AlloydbInstance#availability_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#availability_type AlloydbInstance#availability_type}
   */
   readonly availabilityType?: string;
   /**
   * Identifies the alloydb cluster. Must be in the format
 'projects/{project}/locations/{location}/clusters/{cluster_id}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#cluster AlloydbInstance#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#cluster AlloydbInstance#cluster}
   */
   readonly cluster: string;
   /**
   * Database flags. Set at instance level. * They are copied from primary instance on read instance creation. * Read instances can set new or override existing flags that are relevant for reads, e.g. for enabling columnar cache on a read instance. Flags set on read instance may or may not be present on primary.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#database_flags AlloydbInstance#database_flags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#database_flags AlloydbInstance#database_flags}
   */
   readonly databaseFlags?: { [key: string]: string };
   /**
   * User-settable and human-readable display name for the Instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#display_name AlloydbInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#display_name AlloydbInstance#display_name}
   */
   readonly displayName?: string;
   /**
   * The Compute Engine zone that the instance should serve from, per https://cloud.google.com/compute/docs/regions-zones This can ONLY be specified for ZONAL instances. If present for a REGIONAL instance, an error will be thrown. If this is absent for a ZONAL instance, instance is created in a random zone with available capacity.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#gce_zone AlloydbInstance#gce_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#gce_zone AlloydbInstance#gce_zone}
   */
   readonly gceZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#id AlloydbInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#id AlloydbInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -64,37 +64,37 @@ can have regional availability (nodes are present in 2 or more zones in a region
   /**
   * The ID of the alloydb instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#instance_id AlloydbInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#instance_id AlloydbInstance#instance_id}
   */
   readonly instanceId: string;
   /**
   * The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY instance in the 'depends_on' meta-data attribute. Possible values: ["PRIMARY", "READ_POOL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#instance_type AlloydbInstance#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#instance_type AlloydbInstance#instance_type}
   */
   readonly instanceType: string;
   /**
   * User-defined labels for the alloydb instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#labels AlloydbInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#labels AlloydbInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * machine_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#machine_config AlloydbInstance#machine_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#machine_config AlloydbInstance#machine_config}
   */
   readonly machineConfig?: AlloydbInstanceMachineConfig;
   /**
   * read_pool_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#read_pool_config AlloydbInstance#read_pool_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#read_pool_config AlloydbInstance#read_pool_config}
   */
   readonly readPoolConfig?: AlloydbInstanceReadPoolConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#timeouts AlloydbInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#timeouts AlloydbInstance#timeouts}
   */
   readonly timeouts?: AlloydbInstanceTimeouts;
 }
@@ -102,7 +102,7 @@ export interface AlloydbInstanceMachineConfig {
   /**
   * The number of CPU's in the VM instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#cpu_count AlloydbInstance#cpu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#cpu_count AlloydbInstance#cpu_count}
   */
   readonly cpuCount?: number;
 }
@@ -169,7 +169,7 @@ export interface AlloydbInstanceReadPoolConfig {
   /**
   * Read capacity, i.e. number of nodes in a read pool instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#node_count AlloydbInstance#node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#node_count AlloydbInstance#node_count}
   */
   readonly nodeCount?: number;
 }
@@ -234,15 +234,15 @@ export class AlloydbInstanceReadPoolConfigOutputReference extends cdktf.ComplexO
 }
 export interface AlloydbInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#create AlloydbInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#create AlloydbInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#delete AlloydbInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#delete AlloydbInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#update AlloydbInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance#update AlloydbInstance#update}
   */
   readonly update?: string;
 }
@@ -363,7 +363,7 @@ export class AlloydbInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance google_alloydb_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance google_alloydb_instance}
 */
 export class AlloydbInstance extends cdktf.TerraformResource {
 
@@ -377,7 +377,7 @@ export class AlloydbInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance google_alloydb_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/alloydb_instance google_alloydb_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -388,7 +388,7 @@ export class AlloydbInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_alloydb_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.79.0',
+        providerVersion: '4.80.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

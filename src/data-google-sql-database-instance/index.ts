@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instance
+// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/sql_database_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instance#id DataGoogleSqlDatabaseInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/sql_database_instance#id DataGoogleSqlDatabaseInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,13 +22,13 @@ export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMeta
   /**
   * The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instance#name DataGoogleSqlDatabaseInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/sql_database_instance#name DataGoogleSqlDatabaseInstance#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instance#project DataGoogleSqlDatabaseInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/sql_database_instance#project DataGoogleSqlDatabaseInstance#project}
   */
   readonly project?: string;
 }
@@ -1114,6 +1114,75 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetwo
     return new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfig {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allowed_consumer_projects - computed: true, optional: false, required: false
+  public get allowedConsumerProjects() {
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_consumer_projects'));
+  }
+
+  // psc_enabled - computed: true, optional: false, required: false
+  public get pscEnabled() {
+    return this.getBooleanAttribute('psc_enabled');
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleSqlDatabaseInstanceSettingsIpConfiguration {
 }
 
@@ -1178,6 +1247,12 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference
   // private_network - computed: true, optional: false, required: false
   public get privateNetwork() {
     return this.getStringAttribute('private_network');
+  }
+
+  // psc_config - computed: true, optional: false, required: false
+  private _pscConfig = new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigList(this, "psc_config", true);
+  public get pscConfig() {
+    return this._pscConfig;
   }
 
   // require_ssl - computed: true, optional: false, required: false
@@ -1724,7 +1799,7 @@ export class DataGoogleSqlDatabaseInstanceSettingsList extends cdktf.ComplexList
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instance google_sql_database_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/sql_database_instance google_sql_database_instance}
 */
 export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
 
@@ -1738,7 +1813,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instance google_sql_database_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/sql_database_instance google_sql_database_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1749,7 +1824,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.79.0',
+        providerVersion: '4.80.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1793,6 +1868,11 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // deletion_protection - computed: true, optional: false, required: false
   public get deletionProtection() {
     return this.getBooleanAttribute('deletion_protection');
+  }
+
+  // dns_name - computed: true, optional: false, required: false
+  public get dnsName() {
+    return this.getStringAttribute('dns_name');
   }
 
   // encryption_key_name - computed: true, optional: false, required: false
@@ -1874,6 +1954,11 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // psc_service_attachment_link - computed: true, optional: false, required: false
+  public get pscServiceAttachmentLink() {
+    return this.getStringAttribute('psc_service_attachment_link');
   }
 
   // public_ip_address - computed: true, optional: false, required: false
