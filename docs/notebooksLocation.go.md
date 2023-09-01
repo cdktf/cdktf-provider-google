@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksLocation.NotebooksLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebookslocation"
 
 notebookslocation.NewNotebooksLocation(scope Construct, id *string, config NotebooksLocationConfig) NotebooksLocation
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.notebooksLocation.NotebooksLocation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebookslocation"
 
 notebookslocation.NotebooksLocation_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.notebooksLocation.NotebooksLocation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebookslocation"
 
 notebookslocation.NotebooksLocation_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ notebookslocation.NotebooksLocation_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.notebooksLocation.NotebooksLocation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebookslocation"
 
 notebookslocation.NotebooksLocation_IsTerraformResource(x interface{}) *bool
 ```
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebookslocation"
 
 &notebookslocation.NotebooksLocationConfig {
 	Connection: interface{},
@@ -668,7 +668,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
 	Id: *string,
 	Name: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.notebooksLocation.NotebooksLocationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.notebooksLocation.NotebooksLocationTimeouts,
 }
 ```
 
@@ -820,7 +820,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebookslocation"
 
 &notebookslocation.NotebooksLocationTimeouts {
 	Create: *string,
@@ -882,7 +882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/notebookslocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebookslocation"
 
 notebookslocation.NewNotebooksLocationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksLocationTimeoutsOutputReference
 ```
