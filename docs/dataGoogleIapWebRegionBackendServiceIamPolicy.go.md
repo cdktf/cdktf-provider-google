@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIapWebRegionBackendServiceIamPolicy.DataGoogleIapWebRegionBackendServiceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleiapwebregionbackendserviceiampolicy"
 
 datagoogleiapwebregionbackendserviceiampolicy.NewDataGoogleIapWebRegionBackendServiceIamPolicy(scope Construct, id *string, config DataGoogleIapWebRegionBackendServiceIamPolicyConfig) DataGoogleIapWebRegionBackendServiceIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleIapWebRegionBackendServiceIamPolicy.DataGoogleIapWebRegionBackendServiceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleiapwebregionbackendserviceiampolicy"
 
 datagoogleiapwebregionbackendserviceiampolicy.DataGoogleIapWebRegionBackendServiceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleIapWebRegionBackendServiceIamPolicy.DataGoogleIapWebRegionBackendServiceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleiapwebregionbackendserviceiampolicy"
 
 datagoogleiapwebregionbackendserviceiampolicy.DataGoogleIapWebRegionBackendServiceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagoogleiapwebregionbackendserviceiampolicy.DataGoogleIapWebRegionBackendServi
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleIapWebRegionBackendServiceIamPolicy.DataGoogleIapWebRegionBackendServiceIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleiapwebregionbackendserviceiampolicy"
 
 datagoogleiapwebregionbackendserviceiampolicy.DataGoogleIapWebRegionBackendServiceIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -624,7 +624,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIapWebRegionBackendServiceIamPolicy.DataGoogleIapWebRegionBackendServiceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleiapwebregionbackendserviceiampolicy"
 
 &datagoogleiapwebregionbackendserviceiampolicy.DataGoogleIapWebRegionBackendServiceIamPolicyConfig {
 	Connection: interface{},
