@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlanIamPolicy.GkeBackupBackupPlanIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkebackupbackupplaniampolicy"
 
 gkebackupbackupplaniampolicy.NewGkeBackupBackupPlanIamPolicy(scope Construct, id *string, config GkeBackupBackupPlanIamPolicyConfig) GkeBackupBackupPlanIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeBackupBackupPlanIamPolicy.GkeBackupBackupPlanIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkebackupbackupplaniampolicy"
 
 gkebackupbackupplaniampolicy.GkeBackupBackupPlanIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeBackupBackupPlanIamPolicy.GkeBackupBackupPlanIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkebackupbackupplaniampolicy"
 
 gkebackupbackupplaniampolicy.GkeBackupBackupPlanIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ gkebackupbackupplaniampolicy.GkeBackupBackupPlanIamPolicy_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeBackupBackupPlanIamPolicy.GkeBackupBackupPlanIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkebackupbackupplaniampolicy"
 
 gkebackupbackupplaniampolicy.GkeBackupBackupPlanIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -657,7 +657,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlanIamPolicy.GkeBackupBackupPlanIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkebackupbackupplaniampolicy"
 
 &gkebackupbackupplaniampolicy.GkeBackupBackupPlanIamPolicyConfig {
 	Connection: interface{},
