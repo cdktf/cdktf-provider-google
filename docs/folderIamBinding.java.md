@@ -1,6 +1,6 @@
 # `google_folder_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_folder_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding).
+Refer to the Terraform Registory for docs: [`google_folder_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding).
 
 # `folderIamBinding` Submodule <a name="`folderIamBinding` Submodule" id="@cdktf/provider-google.folderIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_folder_iam_binding`](https:/
 
 ### FolderIamBinding <a name="FolderIamBinding" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding google_folder_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding google_folder_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer"></a>
 
@@ -46,11 +46,11 @@ FolderIamBinding.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition">FolderIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}. |
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -785,9 +785,9 @@ FolderIamBindingCondition.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}. |
 
 ---
 
@@ -799,7 +799,7 @@ public java.lang.String getExpression();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}.
 
 ---
 
@@ -811,7 +811,7 @@ public java.lang.String getTitle();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}.
 
 ---
 
@@ -823,7 +823,7 @@ public java.lang.String getDescription();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}.
 
 ---
 
@@ -865,11 +865,11 @@ FolderIamBindingConfig.builder()
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.folder">folder</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition">FolderIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}. |
 
 ---
 
@@ -951,7 +951,7 @@ public java.lang.String getFolder();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}.
 
 ---
 
@@ -963,7 +963,7 @@ public java.util.List<java.lang.String> getMembers();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}.
 
 ---
 
@@ -975,7 +975,7 @@ public java.lang.String getRole();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}.
 
 ---
 
@@ -989,7 +989,7 @@ public FolderIamBindingCondition getCondition();
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
 
 ---
 
@@ -1001,7 +1001,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
