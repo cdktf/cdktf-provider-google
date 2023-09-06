@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy
+// https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ComputeRegionTargetHttpsProxyConfig extends cdktf.TerraformMeta
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#description ComputeRegionTargetHttpsProxy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#description ComputeRegionTargetHttpsProxy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#id ComputeRegionTargetHttpsProxy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#id ComputeRegionTargetHttpsProxy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,18 +34,18 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#name ComputeRegionTargetHttpsProxy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#name ComputeRegionTargetHttpsProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#project ComputeRegionTargetHttpsProxy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#project ComputeRegionTargetHttpsProxy#project}
   */
   readonly project?: string;
   /**
   * The Region in which the created target https proxy should reside.
 If it is not provided, the provider region is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#region ComputeRegionTargetHttpsProxy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#region ComputeRegionTargetHttpsProxy#region}
   */
   readonly region?: string;
   /**
@@ -53,34 +53,42 @@ If it is not provided, the provider region is used.
 connections between users and the load balancer. Currently, exactly
 one SSL certificate must be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#ssl_certificates ComputeRegionTargetHttpsProxy#ssl_certificates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#ssl_certificates ComputeRegionTargetHttpsProxy#ssl_certificates}
   */
   readonly sslCertificates: string[];
+  /**
+  * A reference to the Region SslPolicy resource that will be associated with
+the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
+resource will not have any SSL policy configured.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#ssl_policy ComputeRegionTargetHttpsProxy#ssl_policy}
+  */
+  readonly sslPolicy?: string;
   /**
   * A reference to the RegionUrlMap resource that defines the mapping from URL
 to the RegionBackendService.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#url_map ComputeRegionTargetHttpsProxy#url_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#url_map ComputeRegionTargetHttpsProxy#url_map}
   */
   readonly urlMap: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#timeouts ComputeRegionTargetHttpsProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#timeouts ComputeRegionTargetHttpsProxy#timeouts}
   */
   readonly timeouts?: ComputeRegionTargetHttpsProxyTimeouts;
 }
 export interface ComputeRegionTargetHttpsProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#create ComputeRegionTargetHttpsProxy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#create ComputeRegionTargetHttpsProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#delete ComputeRegionTargetHttpsProxy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#delete ComputeRegionTargetHttpsProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy#update ComputeRegionTargetHttpsProxy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy#update ComputeRegionTargetHttpsProxy#update}
   */
   readonly update?: string;
 }
@@ -201,7 +209,7 @@ export class ComputeRegionTargetHttpsProxyTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy google_compute_region_target_https_proxy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy google_compute_region_target_https_proxy}
 */
 export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
 
@@ -215,7 +223,7 @@ export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/compute_region_target_https_proxy google_compute_region_target_https_proxy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/compute_region_target_https_proxy google_compute_region_target_https_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -226,7 +234,7 @@ export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_target_https_proxy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.80.0',
+        providerVersion: '4.81.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -243,6 +251,7 @@ export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._sslCertificates = config.sslCertificates;
+    this._sslPolicy = config.sslPolicy;
     this._urlMap = config.urlMap;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -356,6 +365,22 @@ export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
     return this._sslCertificates;
   }
 
+  // ssl_policy - computed: false, optional: true, required: false
+  private _sslPolicy?: string; 
+  public get sslPolicy() {
+    return this.getStringAttribute('ssl_policy');
+  }
+  public set sslPolicy(value: string) {
+    this._sslPolicy = value;
+  }
+  public resetSslPolicy() {
+    this._sslPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslPolicyInput() {
+    return this._sslPolicy;
+  }
+
   // url_map - computed: false, optional: false, required: true
   private _urlMap?: string; 
   public get urlMap() {
@@ -397,6 +422,7 @@ export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       ssl_certificates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sslCertificates),
+      ssl_policy: cdktf.stringToTerraform(this._sslPolicy),
       url_map: cdktf.stringToTerraform(this._urlMap),
       timeouts: computeRegionTargetHttpsProxyTimeoutsToTerraform(this._timeouts.internalValue),
     };

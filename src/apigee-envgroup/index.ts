@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup
+// https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ApigeeEnvgroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Hostnames of the environment group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#hostnames ApigeeEnvgroup#hostnames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#hostnames ApigeeEnvgroup#hostnames}
   */
   readonly hostnames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#id ApigeeEnvgroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#id ApigeeEnvgroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,34 +28,34 @@ export interface ApigeeEnvgroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * The resource ID of the environment group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#name ApigeeEnvgroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#name ApigeeEnvgroup#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee environment group,
 in the format 'organizations/{{org_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#org_id ApigeeEnvgroup#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#org_id ApigeeEnvgroup#org_id}
   */
   readonly orgId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#timeouts ApigeeEnvgroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#timeouts ApigeeEnvgroup#timeouts}
   */
   readonly timeouts?: ApigeeEnvgroupTimeouts;
 }
 export interface ApigeeEnvgroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#create ApigeeEnvgroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#create ApigeeEnvgroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#delete ApigeeEnvgroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#delete ApigeeEnvgroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup#update ApigeeEnvgroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup#update ApigeeEnvgroup#update}
   */
   readonly update?: string;
 }
@@ -176,7 +176,7 @@ export class ApigeeEnvgroupTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup google_apigee_envgroup}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup google_apigee_envgroup}
 */
 export class ApigeeEnvgroup extends cdktf.TerraformResource {
 
@@ -190,7 +190,7 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/apigee_envgroup google_apigee_envgroup} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/apigee_envgroup google_apigee_envgroup} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -201,7 +201,7 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_envgroup',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.80.0',
+        providerVersion: '4.81.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

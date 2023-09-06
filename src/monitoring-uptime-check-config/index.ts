@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config
+// https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaAr
   /**
   * The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values: ["STATIC_IP_CHECKERS", "VPC_CHECKERS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#checker_type MonitoringUptimeCheckConfig#checker_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#checker_type MonitoringUptimeCheckConfig#checker_type}
   */
   readonly checkerType?: string;
   /**
   * A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#display_name MonitoringUptimeCheckConfig#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#display_name MonitoringUptimeCheckConfig#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#id MonitoringUptimeCheckConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#id MonitoringUptimeCheckConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,59 +34,65 @@ export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaAr
   /**
   * How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#period MonitoringUptimeCheckConfig#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#period MonitoringUptimeCheckConfig#period}
   */
   readonly period?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#project MonitoringUptimeCheckConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#project MonitoringUptimeCheckConfig#project}
   */
   readonly project?: string;
   /**
   * The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#selected_regions MonitoringUptimeCheckConfig#selected_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#selected_regions MonitoringUptimeCheckConfig#selected_regions}
   */
   readonly selectedRegions?: string[];
   /**
   * The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#timeout MonitoringUptimeCheckConfig#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#timeout MonitoringUptimeCheckConfig#timeout}
   */
   readonly timeout: string;
   /**
   * content_matchers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#content_matchers MonitoringUptimeCheckConfig#content_matchers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#content_matchers MonitoringUptimeCheckConfig#content_matchers}
   */
   readonly contentMatchers?: MonitoringUptimeCheckConfigContentMatchers[] | cdktf.IResolvable;
   /**
   * http_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#http_check MonitoringUptimeCheckConfig#http_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#http_check MonitoringUptimeCheckConfig#http_check}
   */
   readonly httpCheck?: MonitoringUptimeCheckConfigHttpCheck;
   /**
   * monitored_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#monitored_resource MonitoringUptimeCheckConfig#monitored_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#monitored_resource MonitoringUptimeCheckConfig#monitored_resource}
   */
   readonly monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource;
   /**
   * resource_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#resource_group MonitoringUptimeCheckConfig#resource_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#resource_group MonitoringUptimeCheckConfig#resource_group}
   */
   readonly resourceGroup?: MonitoringUptimeCheckConfigResourceGroup;
   /**
+  * synthetic_monitor block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#synthetic_monitor MonitoringUptimeCheckConfig#synthetic_monitor}
+  */
+  readonly syntheticMonitor?: MonitoringUptimeCheckConfigSyntheticMonitor;
+  /**
   * tcp_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#tcp_check MonitoringUptimeCheckConfig#tcp_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#tcp_check MonitoringUptimeCheckConfig#tcp_check}
   */
   readonly tcpCheck?: MonitoringUptimeCheckConfigTcpCheck;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#timeouts MonitoringUptimeCheckConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#timeouts MonitoringUptimeCheckConfig#timeouts}
   */
   readonly timeouts?: MonitoringUptimeCheckConfigTimeouts;
 }
@@ -94,13 +100,13 @@ export interface MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher {
   /**
   * Options to perform JSONPath content matching. Default value: "EXACT_MATCH" Possible values: ["EXACT_MATCH", "REGEX_MATCH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#json_matcher MonitoringUptimeCheckConfig#json_matcher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#json_matcher MonitoringUptimeCheckConfig#json_matcher}
   */
   readonly jsonMatcher?: string;
   /**
   * JSONPath within the response output pointing to the expected 'ContentMatcher::content' to match against.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#json_path MonitoringUptimeCheckConfig#json_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#json_path MonitoringUptimeCheckConfig#json_path}
   */
   readonly jsonPath: string;
 }
@@ -187,19 +193,19 @@ export interface MonitoringUptimeCheckConfigContentMatchers {
   /**
   * String or regex content to match (max 1024 bytes)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#content MonitoringUptimeCheckConfig#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#content MonitoringUptimeCheckConfig#content}
   */
   readonly content: string;
   /**
   * The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value: "CONTAINS_STRING" Possible values: ["CONTAINS_STRING", "NOT_CONTAINS_STRING", "MATCHES_REGEX", "NOT_MATCHES_REGEX", "MATCHES_JSON_PATH", "NOT_MATCHES_JSON_PATH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#matcher MonitoringUptimeCheckConfig#matcher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#matcher MonitoringUptimeCheckConfig#matcher}
   */
   readonly matcher?: string;
   /**
   * json_path_matcher block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#json_path_matcher MonitoringUptimeCheckConfig#json_path_matcher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#json_path_matcher MonitoringUptimeCheckConfig#json_path_matcher}
   */
   readonly jsonPathMatcher?: MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher;
 }
@@ -341,13 +347,13 @@ export interface MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodes
   /**
   * A class of status codes to accept. Possible values: ["STATUS_CLASS_1XX", "STATUS_CLASS_2XX", "STATUS_CLASS_3XX", "STATUS_CLASS_4XX", "STATUS_CLASS_5XX", "STATUS_CLASS_ANY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#status_class MonitoringUptimeCheckConfig#status_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#status_class MonitoringUptimeCheckConfig#status_class}
   */
   readonly statusClass?: string;
   /**
   * A status code to accept.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#status_value MonitoringUptimeCheckConfig#status_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#status_value MonitoringUptimeCheckConfig#status_value}
   */
   readonly statusValue?: number;
 }
@@ -469,13 +475,13 @@ export interface MonitoringUptimeCheckConfigHttpCheckAuthInfo {
   /**
   * The password to authenticate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#password MonitoringUptimeCheckConfig#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#password MonitoringUptimeCheckConfig#password}
   */
   readonly password: string;
   /**
   * The username to authenticate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#username MonitoringUptimeCheckConfig#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#username MonitoringUptimeCheckConfig#username}
   */
   readonly username: string;
 }
@@ -559,67 +565,67 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   /**
   * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#body MonitoringUptimeCheckConfig#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#body MonitoringUptimeCheckConfig#body}
   */
   readonly body?: string;
   /**
   * The content type to use for the check. Possible values: ["TYPE_UNSPECIFIED", "URL_ENCODED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#content_type MonitoringUptimeCheckConfig#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#content_type MonitoringUptimeCheckConfig#content_type}
   */
   readonly contentType?: string;
   /**
   * The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#headers MonitoringUptimeCheckConfig#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#headers MonitoringUptimeCheckConfig#headers}
   */
   readonly headers?: { [key: string]: string };
   /**
   * Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#mask_headers MonitoringUptimeCheckConfig#mask_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#mask_headers MonitoringUptimeCheckConfig#mask_headers}
   */
   readonly maskHeaders?: boolean | cdktf.IResolvable;
   /**
   * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with "/", a "/" will be prepended automatically. Optional (defaults to "/").
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#path MonitoringUptimeCheckConfig#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#path MonitoringUptimeCheckConfig#path}
   */
   readonly path?: string;
   /**
   * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
   */
   readonly port?: number;
   /**
   * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value: "GET" Possible values: ["METHOD_UNSPECIFIED", "GET", "POST"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#request_method MonitoringUptimeCheckConfig#request_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#request_method MonitoringUptimeCheckConfig#request_method}
   */
   readonly requestMethod?: string;
   /**
   * If true, use HTTPS instead of HTTP to run the check.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#use_ssl MonitoringUptimeCheckConfig#use_ssl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#use_ssl MonitoringUptimeCheckConfig#use_ssl}
   */
   readonly useSsl?: boolean | cdktf.IResolvable;
   /**
   * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#validate_ssl MonitoringUptimeCheckConfig#validate_ssl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#validate_ssl MonitoringUptimeCheckConfig#validate_ssl}
   */
   readonly validateSsl?: boolean | cdktf.IResolvable;
   /**
   * accepted_response_status_codes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#accepted_response_status_codes MonitoringUptimeCheckConfig#accepted_response_status_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#accepted_response_status_codes MonitoringUptimeCheckConfig#accepted_response_status_codes}
   */
   readonly acceptedResponseStatusCodes?: MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodes[] | cdktf.IResolvable;
   /**
   * auth_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#auth_info MonitoringUptimeCheckConfig#auth_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#auth_info MonitoringUptimeCheckConfig#auth_info}
   */
   readonly authInfo?: MonitoringUptimeCheckConfigHttpCheckAuthInfo;
 }
@@ -916,13 +922,13 @@ export interface MonitoringUptimeCheckConfigMonitoredResource {
   /**
   * Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#labels MonitoringUptimeCheckConfig#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#labels MonitoringUptimeCheckConfig#labels}
   */
   readonly labels: { [key: string]: string };
   /**
   * The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#type MonitoringUptimeCheckConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#type MonitoringUptimeCheckConfig#type}
   */
   readonly type: string;
 }
@@ -1006,13 +1012,13 @@ export interface MonitoringUptimeCheckConfigResourceGroup {
   /**
   * The group of resources being monitored. Should be the 'name' of a group
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#group_id MonitoringUptimeCheckConfig#group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#group_id MonitoringUptimeCheckConfig#group_id}
   */
   readonly groupId?: string;
   /**
   * The resource type of the group members. Possible values: ["RESOURCE_TYPE_UNSPECIFIED", "INSTANCE", "AWS_ELB_LOAD_BALANCER"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#resource_type MonitoringUptimeCheckConfig#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#resource_type MonitoringUptimeCheckConfig#resource_type}
   */
   readonly resourceType?: string;
 }
@@ -1098,11 +1104,139 @@ export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdk
     return this._resourceType;
   }
 }
+export interface MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2 {
+  /**
+  * The fully qualified name of the cloud function resource.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#name MonitoringUptimeCheckConfig#name}
+  */
+  readonly name: string;
+}
+
+export function monitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2ToTerraform(struct?: MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference | MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export class MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+export interface MonitoringUptimeCheckConfigSyntheticMonitor {
+  /**
+  * cloud_function_v2 block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#cloud_function_v2 MonitoringUptimeCheckConfig#cloud_function_v2}
+  */
+  readonly cloudFunctionV2: MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2;
+}
+
+export function monitoringUptimeCheckConfigSyntheticMonitorToTerraform(struct?: MonitoringUptimeCheckConfigSyntheticMonitorOutputReference | MonitoringUptimeCheckConfigSyntheticMonitor): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cloud_function_v2: monitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2ToTerraform(struct!.cloudFunctionV2),
+  }
+}
+
+export class MonitoringUptimeCheckConfigSyntheticMonitorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringUptimeCheckConfigSyntheticMonitor | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cloudFunctionV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudFunctionV2 = this._cloudFunctionV2?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringUptimeCheckConfigSyntheticMonitor | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cloudFunctionV2.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cloudFunctionV2.internalValue = value.cloudFunctionV2;
+    }
+  }
+
+  // cloud_function_v2 - computed: false, optional: false, required: true
+  private _cloudFunctionV2 = new MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference(this, "cloud_function_v2");
+  public get cloudFunctionV2() {
+    return this._cloudFunctionV2;
+  }
+  public putCloudFunctionV2(value: MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2) {
+    this._cloudFunctionV2.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudFunctionV2Input() {
+    return this._cloudFunctionV2.internalValue;
+  }
+}
 export interface MonitoringUptimeCheckConfigTcpCheck {
   /**
   * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
   */
   readonly port: number;
 }
@@ -1164,15 +1298,15 @@ export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.Co
 }
 export interface MonitoringUptimeCheckConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#create MonitoringUptimeCheckConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#create MonitoringUptimeCheckConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#delete MonitoringUptimeCheckConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#delete MonitoringUptimeCheckConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config#update MonitoringUptimeCheckConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config#update MonitoringUptimeCheckConfig#update}
   */
   readonly update?: string;
 }
@@ -1293,7 +1427,7 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config google_monitoring_uptime_check_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config google_monitoring_uptime_check_config}
 */
 export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
 
@@ -1307,7 +1441,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/monitoring_uptime_check_config google_monitoring_uptime_check_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/monitoring_uptime_check_config google_monitoring_uptime_check_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1318,7 +1452,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_uptime_check_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.80.0',
+        providerVersion: '4.81.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1340,6 +1474,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
     this._httpCheck.internalValue = config.httpCheck;
     this._monitoredResource.internalValue = config.monitoredResource;
     this._resourceGroup.internalValue = config.resourceGroup;
+    this._syntheticMonitor.internalValue = config.syntheticMonitor;
     this._tcpCheck.internalValue = config.tcpCheck;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1528,6 +1663,22 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
     return this._resourceGroup.internalValue;
   }
 
+  // synthetic_monitor - computed: false, optional: true, required: false
+  private _syntheticMonitor = new MonitoringUptimeCheckConfigSyntheticMonitorOutputReference(this, "synthetic_monitor");
+  public get syntheticMonitor() {
+    return this._syntheticMonitor;
+  }
+  public putSyntheticMonitor(value: MonitoringUptimeCheckConfigSyntheticMonitor) {
+    this._syntheticMonitor.internalValue = value;
+  }
+  public resetSyntheticMonitor() {
+    this._syntheticMonitor.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get syntheticMonitorInput() {
+    return this._syntheticMonitor.internalValue;
+  }
+
   // tcp_check - computed: false, optional: true, required: false
   private _tcpCheck = new MonitoringUptimeCheckConfigTcpCheckOutputReference(this, "tcp_check");
   public get tcpCheck() {
@@ -1577,6 +1728,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       http_check: monitoringUptimeCheckConfigHttpCheckToTerraform(this._httpCheck.internalValue),
       monitored_resource: monitoringUptimeCheckConfigMonitoredResourceToTerraform(this._monitoredResource.internalValue),
       resource_group: monitoringUptimeCheckConfigResourceGroupToTerraform(this._resourceGroup.internalValue),
+      synthetic_monitor: monitoringUptimeCheckConfigSyntheticMonitorToTerraform(this._syntheticMonitor.internalValue),
       tcp_check: monitoringUptimeCheckConfigTcpCheckToTerraform(this._tcpCheck.internalValue),
       timeouts: monitoringUptimeCheckConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };

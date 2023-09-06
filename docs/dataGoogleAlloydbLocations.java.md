@@ -1,6 +1,6 @@
 # `data_google_alloydb_locations`
 
-Refer to the Terraform Registory for docs: [`data_google_alloydb_locations`](https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations).
+Refer to the Terraform Registory for docs: [`data_google_alloydb_locations`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations).
 
 # `dataGoogleAlloydbLocations` Submodule <a name="`dataGoogleAlloydbLocations` Submodule" id="@cdktf/provider-google.dataGoogleAlloydbLocations"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_alloydb_locations`](htt
 
 ### DataGoogleAlloydbLocations <a name="DataGoogleAlloydbLocations" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations google_alloydb_locations}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations google_alloydb_locations}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer"></a>
 
@@ -43,7 +43,7 @@ DataGoogleAlloydbLocations.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Project ID of the project. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -125,7 +125,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Project ID of the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations#project DataGoogleAlloydbLocations#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations#project DataGoogleAlloydbLocations#project}
 
 ---
 
@@ -671,7 +671,7 @@ DataGoogleAlloydbLocationsConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.project">project</a></code> | <code>java.lang.String</code> | Project ID of the project. |
 
 ---
@@ -754,7 +754,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -771,7 +771,7 @@ public java.lang.String getProject();
 
 Project ID of the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/data-sources/alloydb_locations#project DataGoogleAlloydbLocations#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/alloydb_locations#project DataGoogleAlloydbLocations#project}
 
 ---
 

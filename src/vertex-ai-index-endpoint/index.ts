@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint
+// https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface VertexAiIndexEndpointConfig extends cdktf.TerraformMetaArgument
   /**
   * The description of the Index.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#description VertexAiIndexEndpoint#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#description VertexAiIndexEndpoint#description}
   */
   readonly description?: string;
   /**
   * The display name of the Index. The name can be up to 128 characters long and can consist of any UTF-8 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#display_name VertexAiIndexEndpoint#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#display_name VertexAiIndexEndpoint#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#id VertexAiIndexEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#id VertexAiIndexEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,7 +34,7 @@ export interface VertexAiIndexEndpointConfig extends cdktf.TerraformMetaArgument
   /**
   * The labels with user-defined metadata to organize your Indexes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#labels VertexAiIndexEndpoint#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#labels VertexAiIndexEndpoint#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -43,37 +43,37 @@ Private services access must already be configured for the network. If left unsp
 [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): 'projects/{project}/global/networks/{network}'.
 Where '{project}' is a project number, as in '12345', and '{network}' is network name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#network VertexAiIndexEndpoint#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#network VertexAiIndexEndpoint#network}
   */
   readonly network?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#project VertexAiIndexEndpoint#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#project VertexAiIndexEndpoint#project}
   */
   readonly project?: string;
   /**
   * The region of the index endpoint. eg us-central1
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#region VertexAiIndexEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#region VertexAiIndexEndpoint#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#timeouts VertexAiIndexEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#timeouts VertexAiIndexEndpoint#timeouts}
   */
   readonly timeouts?: VertexAiIndexEndpointTimeouts;
 }
 export interface VertexAiIndexEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#create VertexAiIndexEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#create VertexAiIndexEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#delete VertexAiIndexEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#delete VertexAiIndexEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint#update VertexAiIndexEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint#update VertexAiIndexEndpoint#update}
   */
   readonly update?: string;
 }
@@ -194,7 +194,7 @@ export class VertexAiIndexEndpointTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint google_vertex_ai_index_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint google_vertex_ai_index_endpoint}
 */
 export class VertexAiIndexEndpoint extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class VertexAiIndexEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/vertex_ai_index_endpoint google_vertex_ai_index_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/vertex_ai_index_endpoint google_vertex_ai_index_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -219,7 +219,7 @@ export class VertexAiIndexEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_vertex_ai_index_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.80.0',
+        providerVersion: '4.81.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

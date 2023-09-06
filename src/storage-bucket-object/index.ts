@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object
+// https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,57 +15,57 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   /**
   * The name of the containing bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#bucket StorageBucketObject#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#bucket StorageBucketObject#bucket}
   */
   readonly bucket: string;
   /**
   * Cache-Control directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#cache_control StorageBucketObject#cache_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#cache_control StorageBucketObject#cache_control}
   */
   readonly cacheControl?: string;
   /**
   * Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#content StorageBucketObject#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#content StorageBucketObject#content}
   */
   readonly content?: string;
   /**
   * Content-Disposition of the object data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#content_disposition StorageBucketObject#content_disposition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#content_disposition StorageBucketObject#content_disposition}
   */
   readonly contentDisposition?: string;
   /**
   * Content-Encoding of the object data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#content_encoding StorageBucketObject#content_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#content_encoding StorageBucketObject#content_encoding}
   */
   readonly contentEncoding?: string;
   /**
   * Content-Language of the object data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#content_language StorageBucketObject#content_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#content_language StorageBucketObject#content_language}
   */
   readonly contentLanguage?: string;
   /**
   * Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#content_type StorageBucketObject#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#content_type StorageBucketObject#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}
   */
   readonly detectMd5Hash?: string;
   /**
   * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#event_based_hold StorageBucketObject#event_based_hold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#event_based_hold StorageBucketObject#event_based_hold}
   */
   readonly eventBasedHold?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#id StorageBucketObject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#id StorageBucketObject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -74,49 +74,49 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   /**
   * Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata's kmsKeyName value, if any.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#kms_key_name StorageBucketObject#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#kms_key_name StorageBucketObject#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * User-provided metadata, in key/value pairs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#metadata StorageBucketObject#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#metadata StorageBucketObject#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#name StorageBucketObject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#name StorageBucketObject#name}
   */
   readonly name: string;
   /**
   * A path to the data you want to upload. Must be defined if content is not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#source StorageBucketObject#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#source StorageBucketObject#source}
   */
   readonly source?: string;
   /**
   * The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#storage_class StorageBucketObject#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#storage_class StorageBucketObject#storage_class}
   */
   readonly storageClass?: string;
   /**
   * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#temporary_hold StorageBucketObject#temporary_hold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#temporary_hold StorageBucketObject#temporary_hold}
   */
   readonly temporaryHold?: boolean | cdktf.IResolvable;
   /**
   * customer_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#customer_encryption StorageBucketObject#customer_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#customer_encryption StorageBucketObject#customer_encryption}
   */
   readonly customerEncryption?: StorageBucketObjectCustomerEncryption;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#timeouts StorageBucketObject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#timeouts StorageBucketObject#timeouts}
   */
   readonly timeouts?: StorageBucketObjectTimeouts;
 }
@@ -124,13 +124,13 @@ export interface StorageBucketObjectCustomerEncryption {
   /**
   * The encryption algorithm. Default: AES256
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#encryption_algorithm StorageBucketObject#encryption_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#encryption_algorithm StorageBucketObject#encryption_algorithm}
   */
   readonly encryptionAlgorithm?: string;
   /**
   * Base64 encoded customer supplied encryption key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#encryption_key StorageBucketObject#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#encryption_key StorageBucketObject#encryption_key}
   */
   readonly encryptionKey: string;
 }
@@ -215,15 +215,15 @@ export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.
 }
 export interface StorageBucketObjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#create StorageBucketObject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#create StorageBucketObject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#delete StorageBucketObject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#delete StorageBucketObject#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object#update StorageBucketObject#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object#update StorageBucketObject#update}
   */
   readonly update?: string;
 }
@@ -344,7 +344,7 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object google_storage_bucket_object}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object google_storage_bucket_object}
 */
 export class StorageBucketObject extends cdktf.TerraformResource {
 
@@ -358,7 +358,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.80.0/docs/resources/storage_bucket_object google_storage_bucket_object} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/storage_bucket_object google_storage_bucket_object} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -369,7 +369,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket_object',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.80.0',
+        providerVersion: '4.81.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
