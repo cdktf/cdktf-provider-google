@@ -242,6 +242,7 @@ Object.defineProperty(exports, 'computeRegionDiskIamPolicy', { get: function () 
 Object.defineProperty(exports, 'computeRegionDiskResourcePolicyAttachment', { get: function () { return require('./compute-region-disk-resource-policy-attachment'); } });
 Object.defineProperty(exports, 'computeRegionHealthCheck', { get: function () { return require('./compute-region-health-check'); } });
 Object.defineProperty(exports, 'computeRegionInstanceGroupManager', { get: function () { return require('./compute-region-instance-group-manager'); } });
+Object.defineProperty(exports, 'computeRegionInstanceTemplate', { get: function () { return require('./compute-region-instance-template'); } });
 Object.defineProperty(exports, 'computeRegionNetworkEndpointGroup', { get: function () { return require('./compute-region-network-endpoint-group'); } });
 Object.defineProperty(exports, 'computeRegionNetworkFirewallPolicy', { get: function () { return require('./compute-region-network-firewall-policy'); } });
 Object.defineProperty(exports, 'computeRegionNetworkFirewallPolicyAssociation', { get: function () { return require('./compute-region-network-firewall-policy-association'); } });
@@ -760,6 +761,7 @@ Object.defineProperty(exports, 'dataGoogleComputeNetworkPeering', { get: functio
 Object.defineProperty(exports, 'dataGoogleComputeNodeTypes', { get: function () { return require('./data-google-compute-node-types'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegionDiskIamPolicy', { get: function () { return require('./data-google-compute-region-disk-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegionInstanceGroup', { get: function () { return require('./data-google-compute-region-instance-group'); } });
+Object.defineProperty(exports, 'dataGoogleComputeRegionInstanceTemplate', { get: function () { return require('./data-google-compute-region-instance-template'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegionNetworkEndpointGroup', { get: function () { return require('./data-google-compute-region-network-endpoint-group'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegionSslCertificate', { get: function () { return require('./data-google-compute-region-ssl-certificate'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegions', { get: function () { return require('./data-google-compute-regions'); } });

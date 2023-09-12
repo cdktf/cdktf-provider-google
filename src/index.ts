@@ -242,6 +242,7 @@ export * as computeRegionDiskIamPolicy from './compute-region-disk-iam-policy';
 export * as computeRegionDiskResourcePolicyAttachment from './compute-region-disk-resource-policy-attachment';
 export * as computeRegionHealthCheck from './compute-region-health-check';
 export * as computeRegionInstanceGroupManager from './compute-region-instance-group-manager';
+export * as computeRegionInstanceTemplate from './compute-region-instance-template';
 export * as computeRegionNetworkEndpointGroup from './compute-region-network-endpoint-group';
 export * as computeRegionNetworkFirewallPolicy from './compute-region-network-firewall-policy';
 export * as computeRegionNetworkFirewallPolicyAssociation from './compute-region-network-firewall-policy-association';
@@ -760,6 +761,7 @@ export * as dataGoogleComputeNetworkPeering from './data-google-compute-network-
 export * as dataGoogleComputeNodeTypes from './data-google-compute-node-types';
 export * as dataGoogleComputeRegionDiskIamPolicy from './data-google-compute-region-disk-iam-policy';
 export * as dataGoogleComputeRegionInstanceGroup from './data-google-compute-region-instance-group';
+export * as dataGoogleComputeRegionInstanceTemplate from './data-google-compute-region-instance-template';
 export * as dataGoogleComputeRegionNetworkEndpointGroup from './data-google-compute-region-network-endpoint-group';
 export * as dataGoogleComputeRegionSslCertificate from './data-google-compute-region-ssl-certificate';
 export * as dataGoogleComputeRegions from './data-google-compute-regions';
