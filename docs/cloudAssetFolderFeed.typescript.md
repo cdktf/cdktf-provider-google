@@ -1,6 +1,6 @@
 # `google_cloud_asset_folder_feed`
 
-Refer to the Terraform Registory for docs: [`google_cloud_asset_folder_feed`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed).
+Refer to the Terraform Registory for docs: [`google_cloud_asset_folder_feed`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed).
 
 # `cloudAssetFolderFeed` Submodule <a name="`cloudAssetFolderFeed` Submodule" id="@cdktf/provider-google.cloudAssetFolderFeed"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_cloud_asset_folder_feed`](ht
 
 ### CloudAssetFolderFeed <a name="CloudAssetFolderFeed" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeed"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed google_cloud_asset_folder_feed}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed google_cloud_asset_folder_feed}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeed.Initializer"></a>
 
@@ -864,7 +864,7 @@ public readonly expression: string;
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#expression CloudAssetFolderFeed#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#expression CloudAssetFolderFeed#expression}
 
 ---
 
@@ -881,7 +881,7 @@ Description of the expression.
 This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#description CloudAssetFolderFeed#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#description CloudAssetFolderFeed#description}
 
 ---
 
@@ -895,7 +895,7 @@ public readonly location: string;
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#location CloudAssetFolderFeed#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#location CloudAssetFolderFeed#location}
 
 ---
 
@@ -909,7 +909,7 @@ public readonly title: string;
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#title CloudAssetFolderFeed#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#title CloudAssetFolderFeed#title}
 
 ---
 
@@ -942,7 +942,7 @@ const cloudAssetFolderFeedConfig: cloudAssetFolderFeed.CloudAssetFolderFeedConfi
 | <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConfig.property.assetTypes">assetTypes</a></code> | <code>string[]</code> | A list of types of the assets to receive updates. |
 | <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedCondition">CloudAssetFolderFeedCondition</a></code> | condition block. |
 | <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConfig.property.contentType">contentType</a></code> | <code>string</code> | Asset content type. |
-| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#id CloudAssetFolderFeed#id}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#id CloudAssetFolderFeed#id}. |
 | <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts">CloudAssetFolderFeedTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1030,7 +1030,7 @@ The project whose identity will be used when sending messages to the destination
 It also specifies the project for API
 enablement check, quota, and billing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#billing_project CloudAssetFolderFeed#billing_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#billing_project CloudAssetFolderFeed#billing_project}
 
 ---
 
@@ -1044,7 +1044,7 @@ public readonly feedId: string;
 
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#feed_id CloudAssetFolderFeed#feed_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#feed_id CloudAssetFolderFeed#feed_id}
 
 ---
 
@@ -1058,7 +1058,7 @@ public readonly feedOutputConfig: CloudAssetFolderFeedFeedOutputConfig;
 
 feed_output_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#feed_output_config CloudAssetFolderFeed#feed_output_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#feed_output_config CloudAssetFolderFeed#feed_output_config}
 
 ---
 
@@ -1072,7 +1072,7 @@ public readonly folder: string;
 
 The folder this feed should be created in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#folder CloudAssetFolderFeed#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#folder CloudAssetFolderFeed#folder}
 
 ---
 
@@ -1091,7 +1091,7 @@ assetNames and assetTypes. Only asset updates matching specified assetNames and 
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#asset_names CloudAssetFolderFeed#asset_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#asset_names CloudAssetFolderFeed#asset_names}
 
 ---
 
@@ -1111,7 +1111,7 @@ the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#asset_types CloudAssetFolderFeed#asset_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#asset_types CloudAssetFolderFeed#asset_types}
 
 ---
 
@@ -1125,7 +1125,7 @@ public readonly condition: CloudAssetFolderFeedCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#condition CloudAssetFolderFeed#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#condition CloudAssetFolderFeed#condition}
 
 ---
 
@@ -1141,7 +1141,7 @@ Asset content type.
 
 If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "OS_INVENTORY", "ACCESS_POLICY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#content_type CloudAssetFolderFeed#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#content_type CloudAssetFolderFeed#content_type}
 
 ---
 
@@ -1153,7 +1153,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#id CloudAssetFolderFeed#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#id CloudAssetFolderFeed#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1170,7 +1170,7 @@ public readonly timeouts: CloudAssetFolderFeedTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#timeouts CloudAssetFolderFeed#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#timeouts CloudAssetFolderFeed#timeouts}
 
 ---
 
@@ -1202,7 +1202,7 @@ public readonly pubsubDestination: CloudAssetFolderFeedFeedOutputConfigPubsubDes
 
 pubsub_destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#pubsub_destination CloudAssetFolderFeed#pubsub_destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#pubsub_destination CloudAssetFolderFeed#pubsub_destination}
 
 ---
 
@@ -1234,7 +1234,7 @@ public readonly topic: string;
 
 Destination on Cloud Pubsub topic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#topic CloudAssetFolderFeed#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#topic CloudAssetFolderFeed#topic}
 
 ---
 
@@ -1252,9 +1252,9 @@ const cloudAssetFolderFeedTimeouts: cloudAssetFolderFeed.CloudAssetFolderFeedTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#create CloudAssetFolderFeed#create}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#delete CloudAssetFolderFeed#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#update CloudAssetFolderFeed#update}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#create CloudAssetFolderFeed#create}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#delete CloudAssetFolderFeed#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#update CloudAssetFolderFeed#update}. |
 
 ---
 
@@ -1266,7 +1266,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#create CloudAssetFolderFeed#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#create CloudAssetFolderFeed#create}.
 
 ---
 
@@ -1278,7 +1278,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#delete CloudAssetFolderFeed#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#delete CloudAssetFolderFeed#delete}.
 
 ---
 
@@ -1290,7 +1290,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/cloud_asset_folder_feed#update CloudAssetFolderFeed#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/cloud_asset_folder_feed#update CloudAssetFolderFeed#update}.
 
 ---
 

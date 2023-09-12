@@ -1,6 +1,6 @@
 # `google_access_context_manager_access_policy_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_access_context_manager_access_policy_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member).
+Refer to the Terraform Registory for docs: [`google_access_context_manager_access_policy_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member).
 
 # `accessContextManagerAccessPolicyIamMember` Submodule <a name="`accessContextManagerAccessPolicyIamMember` Submodule" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_access_context_manager_acces
 
 ### AccessContextManagerAccessPolicyIamMember <a name="AccessContextManagerAccessPolicyIamMember" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member google_access_context_manager_access_policy_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member google_access_context_manager_access_policy_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.NewAccessContextManagerAccessPolicyIamMember(scope Construct, id *string, config AccessContextManagerAccessPolicyIamMemberConfig) AccessContextManagerAccessPolicyIamMember
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMem
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 &accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMemberCondition {
 	Expression: *string,
@@ -676,9 +676,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanager
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#expression AccessContextManagerAccessPolicyIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#title AccessContextManagerAccessPolicyIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#description AccessContextManagerAccessPolicyIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#expression AccessContextManagerAccessPolicyIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#title AccessContextManagerAccessPolicyIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#description AccessContextManagerAccessPolicyIamMember#description}. |
 
 ---
 
@@ -690,7 +690,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#expression AccessContextManagerAccessPolicyIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#expression AccessContextManagerAccessPolicyIamMember#expression}.
 
 ---
 
@@ -702,7 +702,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#title AccessContextManagerAccessPolicyIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#title AccessContextManagerAccessPolicyIamMember#title}.
 
 ---
 
@@ -714,7 +714,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#description AccessContextManagerAccessPolicyIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#description AccessContextManagerAccessPolicyIamMember#description}.
 
 ---
 
@@ -723,7 +723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 &accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMemberConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanager
 	Member: *string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v9.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -752,11 +752,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanager
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#member AccessContextManagerAccessPolicyIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#name AccessContextManagerAccessPolicyIamMember#name}. |
-| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#role AccessContextManagerAccessPolicyIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#member AccessContextManagerAccessPolicyIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#name AccessContextManagerAccessPolicyIamMember#name}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#role AccessContextManagerAccessPolicyIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition">AccessContextManagerAccessPolicyIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#id AccessContextManagerAccessPolicyIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#id AccessContextManagerAccessPolicyIamMember#id}. |
 
 ---
 
@@ -838,7 +838,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#member AccessContextManagerAccessPolicyIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#member AccessContextManagerAccessPolicyIamMember#member}.
 
 ---
 
@@ -850,7 +850,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#name AccessContextManagerAccessPolicyIamMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#name AccessContextManagerAccessPolicyIamMember#name}.
 
 ---
 
@@ -862,7 +862,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#role AccessContextManagerAccessPolicyIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#role AccessContextManagerAccessPolicyIamMember#role}.
 
 ---
 
@@ -876,7 +876,7 @@ Condition AccessContextManagerAccessPolicyIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#condition AccessContextManagerAccessPolicyIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#condition AccessContextManagerAccessPolicyIamMember#condition}
 
 ---
 
@@ -888,7 +888,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/access_context_manager_access_policy_iam_member#id AccessContextManagerAccessPolicyIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/access_context_manager_access_policy_iam_member#id AccessContextManagerAccessPolicyIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -902,7 +902,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.NewAccessContextManagerAccessPolicyIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessPolicyIamMemberConditionOutputReference
 ```

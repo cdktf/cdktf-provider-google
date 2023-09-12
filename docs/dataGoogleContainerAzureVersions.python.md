@@ -1,6 +1,6 @@
 # `data_google_container_azure_versions`
 
-Refer to the Terraform Registory for docs: [`data_google_container_azure_versions`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions).
+Refer to the Terraform Registory for docs: [`data_google_container_azure_versions`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions).
 
 # `dataGoogleContainerAzureVersions` Submodule <a name="`dataGoogleContainerAzureVersions` Submodule" id="@cdktf/provider-google.dataGoogleContainerAzureVersions"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_container_azure_version
 
 ### DataGoogleContainerAzureVersions <a name="DataGoogleContainerAzureVersions" id="@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions google_container_azure_versions}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions google_container_azure_versions}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer"></a>
 
@@ -42,9 +42,9 @@ dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions(
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersions.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}. |
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -123,7 +123,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}.
 
 ---
 
@@ -131,7 +131,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}.
 
 ---
 
@@ -745,9 +745,9 @@ dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAzureVersions.DataGoogleContainerAzureVersionsConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}. |
 
 ---
 
@@ -829,7 +829,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#id DataGoogleContainerAzureVersions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -844,7 +844,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#location DataGoogleContainerAzureVersions#location}.
 
 ---
 
@@ -856,7 +856,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/container_azure_versions#project DataGoogleContainerAzureVersions#project}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_dns_response_policy`
 
-Refer to the Terraform Registory for docs: [`google_dns_response_policy`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy).
+Refer to the Terraform Registory for docs: [`google_dns_response_policy`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy).
 
 # `dnsResponsePolicy` Submodule <a name="`dnsResponsePolicy` Submodule" id="@cdktf/provider-google.dnsResponsePolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_dns_response_policy`](https:
 
 ### DnsResponsePolicy <a name="DnsResponsePolicy" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy google_dns_response_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy google_dns_response_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.NewDnsResponsePolicy(scope Construct, id *string, config DnsResponsePolicyConfig) DnsResponsePolicy
 ```
@@ -351,7 +351,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.DnsResponsePolicy_IsConstruct(x interface{}) *bool
 ```
@@ -383,7 +383,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.DnsResponsePolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ dnsresponsepolicy.DnsResponsePolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.DnsResponsePolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -750,7 +750,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 &dnsresponsepolicy.DnsResponsePolicyConfig {
 	Connection: interface{},
@@ -766,7 +766,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
 	Id: *string,
 	Networks: interface{},
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.dnsResponsePolicy.DnsResponsePolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dnsResponsePolicy.DnsResponsePolicyTimeouts,
 }
 ```
 
@@ -784,9 +784,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
 | <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.responsePolicyName">ResponsePolicyName</a></code> | <code>*string</code> | The user assigned name for this Response Policy, such as 'myresponsepolicy'. |
 | <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.description">Description</a></code> | <code>*string</code> | The description of the response policy, such as 'My new response policy'. |
 | <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.gkeClusters">GkeClusters</a></code> | <code>interface{}</code> | gke_clusters block. |
-| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#id DnsResponsePolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#id DnsResponsePolicy#id}. |
 | <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.networks">Networks</a></code> | <code>interface{}</code> | networks block. |
-| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#project DnsResponsePolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#project DnsResponsePolicy#project}. |
 | <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts">DnsResponsePolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -871,7 +871,7 @@ ResponsePolicyName *string
 
 The user assigned name for this Response Policy, such as 'myresponsepolicy'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#response_policy_name DnsResponsePolicy#response_policy_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#response_policy_name DnsResponsePolicy#response_policy_name}
 
 ---
 
@@ -885,7 +885,7 @@ Description *string
 
 The description of the response policy, such as 'My new response policy'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#description DnsResponsePolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#description DnsResponsePolicy#description}
 
 ---
 
@@ -899,7 +899,7 @@ GkeClusters interface{}
 
 gke_clusters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#gke_clusters DnsResponsePolicy#gke_clusters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#gke_clusters DnsResponsePolicy#gke_clusters}
 
 ---
 
@@ -911,7 +911,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#id DnsResponsePolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#id DnsResponsePolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -928,7 +928,7 @@ Networks interface{}
 
 networks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#networks DnsResponsePolicy#networks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#networks DnsResponsePolicy#networks}
 
 ---
 
@@ -940,7 +940,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#project DnsResponsePolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#project DnsResponsePolicy#project}.
 
 ---
 
@@ -954,7 +954,7 @@ Timeouts DnsResponsePolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#timeouts DnsResponsePolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#timeouts DnsResponsePolicy#timeouts}
 
 ---
 
@@ -963,7 +963,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyGkeClusters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 &dnsresponsepolicy.DnsResponsePolicyGkeClusters {
 	GkeClusterName: *string,
@@ -991,7 +991,7 @@ The resource name of the cluster to bind this ManagedZone to.
 This should be specified in the format like
 'projects/* /locations/* /clusters/*'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#gke_cluster_name DnsResponsePolicy#gke_cluster_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#gke_cluster_name DnsResponsePolicy#gke_cluster_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -1002,7 +1002,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 &dnsresponsepolicy.DnsResponsePolicyNetworks {
 	NetworkUrl: *string,
@@ -1027,7 +1027,7 @@ NetworkUrl *string
 
 The fully qualified URL of the VPC network to bind to. This should be formatted like 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#network_url DnsResponsePolicy#network_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#network_url DnsResponsePolicy#network_url}
 
 ---
 
@@ -1036,7 +1036,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 &dnsresponsepolicy.DnsResponsePolicyTimeouts {
 	Create: *string,
@@ -1049,9 +1049,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#create DnsResponsePolicy#create}. |
-| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#delete DnsResponsePolicy#delete}. |
-| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#update DnsResponsePolicy#update}. |
+| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#create DnsResponsePolicy#create}. |
+| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#delete DnsResponsePolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#update DnsResponsePolicy#update}. |
 
 ---
 
@@ -1063,7 +1063,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#create DnsResponsePolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#create DnsResponsePolicy#create}.
 
 ---
 
@@ -1075,7 +1075,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#delete DnsResponsePolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#delete DnsResponsePolicy#delete}.
 
 ---
 
@@ -1087,7 +1087,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/dns_response_policy#update DnsResponsePolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/dns_response_policy#update DnsResponsePolicy#update}.
 
 ---
 
@@ -1098,7 +1098,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyGkeClustersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.NewDnsResponsePolicyGkeClustersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DnsResponsePolicyGkeClustersList
 ```
@@ -1241,7 +1241,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyGkeClustersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.NewDnsResponsePolicyGkeClustersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DnsResponsePolicyGkeClustersOutputReference
 ```
@@ -1530,7 +1530,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.NewDnsResponsePolicyNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DnsResponsePolicyNetworksList
 ```
@@ -1673,7 +1673,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.NewDnsResponsePolicyNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DnsResponsePolicyNetworksOutputReference
 ```
@@ -1962,7 +1962,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsResponsePolicy.DnsResponsePolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dnsresponsepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnsresponsepolicy"
 
 dnsresponsepolicy.NewDnsResponsePolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DnsResponsePolicyTimeoutsOutputReference
 ```

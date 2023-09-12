@@ -1,6 +1,6 @@
 # `google_gke_hub_namespace`
 
-Refer to the Terraform Registory for docs: [`google_gke_hub_namespace`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace).
+Refer to the Terraform Registory for docs: [`google_gke_hub_namespace`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace).
 
 # `gkeHubNamespace` Submodule <a name="`gkeHubNamespace` Submodule" id="@cdktf/provider-google.gkeHubNamespace"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_gke_hub_namespace`](https://
 
 ### GkeHubNamespace <a name="GkeHubNamespace" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace google_gke_hub_namespace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace google_gke_hub_namespace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 gkehubnamespace.NewGkeHubNamespace(scope Construct, id *string, config GkeHubNamespaceConfig) GkeHubNamespace
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 gkehubnamespace.GkeHubNamespace_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 gkehubnamespace.GkeHubNamespace_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ gkehubnamespace.GkeHubNamespace_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespace.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 gkehubnamespace.GkeHubNamespace_IsTerraformResource(x interface{}) *bool
 ```
@@ -747,7 +747,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 &gkehubnamespace.GkeHubNamespaceConfig {
 	Connection: interface{},
@@ -762,7 +762,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
 	ScopeNamespaceId: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.gkeHubNamespace.GkeHubNamespaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gkeHubNamespace.GkeHubNamespaceTimeouts,
 }
 ```
 
@@ -780,8 +780,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
 | <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.scope">Scope</a></code> | <code>*string</code> | The name of the Scope instance. |
 | <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.scopeId">ScopeId</a></code> | <code>*string</code> | Id of the scope. |
 | <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.scopeNamespaceId">ScopeNamespaceId</a></code> | <code>*string</code> | The client-provided identifier of the namespace. |
-| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#id GkeHubNamespace#id}. |
-| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#project GkeHubNamespace#project}. |
+| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#id GkeHubNamespace#id}. |
+| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#project GkeHubNamespace#project}. |
 | <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceTimeouts">GkeHubNamespaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -866,7 +866,7 @@ Scope *string
 
 The name of the Scope instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#scope GkeHubNamespace#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#scope GkeHubNamespace#scope}
 
 ---
 
@@ -880,7 +880,7 @@ ScopeId *string
 
 Id of the scope.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#scope_id GkeHubNamespace#scope_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#scope_id GkeHubNamespace#scope_id}
 
 ---
 
@@ -894,7 +894,7 @@ ScopeNamespaceId *string
 
 The client-provided identifier of the namespace.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#scope_namespace_id GkeHubNamespace#scope_namespace_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#scope_namespace_id GkeHubNamespace#scope_namespace_id}
 
 ---
 
@@ -906,7 +906,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#id GkeHubNamespace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#id GkeHubNamespace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -921,7 +921,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#project GkeHubNamespace#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#project GkeHubNamespace#project}.
 
 ---
 
@@ -935,7 +935,7 @@ Timeouts GkeHubNamespaceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#timeouts GkeHubNamespace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#timeouts GkeHubNamespace#timeouts}
 
 ---
 
@@ -944,7 +944,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceState.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 &gkehubnamespace.GkeHubNamespaceState {
 
@@ -957,7 +957,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 &gkehubnamespace.GkeHubNamespaceTimeouts {
 	Create: *string,
@@ -969,8 +969,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#create GkeHubNamespace#create}. |
-| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#delete GkeHubNamespace#delete}. |
+| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#create GkeHubNamespace#create}. |
+| <code><a href="#@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#delete GkeHubNamespace#delete}. |
 
 ---
 
@@ -982,7 +982,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#create GkeHubNamespace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#create GkeHubNamespace#create}.
 
 ---
 
@@ -994,7 +994,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/resources/gke_hub_namespace#delete GkeHubNamespace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_namespace#delete GkeHubNamespace#delete}.
 
 ---
 
@@ -1005,7 +1005,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceStateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 gkehubnamespace.NewGkeHubNamespaceStateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeHubNamespaceStateList
 ```
@@ -1137,7 +1137,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceStateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 gkehubnamespace.NewGkeHubNamespaceStateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeHubNamespaceStateOutputReference
 ```
@@ -1415,7 +1415,7 @@ func InternalValue() GkeHubNamespaceState
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubNamespace.GkeHubNamespaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/gkehubnamespace"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubnamespace"
 
 gkehubnamespace.NewGkeHubNamespaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubNamespaceTimeoutsOutputReference
 ```

@@ -1,6 +1,6 @@
 # `data_google_monitoring_app_engine_service`
 
-Refer to the Terraform Registory for docs: [`data_google_monitoring_app_engine_service`](https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/monitoring_app_engine_service).
+Refer to the Terraform Registory for docs: [`data_google_monitoring_app_engine_service`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/monitoring_app_engine_service).
 
 # `dataGoogleMonitoringAppEngineService` Submodule <a name="`dataGoogleMonitoringAppEngineService` Submodule" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_monitoring_app_engine_s
 
 ### DataGoogleMonitoringAppEngineService <a name="DataGoogleMonitoringAppEngineService" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/monitoring_app_engine_service google_monitoring_app_engine_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/monitoring_app_engine_service google_monitoring_app_engine_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.NewDataGoogleMonitoringAppEngineService(scope Construct, id *string, config DataGoogleMonitoringAppEngineServiceConfig) DataGoogleMonitoringAppEngineService
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -628,7 +628,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 &datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineServiceConfig {
 	Connection: interface{},
@@ -656,8 +656,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoring
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.property.moduleId">ModuleId</a></code> | <code>*string</code> | The ID of the App Engine module underlying this service. |
-| <code><a href="#@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/monitoring_app_engine_service#id DataGoogleMonitoringAppEngineService#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/monitoring_app_engine_service#project DataGoogleMonitoringAppEngineService#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/monitoring_app_engine_service#id DataGoogleMonitoringAppEngineService#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/monitoring_app_engine_service#project DataGoogleMonitoringAppEngineService#project}. |
 
 ---
 
@@ -744,7 +744,7 @@ The ID of the App Engine module underlying this service.
 Corresponds to the 'moduleId' resource label for a 'gae_app'
 monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/monitoring_app_engine_service#module_id DataGoogleMonitoringAppEngineService#module_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/monitoring_app_engine_service#module_id DataGoogleMonitoringAppEngineService#module_id}
 
 ---
 
@@ -756,7 +756,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/monitoring_app_engine_service#id DataGoogleMonitoringAppEngineService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/monitoring_app_engine_service#id DataGoogleMonitoringAppEngineService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -771,7 +771,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.81.0/docs/data-sources/monitoring_app_engine_service#project DataGoogleMonitoringAppEngineService#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/monitoring_app_engine_service#project DataGoogleMonitoringAppEngineService#project}.
 
 ---
 
@@ -780,7 +780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceTelemetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 &datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineServiceTelemetry {
 
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoring
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceTelemetryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.NewDataGoogleMonitoringAppEngineServiceTelemetryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleMonitoringAppEngineServiceTelemetryList
 ```
@@ -927,7 +927,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceTelemetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.NewDataGoogleMonitoringAppEngineServiceTelemetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleMonitoringAppEngineServiceTelemetryOutputReference
 ```
