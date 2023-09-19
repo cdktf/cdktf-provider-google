@@ -1,6 +1,6 @@
 # `google_firestore_database`
 
-Refer to the Terraform Registory for docs: [`google_firestore_database`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database).
+Refer to the Terraform Registory for docs: [`google_firestore_database`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database).
 
 # `firestoreDatabase` Submodule <a name="`firestoreDatabase` Submodule" id="@cdktf/provider-google.firestoreDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_firestore_database`](https:/
 
 ### FirestoreDatabase <a name="FirestoreDatabase" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database google_firestore_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database google_firestore_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer"></a>
 
@@ -31,6 +31,7 @@ firestoreDatabase.FirestoreDatabase(
   app_engine_integration_mode: str = None,
   concurrency_mode: str = None,
   id: str = None,
+  point_in_time_recovery_enablement: str = None,
   project: str = None,
   timeouts: FirestoreDatabaseTimeouts = None
 )
@@ -52,8 +53,9 @@ firestoreDatabase.FirestoreDatabase(
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.type">type</a></code> | <code>str</code> | The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"]. |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.appEngineIntegrationMode">app_engine_integration_mode</a></code> | <code>str</code> | The App Engine integration mode to use for this database. Possible values: ["ENABLED", "DISABLED"]. |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.concurrencyMode">concurrency_mode</a></code> | <code>str</code> | The concurrency control mode to use for this database. Possible values: ["OPTIMISTIC", "PESSIMISTIC", "OPTIMISTIC_WITH_ENTITY_GROUPS"]. |
-| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#id FirestoreDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#project FirestoreDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#id FirestoreDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.pointInTimeRecoveryEnablement">point_in_time_recovery_enablement</a></code> | <code>str</code> | Whether to enable the PITR feature on this database. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#project FirestoreDatabase#project}. |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts">FirestoreDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -124,7 +126,7 @@ Must be unique amongst siblings in the same scope
 
 The location of the database. Available databases are listed at https://cloud.google.com/firestore/docs/locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
 
 ---
 
@@ -140,7 +142,7 @@ a letter and the last a letter or a number. Must not be
 UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
 "(default)" database id is also valid.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#name FirestoreDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#name FirestoreDatabase#name}
 
 ---
 
@@ -150,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#type FirestoreDatabase#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#type FirestoreDatabase#type}
 
 ---
 
@@ -160,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The App Engine integration mode to use for this database. Possible values: ["ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#app_engine_integration_mode FirestoreDatabase#app_engine_integration_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#app_engine_integration_mode FirestoreDatabase#app_engine_integration_mode}
 
 ---
 
@@ -170,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The concurrency control mode to use for this database. Possible values: ["OPTIMISTIC", "PESSIMISTIC", "OPTIMISTIC_WITH_ENTITY_GROUPS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#concurrency_mode FirestoreDatabase#concurrency_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#concurrency_mode FirestoreDatabase#concurrency_mode}
 
 ---
 
@@ -178,10 +180,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#id FirestoreDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#id FirestoreDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `point_in_time_recovery_enablement`<sup>Optional</sup> <a name="point_in_time_recovery_enablement" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.Initializer.parameter.pointInTimeRecoveryEnablement"></a>
+
+- *Type:* str
+
+Whether to enable the PITR feature on this database.
+
+If 'POINT_IN_TIME_RECOVERY_ENABLED' is selected, reads are supported on selected versions of the data from within the past 7 days.
+versionRetentionPeriod and earliestVersionTime can be used to determine the supported versions. These include reads against any timestamp within the past hour
+and reads against 1-minute snapshots beyond 1 hour and within 7 days.
+If 'POINT_IN_TIME_RECOVERY_DISABLED' is selected, reads are supported on any version of the data from within the past 1 hour. Default value: "POINT_IN_TIME_RECOVERY_DISABLED" Possible values: ["POINT_IN_TIME_RECOVERY_ENABLED", "POINT_IN_TIME_RECOVERY_DISABLED"]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#point_in_time_recovery_enablement FirestoreDatabase#point_in_time_recovery_enablement}
 
 ---
 
@@ -189,7 +206,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#project FirestoreDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#project FirestoreDatabase#project}.
 
 ---
 
@@ -199,7 +216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#timeouts FirestoreDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#timeouts FirestoreDatabase#timeouts}
 
 ---
 
@@ -227,6 +244,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetAppEngineIntegrationMode">reset_app_engine_integration_mode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetConcurrencyMode">reset_concurrency_mode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetPointInTimeRecoveryEnablement">reset_point_in_time_recovery_enablement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetProject">reset_project</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetTimeouts">reset_timeouts</a></code> | *No description.* |
 
@@ -455,7 +473,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#create FirestoreDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#create FirestoreDatabase#create}.
 
 ---
 
@@ -463,7 +481,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}.
 
 ---
 
@@ -471,7 +489,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#update FirestoreDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#update FirestoreDatabase#update}.
 
 ---
 
@@ -491,6 +509,12 @@ def reset_concurrency_mode() -> None
 
 ```python
 def reset_id() -> None
+```
+
+##### `reset_point_in_time_recovery_enablement` <a name="reset_point_in_time_recovery_enablement" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetPointInTimeRecoveryEnablement"></a>
+
+```python
+def reset_point_in_time_recovery_enablement() -> None
 ```
 
 ##### `reset_project` <a name="reset_project" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.resetProject"></a>
@@ -600,14 +624,19 @@ firestoreDatabase.FirestoreDatabase.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.earliestVersionTime">earliest_version_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.etag">etag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.keyPrefix">key_prefix</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeoutsOutputReference">FirestoreDatabaseTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.uid">uid</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.updateTime">update_time</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.versionRetentionPeriod">version_retention_period</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.appEngineIntegrationModeInput">app_engine_integration_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.concurrencyModeInput">concurrency_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.locationIdInput">location_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.pointInTimeRecoveryEnablementInput">point_in_time_recovery_enablement_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts">FirestoreDatabaseTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
@@ -616,6 +645,7 @@ firestoreDatabase.FirestoreDatabase.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.locationId">location_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.name">name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.pointInTimeRecoveryEnablement">point_in_time_recovery_enablement</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.project">project</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.type">type</a></code> | <code>str</code> | *No description.* |
 
@@ -773,6 +803,16 @@ create_time: str
 
 ---
 
+##### `earliest_version_time`<sup>Required</sup> <a name="earliest_version_time" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.earliestVersionTime"></a>
+
+```python
+earliest_version_time: str
+```
+
+- *Type:* str
+
+---
+
 ##### `etag`<sup>Required</sup> <a name="etag" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.etag"></a>
 
 ```python
@@ -800,6 +840,36 @@ timeouts: FirestoreDatabaseTimeoutsOutputReference
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeoutsOutputReference">FirestoreDatabaseTimeoutsOutputReference</a>
+
+---
+
+##### `uid`<sup>Required</sup> <a name="uid" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.uid"></a>
+
+```python
+uid: str
+```
+
+- *Type:* str
+
+---
+
+##### `update_time`<sup>Required</sup> <a name="update_time" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.updateTime"></a>
+
+```python
+update_time: str
+```
+
+- *Type:* str
+
+---
+
+##### `version_retention_period`<sup>Required</sup> <a name="version_retention_period" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.versionRetentionPeriod"></a>
+
+```python
+version_retention_period: str
+```
+
+- *Type:* str
 
 ---
 
@@ -847,6 +917,16 @@ location_id_input: str
 
 ```python
 name_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `point_in_time_recovery_enablement_input`<sup>Optional</sup> <a name="point_in_time_recovery_enablement_input" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.pointInTimeRecoveryEnablementInput"></a>
+
+```python
+point_in_time_recovery_enablement_input: str
 ```
 
 - *Type:* str
@@ -933,6 +1013,16 @@ name: str
 
 ---
 
+##### `point_in_time_recovery_enablement`<sup>Required</sup> <a name="point_in_time_recovery_enablement" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.pointInTimeRecoveryEnablement"></a>
+
+```python
+point_in_time_recovery_enablement: str
+```
+
+- *Type:* str
+
+---
+
 ##### `project`<sup>Required</sup> <a name="project" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabase.property.project"></a>
 
 ```python
@@ -994,6 +1084,7 @@ firestoreDatabase.FirestoreDatabaseConfig(
   app_engine_integration_mode: str = None,
   concurrency_mode: str = None,
   id: str = None,
+  point_in_time_recovery_enablement: str = None,
   project: str = None,
   timeouts: FirestoreDatabaseTimeouts = None
 )
@@ -1015,8 +1106,9 @@ firestoreDatabase.FirestoreDatabaseConfig(
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.type">type</a></code> | <code>str</code> | The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"]. |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.appEngineIntegrationMode">app_engine_integration_mode</a></code> | <code>str</code> | The App Engine integration mode to use for this database. Possible values: ["ENABLED", "DISABLED"]. |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.concurrencyMode">concurrency_mode</a></code> | <code>str</code> | The concurrency control mode to use for this database. Possible values: ["OPTIMISTIC", "PESSIMISTIC", "OPTIMISTIC_WITH_ENTITY_GROUPS"]. |
-| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#id FirestoreDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#project FirestoreDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#id FirestoreDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.pointInTimeRecoveryEnablement">point_in_time_recovery_enablement</a></code> | <code>str</code> | Whether to enable the PITR feature on this database. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#project FirestoreDatabase#project}. |
 | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts">FirestoreDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1101,7 +1193,7 @@ location_id: str
 
 The location of the database. Available databases are listed at https://cloud.google.com/firestore/docs/locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
 
 ---
 
@@ -1121,7 +1213,7 @@ a letter and the last a letter or a number. Must not be
 UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
 "(default)" database id is also valid.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#name FirestoreDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#name FirestoreDatabase#name}
 
 ---
 
@@ -1135,7 +1227,7 @@ type: str
 
 The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#type FirestoreDatabase#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#type FirestoreDatabase#type}
 
 ---
 
@@ -1149,7 +1241,7 @@ app_engine_integration_mode: str
 
 The App Engine integration mode to use for this database. Possible values: ["ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#app_engine_integration_mode FirestoreDatabase#app_engine_integration_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#app_engine_integration_mode FirestoreDatabase#app_engine_integration_mode}
 
 ---
 
@@ -1163,7 +1255,7 @@ concurrency_mode: str
 
 The concurrency control mode to use for this database. Possible values: ["OPTIMISTIC", "PESSIMISTIC", "OPTIMISTIC_WITH_ENTITY_GROUPS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#concurrency_mode FirestoreDatabase#concurrency_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#concurrency_mode FirestoreDatabase#concurrency_mode}
 
 ---
 
@@ -1175,10 +1267,29 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#id FirestoreDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#id FirestoreDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `point_in_time_recovery_enablement`<sup>Optional</sup> <a name="point_in_time_recovery_enablement" id="@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseConfig.property.pointInTimeRecoveryEnablement"></a>
+
+```python
+point_in_time_recovery_enablement: str
+```
+
+- *Type:* str
+
+Whether to enable the PITR feature on this database.
+
+If 'POINT_IN_TIME_RECOVERY_ENABLED' is selected, reads are supported on selected versions of the data from within the past 7 days.
+versionRetentionPeriod and earliestVersionTime can be used to determine the supported versions. These include reads against any timestamp within the past hour
+and reads against 1-minute snapshots beyond 1 hour and within 7 days.
+If 'POINT_IN_TIME_RECOVERY_DISABLED' is selected, reads are supported on any version of the data from within the past 1 hour. Default value: "POINT_IN_TIME_RECOVERY_DISABLED" Possible values: ["POINT_IN_TIME_RECOVERY_ENABLED", "POINT_IN_TIME_RECOVERY_DISABLED"]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#point_in_time_recovery_enablement FirestoreDatabase#point_in_time_recovery_enablement}
 
 ---
 
@@ -1190,7 +1301,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#project FirestoreDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#project FirestoreDatabase#project}.
 
 ---
 
@@ -1204,7 +1315,7 @@ timeouts: FirestoreDatabaseTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#timeouts FirestoreDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#timeouts FirestoreDatabase#timeouts}
 
 ---
 
@@ -1226,9 +1337,9 @@ firestoreDatabase.FirestoreDatabaseTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#create FirestoreDatabase#create}. |
-| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}. |
-| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#update FirestoreDatabase#update}. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#create FirestoreDatabase#create}. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}. |
+| <code><a href="#@cdktf/provider-google.firestoreDatabase.FirestoreDatabaseTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#update FirestoreDatabase#update}. |
 
 ---
 
@@ -1240,7 +1351,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#create FirestoreDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#create FirestoreDatabase#create}.
 
 ---
 
@@ -1252,7 +1363,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}.
 
 ---
 
@@ -1264,7 +1375,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firestore_database#update FirestoreDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firestore_database#update FirestoreDatabase#update}.
 
 ---
 

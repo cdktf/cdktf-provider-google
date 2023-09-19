@@ -1,6 +1,6 @@
 # `data_google_tpu_tensorflow_versions`
 
-Refer to the Terraform Registory for docs: [`data_google_tpu_tensorflow_versions`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions).
+Refer to the Terraform Registory for docs: [`data_google_tpu_tensorflow_versions`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions).
 
 # `dataGoogleTpuTensorflowVersions` Submodule <a name="`dataGoogleTpuTensorflowVersions` Submodule" id="@cdktf/provider-google.dataGoogleTpuTensorflowVersions"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_tpu_tensorflow_versions
 
 ### DataGoogleTpuTensorflowVersions <a name="DataGoogleTpuTensorflowVersions" id="@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersions"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions google_tpu_tensorflow_versions}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions google_tpu_tensorflow_versions}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersions.Initializer"></a>
 
@@ -618,9 +618,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogletputensorf
 | <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions#id DataGoogleTpuTensorflowVersions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions#project DataGoogleTpuTensorflowVersions#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.zone">Zone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions#zone DataGoogleTpuTensorflowVersions#zone}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions#id DataGoogleTpuTensorflowVersions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions#project DataGoogleTpuTensorflowVersions#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTpuTensorflowVersions.DataGoogleTpuTensorflowVersionsConfig.property.zone">Zone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions#zone DataGoogleTpuTensorflowVersions#zone}. |
 
 ---
 
@@ -702,7 +702,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions#id DataGoogleTpuTensorflowVersions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions#id DataGoogleTpuTensorflowVersions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -717,7 +717,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions#project DataGoogleTpuTensorflowVersions#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions#project DataGoogleTpuTensorflowVersions#project}.
 
 ---
 
@@ -729,7 +729,7 @@ Zone *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/tpu_tensorflow_versions#zone DataGoogleTpuTensorflowVersions#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/tpu_tensorflow_versions#zone DataGoogleTpuTensorflowVersions#zone}.
 
 ---
 

@@ -46,6 +46,7 @@ Object.defineProperty(exports, 'apigeeOrganization', { get: function () { return
 Object.defineProperty(exports, 'apigeeSharedflow', { get: function () { return require('./apigee-sharedflow'); } });
 Object.defineProperty(exports, 'apigeeSharedflowDeployment', { get: function () { return require('./apigee-sharedflow-deployment'); } });
 Object.defineProperty(exports, 'apigeeSyncAuthorization', { get: function () { return require('./apigee-sync-authorization'); } });
+Object.defineProperty(exports, 'apigeeTargetServer', { get: function () { return require('./apigee-target-server'); } });
 Object.defineProperty(exports, 'apikeysKey', { get: function () { return require('./apikeys-key'); } });
 Object.defineProperty(exports, 'appEngineApplication', { get: function () { return require('./app-engine-application'); } });
 Object.defineProperty(exports, 'appEngineApplicationUrlDispatchRules', { get: function () { return require('./app-engine-application-url-dispatch-rules'); } });
@@ -65,6 +66,7 @@ Object.defineProperty(exports, 'beyondcorpAppConnector', { get: function () { re
 Object.defineProperty(exports, 'beyondcorpAppGateway', { get: function () { return require('./beyondcorp-app-gateway'); } });
 Object.defineProperty(exports, 'biglakeCatalog', { get: function () { return require('./biglake-catalog'); } });
 Object.defineProperty(exports, 'biglakeDatabase', { get: function () { return require('./biglake-database'); } });
+Object.defineProperty(exports, 'biglakeTable', { get: function () { return require('./biglake-table'); } });
 Object.defineProperty(exports, 'bigqueryAnalyticsHubDataExchange', { get: function () { return require('./bigquery-analytics-hub-data-exchange'); } });
 Object.defineProperty(exports, 'bigqueryAnalyticsHubDataExchangeIamBinding', { get: function () { return require('./bigquery-analytics-hub-data-exchange-iam-binding'); } });
 Object.defineProperty(exports, 'bigqueryAnalyticsHubDataExchangeIamMember', { get: function () { return require('./bigquery-analytics-hub-data-exchange-iam-member'); } });
@@ -325,6 +327,7 @@ Object.defineProperty(exports, 'dataLossPreventionDeidentifyTemplate', { get: fu
 Object.defineProperty(exports, 'dataLossPreventionInspectTemplate', { get: function () { return require('./data-loss-prevention-inspect-template'); } });
 Object.defineProperty(exports, 'dataLossPreventionJobTrigger', { get: function () { return require('./data-loss-prevention-job-trigger'); } });
 Object.defineProperty(exports, 'dataLossPreventionStoredInfoType', { get: function () { return require('./data-loss-prevention-stored-info-type'); } });
+Object.defineProperty(exports, 'dataPipelinePipeline', { get: function () { return require('./data-pipeline-pipeline'); } });
 Object.defineProperty(exports, 'databaseMigrationServiceConnectionProfile', { get: function () { return require('./database-migration-service-connection-profile'); } });
 Object.defineProperty(exports, 'dataflowJob', { get: function () { return require('./dataflow-job'); } });
 Object.defineProperty(exports, 'dataplexAsset', { get: function () { return require('./dataplex-asset'); } });
@@ -376,6 +379,7 @@ Object.defineProperty(exports, 'dialogflowCxEnvironment', { get: function () { r
 Object.defineProperty(exports, 'dialogflowCxFlow', { get: function () { return require('./dialogflow-cx-flow'); } });
 Object.defineProperty(exports, 'dialogflowCxIntent', { get: function () { return require('./dialogflow-cx-intent'); } });
 Object.defineProperty(exports, 'dialogflowCxPage', { get: function () { return require('./dialogflow-cx-page'); } });
+Object.defineProperty(exports, 'dialogflowCxTestCase', { get: function () { return require('./dialogflow-cx-test-case'); } });
 Object.defineProperty(exports, 'dialogflowCxVersion', { get: function () { return require('./dialogflow-cx-version'); } });
 Object.defineProperty(exports, 'dialogflowCxWebhook', { get: function () { return require('./dialogflow-cx-webhook'); } });
 Object.defineProperty(exports, 'dialogflowEntityType', { get: function () { return require('./dialogflow-entity-type'); } });
@@ -663,6 +667,7 @@ Object.defineProperty(exports, 'storageBucketObject', { get: function () { retur
 Object.defineProperty(exports, 'storageDefaultObjectAccessControl', { get: function () { return require('./storage-default-object-access-control'); } });
 Object.defineProperty(exports, 'storageDefaultObjectAcl', { get: function () { return require('./storage-default-object-acl'); } });
 Object.defineProperty(exports, 'storageHmacKey', { get: function () { return require('./storage-hmac-key'); } });
+Object.defineProperty(exports, 'storageInsightsReportConfig', { get: function () { return require('./storage-insights-report-config'); } });
 Object.defineProperty(exports, 'storageNotification', { get: function () { return require('./storage-notification'); } });
 Object.defineProperty(exports, 'storageObjectAccessControl', { get: function () { return require('./storage-object-access-control'); } });
 Object.defineProperty(exports, 'storageObjectAcl', { get: function () { return require('./storage-object-acl'); } });

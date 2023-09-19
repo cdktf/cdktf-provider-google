@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version
+// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,13 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The deletion policy for the secret version. Setting 'ABANDON' allows the resource
+to be abandoned rather than deleted. Setting 'DISABLE' allows the resource to be
+disabled rather than deleted. Default is 'DELETE'. Possible values are:
+  * DELETE
+  * DISABLE
+  * ABANDON
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#deletion_policy SecretManagerSecretVersion#deletion_policy}
+  */
+  readonly deletionPolicy?: string;
+  /**
   * The current state of the SecretVersion.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version#enabled SecretManagerSecretVersion#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#enabled SecretManagerSecretVersion#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version#id SecretManagerSecretVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#id SecretManagerSecretVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,29 +39,29 @@ export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArg
   /**
   * Secret Manager secret resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version#secret SecretManagerSecretVersion#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#secret SecretManagerSecretVersion#secret}
   */
   readonly secret: string;
   /**
   * The secret data. Must be no larger than 64KiB.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version#secret_data SecretManagerSecretVersion#secret_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#secret_data SecretManagerSecretVersion#secret_data}
   */
   readonly secretData: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version#timeouts SecretManagerSecretVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#timeouts SecretManagerSecretVersion#timeouts}
   */
   readonly timeouts?: SecretManagerSecretVersionTimeouts;
 }
 export interface SecretManagerSecretVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version#create SecretManagerSecretVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#create SecretManagerSecretVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version#delete SecretManagerSecretVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version#delete SecretManagerSecretVersion#delete}
   */
   readonly delete?: string;
 }
@@ -148,7 +159,7 @@ export class SecretManagerSecretVersionTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version google_secret_manager_secret_version}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version google_secret_manager_secret_version}
 */
 export class SecretManagerSecretVersion extends cdktf.TerraformResource {
 
@@ -162,7 +173,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/secret_manager_secret_version google_secret_manager_secret_version} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/secret_manager_secret_version google_secret_manager_secret_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +184,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_secret_manager_secret_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.82.0',
+        providerVersion: '4.83.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -184,6 +195,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._deletionPolicy = config.deletionPolicy;
     this._enabled = config.enabled;
     this._id = config.id;
     this._secret = config.secret;
@@ -198,6 +210,22 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
+  }
+
+  // deletion_policy - computed: false, optional: true, required: false
+  private _deletionPolicy?: string; 
+  public get deletionPolicy() {
+    return this.getStringAttribute('deletion_policy');
+  }
+  public set deletionPolicy(value: string) {
+    this._deletionPolicy = value;
+  }
+  public resetDeletionPolicy() {
+    this._deletionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionPolicyInput() {
+    return this._deletionPolicy;
   }
 
   // destroy_time - computed: true, optional: false, required: false
@@ -295,6 +323,7 @@ export class SecretManagerSecretVersion extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
       enabled: cdktf.booleanToTerraform(this._enabled),
       id: cdktf.stringToTerraform(this._id),
       secret: cdktf.stringToTerraform(this._secret),

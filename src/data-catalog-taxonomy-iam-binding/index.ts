@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface DataCatalogTaxonomyIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#id DataCatalogTaxonomyIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#id DataCatalogTaxonomyIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#members DataCatalogTaxonomyIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#members DataCatalogTaxonomyIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#project DataCatalogTaxonomyIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#project DataCatalogTaxonomyIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#region DataCatalogTaxonomyIamBinding#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#region DataCatalogTaxonomyIamBinding#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#role DataCatalogTaxonomyIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#role DataCatalogTaxonomyIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#taxonomy DataCatalogTaxonomyIamBinding#taxonomy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#taxonomy DataCatalogTaxonomyIamBinding#taxonomy}
   */
   readonly taxonomy: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#condition DataCatalogTaxonomyIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#condition DataCatalogTaxonomyIamBinding#condition}
   */
   readonly condition?: DataCatalogTaxonomyIamBindingCondition;
 }
 export interface DataCatalogTaxonomyIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#description DataCatalogTaxonomyIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#description DataCatalogTaxonomyIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#expression DataCatalogTaxonomyIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#expression DataCatalogTaxonomyIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding#title DataCatalogTaxonomyIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding#title DataCatalogTaxonomyIamBinding#title}
   */
   readonly title: string;
 }
@@ -161,7 +161,7 @@ export class DataCatalogTaxonomyIamBindingConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding google_data_catalog_taxonomy_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding google_data_catalog_taxonomy_iam_binding}
 */
 export class DataCatalogTaxonomyIamBinding extends cdktf.TerraformResource {
 
@@ -175,7 +175,7 @@ export class DataCatalogTaxonomyIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/data_catalog_taxonomy_iam_binding google_data_catalog_taxonomy_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/data_catalog_taxonomy_iam_binding google_data_catalog_taxonomy_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,7 +186,7 @@ export class DataCatalogTaxonomyIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_taxonomy_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.82.0',
+        providerVersion: '4.83.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

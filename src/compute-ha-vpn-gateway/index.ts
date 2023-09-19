@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway
+// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ComputeHaVpnGatewayConfig extends cdktf.TerraformMetaArguments 
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#description ComputeHaVpnGateway#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#description ComputeHaVpnGateway#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#id ComputeHaVpnGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#id ComputeHaVpnGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,52 +34,52 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#name ComputeHaVpnGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#name ComputeHaVpnGateway#name}
   */
   readonly name: string;
   /**
   * The network this VPN gateway is accepting traffic for.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#network ComputeHaVpnGateway#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#network ComputeHaVpnGateway#network}
   */
   readonly network: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#project ComputeHaVpnGateway#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#project ComputeHaVpnGateway#project}
   */
   readonly project?: string;
   /**
   * The region this gateway should sit in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#region ComputeHaVpnGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#region ComputeHaVpnGateway#region}
   */
   readonly region?: string;
   /**
   * The stack type for this VPN gateway to identify the IP protocols that are enabled.
 If not specified, IPV4_ONLY will be used. Default value: "IPV4_ONLY" Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#stack_type ComputeHaVpnGateway#stack_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#stack_type ComputeHaVpnGateway#stack_type}
   */
   readonly stackType?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#timeouts ComputeHaVpnGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#timeouts ComputeHaVpnGateway#timeouts}
   */
   readonly timeouts?: ComputeHaVpnGatewayTimeouts;
   /**
   * vpn_interfaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#vpn_interfaces ComputeHaVpnGateway#vpn_interfaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#vpn_interfaces ComputeHaVpnGateway#vpn_interfaces}
   */
   readonly vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable;
 }
 export interface ComputeHaVpnGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#create ComputeHaVpnGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#create ComputeHaVpnGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#delete ComputeHaVpnGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#delete ComputeHaVpnGateway#delete}
   */
   readonly delete?: string;
 }
@@ -179,7 +179,7 @@ export interface ComputeHaVpnGatewayVpnInterfaces {
   /**
   * The numeric ID of this VPN gateway interface.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#id ComputeHaVpnGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#id ComputeHaVpnGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -194,7 +194,7 @@ specified interconnect attachment resource.
 
 Not currently available publicly.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway#interconnect_attachment ComputeHaVpnGateway#interconnect_attachment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway#interconnect_attachment ComputeHaVpnGateway#interconnect_attachment}
   */
   readonly interconnectAttachment?: string;
 }
@@ -319,7 +319,7 @@ export class ComputeHaVpnGatewayVpnInterfacesList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway google_compute_ha_vpn_gateway}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway google_compute_ha_vpn_gateway}
 */
 export class ComputeHaVpnGateway extends cdktf.TerraformResource {
 
@@ -333,7 +333,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/compute_ha_vpn_gateway google_compute_ha_vpn_gateway} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_ha_vpn_gateway google_compute_ha_vpn_gateway} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -344,7 +344,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_ha_vpn_gateway',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.82.0',
+        providerVersion: '4.83.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
