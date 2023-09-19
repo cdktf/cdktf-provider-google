@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.NewDataGoogleApigeeEnvironmentIamPolicy(scope Construct, id *string, config DataGoogleApigeeEnvironmentIamPolicyConfig) DataGoogleApigeeEnvironmentIamPolicy
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -588,7 +588,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogleapigeeenvironmentiampolicy"
 
 &datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicyConfig {
 	Connection: interface{},
