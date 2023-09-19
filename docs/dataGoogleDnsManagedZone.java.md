@@ -1,6 +1,6 @@
 # `data_google_dns_managed_zone`
 
-Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/dns_managed_zone).
+Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/dns_managed_zone).
 
 # `dataGoogleDnsManagedZone` Submodule <a name="`dataGoogleDnsManagedZone` Submodule" id="@cdktf/provider-google.dataGoogleDnsManagedZone"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone`](http
 
 ### DataGoogleDnsManagedZone <a name="DataGoogleDnsManagedZone" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.Initializer"></a>
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 A unique name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
 
 ---
 
@@ -803,7 +803,7 @@ public java.lang.String getName();
 
 A unique name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
 
 ---
 
@@ -817,7 +817,7 @@ public java.lang.String getProject();
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
 
 ---
 

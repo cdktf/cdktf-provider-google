@@ -1,6 +1,6 @@
 # `google_biglake_database`
 
-Refer to the Terraform Registory for docs: [`google_biglake_database`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database).
+Refer to the Terraform Registory for docs: [`google_biglake_database`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database).
 
 # `biglakeDatabase` Submodule <a name="`biglakeDatabase` Submodule" id="@cdktf/provider-google.biglakeDatabase"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_biglake_database`](https://r
 
 ### BiglakeDatabase <a name="BiglakeDatabase" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database google_biglake_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database google_biglake_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 biglakedatabase.NewBiglakeDatabase(scope Construct, id *string, config BiglakeDatabaseConfig) BiglakeDatabase
 ```
@@ -310,7 +310,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 biglakedatabase.BiglakeDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -342,7 +342,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 biglakedatabase.BiglakeDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ biglakedatabase.BiglakeDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 biglakedatabase.BiglakeDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -731,7 +731,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 &biglakedatabase.BiglakeDatabaseConfig {
 	Connection: interface{},
@@ -742,11 +742,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Catalog: *string,
-	HiveOptions: github.com/cdktf/cdktf-provider-google-go/google/v9.biglakeDatabase.BiglakeDatabaseHiveOptions,
+	HiveOptions: github.com/cdktf/cdktf-provider-google-go/google.biglakeDatabase.BiglakeDatabaseHiveOptions,
 	Name: *string,
 	Type: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.biglakeDatabase.BiglakeDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.biglakeDatabase.BiglakeDatabaseTimeouts,
 }
 ```
 
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
 | <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseConfig.property.hiveOptions">HiveOptions</a></code> | <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseHiveOptions">BiglakeDatabaseHiveOptions</a></code> | hive_options block. |
 | <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseConfig.property.name">Name</a></code> | <code>*string</code> | The name of the database. |
 | <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseConfig.property.type">Type</a></code> | <code>*string</code> | The database type. |
-| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#id BiglakeDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#id BiglakeDatabase#id}. |
 | <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts">BiglakeDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -850,7 +850,7 @@ Catalog *string
 
 The parent catalog.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#catalog BiglakeDatabase#catalog}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#catalog BiglakeDatabase#catalog}
 
 ---
 
@@ -864,7 +864,7 @@ HiveOptions BiglakeDatabaseHiveOptions
 
 hive_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#hive_options BiglakeDatabase#hive_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#hive_options BiglakeDatabase#hive_options}
 
 ---
 
@@ -878,7 +878,7 @@ Name *string
 
 The name of the database.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#name BiglakeDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#name BiglakeDatabase#name}
 
 ---
 
@@ -892,7 +892,7 @@ Type *string
 
 The database type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#type BiglakeDatabase#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#type BiglakeDatabase#type}
 
 ---
 
@@ -904,7 +904,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#id BiglakeDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#id BiglakeDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -921,7 +921,7 @@ Timeouts BiglakeDatabaseTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#timeouts BiglakeDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#timeouts BiglakeDatabase#timeouts}
 
 ---
 
@@ -930,7 +930,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseHiveOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 &biglakedatabase.BiglakeDatabaseHiveOptions {
 	LocationUri: *string,
@@ -957,7 +957,7 @@ LocationUri *string
 
 Cloud Storage folder URI where the database data is stored, starting with "gs://".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#location_uri BiglakeDatabase#location_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#location_uri BiglakeDatabase#location_uri}
 
 ---
 
@@ -975,7 +975,7 @@ An object containing a
 list of"key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#parameters BiglakeDatabase#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#parameters BiglakeDatabase#parameters}
 
 ---
 
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 &biglakedatabase.BiglakeDatabaseTimeouts {
 	Create: *string,
@@ -997,9 +997,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#create BiglakeDatabase#create}. |
-| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#delete BiglakeDatabase#delete}. |
-| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#update BiglakeDatabase#update}. |
+| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#create BiglakeDatabase#create}. |
+| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#delete BiglakeDatabase#delete}. |
+| <code><a href="#@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#update BiglakeDatabase#update}. |
 
 ---
 
@@ -1011,7 +1011,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#create BiglakeDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#create BiglakeDatabase#create}.
 
 ---
 
@@ -1023,7 +1023,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#delete BiglakeDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#delete BiglakeDatabase#delete}.
 
 ---
 
@@ -1035,7 +1035,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/biglake_database#update BiglakeDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_database#update BiglakeDatabase#update}.
 
 ---
 
@@ -1046,7 +1046,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseHiveOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 biglakedatabase.NewBiglakeDatabaseHiveOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BiglakeDatabaseHiveOptionsOutputReference
 ```
@@ -1353,7 +1353,7 @@ func InternalValue() BiglakeDatabaseHiveOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.biglakeDatabase.BiglakeDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/biglakedatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakedatabase"
 
 biglakedatabase.NewBiglakeDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BiglakeDatabaseTimeoutsOutputReference
 ```

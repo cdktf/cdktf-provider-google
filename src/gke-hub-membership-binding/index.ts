@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding
+// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,39 +8,45 @@ import * as cdktf from 'cdktf';
 
 export interface GkeHubMembershipBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#id GkeHubMembershipBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#id GkeHubMembershipBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
+  * Labels for this Membership binding.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#labels GkeHubMembershipBinding#labels}
+  */
+  readonly labels?: { [key: string]: string };
+  /**
   * Location of the membership
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#location GkeHubMembershipBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#location GkeHubMembershipBinding#location}
   */
   readonly location: string;
   /**
   * The client-provided identifier of the membership binding.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#membership_binding_id GkeHubMembershipBinding#membership_binding_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#membership_binding_id GkeHubMembershipBinding#membership_binding_id}
   */
   readonly membershipBindingId: string;
   /**
   * Id of the membership
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#membership_id GkeHubMembershipBinding#membership_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#membership_id GkeHubMembershipBinding#membership_id}
   */
   readonly membershipId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#project GkeHubMembershipBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#project GkeHubMembershipBinding#project}
   */
   readonly project?: string;
   /**
   * A Workspace resource name in the format
 'projects/* /locations/* /scopes/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#scope GkeHubMembershipBinding#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#scope GkeHubMembershipBinding#scope}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -53,7 +54,7 @@ export interface GkeHubMembershipBindingConfig extends cdktf.TerraformMetaArgume
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#timeouts GkeHubMembershipBinding#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#timeouts GkeHubMembershipBinding#timeouts}
   */
   readonly timeouts?: GkeHubMembershipBindingTimeouts;
 }
@@ -123,15 +124,15 @@ export class GkeHubMembershipBindingStateList extends cdktf.ComplexList {
 }
 export interface GkeHubMembershipBindingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#create GkeHubMembershipBinding#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#create GkeHubMembershipBinding#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#delete GkeHubMembershipBinding#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#delete GkeHubMembershipBinding#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding#update GkeHubMembershipBinding#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding#update GkeHubMembershipBinding#update}
   */
   readonly update?: string;
 }
@@ -252,7 +253,7 @@ export class GkeHubMembershipBindingTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding google_gke_hub_membership_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding google_gke_hub_membership_binding}
 */
 export class GkeHubMembershipBinding extends cdktf.TerraformResource {
 
@@ -266,7 +267,7 @@ export class GkeHubMembershipBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/gke_hub_membership_binding google_gke_hub_membership_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/gke_hub_membership_binding google_gke_hub_membership_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -277,7 +278,7 @@ export class GkeHubMembershipBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_hub_membership_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.82.0',
+        providerVersion: '4.83.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -289,6 +290,7 @@ export class GkeHubMembershipBinding extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._id = config.id;
+    this._labels = config.labels;
     this._location = config.location;
     this._membershipBindingId = config.membershipBindingId;
     this._membershipId = config.membershipId;
@@ -325,6 +327,22 @@ export class GkeHubMembershipBinding extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string }; 
+  public get labels() {
+    return this.getStringMapAttribute('labels');
+  }
+  public set labels(value: { [key: string]: string }) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels;
   }
 
   // location - computed: false, optional: false, required: true
@@ -439,6 +457,7 @@ export class GkeHubMembershipBinding extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       membership_binding_id: cdktf.stringToTerraform(this._membershipBindingId),
       membership_id: cdktf.stringToTerraform(this._membershipId),

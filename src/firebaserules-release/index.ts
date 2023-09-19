@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release
+// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface FirebaserulesReleaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#id FirebaserulesRelease#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#id FirebaserulesRelease#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,39 +17,39 @@ export interface FirebaserulesReleaseConfig extends cdktf.TerraformMetaArguments
   /**
   * Format: `projects/{project_id}/releases/{release_id}`\Firestore Rules Releases will **always** have the name 'cloud.firestore'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#name FirebaserulesRelease#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#name FirebaserulesRelease#name}
   */
   readonly name: string;
   /**
   * The project for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#project FirebaserulesRelease#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#project FirebaserulesRelease#project}
   */
   readonly project?: string;
   /**
   * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the `Release` to be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#ruleset_name FirebaserulesRelease#ruleset_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#ruleset_name FirebaserulesRelease#ruleset_name}
   */
   readonly rulesetName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#timeouts FirebaserulesRelease#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#timeouts FirebaserulesRelease#timeouts}
   */
   readonly timeouts?: FirebaserulesReleaseTimeouts;
 }
 export interface FirebaserulesReleaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#create FirebaserulesRelease#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#create FirebaserulesRelease#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#delete FirebaserulesRelease#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#delete FirebaserulesRelease#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release#update FirebaserulesRelease#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release#update FirebaserulesRelease#update}
   */
   readonly update?: string;
 }
@@ -175,7 +170,7 @@ export class FirebaserulesReleaseTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release google_firebaserules_release}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release google_firebaserules_release}
 */
 export class FirebaserulesRelease extends cdktf.TerraformResource {
 
@@ -189,7 +184,7 @@ export class FirebaserulesRelease extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/firebaserules_release google_firebaserules_release} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/firebaserules_release google_firebaserules_release} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -200,7 +195,7 @@ export class FirebaserulesRelease extends cdktf.TerraformResource {
       terraformResourceType: 'google_firebaserules_release',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.82.0',
+        providerVersion: '4.83.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

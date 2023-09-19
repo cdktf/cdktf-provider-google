@@ -1,6 +1,6 @@
 # `google_bigtable_gc_policy`
 
-Refer to the Terraform Registory for docs: [`google_bigtable_gc_policy`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy).
+Refer to the Terraform Registory for docs: [`google_bigtable_gc_policy`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy).
 
 # `bigtableGcPolicy` Submodule <a name="`bigtableGcPolicy` Submodule" id="@cdktf/provider-google.bigtableGcPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_bigtable_gc_policy`](https:/
 
 ### BigtableGcPolicy <a name="BigtableGcPolicy" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy google_bigtable_gc_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy google_bigtable_gc_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.NewBigtableGcPolicy(scope Construct, id *string, config BigtableGcPolicyConfig) BigtableGcPolicy
 ```
@@ -365,7 +365,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.BigtableGcPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.BigtableGcPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -411,7 +411,7 @@ bigtablegcpolicy.BigtableGcPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.BigtableGcPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -852,7 +852,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 &bigtablegcpolicy.BigtableGcPolicyConfig {
 	Connection: interface{},
@@ -868,11 +868,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
 	DeletionPolicy: *string,
 	GcRules: *string,
 	Id: *string,
-	MaxAge: github.com/cdktf/cdktf-provider-google-go/google/v9.bigtableGcPolicy.BigtableGcPolicyMaxAge,
+	MaxAge: github.com/cdktf/cdktf-provider-google-go/google.bigtableGcPolicy.BigtableGcPolicyMaxAge,
 	MaxVersion: interface{},
 	Mode: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.bigtableGcPolicy.BigtableGcPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.bigtableGcPolicy.BigtableGcPolicyTimeouts,
 }
 ```
 
@@ -892,7 +892,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
 | <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.table">Table</a></code> | <code>*string</code> | The name of the table. |
 | <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.deletionPolicy">DeletionPolicy</a></code> | <code>*string</code> | The deletion policy for the GC policy. |
 | <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.gcRules">GcRules</a></code> | <code>*string</code> | Serialized JSON string for garbage collection policy. Conflicts with "mode", "max_age" and "max_version". |
-| <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#id BigtableGcPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#id BigtableGcPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.maxAge">MaxAge</a></code> | <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyMaxAge">BigtableGcPolicyMaxAge</a></code> | max_age block. |
 | <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.maxVersion">MaxVersion</a></code> | <code>interface{}</code> | max_version block. |
 | <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyConfig.property.mode">Mode</a></code> | <code>*string</code> | NOTE: 'gc_rules' is more flexible, and should be preferred over this field for new resources. |
@@ -981,7 +981,7 @@ ColumnFamily *string
 
 The name of the column family.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#column_family BigtableGcPolicy#column_family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#column_family BigtableGcPolicy#column_family}
 
 ---
 
@@ -995,7 +995,7 @@ InstanceName *string
 
 The name of the Bigtable instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#instance_name BigtableGcPolicy#instance_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#instance_name BigtableGcPolicy#instance_name}
 
 ---
 
@@ -1009,7 +1009,7 @@ Table *string
 
 The name of the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#table BigtableGcPolicy#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#table BigtableGcPolicy#table}
 
 ---
 
@@ -1027,7 +1027,7 @@ Setting ABANDON allows the resource
 to be abandoned rather than deleted. This is useful for GC policy as it cannot be deleted
 in a replicated instance. Possible values are: "ABANDON".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#deletion_policy BigtableGcPolicy#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#deletion_policy BigtableGcPolicy#deletion_policy}
 
 ---
 
@@ -1041,7 +1041,7 @@ GcRules *string
 
 Serialized JSON string for garbage collection policy. Conflicts with "mode", "max_age" and "max_version".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#gc_rules BigtableGcPolicy#gc_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#gc_rules BigtableGcPolicy#gc_rules}
 
 ---
 
@@ -1053,7 +1053,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#id BigtableGcPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#id BigtableGcPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1070,7 +1070,7 @@ MaxAge BigtableGcPolicyMaxAge
 
 max_age block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#max_age BigtableGcPolicy#max_age}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#max_age BigtableGcPolicy#max_age}
 
 ---
 
@@ -1084,7 +1084,7 @@ MaxVersion interface{}
 
 max_version block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#max_version BigtableGcPolicy#max_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#max_version BigtableGcPolicy#max_version}
 
 ---
 
@@ -1100,7 +1100,7 @@ NOTE: 'gc_rules' is more flexible, and should be preferred over this field for n
 
 This field may be deprecated in the future. If multiple policies are set, you should choose between UNION OR INTERSECTION.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#mode BigtableGcPolicy#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#mode BigtableGcPolicy#mode}
 
 ---
 
@@ -1116,7 +1116,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#project BigtableGcPolicy#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#project BigtableGcPolicy#project}
 
 ---
 
@@ -1130,7 +1130,7 @@ Timeouts BigtableGcPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#timeouts BigtableGcPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#timeouts BigtableGcPolicy#timeouts}
 
 ---
 
@@ -1139,7 +1139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyMaxAge.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 &bigtablegcpolicy.BigtableGcPolicyMaxAge {
 	Days: *f64,
@@ -1166,7 +1166,7 @@ Days *f64
 
 Number of days before applying GC policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#days BigtableGcPolicy#days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#days BigtableGcPolicy#days}
 
 ---
 
@@ -1180,7 +1180,7 @@ Duration *string
 
 Duration before applying GC policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#duration BigtableGcPolicy#duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#duration BigtableGcPolicy#duration}
 
 ---
 
@@ -1189,7 +1189,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyMaxVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 &bigtablegcpolicy.BigtableGcPolicyMaxVersion {
 	Number: *f64,
@@ -1214,7 +1214,7 @@ Number *f64
 
 Number of version before applying the GC policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#number BigtableGcPolicy#number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#number BigtableGcPolicy#number}
 
 ---
 
@@ -1223,7 +1223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 &bigtablegcpolicy.BigtableGcPolicyTimeouts {
 	Create: *string,
@@ -1235,8 +1235,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#create BigtableGcPolicy#create}. |
-| <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#delete BigtableGcPolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#create BigtableGcPolicy#create}. |
+| <code><a href="#@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#delete BigtableGcPolicy#delete}. |
 
 ---
 
@@ -1248,7 +1248,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#create BigtableGcPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#create BigtableGcPolicy#create}.
 
 ---
 
@@ -1260,7 +1260,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/bigtable_gc_policy#delete BigtableGcPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/bigtable_gc_policy#delete BigtableGcPolicy#delete}.
 
 ---
 
@@ -1271,7 +1271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyMaxAgeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.NewBigtableGcPolicyMaxAgeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableGcPolicyMaxAgeOutputReference
 ```
@@ -1578,7 +1578,7 @@ func InternalValue() BigtableGcPolicyMaxAge
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyMaxVersionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.NewBigtableGcPolicyMaxVersionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BigtableGcPolicyMaxVersionList
 ```
@@ -1721,7 +1721,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyMaxVersionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.NewBigtableGcPolicyMaxVersionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BigtableGcPolicyMaxVersionOutputReference
 ```
@@ -2010,7 +2010,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableGcPolicy.BigtableGcPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/bigtablegcpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtablegcpolicy"
 
 bigtablegcpolicy.NewBigtableGcPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableGcPolicyTimeoutsOutputReference
 ```

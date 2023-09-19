@@ -1,6 +1,6 @@
 # `google_resource_manager_lien`
 
-Refer to the Terraform Registory for docs: [`google_resource_manager_lien`](https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien).
+Refer to the Terraform Registory for docs: [`google_resource_manager_lien`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien).
 
 # `resourceManagerLien` Submodule <a name="`resourceManagerLien` Submodule" id="@cdktf/provider-google.resourceManagerLien"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_resource_manager_lien`](http
 
 ### ResourceManagerLien <a name="ResourceManagerLien" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien google_resource_manager_lien}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien google_resource_manager_lien}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.NewResourceManagerLien(scope Construct, id *string, config ResourceManagerLienConfig) ResourceManagerLien
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.ResourceManagerLien_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.ResourceManagerLien_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ resourcemanagerlien.ResourceManagerLien_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.ResourceManagerLien_IsTerraformResource(x interface{}) *bool
 ```
@@ -696,7 +696,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 &resourcemanagerlien.ResourceManagerLienConfig {
 	Connection: interface{},
@@ -711,7 +711,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
 	Reason: *string,
 	Restrictions: *[]*string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.resourceManagerLien.ResourceManagerLienTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.resourceManagerLien.ResourceManagerLienTimeouts,
 }
 ```
 
@@ -730,7 +730,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.property.parent">Parent</a></code> | <code>*string</code> | A reference to the resource this Lien is attached to. |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.property.reason">Reason</a></code> | <code>*string</code> | Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.property.restrictions">Restrictions</a></code> | <code>*[]*string</code> | The types of operations which should be blocked as a result of this Lien. |
-| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#id ResourceManagerLien#id}. |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#id ResourceManagerLien#id}. |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a></code> | timeouts block. |
 
 ---
@@ -815,7 +815,7 @@ Origin *string
 
 A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#origin ResourceManagerLien#origin}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#origin ResourceManagerLien#origin}
 
 ---
 
@@ -833,7 +833,7 @@ The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#parent ResourceManagerLien#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#parent ResourceManagerLien#parent}
 
 ---
 
@@ -847,7 +847,7 @@ Reason *string
 
 Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#reason ResourceManagerLien#reason}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#reason ResourceManagerLien#reason}
 
 ---
 
@@ -866,7 +866,7 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#restrictions ResourceManagerLien#restrictions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#restrictions ResourceManagerLien#restrictions}
 
 ---
 
@@ -878,7 +878,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#id ResourceManagerLien#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#id ResourceManagerLien#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -895,7 +895,7 @@ Timeouts ResourceManagerLienTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#timeouts ResourceManagerLien#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#timeouts ResourceManagerLien#timeouts}
 
 ---
 
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 &resourcemanagerlien.ResourceManagerLienTimeouts {
 	Create: *string,
@@ -916,8 +916,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#create ResourceManagerLien#create}. |
-| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#delete ResourceManagerLien#delete}. |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#create ResourceManagerLien#create}. |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#delete ResourceManagerLien#delete}. |
 
 ---
 
@@ -929,7 +929,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#create ResourceManagerLien#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#create ResourceManagerLien#create}.
 
 ---
 
@@ -941,7 +941,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.82.0/docs/resources/resource_manager_lien#delete ResourceManagerLien#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/resource_manager_lien#delete ResourceManagerLien#delete}.
 
 ---
 
@@ -952,7 +952,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.NewResourceManagerLienTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceManagerLienTimeoutsOutputReference
 ```
