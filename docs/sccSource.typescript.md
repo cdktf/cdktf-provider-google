@@ -1,6 +1,6 @@
 # `google_scc_source`
 
-Refer to the Terraform Registory for docs: [`google_scc_source`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source).
+Refer to the Terraform Registory for docs: [`google_scc_source`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source).
 
 # `sccSource` Submodule <a name="`sccSource` Submodule" id="@cdktf/provider-google.sccSource"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_scc_source`](https://registr
 
 ### SccSource <a name="SccSource" id="@cdktf/provider-google.sccSource.SccSource"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source google_scc_source}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source google_scc_source}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSource.SccSource.Initializer"></a>
 
@@ -689,7 +689,7 @@ const sccSourceConfig: sccSource.SccSourceConfig = { ... }
 | <code><a href="#@cdktf/provider-google.sccSource.SccSourceConfig.property.displayName">displayName</a></code> | <code>string</code> | The source’s display name. |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSourceConfig.property.organization">organization</a></code> | <code>string</code> | The organization whose Cloud Security Command Center the Source lives in. |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSourceConfig.property.description">description</a></code> | <code>string</code> | The description of the source (max of 1024 characters). |
-| <code><a href="#@cdktf/provider-google.sccSource.SccSourceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#id SccSource#id}. |
+| <code><a href="#@cdktf/provider-google.sccSource.SccSourceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#id SccSource#id}. |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSourceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -780,7 +780,7 @@ can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#display_name SccSource#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#display_name SccSource#display_name}
 
 ---
 
@@ -794,7 +794,7 @@ public readonly organization: string;
 
 The organization whose Cloud Security Command Center the Source lives in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#organization SccSource#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#organization SccSource#organization}
 
 ---
 
@@ -808,7 +808,7 @@ public readonly description: string;
 
 The description of the source (max of 1024 characters).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#description SccSource#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#description SccSource#description}
 
 ---
 
@@ -820,7 +820,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#id SccSource#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#id SccSource#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -837,7 +837,7 @@ public readonly timeouts: SccSourceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#timeouts SccSource#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#timeouts SccSource#timeouts}
 
 ---
 
@@ -855,9 +855,9 @@ const sccSourceTimeouts: sccSource.SccSourceTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#create SccSource#create}. |
-| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#delete SccSource#delete}. |
-| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#update SccSource#update}. |
+| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#create SccSource#create}. |
+| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#delete SccSource#delete}. |
+| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#update SccSource#update}. |
 
 ---
 
@@ -869,7 +869,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#create SccSource#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#create SccSource#create}.
 
 ---
 
@@ -881,7 +881,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#delete SccSource#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#delete SccSource#delete}.
 
 ---
 
@@ -893,7 +893,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/scc_source#update SccSource#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/scc_source#update SccSource#update}.
 
 ---
 

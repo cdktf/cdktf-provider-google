@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeRegionDiskIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#id ComputeRegionDiskIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#id ComputeRegionDiskIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#members ComputeRegionDiskIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#members ComputeRegionDiskIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#name ComputeRegionDiskIamBinding#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#name ComputeRegionDiskIamBinding#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#project ComputeRegionDiskIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#project ComputeRegionDiskIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#region ComputeRegionDiskIamBinding#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#region ComputeRegionDiskIamBinding#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#role ComputeRegionDiskIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#role ComputeRegionDiskIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#condition ComputeRegionDiskIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#condition ComputeRegionDiskIamBinding#condition}
   */
   readonly condition?: ComputeRegionDiskIamBindingCondition;
 }
 export interface ComputeRegionDiskIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#description ComputeRegionDiskIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#description ComputeRegionDiskIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#expression ComputeRegionDiskIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#expression ComputeRegionDiskIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding#title ComputeRegionDiskIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding#title ComputeRegionDiskIamBinding#title}
   */
   readonly title: string;
 }
@@ -161,7 +161,7 @@ export class ComputeRegionDiskIamBindingConditionOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding google_compute_region_disk_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding google_compute_region_disk_iam_binding}
 */
 export class ComputeRegionDiskIamBinding extends cdktf.TerraformResource {
 
@@ -175,7 +175,7 @@ export class ComputeRegionDiskIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/compute_region_disk_iam_binding google_compute_region_disk_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_region_disk_iam_binding google_compute_region_disk_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,7 +186,7 @@ export class ComputeRegionDiskIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_disk_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.83.0',
+        providerVersion: '4.84.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

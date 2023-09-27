@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization
+// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface CertificateManagerDnsAuthorizationConfig extends cdktf.Terrafor
   /**
   * A human-readable description of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#description CertificateManagerDnsAuthorization#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#description CertificateManagerDnsAuthorization#description}
   */
   readonly description?: string;
   /**
@@ -23,11 +23,11 @@ export interface CertificateManagerDnsAuthorizationConfig extends cdktf.Terrafor
 single domain and its wildcard, e.g. authorization for "example.com" can
 be used to issue certificates for "example.com" and "*.example.com".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#domain CertificateManagerDnsAuthorization#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#domain CertificateManagerDnsAuthorization#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#id CertificateManagerDnsAuthorization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#id CertificateManagerDnsAuthorization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,7 +36,7 @@ be used to issue certificates for "example.com" and "*.example.com".
   /**
   * Set of label tags associated with the DNS Authorization resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#labels CertificateManagerDnsAuthorization#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#labels CertificateManagerDnsAuthorization#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -44,17 +44,17 @@ be used to issue certificates for "example.com" and "*.example.com".
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#name CertificateManagerDnsAuthorization#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#name CertificateManagerDnsAuthorization#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#project CertificateManagerDnsAuthorization#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#project CertificateManagerDnsAuthorization#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#timeouts CertificateManagerDnsAuthorization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#timeouts CertificateManagerDnsAuthorization#timeouts}
   */
   readonly timeouts?: CertificateManagerDnsAuthorizationTimeouts;
 }
@@ -134,15 +134,15 @@ export class CertificateManagerDnsAuthorizationDnsResourceRecordList extends cdk
 }
 export interface CertificateManagerDnsAuthorizationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#create CertificateManagerDnsAuthorization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#create CertificateManagerDnsAuthorization#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#delete CertificateManagerDnsAuthorization#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#delete CertificateManagerDnsAuthorization#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization#update CertificateManagerDnsAuthorization#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization#update CertificateManagerDnsAuthorization#update}
   */
   readonly update?: string;
 }
@@ -263,7 +263,7 @@ export class CertificateManagerDnsAuthorizationTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization google_certificate_manager_dns_authorization}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization google_certificate_manager_dns_authorization}
 */
 export class CertificateManagerDnsAuthorization extends cdktf.TerraformResource {
 
@@ -277,7 +277,7 @@ export class CertificateManagerDnsAuthorization extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/certificate_manager_dns_authorization google_certificate_manager_dns_authorization} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/certificate_manager_dns_authorization google_certificate_manager_dns_authorization} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -288,7 +288,7 @@ export class CertificateManagerDnsAuthorization extends cdktf.TerraformResource 
       terraformResourceType: 'google_certificate_manager_dns_authorization',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.83.0',
+        providerVersion: '4.84.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
