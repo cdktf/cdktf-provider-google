@@ -1,3 +1,3 @@
 # `google_biglake_table`
 
-Refer to the Terraform Registory for docs: [`google_biglake_table`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/biglake_table).
+Refer to the Terraform Registory for docs: [`google_biglake_table`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/biglake_table).

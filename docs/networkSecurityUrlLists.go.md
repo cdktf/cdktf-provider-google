@@ -1,6 +1,6 @@
 # `google_network_security_url_lists`
 
-Refer to the Terraform Registory for docs: [`google_network_security_url_lists`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists).
+Refer to the Terraform Registory for docs: [`google_network_security_url_lists`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists).
 
 # `networkSecurityUrlLists` Submodule <a name="`networkSecurityUrlLists` Submodule" id="@cdktf/provider-google.networkSecurityUrlLists"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_network_security_url_lists`]
 
 ### NetworkSecurityUrlLists <a name="NetworkSecurityUrlLists" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists google_network_security_url_lists}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists google_network_security_url_lists}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NewNetworkSecurityUrlLists(scope Construct, id *string, config NetworkSecurityUrlListsConfig) NetworkSecurityUrlLists
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NetworkSecurityUrlLists_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NetworkSecurityUrlLists_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ networksecurityurllists.NetworkSecurityUrlLists_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NetworkSecurityUrlLists_IsTerraformResource(x interface{}) *bool
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 &networksecurityurllists.NetworkSecurityUrlListsConfig {
 	Connection: interface{},
@@ -748,7 +748,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurlli
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts,
 }
 ```
 
@@ -767,8 +767,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurlli
 | <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.name">Name</a></code> | <code>*string</code> | Short name of the UrlList resource to be created. |
 | <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.values">Values</a></code> | <code>*[]*string</code> | FQDNs and URLs. |
 | <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.description">Description</a></code> | <code>*string</code> | Free-text description of the resource. |
-| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#id NetworkSecurityUrlLists#id}. |
-| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#project NetworkSecurityUrlLists#project}. |
+| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#id NetworkSecurityUrlLists#id}. |
+| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#project NetworkSecurityUrlLists#project}. |
 | <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts">NetworkSecurityUrlListsTimeouts</a></code> | timeouts block. |
 
 ---
@@ -853,7 +853,7 @@ Location *string
 
 The location of the url lists.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#location NetworkSecurityUrlLists#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#location NetworkSecurityUrlLists#location}
 
 ---
 
@@ -869,7 +869,7 @@ Short name of the UrlList resource to be created.
 
 This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. 'urlList'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#name NetworkSecurityUrlLists#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#name NetworkSecurityUrlLists#name}
 
 ---
 
@@ -883,7 +883,7 @@ Values *[]*string
 
 FQDNs and URLs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#values NetworkSecurityUrlLists#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#values NetworkSecurityUrlLists#values}
 
 ---
 
@@ -897,7 +897,7 @@ Description *string
 
 Free-text description of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#description NetworkSecurityUrlLists#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#description NetworkSecurityUrlLists#description}
 
 ---
 
@@ -909,7 +909,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#id NetworkSecurityUrlLists#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#id NetworkSecurityUrlLists#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -924,7 +924,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#project NetworkSecurityUrlLists#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#project NetworkSecurityUrlLists#project}.
 
 ---
 
@@ -938,7 +938,7 @@ Timeouts NetworkSecurityUrlListsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#timeouts NetworkSecurityUrlLists#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#timeouts NetworkSecurityUrlLists#timeouts}
 
 ---
 
@@ -947,7 +947,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 &networksecurityurllists.NetworkSecurityUrlListsTimeouts {
 	Create: *string,
@@ -960,9 +960,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurlli
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#create NetworkSecurityUrlLists#create}. |
-| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#delete NetworkSecurityUrlLists#delete}. |
-| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#update NetworkSecurityUrlLists#update}. |
+| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#create NetworkSecurityUrlLists#create}. |
+| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#delete NetworkSecurityUrlLists#delete}. |
+| <code><a href="#@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#update NetworkSecurityUrlLists#update}. |
 
 ---
 
@@ -974,7 +974,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#create NetworkSecurityUrlLists#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#create NetworkSecurityUrlLists#create}.
 
 ---
 
@@ -986,7 +986,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#delete NetworkSecurityUrlLists#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#delete NetworkSecurityUrlLists#delete}.
 
 ---
 
@@ -998,7 +998,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/network_security_url_lists#update NetworkSecurityUrlLists#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/network_security_url_lists#update NetworkSecurityUrlLists#update}.
 
 ---
 
@@ -1009,7 +1009,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NewNetworkSecurityUrlListsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityUrlListsTimeoutsOutputReference
 ```

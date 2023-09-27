@@ -1,6 +1,6 @@
 # `google_dataproc_job_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_dataproc_job_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy).
+Refer to the Terraform Registory for docs: [`google_dataproc_job_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy).
 
 # `dataprocJobIamPolicy` Submodule <a name="`dataprocJobIamPolicy` Submodule" id="@cdktf/provider-google.dataprocJobIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_dataproc_job_iam_policy`](ht
 
 ### DataprocJobIamPolicy <a name="DataprocJobIamPolicy" id="@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy google_dataproc_job_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy google_dataproc_job_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiampolicy"
 
 dataprocjobiampolicy.NewDataprocJobIamPolicy(scope Construct, id *string, config DataprocJobIamPolicyConfig) DataprocJobIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiampolicy"
 
 dataprocjobiampolicy.DataprocJobIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiampolicy"
 
 dataprocjobiampolicy.DataprocJobIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ dataprocjobiampolicy.DataprocJobIamPolicy_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiampolicy"
 
 dataprocjobiampolicy.DataprocJobIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -657,7 +657,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/dataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiampolicy"
 
 &dataprocjobiampolicy.DataprocJobIamPolicyConfig {
 	Connection: interface{},
@@ -686,11 +686,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/dataprocjobiampolicy
 | <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.jobId">JobId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#job_id DataprocJobIamPolicy#job_id}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#policy_data DataprocJobIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#id DataprocJobIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#project DataprocJobIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#region DataprocJobIamPolicy#region}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.jobId">JobId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#job_id DataprocJobIamPolicy#job_id}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#policy_data DataprocJobIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#id DataprocJobIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#project DataprocJobIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamPolicy.DataprocJobIamPolicyConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#region DataprocJobIamPolicy#region}. |
 
 ---
 
@@ -772,7 +772,7 @@ JobId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#job_id DataprocJobIamPolicy#job_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#job_id DataprocJobIamPolicy#job_id}.
 
 ---
 
@@ -784,7 +784,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#policy_data DataprocJobIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#policy_data DataprocJobIamPolicy#policy_data}.
 
 ---
 
@@ -796,7 +796,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#id DataprocJobIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#id DataprocJobIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -811,7 +811,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#project DataprocJobIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#project DataprocJobIamPolicy#project}.
 
 ---
 
@@ -823,7 +823,7 @@ Region *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/dataproc_job_iam_policy#region DataprocJobIamPolicy#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataproc_job_iam_policy#region DataprocJobIamPolicy#region}.
 
 ---
 

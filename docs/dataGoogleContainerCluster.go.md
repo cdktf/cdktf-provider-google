@@ -1,6 +1,6 @@
 # `data_google_container_cluster`
 
-Refer to the Terraform Registory for docs: [`data_google_container_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/container_cluster).
+Refer to the Terraform Registory for docs: [`data_google_container_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/container_cluster).
 
 # `dataGoogleContainerCluster` Submodule <a name="`dataGoogleContainerCluster` Submodule" id="@cdktf/provider-google.dataGoogleContainerCluster"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_container_cluster`](htt
 
 ### DataGoogleContainerCluster <a name="DataGoogleContainerCluster" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/container_cluster google_container_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/container_cluster google_container_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerCluster(scope Construct, id *string, config DataGoogleContainerClusterConfig) DataGoogleContainerCluster
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.DataGoogleContainerCluster_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.DataGoogleContainerCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagooglecontainercluster.DataGoogleContainerCluster_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.DataGoogleContainerCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -408,6 +408,7 @@ datagooglecontainercluster.DataGoogleContainerCluster_IsTerraformDataSource(x in
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodeConfig">NodeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigList">DataGoogleContainerClusterNodeConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodeLocations">NodeLocations</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodePool">NodePool</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolList">DataGoogleContainerClusterNodePoolList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodePoolAutoConfig">NodePoolAutoConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList">DataGoogleContainerClusterNodePoolAutoConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodePoolDefaults">NodePoolDefaults</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolDefaultsList">DataGoogleContainerClusterNodePoolDefaultsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodeVersion">NodeVersion</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.notificationConfig">NotificationConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigList">DataGoogleContainerClusterNotificationConfigList</a></code> | *No description.* |
@@ -999,6 +1000,16 @@ func NodePool() DataGoogleContainerClusterNodePoolList
 
 ---
 
+##### `NodePoolAutoConfig`<sup>Required</sup> <a name="NodePoolAutoConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodePoolAutoConfig"></a>
+
+```go
+func NodePoolAutoConfig() DataGoogleContainerClusterNodePoolAutoConfigList
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList">DataGoogleContainerClusterNodePoolAutoConfigList</a>
+
+---
+
 ##### `NodePoolDefaults`<sup>Required</sup> <a name="NodePoolDefaults" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.nodePoolDefaults"></a>
 
 ```go
@@ -1284,7 +1295,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfig {
 
@@ -1297,7 +1308,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigCloudrunConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigCloudrunConfig {
 
@@ -1310,7 +1321,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigConfigConnectorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigConfigConnectorConfig {
 
@@ -1323,7 +1334,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigDnsCacheConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigDnsCacheConfig {
 
@@ -1336,7 +1347,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfig {
 
@@ -1349,7 +1360,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfig {
 
@@ -1362,7 +1373,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfig {
 
@@ -1375,7 +1386,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGkeBackupAgentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigGkeBackupAgentConfig {
 
@@ -1388,7 +1399,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscaling {
 
@@ -1401,7 +1412,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigHttpLoadBalancing.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigHttpLoadBalancing {
 
@@ -1414,7 +1425,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigNetworkPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAddonsConfigNetworkPolicyConfig {
 
@@ -1427,7 +1438,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAuthenticatorGroupsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterAuthenticatorGroupsConfig {
 
@@ -1440,7 +1451,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterBinaryAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterBinaryAuthorization {
 
@@ -1453,7 +1464,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscaling {
 
@@ -1466,7 +1477,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaults.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaults {
 
@@ -1479,7 +1490,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement {
 
@@ -1492,7 +1503,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions {
 
@@ -1505,7 +1516,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig {
 
@@ -1518,7 +1529,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings {
 
@@ -1531,7 +1542,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings {
 
@@ -1544,7 +1555,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy {
 
@@ -1557,7 +1568,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingResourceLimits.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterClusterAutoscalingResourceLimits {
 
@@ -1570,7 +1581,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfidentialNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterConfidentialNodes {
 
@@ -1583,7 +1594,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterConfig {
 	Connection: interface{},
@@ -1612,7 +1623,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.name">Name</a></code> | <code>*string</code> | The name of the cluster, unique within the project and location. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.location">Location</a></code> | <code>*string</code> | The location (region or zone) in which the cluster master will be created, as well as the default node location. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.project">Project</a></code> | <code>*string</code> | The ID of the project in which the resource belongs. |
 
@@ -1698,7 +1709,7 @@ Name *string
 
 The name of the cluster, unique within the project and location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
 
 ---
 
@@ -1710,7 +1721,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1729,7 +1740,7 @@ The location (region or zone) in which the cluster master will be created, as we
 
 If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
 
 ---
 
@@ -1745,7 +1756,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
 
 ---
 
@@ -1754,7 +1765,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterCostManagementConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterCostManagementConfig {
 
@@ -1767,7 +1778,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDatabaseEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterDatabaseEncryption {
 
@@ -1780,7 +1791,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDefaultSnatStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterDefaultSnatStatus {
 
@@ -1793,7 +1804,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDnsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterDnsConfig {
 
@@ -1806,7 +1817,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnableK8SBetaApis.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterEnableK8SBetaApis {
 
@@ -1819,7 +1830,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterGatewayApiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterGatewayApiConfig {
 
@@ -1832,7 +1843,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterIpAllocationPolicy {
 
@@ -1845,7 +1856,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfig {
 
@@ -1858,7 +1869,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig {
 
@@ -1871,7 +1882,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterLoggingConfig {
 
@@ -1884,7 +1895,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMaintenancePolicy {
 
@@ -1897,7 +1908,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindow {
 
@@ -1910,7 +1921,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusion {
 
@@ -1923,7 +1934,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptions {
 
@@ -1936,7 +1947,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyRecurringWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMaintenancePolicyRecurringWindow {
 
@@ -1949,7 +1960,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMasterAuth {
 
@@ -1962,7 +1973,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthClientCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMasterAuthClientCertificateConfig {
 
@@ -1975,7 +1986,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfig {
 
@@ -1988,7 +1999,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocks {
 
@@ -2001,7 +2012,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMeshCertificates.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMeshCertificates {
 
@@ -2014,7 +2025,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMonitoringConfig {
 
@@ -2027,7 +2038,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig {
 
@@ -2040,7 +2051,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigManagedPrometheus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterMonitoringConfigManagedPrometheus {
 
@@ -2053,7 +2064,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNetworkPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNetworkPolicy {
 
@@ -2066,7 +2077,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfig {
 
@@ -2079,7 +2090,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigAdvancedMachineFeatures {
 
@@ -2092,7 +2103,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigConfidentialNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigConfidentialNodes {
 
@@ -2105,9 +2116,22 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfig {
+
+}
+```
+
+
+### DataGoogleContainerClusterNodeConfigFastSocket <a name="DataGoogleContainerClusterNodeConfigFastSocket" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocket"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocket.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+&datagooglecontainercluster.DataGoogleContainerClusterNodeConfigFastSocket {
 
 }
 ```
@@ -2118,7 +2142,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGcfsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigGcfsConfig {
 
@@ -2131,7 +2155,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigGuestAccelerator {
 
@@ -2144,7 +2168,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfig {
 
@@ -2157,7 +2181,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig {
 
@@ -2170,7 +2194,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGvnic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigGvnic {
 
@@ -2183,7 +2207,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigHostMaintenancePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigHostMaintenancePolicy {
 
@@ -2196,7 +2220,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigKubeletConfig {
 
@@ -2209,7 +2233,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLinuxNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigLinuxNodeConfig {
 
@@ -2222,7 +2246,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfig {
 
@@ -2235,7 +2259,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigReservationAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigReservationAffinity {
 
@@ -2248,7 +2272,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigShieldedInstanceConfig {
 
@@ -2261,7 +2285,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigSoleTenantConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigSoleTenantConfig {
 
@@ -2274,7 +2298,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinity {
 
@@ -2287,7 +2311,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigTaint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigTaint {
 
@@ -2300,7 +2324,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig {
 
@@ -2313,9 +2337,35 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePool {
+
+}
+```
+
+
+### DataGoogleContainerClusterNodePoolAutoConfig <a name="DataGoogleContainerClusterNodePoolAutoConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfig.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+&datagooglecontainercluster.DataGoogleContainerClusterNodePoolAutoConfig {
+
+}
+```
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigNetworkTags <a name="DataGoogleContainerClusterNodePoolAutoConfigNetworkTags" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTags"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTags.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+&datagooglecontainercluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTags {
 
 }
 ```
@@ -2326,7 +2376,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolAutoscaling {
 
@@ -2339,7 +2389,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolDefaults.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolDefaults {
 
@@ -2352,7 +2402,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaults.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaults {
 
@@ -2365,7 +2415,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolManagement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolManagement {
 
@@ -2378,7 +2428,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNetworkConfig {
 
@@ -2391,7 +2441,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig {
 
@@ -2404,7 +2454,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfig {
 
@@ -2417,7 +2467,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeatures {
 
@@ -2430,7 +2480,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigConfidentialNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigConfidentialNodes {
 
@@ -2443,9 +2493,22 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfig {
+
+}
+```
+
+
+### DataGoogleContainerClusterNodePoolNodeConfigFastSocket <a name="DataGoogleContainerClusterNodePoolNodeConfigFastSocket" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocket"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocket.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+&datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocket {
 
 }
 ```
@@ -2456,7 +2519,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig {
 
@@ -2469,7 +2532,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator {
 
@@ -2482,7 +2545,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig {
 
@@ -2495,7 +2558,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig {
 
@@ -2508,7 +2571,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGvnic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigGvnic {
 
@@ -2521,7 +2584,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicy {
 
@@ -2534,7 +2597,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfig {
 
@@ -2547,7 +2610,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfig {
 
@@ -2560,7 +2623,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfig {
 
@@ -2573,7 +2636,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigReservationAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigReservationAffinity {
 
@@ -2586,7 +2649,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig {
 
@@ -2599,7 +2662,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfig {
 
@@ -2612,7 +2675,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinity {
 
@@ -2625,7 +2688,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigTaint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigTaint {
 
@@ -2638,7 +2701,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfig {
 
@@ -2651,7 +2714,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolPlacementPolicy {
 
@@ -2664,7 +2727,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolUpgradeSettings {
 
@@ -2677,7 +2740,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettings {
 
@@ -2690,7 +2753,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy {
 
@@ -2703,7 +2766,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNotificationConfig {
 
@@ -2716,7 +2779,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigPubsub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNotificationConfigPubsub {
 
@@ -2729,7 +2792,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigPubsubFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterNotificationConfigPubsubFilter {
 
@@ -2742,7 +2805,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterPrivateClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterPrivateClusterConfig {
 
@@ -2755,7 +2818,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig {
 
@@ -2768,7 +2831,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterReleaseChannel.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterReleaseChannel {
 
@@ -2781,7 +2844,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterResourceUsageExportConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterResourceUsageExportConfig {
 
@@ -2794,7 +2857,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestination {
 
@@ -2807,7 +2870,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterSecurityPostureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterSecurityPostureConfig {
 
@@ -2820,7 +2883,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterServiceExternalIpsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterServiceExternalIpsConfig {
 
@@ -2833,7 +2896,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterVerticalPodAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterVerticalPodAutoscaling {
 
@@ -2846,7 +2909,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterWorkloadIdentityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 &datagooglecontainercluster.DataGoogleContainerClusterWorkloadIdentityConfig {
 
@@ -2861,7 +2924,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainerc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigCloudrunConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigCloudrunConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigCloudrunConfigList
 ```
@@ -2993,7 +3056,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigCloudrunConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigCloudrunConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigCloudrunConfigOutputReference
 ```
@@ -3282,7 +3345,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigCloudrunConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigConfigConnectorConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigConfigConnectorConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigConfigConnectorConfigList
 ```
@@ -3414,7 +3477,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigConfigConnectorConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigConfigConnectorConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigConfigConnectorConfigOutputReference
 ```
@@ -3692,7 +3755,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigConfigConnectorConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigDnsCacheConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigDnsCacheConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigDnsCacheConfigList
 ```
@@ -3824,7 +3887,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigDnsCacheConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigDnsCacheConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigDnsCacheConfigOutputReference
 ```
@@ -4102,7 +4165,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigDnsCacheConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfigList
 ```
@@ -4234,7 +4297,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiDriverConfigOutputReference
 ```
@@ -4512,7 +4575,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigGcePersistentDiskCsiD
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigList
 ```
@@ -4644,7 +4707,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigOutputReference
 ```
@@ -4922,7 +4985,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriver
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfigList
 ```
@@ -5054,7 +5117,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfigOutputReference
 ```
@@ -5332,7 +5395,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigGcsFuseCsiDriverConfi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGkeBackupAgentConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGkeBackupAgentConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigGkeBackupAgentConfigList
 ```
@@ -5464,7 +5527,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigGkeBackupAgentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigGkeBackupAgentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigGkeBackupAgentConfigOutputReference
 ```
@@ -5742,7 +5805,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigGkeBackupAgentConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscalingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigHorizontalPodAutoscalingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscalingList
 ```
@@ -5874,7 +5937,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigHorizontalPodAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscalingOutputReference
 ```
@@ -6152,7 +6215,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscal
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigHttpLoadBalancingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigHttpLoadBalancingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigHttpLoadBalancingList
 ```
@@ -6284,7 +6347,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigHttpLoadBalancingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigHttpLoadBalancingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigHttpLoadBalancingOutputReference
 ```
@@ -6562,7 +6625,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigHttpLoadBalancing
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigList
 ```
@@ -6694,7 +6757,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigNetworkPolicyConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigNetworkPolicyConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAddonsConfigNetworkPolicyConfigList
 ```
@@ -6826,7 +6889,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigNetworkPolicyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigNetworkPolicyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigNetworkPolicyConfigOutputReference
 ```
@@ -7104,7 +7167,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfigNetworkPolicyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAddonsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAddonsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAddonsConfigOutputReference
 ```
@@ -7481,7 +7544,7 @@ func InternalValue() DataGoogleContainerClusterAddonsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAuthenticatorGroupsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAuthenticatorGroupsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterAuthenticatorGroupsConfigList
 ```
@@ -7613,7 +7676,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterAuthenticatorGroupsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterAuthenticatorGroupsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterAuthenticatorGroupsConfigOutputReference
 ```
@@ -7891,7 +7954,7 @@ func InternalValue() DataGoogleContainerClusterAuthenticatorGroupsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterBinaryAuthorizationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterBinaryAuthorizationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterBinaryAuthorizationList
 ```
@@ -8023,7 +8086,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterBinaryAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterBinaryAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterBinaryAuthorizationOutputReference
 ```
@@ -8312,7 +8375,7 @@ func InternalValue() DataGoogleContainerClusterBinaryAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsList
 ```
@@ -8444,7 +8507,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementList
 ```
@@ -8576,7 +8639,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementOutputReference
 ```
@@ -8876,7 +8939,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingAutoProvisionin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsList
 ```
@@ -9008,7 +9071,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsOutputReference
 ```
@@ -9297,7 +9360,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingAutoProvisionin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputReference
 ```
@@ -9674,7 +9737,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingAutoProvisionin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigList
 ```
@@ -9806,7 +9869,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigOutputReference
 ```
@@ -10095,7 +10158,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingAutoProvisionin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsList
 ```
@@ -10227,7 +10290,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsOutputReference
 ```
@@ -10516,7 +10579,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingAutoProvisionin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyList
 ```
@@ -10648,7 +10711,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference
 ```
@@ -10948,7 +11011,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingAutoProvisionin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsList
 ```
@@ -11080,7 +11143,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsOutputReference
 ```
@@ -11391,7 +11454,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingAutoProvisionin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingList
 ```
@@ -11523,7 +11586,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingOutputReference
 ```
@@ -11823,7 +11886,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingResourceLimitsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingResourceLimitsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterClusterAutoscalingResourceLimitsList
 ```
@@ -11955,7 +12018,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterClusterAutoscalingResourceLimitsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterClusterAutoscalingResourceLimitsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterClusterAutoscalingResourceLimitsOutputReference
 ```
@@ -12255,7 +12318,7 @@ func InternalValue() DataGoogleContainerClusterClusterAutoscalingResourceLimits
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfidentialNodesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterConfidentialNodesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterConfidentialNodesList
 ```
@@ -12387,7 +12450,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfidentialNodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterConfidentialNodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterConfidentialNodesOutputReference
 ```
@@ -12665,7 +12728,7 @@ func InternalValue() DataGoogleContainerClusterConfidentialNodes
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterCostManagementConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterCostManagementConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterCostManagementConfigList
 ```
@@ -12797,7 +12860,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterCostManagementConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterCostManagementConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterCostManagementConfigOutputReference
 ```
@@ -13075,7 +13138,7 @@ func InternalValue() DataGoogleContainerClusterCostManagementConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDatabaseEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterDatabaseEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterDatabaseEncryptionList
 ```
@@ -13207,7 +13270,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDatabaseEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterDatabaseEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterDatabaseEncryptionOutputReference
 ```
@@ -13496,7 +13559,7 @@ func InternalValue() DataGoogleContainerClusterDatabaseEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDefaultSnatStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterDefaultSnatStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterDefaultSnatStatusList
 ```
@@ -13628,7 +13691,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDefaultSnatStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterDefaultSnatStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterDefaultSnatStatusOutputReference
 ```
@@ -13906,7 +13969,7 @@ func InternalValue() DataGoogleContainerClusterDefaultSnatStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDnsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterDnsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterDnsConfigList
 ```
@@ -14038,7 +14101,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterDnsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterDnsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterDnsConfigOutputReference
 ```
@@ -14338,7 +14401,7 @@ func InternalValue() DataGoogleContainerClusterDnsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnableK8SBetaApisList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterEnableK8SBetaApisList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterEnableK8SBetaApisList
 ```
@@ -14470,7 +14533,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnableK8SBetaApisOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterEnableK8SBetaApisOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterEnableK8SBetaApisOutputReference
 ```
@@ -14748,7 +14811,7 @@ func InternalValue() DataGoogleContainerClusterEnableK8SBetaApis
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterGatewayApiConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterGatewayApiConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterGatewayApiConfigList
 ```
@@ -14880,7 +14943,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterGatewayApiConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterGatewayApiConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterGatewayApiConfigOutputReference
 ```
@@ -15158,7 +15221,7 @@ func InternalValue() DataGoogleContainerClusterGatewayApiConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfigList
 ```
@@ -15290,7 +15353,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterIpAllocationPolicyAdditionalPodRangesConfigOutputReference
 ```
@@ -15568,7 +15631,7 @@ func InternalValue() DataGoogleContainerClusterIpAllocationPolicyAdditionalPodRa
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterIpAllocationPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterIpAllocationPolicyList
 ```
@@ -15700,7 +15763,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterIpAllocationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterIpAllocationPolicyOutputReference
 ```
@@ -16044,7 +16107,7 @@ func InternalValue() DataGoogleContainerClusterIpAllocationPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigList
 ```
@@ -16176,7 +16239,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigOutputReference
 ```
@@ -16454,7 +16517,7 @@ func InternalValue() DataGoogleContainerClusterIpAllocationPolicyPodCidrOverprov
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterLoggingConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterLoggingConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterLoggingConfigList
 ```
@@ -16586,7 +16649,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterLoggingConfigOutputReference
 ```
@@ -16864,7 +16927,7 @@ func InternalValue() DataGoogleContainerClusterLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindowList
 ```
@@ -16996,7 +17059,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMaintenancePolicyDailyMaintenanceWindowOutputReference
 ```
@@ -17285,7 +17348,7 @@ func InternalValue() DataGoogleContainerClusterMaintenancePolicyDailyMaintenance
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMaintenancePolicyList
 ```
@@ -17417,7 +17480,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptionsList
 ```
@@ -17549,7 +17612,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionExclusionOptionsOutputReference
 ```
@@ -17827,7 +17890,7 @@ func InternalValue() DataGoogleContainerClusterMaintenancePolicyMaintenanceExclu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionList
 ```
@@ -17959,7 +18022,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference
 ```
@@ -18270,7 +18333,7 @@ func InternalValue() DataGoogleContainerClusterMaintenancePolicyMaintenanceExclu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMaintenancePolicyOutputReference
 ```
@@ -18570,7 +18633,7 @@ func InternalValue() DataGoogleContainerClusterMaintenancePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyRecurringWindowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyRecurringWindowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMaintenancePolicyRecurringWindowList
 ```
@@ -18702,7 +18765,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMaintenancePolicyRecurringWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMaintenancePolicyRecurringWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMaintenancePolicyRecurringWindowOutputReference
 ```
@@ -19002,7 +19065,7 @@ func InternalValue() DataGoogleContainerClusterMaintenancePolicyRecurringWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthClientCertificateConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthClientCertificateConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMasterAuthClientCertificateConfigList
 ```
@@ -19134,7 +19197,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthClientCertificateConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthClientCertificateConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMasterAuthClientCertificateConfigOutputReference
 ```
@@ -19412,7 +19475,7 @@ func InternalValue() DataGoogleContainerClusterMasterAuthClientCertificateConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMasterAuthList
 ```
@@ -19544,7 +19607,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocksList
 ```
@@ -19676,7 +19739,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference
 ```
@@ -19965,7 +20028,7 @@ func InternalValue() DataGoogleContainerClusterMasterAuthorizedNetworksConfigCid
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthorizedNetworksConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMasterAuthorizedNetworksConfigList
 ```
@@ -20097,7 +20160,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthorizedNetworksConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthorizedNetworksConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMasterAuthorizedNetworksConfigOutputReference
 ```
@@ -20386,7 +20449,7 @@ func InternalValue() DataGoogleContainerClusterMasterAuthorizedNetworksConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMasterAuthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMasterAuthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMasterAuthOutputReference
 ```
@@ -20697,7 +20760,7 @@ func InternalValue() DataGoogleContainerClusterMasterAuth
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMeshCertificatesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMeshCertificatesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMeshCertificatesList
 ```
@@ -20829,7 +20892,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMeshCertificatesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMeshCertificatesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMeshCertificatesOutputReference
 ```
@@ -21107,7 +21170,7 @@ func InternalValue() DataGoogleContainerClusterMeshCertificates
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList
 ```
@@ -21239,7 +21302,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference
 ```
@@ -21528,7 +21591,7 @@ func InternalValue() DataGoogleContainerClusterMonitoringConfigAdvancedDatapathO
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMonitoringConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMonitoringConfigList
 ```
@@ -21660,7 +21723,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigManagedPrometheusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMonitoringConfigManagedPrometheusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterMonitoringConfigManagedPrometheusList
 ```
@@ -21792,7 +21855,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigManagedPrometheusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMonitoringConfigManagedPrometheusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMonitoringConfigManagedPrometheusOutputReference
 ```
@@ -22070,7 +22133,7 @@ func InternalValue() DataGoogleContainerClusterMonitoringConfigManagedPrometheus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterMonitoringConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterMonitoringConfigOutputReference
 ```
@@ -22370,7 +22433,7 @@ func InternalValue() DataGoogleContainerClusterMonitoringConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNetworkPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNetworkPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNetworkPolicyList
 ```
@@ -22502,7 +22565,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNetworkPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNetworkPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNetworkPolicyOutputReference
 ```
@@ -22791,7 +22854,7 @@ func InternalValue() DataGoogleContainerClusterNetworkPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigAdvancedMachineFeaturesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigAdvancedMachineFeaturesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigAdvancedMachineFeaturesList
 ```
@@ -22923,7 +22986,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference
 ```
@@ -23201,7 +23264,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigAdvancedMachineFeatures
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigConfidentialNodesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigConfidentialNodesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigConfidentialNodesList
 ```
@@ -23333,7 +23396,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigConfidentialNodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigConfidentialNodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigConfidentialNodesOutputReference
 ```
@@ -23611,7 +23674,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigConfidentialNodes
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList
 ```
@@ -23743,7 +23806,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigOutputReference
 ```
@@ -24016,12 +24079,422 @@ func InternalValue() DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSs
 ---
 
 
+### DataGoogleContainerClusterNodeConfigFastSocketList <a name="DataGoogleContainerClusterNodeConfigFastSocketList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigFastSocketList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigFastSocketList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.get"></a>
+
+```go
+func Get(index *f64) DataGoogleContainerClusterNodeConfigFastSocketOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.get.parameter.index"></a>
+
+- *Type:* *f64
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+
+### DataGoogleContainerClusterNodeConfigFastSocketOutputReference <a name="DataGoogleContainerClusterNodeConfigFastSocketOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigFastSocketOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigFastSocketOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* *f64
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.enabled">Enabled</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocket">DataGoogleContainerClusterNodeConfigFastSocket</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.enabled"></a>
+
+```go
+func Enabled() IResolvable
+```
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolvable
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() DataGoogleContainerClusterNodeConfigFastSocket
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocket">DataGoogleContainerClusterNodeConfigFastSocket</a>
+
+---
+
+
 ### DataGoogleContainerClusterNodeConfigGcfsConfigList <a name="DataGoogleContainerClusterNodeConfigGcfsConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGcfsConfigList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGcfsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGcfsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigGcfsConfigList
 ```
@@ -24153,7 +24626,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGcfsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGcfsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigGcfsConfigOutputReference
 ```
@@ -24431,7 +24904,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigGcfsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfigList
 ```
@@ -24563,7 +25036,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference
 ```
@@ -24841,7 +25314,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuDriv
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigList
 ```
@@ -24973,7 +25446,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference
 ```
@@ -25262,7 +25735,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigGuestAcceleratorGpuShar
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGuestAcceleratorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigGuestAcceleratorList
 ```
@@ -25394,7 +25867,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGuestAcceleratorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigGuestAcceleratorOutputReference
 ```
@@ -25716,7 +26189,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigGuestAccelerator
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGvnicList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGvnicList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigGvnicList
 ```
@@ -25848,7 +26321,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGvnicOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigGvnicOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigGvnicOutputReference
 ```
@@ -26126,7 +26599,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigGvnic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigHostMaintenancePolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigHostMaintenancePolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigHostMaintenancePolicyList
 ```
@@ -26258,7 +26731,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigHostMaintenancePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigHostMaintenancePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigHostMaintenancePolicyOutputReference
 ```
@@ -26536,7 +27009,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigHostMaintenancePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigKubeletConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigKubeletConfigList
 ```
@@ -26668,7 +27141,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigKubeletConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference
 ```
@@ -26979,7 +27452,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigKubeletConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLinuxNodeConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigLinuxNodeConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigLinuxNodeConfigList
 ```
@@ -27111,7 +27584,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLinuxNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigLinuxNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigLinuxNodeConfigOutputReference
 ```
@@ -27389,7 +27862,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigLinuxNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigList
 ```
@@ -27521,7 +27994,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList
 ```
@@ -27653,7 +28126,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigOutputReference
 ```
@@ -27931,7 +28404,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigOutputReference
 ```
@@ -28160,6 +28633,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.diskSizeGb">DiskSizeGb</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.diskType">DiskType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.ephemeralStorageLocalSsdConfig">EphemeralStorageLocalSsdConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList">DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.fastSocket">FastSocket</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList">DataGoogleContainerClusterNodeConfigFastSocketList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.gcfsConfig">GcfsConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGcfsConfigList">DataGoogleContainerClusterNodeConfigGcfsConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.guestAccelerator">GuestAccelerator</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGuestAcceleratorList">DataGoogleContainerClusterNodeConfigGuestAcceleratorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.gvnic">Gvnic</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigGvnicList">DataGoogleContainerClusterNodeConfigGvnicList</a></code> | *No description.* |
@@ -28271,6 +28745,16 @@ func EphemeralStorageLocalSsdConfig() DataGoogleContainerClusterNodeConfigEpheme
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList">DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList</a>
+
+---
+
+##### `FastSocket`<sup>Required</sup> <a name="FastSocket" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.fastSocket"></a>
+
+```go
+func FastSocket() DataGoogleContainerClusterNodeConfigFastSocketList
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigFastSocketList">DataGoogleContainerClusterNodeConfigFastSocketList</a>
 
 ---
 
@@ -28550,7 +29034,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigReservationAffinityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigReservationAffinityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigReservationAffinityList
 ```
@@ -28682,7 +29166,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigReservationAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigReservationAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigReservationAffinityOutputReference
 ```
@@ -28982,7 +29466,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigReservationAffinity
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigShieldedInstanceConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigShieldedInstanceConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigShieldedInstanceConfigList
 ```
@@ -29114,7 +29598,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigShieldedInstanceConfigOutputReference
 ```
@@ -29403,7 +29887,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigShieldedInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigSoleTenantConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigSoleTenantConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigSoleTenantConfigList
 ```
@@ -29535,7 +30019,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinityList
 ```
@@ -29667,7 +30151,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAffinityOutputReference
 ```
@@ -29967,7 +30451,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigSoleTenantConfigNodeAff
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigSoleTenantConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigSoleTenantConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigSoleTenantConfigOutputReference
 ```
@@ -30245,7 +30729,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigSoleTenantConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigTaintList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigTaintList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigTaintList
 ```
@@ -30377,7 +30861,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigTaintOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigTaintOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigTaintOutputReference
 ```
@@ -30677,7 +31161,7 @@ func InternalValue() DataGoogleContainerClusterNodeConfigTaint
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigWorkloadMetadataConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigWorkloadMetadataConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodeConfigWorkloadMetadataConfigList
 ```
@@ -30809,7 +31293,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigWorkloadMetadataConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodeConfigWorkloadMetadataConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodeConfigWorkloadMetadataConfigOutputReference
 ```
@@ -31082,12 +31566,832 @@ func InternalValue() DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig
 ---
 
 
+### DataGoogleContainerClusterNodePoolAutoConfigList <a name="DataGoogleContainerClusterNodePoolAutoConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolAutoConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolAutoConfigList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.get"></a>
+
+```go
+func Get(index *f64) DataGoogleContainerClusterNodePoolAutoConfigOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.get.parameter.index"></a>
+
+- *Type:* *f64
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList <a name="DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.get"></a>
+
+```go
+func Get(index *f64) DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.get.parameter.index"></a>
+
+- *Type:* *f64
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference <a name="DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* *f64
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.tags">Tags</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTags">DataGoogleContainerClusterNodePoolAutoConfigNetworkTags</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Tags`<sup>Required</sup> <a name="Tags" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.tags"></a>
+
+```go
+func Tags() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() DataGoogleContainerClusterNodePoolAutoConfigNetworkTags
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTags">DataGoogleContainerClusterNodePoolAutoConfigNetworkTags</a>
+
+---
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigOutputReference <a name="DataGoogleContainerClusterNodePoolAutoConfigOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolAutoConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolAutoConfigOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* *f64
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.networkTags">NetworkTags</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList">DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfig">DataGoogleContainerClusterNodePoolAutoConfig</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NetworkTags`<sup>Required</sup> <a name="NetworkTags" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.networkTags"></a>
+
+```go
+func NetworkTags() DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList">DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList</a>
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() DataGoogleContainerClusterNodePoolAutoConfig
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfig">DataGoogleContainerClusterNodePoolAutoConfig</a>
+
+---
+
+
 ### DataGoogleContainerClusterNodePoolAutoscalingList <a name="DataGoogleContainerClusterNodePoolAutoscalingList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoscalingList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoscalingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolAutoscalingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolAutoscalingList
 ```
@@ -31219,7 +32523,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolAutoscalingOutputReference
 ```
@@ -31541,7 +32845,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolAutoscaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolDefaultsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolDefaultsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolDefaultsList
 ```
@@ -31673,7 +32977,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsList
 ```
@@ -31805,7 +33109,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsOutputReference
 ```
@@ -32083,7 +33387,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefault
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolDefaultsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolDefaultsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolDefaultsOutputReference
 ```
@@ -32361,7 +33665,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolDefaults
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolList
 ```
@@ -32493,7 +33797,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolManagementList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolManagementList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolManagementList
 ```
@@ -32625,7 +33929,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolManagementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolManagementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolManagementOutputReference
 ```
@@ -32914,7 +34218,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolManagement
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNetworkConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNetworkConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNetworkConfigList
 ```
@@ -33046,7 +34350,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNetworkConfigOutputReference
 ```
@@ -33368,7 +34672,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigList
 ```
@@ -33500,7 +34804,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference
 ```
@@ -33778,7 +35082,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNetworkConfigPodCidrOverp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesList
 ```
@@ -33910,7 +35214,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference
 ```
@@ -34188,7 +35492,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachine
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigConfidentialNodesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigConfidentialNodesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigConfidentialNodesList
 ```
@@ -34320,7 +35624,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigConfidentialNodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigConfidentialNodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigConfidentialNodesOutputReference
 ```
@@ -34598,7 +35902,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigConfidentialNod
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigList
 ```
@@ -34730,7 +36034,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigOutputReference
 ```
@@ -35003,12 +36307,422 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorag
 ---
 
 
+### DataGoogleContainerClusterNodePoolNodeConfigFastSocketList <a name="DataGoogleContainerClusterNodePoolNodeConfigFastSocketList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigFastSocketList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigFastSocketList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.get"></a>
+
+```go
+func Get(index *f64) DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.get.parameter.index"></a>
+
+- *Type:* *f64
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+
+### DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference <a name="DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
+
+datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* *f64
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.enabled">Enabled</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocket">DataGoogleContainerClusterNodePoolNodeConfigFastSocket</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.enabled"></a>
+
+```go
+func Enabled() IResolvable
+```
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolvable
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigFastSocket
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocket">DataGoogleContainerClusterNodePoolNodeConfigFastSocket</a>
+
+---
+
+
 ### DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList <a name="DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList
 ```
@@ -35140,7 +36854,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGcfsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigOutputReference
 ```
@@ -35418,7 +37132,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigList
 ```
@@ -35550,7 +37264,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference
 ```
@@ -35828,7 +37542,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerato
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList
 ```
@@ -35960,7 +37674,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference
 ```
@@ -36249,7 +37963,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerato
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorList
 ```
@@ -36381,7 +38095,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference
 ```
@@ -36703,7 +38417,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerato
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGvnicList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGvnicList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGvnicList
 ```
@@ -36835,7 +38549,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGvnicOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigGvnicOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigGvnicOutputReference
 ```
@@ -37113,7 +38827,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigGvnic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicyList
 ```
@@ -37245,7 +38959,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigHostMaintenancePolicyOutputReference
 ```
@@ -37523,7 +39237,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigHostMaintenance
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigKubeletConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigList
 ```
@@ -37655,7 +39369,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference
 ```
@@ -37966,7 +39680,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigKubeletConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList
 ```
@@ -38098,7 +39812,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigOutputReference
 ```
@@ -38376,7 +40090,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigList
 ```
@@ -38508,7 +40222,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList
 ```
@@ -38640,7 +40354,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference
 ```
@@ -38918,7 +40632,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigOutputReference
 ```
@@ -39147,6 +40861,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.diskSizeGb">DiskSizeGb</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.diskType">DiskType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.ephemeralStorageLocalSsdConfig">EphemeralStorageLocalSsdConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigList">DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.fastSocket">FastSocket</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList">DataGoogleContainerClusterNodePoolNodeConfigFastSocketList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.gcfsConfig">GcfsConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList">DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.guestAccelerator">GuestAccelerator</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorList">DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.gvnic">Gvnic</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigGvnicList">DataGoogleContainerClusterNodePoolNodeConfigGvnicList</a></code> | *No description.* |
@@ -39258,6 +40973,16 @@ func EphemeralStorageLocalSsdConfig() DataGoogleContainerClusterNodePoolNodeConf
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigList">DataGoogleContainerClusterNodePoolNodeConfigEphemeralStorageLocalSsdConfigList</a>
+
+---
+
+##### `FastSocket`<sup>Required</sup> <a name="FastSocket" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.fastSocket"></a>
+
+```go
+func FastSocket() DataGoogleContainerClusterNodePoolNodeConfigFastSocketList
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigFastSocketList">DataGoogleContainerClusterNodePoolNodeConfigFastSocketList</a>
 
 ---
 
@@ -39537,7 +41262,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigReservationAffinityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityList
 ```
@@ -39669,7 +41394,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigReservationAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityOutputReference
 ```
@@ -39969,7 +41694,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigReservationAffi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfigList
 ```
@@ -40101,7 +41826,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputReference
 ```
@@ -40390,7 +42115,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigList
 ```
@@ -40522,7 +42247,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinityList
 ```
@@ -40654,7 +42379,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference
 ```
@@ -40954,7 +42679,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfigOutputReference
 ```
@@ -41232,7 +42957,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigSoleTenantConfi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigTaintList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigTaintList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigTaintList
 ```
@@ -41364,7 +43089,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigTaintOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigTaintOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigTaintOutputReference
 ```
@@ -41664,7 +43389,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigTaint
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigList
 ```
@@ -41796,7 +43521,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference
 ```
@@ -42074,7 +43799,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolOutputReference
 ```
@@ -42506,7 +44231,7 @@ func InternalValue() DataGoogleContainerClusterNodePool
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolPlacementPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolPlacementPolicyList
 ```
@@ -42638,7 +44363,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolPlacementPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference
 ```
@@ -42862,6 +44587,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.policyName">PolicyName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.tpuTopology">TpuTopology</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.type">Type</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicy">DataGoogleContainerClusterNodePoolPlacementPolicy</a></code> | *No description.* |
 
@@ -42901,6 +44627,16 @@ func PolicyName() *string
 
 ---
 
+##### `TpuTopology`<sup>Required</sup> <a name="TpuTopology" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.tpuTopology"></a>
+
+```go
+func TpuTopology() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `Type`<sup>Required</sup> <a name="Type" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolPlacementPolicyOutputReference.property.type"></a>
 
 ```go
@@ -42927,7 +44663,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolPlacementPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsList
 ```
@@ -43059,7 +44795,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsOutputReference
 ```
@@ -43348,7 +45084,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenS
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyList
 ```
@@ -43480,7 +45216,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference
 ```
@@ -43780,7 +45516,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolUpgradeSettingsBlueGreenS
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolUpgradeSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNodePoolUpgradeSettingsList
 ```
@@ -43912,7 +45648,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolUpgradeSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNodePoolUpgradeSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNodePoolUpgradeSettingsOutputReference
 ```
@@ -44223,7 +45959,7 @@ func InternalValue() DataGoogleContainerClusterNodePoolUpgradeSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNotificationConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNotificationConfigList
 ```
@@ -44355,7 +46091,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNotificationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNotificationConfigOutputReference
 ```
@@ -44633,7 +46369,7 @@ func InternalValue() DataGoogleContainerClusterNotificationConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigPubsubFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNotificationConfigPubsubFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNotificationConfigPubsubFilterList
 ```
@@ -44765,7 +46501,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigPubsubFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNotificationConfigPubsubFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNotificationConfigPubsubFilterOutputReference
 ```
@@ -45043,7 +46779,7 @@ func InternalValue() DataGoogleContainerClusterNotificationConfigPubsubFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigPubsubList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNotificationConfigPubsubList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterNotificationConfigPubsubList
 ```
@@ -45175,7 +46911,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNotificationConfigPubsubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterNotificationConfigPubsubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterNotificationConfigPubsubOutputReference
 ```
@@ -45475,7 +47211,7 @@ func InternalValue() DataGoogleContainerClusterNotificationConfigPubsub
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterPrivateClusterConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterPrivateClusterConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterPrivateClusterConfigList
 ```
@@ -45607,7 +47343,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigList
 ```
@@ -45739,7 +47475,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigOutputReference
 ```
@@ -46017,7 +47753,7 @@ func InternalValue() DataGoogleContainerClusterPrivateClusterConfigMasterGlobalA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterPrivateClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterPrivateClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterPrivateClusterConfigOutputReference
 ```
@@ -46372,7 +48108,7 @@ func InternalValue() DataGoogleContainerClusterPrivateClusterConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterReleaseChannelList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterReleaseChannelList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterReleaseChannelList
 ```
@@ -46504,7 +48240,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterReleaseChannelOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterReleaseChannelOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterReleaseChannelOutputReference
 ```
@@ -46782,7 +48518,7 @@ func InternalValue() DataGoogleContainerClusterReleaseChannel
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationList
 ```
@@ -46914,7 +48650,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationOutputReference
 ```
@@ -47192,7 +48928,7 @@ func InternalValue() DataGoogleContainerClusterResourceUsageExportConfigBigquery
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterResourceUsageExportConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterResourceUsageExportConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterResourceUsageExportConfigList
 ```
@@ -47324,7 +49060,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterResourceUsageExportConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterResourceUsageExportConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterResourceUsageExportConfigOutputReference
 ```
@@ -47624,7 +49360,7 @@ func InternalValue() DataGoogleContainerClusterResourceUsageExportConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterSecurityPostureConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterSecurityPostureConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterSecurityPostureConfigList
 ```
@@ -47756,7 +49492,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterSecurityPostureConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterSecurityPostureConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterSecurityPostureConfigOutputReference
 ```
@@ -48045,7 +49781,7 @@ func InternalValue() DataGoogleContainerClusterSecurityPostureConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterServiceExternalIpsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterServiceExternalIpsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterServiceExternalIpsConfigList
 ```
@@ -48177,7 +49913,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterServiceExternalIpsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterServiceExternalIpsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterServiceExternalIpsConfigOutputReference
 ```
@@ -48455,7 +50191,7 @@ func InternalValue() DataGoogleContainerClusterServiceExternalIpsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterVerticalPodAutoscalingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterVerticalPodAutoscalingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterVerticalPodAutoscalingList
 ```
@@ -48587,7 +50323,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterVerticalPodAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterVerticalPodAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterVerticalPodAutoscalingOutputReference
 ```
@@ -48865,7 +50601,7 @@ func InternalValue() DataGoogleContainerClusterVerticalPodAutoscaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterWorkloadIdentityConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterWorkloadIdentityConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleContainerClusterWorkloadIdentityConfigList
 ```
@@ -48997,7 +50733,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterWorkloadIdentityConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecontainercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainercluster"
 
 datagooglecontainercluster.NewDataGoogleContainerClusterWorkloadIdentityConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleContainerClusterWorkloadIdentityConfigOutputReference
 ```

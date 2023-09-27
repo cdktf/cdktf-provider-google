@@ -1,6 +1,6 @@
 # `google_document_ai_warehouse_location`
 
-Refer to the Terraform Registory for docs: [`google_document_ai_warehouse_location`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location).
+Refer to the Terraform Registory for docs: [`google_document_ai_warehouse_location`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location).
 
 # `documentAiWarehouseLocation` Submodule <a name="`documentAiWarehouseLocation` Submodule" id="@cdktf/provider-google.documentAiWarehouseLocation"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_document_ai_warehouse_locati
 
 ### DocumentAiWarehouseLocation <a name="DocumentAiWarehouseLocation" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location google_document_ai_warehouse_location}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location google_document_ai_warehouse_location}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehouselocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiwarehouselocation"
 
 documentaiwarehouselocation.NewDocumentAiWarehouseLocation(scope Construct, id *string, config DocumentAiWarehouseLocationConfig) DocumentAiWarehouseLocation
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehouselocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiwarehouselocation"
 
 documentaiwarehouselocation.DocumentAiWarehouseLocation_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehouselocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiwarehouselocation"
 
 documentaiwarehouselocation.DocumentAiWarehouseLocation_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ documentaiwarehouselocation.DocumentAiWarehouseLocation_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehouselocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiwarehouselocation"
 
 documentaiwarehouselocation.DocumentAiWarehouseLocation_IsTerraformResource(x interface{}) *bool
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehouselocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiwarehouselocation"
 
 &documentaiwarehouselocation.DocumentAiWarehouseLocationConfig {
 	Connection: interface{},
@@ -749,7 +749,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehousel
 	DocumentCreatorDefaultRole: *string,
 	Id: *string,
 	KmsKey: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts,
 }
 ```
 
@@ -769,7 +769,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehousel
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.location">Location</a></code> | <code>*string</code> | The location in which the instance is to be provisioned. It takes the form projects/{projectNumber}/locations/{location}. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.projectNumber">ProjectNumber</a></code> | <code>*string</code> | The unique identifier of the project. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.documentCreatorDefaultRole">DocumentCreatorDefaultRole</a></code> | <code>*string</code> | The default role for the person who create a document. Possible values: ["DOCUMENT_ADMIN", "DOCUMENT_EDITOR", "DOCUMENT_VIEWER"]. |
-| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}. |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.kmsKey">KmsKey</a></code> | <code>*string</code> | The KMS key used for CMEK encryption. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts">DocumentAiWarehouseLocationTimeouts</a></code> | timeouts block. |
 
@@ -855,7 +855,7 @@ AccessControlMode *string
 
 The access control mode for accessing the customer data. Possible values: ["ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_GCI", "ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_BYOID", "ACL_MODE_UNIVERSAL_ACCESS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#access_control_mode DocumentAiWarehouseLocation#access_control_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#access_control_mode DocumentAiWarehouseLocation#access_control_mode}
 
 ---
 
@@ -869,7 +869,7 @@ DatabaseType *string
 
 The type of database used to store customer data. Possible values: ["DB_INFRA_SPANNER", "DB_CLOUD_SQL_POSTGRES"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#database_type DocumentAiWarehouseLocation#database_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#database_type DocumentAiWarehouseLocation#database_type}
 
 ---
 
@@ -883,7 +883,7 @@ Location *string
 
 The location in which the instance is to be provisioned. It takes the form projects/{projectNumber}/locations/{location}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#location DocumentAiWarehouseLocation#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#location DocumentAiWarehouseLocation#location}
 
 ---
 
@@ -897,7 +897,7 @@ ProjectNumber *string
 
 The unique identifier of the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#project_number DocumentAiWarehouseLocation#project_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#project_number DocumentAiWarehouseLocation#project_number}
 
 ---
 
@@ -911,7 +911,7 @@ DocumentCreatorDefaultRole *string
 
 The default role for the person who create a document. Possible values: ["DOCUMENT_ADMIN", "DOCUMENT_EDITOR", "DOCUMENT_VIEWER"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#document_creator_default_role DocumentAiWarehouseLocation#document_creator_default_role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#document_creator_default_role DocumentAiWarehouseLocation#document_creator_default_role}
 
 ---
 
@@ -923,7 +923,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -946,7 +946,7 @@ same key will be used for all provisioned resources, if
 encryption is available. If the kmsKey is left empty, no
 encryption will be enforced.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#kms_key DocumentAiWarehouseLocation#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#kms_key DocumentAiWarehouseLocation#kms_key}
 
 ---
 
@@ -960,7 +960,7 @@ Timeouts DocumentAiWarehouseLocationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#timeouts DocumentAiWarehouseLocation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#timeouts DocumentAiWarehouseLocation#timeouts}
 
 ---
 
@@ -969,7 +969,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehouselocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiwarehouselocation"
 
 &documentaiwarehouselocation.DocumentAiWarehouseLocationTimeouts {
 	Create: *string,
@@ -981,8 +981,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehousel
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}. |
-| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}. |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}. |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}. |
 
 ---
 
@@ -994,7 +994,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}.
 
 ---
 
@@ -1006,7 +1006,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}.
 
 ---
 
@@ -1017,7 +1017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/documentaiwarehouselocation"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiwarehouselocation"
 
 documentaiwarehouselocation.NewDocumentAiWarehouseLocationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseLocationTimeoutsOutputReference
 ```

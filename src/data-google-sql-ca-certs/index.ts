@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/sql_ca_certs
+// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/sql_ca_certs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,18 +8,18 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSqlCaCertsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/sql_ca_certs#id DataGoogleSqlCaCerts#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/sql_ca_certs#id DataGoogleSqlCaCerts#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/sql_ca_certs#instance DataGoogleSqlCaCerts#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/sql_ca_certs#instance DataGoogleSqlCaCerts#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/sql_ca_certs#project DataGoogleSqlCaCerts#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/sql_ca_certs#project DataGoogleSqlCaCerts#project}
   */
   readonly project?: string;
 }
@@ -114,7 +109,7 @@ export class DataGoogleSqlCaCertsCertsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/sql_ca_certs google_sql_ca_certs}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/sql_ca_certs google_sql_ca_certs}
 */
 export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
 
@@ -128,7 +123,7 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/sql_ca_certs google_sql_ca_certs} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/sql_ca_certs google_sql_ca_certs} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -139,7 +134,7 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_ca_certs',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.83.0',
+        providerVersion: '4.84.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

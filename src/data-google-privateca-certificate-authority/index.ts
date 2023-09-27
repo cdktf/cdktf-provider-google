@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority
+// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface DataGooglePrivatecaCertificateAuthorityConfig extends cdktf.Ter
   /**
   * The user provided Resource ID for this Certificate Authority.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority#certificate_authority_id DataGooglePrivatecaCertificateAuthority#certificate_authority_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority#certificate_authority_id DataGooglePrivatecaCertificateAuthority#certificate_authority_id}
   */
   readonly certificateAuthorityId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority#id DataGooglePrivatecaCertificateAuthority#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority#id DataGooglePrivatecaCertificateAuthority#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,17 +24,17 @@ export interface DataGooglePrivatecaCertificateAuthorityConfig extends cdktf.Ter
   * Location of the CertificateAuthority. A full list of valid locations can be found by
 running 'gcloud privateca locations list'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority#location DataGooglePrivatecaCertificateAuthority#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority#location DataGooglePrivatecaCertificateAuthority#location}
   */
   readonly location?: string;
   /**
   * The name of the CaPool this Certificate Authority belongs to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority#pool DataGooglePrivatecaCertificateAuthority#pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority#pool DataGooglePrivatecaCertificateAuthority#pool}
   */
   readonly pool?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority#project DataGooglePrivatecaCertificateAuthority#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority#project DataGooglePrivatecaCertificateAuthority#project}
   */
   readonly project?: string;
 }
@@ -1451,7 +1446,7 @@ export class DataGooglePrivatecaCertificateAuthoritySubordinateConfigList extend
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority}
 */
 export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformDataSource {
 
@@ -1465,7 +1460,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1476,7 +1471,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.83.0',
+        providerVersion: '4.84.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

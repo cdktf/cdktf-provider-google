@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface TagsTagKeyIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#id TagsTagKeyIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#id TagsTagKeyIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#member TagsTagKeyIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#member TagsTagKeyIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#role TagsTagKeyIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#role TagsTagKeyIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#tag_key TagsTagKeyIamMember#tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#tag_key TagsTagKeyIamMember#tag_key}
   */
   readonly tagKey: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#condition TagsTagKeyIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#condition TagsTagKeyIamMember#condition}
   */
   readonly condition?: TagsTagKeyIamMemberCondition;
 }
 export interface TagsTagKeyIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#description TagsTagKeyIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#description TagsTagKeyIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#expression TagsTagKeyIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#expression TagsTagKeyIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member#title TagsTagKeyIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member#title TagsTagKeyIamMember#title}
   */
   readonly title: string;
 }
@@ -153,7 +148,7 @@ export class TagsTagKeyIamMemberConditionOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member google_tags_tag_key_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member google_tags_tag_key_iam_member}
 */
 export class TagsTagKeyIamMember extends cdktf.TerraformResource {
 
@@ -167,7 +162,7 @@ export class TagsTagKeyIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/tags_tag_key_iam_member google_tags_tag_key_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/tags_tag_key_iam_member google_tags_tag_key_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -178,7 +173,7 @@ export class TagsTagKeyIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_tags_tag_key_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.83.0',
+        providerVersion: '4.84.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

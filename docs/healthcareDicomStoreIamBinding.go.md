@@ -1,6 +1,6 @@
 # `google_healthcare_dicom_store_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_healthcare_dicom_store_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding).
+Refer to the Terraform Registory for docs: [`google_healthcare_dicom_store_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding).
 
 # `healthcareDicomStoreIamBinding` Submodule <a name="`healthcareDicomStoreIamBinding` Submodule" id="@cdktf/provider-google.healthcareDicomStoreIamBinding"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_healthcare_dicom_store_iam_b
 
 ### HealthcareDicomStoreIamBinding <a name="HealthcareDicomStoreIamBinding" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding google_healthcare_dicom_store_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding google_healthcare_dicom_store_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstoreiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiambinding"
 
 healthcaredicomstoreiambinding.NewHealthcareDicomStoreIamBinding(scope Construct, id *string, config HealthcareDicomStoreIamBindingConfig) HealthcareDicomStoreIamBinding
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstoreiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiambinding"
 
 healthcaredicomstoreiambinding.HealthcareDicomStoreIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstoreiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiambinding"
 
 healthcaredicomstoreiambinding.HealthcareDicomStoreIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ healthcaredicomstoreiambinding.HealthcareDicomStoreIamBinding_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstoreiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiambinding"
 
 healthcaredicomstoreiambinding.HealthcareDicomStoreIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstoreiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiambinding"
 
 &healthcaredicomstoreiambinding.HealthcareDicomStoreIamBindingCondition {
 	Expression: *string,
@@ -676,9 +676,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstore
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#expression HealthcareDicomStoreIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#title HealthcareDicomStoreIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#description HealthcareDicomStoreIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#expression HealthcareDicomStoreIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#title HealthcareDicomStoreIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#description HealthcareDicomStoreIamBinding#description}. |
 
 ---
 
@@ -690,7 +690,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#expression HealthcareDicomStoreIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#expression HealthcareDicomStoreIamBinding#expression}.
 
 ---
 
@@ -702,7 +702,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#title HealthcareDicomStoreIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#title HealthcareDicomStoreIamBinding#title}.
 
 ---
 
@@ -714,7 +714,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#description HealthcareDicomStoreIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#description HealthcareDicomStoreIamBinding#description}.
 
 ---
 
@@ -723,7 +723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstoreiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiambinding"
 
 &healthcaredicomstoreiambinding.HealthcareDicomStoreIamBindingConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstore
 	DicomStoreId: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v9.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -752,11 +752,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstore
 | <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.dicomStoreId">DicomStoreId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#dicom_store_id HealthcareDicomStoreIamBinding#dicom_store_id}. |
-| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#members HealthcareDicomStoreIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#role HealthcareDicomStoreIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.dicomStoreId">DicomStoreId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#dicom_store_id HealthcareDicomStoreIamBinding#dicom_store_id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#members HealthcareDicomStoreIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#role HealthcareDicomStoreIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingCondition">HealthcareDicomStoreIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#id HealthcareDicomStoreIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#id HealthcareDicomStoreIamBinding#id}. |
 
 ---
 
@@ -838,7 +838,7 @@ DicomStoreId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#dicom_store_id HealthcareDicomStoreIamBinding#dicom_store_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#dicom_store_id HealthcareDicomStoreIamBinding#dicom_store_id}.
 
 ---
 
@@ -850,7 +850,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#members HealthcareDicomStoreIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#members HealthcareDicomStoreIamBinding#members}.
 
 ---
 
@@ -862,7 +862,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#role HealthcareDicomStoreIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#role HealthcareDicomStoreIamBinding#role}.
 
 ---
 
@@ -876,7 +876,7 @@ Condition HealthcareDicomStoreIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#condition HealthcareDicomStoreIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#condition HealthcareDicomStoreIamBinding#condition}
 
 ---
 
@@ -888,7 +888,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.83.0/docs/resources/healthcare_dicom_store_iam_binding#id HealthcareDicomStoreIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/healthcare_dicom_store_iam_binding#id HealthcareDicomStoreIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -902,7 +902,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStoreIamBinding.HealthcareDicomStoreIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/healthcaredicomstoreiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiambinding"
 
 healthcaredicomstoreiambinding.NewHealthcareDicomStoreIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareDicomStoreIamBindingConditionOutputReference
 ```
