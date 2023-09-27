@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesrealm"
 
 gameservicesrealm.NewGameServicesRealm(scope Construct, id *string, config GameServicesRealmConfig) GameServicesRealm
 ```
@@ -325,7 +325,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesrealm"
 
 gameservicesrealm.GameServicesRealm_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesrealm"
 
 gameservicesrealm.GameServicesRealm_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ gameservicesrealm.GameServicesRealm_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesrealm"
 
 gameservicesrealm.GameServicesRealm_IsTerraformResource(x interface{}) *bool
 ```
@@ -768,7 +768,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesrealm"
 
 &gameservicesrealm.GameServicesRealmConfig {
 	Connection: interface{},
@@ -785,7 +785,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gameServicesRealm.GameServicesRealmTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.gameServicesRealm.GameServicesRealmTimeouts,
 }
 ```
 
@@ -1001,7 +1001,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesrealm"
 
 &gameservicesrealm.GameServicesRealmTimeouts {
 	Create: *string,
@@ -1063,7 +1063,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesrealm"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesrealm"
 
 gameservicesrealm.NewGameServicesRealmTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GameServicesRealmTimeoutsOutputReference
 ```
