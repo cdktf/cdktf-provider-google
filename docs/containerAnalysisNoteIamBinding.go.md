@@ -1,6 +1,6 @@
 # `google_container_analysis_note_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_container_analysis_note_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding).
+Refer to the Terraform Registory for docs: [`google_container_analysis_note_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding).
 
 # `containerAnalysisNoteIamBinding` Submodule <a name="`containerAnalysisNoteIamBinding` Submodule" id="@cdktf/provider-google.containerAnalysisNoteIamBinding"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_container_analysis_note_iam_
 
 ### ContainerAnalysisNoteIamBinding <a name="ContainerAnalysisNoteIamBinding" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding google_container_analysis_note_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding google_container_analysis_note_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnoteiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containeranalysisnoteiambinding"
 
 containeranalysisnoteiambinding.NewContainerAnalysisNoteIamBinding(scope Construct, id *string, config ContainerAnalysisNoteIamBindingConfig) ContainerAnalysisNoteIamBinding
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnoteiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containeranalysisnoteiambinding"
 
 containeranalysisnoteiambinding.ContainerAnalysisNoteIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnoteiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containeranalysisnoteiambinding"
 
 containeranalysisnoteiambinding.ContainerAnalysisNoteIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ containeranalysisnoteiambinding.ContainerAnalysisNoteIamBinding_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnoteiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containeranalysisnoteiambinding"
 
 containeranalysisnoteiambinding.ContainerAnalysisNoteIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnoteiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containeranalysisnoteiambinding"
 
 &containeranalysisnoteiambinding.ContainerAnalysisNoteIamBindingCondition {
 	Expression: *string,
@@ -705,9 +705,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnot
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#expression ContainerAnalysisNoteIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#title ContainerAnalysisNoteIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#description ContainerAnalysisNoteIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#expression ContainerAnalysisNoteIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#title ContainerAnalysisNoteIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#description ContainerAnalysisNoteIamBinding#description}. |
 
 ---
 
@@ -719,7 +719,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#expression ContainerAnalysisNoteIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#expression ContainerAnalysisNoteIamBinding#expression}.
 
 ---
 
@@ -731,7 +731,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#title ContainerAnalysisNoteIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#title ContainerAnalysisNoteIamBinding#title}.
 
 ---
 
@@ -743,7 +743,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#description ContainerAnalysisNoteIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#description ContainerAnalysisNoteIamBinding#description}.
 
 ---
 
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnoteiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containeranalysisnoteiambinding"
 
 &containeranalysisnoteiambinding.ContainerAnalysisNoteIamBindingConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnot
 	Members: *[]*string,
 	Note: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v9.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -782,12 +782,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnot
 | <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#members ContainerAnalysisNoteIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.note">Note</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#note ContainerAnalysisNoteIamBinding#note}. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#role ContainerAnalysisNoteIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#members ContainerAnalysisNoteIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.note">Note</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#note ContainerAnalysisNoteIamBinding#note}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#role ContainerAnalysisNoteIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingCondition">ContainerAnalysisNoteIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#id ContainerAnalysisNoteIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#project ContainerAnalysisNoteIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#id ContainerAnalysisNoteIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#project ContainerAnalysisNoteIamBinding#project}. |
 
 ---
 
@@ -869,7 +869,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#members ContainerAnalysisNoteIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#members ContainerAnalysisNoteIamBinding#members}.
 
 ---
 
@@ -881,7 +881,7 @@ Note *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#note ContainerAnalysisNoteIamBinding#note}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#note ContainerAnalysisNoteIamBinding#note}.
 
 ---
 
@@ -893,7 +893,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#role ContainerAnalysisNoteIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#role ContainerAnalysisNoteIamBinding#role}.
 
 ---
 
@@ -907,7 +907,7 @@ Condition ContainerAnalysisNoteIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#condition ContainerAnalysisNoteIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#condition ContainerAnalysisNoteIamBinding#condition}
 
 ---
 
@@ -919,7 +919,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#id ContainerAnalysisNoteIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#id ContainerAnalysisNoteIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/container_analysis_note_iam_binding#project ContainerAnalysisNoteIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note_iam_binding#project ContainerAnalysisNoteIamBinding#project}.
 
 ---
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNoteIamBinding.ContainerAnalysisNoteIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/containeranalysisnoteiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containeranalysisnoteiambinding"
 
 containeranalysisnoteiambinding.NewContainerAnalysisNoteIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAnalysisNoteIamBindingConditionOutputReference
 ```

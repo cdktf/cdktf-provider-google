@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion
+// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +15,23 @@ export interface LoggingOrganizationExclusionConfig extends cdktf.TerraformMetaA
   /**
   * A human-readable description.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion#description LoggingOrganizationExclusion#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion#description LoggingOrganizationExclusion#description}
   */
   readonly description?: string;
   /**
   * Whether this exclusion rule should be disabled or not. This defaults to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion#disabled LoggingOrganizationExclusion#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion#disabled LoggingOrganizationExclusion#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion#filter LoggingOrganizationExclusion#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion#filter LoggingOrganizationExclusion#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion#id LoggingOrganizationExclusion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion#id LoggingOrganizationExclusion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,17 +40,17 @@ export interface LoggingOrganizationExclusionConfig extends cdktf.TerraformMetaA
   /**
   * The name of the logging exclusion.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion#name LoggingOrganizationExclusion#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion#name LoggingOrganizationExclusion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion#org_id LoggingOrganizationExclusion#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion#org_id LoggingOrganizationExclusion#org_id}
   */
   readonly orgId: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion google_logging_organization_exclusion}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion google_logging_organization_exclusion}
 */
 export class LoggingOrganizationExclusion extends cdktf.TerraformResource {
 
@@ -64,7 +64,7 @@ export class LoggingOrganizationExclusion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/logging_organization_exclusion google_logging_organization_exclusion} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_organization_exclusion google_logging_organization_exclusion} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -75,8 +75,8 @@ export class LoggingOrganizationExclusion extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_organization_exclusion',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.84.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersion: '5.0.0',
+        providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

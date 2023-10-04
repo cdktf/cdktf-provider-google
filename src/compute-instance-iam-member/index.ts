@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#id ComputeInstanceIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#id ComputeInstanceIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#instance_name ComputeInstanceIamMember#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#instance_name ComputeInstanceIamMember#instance_name}
   */
   readonly instanceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#member ComputeInstanceIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#member ComputeInstanceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#project ComputeInstanceIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#project ComputeInstanceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#role ComputeInstanceIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#role ComputeInstanceIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#zone ComputeInstanceIamMember#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#zone ComputeInstanceIamMember#zone}
   */
   readonly zone?: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#condition ComputeInstanceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#condition ComputeInstanceIamMember#condition}
   */
   readonly condition?: ComputeInstanceIamMemberCondition;
 }
 export interface ComputeInstanceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#description ComputeInstanceIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#description ComputeInstanceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#expression ComputeInstanceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#expression ComputeInstanceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member#title ComputeInstanceIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member#title ComputeInstanceIamMember#title}
   */
   readonly title: string;
 }
@@ -161,7 +161,7 @@ export class ComputeInstanceIamMemberConditionOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member google_compute_instance_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member google_compute_instance_iam_member}
 */
 export class ComputeInstanceIamMember extends cdktf.TerraformResource {
 
@@ -175,7 +175,7 @@ export class ComputeInstanceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_instance_iam_member google_compute_instance_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_iam_member google_compute_instance_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,8 +186,8 @@ export class ComputeInstanceIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.84.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersion: '5.0.0',
+        providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

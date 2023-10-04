@@ -1,6 +1,6 @@
 # `data_google_compute_lb_ip_ranges`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_lb_ip_ranges`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/compute_lb_ip_ranges).
+Refer to the Terraform Registory for docs: [`data_google_compute_lb_ip_ranges`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_lb_ip_ranges).
 
 # `dataGoogleComputeLbIpRanges` Submodule <a name="`dataGoogleComputeLbIpRanges` Submodule" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_compute_lb_ip_ranges`](
 
 ### DataGoogleComputeLbIpRanges <a name="DataGoogleComputeLbIpRanges" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/compute_lb_ip_ranges google_compute_lb_ip_ranges}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_lb_ip_ranges google_compute_lb_ip_ranges}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.NewDataGoogleComputeLbIpRanges(scope Construct, id *string, config DataGoogleComputeLbIpRangesConfig) DataGoogleComputeLbIpRanges
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -544,7 +544,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputelbipranges"
 
 &datagooglecomputelbipranges.DataGoogleComputeLbIpRangesConfig {
 	Connection: interface{},
@@ -569,7 +569,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputelbi
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}. |
 
 ---
 
@@ -651,7 +651,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

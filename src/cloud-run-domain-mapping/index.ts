@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping
+// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#id CloudRunDomainMapping#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#id CloudRunDomainMapping#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,35 +22,35 @@ export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArgument
   /**
   * The location of the cloud run instance. eg us-central1
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#location CloudRunDomainMapping#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#location CloudRunDomainMapping#location}
   */
   readonly location: string;
   /**
   * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#name CloudRunDomainMapping#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#name CloudRunDomainMapping#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#project CloudRunDomainMapping#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#project CloudRunDomainMapping#project}
   */
   readonly project?: string;
   /**
   * metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#metadata CloudRunDomainMapping#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#metadata CloudRunDomainMapping#metadata}
   */
-  readonly metadata: CloudRunDomainMappingMetadata;
+  readonly metadata?: CloudRunDomainMappingMetadata;
   /**
   * spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#spec CloudRunDomainMapping#spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#spec CloudRunDomainMapping#spec}
   */
   readonly spec: CloudRunDomainMappingSpec;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#timeouts CloudRunDomainMapping#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#timeouts CloudRunDomainMapping#timeouts}
   */
   readonly timeouts?: CloudRunDomainMappingTimeouts;
 }
@@ -297,8 +297,11 @@ info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotati
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#annotations CloudRunDomainMapping#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#annotations CloudRunDomainMapping#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -306,15 +309,18 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#labels CloudRunDomainMapping#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#labels CloudRunDomainMapping#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * In Cloud Run the namespace must be equal to either the
 project ID or project number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#namespace CloudRunDomainMapping#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#namespace CloudRunDomainMapping#namespace}
   */
   readonly namespace: string;
 }
@@ -375,7 +381,7 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
     }
   }
 
-  // annotations - computed: true, optional: true, required: false
+  // annotations - computed: false, optional: true, required: false
   private _annotations?: { [key: string]: string }; 
   public get annotations() {
     return this.getStringMapAttribute('annotations');
@@ -391,12 +397,24 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
     return this._annotations;
   }
 
+  // effective_annotations - computed: true, optional: false, required: false
+  private _effectiveAnnotations = new cdktf.StringMap(this, "effective_annotations");
+  public get effectiveAnnotations() {
+    return this._effectiveAnnotations;
+  }
+
+  // effective_labels - computed: true, optional: false, required: false
+  private _effectiveLabels = new cdktf.StringMap(this, "effective_labels");
+  public get effectiveLabels() {
+    return this._effectiveLabels;
+  }
+
   // generation - computed: true, optional: false, required: false
   public get generation() {
     return this.getNumberAttribute('generation');
   }
 
-  // labels - computed: true, optional: true, required: false
+  // labels - computed: false, optional: true, required: false
   private _labels?: { [key: string]: string }; 
   public get labels() {
     return this.getStringMapAttribute('labels');
@@ -435,6 +453,12 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
     return this.getStringAttribute('self_link');
   }
 
+  // terraform_labels - computed: true, optional: false, required: false
+  private _terraformLabels = new cdktf.StringMap(this, "terraform_labels");
+  public get terraformLabels() {
+    return this._terraformLabels;
+  }
+
   // uid - computed: true, optional: false, required: false
   public get uid() {
     return this.getStringAttribute('uid');
@@ -444,7 +468,7 @@ export interface CloudRunDomainMappingSpec {
   /**
   * The mode of the certificate. Default value: "AUTOMATIC" Possible values: ["NONE", "AUTOMATIC"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#certificate_mode CloudRunDomainMapping#certificate_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#certificate_mode CloudRunDomainMapping#certificate_mode}
   */
   readonly certificateMode?: string;
   /**
@@ -453,14 +477,14 @@ It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#force_override CloudRunDomainMapping#force_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#force_override CloudRunDomainMapping#force_override}
   */
   readonly forceOverride?: boolean | cdktf.IResolvable;
   /**
   * The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#route_name CloudRunDomainMapping#route_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#route_name CloudRunDomainMapping#route_name}
   */
   readonly routeName: string;
 }
@@ -568,11 +592,11 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
 }
 export interface CloudRunDomainMappingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#create CloudRunDomainMapping#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#create CloudRunDomainMapping#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping#delete CloudRunDomainMapping#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#delete CloudRunDomainMapping#delete}
   */
   readonly delete?: string;
 }
@@ -670,7 +694,7 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping google_cloud_run_domain_mapping}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping google_cloud_run_domain_mapping}
 */
 export class CloudRunDomainMapping extends cdktf.TerraformResource {
 
@@ -684,7 +708,7 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/cloud_run_domain_mapping google_cloud_run_domain_mapping} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping google_cloud_run_domain_mapping} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -695,8 +719,8 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_domain_mapping',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.84.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersion: '5.0.0',
+        providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -783,13 +807,16 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
     return this._status;
   }
 
-  // metadata - computed: false, optional: false, required: true
+  // metadata - computed: false, optional: true, required: false
   private _metadata = new CloudRunDomainMappingMetadataOutputReference(this, "metadata");
   public get metadata() {
     return this._metadata;
   }
   public putMetadata(value: CloudRunDomainMappingMetadata) {
     this._metadata.internalValue = value;
+  }
+  public resetMetadata() {
+    this._metadata.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
