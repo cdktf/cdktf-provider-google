@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputesubnetworkiampolicy"
 
 datagooglecomputesubnetworkiampolicy.NewDataGoogleComputeSubnetworkIamPolicy(scope Construct, id *string, config DataGoogleComputeSubnetworkIamPolicyConfig) DataGoogleComputeSubnetworkIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputesubnetworkiampolicy"
 
 datagooglecomputesubnetworkiampolicy.DataGoogleComputeSubnetworkIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputesubnetworkiampolicy"
 
 datagooglecomputesubnetworkiampolicy.DataGoogleComputeSubnetworkIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagooglecomputesubnetworkiampolicy.DataGoogleComputeSubnetworkIamPolicy_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputesubnetworkiampolicy"
 
 datagooglecomputesubnetworkiampolicy.DataGoogleComputeSubnetworkIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -624,7 +624,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglecomputesubnetworkiampolicy"
 
 &datagooglecomputesubnetworkiampolicy.DataGoogleComputeSubnetworkIamPolicyConfig {
 	Connection: interface{},
