@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project
+// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeSharedVpcHostProjectConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project#id ComputeSharedVpcHostProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project#id ComputeSharedVpcHostProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,23 +17,23 @@ export interface ComputeSharedVpcHostProjectConfig extends cdktf.TerraformMetaAr
   /**
   * The ID of the project that will serve as a Shared VPC host project
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project#project ComputeSharedVpcHostProject#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project#project ComputeSharedVpcHostProject#project}
   */
   readonly project: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project#timeouts ComputeSharedVpcHostProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project#timeouts ComputeSharedVpcHostProject#timeouts}
   */
   readonly timeouts?: ComputeSharedVpcHostProjectTimeouts;
 }
 export interface ComputeSharedVpcHostProjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project#create ComputeSharedVpcHostProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project#create ComputeSharedVpcHostProject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project#delete ComputeSharedVpcHostProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project#delete ComputeSharedVpcHostProject#delete}
   */
   readonly delete?: string;
 }
@@ -136,7 +131,7 @@ export class ComputeSharedVpcHostProjectTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project google_compute_shared_vpc_host_project}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project google_compute_shared_vpc_host_project}
 */
 export class ComputeSharedVpcHostProject extends cdktf.TerraformResource {
 
@@ -150,7 +145,7 @@ export class ComputeSharedVpcHostProject extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_shared_vpc_host_project google_compute_shared_vpc_host_project} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_host_project google_compute_shared_vpc_host_project} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -161,8 +156,8 @@ export class ComputeSharedVpcHostProject extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_shared_vpc_host_project',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.84.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersion: '5.0.0',
+        providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

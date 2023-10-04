@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/secret_manager_secret
+// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/secret_manager_secret
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,20 +8,20 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSecretManagerSecretConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/secret_manager_secret#id DataGoogleSecretManagerSecret#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/secret_manager_secret#id DataGoogleSecretManagerSecret#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/secret_manager_secret#project DataGoogleSecretManagerSecret#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/secret_manager_secret#project DataGoogleSecretManagerSecret#project}
   */
   readonly project?: string;
   /**
   * This must be unique within the project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/secret_manager_secret#secret_id DataGoogleSecretManagerSecret#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/secret_manager_secret#secret_id DataGoogleSecretManagerSecret#secret_id}
   */
   readonly secretId: string;
 }
@@ -404,11 +399,6 @@ export class DataGoogleSecretManagerSecretReplicationOutputReference extends cdk
     return this._auto;
   }
 
-  // automatic - computed: true, optional: false, required: false
-  public get automatic() {
-    return this.getBooleanAttribute('automatic');
-  }
-
   // user_managed - computed: true, optional: false, required: false
   private _userManaged = new DataGoogleSecretManagerSecretReplicationUserManagedList(this, "user_managed", false);
   public get userManaged() {
@@ -569,7 +559,7 @@ export class DataGoogleSecretManagerSecretTopicsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/secret_manager_secret google_secret_manager_secret}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/secret_manager_secret google_secret_manager_secret}
 */
 export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
 
@@ -583,7 +573,7 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/secret_manager_secret google_secret_manager_secret} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/secret_manager_secret google_secret_manager_secret} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -594,8 +584,8 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_secret_manager_secret',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.84.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersion: '5.0.0',
+        providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -623,6 +613,18 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
+  }
+
+  // effective_annotations - computed: true, optional: false, required: false
+  private _effectiveAnnotations = new cdktf.StringMap(this, "effective_annotations");
+  public get effectiveAnnotations() {
+    return this._effectiveAnnotations;
+  }
+
+  // effective_labels - computed: true, optional: false, required: false
+  private _effectiveLabels = new cdktf.StringMap(this, "effective_labels");
+  public get effectiveLabels() {
+    return this._effectiveLabels;
   }
 
   // expire_time - computed: true, optional: false, required: false
@@ -696,6 +698,12 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get secretIdInput() {
     return this._secretId;
+  }
+
+  // terraform_labels - computed: true, optional: false, required: false
+  private _terraformLabels = new cdktf.StringMap(this, "terraform_labels");
+  public get terraformLabels() {
+    return this._terraformLabels;
   }
 
   // topics - computed: true, optional: false, required: false

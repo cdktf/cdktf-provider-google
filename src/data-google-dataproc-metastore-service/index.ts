@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/dataproc_metastore_service
+// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDataprocMetastoreServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/dataproc_metastore_service#id DataGoogleDataprocMetastoreService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service#id DataGoogleDataprocMetastoreService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,11 +18,11 @@ export interface DataGoogleDataprocMetastoreServiceConfig extends cdktf.Terrafor
   * The location where the metastore service should reside.
 The default value is 'global'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/dataproc_metastore_service#location DataGoogleDataprocMetastoreService#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service#location DataGoogleDataprocMetastoreService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/dataproc_metastore_service#project DataGoogleDataprocMetastoreService#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service#project DataGoogleDataprocMetastoreService#project}
   */
   readonly project?: string;
   /**
@@ -35,7 +30,7 @@ The default value is 'global'.
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 63 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/dataproc_metastore_service#service_id DataGoogleDataprocMetastoreService#service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service#service_id DataGoogleDataprocMetastoreService#service_id}
   */
   readonly serviceId: string;
 }
@@ -656,7 +651,7 @@ export class DataGoogleDataprocMetastoreServiceTelemetryConfigList extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/dataproc_metastore_service google_dataproc_metastore_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service google_dataproc_metastore_service}
 */
 export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSource {
 
@@ -670,7 +665,7 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/data-sources/dataproc_metastore_service google_dataproc_metastore_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service google_dataproc_metastore_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -681,8 +676,8 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
       terraformResourceType: 'google_dataproc_metastore_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.84.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersion: '5.0.0',
+        providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -710,6 +705,12 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
   // database_type - computed: true, optional: false, required: false
   public get databaseType() {
     return this.getStringAttribute('database_type');
+  }
+
+  // effective_labels - computed: true, optional: false, required: false
+  private _effectiveLabels = new cdktf.StringMap(this, "effective_labels");
+  public get effectiveLabels() {
+    return this._effectiveLabels;
   }
 
   // encryption_config - computed: true, optional: false, required: false
@@ -845,6 +846,12 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
   private _telemetryConfig = new DataGoogleDataprocMetastoreServiceTelemetryConfigList(this, "telemetry_config", false);
   public get telemetryConfig() {
     return this._telemetryConfig;
+  }
+
+  // terraform_labels - computed: true, optional: false, required: false
+  private _terraformLabels = new cdktf.StringMap(this, "terraform_labels");
+  public get terraformLabels() {
+    return this._terraformLabels;
   }
 
   // tier - computed: true, optional: false, required: false

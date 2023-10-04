@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan
+// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +10,23 @@ export interface DataplexDatascanConfig extends cdktf.TerraformMetaArguments {
   /**
   * DataScan identifier. Must contain only lowercase letters, numbers and hyphens. Must start with a letter. Must end with a number or a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#data_scan_id DataplexDatascan#data_scan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#data_scan_id DataplexDatascan#data_scan_id}
   */
   readonly dataScanId: string;
   /**
   * Description of the scan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#description DataplexDatascan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#description DataplexDatascan#description}
   */
   readonly description?: string;
   /**
   * User friendly display name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#display_name DataplexDatascan#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#display_name DataplexDatascan#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#id DataplexDatascan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#id DataplexDatascan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,1863 +34,54 @@ export interface DataplexDatascanConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * User-defined labels for the scan. A list of key->value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#labels DataplexDatascan#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#labels DataplexDatascan#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location where the data scan should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#location DataplexDatascan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#location DataplexDatascan#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#project DataplexDatascan#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#project DataplexDatascan#project}
   */
   readonly project?: string;
   /**
   * data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#data DataplexDatascan#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#data DataplexDatascan#data}
   */
   readonly data: DataplexDatascanData;
   /**
   * data_profile_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#data_profile_spec DataplexDatascan#data_profile_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#data_profile_spec DataplexDatascan#data_profile_spec}
   */
   readonly dataProfileSpec?: DataplexDatascanDataProfileSpec;
   /**
   * data_quality_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#data_quality_spec DataplexDatascan#data_quality_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#data_quality_spec DataplexDatascan#data_quality_spec}
   */
   readonly dataQualitySpec?: DataplexDatascanDataQualitySpec;
   /**
   * execution_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#execution_spec DataplexDatascan#execution_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#execution_spec DataplexDatascan#execution_spec}
   */
   readonly executionSpec: DataplexDatascanExecutionSpec;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#timeouts DataplexDatascan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#timeouts DataplexDatascan#timeouts}
   */
   readonly timeouts?: DataplexDatascanTimeouts;
-}
-export interface DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfile {
-}
-
-export function dataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileToTerraform(struct?: DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfile): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfile | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfile | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // average - computed: true, optional: false, required: false
-  public get average() {
-    return this.getNumberAttribute('average');
-  }
-
-  // max - computed: true, optional: false, required: false
-  public get max() {
-    return this.getStringAttribute('max');
-  }
-
-  // min - computed: true, optional: false, required: false
-  public get min() {
-    return this.getStringAttribute('min');
-  }
-
-  // quartiles - computed: true, optional: false, required: false
-  public get quartiles() {
-    return this.getStringAttribute('quartiles');
-  }
-
-  // standard_deviation - computed: true, optional: false, required: false
-  public get standardDeviation() {
-    return this.getNumberAttribute('standard_deviation');
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileOutputReference {
-    return new DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfile {
-}
-
-export function dataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileToTerraform(struct?: DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfile): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfile | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfile | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // average - computed: true, optional: false, required: false
-  public get average() {
-    return this.getNumberAttribute('average');
-  }
-
-  // max - computed: true, optional: false, required: false
-  public get max() {
-    return this.getStringAttribute('max');
-  }
-
-  // min - computed: true, optional: false, required: false
-  public get min() {
-    return this.getStringAttribute('min');
-  }
-
-  // quartiles - computed: true, optional: false, required: false
-  public get quartiles() {
-    return this.getStringAttribute('quartiles');
-  }
-
-  // standard_deviation - computed: true, optional: false, required: false
-  public get standardDeviation() {
-    return this.getNumberAttribute('standard_deviation');
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileOutputReference {
-    return new DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultProfileFieldsProfileStringProfile {
-}
-
-export function dataplexDatascanDataProfileResultProfileFieldsProfileStringProfileToTerraform(struct?: DataplexDatascanDataProfileResultProfileFieldsProfileStringProfile): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultProfileFieldsProfileStringProfile | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultProfileFieldsProfileStringProfile | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // average_length - computed: true, optional: false, required: false
-  public get averageLength() {
-    return this.getNumberAttribute('average_length');
-  }
-
-  // max_length - computed: true, optional: false, required: false
-  public get maxLength() {
-    return this.getStringAttribute('max_length');
-  }
-
-  // min_length - computed: true, optional: false, required: false
-  public get minLength() {
-    return this.getStringAttribute('min_length');
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileOutputReference {
-    return new DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultProfileFieldsProfileTopNValues {
-}
-
-export function dataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesToTerraform(struct?: DataplexDatascanDataProfileResultProfileFieldsProfileTopNValues): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultProfileFieldsProfileTopNValues | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultProfileFieldsProfileTopNValues | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // count - computed: true, optional: false, required: false
-  public get count() {
-    return this.getStringAttribute('count');
-  }
-
-  // value - computed: true, optional: false, required: false
-  public get value() {
-    return this.getStringAttribute('value');
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesOutputReference {
-    return new DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultProfileFieldsProfile {
-}
-
-export function dataplexDatascanDataProfileResultProfileFieldsProfileToTerraform(struct?: DataplexDatascanDataProfileResultProfileFieldsProfile): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultProfileFieldsProfile | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultProfileFieldsProfile | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // distinct_ratio - computed: true, optional: false, required: false
-  public get distinctRatio() {
-    return this.getNumberAttribute('distinct_ratio');
-  }
-
-  // double_profile - computed: true, optional: false, required: false
-  private _doubleProfile = new DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileList(this, "double_profile", false);
-  public get doubleProfile() {
-    return this._doubleProfile;
-  }
-
-  // integer_profile - computed: true, optional: false, required: false
-  private _integerProfile = new DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileList(this, "integer_profile", false);
-  public get integerProfile() {
-    return this._integerProfile;
-  }
-
-  // null_ratio - computed: true, optional: false, required: false
-  public get nullRatio() {
-    return this.getNumberAttribute('null_ratio');
-  }
-
-  // string_profile - computed: true, optional: false, required: false
-  private _stringProfile = new DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileList(this, "string_profile", false);
-  public get stringProfile() {
-    return this._stringProfile;
-  }
-
-  // top_n_values - computed: true, optional: false, required: false
-  private _topNValues = new DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesList(this, "top_n_values", false);
-  public get topNValues() {
-    return this._topNValues;
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsProfileList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultProfileFieldsProfileOutputReference {
-    return new DataplexDatascanDataProfileResultProfileFieldsProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultProfileFields {
-}
-
-export function dataplexDatascanDataProfileResultProfileFieldsToTerraform(struct?: DataplexDatascanDataProfileResultProfileFields): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultProfileFields | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultProfileFields | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // mode - computed: true, optional: false, required: false
-  public get mode() {
-    return this.getStringAttribute('mode');
-  }
-
-  // name - computed: true, optional: false, required: false
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-
-  // profile - computed: true, optional: false, required: false
-  private _profile = new DataplexDatascanDataProfileResultProfileFieldsProfileList(this, "profile", false);
-  public get profile() {
-    return this._profile;
-  }
-
-  // type - computed: true, optional: false, required: false
-  public get type() {
-    return this.getStringAttribute('type');
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileFieldsList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultProfileFieldsOutputReference {
-    return new DataplexDatascanDataProfileResultProfileFieldsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultProfile {
-}
-
-export function dataplexDatascanDataProfileResultProfileToTerraform(struct?: DataplexDatascanDataProfileResultProfile): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultProfile | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultProfile | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // fields - computed: true, optional: false, required: false
-  private _fields = new DataplexDatascanDataProfileResultProfileFieldsList(this, "fields", false);
-  public get fields() {
-    return this._fields;
-  }
-}
-
-export class DataplexDatascanDataProfileResultProfileList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultProfileOutputReference {
-    return new DataplexDatascanDataProfileResultProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultScannedDataIncrementalField {
-}
-
-export function dataplexDatascanDataProfileResultScannedDataIncrementalFieldToTerraform(struct?: DataplexDatascanDataProfileResultScannedDataIncrementalField): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultScannedDataIncrementalFieldOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultScannedDataIncrementalField | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultScannedDataIncrementalField | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // end - computed: true, optional: false, required: false
-  public get end() {
-    return this.getStringAttribute('end');
-  }
-
-  // field - computed: true, optional: false, required: false
-  public get field() {
-    return this.getStringAttribute('field');
-  }
-
-  // start - computed: true, optional: false, required: false
-  public get start() {
-    return this.getStringAttribute('start');
-  }
-}
-
-export class DataplexDatascanDataProfileResultScannedDataIncrementalFieldList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultScannedDataIncrementalFieldOutputReference {
-    return new DataplexDatascanDataProfileResultScannedDataIncrementalFieldOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResultScannedData {
-}
-
-export function dataplexDatascanDataProfileResultScannedDataToTerraform(struct?: DataplexDatascanDataProfileResultScannedData): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultScannedDataOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResultScannedData | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResultScannedData | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // incremental_field - computed: true, optional: false, required: false
-  private _incrementalField = new DataplexDatascanDataProfileResultScannedDataIncrementalFieldList(this, "incremental_field", false);
-  public get incrementalField() {
-    return this._incrementalField;
-  }
-}
-
-export class DataplexDatascanDataProfileResultScannedDataList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultScannedDataOutputReference {
-    return new DataplexDatascanDataProfileResultScannedDataOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataProfileResult {
-}
-
-export function dataplexDatascanDataProfileResultToTerraform(struct?: DataplexDatascanDataProfileResult): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataProfileResultOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataProfileResult | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataProfileResult | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // profile - computed: true, optional: false, required: false
-  private _profile = new DataplexDatascanDataProfileResultProfileList(this, "profile", false);
-  public get profile() {
-    return this._profile;
-  }
-
-  // row_count - computed: true, optional: false, required: false
-  public get rowCount() {
-    return this.getStringAttribute('row_count');
-  }
-
-  // scanned_data - computed: true, optional: false, required: false
-  private _scannedData = new DataplexDatascanDataProfileResultScannedDataList(this, "scanned_data", false);
-  public get scannedData() {
-    return this._scannedData;
-  }
-}
-
-export class DataplexDatascanDataProfileResultList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataProfileResultOutputReference {
-    return new DataplexDatascanDataProfileResultOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultDimensions {
-}
-
-export function dataplexDatascanDataQualityResultDimensionsToTerraform(struct?: DataplexDatascanDataQualityResultDimensions): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultDimensionsOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultDimensions | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultDimensions | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // passed - computed: true, optional: false, required: false
-  public get passed() {
-    return this.getBooleanAttribute('passed');
-  }
-}
-
-export class DataplexDatascanDataQualityResultDimensionsList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultDimensionsOutputReference {
-    return new DataplexDatascanDataQualityResultDimensionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleNonNullExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleNonNullExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleNonNullExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleNonNullExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleNonNullExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleNonNullExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleNonNullExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleNonNullExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleNonNullExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleRangeExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleRangeExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleRangeExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleRangeExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleRangeExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleRangeExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // max_value - computed: true, optional: false, required: false
-  public get maxValue() {
-    return this.getStringAttribute('max_value');
-  }
-
-  // min_value - computed: true, optional: false, required: false
-  public get minValue() {
-    return this.getStringAttribute('min_value');
-  }
-
-  // strict_max_enabled - computed: true, optional: false, required: false
-  public get strictMaxEnabled() {
-    return this.getBooleanAttribute('strict_max_enabled');
-  }
-
-  // strict_min_enabled - computed: true, optional: false, required: false
-  public get strictMinEnabled() {
-    return this.getBooleanAttribute('strict_min_enabled');
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleRangeExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleRangeExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleRangeExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleRegexExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleRegexExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleRegexExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleRegexExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleRegexExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleRegexExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // regex - computed: true, optional: false, required: false
-  public get regex() {
-    return this.getStringAttribute('regex');
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleRegexExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleRegexExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleRegexExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleRowConditionExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleRowConditionExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleRowConditionExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleRowConditionExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleRowConditionExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // sql_expression - computed: true, optional: false, required: false
-  public get sqlExpression() {
-    return this.getStringAttribute('sql_expression');
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleSetExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleSetExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleSetExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleSetExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleSetExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleSetExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // values - computed: true, optional: false, required: false
-  public get values() {
-    return this.getListAttribute('values');
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleSetExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleSetExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleSetExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // max_value - computed: true, optional: false, required: false
-  public get maxValue() {
-    return this.getStringAttribute('max_value');
-  }
-
-  // min_value - computed: true, optional: false, required: false
-  public get minValue() {
-    return this.getStringAttribute('min_value');
-  }
-
-  // statistic - computed: true, optional: false, required: false
-  public get statistic() {
-    return this.getStringAttribute('statistic');
-  }
-
-  // strict_max_enabled - computed: true, optional: false, required: false
-  public get strictMaxEnabled() {
-    return this.getBooleanAttribute('strict_max_enabled');
-  }
-
-  // strict_min_enabled - computed: true, optional: false, required: false
-  public get strictMinEnabled() {
-    return this.getBooleanAttribute('strict_min_enabled');
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleTableConditionExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleTableConditionExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleTableConditionExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleTableConditionExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleTableConditionExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // sql_expression - computed: true, optional: false, required: false
-  public get sqlExpression() {
-    return this.getStringAttribute('sql_expression');
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRuleUniquenessExpectation {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleUniquenessExpectationToTerraform(struct?: DataplexDatascanDataQualityResultRulesRuleUniquenessExpectation): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRuleUniquenessExpectation | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRuleUniquenessExpectation | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRulesRule {
-}
-
-export function dataplexDatascanDataQualityResultRulesRuleToTerraform(struct?: DataplexDatascanDataQualityResultRulesRule): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRulesRule | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRulesRule | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // column - computed: true, optional: false, required: false
-  public get column() {
-    return this.getStringAttribute('column');
-  }
-
-  // dimension - computed: true, optional: false, required: false
-  public get dimension() {
-    return this.getStringAttribute('dimension');
-  }
-
-  // ignore_null - computed: true, optional: false, required: false
-  public get ignoreNull() {
-    return this.getBooleanAttribute('ignore_null');
-  }
-
-  // non_null_expectation - computed: true, optional: false, required: false
-  private _nonNullExpectation = new DataplexDatascanDataQualityResultRulesRuleNonNullExpectationList(this, "non_null_expectation", false);
-  public get nonNullExpectation() {
-    return this._nonNullExpectation;
-  }
-
-  // range_expectation - computed: true, optional: false, required: false
-  private _rangeExpectation = new DataplexDatascanDataQualityResultRulesRuleRangeExpectationList(this, "range_expectation", false);
-  public get rangeExpectation() {
-    return this._rangeExpectation;
-  }
-
-  // regex_expectation - computed: true, optional: false, required: false
-  private _regexExpectation = new DataplexDatascanDataQualityResultRulesRuleRegexExpectationList(this, "regex_expectation", false);
-  public get regexExpectation() {
-    return this._regexExpectation;
-  }
-
-  // row_condition_expectation - computed: true, optional: false, required: false
-  private _rowConditionExpectation = new DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationList(this, "row_condition_expectation", false);
-  public get rowConditionExpectation() {
-    return this._rowConditionExpectation;
-  }
-
-  // set_expectation - computed: true, optional: false, required: false
-  private _setExpectation = new DataplexDatascanDataQualityResultRulesRuleSetExpectationList(this, "set_expectation", false);
-  public get setExpectation() {
-    return this._setExpectation;
-  }
-
-  // statistic_range_expectation - computed: true, optional: false, required: false
-  private _statisticRangeExpectation = new DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationList(this, "statistic_range_expectation", false);
-  public get statisticRangeExpectation() {
-    return this._statisticRangeExpectation;
-  }
-
-  // table_condition_expectation - computed: true, optional: false, required: false
-  private _tableConditionExpectation = new DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationList(this, "table_condition_expectation", false);
-  public get tableConditionExpectation() {
-    return this._tableConditionExpectation;
-  }
-
-  // threshold - computed: true, optional: false, required: false
-  public get threshold() {
-    return this.getNumberAttribute('threshold');
-  }
-
-  // uniqueness_expectation - computed: true, optional: false, required: false
-  private _uniquenessExpectation = new DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationList(this, "uniqueness_expectation", false);
-  public get uniquenessExpectation() {
-    return this._uniquenessExpectation;
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesRuleList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesRuleOutputReference {
-    return new DataplexDatascanDataQualityResultRulesRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultRules {
-}
-
-export function dataplexDatascanDataQualityResultRulesToTerraform(struct?: DataplexDatascanDataQualityResultRules): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultRules | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultRules | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // evaluated_count - computed: true, optional: false, required: false
-  public get evaluatedCount() {
-    return this.getStringAttribute('evaluated_count');
-  }
-
-  // failing_rows_query - computed: true, optional: false, required: false
-  public get failingRowsQuery() {
-    return this.getStringAttribute('failing_rows_query');
-  }
-
-  // null_count - computed: true, optional: false, required: false
-  public get nullCount() {
-    return this.getStringAttribute('null_count');
-  }
-
-  // pass_ratio - computed: true, optional: false, required: false
-  public get passRatio() {
-    return this.getNumberAttribute('pass_ratio');
-  }
-
-  // passed - computed: true, optional: false, required: false
-  public get passed() {
-    return this.getBooleanAttribute('passed');
-  }
-
-  // passed_count - computed: true, optional: false, required: false
-  public get passedCount() {
-    return this.getStringAttribute('passed_count');
-  }
-
-  // rule - computed: true, optional: false, required: false
-  private _rule = new DataplexDatascanDataQualityResultRulesRuleList(this, "rule", false);
-  public get rule() {
-    return this._rule;
-  }
-}
-
-export class DataplexDatascanDataQualityResultRulesList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultRulesOutputReference {
-    return new DataplexDatascanDataQualityResultRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultScannedDataIncrementalField {
-}
-
-export function dataplexDatascanDataQualityResultScannedDataIncrementalFieldToTerraform(struct?: DataplexDatascanDataQualityResultScannedDataIncrementalField): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultScannedDataIncrementalFieldOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultScannedDataIncrementalField | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultScannedDataIncrementalField | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // end - computed: true, optional: false, required: false
-  public get end() {
-    return this.getStringAttribute('end');
-  }
-
-  // field - computed: true, optional: false, required: false
-  public get field() {
-    return this.getStringAttribute('field');
-  }
-
-  // start - computed: true, optional: false, required: false
-  public get start() {
-    return this.getStringAttribute('start');
-  }
-}
-
-export class DataplexDatascanDataQualityResultScannedDataIncrementalFieldList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultScannedDataIncrementalFieldOutputReference {
-    return new DataplexDatascanDataQualityResultScannedDataIncrementalFieldOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResultScannedData {
-}
-
-export function dataplexDatascanDataQualityResultScannedDataToTerraform(struct?: DataplexDatascanDataQualityResultScannedData): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultScannedDataOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResultScannedData | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResultScannedData | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // incremental_field - computed: true, optional: false, required: false
-  private _incrementalField = new DataplexDatascanDataQualityResultScannedDataIncrementalFieldList(this, "incremental_field", false);
-  public get incrementalField() {
-    return this._incrementalField;
-  }
-}
-
-export class DataplexDatascanDataQualityResultScannedDataList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultScannedDataOutputReference {
-    return new DataplexDatascanDataQualityResultScannedDataOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataplexDatascanDataQualityResult {
-}
-
-export function dataplexDatascanDataQualityResultToTerraform(struct?: DataplexDatascanDataQualityResult): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataplexDatascanDataQualityResultOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataplexDatascanDataQualityResult | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataplexDatascanDataQualityResult | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // dimensions - computed: true, optional: false, required: false
-  private _dimensions = new DataplexDatascanDataQualityResultDimensionsList(this, "dimensions", false);
-  public get dimensions() {
-    return this._dimensions;
-  }
-
-  // passed - computed: true, optional: false, required: false
-  public get passed() {
-    return this.getBooleanAttribute('passed');
-  }
-
-  // row_count - computed: true, optional: false, required: false
-  public get rowCount() {
-    return this.getStringAttribute('row_count');
-  }
-
-  // rules - computed: true, optional: false, required: false
-  private _rules = new DataplexDatascanDataQualityResultRulesList(this, "rules", false);
-  public get rules() {
-    return this._rules;
-  }
-
-  // scanned_data - computed: true, optional: false, required: false
-  private _scannedData = new DataplexDatascanDataQualityResultScannedDataList(this, "scanned_data", false);
-  public get scannedData() {
-    return this._scannedData;
-  }
-}
-
-export class DataplexDatascanDataQualityResultList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataplexDatascanDataQualityResultOutputReference {
-    return new DataplexDatascanDataQualityResultOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
 }
 export interface DataplexDatascanExecutionStatus {
 }
@@ -1970,14 +156,14 @@ export interface DataplexDatascanData {
   /**
   * The Dataplex entity that represents the data source(e.g. BigQuery table) for Datascan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#entity DataplexDatascan#entity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#entity DataplexDatascan#entity}
   */
   readonly entity?: string;
   /**
   * The service-qualified full resource name of the cloud resource for a DataScan job to scan against. The field could be:
 (Cloud Storage bucket for DataDiscoveryScan)BigQuery table of type "TABLE" for DataProfileScan/DataQualityScan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#resource DataplexDatascan#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#resource DataplexDatascan#resource}
   */
   readonly resource?: string;
 }
@@ -2069,7 +255,7 @@ export interface DataplexDatascanDataProfileSpecExcludeFields {
 Only top-level field names for nested fields are supported.
 For instance, if 'x' is of nested field type, listing 'x' is supported but 'x.y.z' is not supported. Here 'y' and 'y.z' are nested fields of 'x'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
   */
   readonly fieldNames?: string[];
 }
@@ -2138,7 +324,7 @@ export interface DataplexDatascanDataProfileSpecIncludeFields {
 Only top-level field names for nested fields are supported.
 For instance, if 'x' is of nested field type, listing 'x' is supported but 'x.y.z' is not supported. Here 'y' and 'y.z' are nested fields of 'x'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
   */
   readonly fieldNames?: string[];
 }
@@ -2206,7 +392,7 @@ export interface DataplexDatascanDataProfileSpecPostScanActionsBigqueryExport {
   * The BigQuery table to export DataProfileScan results to.
 Format://bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
   */
   readonly resultsTable?: string;
 }
@@ -2273,7 +459,7 @@ export interface DataplexDatascanDataProfileSpecPostScanActions {
   /**
   * bigquery_export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
   */
   readonly bigqueryExport?: DataplexDatascanDataProfileSpecPostScanActionsBigqueryExport;
 }
@@ -2340,7 +526,7 @@ export interface DataplexDatascanDataProfileSpec {
   /**
   * A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2 < 10
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
   */
   readonly rowFilter?: string;
   /**
@@ -2348,25 +534,25 @@ export interface DataplexDatascanDataProfileSpec {
 Value can range between 0.0 and 100.0 with up to 3 significant decimal digits.
 Sampling is not applied if 'sampling_percent' is not specified, 0 or 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
   */
   readonly samplingPercent?: number;
   /**
   * exclude_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#exclude_fields DataplexDatascan#exclude_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#exclude_fields DataplexDatascan#exclude_fields}
   */
   readonly excludeFields?: DataplexDatascanDataProfileSpecExcludeFields;
   /**
   * include_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#include_fields DataplexDatascan#include_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#include_fields DataplexDatascan#include_fields}
   */
   readonly includeFields?: DataplexDatascanDataProfileSpecIncludeFields;
   /**
   * post_scan_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
   */
   readonly postScanActions?: DataplexDatascanDataProfileSpecPostScanActions;
 }
@@ -2526,7 +712,7 @@ export interface DataplexDatascanDataQualitySpecPostScanActionsBigqueryExport {
   * The BigQuery table to export DataQualityScan results to.
 Format://bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
   */
   readonly resultsTable?: string;
 }
@@ -2593,7 +779,7 @@ export interface DataplexDatascanDataQualitySpecPostScanActions {
   /**
   * bigquery_export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
   */
   readonly bigqueryExport?: DataplexDatascanDataQualitySpecPostScanActionsBigqueryExport;
 }
@@ -2698,27 +884,27 @@ export interface DataplexDatascanDataQualitySpecRulesRangeExpectation {
   /**
   * The maximum column value allowed for a row to pass this validation. At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
   */
   readonly maxValue?: string;
   /**
   * The minimum column value allowed for a row to pass this validation. At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
   */
   readonly minValue?: string;
   /**
   * Whether each value needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
 Only relevant if a maxValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
   */
   readonly strictMaxEnabled?: boolean | cdktf.IResolvable;
   /**
   * Whether each value needs to be strictly greater than ('>') the minimum, or if equality is allowed.
 Only relevant if a minValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
   */
   readonly strictMinEnabled?: boolean | cdktf.IResolvable;
 }
@@ -2854,7 +1040,7 @@ export interface DataplexDatascanDataQualitySpecRulesRegexExpectation {
   /**
   * A regular expression the column value is expected to match.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#regex DataplexDatascan#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#regex DataplexDatascan#regex}
   */
   readonly regex: string;
 }
@@ -2918,7 +1104,7 @@ export interface DataplexDatascanDataQualitySpecRulesRowConditionExpectation {
   /**
   * The SQL expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
   */
   readonly sqlExpression: string;
 }
@@ -2982,7 +1168,7 @@ export interface DataplexDatascanDataQualitySpecRulesSetExpectation {
   /**
   * Expected values for the column value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#values DataplexDatascan#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#values DataplexDatascan#values}
   */
   readonly values: string[];
 }
@@ -3047,34 +1233,34 @@ export interface DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation {
   * The maximum column statistic value allowed for a row to pass this validation.
 At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
   */
   readonly maxValue?: string;
   /**
   * The minimum column statistic value allowed for a row to pass this validation.
 At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
   */
   readonly minValue?: string;
   /**
   * column statistics. Possible values: ["STATISTIC_UNDEFINED", "MEAN", "MIN", "MAX"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#statistic DataplexDatascan#statistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#statistic DataplexDatascan#statistic}
   */
   readonly statistic: string;
   /**
   * Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
 Only relevant if a maxValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
   */
   readonly strictMaxEnabled?: boolean | cdktf.IResolvable;
   /**
   * Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is allowed.
 Only relevant if a minValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
   */
   readonly strictMinEnabled?: boolean | cdktf.IResolvable;
 }
@@ -3230,7 +1416,7 @@ export interface DataplexDatascanDataQualitySpecRulesTableConditionExpectation {
   /**
   * The SQL expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
   */
   readonly sqlExpression: string;
 }
@@ -3332,26 +1518,26 @@ export interface DataplexDatascanDataQualitySpecRules {
   /**
   * The unnested column which this rule is evaluated against.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#column DataplexDatascan#column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#column DataplexDatascan#column}
   */
   readonly column?: string;
   /**
   * Description of the rule.
 The maximum length is 1,024 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#description DataplexDatascan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#description DataplexDatascan#description}
   */
   readonly description?: string;
   /**
   * The dimension a rule belongs to. Results are also aggregated at the dimension level. Supported dimensions are ["COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#dimension DataplexDatascan#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#dimension DataplexDatascan#dimension}
   */
   readonly dimension: string;
   /**
   * Rows with null values will automatically fail a rule, unless ignoreNull is true. In that case, such null rows are trivially considered passing. Only applicable to ColumnMap rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#ignore_null DataplexDatascan#ignore_null}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#ignore_null DataplexDatascan#ignore_null}
   */
   readonly ignoreNull?: boolean | cdktf.IResolvable;
   /**
@@ -3361,61 +1547,61 @@ The maximum length is 63 characters.
 Must start with a letter.
 Must end with a number or a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#name DataplexDatascan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#name DataplexDatascan#name}
   */
   readonly name?: string;
   /**
   * The minimum ratio of passing_rows / total_rows required to pass this rule, with a range of [0.0, 1.0]. 0 indicates default value (i.e. 1.0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#threshold DataplexDatascan#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#threshold DataplexDatascan#threshold}
   */
   readonly threshold?: number;
   /**
   * non_null_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#non_null_expectation DataplexDatascan#non_null_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#non_null_expectation DataplexDatascan#non_null_expectation}
   */
   readonly nonNullExpectation?: DataplexDatascanDataQualitySpecRulesNonNullExpectation;
   /**
   * range_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#range_expectation DataplexDatascan#range_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#range_expectation DataplexDatascan#range_expectation}
   */
   readonly rangeExpectation?: DataplexDatascanDataQualitySpecRulesRangeExpectation;
   /**
   * regex_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#regex_expectation DataplexDatascan#regex_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#regex_expectation DataplexDatascan#regex_expectation}
   */
   readonly regexExpectation?: DataplexDatascanDataQualitySpecRulesRegexExpectation;
   /**
   * row_condition_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#row_condition_expectation DataplexDatascan#row_condition_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#row_condition_expectation DataplexDatascan#row_condition_expectation}
   */
   readonly rowConditionExpectation?: DataplexDatascanDataQualitySpecRulesRowConditionExpectation;
   /**
   * set_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#set_expectation DataplexDatascan#set_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#set_expectation DataplexDatascan#set_expectation}
   */
   readonly setExpectation?: DataplexDatascanDataQualitySpecRulesSetExpectation;
   /**
   * statistic_range_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#statistic_range_expectation DataplexDatascan#statistic_range_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#statistic_range_expectation DataplexDatascan#statistic_range_expectation}
   */
   readonly statisticRangeExpectation?: DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation;
   /**
   * table_condition_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#table_condition_expectation DataplexDatascan#table_condition_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#table_condition_expectation DataplexDatascan#table_condition_expectation}
   */
   readonly tableConditionExpectation?: DataplexDatascanDataQualitySpecRulesTableConditionExpectation;
   /**
   * uniqueness_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#uniqueness_expectation DataplexDatascan#uniqueness_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#uniqueness_expectation DataplexDatascan#uniqueness_expectation}
   */
   readonly uniquenessExpectation?: DataplexDatascanDataQualitySpecRulesUniquenessExpectation;
 }
@@ -3810,7 +1996,7 @@ export interface DataplexDatascanDataQualitySpec {
   /**
   * A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2 < 10
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
   */
   readonly rowFilter?: string;
   /**
@@ -3818,19 +2004,19 @@ export interface DataplexDatascanDataQualitySpec {
 Value can range between 0.0 and 100.0 with up to 3 significant decimal digits.
 Sampling is not applied if 'sampling_percent' is not specified, 0 or 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
   */
   readonly samplingPercent?: number;
   /**
   * post_scan_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
   */
   readonly postScanActions?: DataplexDatascanDataQualitySpecPostScanActions;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#rules DataplexDatascan#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#rules DataplexDatascan#rules}
   */
   readonly rules?: DataplexDatascanDataQualitySpecRules[] | cdktf.IResolvable;
 }
@@ -4004,7 +2190,7 @@ export interface DataplexDatascanExecutionSpecTriggerSchedule {
   /**
   * Cron schedule for running scans periodically. This field is required for Schedule scans.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#cron DataplexDatascan#cron}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#cron DataplexDatascan#cron}
   */
   readonly cron: string;
 }
@@ -4068,13 +2254,13 @@ export interface DataplexDatascanExecutionSpecTrigger {
   /**
   * on_demand block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#on_demand DataplexDatascan#on_demand}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#on_demand DataplexDatascan#on_demand}
   */
   readonly onDemand?: DataplexDatascanExecutionSpecTriggerOnDemand;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#schedule DataplexDatascan#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#schedule DataplexDatascan#schedule}
   */
   readonly schedule?: DataplexDatascanExecutionSpecTriggerSchedule;
 }
@@ -4164,13 +2350,13 @@ export interface DataplexDatascanExecutionSpec {
   /**
   * The unnested field (of type Date or Timestamp) that contains values which monotonically increase over time. If not specified, a data scan will run for all data in the table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#field DataplexDatascan#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#field DataplexDatascan#field}
   */
   readonly field?: string;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#trigger DataplexDatascan#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#trigger DataplexDatascan#trigger}
   */
   readonly trigger: DataplexDatascanExecutionSpecTrigger;
 }
@@ -4255,15 +2441,15 @@ export class DataplexDatascanExecutionSpecOutputReference extends cdktf.ComplexO
 }
 export interface DataplexDatascanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#create DataplexDatascan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#create DataplexDatascan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#delete DataplexDatascan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#delete DataplexDatascan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan#update DataplexDatascan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan#update DataplexDatascan#update}
   */
   readonly update?: string;
 }
@@ -4384,7 +2570,7 @@ export class DataplexDatascanTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan google_dataplex_datascan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan google_dataplex_datascan}
 */
 export class DataplexDatascan extends cdktf.TerraformResource {
 
@@ -4398,7 +2584,7 @@ export class DataplexDatascan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/dataplex_datascan google_dataplex_datascan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_datascan google_dataplex_datascan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4409,8 +2595,8 @@ export class DataplexDatascan extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_datascan',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.84.0',
-        providerVersionConstraint: '~> 4.0'
+        providerVersion: '5.0.0',
+        providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -4441,18 +2627,6 @@ export class DataplexDatascan extends cdktf.TerraformResource {
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
-  }
-
-  // data_profile_result - computed: true, optional: false, required: false
-  private _dataProfileResult = new DataplexDatascanDataProfileResultList(this, "data_profile_result", false);
-  public get dataProfileResult() {
-    return this._dataProfileResult;
-  }
-
-  // data_quality_result - computed: true, optional: false, required: false
-  private _dataQualityResult = new DataplexDatascanDataQualityResultList(this, "data_quality_result", false);
-  public get dataQualityResult() {
-    return this._dataQualityResult;
   }
 
   // data_scan_id - computed: false, optional: false, required: true
@@ -4498,6 +2672,12 @@ export class DataplexDatascan extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
     return this._displayName;
+  }
+
+  // effective_labels - computed: true, optional: false, required: false
+  private _effectiveLabels = new cdktf.StringMap(this, "effective_labels");
+  public get effectiveLabels() {
+    return this._effectiveLabels;
   }
 
   // execution_status - computed: true, optional: false, required: false
@@ -4575,6 +2755,12 @@ export class DataplexDatascan extends cdktf.TerraformResource {
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
+  }
+
+  // terraform_labels - computed: true, optional: false, required: false
+  private _terraformLabels = new cdktf.StringMap(this, "terraform_labels");
+  public get terraformLabels() {
+    return this._terraformLabels;
   }
 
   // type - computed: true, optional: false, required: false

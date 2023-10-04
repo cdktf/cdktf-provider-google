@@ -1,6 +1,6 @@
 # `google_compute_snapshot_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy).
+Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy).
 
 # `computeSnapshotIamPolicy` Submodule <a name="`computeSnapshotIamPolicy` Submodule" id="@cdktf/provider-google.computeSnapshotIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_policy`
 
 ### ComputeSnapshotIamPolicy <a name="ComputeSnapshotIamPolicy" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiampolicy"
 
 computesnapshotiampolicy.NewComputeSnapshotIamPolicy(scope Construct, id *string, config ComputeSnapshotIamPolicyConfig) ComputeSnapshotIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiampolicy"
 
 computesnapshotiampolicy.ComputeSnapshotIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiampolicy"
 
 computesnapshotiampolicy.ComputeSnapshotIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ computesnapshotiampolicy.ComputeSnapshotIamPolicy_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiampolicy"
 
 computesnapshotiampolicy.ComputeSnapshotIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -628,7 +628,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiampolicy"
 
 &computesnapshotiampolicy.ComputeSnapshotIamPolicyConfig {
 	Connection: interface{},
@@ -656,10 +656,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/computesnapshotiampo
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}. |
 
 ---
 
@@ -741,7 +741,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}.
 
 ---
 
@@ -753,7 +753,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}.
 
 ---
 
@@ -765,7 +765,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -780,7 +780,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.84.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}.
 
 ---
 
