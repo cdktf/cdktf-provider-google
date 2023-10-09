@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePool(scope Construct, id *string, config ContainerAzureNodePoolConfig) ContainerAzureNodePool
 ```
@@ -377,7 +377,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.ContainerAzureNodePool_IsConstruct(x interface{}) *bool
 ```
@@ -409,7 +409,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.ContainerAzureNodePool_IsTerraformElement(x interface{}) *bool
 ```
@@ -423,7 +423,7 @@ containerazurenodepool.ContainerAzureNodePool_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.ContainerAzureNodePool_IsTerraformResource(x interface{}) *bool
 ```
@@ -1007,7 +1007,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolAutoscaling {
 	MaxNodeCount: *f64,
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfig {
 	Connection: interface{},
@@ -1067,20 +1067,20 @@ import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolAutoscaling,
+	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolAutoscaling,
 	Cluster: *string,
-	Config: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolConfigA,
 	Location: *string,
-	MaxPodsConstraint: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraint,
+	MaxPodsConstraint: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraint,
 	Name: *string,
 	SubnetId: *string,
 	Version: *string,
 	Annotations: *map[string]*string,
 	AzureAvailabilityZone: *string,
 	Id: *string,
-	Management: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolManagement,
+	Management: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolManagement,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolTimeouts,
 }
 ```
 
@@ -1391,12 +1391,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigA {
-	SshConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfig,
-	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfig,
-	RootVolume: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolume,
+	SshConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfig,
+	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfig,
+	RootVolume: github.com/cdktf/cdktf-provider-google-go/google/v10.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolume,
 	Tags: *map[string]*string,
 	VmSize: *string,
 }
@@ -1491,7 +1491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigProxyConfig {
 	ResourceGroupId: *string,
@@ -1541,7 +1541,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigRootVolume {
 	SizeGib: *f64,
@@ -1577,7 +1577,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigSshConfig {
 	AuthorizedKey: *string,
@@ -1613,7 +1613,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolManagement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolManagement {
 	AutoRepair: interface{},
@@ -1647,7 +1647,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolMaxPodsConstraint {
 	MaxPodsPerNode: *f64,
@@ -1681,7 +1681,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolTimeouts {
 	Create: *string,
@@ -1743,7 +1743,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolAutoscalingOutputReference
 ```
@@ -2036,7 +2036,7 @@ func InternalValue() ContainerAzureNodePoolAutoscaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigAOutputReference
 ```
@@ -2462,7 +2462,7 @@ func InternalValue() ContainerAzureNodePoolConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigProxyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigProxyConfigOutputReference
 ```
@@ -2755,7 +2755,7 @@ func InternalValue() ContainerAzureNodePoolConfigProxyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigRootVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigRootVolumeOutputReference
 ```
@@ -3033,7 +3033,7 @@ func InternalValue() ContainerAzureNodePoolConfigRootVolume
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigSshConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigSshConfigOutputReference
 ```
@@ -3304,7 +3304,7 @@ func InternalValue() ContainerAzureNodePoolConfigSshConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolManagementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolManagementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolManagementOutputReference
 ```
@@ -3582,7 +3582,7 @@ func InternalValue() ContainerAzureNodePoolManagement
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraintOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolMaxPodsConstraintOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolMaxPodsConstraintOutputReference
 ```
@@ -3853,7 +3853,7 @@ func InternalValue() ContainerAzureNodePoolMaxPodsConstraint
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolTimeoutsOutputReference
 ```
