@@ -27,10 +27,10 @@ export interface ComputeAutoscalerConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Name of the resource. The name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}
   */
@@ -67,28 +67,28 @@ character, which cannot be a dash.
 export interface ComputeAutoscalerAutoscalingPolicyCpuUtilization {
   /**
   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
-
-- NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
-
-- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
+  * 
+  * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+  * 
+  * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#predictive_method ComputeAutoscaler#predictive_method}
   */
   readonly predictiveMethod?: string;
   /**
   * The target CPU utilization that the autoscaler should maintain.
-Must be a float value in the range (0, 1]. If not specified, the
-default is 0.6.
-
-If the CPU level is below the target utilization, the autoscaler
-scales down the number of instances until it reaches the minimum
-number of instances you specified or until the average CPU of
-your instances reaches the target utilization.
-
-If the average CPU is above the target utilization, the autoscaler
-scales up until it reaches the maximum number of instances you
-specified or until the average utilization reaches the target
-utilization.
+  * Must be a float value in the range (0, 1]. If not specified, the
+  * default is 0.6.
+  * 
+  * If the CPU level is below the target utilization, the autoscaler
+  * scales down the number of instances until it reaches the minimum
+  * number of instances you specified or until the average CPU of
+  * your instances reaches the target utilization.
+  * 
+  * If the average CPU is above the target utilization, the autoscaler
+  * scales up until it reaches the maximum number of instances you
+  * specified or until the average utilization reaches the target
+  * utilization.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
   */
@@ -176,8 +176,8 @@ export class ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference ext
 export interface ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization {
   /**
   * Fraction of backend capacity utilization (set in HTTP(s) load
-balancing configuration) that autoscaler should maintain. Must
-be a positive float value. If not defined, the default is 0.8.
+  * balancing configuration) that autoscaler should maintain. Must
+  * be a positive float value. If not defined, the default is 0.8.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
   */
@@ -242,30 +242,30 @@ export class ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputRef
 export interface ComputeAutoscalerAutoscalingPolicyMetric {
   /**
   * The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-
-The metric must have a value type of INT64 or DOUBLE.
+  * The metric cannot have negative values.
+  * 
+  * The metric must have a value type of INT64 or DOUBLE.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}
   */
   readonly name: string;
   /**
   * The target value of the metric that autoscaler should
-maintain. This must be a positive value. A utilization
-metric scales number of virtual machines handling requests
-to increase or decrease proportionally to the metric.
-
-For example, a good metric to use as a utilizationTarget is
-www.googleapis.com/compute/instance/network/received_bytes_count.
-The autoscaler will work to keep this value constant for each
-of the instances.
+  * maintain. This must be a positive value. A utilization
+  * metric scales number of virtual machines handling requests
+  * to increase or decrease proportionally to the metric.
+  * 
+  * For example, a good metric to use as a utilizationTarget is
+  * www.googleapis.com/compute/instance/network/received_bytes_count.
+  * The autoscaler will work to keep this value constant for each
+  * of the instances.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
   */
   readonly target?: number;
   /**
   * Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"]
+  * Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#type ComputeAutoscaler#type}
   */
@@ -408,14 +408,14 @@ export class ComputeAutoscalerAutoscalingPolicyMetricList extends cdktf.ComplexL
 export interface ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas {
   /**
   * Specifies a fixed number of VM instances. This must be a positive
-integer.
+  * integer.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#fixed ComputeAutoscaler#fixed}
   */
   readonly fixed?: number;
   /**
   * Specifies a percentage of instances between 0 to 100%, inclusive.
-For example, specify 80 for 80%.
+  * For example, specify 80 for 80%.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#percent ComputeAutoscaler#percent}
   */
@@ -506,7 +506,7 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas
 export interface ComputeAutoscalerAutoscalingPolicyScaleInControl {
   /**
   * How long back autoscaling should look when computing recommendations
-to include directives regarding slower scale down, as described above.
+  * to include directives regarding slower scale down, as described above.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#time_window_sec ComputeAutoscaler#time_window_sec}
   */
@@ -862,33 +862,33 @@ export class ComputeAutoscalerAutoscalingPolicyScalingSchedulesList extends cdkt
 export interface ComputeAutoscalerAutoscalingPolicy {
   /**
   * The number of seconds that the autoscaler should wait before it
-starts collecting information from a new instance. This prevents
-the autoscaler from collecting information when the instance is
-initializing, during which the collected usage would not be
-reliable. The default time autoscaler waits is 60 seconds.
-
-Virtual machine initialization times might vary because of
-numerous factors. We recommend that you test how long an
-instance may take to initialize. To do this, create an instance
-and time the startup process.
+  * starts collecting information from a new instance. This prevents
+  * the autoscaler from collecting information when the instance is
+  * initializing, during which the collected usage would not be
+  * reliable. The default time autoscaler waits is 60 seconds.
+  * 
+  * Virtual machine initialization times might vary because of
+  * numerous factors. We recommend that you test how long an
+  * instance may take to initialize. To do this, create an instance
+  * and time the startup process.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#cooldown_period ComputeAutoscaler#cooldown_period}
   */
   readonly cooldownPeriod?: number;
   /**
   * The maximum number of instances that the autoscaler can scale up
-to. This is required when creating or updating an autoscaler. The
-maximum number of replicas should not be lower than minimal number
-of replicas.
+  * to. This is required when creating or updating an autoscaler. The
+  * maximum number of replicas should not be lower than minimal number
+  * of replicas.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#max_replicas ComputeAutoscaler#max_replicas}
   */
   readonly maxReplicas: number;
   /**
   * The minimum number of replicas that the autoscaler can scale down
-to. This cannot be less than 0. If not provided, autoscaler will
-choose a default value depending on maximum number of instances
-allowed.
+  * to. This cannot be less than 0. If not provided, autoscaler will
+  * choose a default value depending on maximum number of instances
+  * allowed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_autoscaler#min_replicas ComputeAutoscaler#min_replicas}
   */

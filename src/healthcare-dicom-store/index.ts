@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface HealthcareDicomStoreConfig extends cdktf.TerraformMetaArguments {
   /**
   * Identifies the dataset addressed by this request. Must be in the format
-'projects/{project}/locations/{location}/datasets/{dataset}'
+  * 'projects/{project}/locations/{location}/datasets/{dataset}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#dataset HealthcareDicomStore#dataset}
   */
@@ -28,29 +28,29 @@ export interface HealthcareDicomStoreConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * User-supplied key-value pairs used to organize DICOM stores.
-
-Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
-conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-
-Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-
-No more than 64 labels can be associated with a given store.
-
-An object containing a list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+  * conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+  * 
+  * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+  * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+  * 
+  * No more than 64 labels can be associated with a given store.
+  * 
+  * An object containing a list of "key": value pairs.
+  * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#labels HealthcareDicomStore#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The resource name for the DicomStore.
-
-** Changing this property may recreate the Dicom store (removing all data) **
+  * 
+  * ** Changing this property may recreate the Dicom store (removing all data) **
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#name HealthcareDicomStore#name}
   */
@@ -71,11 +71,11 @@ Please refer to the field 'effective_labels' for all of the labels present on th
 export interface HealthcareDicomStoreNotificationConfig {
   /**
   * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
-PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
-It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
-was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
-project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
-Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+  * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+  * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+  * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+  * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
+  * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#pubsub_topic HealthcareDicomStore#pubsub_topic}
   */

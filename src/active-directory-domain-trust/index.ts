@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ActiveDirectoryDomainTrustConfig extends cdktf.TerraformMetaArguments {
   /**
   * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
-https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
+  * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/active_directory_domain_trust#domain ActiveDirectoryDomainTrust#domain}
   */

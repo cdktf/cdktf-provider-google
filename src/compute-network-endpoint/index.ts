@@ -21,16 +21,16 @@ export interface ComputeNetworkEndpointConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The name for a specific VM instance that the IP address belongs to.
-This is required for network endpoints of type GCE_VM_IP_PORT.
-The instance must be in the same zone of network endpoint group.
+  * This is required for network endpoints of type GCE_VM_IP_PORT.
+  * The instance must be in the same zone of network endpoint group.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_network_endpoint#instance ComputeNetworkEndpoint#instance}
   */
   readonly instance?: string;
   /**
   * IPv4 address of network endpoint. The IP address must belong
-to a VM in GCE (either the primary IP or as part of an aliased IP
-range).
+  * to a VM in GCE (either the primary IP or as part of an aliased IP
+  * range).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_network_endpoint#ip_address ComputeNetworkEndpoint#ip_address}
   */
@@ -43,8 +43,8 @@ range).
   readonly networkEndpointGroup: string;
   /**
   * Port number of network endpoint.
-**Note** 'port' is required unless the Network Endpoint Group is created
-with the type of 'GCE_VM_IP'
+  * **Note** 'port' is required unless the Network Endpoint Group is created
+  * with the type of 'GCE_VM_IP'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_network_endpoint#port ComputeNetworkEndpoint#port}
   */

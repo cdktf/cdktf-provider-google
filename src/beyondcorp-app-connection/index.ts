@@ -33,10 +33,10 @@ export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * Resource labels to represent user provided metadata.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/beyondcorp_app_connection#labels BeyondcorpAppConnection#labels}
   */
@@ -59,8 +59,8 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly region?: string;
   /**
   * The type of network connectivity used by the AppConnection. Refer to
-https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
-for a list of possible values.
+  * https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
+  * for a list of possible values.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
   */
@@ -183,8 +183,8 @@ export interface BeyondcorpAppConnectionGateway {
   readonly appGateway: string;
   /**
   * The type of hosting used by the gateway. Refer to
-https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
-for a list of possible values.
+  * https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
+  * for a list of possible values.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
   */

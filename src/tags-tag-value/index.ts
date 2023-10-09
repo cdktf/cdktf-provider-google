@@ -33,8 +33,8 @@ export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
   readonly parent: string;
   /**
   * Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey.
-
-The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+  * 
+  * The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/tags_tag_value#short_name TagsTagValue#short_name}
   */

@@ -14,30 +14,30 @@ import * as cdktf from 'cdktf';
 export interface AccessContextManagerAuthorizedOrgsDescConfig extends cdktf.TerraformMetaArguments {
   /**
   * The type of entities that need to use the authorization relationship during
-evaluation, such as a device. Valid values are "ASSET_TYPE_DEVICE" and
-"ASSET_TYPE_CREDENTIAL_STRENGTH". Possible values: ["ASSET_TYPE_DEVICE", "ASSET_TYPE_CREDENTIAL_STRENGTH"]
+  * evaluation, such as a device. Valid values are "ASSET_TYPE_DEVICE" and
+  * "ASSET_TYPE_CREDENTIAL_STRENGTH". Possible values: ["ASSET_TYPE_DEVICE", "ASSET_TYPE_CREDENTIAL_STRENGTH"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_authorized_orgs_desc#asset_type AccessContextManagerAuthorizedOrgsDesc#asset_type}
   */
   readonly assetType?: string;
   /**
   * The direction of the authorization relationship between this organization
-and the organizations listed in the "orgs" field. The valid values for this
-field include the following:
-
-AUTHORIZATION_DIRECTION_FROM: Allows this organization to evaluate traffic
-in the organizations listed in the 'orgs' field.
-
-AUTHORIZATION_DIRECTION_TO: Allows the organizations listed in the 'orgs'
-field to evaluate the traffic in this organization.
-
-For the authorization relationship to take effect, all of the organizations
-must authorize and specify the appropriate relationship direction. For
-example, if organization A authorized organization B and C to evaluate its
-traffic, by specifying "AUTHORIZATION_DIRECTION_TO" as the authorization
-direction, organizations B and C must specify
-"AUTHORIZATION_DIRECTION_FROM" as the authorization direction in their
-"AuthorizedOrgsDesc" resource. Possible values: ["AUTHORIZATION_DIRECTION_TO", "AUTHORIZATION_DIRECTION_FROM"]
+  * and the organizations listed in the "orgs" field. The valid values for this
+  * field include the following:
+  * 
+  * AUTHORIZATION_DIRECTION_FROM: Allows this organization to evaluate traffic
+  * in the organizations listed in the 'orgs' field.
+  * 
+  * AUTHORIZATION_DIRECTION_TO: Allows the organizations listed in the 'orgs'
+  * field to evaluate the traffic in this organization.
+  * 
+  * For the authorization relationship to take effect, all of the organizations
+  * must authorize and specify the appropriate relationship direction. For
+  * example, if organization A authorized organization B and C to evaluate its
+  * traffic, by specifying "AUTHORIZATION_DIRECTION_TO" as the authorization
+  * direction, organizations B and C must specify
+  * "AUTHORIZATION_DIRECTION_FROM" as the authorization direction in their
+  * "AuthorizedOrgsDesc" resource. Possible values: ["AUTHORIZATION_DIRECTION_TO", "AUTHORIZATION_DIRECTION_FROM"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_authorized_orgs_desc#authorization_direction AccessContextManagerAuthorizedOrgsDesc#authorization_direction}
   */
@@ -57,18 +57,18 @@ direction, organizations B and C must specify
   readonly id?: string;
   /**
   * Resource name for the 'AuthorizedOrgsDesc'. Format:
-'accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}'.
-The 'authorized_orgs_desc' component must begin with a letter, followed by
-alphanumeric characters or '_'.
-After you create an 'AuthorizedOrgsDesc', you cannot change its 'name'.
+  * 'accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}'.
+  * The 'authorized_orgs_desc' component must begin with a letter, followed by
+  * alphanumeric characters or '_'.
+  * After you create an 'AuthorizedOrgsDesc', you cannot change its 'name'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_authorized_orgs_desc#name AccessContextManagerAuthorizedOrgsDesc#name}
   */
   readonly name: string;
   /**
   * The list of organization ids in this AuthorizedOrgsDesc.
-Format: 'organizations/<org_number>'
-Example: 'organizations/123456'
+  * Format: 'organizations/<org_number>'
+  * Example: 'organizations/123456'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_authorized_orgs_desc#orgs AccessContextManagerAuthorizedOrgsDesc#orgs}
   */

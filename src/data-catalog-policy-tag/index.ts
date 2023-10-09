@@ -14,17 +14,17 @@ import * as cdktf from 'cdktf';
 export interface DataCatalogPolicyTagConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of this policy tag. It must: contain only unicode characters, tabs,
-newlines, carriage returns and page breaks; and be at most 2000 bytes long when
-encoded in UTF-8. If not set, defaults to an empty description.
-If not set, defaults to an empty description.
+  * newlines, carriage returns and page breaks; and be at most 2000 bytes long when
+  * encoded in UTF-8. If not set, defaults to an empty description.
+  * If not set, defaults to an empty description.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_policy_tag#description DataCatalogPolicyTag#description}
   */
   readonly description?: string;
   /**
   * User defined name of this policy tag. It must: be unique within the parent
-taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
-not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
+  * taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
+  * not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_policy_tag#display_name DataCatalogPolicyTag#display_name}
   */
@@ -38,8 +38,8 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
   readonly id?: string;
   /**
   * Resource name of this policy tag's parent policy tag.
-If empty, it means this policy tag is a top level policy tag.
-If not set, defaults to an empty string.
+  * If empty, it means this policy tag is a top level policy tag.
+  * If not set, defaults to an empty string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_policy_tag#parent_policy_tag DataCatalogPolicyTag#parent_policy_tag}
   */

@@ -21,7 +21,7 @@ export interface DataGoogleKmsKeyRingConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * The location for the KeyRing.
-A full list of valid locations can be found by running 'gcloud kms locations list'.
+  * A full list of valid locations can be found by running 'gcloud kms locations list'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/kms_key_ring#location DataGoogleKmsKeyRing#location}
   */

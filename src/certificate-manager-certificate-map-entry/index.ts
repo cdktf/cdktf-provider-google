@@ -14,8 +14,8 @@ import * as cdktf from 'cdktf';
 export interface CertificateManagerCertificateMapEntryConfig extends cdktf.TerraformMetaArguments {
   /**
   * A set of Certificates defines for the given hostname.
-There can be defined up to fifteen certificates in each Certificate Map Entry.
-Each certificate must match pattern projects/* /locations/* /certificates/*.
+  * There can be defined up to fifteen certificates in each Certificate Map Entry.
+  * Each certificate must match pattern projects/* /locations/* /certificates/*.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate_map_entry#certificates CertificateManagerCertificateMapEntry#certificates}
    *
@@ -30,8 +30,8 @@ Each certificate must match pattern projects/* /locations/* /certificates/*.
   readonly description?: string;
   /**
   * A Hostname (FQDN, e.g. example.com) or a wildcard hostname expression (*.example.com)
-for a set of hostnames with common suffix. Used as Server Name Indication (SNI) for
-selecting a proper certificate.
+  * for a set of hostnames with common suffix. Used as Server Name Indication (SNI) for
+  * selecting a proper certificate.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate_map_entry#hostname CertificateManagerCertificateMapEntry#hostname}
   */
@@ -45,12 +45,12 @@ selecting a proper certificate.
   readonly id?: string;
   /**
   * Set of labels associated with a Certificate Map Entry.
-An object containing a list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * An object containing a list of "key": value pairs.
+  * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate_map_entry#labels CertificateManagerCertificateMapEntry#labels}
   */
@@ -69,8 +69,8 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly matcher?: string;
   /**
   * A user-defined name of the Certificate Map Entry. Certificate Map Entry
-names must be unique globally and match pattern
-'projects/* /locations/* /certificateMaps/* /certificateMapEntries/*'
+  * names must be unique globally and match pattern
+  * 'projects/* /locations/* /certificateMaps/* /certificateMapEntries/*'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate_map_entry#name CertificateManagerCertificateMapEntry#name}
    *

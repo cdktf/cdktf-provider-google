@@ -21,15 +21,15 @@ export interface DataprocAutoscalingPolicyConfig extends cdktf.TerraformMetaArgu
   readonly id?: string;
   /**
   * The  location where the autoscaling policy should reside.
-The default value is 'global'.
+  * The default value is 'global'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#location DataprocAutoscalingPolicy#location}
   */
   readonly location?: string;
   /**
   * The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
-3 and 50 characters.
+  * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+  * 3 and 50 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#policy_id DataprocAutoscalingPolicy#policy_id}
   */
@@ -66,56 +66,56 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 export interface DataprocAutoscalingPolicyBasicAlgorithmYarnConfig {
   /**
   * Timeout for YARN graceful decommissioning of Node Managers. Specifies the
-duration to wait for jobs to complete before forcefully removing workers
-(and potentially interrupting jobs). Only applicable to downscaling operations.
-
-Bounds: [0s, 1d].
+  * duration to wait for jobs to complete before forcefully removing workers
+  * (and potentially interrupting jobs). Only applicable to downscaling operations.
+  * 
+  * Bounds: [0s, 1d].
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#graceful_decommission_timeout DataprocAutoscalingPolicy#graceful_decommission_timeout}
   */
   readonly gracefulDecommissionTimeout: string;
   /**
   * Fraction of average pending memory in the last cooldown period for which to
-remove workers. A scale-down factor of 1 will result in scaling down so that there
-is no available memory remaining after the update (more aggressive scaling).
-A scale-down factor of 0 disables removing workers, which can be beneficial for
-autoscaling a single job.
-
-Bounds: [0.0, 1.0].
+  * remove workers. A scale-down factor of 1 will result in scaling down so that there
+  * is no available memory remaining after the update (more aggressive scaling).
+  * A scale-down factor of 0 disables removing workers, which can be beneficial for
+  * autoscaling a single job.
+  * 
+  * Bounds: [0.0, 1.0].
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#scale_down_factor DataprocAutoscalingPolicy#scale_down_factor}
   */
   readonly scaleDownFactor: number;
   /**
   * Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
-For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
-recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
-means the autoscaler will scale down on any recommended change.
-
-Bounds: [0.0, 1.0]. Default: 0.0.
+  * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+  * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
+  * means the autoscaler will scale down on any recommended change.
+  * 
+  * Bounds: [0.0, 1.0]. Default: 0.0.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#scale_down_min_worker_fraction DataprocAutoscalingPolicy#scale_down_min_worker_fraction}
   */
   readonly scaleDownMinWorkerFraction?: number;
   /**
   * Fraction of average pending memory in the last cooldown period for which to
-add workers. A scale-up factor of 1.0 will result in scaling up so that there
-is no pending memory remaining after the update (more aggressive scaling).
-A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
-(less aggressive scaling).
-
-Bounds: [0.0, 1.0].
+  * add workers. A scale-up factor of 1.0 will result in scaling up so that there
+  * is no pending memory remaining after the update (more aggressive scaling).
+  * A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
+  * (less aggressive scaling).
+  * 
+  * Bounds: [0.0, 1.0].
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#scale_up_factor DataprocAutoscalingPolicy#scale_up_factor}
   */
   readonly scaleUpFactor: number;
   /**
   * Minimum scale-up threshold as a fraction of total cluster size before scaling
-occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
-must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
-0 means the autoscaler will scale up on any recommended change.
-
-Bounds: [0.0, 1.0]. Default: 0.0.
+  * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
+  * must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
+  * 0 means the autoscaler will scale up on any recommended change.
+  * 
+  * Bounds: [0.0, 1.0]. Default: 0.0.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#scale_up_min_worker_fraction DataprocAutoscalingPolicy#scale_up_min_worker_fraction}
   */
@@ -266,9 +266,9 @@ export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference ex
 export interface DataprocAutoscalingPolicyBasicAlgorithm {
   /**
   * Duration between scaling events. A scaling period starts after the
-update operation from the previous event has completed.
-
-Bounds: [2m, 1d]. Default: 2m.
+  * update operation from the previous event has completed.
+  * 
+  * Bounds: [2m, 1d]. Default: 2m.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#cooldown_period DataprocAutoscalingPolicy#cooldown_period}
   */
@@ -362,8 +362,8 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
 export interface DataprocAutoscalingPolicySecondaryWorkerConfig {
   /**
   * Maximum number of instances for this group. Note that by default, clusters will not use
-secondary workers. Required for secondary workers if the minimum secondary instances is set.
-Bounds: [minInstances, ). Defaults to 0.
+  * secondary workers. Required for secondary workers if the minimum secondary instances is set.
+  * Bounds: [minInstances, ). Defaults to 0.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#max_instances DataprocAutoscalingPolicy#max_instances}
   */
@@ -376,19 +376,19 @@ Bounds: [minInstances, ). Defaults to 0.
   readonly minInstances?: number;
   /**
   * Weight for the instance group, which is used to determine the fraction of total workers
-in the cluster from this instance group. For example, if primary workers have weight 2,
-and secondary workers have weight 1, the cluster will have approximately 2 primary workers
-for each secondary worker.
-
-The cluster may not reach the specified balance if constrained by min/max bounds or other
-autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
-primary workers will be added. The cluster can also be out of balance when created.
-
-If weight is not set on any instance group, the cluster will default to equal weight for
-all groups: the cluster will attempt to maintain an equal number of workers in each group
-within the configured size bounds for each group. If weight is set for one group only,
-the cluster will default to zero weight on the unset group. For example if weight is set
-only on primary workers, the cluster will use primary workers only and no secondary workers.
+  * in the cluster from this instance group. For example, if primary workers have weight 2,
+  * and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+  * for each secondary worker.
+  * 
+  * The cluster may not reach the specified balance if constrained by min/max bounds or other
+  * autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+  * primary workers will be added. The cluster can also be out of balance when created.
+  * 
+  * If weight is not set on any instance group, the cluster will default to equal weight for
+  * all groups: the cluster will attempt to maintain an equal number of workers in each group
+  * within the configured size bounds for each group. If weight is set for one group only,
+  * the cluster will default to zero weight on the unset group. For example if weight is set
+  * only on primary workers, the cluster will use primary workers only and no secondary workers.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#weight DataprocAutoscalingPolicy#weight}
   */
@@ -643,19 +643,19 @@ export interface DataprocAutoscalingPolicyWorkerConfig {
   readonly minInstances?: number;
   /**
   * Weight for the instance group, which is used to determine the fraction of total workers
-in the cluster from this instance group. For example, if primary workers have weight 2,
-and secondary workers have weight 1, the cluster will have approximately 2 primary workers
-for each secondary worker.
-
-The cluster may not reach the specified balance if constrained by min/max bounds or other
-autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
-primary workers will be added. The cluster can also be out of balance when created.
-
-If weight is not set on any instance group, the cluster will default to equal weight for
-all groups: the cluster will attempt to maintain an equal number of workers in each group
-within the configured size bounds for each group. If weight is set for one group only,
-the cluster will default to zero weight on the unset group. For example if weight is set
-only on primary workers, the cluster will use primary workers only and no secondary workers.
+  * in the cluster from this instance group. For example, if primary workers have weight 2,
+  * and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+  * for each secondary worker.
+  * 
+  * The cluster may not reach the specified balance if constrained by min/max bounds or other
+  * autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+  * primary workers will be added. The cluster can also be out of balance when created.
+  * 
+  * If weight is not set on any instance group, the cluster will default to equal weight for
+  * all groups: the cluster will attempt to maintain an equal number of workers in each group
+  * within the configured size bounds for each group. If weight is set for one group only,
+  * the cluster will default to zero weight on the unset group. For example if weight is set
+  * only on primary workers, the cluster will use primary workers only and no secondary workers.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_autoscaling_policy#weight DataprocAutoscalingPolicy#weight}
   */

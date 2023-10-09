@@ -57,11 +57,11 @@ export interface DataFusionInstanceConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The resource labels for instance to use to annotate any related underlying resources,
-such as Compute Engine VMs.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * such as Compute Engine VMs.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_fusion_instance#labels DataFusionInstance#labels}
   */
@@ -80,8 +80,8 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly options?: { [key: string]: string };
   /**
   * Specifies whether the Data Fusion instance should be private. If set to
-true, all Data Fusion nodes will have private IP addresses and will not be
-able to access the public internet.
+  * true, all Data Fusion nodes will have private IP addresses and will not be
+  * able to access the public internet.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_fusion_instance#private_instance DataFusionInstance#private_instance}
   */
@@ -98,15 +98,15 @@ able to access the public internet.
   readonly region?: string;
   /**
   * Represents the type of Data Fusion instance. Each type is configured with
-the default settings for processing and memory.
-- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
-using point and click UI. However, there are certain limitations, such as fewer number
-of concurrent pipelines, no support for streaming pipelines, etc.
-- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
-available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
-with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
-pipelines at low cost. Possible values: ["BASIC", "ENTERPRISE", "DEVELOPER"]
+  * the default settings for processing and memory.
+  * - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+  * using point and click UI. However, there are certain limitations, such as fewer number
+  * of concurrent pipelines, no support for streaming pipelines, etc.
+  * - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+  * available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+  * - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+  * with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+  * pipelines at low cost. Possible values: ["BASIC", "ENTERPRISE", "DEVELOPER"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_fusion_instance#type DataFusionInstance#type}
   */
@@ -435,15 +435,15 @@ export class DataFusionInstanceEventPublishConfigOutputReference extends cdktf.C
 export interface DataFusionInstanceNetworkConfig {
   /**
   * The IP range in CIDR notation to use for the managed Data Fusion instance
-nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+  * nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_fusion_instance#ip_allocation DataFusionInstance#ip_allocation}
   */
   readonly ipAllocation: string;
   /**
   * Name of the network in the project with which the tenant project
-will be peered for executing pipelines. In case of shared VPC where the network resides in another host
-project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+  * will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+  * project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_fusion_instance#network DataFusionInstance#network}
   */

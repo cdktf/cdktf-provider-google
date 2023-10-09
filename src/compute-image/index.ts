@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource. Provide this property when
-you create the resource.
+  * you create the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#description ComputeImage#description}
   */
@@ -27,10 +27,10 @@ you create the resource.
   readonly diskSizeGb?: number;
   /**
   * The name of the image family to which this image belongs. You can
-create disks by specifying an image family instead of a specific
-image name. The image family always returns its latest image that is
-not deprecated. The name of the image family must comply with
-RFC1035.
+  * create disks by specifying an image family instead of a specific
+  * image name. The image family always returns its latest image that is
+  * not deprecated. The name of the image family must comply with
+  * RFC1035.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#family ComputeImage#family}
   */
@@ -44,9 +44,9 @@ RFC1035.
   readonly id?: string;
   /**
   * Labels to apply to this Image.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#labels ComputeImage#labels}
   */
@@ -59,12 +59,12 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly licenses?: string[];
   /**
   * Name of the resource; provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and
-match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
-the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and
+  * match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
+  * the first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the
+  * last character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#name ComputeImage#name}
   */
@@ -75,42 +75,42 @@ last character, which cannot be a dash.
   readonly project?: string;
   /**
   * The source disk to create this image based on.
-You must provide either this property or the
-rawDisk.source property but not both to create an image.
+  * You must provide either this property or the
+  * rawDisk.source property but not both to create an image.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source_disk ComputeImage#source_disk}
   */
   readonly sourceDisk?: string;
   /**
   * URL of the source image used to create this image. In order to create an image, you must provide the full or partial
-URL of one of the following:
-
-* The selfLink URL
-* This property
-* The rawDisk.source URL
-* The sourceDisk URL
+  * URL of one of the following:
+  * 
+  * * The selfLink URL
+  * * This property
+  * * The rawDisk.source URL
+  * * The sourceDisk URL
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source_image ComputeImage#source_image}
   */
   readonly sourceImage?: string;
   /**
   * URL of the source snapshot used to create this image.
-
-In order to create an image, you must provide the full or partial URL of one of the following:
-
-* The selfLink URL
-* This property
-* The sourceImage URL
-* The rawDisk.source URL
-* The sourceDisk URL
+  * 
+  * In order to create an image, you must provide the full or partial URL of one of the following:
+  * 
+  * * The selfLink URL
+  * * This property
+  * * The sourceImage URL
+  * * The rawDisk.source URL
+  * * The sourceDisk URL
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source_snapshot ComputeImage#source_snapshot}
   */
   readonly sourceSnapshot?: string;
   /**
   * Cloud Storage bucket storage location of the image
-(regional or multi-regional).
-Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images
+  * (regional or multi-regional).
+  * Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#storage_locations ComputeImage#storage_locations}
   */
@@ -239,15 +239,15 @@ export class ComputeImageGuestOsFeaturesList extends cdktf.ComplexList {
 export interface ComputeImageImageEncryptionKey {
   /**
   * The self link of the encryption key that is stored in Google Cloud
-KMS.
+  * KMS.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
   * The service account being used for the encryption request for the
-given KMS key. If absent, the Compute Engine default service
-account is used.
+  * given KMS key. If absent, the Compute Engine default service
+  * account is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
   */
@@ -338,24 +338,24 @@ export class ComputeImageImageEncryptionKeyOutputReference extends cdktf.Complex
 export interface ComputeImageRawDisk {
   /**
   * The format used to encode and transmit the block device, which
-should be TAR. This is just a container and transmission format
-and not a runtime format. Provided by the client when the disk
-image is created. Default value: "TAR" Possible values: ["TAR"]
+  * should be TAR. This is just a container and transmission format
+  * and not a runtime format. Provided by the client when the disk
+  * image is created. Default value: "TAR" Possible values: ["TAR"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#container_type ComputeImage#container_type}
   */
   readonly containerType?: string;
   /**
   * An optional SHA1 checksum of the disk image before unpackaging.
-This is provided by the client when the disk image is created.
+  * This is provided by the client when the disk image is created.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#sha1 ComputeImage#sha1}
   */
   readonly sha1?: string;
   /**
   * The full Google Cloud Storage URL where disk storage is stored
-You must provide either this property or the sourceDisk property
-but not both.
+  * You must provide either this property or the sourceDisk property
+  * but not both.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source ComputeImage#source}
   */

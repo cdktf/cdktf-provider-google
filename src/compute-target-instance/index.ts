@@ -27,30 +27,30 @@ export interface ComputeTargetInstanceConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * The Compute instance VM handling traffic for this target instance.
-Accepts the instance self-link, relative path
-(e.g. 'projects/project/zones/zone/instances/instance') or name. If
-name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the
-provider-level project.
+  * Accepts the instance self-link, relative path
+  * (e.g. 'projects/project/zones/zone/instances/instance') or name. If
+  * name is given, the zone will default to the given zone or
+  * the provider-default zone and the project will default to the
+  * provider-level project.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_instance#instance ComputeTargetInstance#instance}
   */
   readonly instance: string;
   /**
   * Name of the resource. Provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_instance#name ComputeTargetInstance#name}
   */
   readonly name: string;
   /**
   * NAT option controlling how IPs are NAT'ed to the instance.
-Currently only NO_NAT (default value) is supported. Default value: "NO_NAT" Possible values: ["NO_NAT"]
+  * Currently only NO_NAT (default value) is supported. Default value: "NO_NAT" Possible values: ["NO_NAT"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_instance#nat_policy ComputeTargetInstance#nat_policy}
   */

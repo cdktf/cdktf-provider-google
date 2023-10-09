@@ -27,7 +27,7 @@ export interface ComputeDiskResourcePolicyAttachmentConfig extends cdktf.Terrafo
   readonly id?: string;
   /**
   * The resource policy to be attached to the disk for scheduling snapshot
-creation. Do not specify the self link.
+  * creation. Do not specify the self link.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_disk_resource_policy_attachment#name ComputeDiskResourcePolicyAttachment#name}
   */

@@ -14,26 +14,26 @@ import * as cdktf from 'cdktf';
 export interface ComputeRouterNatConfig extends cdktf.TerraformMetaArguments {
   /**
   * A list of URLs of the IP resources to be drained. These IPs must be
-valid static external IPs that have been assigned to the NAT.
+  * valid static external IPs that have been assigned to the NAT.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#drain_nat_ips ComputeRouterNat#drain_nat_ips}
   */
   readonly drainNatIps?: string[];
   /**
   * Enable Dynamic Port Allocation.
-If minPortsPerVm is set, minPortsPerVm must be set to a power of two greater than or equal to 32.
-If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
-If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater than minPortsPerVm.
-If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
-
-Mutually exclusive with enableEndpointIndependentMapping.
+  * If minPortsPerVm is set, minPortsPerVm must be set to a power of two greater than or equal to 32.
+  * If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+  * If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater than minPortsPerVm.
+  * If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
+  * 
+  * Mutually exclusive with enableEndpointIndependentMapping.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#enable_dynamic_port_allocation ComputeRouterNat#enable_dynamic_port_allocation}
   */
   readonly enableDynamicPortAllocation?: boolean | cdktf.IResolvable;
   /**
   * Enable endpoint independent mapping.
-For more information see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
+  * For more information see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#enable_endpoint_independent_mapping ComputeRouterNat#enable_endpoint_independent_mapping}
   */
@@ -53,7 +53,7 @@ For more information see the [official documentation](https://cloud.google.com/n
   readonly id?: string;
   /**
   * Maximum number of ports allocated to a VM from this NAT.
-This field can only be set when enableDynamicPortAllocation is enabled.
+  * This field can only be set when enableDynamicPortAllocation is enabled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#max_ports_per_vm ComputeRouterNat#max_ports_per_vm}
   */
@@ -66,22 +66,22 @@ This field can only be set when enableDynamicPortAllocation is enabled.
   readonly minPortsPerVm?: number;
   /**
   * Name of the NAT service. The name must be 1-63 characters long and
-comply with RFC1035.
+  * comply with RFC1035.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#name ComputeRouterNat#name}
   */
   readonly name: string;
   /**
   * How external IPs should be allocated for this NAT. Valid values are
-'AUTO_ONLY' for only allowing NAT IPs allocated by Google Cloud
-Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses. Possible values: ["MANUAL_ONLY", "AUTO_ONLY"]
+  * 'AUTO_ONLY' for only allowing NAT IPs allocated by Google Cloud
+  * Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses. Possible values: ["MANUAL_ONLY", "AUTO_ONLY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#nat_ip_allocate_option ComputeRouterNat#nat_ip_allocate_option}
   */
   readonly natIpAllocateOption?: string;
   /**
   * Self-links of NAT IPs. Only valid if natIpAllocateOption
-is set to MANUAL_ONLY.
+  * is set to MANUAL_ONLY.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#nat_ips ComputeRouterNat#nat_ips}
   */
@@ -104,36 +104,36 @@ is set to MANUAL_ONLY.
   readonly router: string;
   /**
   * How NAT should be configured per Subnetwork.
-If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the
-IP ranges in every Subnetwork are allowed to Nat.
-If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP
-ranges in every Subnetwork are allowed to Nat.
-'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat
-(specified in the field subnetwork below). Note that if this field
-contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
-other RouterNat section in any Router for this network in this region. Possible values: ["ALL_SUBNETWORKS_ALL_IP_RANGES", "ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES", "LIST_OF_SUBNETWORKS"]
+  * If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the
+  * IP ranges in every Subnetwork are allowed to Nat.
+  * If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP
+  * ranges in every Subnetwork are allowed to Nat.
+  * 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat
+  * (specified in the field subnetwork below). Note that if this field
+  * contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+  * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+  * other RouterNat section in any Router for this network in this region. Possible values: ["ALL_SUBNETWORKS_ALL_IP_RANGES", "ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES", "LIST_OF_SUBNETWORKS"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#source_subnetwork_ip_ranges_to_nat ComputeRouterNat#source_subnetwork_ip_ranges_to_nat}
   */
   readonly sourceSubnetworkIpRangesToNat: string;
   /**
   * Timeout (in seconds) for TCP established connections.
-Defaults to 1200s if not set.
+  * Defaults to 1200s if not set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#tcp_established_idle_timeout_sec ComputeRouterNat#tcp_established_idle_timeout_sec}
   */
   readonly tcpEstablishedIdleTimeoutSec?: number;
   /**
   * Timeout (in seconds) for TCP connections that are in TIME_WAIT state.
-Defaults to 120s if not set.
+  * Defaults to 120s if not set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#tcp_time_wait_timeout_sec ComputeRouterNat#tcp_time_wait_timeout_sec}
   */
   readonly tcpTimeWaitTimeoutSec?: number;
   /**
   * Timeout (in seconds) for TCP transitory connections.
-Defaults to 30s if not set.
+  * Defaults to 30s if not set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#tcp_transitory_idle_timeout_sec ComputeRouterNat#tcp_transitory_idle_timeout_sec}
   */
@@ -262,17 +262,17 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
 export interface ComputeRouterNatRulesAction {
   /**
   * A list of URLs of the IP resources used for this NAT rule.
-These IP addresses must be valid static external IP addresses assigned to the project.
-This field is used for public NAT.
+  * These IP addresses must be valid static external IP addresses assigned to the project.
+  * This field is used for public NAT.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#source_nat_active_ips ComputeRouterNat#source_nat_active_ips}
   */
   readonly sourceNatActiveIps?: string[];
   /**
   * A list of URLs of the IP resources to be drained.
-These IPs must be valid static external IPs that have been assigned to the NAT.
-These IPs should be used for updating/patching a NAT rule only.
-This field is used for public NAT.
+  * These IPs must be valid static external IPs that have been assigned to the NAT.
+  * These IPs should be used for updating/patching a NAT rule only.
+  * This field is used for public NAT.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#source_nat_drain_ips ComputeRouterNat#source_nat_drain_ips}
   */
@@ -369,24 +369,24 @@ export interface ComputeRouterNatRules {
   readonly description?: string;
   /**
   * CEL expression that specifies the match condition that egress traffic from a VM is evaluated against.
-If it evaluates to true, the corresponding action is enforced.
-
-The following examples are valid match expressions for public NAT:
-
-"inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')"
-
-"destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"
-
-The following example is a valid match expression for private NAT:
-
-"nexthop.hub == 'https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1'"
+  * If it evaluates to true, the corresponding action is enforced.
+  * 
+  * The following examples are valid match expressions for public NAT:
+  * 
+  * "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')"
+  * 
+  * "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"
+  * 
+  * The following example is a valid match expression for private NAT:
+  * 
+  * "nexthop.hub == 'https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1'"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#match ComputeRouterNat#match}
   */
   readonly match: string;
   /**
   * An integer uniquely identifying a rule in the list.
-The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
+  * The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#rule_number ComputeRouterNat#rule_number}
   */
@@ -561,18 +561,18 @@ export interface ComputeRouterNatSubnetwork {
   readonly name: string;
   /**
   * List of the secondary ranges of the subnetwork that are allowed
-to use NAT. This can be populated only if
-'LIST_OF_SECONDARY_IP_RANGES' is one of the values in
-sourceIpRangesToNat
+  * to use NAT. This can be populated only if
+  * 'LIST_OF_SECONDARY_IP_RANGES' is one of the values in
+  * sourceIpRangesToNat
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#secondary_ip_range_names ComputeRouterNat#secondary_ip_range_names}
   */
   readonly secondaryIpRangeNames?: string[];
   /**
   * List of options for which source IPs in the subnetwork
-should have NAT enabled. Supported values include:
-'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES',
-'PRIMARY_IP_RANGE'.
+  * should have NAT enabled. Supported values include:
+  * 'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES',
+  * 'PRIMARY_IP_RANGE'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router_nat#source_ip_ranges_to_nat ComputeRouterNat#source_ip_ranges_to_nat}
   */

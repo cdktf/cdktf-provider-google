@@ -20,7 +20,7 @@ export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   /**
   * Indicates if a router is dedicated for use with encrypted VLAN
-attachments (interconnectAttachments).
+  * attachments (interconnectAttachments).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
   */
@@ -34,11 +34,11 @@ attachments (interconnectAttachments).
   readonly id?: string;
   /**
   * Name of the resource. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters
-long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
-which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit,
-except the last character, which cannot be a dash.
+  * comply with RFC1035. Specifically, the name must be 1-63 characters
+  * long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
+  * which means the first character must be a lowercase letter, and all
+  * following characters must be a dash, lowercase letter, or digit,
+  * except the last character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router#name ComputeRouter#name}
   */
@@ -81,7 +81,7 @@ export interface ComputeRouterBgpAdvertisedIpRanges {
   readonly description?: string;
   /**
   * The IP range to advertise. The value must be a
-CIDR-formatted string.
+  * CIDR-formatted string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router#range ComputeRouter#range}
   */
@@ -207,36 +207,36 @@ export interface ComputeRouterBgp {
   readonly advertiseMode?: string;
   /**
   * User-specified list of prefix groups to advertise in custom mode.
-This field can only be populated if advertiseMode is CUSTOM and
-is advertised to all peers of the router. These groups will be
-advertised in addition to any specified prefixes. Leave this field
-blank to advertise no custom groups.
-
-This enum field has the one valid value: ALL_SUBNETS
+  * This field can only be populated if advertiseMode is CUSTOM and
+  * is advertised to all peers of the router. These groups will be
+  * advertised in addition to any specified prefixes. Leave this field
+  * blank to advertise no custom groups.
+  * 
+  * This enum field has the one valid value: ALL_SUBNETS
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
   */
   readonly advertisedGroups?: string[];
   /**
   * Local BGP Autonomous System Number (ASN). Must be an RFC6996
-private ASN, either 16-bit or 32-bit. The value will be fixed for
-this router resource. All VPN tunnels that link to this router
-will have the same local ASN.
+  * private ASN, either 16-bit or 32-bit. The value will be fixed for
+  * this router resource. All VPN tunnels that link to this router
+  * will have the same local ASN.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router#asn ComputeRouter#asn}
   */
   readonly asn: number;
   /**
   * The interval in seconds between BGP keepalive messages that are sent
-to the peer. Hold time is three times the interval at which keepalive
-messages are sent, and the hold time is the maximum number of seconds
-allowed to elapse between successive keepalive messages that BGP
-receives from a peer.
-
-BGP will use the smaller of either the local hold time value or the
-peer's hold time value as the hold time for the BGP connection
-between the two peers. If set, this value must be between 20 and 60.
-The default is 20.
+  * to the peer. Hold time is three times the interval at which keepalive
+  * messages are sent, and the hold time is the maximum number of seconds
+  * allowed to elapse between successive keepalive messages that BGP
+  * receives from a peer.
+  * 
+  * BGP will use the smaller of either the local hold time value or the
+  * peer's hold time value as the hold time for the BGP connection
+  * between the two peers. If set, this value must be between 20 and 60.
+  * The default is 20.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
   */

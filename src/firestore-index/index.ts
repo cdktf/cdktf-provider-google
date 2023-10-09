@@ -57,7 +57,7 @@ export interface FirestoreIndexConfig extends cdktf.TerraformMetaArguments {
 export interface FirestoreIndexFields {
   /**
   * Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can
-be specified. Possible values: ["CONTAINS"]
+  * be specified. Possible values: ["CONTAINS"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/firestore_index#array_config FirestoreIndex#array_config}
   */
@@ -70,7 +70,7 @@ be specified. Possible values: ["CONTAINS"]
   readonly fieldPath?: string;
   /**
   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
-Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"]
+  * Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/firestore_index#order FirestoreIndex#order}
   */

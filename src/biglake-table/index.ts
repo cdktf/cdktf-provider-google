@@ -27,7 +27,7 @@ export interface BiglakeTableConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Output only. The name of the Table. Format:
-projects/{project_id_or_number}/locations/{locationId}/catalogs/{catalogId}/databases/{databaseId}/tables/{tableId}
+  * projects/{project_id_or_number}/locations/{locationId}/catalogs/{catalogId}/databases/{databaseId}/tables/{tableId}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_table#name BiglakeTable#name}
   */
@@ -179,8 +179,8 @@ export class BiglakeTableHiveOptionsStorageDescriptorOutputReference extends cdk
 export interface BiglakeTableHiveOptions {
   /**
   * Stores user supplied Hive table parameters. An object containing a
-list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * list of "key": value pairs.
+  * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_table#parameters BiglakeTable#parameters}
   */

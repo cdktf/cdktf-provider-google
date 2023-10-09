@@ -93,7 +93,7 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
 export interface VpcAccessConnectorSubnet {
   /**
   * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
-https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+  * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vpc_access_connector#name VpcAccessConnector#name}
   */

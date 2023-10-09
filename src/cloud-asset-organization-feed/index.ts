@@ -14,27 +14,27 @@ import * as cdktf from 'cdktf';
 export interface CloudAssetOrganizationFeedConfig extends cdktf.TerraformMetaArguments {
   /**
   * A list of the full names of the assets to receive updates. You must specify either or both of
-assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
-exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
-See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
+  * assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
+  * exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
+  * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_asset_organization_feed#asset_names CloudAssetOrganizationFeed#asset_names}
   */
   readonly assetNames?: string[];
   /**
   * A list of types of the assets to receive updates. You must specify either or both of assetNames
-and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
-the feed. For example: "compute.googleapis.com/Disk"
-See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
-supported asset types.
+  * and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
+  * the feed. For example: "compute.googleapis.com/Disk"
+  * See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
+  * supported asset types.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_asset_organization_feed#asset_types CloudAssetOrganizationFeed#asset_types}
   */
   readonly assetTypes?: string[];
   /**
   * The project whose identity will be used when sending messages to the
-destination pubsub topic. It also specifies the project for API
-enablement check, quota, and billing.
+  * destination pubsub topic. It also specifies the project for API
+  * enablement check, quota, and billing.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_asset_organization_feed#billing_project CloudAssetOrganizationFeed#billing_project}
   */
@@ -86,7 +86,7 @@ enablement check, quota, and billing.
 export interface CloudAssetOrganizationFeedCondition {
   /**
   * Description of the expression. This is a longer text which describes the expression,
-e.g. when hovered over it in a UI.
+  * e.g. when hovered over it in a UI.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_asset_organization_feed#description CloudAssetOrganizationFeed#description}
   */
@@ -99,14 +99,14 @@ e.g. when hovered over it in a UI.
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file
-name and a position in the file.
+  * name and a position in the file.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_asset_organization_feed#location CloudAssetOrganizationFeed#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
-This can be used e.g. in UIs which allow to enter the expression.
+  * This can be used e.g. in UIs which allow to enter the expression.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_asset_organization_feed#title CloudAssetOrganizationFeed#title}
   */

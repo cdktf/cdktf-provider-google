@@ -21,14 +21,14 @@ export interface AccessContextManagerAccessPolicyConfig extends cdktf.TerraformM
   readonly id?: string;
   /**
   * The parent of this AccessPolicy in the Cloud Resource Hierarchy.
-Format: organizations/{organization_id}
+  * Format: organizations/{organization_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_policy#parent AccessContextManagerAccessPolicy#parent}
   */
   readonly parent: string;
   /**
   * Folder or project on which this policy is applicable.
-Format: folders/{{folder_id}} or projects/{{project_id}}
+  * Format: folders/{{folder_id}} or projects/{{project_id}}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_policy#scopes AccessContextManagerAccessPolicy#scopes}
   */

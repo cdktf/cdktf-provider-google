@@ -1921,16 +1921,17 @@ The Compute Engine network to be used for machine communications.
 Cannot be specified with subnetwork. If neither 'network' nor
 'subnet' is specified, the "default" network of the project is
 used, if it exists. A full URL or partial URI. Examples:
-'https://www.googleapis.com/compute/v1/projects/[project_id]/
-regions/global/default'
-'projects/[project_id]/regions/global/default'
-Runtimes are managed resources inside Google Infrastructure.
-Runtimes support the following network configurations:
-Google Managed Network (Network & subnet are empty)
-Consumer Project VPC (network & subnet are required). Requires
-configuring Private Service Access.
-Shared VPC (network & subnet are required). Requires
-configuring Private Service Access.
+
+* 'https://www.googleapis.com/compute/v1/projects/[project_id]/
+  regions/global/default'
+* 'projects/[project_id]/regions/global/default'
+  Runtimes are managed resources inside Google Infrastructure.
+  Runtimes support the following network configurations:
+* Google Managed Network (Network & subnet are empty)
+* Consumer Project VPC (network & subnet are required). Requires
+  configuring Private Service Access.
+* Shared VPC (network & subnet are required). Requires
+  configuring Private Service Access.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
 
@@ -1993,9 +1994,10 @@ The Compute Engine subnetwork to be used for machine communications.
 
 Cannot be specified with network. A full URL or
 partial URI are valid. Examples:
-'https://www.googleapis.com/compute/v1/projects/[project_id]/
-regions/us-east1/subnetworks/sub0'
-'projects/[project_id]/regions/us-east1/subnetworks/sub0'
+
+* 'https://www.googleapis.com/compute/v1/projects/[project_id]/
+  regions/us-east1/subnetworks/sub0'
+* 'projects/[project_id]/regions/us-east1/subnetworks/sub0'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
 
@@ -5006,16 +5008,17 @@ The Compute Engine network to be used for machine communications.
 Cannot be specified with subnetwork. If neither 'network' nor
 'subnet' is specified, the "default" network of the project is
 used, if it exists. A full URL or partial URI. Examples:
-'https://www.googleapis.com/compute/v1/projects/[project_id]/
-regions/global/default'
-'projects/[project_id]/regions/global/default'
-Runtimes are managed resources inside Google Infrastructure.
-Runtimes support the following network configurations:
-Google Managed Network (Network & subnet are empty)
-Consumer Project VPC (network & subnet are required). Requires
-configuring Private Service Access.
-Shared VPC (network & subnet are required). Requires
-configuring Private Service Access.
+
+* 'https://www.googleapis.com/compute/v1/projects/[project_id]/
+  regions/global/default'
+* 'projects/[project_id]/regions/global/default'
+  Runtimes are managed resources inside Google Infrastructure.
+  Runtimes support the following network configurations:
+* Google Managed Network (Network & subnet are empty)
+* Consumer Project VPC (network & subnet are required). Requires
+  configuring Private Service Access.
+* Shared VPC (network & subnet are required). Requires
+  configuring Private Service Access.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
 
@@ -5062,9 +5065,10 @@ The Compute Engine subnetwork to be used for machine communications.
 
 Cannot be specified with network. A full URL or
 partial URI are valid. Examples:
-'https://www.googleapis.com/compute/v1/projects/[project_id]/
-regions/us-east1/subnetworks/sub0'
-'projects/[project_id]/regions/us-east1/subnetworks/sub0'
+
+* 'https://www.googleapis.com/compute/v1/projects/[project_id]/
+  regions/us-east1/subnetworks/sub0'
+* 'projects/[project_id]/regions/us-east1/subnetworks/sub0'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
 

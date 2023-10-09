@@ -32,10 +32,10 @@ export interface MonitoringNotificationChannelConfig extends cdktf.TerraformMeta
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * If true, the notification channel will be deleted regardless
-of its use in alert policies (the policies will be updated
-to remove the channel). If false, channels that are still
-referenced by an existing alerting policy will fail to be
-deleted in a delete operation.
+  * of its use in alert policies (the policies will be updated
+  * to remove the channel). If false, channels that are still
+  * referenced by an existing alerting policy will fail to be
+  * deleted in a delete operation.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_notification_channel#force_delete MonitoringNotificationChannel#force_delete}
   */
@@ -49,12 +49,12 @@ deleted in a delete operation.
   readonly id?: string;
   /**
   * Configuration fields that define the channel and its behavior. The
-permissible and required labels are specified in the
-NotificationChannelDescriptor corresponding to the type field.
-
-Labels with sensitive data are obfuscated by the API and therefore Terraform cannot
-determine if there are upstream changes to these fields. They can also be configured via
-the sensitive_labels block, but cannot be configured in both places.
+  * permissible and required labels are specified in the
+  * NotificationChannelDescriptor corresponding to the type field.
+  * 
+  * Labels with sensitive data are obfuscated by the API and therefore Terraform cannot
+  * determine if there are upstream changes to these fields. They can also be configured via
+  * the sensitive_labels block, but cannot be configured in both places.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_notification_channel#labels MonitoringNotificationChannel#labels}
   */

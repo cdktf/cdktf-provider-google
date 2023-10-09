@@ -51,8 +51,8 @@ export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   readonly multiClusterRoutingClusterIds?: string[];
   /**
   * If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
-in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
-consistency to improve availability.
+  * in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+  * consistency to improve availability.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigtable_app_profile#multi_cluster_routing_use_any BigtableAppProfile#multi_cluster_routing_use_any}
   */
@@ -77,7 +77,7 @@ consistency to improve availability.
 export interface BigtableAppProfileSingleClusterRouting {
   /**
   * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
-It is unsafe to send these requests to the same table/row/column in multiple clusters.
+  * It is unsafe to send these requests to the same table/row/column in multiple clusters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigtable_app_profile#allow_transactional_writes BigtableAppProfile#allow_transactional_writes}
   */

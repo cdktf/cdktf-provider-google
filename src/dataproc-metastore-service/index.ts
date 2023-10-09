@@ -27,24 +27,24 @@ export interface DataprocMetastoreServiceConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * User-defined labels for the metastore service.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#labels DataprocMetastoreService#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location where the metastore service should reside.
-The default value is 'global'.
+  * The default value is 'global'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#location DataprocMetastoreService#location}
   */
   readonly location?: string;
   /**
   * The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
-
-"projects/{projectNumber}/global/networks/{network_id}".
+  * 
+  * "projects/{projectNumber}/global/networks/{network_id}".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#network DataprocMetastoreService#network}
   */
@@ -67,8 +67,8 @@ The default value is 'global'.
   readonly releaseChannel?: string;
   /**
   * The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
-3 and 63 characters.
+  * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+  * 3 and 63 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#service_id DataprocMetastoreService#service_id}
   */
@@ -125,7 +125,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 export interface DataprocMetastoreServiceEncryptionConfig {
   /**
   * The fully qualified customer provided Cloud KMS key name to use for customer data encryption.
-Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)'
+  * Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#kms_key DataprocMetastoreService#kms_key}
   */
@@ -190,8 +190,8 @@ export class DataprocMetastoreServiceEncryptionConfigOutputReference extends cdk
 export interface DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
   /**
   * The relative resource name of a Secret Manager secret version, in the following form:
-
-"projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
+  * 
+  * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#cloud_secret DataprocMetastoreService#cloud_secret}
   */
@@ -372,7 +372,7 @@ export class DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigOutputRefe
 export interface DataprocMetastoreServiceHiveMetastoreConfig {
   /**
   * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
-The mappings override system defaults (some keys cannot be overridden)
+  * The mappings override system defaults (some keys cannot be overridden)
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#config_overrides DataprocMetastoreService#config_overrides}
   */
@@ -585,9 +585,9 @@ export class DataprocMetastoreServiceMaintenanceWindowOutputReference extends cd
 export interface DataprocMetastoreServiceNetworkConfigConsumers {
   /**
   * The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service's endpoint.
-It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network.
-There must be at least one IP address available in the subnet's primary range. The subnet is specified in the following form:
-'projects/{projectNumber}/regions/{region_id}/subnetworks/{subnetwork_id}
+  * It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network.
+  * There must be at least one IP address available in the subnet's primary range. The subnet is specified in the following form:
+  * 'projects/{projectNumber}/regions/{region_id}/subnetworks/{subnetwork_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_metastore_service#subnetwork DataprocMetastoreService#subnetwork}
   */

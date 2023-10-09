@@ -33,7 +33,7 @@ export interface NetworkSecurityUrlListsConfig extends cdktf.TerraformMetaArgume
   readonly location: string;
   /**
   * Short name of the UrlList resource to be created.
-This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. 'urlList'.
+  * This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. 'urlList'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_security_url_lists#name NetworkSecurityUrlLists#name}
   */

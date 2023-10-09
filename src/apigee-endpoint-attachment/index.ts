@@ -33,7 +33,7 @@ export interface ApigeeEndpointAttachmentConfig extends cdktf.TerraformMetaArgum
   readonly location: string;
   /**
   * The Apigee Organization associated with the Apigee instance,
-in the format 'organizations/{{org_name}}'.
+  * in the format 'organizations/{{org_name}}'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_endpoint_attachment#org_id ApigeeEndpointAttachment#org_id}
   */

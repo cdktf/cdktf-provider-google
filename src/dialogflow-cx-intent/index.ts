@@ -33,42 +33,42 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation.
-Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
+  * Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
   */
   readonly isFallback?: boolean | cdktf.IResolvable;
   /**
   * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes.
-Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.
-An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.
+  * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_intent#labels DialogflowCxIntent#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The language of the following fields in intent:
-Intent.training_phrases.parts.text
-If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+  * Intent.training_phrases.parts.text
+  * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_intent#language_code DialogflowCxIntent#language_code}
   */
   readonly languageCode?: string;
   /**
   * The agent to create an intent for.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_intent#parent DialogflowCxIntent#parent}
   */
   readonly parent?: string;
   /**
   * The priority of this intent. Higher numbers represent higher priorities.
-If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
-If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+  * If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
+  * If the supplied value is negative, the intent is ignored in runtime detect intent requests.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_intent#priority DialogflowCxIntent#priority}
   */
@@ -95,7 +95,7 @@ If the supplied value is negative, the intent is ignored in runtime detect inten
 export interface DialogflowCxIntentParameters {
   /**
   * The entity type of the parameter.
-Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
+  * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_intent#entity_type DialogflowCxIntent#entity_type}
   */
@@ -117,7 +117,7 @@ Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for 
   readonly isList?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging.
-Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+  * Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_intent#redact DialogflowCxIntent#redact}
   */

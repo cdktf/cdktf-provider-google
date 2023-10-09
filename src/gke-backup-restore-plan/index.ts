@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface GkeBackupRestorePlanConfig extends cdktf.TerraformMetaArguments {
   /**
   * A reference to the BackupPlan from which Backups may be used
-as the source for Restores created via this RestorePlan.
+  * as the source for Restores created via this RestorePlan.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#backup_plan GkeBackupRestorePlan#backup_plan}
   */
@@ -40,12 +40,12 @@ as the source for Restores created via this RestorePlan.
   readonly id?: string;
   /**
   * Description: A set of custom labels supplied by the user.
-A list of key->value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * A list of key->value pairs.
+  * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#labels GkeBackupRestorePlan#labels}
   */
@@ -82,15 +82,15 @@ Please refer to the field 'effective_labels' for all of the labels present on th
 export interface GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExcludedGroupKinds {
   /**
   * API Group string of a Kubernetes resource, e.g.
-"apiextensions.k8s.io", "storage.k8s.io", etc.
-Use empty string for core group.
+  * "apiextensions.k8s.io", "storage.k8s.io", etc.
+  * Use empty string for core group.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#resource_group GkeBackupRestorePlan#resource_group}
   */
   readonly resourceGroup?: string;
   /**
   * Kind of a Kubernetes resource, e.g.
-"CustomResourceDefinition", "StorageClass", etc.
+  * "CustomResourceDefinition", "StorageClass", etc.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#resource_kind GkeBackupRestorePlan#resource_kind}
   */
@@ -213,15 +213,15 @@ export class GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExclude
 export interface GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSelectedGroupKinds {
   /**
   * API Group string of a Kubernetes resource, e.g.
-"apiextensions.k8s.io", "storage.k8s.io", etc.
-Use empty string for core group.
+  * "apiextensions.k8s.io", "storage.k8s.io", etc.
+  * Use empty string for core group.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#resource_group GkeBackupRestorePlan#resource_group}
   */
   readonly resourceGroup?: string;
   /**
   * Kind of a Kubernetes resource, e.g.
-"CustomResourceDefinition", "StorageClass", etc.
+  * "CustomResourceDefinition", "StorageClass", etc.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#resource_kind GkeBackupRestorePlan#resource_kind}
   */
@@ -344,14 +344,14 @@ export class GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSelecte
 export interface GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScope {
   /**
   * If True, all valid cluster-scoped resources will be restored.
-Mutually exclusive to any other field in 'clusterResourceRestoreScope'.
+  * Mutually exclusive to any other field in 'clusterResourceRestoreScope'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#all_group_kinds GkeBackupRestorePlan#all_group_kinds}
   */
   readonly allGroupKinds?: boolean | cdktf.IResolvable;
   /**
   * If True, no cluster-scoped resources will be restored.
-Mutually exclusive to any other field in 'clusterResourceRestoreScope'.
+  * Mutually exclusive to any other field in 'clusterResourceRestoreScope'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#no_group_kinds GkeBackupRestorePlan#no_group_kinds}
   */
@@ -814,7 +814,7 @@ export class GkeBackupRestorePlanRestoreConfigSelectedNamespacesOutputReference 
 export interface GkeBackupRestorePlanRestoreConfigTransformationRulesFieldActions {
   /**
   * A string containing a JSON Pointer value that references the
-location in the target document to move the value from.
+  * location in the target document to move the value from.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#from_path GkeBackupRestorePlan#from_path}
   */
@@ -827,14 +827,14 @@ location in the target document to move the value from.
   readonly op: string;
   /**
   * A string containing a JSON-Pointer value that references a
-location within the target document where the operation is performed.
+  * location within the target document where the operation is performed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#path GkeBackupRestorePlan#path}
   */
   readonly path?: string;
   /**
   * A string that specifies the desired value in string format
-to use for transformation.
+  * to use for transformation.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#value GkeBackupRestorePlan#value}
   */
@@ -1000,15 +1000,15 @@ export class GkeBackupRestorePlanRestoreConfigTransformationRulesFieldActionsLis
 export interface GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterGroupKinds {
   /**
   * API Group string of a Kubernetes resource, e.g.
-"apiextensions.k8s.io", "storage.k8s.io", etc.
-Use empty string for core group.
+  * "apiextensions.k8s.io", "storage.k8s.io", etc.
+  * Use empty string for core group.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#resource_group GkeBackupRestorePlan#resource_group}
   */
   readonly resourceGroup?: string;
   /**
   * Kind of a Kubernetes resource, e.g.
-"CustomResourceDefinition", "StorageClass", etc.
+  * "CustomResourceDefinition", "StorageClass", etc.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#resource_kind GkeBackupRestorePlan#resource_kind}
   */
@@ -1131,21 +1131,21 @@ export class GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterG
 export interface GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilter {
   /**
   * This is a JSONPath expression that matches specific fields of
-candidate resources and it operates as a filtering parameter
-(resources that are not matched with this expression will not
-be candidates for transformation).
+  * candidate resources and it operates as a filtering parameter
+  * (resources that are not matched with this expression will not
+  * be candidates for transformation).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#json_path GkeBackupRestorePlan#json_path}
   */
   readonly jsonPath?: string;
   /**
   * (Filtering parameter) Any resource subject to transformation must
-be contained within one of the listed Kubernetes Namespace in the
-Backup. If this field is not provided, no namespace filtering will
-be performed (all resources in all Namespaces, including all
-cluster-scoped resources, will be candidates for transformation).
-To mix cluster-scoped and namespaced resources in the same rule,
-use an empty string ("") as one of the target namespaces.
+  * be contained within one of the listed Kubernetes Namespace in the
+  * Backup. If this field is not provided, no namespace filtering will
+  * be performed (all resources in all Namespaces, including all
+  * cluster-scoped resources, will be candidates for transformation).
+  * To mix cluster-scoped and namespaced resources in the same rule,
+  * use an empty string ("") as one of the target namespaces.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#namespaces GkeBackupRestorePlan#namespaces}
   */
@@ -1265,7 +1265,7 @@ export class GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterO
 export interface GkeBackupRestorePlanRestoreConfigTransformationRules {
   /**
   * The description is a user specified string description
-of the transformation rule.
+  * of the transformation rule.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#description GkeBackupRestorePlan#description}
   */
@@ -1420,47 +1420,47 @@ export class GkeBackupRestorePlanRestoreConfigTransformationRulesList extends cd
 export interface GkeBackupRestorePlanRestoreConfig {
   /**
   * If True, restore all namespaced resources in the Backup.
-Setting this field to False will result in an error.
+  * Setting this field to False will result in an error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#all_namespaces GkeBackupRestorePlan#all_namespaces}
   */
   readonly allNamespaces?: boolean | cdktf.IResolvable;
   /**
   * Defines the behavior for handling the situation where cluster-scoped resources
-being restored already exist in the target cluster.
-This MUST be set to a value other than 'CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED'
-if 'clusterResourceRestoreScope' is anyting other than 'noGroupKinds'.
-See https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/RestoreConfig#clusterresourceconflictpolicy
-for more information on each policy option. Possible values: ["USE_EXISTING_VERSION", "USE_BACKUP_VERSION"]
+  * being restored already exist in the target cluster.
+  * This MUST be set to a value other than 'CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED'
+  * if 'clusterResourceRestoreScope' is anyting other than 'noGroupKinds'.
+  * See https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/RestoreConfig#clusterresourceconflictpolicy
+  * for more information on each policy option. Possible values: ["USE_EXISTING_VERSION", "USE_BACKUP_VERSION"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#cluster_resource_conflict_policy GkeBackupRestorePlan#cluster_resource_conflict_policy}
   */
   readonly clusterResourceConflictPolicy?: string;
   /**
   * Defines the behavior for handling the situation where sets of namespaced resources
-being restored already exist in the target cluster.
-This MUST be set to a value other than 'NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED'
-if the 'namespacedResourceRestoreScope' is anything other than 'noNamespaces'.
-See https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/RestoreConfig#namespacedresourcerestoremode
-for more information on each mode. Possible values: ["DELETE_AND_RESTORE", "FAIL_ON_CONFLICT"]
+  * being restored already exist in the target cluster.
+  * This MUST be set to a value other than 'NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED'
+  * if the 'namespacedResourceRestoreScope' is anything other than 'noNamespaces'.
+  * See https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/RestoreConfig#namespacedresourcerestoremode
+  * for more information on each mode. Possible values: ["DELETE_AND_RESTORE", "FAIL_ON_CONFLICT"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#namespaced_resource_restore_mode GkeBackupRestorePlan#namespaced_resource_restore_mode}
   */
   readonly namespacedResourceRestoreMode?: string;
   /**
   * Do not restore any namespaced resources if set to "True".
-Specifying this field to "False" is not allowed.
+  * Specifying this field to "False" is not allowed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#no_namespaces GkeBackupRestorePlan#no_namespaces}
   */
   readonly noNamespaces?: boolean | cdktf.IResolvable;
   /**
   * Specifies the mechanism to be used to restore volume data.
-This should be set to a value other than 'NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED'
-if the 'namespacedResourceRestoreScope' is anything other than 'noNamespaces'.
-If not specified, it will be treated as 'NO_VOLUME_DATA_RESTORATION'.
-See https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/RestoreConfig#VolumeDataRestorePolicy
-for more information on each policy option. Possible values: ["RESTORE_VOLUME_DATA_FROM_BACKUP", "REUSE_VOLUME_HANDLE_FROM_BACKUP", "NO_VOLUME_DATA_RESTORATION"]
+  * This should be set to a value other than 'NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED'
+  * if the 'namespacedResourceRestoreScope' is anything other than 'noNamespaces'.
+  * If not specified, it will be treated as 'NO_VOLUME_DATA_RESTORATION'.
+  * See https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/RestoreConfig#VolumeDataRestorePolicy
+  * for more information on each policy option. Possible values: ["RESTORE_VOLUME_DATA_FROM_BACKUP", "REUSE_VOLUME_HANDLE_FROM_BACKUP", "NO_VOLUME_DATA_RESTORATION"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_backup_restore_plan#volume_data_restore_policy GkeBackupRestorePlan#volume_data_restore_policy}
   */

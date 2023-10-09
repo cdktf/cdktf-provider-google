@@ -14,16 +14,16 @@ import * as cdktf from 'cdktf';
 export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * How to combine the results of multiple conditions to
-determine if an incident should be opened. Possible values: ["AND", "OR", "AND_WITH_MATCHING_RESOURCE"]
+  * determine if an incident should be opened. Possible values: ["AND", "OR", "AND_WITH_MATCHING_RESOURCE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#combiner MonitoringAlertPolicy#combiner}
   */
   readonly combiner: string;
   /**
   * A short name or phrase used to identify the policy in
-dashboards, notifications, and incidents. To avoid confusion, don't use
-the same display name for multiple policies in the same project. The
-name is limited to 512 Unicode characters.
+  * dashboards, notifications, and incidents. To avoid confusion, don't use
+  * the same display name for multiple policies in the same project. The
+  * name is limited to 512 Unicode characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
   */
@@ -43,12 +43,12 @@ name is limited to 512 Unicode characters.
   readonly id?: string;
   /**
   * Identifies the notification channels to which notifications should be
-sent when incidents are opened or closed or when new violations occur
-on an already opened incident. Each element of this array corresponds
-to the name field in each of the NotificationChannel objects that are
-returned from the notificationChannels.list method. The syntax of the
-entries in this field is
-'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+  * sent when incidents are opened or closed or when new violations occur
+  * on an already opened incident. Each element of this array corresponds
+  * to the name field in each of the NotificationChannel objects that are
+  * returned from the notificationChannels.list method. The syntax of the
+  * entries in this field is
+  * 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#notification_channels MonitoringAlertPolicy#notification_channels}
   */
@@ -59,10 +59,10 @@ entries in this field is
   readonly project?: string;
   /**
   * This field is intended to be used for organizing and identifying the AlertPolicy
-objects.The field can contain up to 64 entries. Each key and value is limited
-to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys
-must begin with a letter.
+  * objects.The field can contain up to 64 entries. Each key and value is limited
+  * to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+  * can contain only lowercase letters, numerals, underscores, and dashes. Keys
+  * must begin with a letter.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#user_labels MonitoringAlertPolicy#user_labels}
   */
@@ -164,9 +164,9 @@ export class MonitoringAlertPolicyCreationRecordList extends cdktf.ComplexList {
 export interface MonitoringAlertPolicyAlertStrategyNotificationChannelStrategy {
   /**
   * The notification channels that these settings apply to. Each of these
-correspond to the name field in one of the NotificationChannel objects
-referenced in the notification_channels field of this AlertPolicy. The format is
-'projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]'
+  * correspond to the name field in one of the NotificationChannel objects
+  * referenced in the notification_channels field of this AlertPolicy. The format is
+  * 'projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#notification_channel_names MonitoringAlertPolicy#notification_channel_names}
   */
@@ -487,93 +487,93 @@ export class MonitoringAlertPolicyAlertStrategyOutputReference extends cdktf.Com
 export interface MonitoringAlertPolicyConditionsConditionAbsentAggregations {
   /**
   * The alignment period for per-time
-series alignment. If present,
-alignmentPeriod must be at least
-60 seconds. After per-time series
-alignment, each time series will
-contain data points only on the
-period boundaries. If
-perSeriesAligner is not specified
-or equals ALIGN_NONE, then this
-field is ignored. If
-perSeriesAligner is specified and
-does not equal ALIGN_NONE, then
-this field must be defined;
-otherwise an error is returned.
+  * series alignment. If present,
+  * alignmentPeriod must be at least
+  * 60 seconds. After per-time series
+  * alignment, each time series will
+  * contain data points only on the
+  * period boundaries. If
+  * perSeriesAligner is not specified
+  * or equals ALIGN_NONE, then this
+  * field is ignored. If
+  * perSeriesAligner is specified and
+  * does not equal ALIGN_NONE, then
+  * this field must be defined;
+  * otherwise an error is returned.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
   * The approach to be used to combine
-time series. Not all reducer
-functions may be applied to all
-time series, depending on the
-metric type and the value type of
-the original time series.
-Reduction may change the metric
-type of value type of the time
-series.Time series data must be
-aligned in order to perform cross-
-time series reduction. If
-crossSeriesReducer is specified,
-then perSeriesAligner must be
-specified and not equal ALIGN_NONE
-and alignmentPeriod must be
-specified; otherwise, an error is
-returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
+  * time series. Not all reducer
+  * functions may be applied to all
+  * time series, depending on the
+  * metric type and the value type of
+  * the original time series.
+  * Reduction may change the metric
+  * type of value type of the time
+  * series.Time series data must be
+  * aligned in order to perform cross-
+  * time series reduction. If
+  * crossSeriesReducer is specified,
+  * then perSeriesAligner must be
+  * specified and not equal ALIGN_NONE
+  * and alignmentPeriod must be
+  * specified; otherwise, an error is
+  * returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
   * The set of fields to preserve when
-crossSeriesReducer is specified.
-The groupByFields determine how
-the time series are partitioned
-into subsets prior to applying the
-aggregation function. Each subset
-contains time series that have the
-same value for each of the
-grouping fields. Each individual
-time series is a member of exactly
-one subset. The crossSeriesReducer
-is applied to each subset of time
-series. It is not possible to
-reduce across different resource
-types, so this field implicitly
-contains resource.type. Fields not
-specified in groupByFields are
-aggregated away. If groupByFields
-is not specified and all the time
-series have the same resource
-type, then the time series are
-aggregated into a single output
-time series. If crossSeriesReducer
-is not defined, this field is
-ignored.
+  * crossSeriesReducer is specified.
+  * The groupByFields determine how
+  * the time series are partitioned
+  * into subsets prior to applying the
+  * aggregation function. Each subset
+  * contains time series that have the
+  * same value for each of the
+  * grouping fields. Each individual
+  * time series is a member of exactly
+  * one subset. The crossSeriesReducer
+  * is applied to each subset of time
+  * series. It is not possible to
+  * reduce across different resource
+  * types, so this field implicitly
+  * contains resource.type. Fields not
+  * specified in groupByFields are
+  * aggregated away. If groupByFields
+  * is not specified and all the time
+  * series have the same resource
+  * type, then the time series are
+  * aggregated into a single output
+  * time series. If crossSeriesReducer
+  * is not defined, this field is
+  * ignored.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
   * The approach to be used to align
-individual time series. Not all
-alignment functions may be applied
-to all time series, depending on
-the metric type and value type of
-the original time series.
-Alignment may change the metric
-type or the value type of the time
-series.Time series data must be
-aligned in order to perform cross-
-time series reduction. If
-crossSeriesReducer is specified,
-then perSeriesAligner must be
-specified and not equal ALIGN_NONE
-and alignmentPeriod must be
-specified; otherwise, an error is
-returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
+  * individual time series. Not all
+  * alignment functions may be applied
+  * to all time series, depending on
+  * the metric type and value type of
+  * the original time series.
+  * Alignment may change the metric
+  * type or the value type of the time
+  * series.Time series data must be
+  * aligned in order to perform cross-
+  * time series reduction. If
+  * crossSeriesReducer is specified,
+  * then perSeriesAligner must be
+  * specified and not equal ALIGN_NONE
+  * and alignmentPeriod must be
+  * specified; otherwise, an error is
+  * returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
@@ -742,16 +742,16 @@ export class MonitoringAlertPolicyConditionsConditionAbsentAggregationsList exte
 export interface MonitoringAlertPolicyConditionsConditionAbsentTrigger {
   /**
   * The absolute number of time series
-that must fail the predicate for the
-condition to be triggered.
+  * that must fail the predicate for the
+  * condition to be triggered.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
   * The percentage of time series that
-must fail the predicate for the
-condition to be triggered.
+  * must fail the predicate for the
+  * condition to be triggered.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
@@ -842,27 +842,27 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
 export interface MonitoringAlertPolicyConditionsConditionAbsent {
   /**
   * The amount of time that a time series must
-fail to report new data to be considered
-failing. Currently, only values that are a
-multiple of a minute--e.g. 60s, 120s, or 300s
---are supported.
+  * fail to report new data to be considered
+  * failing. Currently, only values that are a
+  * multiple of a minute--e.g. 60s, 120s, or 300s
+  * --are supported.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
   * A filter that identifies which time series
-should be compared with the threshold.The
-filter is similar to the one that is
-specified in the
-MetricService.ListTimeSeries request (that
-call is useful to verify the time series
-that will be retrieved / processed) and must
-specify the metric type and optionally may
-contain restrictions on resource type,
-resource labels, and metric labels. This
-field may not exceed 2048 Unicode characters
-in length.
+  * should be compared with the threshold.The
+  * filter is similar to the one that is
+  * specified in the
+  * MetricService.ListTimeSeries request (that
+  * call is useful to verify the time series
+  * that will be retrieved / processed) and must
+  * specify the metric type and optionally may
+  * contain restrictions on resource type,
+  * resource labels, and metric labels. This
+  * field may not exceed 2048 Unicode characters
+  * in length.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
@@ -1014,12 +1014,12 @@ export interface MonitoringAlertPolicyConditionsConditionMatchedLog {
   readonly filter: string;
   /**
   * A map from a label key to an extractor expression, which is used to
-extract the value for this label key. Each entry in this map is
-a specification for how data should be extracted from log entries that
-match filter. Each combination of extracted values is treated as
-a separate rule for the purposes of triggering notifications.
-Label keys and corresponding values can be used in notifications
-generated by this condition.
+  * extract the value for this label key. Each entry in this map is
+  * a specification for how data should be extracted from log entries that
+  * match filter. Each combination of extracted values is treated as
+  * a separate rule for the purposes of triggering notifications.
+  * Label keys and corresponding values can be used in notifications
+  * generated by this condition.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#label_extractors MonitoringAlertPolicy#label_extractors}
   */
@@ -1107,16 +1107,16 @@ export class MonitoringAlertPolicyConditionsConditionMatchedLogOutputReference e
 export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger {
   /**
   * The absolute number of time series
-that must fail the predicate for the
-condition to be triggered.
+  * that must fail the predicate for the
+  * condition to be triggered.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
   * The percentage of time series that
-must fail the predicate for the
-condition to be triggered.
+  * must fail the predicate for the
+  * condition to be triggered.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
@@ -1207,28 +1207,28 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
 export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage {
   /**
   * The amount of time that a time series must
-violate the threshold to be considered
-failing. Currently, only values that are a
-multiple of a minute--e.g., 0, 60, 120, or
-300 seconds--are supported. If an invalid
-value is given, an error will be returned.
-When choosing a duration, it is useful to
-keep in mind the frequency of the underlying
-time series data (which may also be affected
-by any alignments specified in the
-aggregations field); a good duration is long
-enough so that a single outlier does not
-generate spurious alerts, but short enough
-that unhealthy states are detected and
-alerted on quickly.
+  * violate the threshold to be considered
+  * failing. Currently, only values that are a
+  * multiple of a minute--e.g., 0, 60, 120, or
+  * 300 seconds--are supported. If an invalid
+  * value is given, an error will be returned.
+  * When choosing a duration, it is useful to
+  * keep in mind the frequency of the underlying
+  * time series data (which may also be affected
+  * by any alignments specified in the
+  * aggregations field); a good duration is long
+  * enough so that a single outlier does not
+  * generate spurious alerts, but short enough
+  * that unhealthy states are detected and
+  * alerted on quickly.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
   * A condition control that determines how
-metric-threshold conditions are evaluated when
-data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
+  * metric-threshold conditions are evaluated when
+  * data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
   */
@@ -1371,71 +1371,71 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
 export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage {
   /**
   * The alerting rule name of this alert in the corresponding Prometheus
-configuration file.
-
-Some external tools may require this field to be populated correctly
-in order to refer to the original Prometheus configuration file.
-The rule group name and the alert name are necessary to update the
-relevant AlertPolicies in case the definition of the rule group changes
-in the future.
-
-This field is optional. If this field is not empty, then it must be a
-valid Prometheus label name.
+  * configuration file.
+  * 
+  * Some external tools may require this field to be populated correctly
+  * in order to refer to the original Prometheus configuration file.
+  * The rule group name and the alert name are necessary to update the
+  * relevant AlertPolicies in case the definition of the rule group changes
+  * in the future.
+  * 
+  * This field is optional. If this field is not empty, then it must be a
+  * valid Prometheus label name.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#alert_rule MonitoringAlertPolicy#alert_rule}
   */
   readonly alertRule?: string;
   /**
   * Alerts are considered firing once their PromQL expression evaluated
-to be "true" for this long. Alerts whose PromQL expression was not
-evaluated to be "true" for long enough are considered pending. The
-default value is zero. Must be zero or positive.
+  * to be "true" for this long. Alerts whose PromQL expression was not
+  * evaluated to be "true" for long enough are considered pending. The
+  * default value is zero. Must be zero or positive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration?: string;
   /**
   * How often this rule should be evaluated. Must be a positive multiple
-of 30 seconds or missing. The default value is 30 seconds. If this
-PrometheusQueryLanguageCondition was generated from a Prometheus
-alerting rule, then this value should be taken from the enclosing
-rule group.
+  * of 30 seconds or missing. The default value is 30 seconds. If this
+  * PrometheusQueryLanguageCondition was generated from a Prometheus
+  * alerting rule, then this value should be taken from the enclosing
+  * rule group.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#evaluation_interval MonitoringAlertPolicy#evaluation_interval}
   */
   readonly evaluationInterval?: string;
   /**
   * Labels to add to or overwrite in the PromQL query result. Label names
-must be valid.
-
-Label values can be templatized by using variables. The only available
-variable names are the names of the labels in the PromQL result, including
-"__name__" and "value". "labels" may be empty. This field is intended to be
-used for organizing and identifying the AlertPolicy
+  * must be valid.
+  * 
+  * Label values can be templatized by using variables. The only available
+  * variable names are the names of the labels in the PromQL result, including
+  * "__name__" and "value". "labels" may be empty. This field is intended to be
+  * used for organizing and identifying the AlertPolicy
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#labels MonitoringAlertPolicy#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The PromQL expression to evaluate. Every evaluation cycle this
-expression is evaluated at the current time, and all resultant time
-series become pending/firing alerts. This field must not be empty.
+  * expression is evaluated at the current time, and all resultant time
+  * series become pending/firing alerts. This field must not be empty.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
   */
   readonly query: string;
   /**
   * The rule group name of this alert in the corresponding Prometheus
-configuration file.
-
-Some external tools may require this field to be populated correctly
-in order to refer to the original Prometheus configuration file.
-The rule group name and the alert name are necessary to update the
-relevant AlertPolicies in case the definition of the rule group changes
-in the future.
-
-This field is optional. If this field is not empty, then it must be a
-valid Prometheus label name.
+  * configuration file.
+  * 
+  * Some external tools may require this field to be populated correctly
+  * in order to refer to the original Prometheus configuration file.
+  * The rule group name and the alert name are necessary to update the
+  * relevant AlertPolicies in case the definition of the rule group changes
+  * in the future.
+  * 
+  * This field is optional. If this field is not empty, then it must be a
+  * valid Prometheus label name.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#rule_group MonitoringAlertPolicy#rule_group}
   */
@@ -1615,93 +1615,93 @@ export class MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguageOutp
 export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   /**
   * The alignment period for per-time
-series alignment. If present,
-alignmentPeriod must be at least
-60 seconds. After per-time series
-alignment, each time series will
-contain data points only on the
-period boundaries. If
-perSeriesAligner is not specified
-or equals ALIGN_NONE, then this
-field is ignored. If
-perSeriesAligner is specified and
-does not equal ALIGN_NONE, then
-this field must be defined;
-otherwise an error is returned.
+  * series alignment. If present,
+  * alignmentPeriod must be at least
+  * 60 seconds. After per-time series
+  * alignment, each time series will
+  * contain data points only on the
+  * period boundaries. If
+  * perSeriesAligner is not specified
+  * or equals ALIGN_NONE, then this
+  * field is ignored. If
+  * perSeriesAligner is specified and
+  * does not equal ALIGN_NONE, then
+  * this field must be defined;
+  * otherwise an error is returned.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
   * The approach to be used to combine
-time series. Not all reducer
-functions may be applied to all
-time series, depending on the
-metric type and the value type of
-the original time series.
-Reduction may change the metric
-type of value type of the time
-series.Time series data must be
-aligned in order to perform cross-
-time series reduction. If
-crossSeriesReducer is specified,
-then perSeriesAligner must be
-specified and not equal ALIGN_NONE
-and alignmentPeriod must be
-specified; otherwise, an error is
-returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
+  * time series. Not all reducer
+  * functions may be applied to all
+  * time series, depending on the
+  * metric type and the value type of
+  * the original time series.
+  * Reduction may change the metric
+  * type of value type of the time
+  * series.Time series data must be
+  * aligned in order to perform cross-
+  * time series reduction. If
+  * crossSeriesReducer is specified,
+  * then perSeriesAligner must be
+  * specified and not equal ALIGN_NONE
+  * and alignmentPeriod must be
+  * specified; otherwise, an error is
+  * returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
   * The set of fields to preserve when
-crossSeriesReducer is specified.
-The groupByFields determine how
-the time series are partitioned
-into subsets prior to applying the
-aggregation function. Each subset
-contains time series that have the
-same value for each of the
-grouping fields. Each individual
-time series is a member of exactly
-one subset. The crossSeriesReducer
-is applied to each subset of time
-series. It is not possible to
-reduce across different resource
-types, so this field implicitly
-contains resource.type. Fields not
-specified in groupByFields are
-aggregated away. If groupByFields
-is not specified and all the time
-series have the same resource
-type, then the time series are
-aggregated into a single output
-time series. If crossSeriesReducer
-is not defined, this field is
-ignored.
+  * crossSeriesReducer is specified.
+  * The groupByFields determine how
+  * the time series are partitioned
+  * into subsets prior to applying the
+  * aggregation function. Each subset
+  * contains time series that have the
+  * same value for each of the
+  * grouping fields. Each individual
+  * time series is a member of exactly
+  * one subset. The crossSeriesReducer
+  * is applied to each subset of time
+  * series. It is not possible to
+  * reduce across different resource
+  * types, so this field implicitly
+  * contains resource.type. Fields not
+  * specified in groupByFields are
+  * aggregated away. If groupByFields
+  * is not specified and all the time
+  * series have the same resource
+  * type, then the time series are
+  * aggregated into a single output
+  * time series. If crossSeriesReducer
+  * is not defined, this field is
+  * ignored.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
   * The approach to be used to align
-individual time series. Not all
-alignment functions may be applied
-to all time series, depending on
-the metric type and value type of
-the original time series.
-Alignment may change the metric
-type or the value type of the time
-series.Time series data must be
-aligned in order to perform cross-
-time series reduction. If
-crossSeriesReducer is specified,
-then perSeriesAligner must be
-specified and not equal ALIGN_NONE
-and alignmentPeriod must be
-specified; otherwise, an error is
-returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
+  * individual time series. Not all
+  * alignment functions may be applied
+  * to all time series, depending on
+  * the metric type and value type of
+  * the original time series.
+  * Alignment may change the metric
+  * type or the value type of the time
+  * series.Time series data must be
+  * aligned in order to perform cross-
+  * time series reduction. If
+  * crossSeriesReducer is specified,
+  * then perSeriesAligner must be
+  * specified and not equal ALIGN_NONE
+  * and alignmentPeriod must be
+  * specified; otherwise, an error is
+  * returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
@@ -1870,93 +1870,93 @@ export class MonitoringAlertPolicyConditionsConditionThresholdAggregationsList e
 export interface MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations {
   /**
   * The alignment period for per-time
-series alignment. If present,
-alignmentPeriod must be at least
-60 seconds. After per-time series
-alignment, each time series will
-contain data points only on the
-period boundaries. If
-perSeriesAligner is not specified
-or equals ALIGN_NONE, then this
-field is ignored. If
-perSeriesAligner is specified and
-does not equal ALIGN_NONE, then
-this field must be defined;
-otherwise an error is returned.
+  * series alignment. If present,
+  * alignmentPeriod must be at least
+  * 60 seconds. After per-time series
+  * alignment, each time series will
+  * contain data points only on the
+  * period boundaries. If
+  * perSeriesAligner is not specified
+  * or equals ALIGN_NONE, then this
+  * field is ignored. If
+  * perSeriesAligner is specified and
+  * does not equal ALIGN_NONE, then
+  * this field must be defined;
+  * otherwise an error is returned.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
   * The approach to be used to combine
-time series. Not all reducer
-functions may be applied to all
-time series, depending on the
-metric type and the value type of
-the original time series.
-Reduction may change the metric
-type of value type of the time
-series.Time series data must be
-aligned in order to perform cross-
-time series reduction. If
-crossSeriesReducer is specified,
-then perSeriesAligner must be
-specified and not equal ALIGN_NONE
-and alignmentPeriod must be
-specified; otherwise, an error is
-returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
+  * time series. Not all reducer
+  * functions may be applied to all
+  * time series, depending on the
+  * metric type and the value type of
+  * the original time series.
+  * Reduction may change the metric
+  * type of value type of the time
+  * series.Time series data must be
+  * aligned in order to perform cross-
+  * time series reduction. If
+  * crossSeriesReducer is specified,
+  * then perSeriesAligner must be
+  * specified and not equal ALIGN_NONE
+  * and alignmentPeriod must be
+  * specified; otherwise, an error is
+  * returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
   * The set of fields to preserve when
-crossSeriesReducer is specified.
-The groupByFields determine how
-the time series are partitioned
-into subsets prior to applying the
-aggregation function. Each subset
-contains time series that have the
-same value for each of the
-grouping fields. Each individual
-time series is a member of exactly
-one subset. The crossSeriesReducer
-is applied to each subset of time
-series. It is not possible to
-reduce across different resource
-types, so this field implicitly
-contains resource.type. Fields not
-specified in groupByFields are
-aggregated away. If groupByFields
-is not specified and all the time
-series have the same resource
-type, then the time series are
-aggregated into a single output
-time series. If crossSeriesReducer
-is not defined, this field is
-ignored.
+  * crossSeriesReducer is specified.
+  * The groupByFields determine how
+  * the time series are partitioned
+  * into subsets prior to applying the
+  * aggregation function. Each subset
+  * contains time series that have the
+  * same value for each of the
+  * grouping fields. Each individual
+  * time series is a member of exactly
+  * one subset. The crossSeriesReducer
+  * is applied to each subset of time
+  * series. It is not possible to
+  * reduce across different resource
+  * types, so this field implicitly
+  * contains resource.type. Fields not
+  * specified in groupByFields are
+  * aggregated away. If groupByFields
+  * is not specified and all the time
+  * series have the same resource
+  * type, then the time series are
+  * aggregated into a single output
+  * time series. If crossSeriesReducer
+  * is not defined, this field is
+  * ignored.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
   * The approach to be used to align
-individual time series. Not all
-alignment functions may be applied
-to all time series, depending on
-the metric type and value type of
-the original time series.
-Alignment may change the metric
-type or the value type of the time
-series.Time series data must be
-aligned in order to perform cross-
-time series reduction. If
-crossSeriesReducer is specified,
-then perSeriesAligner must be
-specified and not equal ALIGN_NONE
-and alignmentPeriod must be
-specified; otherwise, an error is
-returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
+  * individual time series. Not all
+  * alignment functions may be applied
+  * to all time series, depending on
+  * the metric type and value type of
+  * the original time series.
+  * Alignment may change the metric
+  * type or the value type of the time
+  * series.Time series data must be
+  * aligned in order to perform cross-
+  * time series reduction. If
+  * crossSeriesReducer is specified,
+  * then perSeriesAligner must be
+  * specified and not equal ALIGN_NONE
+  * and alignmentPeriod must be
+  * specified; otherwise, an error is
+  * returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
@@ -2125,11 +2125,11 @@ export class MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggrega
 export interface MonitoringAlertPolicyConditionsConditionThresholdForecastOptions {
   /**
   * The length of time into the future to forecast
-whether a timeseries will violate the threshold.
-If the predicted value is found to violate the
-threshold, and the violation is observed in all
-forecasts made for the Configured 'duration',
-then the timeseries is considered to be failing.
+  * whether a timeseries will violate the threshold.
+  * If the predicted value is found to violate the
+  * threshold, and the violation is observed in all
+  * forecasts made for the Configured 'duration',
+  * then the timeseries is considered to be failing.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#forecast_horizon MonitoringAlertPolicy#forecast_horizon}
   */
@@ -2194,16 +2194,16 @@ export class MonitoringAlertPolicyConditionsConditionThresholdForecastOptionsOut
 export interface MonitoringAlertPolicyConditionsConditionThresholdTrigger {
   /**
   * The absolute number of time series
-that must fail the predicate for the
-condition to be triggered.
+  * that must fail the predicate for the
+  * condition to be triggered.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
   * The percentage of time series that
-must fail the predicate for the
-condition to be triggered.
+  * must fail the predicate for the
+  * condition to be triggered.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
@@ -2294,85 +2294,85 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
 export interface MonitoringAlertPolicyConditionsConditionThreshold {
   /**
   * The comparison to apply between the time
-series (indicated by filter and aggregation)
-and the threshold (indicated by
-threshold_value). The comparison is applied
-on each time series, with the time series on
-the left-hand side and the threshold on the
-right-hand side. Only COMPARISON_LT and
-COMPARISON_GT are supported currently. Possible values: ["COMPARISON_GT", "COMPARISON_GE", "COMPARISON_LT", "COMPARISON_LE", "COMPARISON_EQ", "COMPARISON_NE"]
+  * series (indicated by filter and aggregation)
+  * and the threshold (indicated by
+  * threshold_value). The comparison is applied
+  * on each time series, with the time series on
+  * the left-hand side and the threshold on the
+  * right-hand side. Only COMPARISON_LT and
+  * COMPARISON_GT are supported currently. Possible values: ["COMPARISON_GT", "COMPARISON_GE", "COMPARISON_LT", "COMPARISON_LE", "COMPARISON_EQ", "COMPARISON_NE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#comparison MonitoringAlertPolicy#comparison}
   */
   readonly comparison: string;
   /**
   * A filter that identifies a time series that
-should be used as the denominator of a ratio
-that will be compared with the threshold. If
-a denominator_filter is specified, the time
-series specified by the filter field will be
-used as the numerator.The filter is similar
-to the one that is specified in the
-MetricService.ListTimeSeries request (that
-call is useful to verify the time series
-that will be retrieved / processed) and must
-specify the metric type and optionally may
-contain restrictions on resource type,
-resource labels, and metric labels. This
-field may not exceed 2048 Unicode characters
-in length.
+  * should be used as the denominator of a ratio
+  * that will be compared with the threshold. If
+  * a denominator_filter is specified, the time
+  * series specified by the filter field will be
+  * used as the numerator.The filter is similar
+  * to the one that is specified in the
+  * MetricService.ListTimeSeries request (that
+  * call is useful to verify the time series
+  * that will be retrieved / processed) and must
+  * specify the metric type and optionally may
+  * contain restrictions on resource type,
+  * resource labels, and metric labels. This
+  * field may not exceed 2048 Unicode characters
+  * in length.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#denominator_filter MonitoringAlertPolicy#denominator_filter}
   */
   readonly denominatorFilter?: string;
   /**
   * The amount of time that a time series must
-violate the threshold to be considered
-failing. Currently, only values that are a
-multiple of a minute--e.g., 0, 60, 120, or
-300 seconds--are supported. If an invalid
-value is given, an error will be returned.
-When choosing a duration, it is useful to
-keep in mind the frequency of the underlying
-time series data (which may also be affected
-by any alignments specified in the
-aggregations field); a good duration is long
-enough so that a single outlier does not
-generate spurious alerts, but short enough
-that unhealthy states are detected and
-alerted on quickly.
+  * violate the threshold to be considered
+  * failing. Currently, only values that are a
+  * multiple of a minute--e.g., 0, 60, 120, or
+  * 300 seconds--are supported. If an invalid
+  * value is given, an error will be returned.
+  * When choosing a duration, it is useful to
+  * keep in mind the frequency of the underlying
+  * time series data (which may also be affected
+  * by any alignments specified in the
+  * aggregations field); a good duration is long
+  * enough so that a single outlier does not
+  * generate spurious alerts, but short enough
+  * that unhealthy states are detected and
+  * alerted on quickly.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
   * A condition control that determines how
-metric-threshold conditions are evaluated when
-data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
+  * metric-threshold conditions are evaluated when
+  * data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
   */
   readonly evaluationMissingData?: string;
   /**
   * A filter that identifies which time series
-should be compared with the threshold.The
-filter is similar to the one that is
-specified in the
-MetricService.ListTimeSeries request (that
-call is useful to verify the time series
-that will be retrieved / processed) and must
-specify the metric type and optionally may
-contain restrictions on resource type,
-resource labels, and metric labels. This
-field may not exceed 2048 Unicode characters
-in length.
+  * should be compared with the threshold.The
+  * filter is similar to the one that is
+  * specified in the
+  * MetricService.ListTimeSeries request (that
+  * call is useful to verify the time series
+  * that will be retrieved / processed) and must
+  * specify the metric type and optionally may
+  * contain restrictions on resource type,
+  * resource labels, and metric labels. This
+  * field may not exceed 2048 Unicode characters
+  * in length.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
   readonly filter?: string;
   /**
   * A value against which to compare the time
-series.
+  * series.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#threshold_value MonitoringAlertPolicy#threshold_value}
   */
@@ -2665,10 +2665,10 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
 export interface MonitoringAlertPolicyConditions {
   /**
   * A short name or phrase used to identify the
-condition in dashboards, notifications, and
-incidents. To avoid confusion, don't use the same
-display name for multiple conditions in the same
-policy.
+  * condition in dashboards, notifications, and
+  * incidents. To avoid confusion, don't use the same
+  * display name for multiple conditions in the same
+  * policy.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
   */
@@ -2915,16 +2915,16 @@ export class MonitoringAlertPolicyConditionsList extends cdktf.ComplexList {
 export interface MonitoringAlertPolicyDocumentation {
   /**
   * The text of the documentation, interpreted according to mimeType.
-The content may not exceed 8,192 Unicode characters and may not
-exceed more than 10,240 bytes when encoded in UTF-8 format,
-whichever is smaller.
+  * The content may not exceed 8,192 Unicode characters and may not
+  * exceed more than 10,240 bytes when encoded in UTF-8 format,
+  * whichever is smaller.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#content MonitoringAlertPolicy#content}
   */
   readonly content?: string;
   /**
   * The format of the content field. Presently, only the value
-"text/markdown" is supported.
+  * "text/markdown" is supported.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_alert_policy#mime_type MonitoringAlertPolicy#mime_type}
   */

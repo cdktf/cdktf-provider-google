@@ -1819,14 +1819,13 @@ public java.lang.String getPortSpecification();
 
 Specifies how port is selected for health checking, can be one of the following values:.
 
-'USE_FIXED_PORT': The port number in 'port' is used for health checking.
+* 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
 
-'USE_NAMED_PORT': The 'portName' is used for health checking.
-
-'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
+  * 'USE_NAMED_PORT': The 'portName' is used for health checking.
+  * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
+    network endpoint is used for health checking. For other backends, the
+    port or named port specified in the Backend Service is used for health
+    checking.
 
 If not specified, gRPC health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
@@ -1922,14 +1921,13 @@ public java.lang.String getPortSpecification();
 
 Specifies how port is selected for health checking, can be one of the following values:.
 
-'USE_FIXED_PORT': The port number in 'port' is used for health checking.
+* 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
 
-'USE_NAMED_PORT': The 'portName' is used for health checking.
-
-'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
+  * 'USE_NAMED_PORT': The 'portName' is used for health checking.
+  * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
+    network endpoint is used for health checking. For other backends, the
+    port or named port specified in the Backend Service is used for health
+    checking.
 
 If not specified, HTTP2 health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
@@ -2073,14 +2071,13 @@ public java.lang.String getPortSpecification();
 
 Specifies how port is selected for health checking, can be one of the following values:.
 
-'USE_FIXED_PORT': The port number in 'port' is used for health checking.
+* 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
 
-'USE_NAMED_PORT': The 'portName' is used for health checking.
-
-'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
+  * 'USE_NAMED_PORT': The 'portName' is used for health checking.
+  * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
+    network endpoint is used for health checking. For other backends, the
+    port or named port specified in the Backend Service is used for health
+    checking.
 
 If not specified, HTTP health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
@@ -2224,14 +2221,13 @@ public java.lang.String getPortSpecification();
 
 Specifies how port is selected for health checking, can be one of the following values:.
 
-'USE_FIXED_PORT': The port number in 'port' is used for health checking.
+* 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
 
-'USE_NAMED_PORT': The 'portName' is used for health checking.
-
-'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
+  * 'USE_NAMED_PORT': The 'portName' is used for health checking.
+  * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
+    network endpoint is used for health checking. For other backends, the
+    port or named port specified in the Backend Service is used for health
+    checking.
 
 If not specified, HTTPS health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
@@ -2394,14 +2390,13 @@ public java.lang.String getPortSpecification();
 
 Specifies how port is selected for health checking, can be one of the following values:.
 
-'USE_FIXED_PORT': The port number in 'port' is used for health checking.
+* 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
 
-'USE_NAMED_PORT': The 'portName' is used for health checking.
-
-'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
+  * 'USE_NAMED_PORT': The 'portName' is used for health checking.
+  * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
+    network endpoint is used for health checking. For other backends, the
+    port or named port specified in the Backend Service is used for health
+    checking.
 
 If not specified, SSL health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
@@ -2530,14 +2525,13 @@ public java.lang.String getPortSpecification();
 
 Specifies how port is selected for health checking, can be one of the following values:.
 
-'USE_FIXED_PORT': The port number in 'port' is used for health checking.
+* 'USE_FIXED_PORT': The port number in 'port' is used for health checking.
 
-'USE_NAMED_PORT': The 'portName' is used for health checking.
-
-'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
+  * 'USE_NAMED_PORT': The 'portName' is used for health checking.
+  * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each
+    network endpoint is used for health checking. For other backends, the
+    port or named port specified in the Backend Service is used for health
+    checking.
 
 If not specified, TCP health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]

@@ -986,8 +986,8 @@ list. This field must be empty if the profile is not CUSTOM.
 
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for which ciphers are available to use. **Note**: this argument
-must* be present when using the 'CUSTOM' profile. This argument
-must not* be present when using any other profile.
+*must* be present when using the 'CUSTOM' profile. This argument
+*must not* be present when using any other profile.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_ssl_policy#custom_features ComputeRegionSslPolicy#custom_features}
 

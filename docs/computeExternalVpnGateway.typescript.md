@@ -982,7 +982,7 @@ public readonly labels: {[ key: string ]: string};
 
 Labels for the external VPN gateway resource.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_external_vpn_gateway#labels ComputeExternalVpnGateway#labels}
@@ -1060,9 +1060,9 @@ The numeric ID for this interface.
 
 Allowed values are based on the redundancy type
 of this external VPN gateway
-'0 - SINGLE_IP_INTERNALLY_REDUNDANT'
-'0, 1 - TWO_IPS_REDUNDANCY'
-'0, 1, 2, 3 - FOUR_IPS_REDUNDANCY'
+* '0 - SINGLE_IP_INTERNALLY_REDUNDANT'
+* '0, 1 - TWO_IPS_REDUNDANCY'
+* '0, 1, 2, 3 - FOUR_IPS_REDUNDANCY'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_external_vpn_gateway#id ComputeExternalVpnGateway#id}
 

@@ -21,7 +21,7 @@ export interface DataGoogleCertificateManagerCertificateMapConfig extends cdktf.
   readonly id?: string;
   /**
   * A user-defined name of the Certificate Map. Certificate Map names must be unique
-globally and match the pattern 'projects/* /locations/* /certificateMaps/*'.
+  * globally and match the pattern 'projects/* /locations/* /certificateMaps/*'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/certificate_manager_certificate_map#name DataGoogleCertificateManagerCertificateMap#name}
    *

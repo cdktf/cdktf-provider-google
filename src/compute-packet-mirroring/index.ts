@@ -33,8 +33,8 @@ export interface ComputePacketMirroringConfig extends cdktf.TerraformMetaArgumen
   readonly name: string;
   /**
   * Since only one rule can be active at a time, priority is
-used to break ties in the case of two rules that apply to
-the same instances.
+  * used to break ties in the case of two rules that apply to
+  * the same instances.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_packet_mirroring#priority ComputePacketMirroring#priority}
   */
@@ -45,7 +45,7 @@ the same instances.
   readonly project?: string;
   /**
   * The Region in which the created address should reside.
-If it is not provided, the provider region is used.
+  * If it is not provided, the provider region is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_packet_mirroring#region ComputePacketMirroring#region}
   */
@@ -148,7 +148,7 @@ export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.Com
 export interface ComputePacketMirroringFilter {
   /**
   * IP CIDR ranges that apply as a filter on the source (ingress) or
-destination (egress) IP in the IP header. Only IPv4 is supported.
+  * destination (egress) IP in the IP header. Only IPv4 is supported.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_packet_mirroring#cidr_ranges ComputePacketMirroring#cidr_ranges}
   */

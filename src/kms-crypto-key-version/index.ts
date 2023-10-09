@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface KmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the cryptoKey associated with the CryptoKeyVersions.
-Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}''
+  * Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}''
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/kms_crypto_key_version#crypto_key KmsCryptoKeyVersion#crypto_key}
   */

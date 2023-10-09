@@ -940,10 +940,10 @@ public readonly parent: string;
 
 The parent of the info type in any of the following formats:.
 
-'projects/{{project}}'
-'projects/{{project}}/locations/{{location}}'
-'organizations/{{organization_id}}'
-'organizations/{{organization_id}}/locations/{{location}}'
+* 'projects/{{project}}'
+* 'projects/{{project}}/locations/{{location}}'
+* 'organizations/{{organization_id}}'
+* 'organizations/{{organization_id}}/locations/{{location}}'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_stored_info_type#parent DataLossPreventionStoredInfoType#parent}
 

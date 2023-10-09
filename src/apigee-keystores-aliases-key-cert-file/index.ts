@@ -89,7 +89,7 @@ export interface ApigeeKeystoresAliasesKeyCertFileCertsInfoCertInfo {
   readonly expiryDate?: string;
   /**
   * Flag that specifies whether the certificate is valid. 
-Flag is set to Yes if the certificate is valid, No if expired, or Not yet if not yet valid.
+  * Flag is set to Yes if the certificate is valid, No if expired, or Not yet if not yet valid.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_keystores_aliases_key_cert_file#is_valid ApigeeKeystoresAliasesKeyCertFile#is_valid}
   */

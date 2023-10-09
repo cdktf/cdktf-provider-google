@@ -27,15 +27,15 @@ export interface AccessContextManagerAccessLevelConfig extends cdktf.TerraformMe
   readonly id?: string;
   /**
   * Resource name for the Access Level. The short_name component must begin
-with a letter and only include alphanumeric and '_'.
-Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+  * with a letter and only include alphanumeric and '_'.
+  * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#name AccessContextManagerAccessLevel#name}
   */
   readonly name: string;
   /**
   * The AccessPolicy this AccessLevel lives in.
-Format: accessPolicies/{policy_id}
+  * Format: accessPolicies/{policy_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#parent AccessContextManagerAccessLevel#parent}
   */
@@ -68,8 +68,8 @@ Format: accessPolicies/{policy_id}
 export interface AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints {
   /**
   * The minimum allowed OS version. If not set, any version
-of this OS satisfies the constraint.
-Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+  * of this OS satisfies the constraint.
+  * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#minimum_version AccessContextManagerAccessLevel#minimum_version}
   */
@@ -224,14 +224,14 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstra
 export interface AccessContextManagerAccessLevelBasicConditionsDevicePolicy {
   /**
   * A list of allowed device management levels.
-An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"]
+  * An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#allowed_device_management_levels AccessContextManagerAccessLevel#allowed_device_management_levels}
   */
   readonly allowedDeviceManagementLevels?: string[];
   /**
   * A list of allowed encryptions statuses.
-An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "ENCRYPTION_UNSUPPORTED", "UNENCRYPTED", "ENCRYPTED"]
+  * An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "ENCRYPTION_UNSUPPORTED", "UNENCRYPTED", "ENCRYPTED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#allowed_encryption_statuses AccessContextManagerAccessLevel#allowed_encryption_statuses}
   */
@@ -250,7 +250,7 @@ An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "
   readonly requireCorpOwned?: boolean | cdktf.IResolvable;
   /**
   * Whether or not screenlock is required for the DevicePolicy
-to be true. Defaults to false.
+  * to be true. Defaults to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#require_screen_lock AccessContextManagerAccessLevel#require_screen_lock}
   */
@@ -439,54 +439,54 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
 export interface AccessContextManagerAccessLevelBasicConditions {
   /**
   * A list of CIDR block IP subnetwork specification. May be IPv4
-or IPv6.
-Note that for a CIDR IP address block, the specified IP address
-portion must be properly truncated (i.e. all the host bits must
-be zero) or the input is considered malformed. For example,
-"192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
-for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
-is not. The originating IP of a request must be in one of the
-listed subnets in order for this Condition to be true.
-If empty, all IP addresses are allowed.
+  * or IPv6.
+  * Note that for a CIDR IP address block, the specified IP address
+  * portion must be properly truncated (i.e. all the host bits must
+  * be zero) or the input is considered malformed. For example,
+  * "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
+  * for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
+  * is not. The originating IP of a request must be in one of the
+  * listed subnets in order for this Condition to be true.
+  * If empty, all IP addresses are allowed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#ip_subnetworks AccessContextManagerAccessLevel#ip_subnetworks}
   */
   readonly ipSubnetworks?: string[];
   /**
   * An allowed list of members (users, service accounts).
-Using groups is not supported yet.
-
-The signed-in user originating the request must be a part of one
-of the provided members. If not specified, a request may come
-from any user (logged in/not logged in, not present in any
-groups, etc.).
-Formats: 'user:{emailid}', 'serviceAccount:{emailid}'
+  * Using groups is not supported yet.
+  * 
+  * The signed-in user originating the request must be a part of one
+  * of the provided members. If not specified, a request may come
+  * from any user (logged in/not logged in, not present in any
+  * groups, etc.).
+  * Formats: 'user:{emailid}', 'serviceAccount:{emailid}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#members AccessContextManagerAccessLevel#members}
   */
   readonly members?: string[];
   /**
   * Whether to negate the Condition. If true, the Condition becomes
-a NAND over its non-empty fields, each field must be false for
-the Condition overall to be satisfied. Defaults to false.
+  * a NAND over its non-empty fields, each field must be false for
+  * the Condition overall to be satisfied. Defaults to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#negate AccessContextManagerAccessLevel#negate}
   */
   readonly negate?: boolean | cdktf.IResolvable;
   /**
   * The request must originate from one of the provided
-countries/regions.
-Format: A valid ISO 3166-1 alpha-2 code.
+  * countries/regions.
+  * Format: A valid ISO 3166-1 alpha-2 code.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#regions AccessContextManagerAccessLevel#regions}
   */
   readonly regions?: string[];
   /**
   * A list of other access levels defined in the same Policy,
-referenced by resource name. Referencing an AccessLevel which
-does not exist is an error. All access levels listed must be
-granted for the Condition to be true.
-Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+  * referenced by resource name. Referencing an AccessLevel which
+  * does not exist is an error. All access levels listed must be
+  * granted for the Condition to be true.
+  * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#required_access_levels AccessContextManagerAccessLevel#required_access_levels}
   */
@@ -707,10 +707,10 @@ export class AccessContextManagerAccessLevelBasicConditionsList extends cdktf.Co
 export interface AccessContextManagerAccessLevelBasic {
   /**
   * How the conditions list should be combined to determine if a request
-is granted this AccessLevel. If AND is used, each Condition in
-conditions must be satisfied for the AccessLevel to be applied. If
-OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Default value: "AND" Possible values: ["AND", "OR"]
+  * is granted this AccessLevel. If AND is used, each Condition in
+  * conditions must be satisfied for the AccessLevel to be applied. If
+  * OR is used, at least one Condition in conditions must be satisfied
+  * for the AccessLevel to be applied. Default value: "AND" Possible values: ["AND", "OR"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_access_level#combining_function AccessContextManagerAccessLevel#combining_function}
   */

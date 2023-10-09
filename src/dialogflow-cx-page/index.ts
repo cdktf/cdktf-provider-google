@@ -27,34 +27,34 @@ export interface DialogflowCxPageConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The language of the following fields in page:
-
-Page.entry_fulfillment.messages
-Page.entry_fulfillment.conditional_cases
-Page.event_handlers.trigger_fulfillment.messages
-Page.event_handlers.trigger_fulfillment.conditional_cases
-Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages
-Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases
-Page.form.parameters.fill_behavior.reprompt_event_handlers.messages
-Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases
-Page.transition_routes.trigger_fulfillment.messages
-Page.transition_routes.trigger_fulfillment.conditional_cases
-If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+  * 
+  * Page.entry_fulfillment.messages
+  * Page.entry_fulfillment.conditional_cases
+  * Page.event_handlers.trigger_fulfillment.messages
+  * Page.event_handlers.trigger_fulfillment.conditional_cases
+  * Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages
+  * Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases
+  * Page.form.parameters.fill_behavior.reprompt_event_handlers.messages
+  * Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases
+  * Page.transition_routes.trigger_fulfillment.messages
+  * Page.transition_routes.trigger_fulfillment.conditional_cases
+  * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#language_code DialogflowCxPage#language_code}
   */
   readonly languageCode?: string;
   /**
   * The flow to create a page for.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#parent DialogflowCxPage#parent}
   */
   readonly parent?: string;
   /**
   * Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page.
-If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes.
-If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence.
-Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+  * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes.
+  * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence.
+  * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#transition_route_groups DialogflowCxPage#transition_route_groups}
   */
@@ -93,7 +93,7 @@ Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Fl
 export interface DialogflowCxPageEntryFulfillmentConditionalCases {
   /**
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
-See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
@@ -1275,7 +1275,7 @@ export class DialogflowCxPageEntryFulfillmentOutputReference extends cdktf.Compl
 export interface DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases {
   /**
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
-See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
@@ -2463,14 +2463,14 @@ export interface DialogflowCxPageEventHandlers {
   readonly event?: string;
   /**
   * The target flow to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
   */
@@ -2650,7 +2650,7 @@ export class DialogflowCxPageEventHandlersList extends cdktf.ComplexList {
 export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases {
   /**
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
-See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
@@ -3832,7 +3832,7 @@ export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentO
 export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases {
   /**
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
-See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
@@ -5020,14 +5020,14 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   readonly event?: string;
   /**
   * The target flow to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
   */
@@ -5315,7 +5315,7 @@ export interface DialogflowCxPageFormParameters {
   readonly displayName?: string;
   /**
   * The entity type of the parameter.
-Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
+  * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#entity_type DialogflowCxPage#entity_type}
   */
@@ -5328,14 +5328,14 @@ Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for 
   readonly isList?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter content should be redacted in log.
-If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+  * If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#redact DialogflowCxPage#redact}
   */
   readonly redact?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
-Required parameters must be filled before form filling concludes.
+  * Required parameters must be filled before form filling concludes.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#required DialogflowCxPage#required}
   */
@@ -5775,7 +5775,7 @@ export class DialogflowCxPageTimeoutsOutputReference extends cdktf.ComplexObject
 export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases {
   /**
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
-See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
@@ -6957,28 +6957,28 @@ export class DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference e
 export interface DialogflowCxPageTransitionRoutes {
   /**
   * The condition to evaluate against form parameters or session parameters.
-At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+  * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#condition DialogflowCxPage#condition}
   */
   readonly condition?: string;
   /**
   * The unique identifier of an Intent.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#intent DialogflowCxPage#intent}
   */
   readonly intent?: string;
   /**
   * The target flow to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
   */

@@ -37,8 +37,8 @@ export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
-"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
-(e.g., HL7 messages) where no explicit timezone is specified.
+  * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+  * (e.g., HL7 messages) where no explicit timezone is specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
   */

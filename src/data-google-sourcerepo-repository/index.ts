@@ -21,7 +21,7 @@ export interface DataGoogleSourcerepoRepositoryConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * Resource name of the repository, of the form '{{repo}}'.
-The repo name may contain slashes. eg, 'name/with/slash'
+  * The repo name may contain slashes. eg, 'name/with/slash'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/sourcerepo_repository#name DataGoogleSourcerepoRepository#name}
   */

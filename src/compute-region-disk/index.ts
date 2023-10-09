@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeRegionDiskConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource. Provide this property when
-you create the resource.
+  * you create the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#description ComputeRegionDisk#description}
   */
@@ -28,10 +28,10 @@ you create the resource.
   readonly id?: string;
   /**
   * Labels to apply to this disk.  A list of key->value pairs.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#labels ComputeRegionDisk#labels}
   */
@@ -44,22 +44,22 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly licenses?: string[];
   /**
   * Name of the resource. Provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#name ComputeRegionDisk#name}
   */
   readonly name: string;
   /**
   * Physical block size of the persistent disk, in bytes. If not present
-in a request, a default value is used. Currently supported sizes
-are 4096 and 16384, other sizes may be added in the future.
-If an unsupported value is requested, the error message will list
-the supported values for the caller's project.
+  * in a request, a default value is used. Currently supported sizes
+  * are 4096 and 16384, other sizes may be added in the future.
+  * If an unsupported value is requested, the error message will list
+  * the supported values for the caller's project.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#physical_block_size_bytes ComputeRegionDisk#physical_block_size_bytes}
   */
@@ -82,47 +82,47 @@ the supported values for the caller's project.
   readonly replicaZones: string[];
   /**
   * Size of the persistent disk, specified in GB. You can specify this
-field when creating a persistent disk using the sourceImage or
-sourceSnapshot parameter, or specify it alone to create an empty
-persistent disk.
-
-If you specify this field along with sourceImage or sourceSnapshot,
-the value of sizeGb must not be less than the size of the sourceImage
-or the size of the snapshot.
+  * field when creating a persistent disk using the sourceImage or
+  * sourceSnapshot parameter, or specify it alone to create an empty
+  * persistent disk.
+  * 
+  * If you specify this field along with sourceImage or sourceSnapshot,
+  * the value of sizeGb must not be less than the size of the sourceImage
+  * or the size of the snapshot.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#size ComputeRegionDisk#size}
   */
   readonly size?: number;
   /**
   * The source snapshot used to create this disk. You can provide this as
-a partial or full URL to the resource. For example, the following are
-valid values:
-
-* 'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot'
-* 'projects/project/global/snapshots/snapshot'
-* 'global/snapshots/snapshot'
-* 'snapshot'
+  * a partial or full URL to the resource. For example, the following are
+  * valid values:
+  * 
+  * * 'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot'
+  * * 'projects/project/global/snapshots/snapshot'
+  * * 'global/snapshots/snapshot'
+  * * 'snapshot'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#snapshot ComputeRegionDisk#snapshot}
   */
   readonly snapshot?: string;
   /**
   * The source disk used to create this disk. You can provide this as a partial or full URL to the resource.
-For example, the following are valid values:
-
-* https://www.googleapis.com/compute/v1/projects/{project}/zones/{zone}/disks/{disk}
-* https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/disks/{disk}
-* projects/{project}/zones/{zone}/disks/{disk}
-* projects/{project}/regions/{region}/disks/{disk}
-* zones/{zone}/disks/{disk}
-* regions/{region}/disks/{disk}
+  * For example, the following are valid values:
+  * 
+  * * https://www.googleapis.com/compute/v1/projects/{project}/zones/{zone}/disks/{disk}
+  * * https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/disks/{disk}
+  * * projects/{project}/zones/{zone}/disks/{disk}
+  * * projects/{project}/regions/{region}/disks/{disk}
+  * * zones/{zone}/disks/{disk}
+  * * regions/{region}/disks/{disk}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#source_disk ComputeRegionDisk#source_disk}
   */
   readonly sourceDisk?: string;
   /**
   * URL of the disk type resource describing which disk type to use to
-create the disk. Provide this when creating the disk.
+  * create the disk. Provide this when creating the disk.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#type ComputeRegionDisk#type}
   */
@@ -231,7 +231,7 @@ export interface ComputeRegionDiskDiskEncryptionKey {
   readonly kmsKeyName?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+  * RFC 4648 base64 to either encrypt or decrypt this resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#raw_key ComputeRegionDisk#raw_key}
   */
@@ -423,7 +423,7 @@ export class ComputeRegionDiskGuestOsFeaturesList extends cdktf.ComplexList {
 export interface ComputeRegionDiskSourceSnapshotEncryptionKey {
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+  * RFC 4648 base64 to either encrypt or decrypt this resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#raw_key ComputeRegionDisk#raw_key}
   */

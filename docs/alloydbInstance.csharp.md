@@ -1241,7 +1241,7 @@ public System.Collections.Generic.IDictionary<string, string> Annotations { get;
 
 Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels.
 
-*Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_instance#annotations AlloydbInstance#annotations}
@@ -1338,7 +1338,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 User-defined labels for the alloydb instance.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_instance#labels AlloydbInstance#labels}

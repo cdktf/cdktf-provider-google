@@ -14,11 +14,11 @@ import * as cdktf from 'cdktf';
 export interface ComputeSnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
   * Creates the new snapshot in the snapshot chain labeled with the
-specified name. The chain name must be 1-63 characters long and
-comply with RFC1035. This is an uncommon option only for advanced
-service owners who needs to create separate snapshot chains, for
-example, for chargeback tracking.  When you describe your snapshot
-resource, this field is visible only if it has a non-empty value.
+  * specified name. The chain name must be 1-63 characters long and
+  * comply with RFC1035. This is an uncommon option only for advanced
+  * service owners who needs to create separate snapshot chains, for
+  * example, for chargeback tracking.  When you describe your snapshot
+  * resource, this field is visible only if it has a non-empty value.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#chain_name ComputeSnapshot#chain_name}
   */
@@ -38,21 +38,21 @@ resource, this field is visible only if it has a non-empty value.
   readonly id?: string;
   /**
   * Labels to apply to this Snapshot.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#labels ComputeSnapshot#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Name of the resource; provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#name ComputeSnapshot#name}
   */
@@ -107,14 +107,14 @@ export interface ComputeSnapshotSnapshotEncryptionKey {
   readonly kmsKeySelfLink?: string;
   /**
   * The service account used for the encryption request for the given KMS key.
-If absent, the Compute Engine Service Agent service account is used.
+  * If absent, the Compute Engine Service Agent service account is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#kms_key_service_account ComputeSnapshot#kms_key_service_account}
   */
   readonly kmsKeyServiceAccount?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+  * RFC 4648 base64 to either encrypt or decrypt this resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#raw_key ComputeSnapshot#raw_key}
   */
@@ -233,14 +233,14 @@ export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.C
 export interface ComputeSnapshotSourceDiskEncryptionKey {
   /**
   * The service account used for the encryption request for the given KMS key.
-If absent, the Compute Engine Service Agent service account is used.
+  * If absent, the Compute Engine Service Agent service account is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#kms_key_service_account ComputeSnapshot#kms_key_service_account}
   */
   readonly kmsKeyServiceAccount?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+  * RFC 4648 base64 to either encrypt or decrypt this resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#raw_key ComputeSnapshot#raw_key}
   */

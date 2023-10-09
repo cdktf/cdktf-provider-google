@@ -2493,7 +2493,7 @@ storageBucket.StorageBucketLifecycleRuleCondition(
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.createdBefore">created_before</a></code> | <code>str</code> | Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.customTimeBefore">custom_time_before</a></code> | <code>str</code> | Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.daysSinceCustomTime">days_since_custom_time</a></code> | <code>typing.Union[int, float]</code> | Number of days elapsed since the user-specified timestamp set on an object. |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.daysSinceNoncurrentTime">days_since_noncurrent_time</a></code> | <code>typing.Union[int, float]</code> | Number of days elapsed since the noncurrent timestamp of an object. This 						condition is relevant only for versioned objects. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.daysSinceNoncurrentTime">days_since_noncurrent_time</a></code> | <code>typing.Union[int, float]</code> | Number of days elapsed since the noncurrent timestamp of an object. This 										condition is relevant only for versioned objects. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.matchesPrefix">matches_prefix</a></code> | <code>typing.List[str]</code> | One or more matching name prefixes to satisfy this condition. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.matchesStorageClass">matches_storage_class</a></code> | <code>typing.List[str]</code> | Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleCondition.property.matchesSuffix">matches_suffix</a></code> | <code>typing.List[str]</code> | One or more matching name suffixes to satisfy this condition. |
@@ -2567,7 +2567,7 @@ days_since_noncurrent_time: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Number of days elapsed since the noncurrent timestamp of an object. This 						condition is relevant only for versioned objects.
+Number of days elapsed since the noncurrent timestamp of an object. This 										condition is relevant only for versioned objects.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
 
@@ -5768,7 +5768,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[int, float]
 
-Number of days elapsed since the noncurrent timestamp of an object. This 						condition is relevant only for versioned objects.
+Number of days elapsed since the noncurrent timestamp of an object. This 										condition is relevant only for versioned objects.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
 

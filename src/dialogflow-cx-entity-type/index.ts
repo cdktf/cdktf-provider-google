@@ -14,8 +14,8 @@ import * as cdktf from 'cdktf';
 export interface DialogflowCxEntityTypeConfig extends cdktf.TerraformMetaArguments {
   /**
   * Represents kinds of entities.
-* AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
-* AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity. Possible values: ["AUTO_EXPANSION_MODE_DEFAULT", "AUTO_EXPANSION_MODE_UNSPECIFIED"]
+  * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
+  * * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity. Possible values: ["AUTO_EXPANSION_MODE_DEFAULT", "AUTO_EXPANSION_MODE_UNSPECIFIED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#auto_expansion_mode DialogflowCxEntityType#auto_expansion_mode}
   */
@@ -41,26 +41,26 @@ export interface DialogflowCxEntityTypeConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * Indicates whether the entity type can be automatically expanded.
-* KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
-* KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
-* KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
+  * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
+  * * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
+  * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#kind DialogflowCxEntityType#kind}
   */
   readonly kind: string;
   /**
   * The language of the following fields in entityType:
-EntityType.entities.value
-EntityType.entities.synonyms
-EntityType.excluded_phrases.value
-If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+  * EntityType.entities.value
+  * EntityType.entities.synonyms
+  * EntityType.excluded_phrases.value
+  * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#language_code DialogflowCxEntityType#language_code}
   */
   readonly languageCode?: string;
   /**
   * The agent to create a entity type for.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#parent DialogflowCxEntityType#parent}
   */
@@ -93,15 +93,15 @@ Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
 export interface DialogflowCxEntityTypeEntities {
   /**
   * A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
-For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+  * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#synonyms DialogflowCxEntityType#synonyms}
   */
   readonly synonyms?: string[];
   /**
   * The primary value associated with this entity entry. For example, if the entity type is vegetable, the value could be scallions.
-For KIND_MAP entity types: A canonical value to be used in place of synonyms.
-For KIND_LIST entity types: A string that can contain references to other entity types (with or without aliases).
+  * For KIND_MAP entity types: A canonical value to be used in place of synonyms.
+  * For KIND_LIST entity types: A string that can contain references to other entity types (with or without aliases).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#value DialogflowCxEntityType#value}
   */

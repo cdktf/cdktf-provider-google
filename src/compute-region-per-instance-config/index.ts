@@ -21,22 +21,22 @@ export interface ComputeRegionPerInstanceConfigConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * The minimal action to perform on the instance during an update.
-Default is 'NONE'. Possible values are:
-* REPLACE
-* RESTART
-* REFRESH
-* NONE
+  * Default is 'NONE'. Possible values are:
+  * * REPLACE
+  * * RESTART
+  * * REFRESH
+  * * NONE
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_per_instance_config#minimal_action ComputeRegionPerInstanceConfig#minimal_action}
   */
   readonly minimalAction?: string;
   /**
   * The most disruptive action to perform on the instance during an update.
-Default is 'REPLACE'. Possible values are:
-* REPLACE
-* RESTART
-* REFRESH
-* NONE
+  * Default is 'REPLACE'. Possible values are:
+  * * REPLACE
+  * * RESTART
+  * * REFRESH
+  * * NONE
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_per_instance_config#most_disruptive_allowed_action ComputeRegionPerInstanceConfig#most_disruptive_allowed_action}
   */
@@ -65,8 +65,8 @@ Default is 'REPLACE'. Possible values are:
   readonly regionInstanceGroupManager: string;
   /**
   * When true, deleting this config will immediately remove any specified state from the underlying instance.
-When false, deleting this config will *not* immediately remove any state from the underlying instance.
-State will be removed on the next instance recreation or update.
+  * When false, deleting this config will *not* immediately remove any state from the underlying instance.
+  * State will be removed on the next instance recreation or update.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_per_instance_config#remove_instance_state_on_destroy ComputeRegionPerInstanceConfig#remove_instance_state_on_destroy}
   */
@@ -87,10 +87,10 @@ State will be removed on the next instance recreation or update.
 export interface ComputeRegionPerInstanceConfigPreservedStateDisk {
   /**
   * A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
-The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'.
-'NEVER' - detach the disk when the VM is deleted, but do not delete the disk.
-'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently
-deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"]
+  * The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'.
+  * 'NEVER' - detach the disk when the VM is deleted, but do not delete the disk.
+  * 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently
+  * deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_per_instance_config#delete_rule ComputeRegionPerInstanceConfig#delete_rule}
   */
@@ -109,7 +109,7 @@ deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER
   readonly mode?: string;
   /**
   * The URI of an existing persistent disk to attach under the specified device-name in the format
-'projects/project-id/zones/zone/disks/disk-name'.
+  * 'projects/project-id/zones/zone/disks/disk-name'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_per_instance_config#source ComputeRegionPerInstanceConfig#source}
   */

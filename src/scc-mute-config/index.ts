@@ -20,10 +20,10 @@ export interface SccMuteConfigConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   /**
   * An expression that defines the filter to apply across create/update
-events of findings. While creating a filter string, be mindful of
-the scope in which the mute configuration is being created. E.g.,
-If a filter contains project = X but is created under the
-project = Y scope, it might not match any findings.
+  * events of findings. While creating a filter string, be mindful of
+  * the scope in which the mute configuration is being created. E.g.,
+  * If a filter contains project = X but is created under the
+  * project = Y scope, it might not match any findings.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/scc_mute_config#filter SccMuteConfig#filter}
   */
@@ -43,8 +43,8 @@ project = Y scope, it might not match any findings.
   readonly muteConfigId: string;
   /**
   * Resource name of the new mute configs's parent. Its format is
-"organizations/[organization_id]", "folders/[folder_id]", or
-"projects/[project_id]".
+  * "organizations/[organization_id]", "folders/[folder_id]", or
+  * "projects/[project_id]".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/scc_mute_config#parent SccMuteConfig#parent}
   */

@@ -75,7 +75,7 @@ export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArgument
 export interface ContainerAnalysisNoteAttestationAuthorityHint {
   /**
   * The human readable name of this Attestation Authority, for
-example "qa".
+  * example "qa".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_note#human_readable_name ContainerAnalysisNote#human_readable_name}
   */

@@ -1025,7 +1025,7 @@ public readonly labels: {[ key: string ]: string};
 
 Resource labels to represent user-provided metadata.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#labels NetworkManagementConnectivityTest#labels}
@@ -1301,11 +1301,11 @@ derived from the URI if you provide a VM instance or network URI.
 The following are two cases where you must provide the project ID:
 
 1. Only the IP address is specified, and the IP address is
-within a GCP project.
+   within a GCP project.
 2. When you are using Shared VPC and the IP address
-that you provide is from the service project. In this case,
-the network that the IP address resides in is defined in the
-host project.
+   that you provide is from the service project. In this case,
+   the network that the IP address resides in is defined in the
+   host project.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#project_id NetworkManagementConnectivityTest#project_id}
 

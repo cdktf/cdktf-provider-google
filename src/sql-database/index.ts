@@ -14,29 +14,29 @@ import * as cdktf from 'cdktf';
 export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The charset value. See MySQL's
-[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
-for more details and supported values. Postgres databases only support
-a value of 'UTF8' at creation time.
+  * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+  * and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+  * for more details and supported values. Postgres databases only support
+  * a value of 'UTF8' at creation time.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_database#charset SqlDatabase#charset}
   */
   readonly charset?: string;
   /**
   * The collation value. See MySQL's
-[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
-for more details and supported values. Postgres databases only support
-a value of 'en_US.UTF8' at creation time.
+  * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+  * and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+  * for more details and supported values. Postgres databases only support
+  * a value of 'en_US.UTF8' at creation time.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_database#collation SqlDatabase#collation}
   */
   readonly collation?: string;
   /**
   * The deletion policy for the database. Setting ABANDON allows the resource
-to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be
-deleted from the API if there are users other than cloudsqlsuperuser with access. Possible
-values are: "ABANDON", "DELETE". Defaults to "DELETE".
+  * to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be
+  * deleted from the API if there are users other than cloudsqlsuperuser with access. Possible
+  * values are: "ABANDON", "DELETE". Defaults to "DELETE".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_database#deletion_policy SqlDatabase#deletion_policy}
   */
@@ -50,14 +50,14 @@ values are: "ABANDON", "DELETE". Defaults to "DELETE".
   readonly id?: string;
   /**
   * The name of the Cloud SQL instance. This does not include the project
-ID.
+  * ID.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_database#instance SqlDatabase#instance}
   */
   readonly instance: string;
   /**
   * The name of the database in the Cloud SQL instance.
-This does not include the project ID or instance name.
+  * This does not include the project ID or instance name.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_database#name SqlDatabase#name}
   */

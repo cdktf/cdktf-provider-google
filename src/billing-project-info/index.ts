@@ -14,8 +14,8 @@ import * as cdktf from 'cdktf';
 export interface BillingProjectInfoConfig extends cdktf.TerraformMetaArguments {
   /**
   * The ID of the billing account associated with the project, if
-any. Set to empty string to disable billing for the project.
-For example, '"012345-567890-ABCDEF"' or '""'.
+  * any. Set to empty string to disable billing for the project.
+  * For example, '"012345-567890-ABCDEF"' or '""'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_project_info#billing_account BillingProjectInfo#billing_account}
   */

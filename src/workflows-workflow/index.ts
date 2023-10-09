@@ -14,8 +14,8 @@ import * as cdktf from 'cdktf';
 export interface WorkflowsWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * The KMS key used to encrypt workflow and execution data.
-
-Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}
+  * 
+  * Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/workflows_workflow#crypto_key_name WorkflowsWorkflow#crypto_key_name}
   */
@@ -35,10 +35,10 @@ Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{c
   readonly id?: string;
   /**
   * A set of key/value label pairs to assign to this Workflow.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/workflows_workflow#labels WorkflowsWorkflow#labels}
   */
@@ -65,12 +65,12 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly region?: string;
   /**
   * Name of the service account associated with the latest workflow version. This service
-account represents the identity of the workflow and determines what permissions the workflow has.
-Format: projects/{project}/serviceAccounts/{account} or {account}.
-Using - as a wildcard for the {project} or not providing one at all will infer the project from the account.
-The {account} value can be the email address or the unique_id of the service account.
-If not provided, workflow will use the project's default service account.
-Modifying this field for an existing workflow results in a new workflow revision.
+  * account represents the identity of the workflow and determines what permissions the workflow has.
+  * Format: projects/{project}/serviceAccounts/{account} or {account}.
+  * Using - as a wildcard for the {project} or not providing one at all will infer the project from the account.
+  * The {account} value can be the email address or the unique_id of the service account.
+  * If not provided, workflow will use the project's default service account.
+  * Modifying this field for an existing workflow results in a new workflow revision.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/workflows_workflow#service_account WorkflowsWorkflow#service_account}
   */

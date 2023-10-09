@@ -14,30 +14,30 @@ import * as cdktf from 'cdktf';
 export interface SecretManagerSecretConfig extends cdktf.TerraformMetaArguments {
   /**
   * Custom metadata about the secret.
-
-Annotations are distinct from various forms of labels. Annotations exist to allow
-client tools to store their own state information without requiring a database.
-
-Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and
-may have dashes (-), underscores (_), dots (.), and alphanumerics in between these
-symbols.
-
-The total size of annotation keys and values must be less than 16KiB.
-
-An object containing a list of "key": value pairs. Example:
-{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
+  * 
+  * Annotations are distinct from various forms of labels. Annotations exist to allow
+  * client tools to store their own state information without requiring a database.
+  * 
+  * Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of
+  * maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and
+  * may have dashes (-), underscores (_), dots (.), and alphanumerics in between these
+  * symbols.
+  * 
+  * The total size of annotation keys and values must be less than 16KiB.
+  * 
+  * An object containing a list of "key": value pairs. Example:
+  * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#annotations SecretManagerSecret#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
-A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#expire_time SecretManagerSecret#expire_time}
   */
@@ -51,21 +51,21 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
   readonly id?: string;
   /**
   * The labels assigned to this Secret.
-
-Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
-and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
-and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-
-No more than 64 labels can be assigned to a given resource.
-
-An object containing a list of "key": value pairs. Example:
-{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+  * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+  * 
+  * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+  * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+  * 
+  * No more than 64 labels can be assigned to a given resource.
+  * 
+  * An object containing a list of "key": value pairs. Example:
+  * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#labels SecretManagerSecret#labels}
   */
@@ -82,21 +82,21 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly secretId: string;
   /**
   * The TTL for the Secret.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#ttl SecretManagerSecret#ttl}
   */
   readonly ttl?: string;
   /**
   * Mapping from version alias to version name.
-
-A version alias is a string with a maximum length of 63 characters and can contain
-uppercase and lowercase letters, numerals, and the hyphen (-) and underscore ('_')
-characters. An alias string must start with a letter and cannot be the string
-'latest' or 'NEW'. No more than 50 aliases can be assigned to a given secret.
-
-An object containing a list of "key": value pairs. Example:
-{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * A version alias is a string with a maximum length of 63 characters and can contain
+  * uppercase and lowercase letters, numerals, and the hyphen (-) and underscore ('_')
+  * characters. An alias string must start with a letter and cannot be the string
+  * 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given secret.
+  * 
+  * An object containing a list of "key": value pairs. Example:
+  * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#version_aliases SecretManagerSecret#version_aliases}
   */
@@ -609,14 +609,14 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
 export interface SecretManagerSecretRotation {
   /**
   * Timestamp in UTC at which the Secret is scheduled to rotate.
-A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#next_rotation_time SecretManagerSecret#next_rotation_time}
   */
   readonly nextRotationTime?: string;
   /**
   * The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years).
-If rotationPeriod is set, 'next_rotation_time' must be set. 'next_rotation_time' will be advanced by this period when the service automatically sends rotation notifications.
+  * If rotationPeriod is set, 'next_rotation_time' must be set. 'next_rotation_time' will be advanced by this period when the service automatically sends rotation notifications.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#rotation_period SecretManagerSecret#rotation_period}
   */
@@ -836,7 +836,7 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
 export interface SecretManagerSecretTopics {
   /**
   * The resource name of the Pub/Sub topic that will be published to, in the following format: projects/* /topics/*.
-For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+  * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret#name SecretManagerSecret#name}
    *

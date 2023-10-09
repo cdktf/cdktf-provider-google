@@ -14,12 +14,12 @@ import * as cdktf from 'cdktf';
 export interface PubsubSchemaConfig extends cdktf.TerraformMetaArguments {
   /**
   * The definition of the schema.
-This should contain a string representing the full definition of the schema
-that is a valid schema definition of the type specified in type. Changes
-to the definition commit new [schema revisions](https://cloud.google.com/pubsub/docs/commit-schema-revision).
-A schema can only have up to 20 revisions, so updates that fail with an
-error indicating that the limit has been reached require manually
-[deleting old revisions](https://cloud.google.com/pubsub/docs/delete-schema-revision).
+  * This should contain a string representing the full definition of the schema
+  * that is a valid schema definition of the type specified in type. Changes
+  * to the definition commit new [schema revisions](https://cloud.google.com/pubsub/docs/commit-schema-revision).
+  * A schema can only have up to 20 revisions, so updates that fail with an
+  * error indicating that the limit has been reached require manually
+  * [deleting old revisions](https://cloud.google.com/pubsub/docs/delete-schema-revision).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/pubsub_schema#definition PubsubSchema#definition}
   */

@@ -14,25 +14,25 @@ import * as cdktf from 'cdktf';
 export interface RedisInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Only applicable to STANDARD_HA tier which protects the instance
-against zonal failures by provisioning it across two zones.
-If provided, it must be a different zone from the one provided in
-[locationId].
+  * against zonal failures by provisioning it across two zones.
+  * If provided, it must be a different zone from the one provided in
+  * [locationId].
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
   */
   readonly alternativeLocationId?: string;
   /**
   * Optional. Indicates whether OSS Redis AUTH is enabled for the
-instance. If set to "true" AUTH is enabled on the instance.
-Default value is "false" meaning AUTH is disabled.
+  * instance. If set to "true" AUTH is enabled on the instance.
+  * Default value is "false" meaning AUTH is disabled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
   */
   readonly authEnabled?: boolean | cdktf.IResolvable;
   /**
   * The full name of the Google Compute Engine network to which the
-instance is connected. If left unspecified, the default network
-will be used.
+  * instance is connected. If left unspecified, the default network
+  * will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
   */
@@ -45,7 +45,7 @@ will be used.
   readonly connectMode?: string;
   /**
   * Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis
-instance. If this is provided, CMEK is enabled.
+  * instance. If this is provided, CMEK is enabled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
   */
@@ -65,19 +65,19 @@ instance. If this is provided, CMEK is enabled.
   readonly id?: string;
   /**
   * Resource labels to represent user provided metadata.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#labels RedisInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The zone where the instance will be provisioned. If not provided,
-the service will choose a zone for the instance. For STANDARD_HA tier,
-instances will be created across two zones for protection against
-zonal failures. If [alternativeLocationId] is also provided, it must
-be different from [locationId].
+  * the service will choose a zone for the instance. For STANDARD_HA tier,
+  * instances will be created across two zones for protection against
+  * zonal failures. If [alternativeLocationId] is also provided, it must
+  * be different from [locationId].
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#location_id RedisInstance#location_id}
   */
@@ -100,27 +100,27 @@ be different from [locationId].
   readonly project?: string;
   /**
   * Optional. Read replica mode. Can only be specified when trying to create the instance.
-If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
-- READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the
-instance cannot scale up or down the number of replicas.
-- READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance
-can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
+  * If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
+  * - READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the
+  * instance cannot scale up or down the number of replicas.
+  * - READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance
+  * can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
   */
   readonly readReplicasMode?: string;
   /**
   * Redis configuration parameters, according to http://redis.io/topics/config.
-Please check Memorystore documentation for the list of supported parameters:
-https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
+  * Please check Memorystore documentation for the list of supported parameters:
+  * https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
   */
   readonly redisConfigs?: { [key: string]: string };
   /**
   * The version of Redis software. If not provided, latest supported
-version will be used. Please check the API documentation linked
-at the top for the latest valid values.
+  * version will be used. Please check the API documentation linked
+  * at the top for the latest valid values.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
   */
@@ -133,45 +133,45 @@ at the top for the latest valid values.
   readonly region?: string;
   /**
   * Optional. The number of replica nodes. The valid range for the Standard Tier with
-read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabled
-for a Standard Tier instance, the only valid value is 1 and the default is 1.
-The valid value for basic tier is 0 and the default is also 0.
+  * read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabled
+  * for a Standard Tier instance, the only valid value is 1 and the default is 1.
+  * The valid value for basic tier is 0 and the default is also 0.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
   */
   readonly replicaCount?: number;
   /**
   * The CIDR range of internal addresses that are reserved for this
-instance. If not provided, the service will choose an unused /29
-block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
-unique and non-overlapping with existing subnets in an authorized
-network.
+  * instance. If not provided, the service will choose an unused /29
+  * block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+  * unique and non-overlapping with existing subnets in an authorized
+  * network.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
   */
   readonly reservedIpRange?: string;
   /**
   * Optional. Additional IP range for node placement. Required when enabling read replicas on
-an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
-"auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
-range associated with the private service access connection, or "auto".
+  * an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+  * "auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
+  * range associated with the private service access connection, or "auto".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
   */
   readonly secondaryIpRange?: string;
   /**
   * The service tier of the instance. Must be one of these values:
-
-- BASIC: standalone instance
-- STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"]
+  * 
+  * - BASIC: standalone instance
+  * - STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#tier RedisInstance#tier}
   */
   readonly tier?: string;
   /**
   * The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
-
-- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
+  * 
+  * - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
   */
@@ -425,7 +425,7 @@ export class RedisInstanceServerCaCertsList extends cdktf.ComplexList {
 export interface RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
   /**
   * Hours of day in 24 hour format. Should be from 0 to 23.
-An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+  * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#hours RedisInstance#hours}
   */
@@ -444,7 +444,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
   readonly nanos?: number;
   /**
   * Seconds of minutes of the time. Must normally be from 0 to 59.
-An API may allow the value 60 if it allows leap-seconds.
+  * An API may allow the value 60 if it allows leap-seconds.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#seconds RedisInstance#seconds}
   */
@@ -581,15 +581,15 @@ export class RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutpu
 export interface RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow {
   /**
   * Required. The day of week that maintenance updates occur.
-
-- DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
-- MONDAY: Monday
-- TUESDAY: Tuesday
-- WEDNESDAY: Wednesday
-- THURSDAY: Thursday
-- FRIDAY: Friday
-- SATURDAY: Saturday
-- SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  * 
+  * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+  * - MONDAY: Monday
+  * - TUESDAY: Tuesday
+  * - WEDNESDAY: Wednesday
+  * - THURSDAY: Thursday
+  * - FRIDAY: Friday
+  * - SATURDAY: Saturday
+  * - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#day RedisInstance#day}
   */
@@ -717,8 +717,8 @@ export class RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowList extends c
 export interface RedisInstanceMaintenancePolicy {
   /**
   * Optional. Description of what this policy is for.
-Create/Update methods return INVALID_ARGUMENT if the
-length is greater than 512.
+  * Create/Update methods return INVALID_ARGUMENT if the
+  * length is greater than 512.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#description RedisInstance#description}
   */
@@ -825,31 +825,31 @@ export class RedisInstanceMaintenancePolicyOutputReference extends cdktf.Complex
 export interface RedisInstancePersistenceConfig {
   /**
   * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
-
-- DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted.
-- RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"]
+  * 
+  * - DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted.
+  * - RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
   */
   readonly persistenceMode?: string;
   /**
   * Optional. Available snapshot periods for scheduling.
-
-- ONE_HOUR:	Snapshot every 1 hour.
-- SIX_HOURS:	Snapshot every 6 hours.
-- TWELVE_HOURS:	Snapshot every 12 hours.
-- TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
+  * 
+  * - ONE_HOUR:	Snapshot every 1 hour.
+  * - SIX_HOURS:	Snapshot every 6 hours.
+  * - TWELVE_HOURS:	Snapshot every 12 hours.
+  * - TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
   */
   readonly rdbSnapshotPeriod?: string;
   /**
   * Optional. Date and time that the first snapshot was/will be attempted,
-and to which future snapshots will be aligned. If not provided,
-the current time will be used.
-A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution
-and up to nine fractional digits.
-Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * and to which future snapshots will be aligned. If not provided,
+  * the current time will be used.
+  * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution
+  * and up to nine fractional digits.
+  * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
   */

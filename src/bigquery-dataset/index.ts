@@ -14,69 +14,69 @@ import * as cdktf from 'cdktf';
 export interface BigqueryDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * A unique ID for this dataset, without the project name. The ID
-must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+  * must contain only letters (a-z, A-Z), numbers (0-9), or
+  * underscores (_). The maximum length is 1,024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
   */
   readonly datasetId: string;
   /**
   * Defines the default collation specification of future tables created
-in the dataset. If a table is created in this dataset without table-level
-default collation, then the table inherits the dataset default collation,
-which is applied to the string fields that do not have explicit collation
-specified. A change to this field affects only tables created afterwards,
-and does not alter the existing tables.
-
-The following values are supported:
-- 'und:ci': undetermined locale, case insensitive.
-- '': empty string. Default to case-sensitive behavior.
+  * in the dataset. If a table is created in this dataset without table-level
+  * default collation, then the table inherits the dataset default collation,
+  * which is applied to the string fields that do not have explicit collation
+  * specified. A change to this field affects only tables created afterwards,
+  * and does not alter the existing tables.
+  * 
+  * The following values are supported:
+  * - 'und:ci': undetermined locale, case insensitive.
+  * - '': empty string. Default to case-sensitive behavior.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
   */
   readonly defaultCollation?: string;
   /**
   * The default partition expiration for all partitioned tables in
-the dataset, in milliseconds.
-
-
-Once this property is set, all newly-created partitioned tables in
-the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only
-affect new tables, not existing ones. The storage in a partition will
-have an expiration time of its partition time plus this value.
-Setting this property overrides the use of 'defaultTableExpirationMs'
-for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned
-table. If you provide an explicit 'timePartitioning.expirationMs' when
-creating or updating a partitioned table, that value takes precedence
-over the default partition expiration time indicated by this property.
+  * the dataset, in milliseconds.
+  * 
+  * 
+  * Once this property is set, all newly-created partitioned tables in
+  * the dataset will have an 'expirationMs' property in the 'timePartitioning'
+  * settings set to this value, and changing the value will only
+  * affect new tables, not existing ones. The storage in a partition will
+  * have an expiration time of its partition time plus this value.
+  * Setting this property overrides the use of 'defaultTableExpirationMs'
+  * for partitioned tables: only one of 'defaultTableExpirationMs' and
+  * 'defaultPartitionExpirationMs' will be used for any new partitioned
+  * table. If you provide an explicit 'timePartitioning.expirationMs' when
+  * creating or updating a partitioned table, that value takes precedence
+  * over the default partition expiration time indicated by this property.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
   */
   readonly defaultPartitionExpirationMs?: number;
   /**
   * The default lifetime of all tables in the dataset, in milliseconds.
-The minimum value is 3600000 milliseconds (one hour).
-
-
-Once this property is set, all newly-created tables in the dataset
-will have an 'expirationTime' property set to the creation time plus
-the value in this property, and changing the value will only affect
-new tables, not existing ones. When the 'expirationTime' for a given
-table is reached, that table will be deleted automatically.
-If a table's 'expirationTime' is modified or removed before the
-table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default
-expiration time indicated by this property.
+  * The minimum value is 3600000 milliseconds (one hour).
+  * 
+  * 
+  * Once this property is set, all newly-created tables in the dataset
+  * will have an 'expirationTime' property set to the creation time plus
+  * the value in this property, and changing the value will only affect
+  * new tables, not existing ones. When the 'expirationTime' for a given
+  * table is reached, that table will be deleted automatically.
+  * If a table's 'expirationTime' is modified or removed before the
+  * table expires, or if you provide an explicit 'expirationTime' when
+  * creating a table, that value takes precedence over the default
+  * expiration time indicated by this property.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
   */
   readonly defaultTableExpirationMs?: number;
   /**
   * If set to 'true', delete all the tables in the
-dataset when destroying the resource; otherwise,
-destroying the resource will fail if tables are present.
+  * dataset when destroying the resource; otherwise,
+  * destroying the resource will fail if tables are present.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
   */
@@ -102,36 +102,36 @@ destroying the resource will fail if tables are present.
   readonly id?: string;
   /**
   * TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
-By default, this is FALSE, which means the dataset and its table names are
-case-sensitive. This field does not affect routine references.
+  * By default, this is FALSE, which means the dataset and its table names are
+  * case-sensitive. This field does not affect routine references.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
   */
   readonly isCaseInsensitive?: boolean | cdktf.IResolvable;
   /**
   * The labels associated with this dataset. You can use these to
-organize and group your datasets.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * organize and group your datasets.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The geographic location where the dataset should reside.
-See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-
-
-There are two types of locations, regional or multi-regional. A regional
-location is a specific geographic place, such as Tokyo, and a multi-regional
-location is a large geographic area, such as the United States, that
-contains at least two geographic places.
-
-
-The default value is multi-regional location 'US'.
-Changing this forces a new resource to be created.
+  * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
+  * 
+  * 
+  * There are two types of locations, regional or multi-regional. A regional
+  * location is a specific geographic place, such as Tokyo, and a multi-regional
+  * location is a large geographic area, such as the United States, that
+  * contains at least two geographic places.
+  * 
+  * 
+  * The default value is multi-regional location 'US'.
+  * Changing this forces a new resource to be created.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
   */
@@ -148,10 +148,10 @@ Changing this forces a new resource to be created.
   readonly project?: string;
   /**
   * Specifies the storage billing model for the dataset.
-Set this flag value to LOGICAL to use logical bytes for storage billing,
-or to PHYSICAL to use physical bytes instead.
-
-LOGICAL is the default if this flag isn't specified.
+  * Set this flag value to LOGICAL to use logical bytes for storage billing,
+  * or to PHYSICAL to use physical bytes instead.
+  * 
+  * LOGICAL is the default if this flag isn't specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
   */
@@ -268,7 +268,7 @@ export class BigqueryDatasetAccessDatasetDatasetOutputReference extends cdktf.Co
 export interface BigqueryDatasetAccessDataset {
   /**
   * Which resources in the dataset this entry applies to. Currently, only views are supported,
-but additional target types may be added in the future. Possible values: VIEWS
+  * but additional target types may be added in the future. Possible values: VIEWS
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
   */
@@ -371,8 +371,8 @@ export interface BigqueryDatasetAccessRoutine {
   readonly projectId: string;
   /**
   * The ID of the routine. The ID must contain only letters (a-z,
-A-Z), numbers (0-9), or underscores (_). The maximum length
-is 256 characters.
+  * A-Z), numbers (0-9), or underscores (_). The maximum length
+  * is 256 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
   */
@@ -489,8 +489,8 @@ export interface BigqueryDatasetAccessView {
   readonly projectId: string;
   /**
   * The ID of the table. The ID must contain only letters (a-z,
-A-Z), numbers (0-9), or underscores (_). The maximum length
-is 1,024 characters.
+  * A-Z), numbers (0-9), or underscores (_). The maximum length
+  * is 1,024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
   */
@@ -595,7 +595,7 @@ export class BigqueryDatasetAccessViewOutputReference extends cdktf.ComplexObjec
 export interface BigqueryDatasetAccess {
   /**
   * A domain to grant access to. Any users signed in with the
-domain specified will be granted the specified access
+  * domain specified will be granted the specified access
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#domain BigqueryDataset#domain}
   */
@@ -608,35 +608,35 @@ domain specified will be granted the specified access
   readonly groupByEmail?: string;
   /**
   * Describes the rights granted to the user specified by the other
-member of the access object. Basic, predefined, and custom roles
-are supported. Predefined roles that have equivalent basic roles
-are swapped by the API to their basic counterparts. See
-[official docs](https://cloud.google.com/bigquery/docs/access-control).
+  * member of the access object. Basic, predefined, and custom roles
+  * are supported. Predefined roles that have equivalent basic roles
+  * are swapped by the API to their basic counterparts. See
+  * [official docs](https://cloud.google.com/bigquery/docs/access-control).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#role BigqueryDataset#role}
   */
   readonly role?: string;
   /**
   * A special group to grant access to. Possible values include:
-
-
-* 'projectOwners': Owners of the enclosing project.
-
-
-* 'projectReaders': Readers of the enclosing project.
-
-
-* 'projectWriters': Writers of the enclosing project.
-
-
-* 'allAuthenticatedUsers': All authenticated BigQuery users.
+  * 
+  * 
+  * * 'projectOwners': Owners of the enclosing project.
+  * 
+  * 
+  * * 'projectReaders': Readers of the enclosing project.
+  * 
+  * 
+  * * 'projectWriters': Writers of the enclosing project.
+  * 
+  * 
+  * * 'allAuthenticatedUsers': All authenticated BigQuery users.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#special_group BigqueryDataset#special_group}
   */
   readonly specialGroup?: string;
   /**
   * An email address of a user to grant access to. For example:
-fred@example.com
+  * fred@example.com
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#user_by_email BigqueryDataset#user_by_email}
   */
@@ -915,8 +915,8 @@ export class BigqueryDatasetAccessList extends cdktf.ComplexList {
 export interface BigqueryDatasetDefaultEncryptionConfiguration {
   /**
   * Describes the Cloud KMS encryption key that will be used to protect destination
-BigQuery table. The BigQuery Service Account associated with your project requires
-access to this encryption key.
+  * BigQuery table. The BigQuery Service Account associated with your project requires
+  * access to this encryption key.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
   */

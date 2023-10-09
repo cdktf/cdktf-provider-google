@@ -33,8 +33,8 @@ export interface IdentityPlatformTenantInboundSamlConfigConfig extends cdktf.Ter
   readonly id?: string;
   /**
   * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
-hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
-alphanumeric character, and have at least 2 characters.
+  * hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+  * alphanumeric character, and have at least 2 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_tenant_inbound_saml_config#name IdentityPlatformTenantInboundSamlConfig#name}
   */

@@ -21,8 +21,8 @@ export interface ContainerAnalysisOccurrenceConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * The analysis note associated with this occurrence, in the form of
-projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
-filter in list requests.
+  * projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
+  * filter in list requests.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_occurrence#note_name ContainerAnalysisOccurrence#note_name}
   */
@@ -39,8 +39,8 @@ filter in list requests.
   readonly remediation?: string;
   /**
   * Required. Immutable. A URI that represents the resource for which
-the occurrence applies. For example,
-https://gcr.io/project/image@sha256:123abc for a Docker image.
+  * the occurrence applies. For example,
+  * https://gcr.io/project/image@sha256:123abc for a Docker image.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_occurrence#resource_uri ContainerAnalysisOccurrence#resource_uri}
   */
@@ -61,28 +61,28 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
 export interface ContainerAnalysisOccurrenceAttestationSignatures {
   /**
   * The identifier for the public key that verifies this
-signature. MUST be an RFC3986 conformant
-URI. * When possible, the key id should be an
-immutable reference, such as a cryptographic digest.
-Examples of valid values:
-
-* OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr
-  for more details on this scheme.
-    * 'openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA'
-* RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
-    * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
+  * signature. MUST be an RFC3986 conformant
+  * URI. * When possible, the key id should be an
+  * immutable reference, such as a cryptographic digest.
+  * Examples of valid values:
+  * 
+  * * OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr
+  *   for more details on this scheme.
+  *     * 'openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA'
+  * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
+  *     * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_occurrence#public_key_id ContainerAnalysisOccurrence#public_key_id}
   */
   readonly publicKeyId: string;
   /**
   * The content of the signature, an opaque bytestring.
-The payload that this signature verifies MUST be
-unambiguously provided with the Signature during
-verification. A wrapper message might provide the
-payload explicitly. Alternatively, a message might
-have a canonical serialization that can always be
-unambiguously computed to derive the payload.
+  * The payload that this signature verifies MUST be
+  * unambiguously provided with the Signature during
+  * verification. A wrapper message might provide the
+  * payload explicitly. Alternatively, a message might
+  * have a canonical serialization that can always be
+  * unambiguously computed to derive the payload.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_occurrence#signature ContainerAnalysisOccurrence#signature}
   */
@@ -202,7 +202,7 @@ export class ContainerAnalysisOccurrenceAttestationSignaturesList extends cdktf.
 export interface ContainerAnalysisOccurrenceAttestation {
   /**
   * The serialized payload that is verified by one or
-more signatures. A base64-encoded string.
+  * more signatures. A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_analysis_occurrence#serialized_payload ContainerAnalysisOccurrence#serialized_payload}
   */

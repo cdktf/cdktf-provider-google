@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface HealthcareHl7V2StoreConfig extends cdktf.TerraformMetaArguments {
   /**
   * Identifies the dataset addressed by this request. Must be in the format
-'projects/{project}/locations/{location}/datasets/{dataset}'
+  * 'projects/{project}/locations/{location}/datasets/{dataset}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#dataset HealthcareHl7V2Store#dataset}
   */
@@ -28,29 +28,29 @@ export interface HealthcareHl7V2StoreConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * User-supplied key-value pairs used to organize HL7v2 stores.
-
-Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
-conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-
-Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-
-No more than 64 labels can be associated with a given store.
-
-An object containing a list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+  * conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+  * 
+  * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+  * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+  * 
+  * No more than 64 labels can be associated with a given store.
+  * 
+  * An object containing a list of "key": value pairs.
+  * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The resource name for the Hl7V2Store.
-
-** Changing this property may recreate the Hl7v2 store (removing all data) **
+  * 
+  * ** Changing this property may recreate the Hl7v2 store (removing all data) **
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#name HealthcareHl7V2Store#name}
   */
@@ -83,11 +83,11 @@ Please refer to the field 'effective_labels' for all of the labels present on th
 export interface HealthcareHl7V2StoreNotificationConfig {
   /**
   * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
-PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
-It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
-was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
-project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
-Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+  * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+  * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+  * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+  * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
+  * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
   */
@@ -152,29 +152,29 @@ export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf
 export interface HealthcareHl7V2StoreNotificationConfigs {
   /**
   * Restricts notifications sent for messages matching a filter. If this is empty, all messages
-are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-
-Fields/functions available for filtering are:
-
-* messageType, from the MSH-9.1 field. For example, NOT messageType = "ADT".
-* send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset's timeZone, from the MSH-7 segment. For example, send_date < "2017-01-02".
-* sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime < "2017-01-02T00:00:00-05:00".
-* sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
-* PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
-* labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
+  * are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+  * 
+  * Fields/functions available for filtering are:
+  * 
+  * * messageType, from the MSH-9.1 field. For example, NOT messageType = "ADT".
+  * * send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset's timeZone, from the MSH-7 segment. For example, send_date < "2017-01-02".
+  * * sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime < "2017-01-02T00:00:00-05:00".
+  * * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
+  * * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
+  * * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#filter HealthcareHl7V2Store#filter}
   */
   readonly filter?: string;
   /**
   * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
-PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
-It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
-was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
-project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
-Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-
-If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver
+  * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+  * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+  * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+  * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
+  * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+  * 
+  * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
   */
@@ -300,15 +300,15 @@ export interface HealthcareHl7V2StoreParserConfig {
   readonly allowNullHeader?: boolean | cdktf.IResolvable;
   /**
   * JSON encoded string for schemas used to parse messages in this
-store if schematized parsing is desired.
+  * store if schematized parsing is desired.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#schema HealthcareHl7V2Store#schema}
   */
   readonly schema?: string;
   /**
   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_hl7_v2_store#segment_terminator HealthcareHl7V2Store#segment_terminator}
   */

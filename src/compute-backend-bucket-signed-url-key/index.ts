@@ -27,7 +27,7 @@ export interface ComputeBackendBucketSignedUrlKeyConfig extends cdktf.TerraformM
   readonly id?: string;
   /**
   * 128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+  * valid RFC 4648 Section 5 base64url encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket_signed_url_key#key_value ComputeBackendBucketSignedUrlKey#key_value}
   */

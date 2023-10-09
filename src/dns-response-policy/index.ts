@@ -57,8 +57,8 @@ export interface DnsResponsePolicyConfig extends cdktf.TerraformMetaArguments {
 export interface DnsResponsePolicyGkeClusters {
   /**
   * The resource name of the cluster to bind this ManagedZone to.
-This should be specified in the format like
-'projects/* /locations/* /clusters/*'
+  * This should be specified in the format like
+  * 'projects/* /locations/* /clusters/*'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dns_response_policy#gke_cluster_name DnsResponsePolicy#gke_cluster_name}
    *
@@ -157,8 +157,8 @@ export class DnsResponsePolicyGkeClustersList extends cdktf.ComplexList {
 export interface DnsResponsePolicyNetworks {
   /**
   * The fully qualified URL of the VPC network to bind to.
-This should be formatted like
-'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
+  * This should be formatted like
+  * 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dns_response_policy#network_url DnsResponsePolicy#network_url}
   */

@@ -14,8 +14,8 @@ import * as cdktf from 'cdktf';
 export interface NotebooksInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * The size of the boot disk in GB attached to this instance,
-up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
-If not specified, this defaults to 100.
+  * up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
+  * If not specified, this defaults to 100.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#boot_disk_size_gb NotebooksInstance#boot_disk_size_gb}
   */
@@ -34,16 +34,16 @@ If not specified, this defaults to 100.
   readonly createTime?: string;
   /**
   * Specify a custom Cloud Storage path where the GPU driver is stored.
-If not specified, we'll automatically choose from official GPU drivers.
+  * If not specified, we'll automatically choose from official GPU drivers.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#custom_gpu_driver_path NotebooksInstance#custom_gpu_driver_path}
   */
   readonly customGpuDriverPath?: string;
   /**
   * The size of the data disk in GB attached to this instance,
-up to a maximum of 64000 GB (64 TB).
-You can choose the size of the data disk based on how big your notebooks and data are.
-If not specified, this defaults to 100.
+  * up to a maximum of 64000 GB (64 TB).
+  * You can choose the size of the data disk based on how big your notebooks and data are.
+  * If not specified, this defaults to 100.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#data_disk_size_gb NotebooksInstance#data_disk_size_gb}
   */
@@ -69,36 +69,36 @@ If not specified, this defaults to 100.
   readonly id?: string;
   /**
   * Whether the end user authorizes Google Cloud to install GPU driver
-on this instance. If this field is empty or set to false, the GPU driver
-won't be installed. Only applicable to instances with GPUs.
+  * on this instance. If this field is empty or set to false, the GPU driver
+  * won't be installed. Only applicable to instances with GPUs.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#install_gpu_driver NotebooksInstance#install_gpu_driver}
   */
   readonly installGpuDriver?: boolean | cdktf.IResolvable;
   /**
   * The list of owners of this instance after creation.
-Format: alias@example.com.
-Currently supports one owner only.
-If not specified, all of the service account users of
-your VM instance's service account can use the instance.
+  * Format: alias@example.com.
+  * Currently supports one owner only.
+  * If not specified, all of the service account users of
+  * your VM instance's service account can use the instance.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#instance_owners NotebooksInstance#instance_owners}
   */
   readonly instanceOwners?: string[];
   /**
   * The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
-Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
+  * Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#kms_key NotebooksInstance#kms_key}
   */
   readonly kmsKey?: string;
   /**
   * Labels to apply to this instance. These can be later modified by the setLabels method.
-An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#labels NotebooksInstance#labels}
   */
@@ -117,7 +117,7 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly machineType: string;
   /**
   * Custom metadata to apply to this instance.
-An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#metadata NotebooksInstance#metadata}
   */
@@ -130,7 +130,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   readonly name: string;
   /**
   * The name of the VPC that this instance is in.
-Format: projects/{project_id}/global/networks/{network_id}
+  * Format: projects/{project_id}/global/networks/{network_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#network NotebooksInstance#network}
   */
@@ -161,8 +161,8 @@ Format: projects/{project_id}/global/networks/{network_id}
   readonly noRemoveDataDisk?: boolean | cdktf.IResolvable;
   /**
   * Path to a Bash script that automatically runs after a
-notebook instance fully boots up. The path must be a URL
-or Cloud Storage path (gs://path-to-file/file-name).
+  * notebook instance fully boots up. The path must be a URL
+  * or Cloud Storage path (gs://path-to-file/file-name).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#post_startup_script NotebooksInstance#post_startup_script}
   */
@@ -173,26 +173,26 @@ or Cloud Storage path (gs://path-to-file/file-name).
   readonly project?: string;
   /**
   * The service account on this instance, giving access to other
-Google Cloud services. You can use any service account within
-the same project, but you must have the service account user
-permission to use the instance. If not specified,
-the Compute Engine default service account is used.
+  * Google Cloud services. You can use any service account within
+  * the same project, but you must have the service account user
+  * permission to use the instance. If not specified,
+  * the Compute Engine default service account is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#service_account NotebooksInstance#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Optional. The URIs of service account scopes to be included in Compute Engine instances.
-If not specified, the following scopes are defined:
-- https://www.googleapis.com/auth/cloud-platform
-- https://www.googleapis.com/auth/userinfo.email
+  * If not specified, the following scopes are defined:
+  * - https://www.googleapis.com/auth/cloud-platform
+  * - https://www.googleapis.com/auth/userinfo.email
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#service_account_scopes NotebooksInstance#service_account_scopes}
   */
   readonly serviceAccountScopes?: string[];
   /**
   * The name of the subnet that this instance is in.
-Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+  * Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#subnet NotebooksInstance#subnet}
   */
@@ -339,7 +339,7 @@ export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.Com
 export interface NotebooksInstanceContainerImage {
   /**
   * The path to the container image repository.
-For example: gcr.io/{project_id}/{imageName}
+  * For example: gcr.io/{project_id}/{imageName}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#repository NotebooksInstance#repository}
   */
@@ -555,25 +555,25 @@ export class NotebooksInstanceReservationAffinityOutputReference extends cdktf.C
 export interface NotebooksInstanceShieldedInstanceConfig {
   /**
   * Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
-boot integrity of the instance. The attestation is performed against the integrity policy baseline.
-This baseline is initially derived from the implicitly trusted boot image when the instance is created.
-Enabled by default.
+  * boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+  * This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+  * Enabled by default.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#enable_integrity_monitoring NotebooksInstance#enable_integrity_monitoring}
   */
   readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
-authentic software by verifying the digital signature of all boot components, and halting the boot process
-if signature verification fails.
-Disabled by default.
+  * authentic software by verifying the digital signature of all boot components, and halting the boot process
+  * if signature verification fails.
+  * Disabled by default.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#enable_secure_boot NotebooksInstance#enable_secure_boot}
   */
   readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has the vTPM enabled.
-Enabled by default.
+  * Enabled by default.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#enable_vtpm NotebooksInstance#enable_vtpm}
   */
@@ -828,7 +828,7 @@ export interface NotebooksInstanceVmImage {
   readonly imageName?: string;
   /**
   * The name of the Google Cloud project that this VM image belongs to.
-Format: projects/{project_id}
+  * Format: projects/{project_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_instance#project NotebooksInstance#project}
   */

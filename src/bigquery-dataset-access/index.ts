@@ -14,15 +14,15 @@ import * as cdktf from 'cdktf';
 export interface BigqueryDatasetAccessAConfig extends cdktf.TerraformMetaArguments {
   /**
   * A unique ID for this dataset, without the project name. The ID
-must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+  * must contain only letters (a-z, A-Z), numbers (0-9), or
+  * underscores (_). The maximum length is 1,024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
   */
   readonly datasetId: string;
   /**
   * A domain to grant access to. Any users signed in with the
-domain specified will be granted the specified access
+  * domain specified will be granted the specified access
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#domain BigqueryDatasetAccessA#domain}
   */
@@ -35,7 +35,7 @@ domain specified will be granted the specified access
   readonly groupByEmail?: string;
   /**
   * Some other type of member that appears in the IAM Policy but isn't a user,
-group, domain, or special group. For example: 'allUsers'
+  * group, domain, or special group. For example: 'allUsers'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#iam_member BigqueryDatasetAccessA#iam_member}
   */
@@ -53,36 +53,36 @@ group, domain, or special group. For example: 'allUsers'
   readonly project?: string;
   /**
   * Describes the rights granted to the user specified by the other
-member of the access object. Basic, predefined, and custom roles are
-supported. Predefined roles that have equivalent basic roles are
-swapped by the API to their basic counterparts, and will show a diff
-post-create. See
-[official docs](https://cloud.google.com/bigquery/docs/access-control).
+  * member of the access object. Basic, predefined, and custom roles are
+  * supported. Predefined roles that have equivalent basic roles are
+  * swapped by the API to their basic counterparts, and will show a diff
+  * post-create. See
+  * [official docs](https://cloud.google.com/bigquery/docs/access-control).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#role BigqueryDatasetAccessA#role}
   */
   readonly role?: string;
   /**
   * A special group to grant access to. Possible values include:
-
-
-* 'projectOwners': Owners of the enclosing project.
-
-
-* 'projectReaders': Readers of the enclosing project.
-
-
-* 'projectWriters': Writers of the enclosing project.
-
-
-* 'allAuthenticatedUsers': All authenticated BigQuery users.
+  * 
+  * 
+  * * 'projectOwners': Owners of the enclosing project.
+  * 
+  * 
+  * * 'projectReaders': Readers of the enclosing project.
+  * 
+  * 
+  * * 'projectWriters': Writers of the enclosing project.
+  * 
+  * 
+  * * 'allAuthenticatedUsers': All authenticated BigQuery users.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#special_group BigqueryDatasetAccessA#special_group}
   */
   readonly specialGroup?: string;
   /**
   * An email address of a user to grant access to. For example:
-fred@example.com
+  * fred@example.com
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#user_by_email BigqueryDatasetAccessA#user_by_email}
   */
@@ -205,7 +205,7 @@ export class BigqueryDatasetAccessDatasetDatasetAOutputReference extends cdktf.C
 export interface BigqueryDatasetAccessDatasetA {
   /**
   * Which resources in the dataset this entry applies to. Currently, only views are supported,
-but additional target types may be added in the future. Possible values: VIEWS
+  * but additional target types may be added in the future. Possible values: VIEWS
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#target_types BigqueryDatasetAccessA#target_types}
   */
@@ -308,8 +308,8 @@ export interface BigqueryDatasetAccessRoutineA {
   readonly projectId: string;
   /**
   * The ID of the routine. The ID must contain only letters (a-z,
-A-Z), numbers (0-9), or underscores (_). The maximum length
-is 256 characters.
+  * A-Z), numbers (0-9), or underscores (_). The maximum length
+  * is 256 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#routine_id BigqueryDatasetAccessA#routine_id}
   */
@@ -528,8 +528,8 @@ export interface BigqueryDatasetAccessViewA {
   readonly projectId: string;
   /**
   * The ID of the table. The ID must contain only letters (a-z,
-A-Z), numbers (0-9), or underscores (_). The maximum length
-is 1,024 characters.
+  * A-Z), numbers (0-9), or underscores (_). The maximum length
+  * is 1,024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset_access#table_id BigqueryDatasetAccessA#table_id}
   */

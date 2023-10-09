@@ -14,8 +14,8 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleIapClientConfig extends cdktf.TerraformMetaArguments {
   /**
   * Identifier of the brand to which this client
-is attached to. The format is
-'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'.
+  * is attached to. The format is
+  * 'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/iap_client#brand DataGoogleIapClient#brand}
   */

@@ -27,7 +27,7 @@ export interface ApigeeInstanceAttachmentConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * The Apigee instance associated with the Apigee environment,
-in the format 'organizations/{{org_name}}/instances/{{instance_name}}'.
+  * in the format 'organizations/{{org_name}}/instances/{{instance_name}}'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_instance_attachment#instance_id ApigeeInstanceAttachment#instance_id}
   */

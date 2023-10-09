@@ -998,7 +998,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 Labels to apply to this membership.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#labels GkeHubMembership#labels}

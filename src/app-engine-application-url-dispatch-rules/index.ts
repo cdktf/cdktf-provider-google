@@ -39,21 +39,21 @@ export interface AppEngineApplicationUrlDispatchRulesConfig extends cdktf.Terraf
 export interface AppEngineApplicationUrlDispatchRulesDispatchRules {
   /**
   * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
-Defaults to matching all domains: "*".
+  * Defaults to matching all domains: "*".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_application_url_dispatch_rules#domain AppEngineApplicationUrlDispatchRules#domain}
   */
   readonly domain?: string;
   /**
   * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
-The sum of the lengths of the domain and path may not exceed 100 characters.
+  * The sum of the lengths of the domain and path may not exceed 100 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_application_url_dispatch_rules#path AppEngineApplicationUrlDispatchRules#path}
   */
   readonly path: string;
   /**
   * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
-The sum of the lengths of the domain and path may not exceed 100 characters.
+  * The sum of the lengths of the domain and path may not exceed 100 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_application_url_dispatch_rules#service AppEngineApplicationUrlDispatchRules#service}
   */

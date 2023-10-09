@@ -14,19 +14,19 @@ import * as cdktf from 'cdktf';
 export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. API Proxy type supported by the environment. The type can be set when creating
-the Environment and cannot be changed. Possible values: ["API_PROXY_TYPE_UNSPECIFIED", "PROGRAMMABLE", "CONFIGURABLE"]
+  * the Environment and cannot be changed. Possible values: ["API_PROXY_TYPE_UNSPECIFIED", "PROGRAMMABLE", "CONFIGURABLE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_environment#api_proxy_type ApigeeEnvironment#api_proxy_type}
   */
   readonly apiProxyType?: string;
   /**
   * Optional. Deployment type supported by the environment. The deployment type can be
-set when creating the environment and cannot be changed. When you enable archive
-deployment, you will be prevented from performing a subset of actions within the
-environment, including:
-Managing the deployment of API proxy or shared flow revisions;
-Creating, updating, or deleting resource files;
-Creating, updating, or deleting target servers. Possible values: ["DEPLOYMENT_TYPE_UNSPECIFIED", "PROXY", "ARCHIVE"]
+  * set when creating the environment and cannot be changed. When you enable archive
+  * deployment, you will be prevented from performing a subset of actions within the
+  * environment, including:
+  * Managing the deployment of API proxy or shared flow revisions;
+  * Creating, updating, or deleting resource files;
+  * Creating, updating, or deleting target servers. Possible values: ["DEPLOYMENT_TYPE_UNSPECIFIED", "PROXY", "ARCHIVE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_environment#deployment_type ApigeeEnvironment#deployment_type}
   */
@@ -58,7 +58,7 @@ Creating, updating, or deleting target servers. Possible values: ["DEPLOYMENT_TY
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee environment,
-in the format 'organizations/{{org_name}}'.
+  * in the format 'organizations/{{org_name}}'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_environment#org_id ApigeeEnvironment#org_id}
   */
@@ -79,16 +79,16 @@ in the format 'organizations/{{org_name}}'.
 export interface ApigeeEnvironmentNodeConfig {
   /**
   * The maximum total number of gateway nodes that the is reserved for all instances that
-has the specified environment. If not specified, the default is determined by the
-recommended maximum number of nodes for that gateway.
+  * has the specified environment. If not specified, the default is determined by the
+  * recommended maximum number of nodes for that gateway.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_environment#max_node_count ApigeeEnvironment#max_node_count}
   */
   readonly maxNodeCount?: string;
   /**
   * The minimum total number of gateway nodes that the is reserved for all instances that
-has the specified environment. If not specified, the default is determined by the
-recommended minimum number of nodes for that gateway.
+  * has the specified environment. If not specified, the default is determined by the
+  * recommended minimum number of nodes for that gateway.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_environment#min_node_count ApigeeEnvironment#min_node_count}
   */

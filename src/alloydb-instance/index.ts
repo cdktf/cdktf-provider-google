@@ -14,27 +14,27 @@ import * as cdktf from 'cdktf';
 export interface AlloydbInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels.
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_instance#annotations AlloydbInstance#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * 'Availability type of an Instance. Defaults to REGIONAL for both primary and read instances.
-Note that primary and read instances can have different availability types.
-Only READ_POOL instance supports ZONAL type. Users can't specify the zone for READ_POOL instance.
-Zone is automatically chosen from the list of zones in the region specified.
-Read pool of size 1 can only have zonal availability. Read pools with node count of 2 or more
-can have regional availability (nodes are present in 2 or more zones in a region).' Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"]
+  * Note that primary and read instances can have different availability types.
+  * Only READ_POOL instance supports ZONAL type. Users can't specify the zone for READ_POOL instance.
+  * Zone is automatically chosen from the list of zones in the region specified.
+  * Read pool of size 1 can only have zonal availability. Read pools with node count of 2 or more
+  * can have regional availability (nodes are present in 2 or more zones in a region).' Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_instance#availability_type AlloydbInstance#availability_type}
   */
   readonly availabilityType?: string;
   /**
   * Identifies the alloydb cluster. Must be in the format
-'projects/{project}/locations/{location}/clusters/{cluster_id}'
+  * 'projects/{project}/locations/{location}/clusters/{cluster_id}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_instance#cluster AlloydbInstance#cluster}
   */
@@ -78,9 +78,9 @@ can have regional availability (nodes are present in 2 or more zones in a region
   readonly instanceType: string;
   /**
   * User-defined labels for the alloydb instance.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_instance#labels AlloydbInstance#labels}
   */

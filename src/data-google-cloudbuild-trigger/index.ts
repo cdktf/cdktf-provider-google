@@ -21,7 +21,7 @@ export interface DataGoogleCloudbuildTriggerConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger.
-If not specified, "global" is used.
+  * If not specified, "global" is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/cloudbuild_trigger#location DataGoogleCloudbuildTrigger#location}
   */

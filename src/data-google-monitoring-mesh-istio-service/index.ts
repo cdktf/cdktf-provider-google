@@ -21,7 +21,7 @@ export interface DataGoogleMonitoringMeshIstioServiceConfig extends cdktf.Terraf
   readonly id?: string;
   /**
   * Identifier for the mesh in which this Istio service is defined.
-                        Corresponds to the meshUid metric label in Istio metrics.
+  *                         Corresponds to the meshUid metric label in Istio metrics.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_mesh_istio_service#mesh_uid DataGoogleMonitoringMeshIstioService#mesh_uid}
   */
@@ -32,14 +32,14 @@ export interface DataGoogleMonitoringMeshIstioServiceConfig extends cdktf.Terraf
   readonly project?: string;
   /**
   * The name of the Istio service underlying this service. 
-                        Corresponds to the destination_service_name metric label in Istio metrics.
+  *                         Corresponds to the destination_service_name metric label in Istio metrics.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_mesh_istio_service#service_name DataGoogleMonitoringMeshIstioService#service_name}
   */
   readonly serviceName: string;
   /**
   * The namespace of the Istio service underlying this service.
-                        Corresponds to the destination_service_namespace metric label in Istio metrics.
+  *                         Corresponds to the destination_service_namespace metric label in Istio metrics.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_mesh_istio_service#service_namespace DataGoogleMonitoringMeshIstioService#service_namespace}
   */

@@ -291,34 +291,34 @@ export class CloudRunDomainMappingStatusList extends cdktf.ComplexList {
 export interface CloudRunDomainMappingMetadata {
   /**
   * Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
-
-**Note**: The Cloud Run API may add additional annotations that were not provided in your config.
-If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
-or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
+  * may be set by external tools to store and retrieve arbitrary metadata. More
+  * info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
+  * 
+  * **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
+  * If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
+  * or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#annotations CloudRunDomainMapping#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Map of string keys and values that can be used to organize and categorize
-(scope and select) objects. May match selectors of replication controllers
-and routes.
-More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * (scope and select) objects. May match selectors of replication controllers
+  * and routes.
+  * More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#labels CloudRunDomainMapping#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * In Cloud Run the namespace must be equal to either the
-project ID or project number.
+  * project ID or project number.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#namespace CloudRunDomainMapping#namespace}
   */
@@ -473,16 +473,16 @@ export interface CloudRunDomainMappingSpec {
   readonly certificateMode?: string;
   /**
   * If set, the mapping will override any mapping set before this spec was set.
-It is recommended that the user leaves this empty to receive an error
-warning about a potential conflict and only set it once the respective UI
-has given such a warning.
+  * It is recommended that the user leaves this empty to receive an error
+  * warning about a potential conflict and only set it once the respective UI
+  * has given such a warning.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#force_override CloudRunDomainMapping#force_override}
   */
   readonly forceOverride?: boolean | cdktf.IResolvable;
   /**
   * The name of the Cloud Run Service that this DomainMapping applies to.
-The route must exist.
+  * The route must exist.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_domain_mapping#route_name CloudRunDomainMapping#route_name}
   */

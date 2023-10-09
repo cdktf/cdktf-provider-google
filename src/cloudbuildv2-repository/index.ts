@@ -14,9 +14,9 @@ import * as cdktf from 'cdktf';
 export interface Cloudbuildv2RepositoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Allows clients to store small amounts of arbitrary data.
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field `effective_annotations` for all of the annotations present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field `effective_annotations` for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudbuildv2_repository#annotations Cloudbuildv2Repository#annotations}
   */

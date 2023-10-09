@@ -14,24 +14,24 @@ import * as cdktf from 'cdktf';
 export interface DataCatalogTaxonomyConfig extends cdktf.TerraformMetaArguments {
   /**
   * A list of policy types that are activated for this taxonomy. If not set,
-defaults to an empty list. Possible values: ["POLICY_TYPE_UNSPECIFIED", "FINE_GRAINED_ACCESS_CONTROL"]
+  * defaults to an empty list. Possible values: ["POLICY_TYPE_UNSPECIFIED", "FINE_GRAINED_ACCESS_CONTROL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_taxonomy#activated_policy_types DataCatalogTaxonomy#activated_policy_types}
   */
   readonly activatedPolicyTypes?: string[];
   /**
   * Description of this taxonomy. It must: contain only unicode characters,
-tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
-long when encoded in UTF-8. If not set, defaults to an empty description.
+  * tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
+  * long when encoded in UTF-8. If not set, defaults to an empty description.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_taxonomy#description DataCatalogTaxonomy#description}
   */
   readonly description?: string;
   /**
   * User defined name of this taxonomy.
-It must: contain only unicode letters, numbers, underscores, dashes
-and spaces; not start or end with spaces; and be at most 200 bytes
-long when encoded in UTF-8.
+  * It must: contain only unicode letters, numbers, underscores, dashes
+  * and spaces; not start or end with spaces; and be at most 200 bytes
+  * long when encoded in UTF-8.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_taxonomy#display_name DataCatalogTaxonomy#display_name}
   */

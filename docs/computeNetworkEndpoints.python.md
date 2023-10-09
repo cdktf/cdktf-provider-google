@@ -1098,7 +1098,7 @@ computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.ipAddress">ip_address</a></code> | <code>str</code> | IPv4 address of network endpoint. |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.instance">instance</a></code> | <code>str</code> | The name for a specific VM instance that the IP address belongs to. |
-| <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Port number of network endpoint. *Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'. |
+| <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Port number of network endpoint. **Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'. |
 
 ---
 
@@ -1145,7 +1145,7 @@ port: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Port number of network endpoint. *Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'.
+Port number of network endpoint. **Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_network_endpoints#port ComputeNetworkEndpoints#port}
 

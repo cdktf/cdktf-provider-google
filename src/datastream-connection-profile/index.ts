@@ -33,9 +33,9 @@ export interface DatastreamConnectionProfileConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * Labels.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_connection_profile#labels DatastreamConnectionProfile#labels}
   */
@@ -410,24 +410,24 @@ export class DatastreamConnectionProfileGcsProfileOutputReference extends cdktf.
 export interface DatastreamConnectionProfileMysqlProfileSslConfig {
   /**
   * PEM-encoded certificate of the CA that signed the source database
-server's certificate.
+  * server's certificate.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_connection_profile#ca_certificate DatastreamConnectionProfile#ca_certificate}
   */
   readonly caCertificate?: string;
   /**
   * PEM-encoded certificate that will be used by the replica to
-authenticate against the source database server. If this field
-is used then the 'clientKey' and the 'caCertificate' fields are
-mandatory.
+  * authenticate against the source database server. If this field
+  * is used then the 'clientKey' and the 'caCertificate' fields are
+  * mandatory.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_connection_profile#client_certificate DatastreamConnectionProfile#client_certificate}
   */
   readonly clientCertificate?: string;
   /**
   * PEM-encoded private key associated with the Client Certificate.
-If this field is used then the 'client_certificate' and the
-'ca_certificate' fields are mandatory.
+  * If this field is used then the 'client_certificate' and the
+  * 'ca_certificate' fields are mandatory.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_connection_profile#client_key DatastreamConnectionProfile#client_key}
   */

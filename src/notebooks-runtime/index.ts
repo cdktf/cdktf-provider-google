@@ -128,15 +128,15 @@ export class NotebooksRuntimeMetricsList extends cdktf.ComplexList {
 export interface NotebooksRuntimeAccessConfig {
   /**
   * The type of access mode this instance. For valid values, see
-'https://cloud.google.com/vertex-ai/docs/workbench/reference/
-rest/v1/projects.locations.runtimes#RuntimeAccessType'.
+  * 'https://cloud.google.com/vertex-ai/docs/workbench/reference/
+  * rest/v1/projects.locations.runtimes#RuntimeAccessType'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#access_type NotebooksRuntime#access_type}
   */
   readonly accessType?: string;
   /**
   * The owner of this runtime after creation. Format: 'alias@example.com'.
-Currently supports one owner only.
+  * Currently supports one owner only.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#runtime_owner NotebooksRuntime#runtime_owner}
   */
@@ -232,7 +232,7 @@ export class NotebooksRuntimeAccessConfigOutputReference extends cdktf.ComplexOb
 export interface NotebooksRuntimeSoftwareConfigKernels {
   /**
   * The path to the container image repository.
-For example: gcr.io/{project_id}/{imageName}
+  * For example: gcr.io/{project_id}/{imageName}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
   */
@@ -358,7 +358,7 @@ export class NotebooksRuntimeSoftwareConfigKernelsList extends cdktf.ComplexList
 export interface NotebooksRuntimeSoftwareConfig {
   /**
   * Specify a custom Cloud Storage path where the GPU driver is stored.
-If not specified, we'll automatically choose from official GPU drivers.
+  * If not specified, we'll automatically choose from official GPU drivers.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#custom_gpu_driver_path NotebooksRuntime#custom_gpu_driver_path}
   */
@@ -371,14 +371,14 @@ If not specified, we'll automatically choose from official GPU drivers.
   readonly enableHealthMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Runtime will automatically shutdown after idle_shutdown_time.
-Default: True
+  * Default: True
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#idle_shutdown NotebooksRuntime#idle_shutdown}
   */
   readonly idleShutdown?: boolean | cdktf.IResolvable;
   /**
   * Time in minutes to wait before shuting down runtime.
-Default: 180 minutes
+  * Default: 180 minutes
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#idle_shutdown_timeout NotebooksRuntime#idle_shutdown_timeout}
   */
@@ -391,15 +391,15 @@ Default: 180 minutes
   readonly installGpuDriver?: boolean | cdktf.IResolvable;
   /**
   * Cron expression in UTC timezone for schedule instance auto upgrade.
-Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+  * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#notebook_upgrade_schedule NotebooksRuntime#notebook_upgrade_schedule}
   */
   readonly notebookUpgradeSchedule?: string;
   /**
   * Path to a Bash script that automatically runs after a notebook instance
-fully boots up. The path must be a URL or
-Cloud Storage path (gs://path-to-file/file-name).
+  * fully boots up. The path must be a URL or
+  * Cloud Storage path (gs://path-to-file/file-name).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
   */
@@ -803,8 +803,8 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorCo
   readonly coreCount?: number;
   /**
   * Accelerator model. For valid values, see
-'https://cloud.google.com/vertex-ai/docs/workbench/reference/
-rest/v1/projects.locations.runtimes#AcceleratorType'
+  * 'https://cloud.google.com/vertex-ai/docs/workbench/reference/
+  * rest/v1/projects.locations.runtimes#AcceleratorType'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
   */
@@ -895,7 +895,7 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig
 export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages {
   /**
   * The path to the container image repository.
-For example: gcr.io/{project_id}/{imageName}
+  * For example: gcr.io/{project_id}/{imageName}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
   */
@@ -1027,35 +1027,35 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskIniti
   readonly description?: string;
   /**
   * Specifies the disk name. If not specified, the default is
-to use the name of the instance. If the disk with the
-instance name exists already in the given zone/region, a
-new name will be automatically generated.
+  * to use the name of the instance. If the disk with the
+  * instance name exists already in the given zone/region, a
+  * new name will be automatically generated.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#disk_name NotebooksRuntime#disk_name}
   */
   readonly diskName?: string;
   /**
   * Specifies the size of the disk in base-2 GB. If not
-specified, the disk will be the same size as the image
-(usually 10GB). If specified, the size must be equal to
-or larger than 10GB. Default 100 GB.
+  * specified, the disk will be the same size as the image
+  * (usually 10GB). If specified, the size must be equal to
+  * or larger than 10GB. Default 100 GB.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#disk_size_gb NotebooksRuntime#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
   * The type of the boot disk attached to this runtime,
-defaults to standard persistent disk. For valid values,
-see 'https://cloud.google.com/vertex-ai/docs/workbench/
-reference/rest/v1/projects.locations.runtimes#disktype'
+  * defaults to standard persistent disk. For valid values,
+  * see 'https://cloud.google.com/vertex-ai/docs/workbench/
+  * reference/rest/v1/projects.locations.runtimes#disktype'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#disk_type NotebooksRuntime#disk_type}
   */
   readonly diskType?: string;
   /**
   * Labels to apply to this disk. These can be later modified
-by the disks.setLabels method. This field is only
-applicable for persistent disks.
+  * by the disks.setLabels method. This field is only
+  * applicable for persistent disks.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
   */
@@ -1215,33 +1215,33 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializ
 export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk {
   /**
   * "Specifies the disk interface to use for attaching this disk,
-which is either SCSI or NVME. The default is SCSI. Persistent
-disks must always use SCSI and the request will fail if you attempt
-to attach a persistent disk in any other format than SCSI. Local SSDs
-can use either NVME or SCSI. For performance characteristics of SCSI
-over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
+  * which is either SCSI or NVME. The default is SCSI. Persistent
+  * disks must always use SCSI and the request will fail if you attempt
+  * to attach a persistent disk in any other format than SCSI. Local SSDs
+  * can use either NVME or SCSI. For performance characteristics of SCSI
+  * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#interface NotebooksRuntime#interface}
   */
   readonly interface?: string;
   /**
   * The mode in which to attach this disk, either READ_WRITE
-or READ_ONLY. If not specified, the default is to attach
-the disk in READ_WRITE mode.
+  * or READ_ONLY. If not specified, the default is to attach
+  * the disk in READ_WRITE mode.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#mode NotebooksRuntime#mode}
   */
   readonly mode?: string;
   /**
   * Specifies a valid partial or full URL to an existing
-Persistent Disk resource.
+  * Persistent Disk resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#source NotebooksRuntime#source}
   */
   readonly source?: string;
   /**
   * Specifies the type of the disk, either SCRATCH or PERSISTENT.
-If not specified, the default is PERSISTENT.
+  * If not specified, the default is PERSISTENT.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
   */
@@ -1442,10 +1442,10 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskOutputRef
 export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
   /**
   * The Cloud KMS resource identifier of the customer-managed
-encryption key used to protect a resource, such as a disks.
-It has the following format:
-'projects/{PROJECT_ID}/locations/{REGION}/keyRings/
-{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}'
+  * encryption key used to protect a resource, such as a disks.
+  * It has the following format:
+  * 'projects/{PROJECT_ID}/locations/{REGION}/keyRings/
+  * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#kms_key NotebooksRuntime#kms_key}
   */
@@ -1513,28 +1513,28 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigO
 export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig {
   /**
   * Defines whether the instance has integrity monitoring enabled.
-Enables monitoring and attestation of the boot integrity of
-the instance. The attestation is performed against the
-integrity policy baseline. This baseline is initially derived
-from the implicitly trusted boot image when the instance is
-created. Enabled by default.
+  * Enables monitoring and attestation of the boot integrity of
+  * the instance. The attestation is performed against the
+  * integrity policy baseline. This baseline is initially derived
+  * from the implicitly trusted boot image when the instance is
+  * created. Enabled by default.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#enable_integrity_monitoring NotebooksRuntime#enable_integrity_monitoring}
   */
   readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has Secure Boot enabled.Secure
-Boot helps ensure that the system only runs authentic software
-by verifying the digital signature of all boot components, and
-halting the boot process if signature verification fails.
-Disabled by default.
+  * Boot helps ensure that the system only runs authentic software
+  * by verifying the digital signature of all boot components, and
+  * halting the boot process if signature verification fails.
+  * Disabled by default.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#enable_secure_boot NotebooksRuntime#enable_secure_boot}
   */
   readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has the vTPM enabled. Enabled by
-default.
+  * default.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#enable_vtpm NotebooksRuntime#enable_vtpm}
   */
@@ -1648,22 +1648,22 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceC
 export interface NotebooksRuntimeVirtualMachineVirtualMachineConfig {
   /**
   * If true, runtime will only have internal IP addresses. By default,
-runtimes are not restricted to internal IP addresses, and will
-have ephemeral external IP addresses assigned to each vm. This
-'internal_ip_only' restriction can only be enabled for subnetwork
-enabled networks, and all dependencies must be configured to be
-accessible without external IP addresses.
+  * runtimes are not restricted to internal IP addresses, and will
+  * have ephemeral external IP addresses assigned to each vm. This
+  * 'internal_ip_only' restriction can only be enabled for subnetwork
+  * enabled networks, and all dependencies must be configured to be
+  * accessible without external IP addresses.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#internal_ip_only NotebooksRuntime#internal_ip_only}
   */
   readonly internalIpOnly?: boolean | cdktf.IResolvable;
   /**
   * The labels to associate with this runtime. Label **keys** must
-contain 1 to 63 characters, and must conform to [RFC 1035]
-(https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be
-empty, but, if present, must contain 1 to 63 characters, and must
-conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No
-more than 32 labels can be associated with a cluster.
+  * contain 1 to 63 characters, and must conform to [RFC 1035]
+  * (https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be
+  * empty, but, if present, must contain 1 to 63 characters, and must
+  * conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No
+  * more than 32 labels can be associated with a cluster.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
   */
@@ -1676,61 +1676,61 @@ more than 32 labels can be associated with a cluster.
   readonly machineType: string;
   /**
   * The Compute Engine metadata entries to add to virtual machine.
-(see [Project and instance metadata](https://cloud.google.com
-/compute/docs/storing-retrieving-metadata#project_and_instance
-_metadata)).
+  * (see [Project and instance metadata](https://cloud.google.com
+  * /compute/docs/storing-retrieving-metadata#project_and_instance
+  * _metadata)).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#metadata NotebooksRuntime#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
   * The Compute Engine network to be used for machine communications.
-Cannot be specified with subnetwork. If neither 'network' nor
-'subnet' is specified, the "default" network of the project is
-used, if it exists. A full URL or partial URI. Examples:
-  * 'https://www.googleapis.com/compute/v1/projects/[project_id]/
-  regions/global/default'
-  * 'projects/[project_id]/regions/global/default'
-Runtimes are managed resources inside Google Infrastructure.
-Runtimes support the following network configurations:
-  * Google Managed Network (Network & subnet are empty)
-  * Consumer Project VPC (network & subnet are required). Requires
-  configuring Private Service Access.
-  * Shared VPC (network & subnet are required). Requires
-  configuring Private Service Access.
+  * Cannot be specified with subnetwork. If neither 'network' nor
+  * 'subnet' is specified, the "default" network of the project is
+  * used, if it exists. A full URL or partial URI. Examples:
+  *   * 'https://www.googleapis.com/compute/v1/projects/[project_id]/
+  *   regions/global/default'
+  *   * 'projects/[project_id]/regions/global/default'
+  * Runtimes are managed resources inside Google Infrastructure.
+  * Runtimes support the following network configurations:
+  *   * Google Managed Network (Network & subnet are empty)
+  *   * Consumer Project VPC (network & subnet are required). Requires
+  *   configuring Private Service Access.
+  *   * Shared VPC (network & subnet are required). Requires
+  *   configuring Private Service Access.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
   */
   readonly network?: string;
   /**
   * The type of vNIC to be used on this interface. This may be gVNIC
-or VirtioNet. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+  * or VirtioNet. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#nic_type NotebooksRuntime#nic_type}
   */
   readonly nicType?: string;
   /**
   * Reserved IP Range name is used for VPC Peering. The
-subnetwork allocation will use the range *name* if it's assigned.
+  * subnetwork allocation will use the range *name* if it's assigned.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
   */
   readonly reservedIpRange?: string;
   /**
   * The Compute Engine subnetwork to be used for machine
-communications. Cannot be specified with network. A full URL or
-partial URI are valid. Examples:
-  * 'https://www.googleapis.com/compute/v1/projects/[project_id]/
-  regions/us-east1/subnetworks/sub0'
-  * 'projects/[project_id]/regions/us-east1/subnetworks/sub0'
+  * communications. Cannot be specified with network. A full URL or
+  * partial URI are valid. Examples:
+  *   * 'https://www.googleapis.com/compute/v1/projects/[project_id]/
+  *   regions/us-east1/subnetworks/sub0'
+  *   * 'projects/[project_id]/regions/us-east1/subnetworks/sub0'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
   */
   readonly subnet?: string;
   /**
   * The Compute Engine tags to add to runtime (see [Tagging instances]
-(https://cloud.google.com/compute/docs/
-label-or-tag-resources#tags)).
+  * (https://cloud.google.com/compute/docs/
+  * label-or-tag-resources#tags)).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_runtime#tags NotebooksRuntime#tags}
   */

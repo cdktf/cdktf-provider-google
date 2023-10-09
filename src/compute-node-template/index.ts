@@ -39,14 +39,14 @@ export interface ComputeNodeTemplateConfig extends cdktf.TerraformMetaArguments 
   readonly name?: string;
   /**
   * Labels to use for node affinity, which will be used in
-instance scheduling.
+  * instance scheduling.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_node_template#node_affinity_labels ComputeNodeTemplate#node_affinity_labels}
   */
   readonly nodeAffinityLabels?: { [key: string]: string };
   /**
   * Node type to use for nodes group that are created from this template.
-Only one of nodeTypeFlexibility and nodeType can be specified.
+  * Only one of nodeTypeFlexibility and nodeType can be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_node_template#node_type ComputeNodeTemplate#node_type}
   */
@@ -57,7 +57,7 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
   readonly project?: string;
   /**
   * Region where nodes using the node template will be created.
-If it is not provided, the provider region is used.
+  * If it is not provided, the provider region is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_node_template#region ComputeNodeTemplate#region}
   */
@@ -185,17 +185,17 @@ export class ComputeNodeTemplateNodeTypeFlexibilityOutputReference extends cdktf
 export interface ComputeNodeTemplateServerBinding {
   /**
   * Type of server binding policy. If 'RESTART_NODE_ON_ANY_SERVER',
-nodes using this template will restart on any physical server
-following a maintenance event.
-
-If 'RESTART_NODE_ON_MINIMAL_SERVER', nodes using this template
-will restart on the same physical server following a maintenance
-event, instead of being live migrated to or restarted on a new
-physical server. This option may be useful if you are using
-software licenses tied to the underlying server characteristics
-such as physical sockets or cores, to avoid the need for
-additional licenses when maintenance occurs. However, VMs on such
-nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"]
+  * nodes using this template will restart on any physical server
+  * following a maintenance event.
+  * 
+  * If 'RESTART_NODE_ON_MINIMAL_SERVER', nodes using this template
+  * will restart on the same physical server following a maintenance
+  * event, instead of being live migrated to or restarted on a new
+  * physical server. This option may be useful if you are using
+  * software licenses tied to the underlying server characteristics
+  * such as physical sockets or cores, to avoid the need for
+  * additional licenses when maintenance occurs. However, VMs on such
+  * nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_node_template#type ComputeNodeTemplate#type}
   */

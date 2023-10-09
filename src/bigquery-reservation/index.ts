@@ -33,22 +33,22 @@ export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * If false, any query using this reservation will use idle slots from other reservations within
-the same admin project. If true, a query using this reservation will execute with the slot
-capacity specified above at most.
+  * the same admin project. If true, a query using this reservation will execute with the slot
+  * capacity specified above at most.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_reservation#ignore_idle_slots BigqueryReservation#ignore_idle_slots}
   */
   readonly ignoreIdleSlots?: boolean | cdktf.IResolvable;
   /**
   * The geographic location where the transfer config should reside.
-Examples: US, EU, asia-northeast1. The default value is US.
+  * Examples: US, EU, asia-northeast1. The default value is US.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_reservation#location BigqueryReservation#location}
   */
   readonly location?: string;
   /**
   * Applicable only for reservations located within one of the BigQuery multi-regions (US or EU).
-If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.
+  * If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_reservation#multi_region_auxiliary BigqueryReservation#multi_region_auxiliary}
   */
@@ -65,7 +65,7 @@ If set to true, this reservation is placed in the organization's secondary regio
   readonly project?: string;
   /**
   * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
-unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+  * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_reservation#slot_capacity BigqueryReservation#slot_capacity}
   */

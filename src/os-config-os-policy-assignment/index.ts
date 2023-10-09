@@ -560,8 +560,8 @@ export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilt
   readonly osShortName: string;
   /**
   * The OS version
-Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of '7', specify the following value for this field '7.*'
-An empty string matches all OS versions.
+  * Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of '7', specify the following value for this field '7.*'
+  * An empty string matches all OS versions.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_os_policy_assignment#os_version OsConfigOsPolicyAssignment#os_version}
   */
@@ -1439,7 +1439,7 @@ export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecVali
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFile {
   /**
   * Defaults to false. When false, files are subject to validations based on the file type:
-Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+  * Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
   */
@@ -2662,7 +2662,7 @@ export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSo
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSource {
   /**
   * Defaults to false. When false, files are subject to validations based on the file type:
-Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+  * Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
   */
@@ -3186,7 +3186,7 @@ export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSo
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSource {
   /**
   * Defaults to false. When false, files are subject to validations based on the file type:
-Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+  * Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
   */
@@ -3646,7 +3646,7 @@ export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSo
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSource {
   /**
   * Defaults to false. When false, files are subject to validations based on the file type:
-Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+  * Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
   */
@@ -5006,11 +5006,11 @@ export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesReposito
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources {
   /**
   * The id of the resource with the following restrictions:
-* Must contain only lowercase letters, numbers, and hyphens.
-* Must start with a letter.
-* Must be between 1-63 characters.
-* Must end with a number or a letter.
-* Must be unique within the OS policy.
+  * * Must contain only lowercase letters, numbers, and hyphens.
+  * * Must start with a letter.
+  * * Must be between 1-63 characters.
+  * * Must end with a number or a letter.
+  * * Must be unique within the OS policy.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
   *
@@ -5363,11 +5363,11 @@ export interface OsConfigOsPolicyAssignmentOsPolicies {
   readonly description?: string;
   /**
   * The id of the OS policy with the following restrictions:
-* Must contain only lowercase letters, numbers, and hyphens.
-* Must start with a letter.
-* Must be between 1-63 characters.
-* Must end with a number or a letter.
-* Must be unique within the assignment.
+  * * Must contain only lowercase letters, numbers, and hyphens.
+  * * Must start with a letter.
+  * * Must be between 1-63 characters.
+  * * Must end with a number or a letter.
+  * * Must be unique within the assignment.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
   *

@@ -20,7 +20,7 @@ export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   /**
   * Display information such as title and description. A short name to identify the entry,
-for example, "Analytics Data - Jan 2011".
+  * for example, "Analytics Data - Jan 2011".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_entry#display_name DataCatalogEntry#display_name}
   */
@@ -46,45 +46,45 @@ for example, "Analytics Data - Jan 2011".
   readonly id?: string;
   /**
   * The resource this metadata entry refers to.
-For Google Cloud Platform resources, linkedResource is the full name of the resource.
-For example, the linkedResource for a table resource from BigQuery is:
-//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
-Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
-this field is optional and defaults to an empty string.
+  * For Google Cloud Platform resources, linkedResource is the full name of the resource.
+  * For example, the linkedResource for a table resource from BigQuery is:
+  * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
+  * Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
+  * this field is optional and defaults to an empty string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_entry#linked_resource DataCatalogEntry#linked_resource}
   */
   readonly linkedResource?: string;
   /**
   * Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema
-attached to it. See
-https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
-for what fields this schema can contain.
+  * attached to it. See
+  * https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
+  * for what fields this schema can contain.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_entry#schema DataCatalogEntry#schema}
   */
   readonly schema?: string;
   /**
   * The type of the entry. Only used for Entries with types in the EntryType enum.
-Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values: ["FILESET"]
+  * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values: ["FILESET"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_entry#type DataCatalogEntry#type}
   */
   readonly type?: string;
   /**
   * This field indicates the entry's source system that Data Catalog does not integrate with.
-userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
-and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+  * userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
+  * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_entry#user_specified_system DataCatalogEntry#user_specified_system}
   */
   readonly userSpecifiedSystem?: string;
   /**
   * Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
-When creating an entry, users should check the enum values first, if nothing matches the entry
-to be created, then provide a custom value, for example "my_special_type".
-userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
-numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+  * When creating an entry, users should check the enum values first, if nothing matches the entry
+  * to be created, then provide a custom value, for example "my_special_type".
+  * userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
+  * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_entry#user_specified_type DataCatalogEntry#user_specified_type}
   */
@@ -452,17 +452,17 @@ export class DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsList extends cdktf.
 export interface DataCatalogEntryGcsFilesetSpec {
   /**
   * Patterns to identify a set of files in Google Cloud Storage.
-See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
-for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
-
-* gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
-* gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
-* gs://bucket_name/file*: matches files prefixed by file in bucket_name
-* gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
-* gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
-* gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
-* gs://bucket_name/a/* /b: matches all files in bucket_name that match a/* /b pattern, such as a/c/b, a/d/b
-* gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
+  * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
+  * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
+  * 
+  * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
+  * * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
+  * * gs://bucket_name/file*: matches files prefixed by file in bucket_name
+  * * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
+  * * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
+  * * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
+  * * gs://bucket_name/a/* /b: matches all files in bucket_name that match a/* /b pattern, such as a/c/b, a/d/b
+  * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_entry#file_patterns DataCatalogEntry#file_patterns}
    *

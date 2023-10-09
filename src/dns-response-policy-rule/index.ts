@@ -69,7 +69,7 @@ export interface DnsResponsePolicyRuleLocalDataLocalDatas {
   readonly rrdatas?: string[];
   /**
   * Number of seconds that this ResourceRecordSet can be cached by
-resolvers.
+  * resolvers.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dns_response_policy_rule#ttl DnsResponsePolicyRule#ttl}
   */

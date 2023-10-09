@@ -14,11 +14,11 @@ import * as cdktf from 'cdktf';
 export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The deletion policy for the secret version. Setting 'ABANDON' allows the resource
-to be abandoned rather than deleted. Setting 'DISABLE' allows the resource to be
-disabled rather than deleted. Default is 'DELETE'. Possible values are:
-  * DELETE
-  * DISABLE
-  * ABANDON
+  * to be abandoned rather than deleted. Setting 'DISABLE' allows the resource to be
+  * disabled rather than deleted. Default is 'DELETE'. Possible values are:
+  *   * DELETE
+  *   * DISABLE
+  *   * ABANDON
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/secret_manager_secret_version#deletion_policy SecretManagerSecretVersion#deletion_policy}
   */

@@ -14,8 +14,8 @@ import * as cdktf from 'cdktf';
 export interface ProjectAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
   /**
   * The asymmetric crypto key version to use for signing approval requests.
-Empty active_key_version indicates that a Google-managed key should be used for signing.
-This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+  * Empty active_key_version indicates that a Google-managed key should be used for signing.
+  * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/project_access_approval_settings#active_key_version ProjectAccessApprovalSettings#active_key_version}
   */
@@ -29,8 +29,8 @@ This property will be ignored if set by an ancestor of the resource, and new non
   readonly id?: string;
   /**
   * A list of email addresses to which notifications relating to approval requests should be sent.
-Notifications relating to a resource will be sent to all emails in the settings of ancestor
-resources of that resource. A maximum of 50 email addresses are allowed.
+  * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+  * resources of that resource. A maximum of 50 email addresses are allowed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/project_access_approval_settings#notification_emails ProjectAccessApprovalSettings#notification_emails}
   */
@@ -63,16 +63,16 @@ resources of that resource. A maximum of 50 email addresses are allowed.
 export interface ProjectAccessApprovalSettingsEnrolledServices {
   /**
   * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
-  all
-  appengine.googleapis.com
-  bigquery.googleapis.com
-  bigtable.googleapis.com
-  cloudkms.googleapis.com
-  compute.googleapis.com
-  dataflow.googleapis.com
-  iam.googleapis.com
-  pubsub.googleapis.com
-  storage.googleapis.com
+  *   all
+  *   appengine.googleapis.com
+  *   bigquery.googleapis.com
+  *   bigtable.googleapis.com
+  *   cloudkms.googleapis.com
+  *   compute.googleapis.com
+  *   dataflow.googleapis.com
+  *   iam.googleapis.com
+  *   pubsub.googleapis.com
+  *   storage.googleapis.com
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/project_access_approval_settings#cloud_product ProjectAccessApprovalSettings#cloud_product}
   */

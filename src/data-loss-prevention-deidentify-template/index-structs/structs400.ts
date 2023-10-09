@@ -2082,29 +2082,29 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransform
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig {
   /**
   * Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
-such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
-strings, and 0 for digits.
+  * such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
+  * strings, and 0 for digits.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#masking_character DataLossPreventionDeidentifyTemplate#masking_character}
   */
   readonly maskingCharacter?: string;
   /**
   * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
-If number_to_mask is negative, this denotes inverse masking. Cloud DLP masks all but a number of characters. For example, suppose you have the following values:
-- 'masking_character' is *
-- 'number_to_mask' is -4
-- 'reverse_order' is false
-- 'characters_to_ignore' includes -
-- Input string is 1234-5678-9012-3456
-
-The resulting de-identified string is ****-****-****-3456. Cloud DLP masks all but the last four characters. If reverseOrder is true, all but the first four characters are masked as 1234-****-****-****.
+  * If number_to_mask is negative, this denotes inverse masking. Cloud DLP masks all but a number of characters. For example, suppose you have the following values:
+  * - 'masking_character' is *
+  * - 'number_to_mask' is -4
+  * - 'reverse_order' is false
+  * - 'characters_to_ignore' includes -
+  * - Input string is 1234-5678-9012-3456
+  * 
+  * The resulting de-identified string is ****-****-****-3456. Cloud DLP masks all but the last four characters. If reverseOrder is true, all but the first four characters are masked as 1234-****-****-****.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#number_to_mask DataLossPreventionDeidentifyTemplate#number_to_mask}
   */
   readonly numberToMask?: number;
   /**
   * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is 'false', then the
-input string '1234-5678-9012-3456' is masked as '00000000000000-3456'.
+  * input string '1234-5678-9012-3456' is masked as '00000000000000-3456'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#reverse_order DataLossPreventionDeidentifyTemplate#reverse_order}
   */
@@ -2320,8 +2320,8 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
   readonly cryptoKeyName: string;
   /**
   * The wrapped data crypto key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
   */
@@ -2470,8 +2470,8 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransform
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped {
   /**
   * A 128/192/256 bit key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
   */
@@ -2981,8 +2981,8 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
   readonly cryptoKeyName: string;
   /**
   * The wrapped data crypto key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
   */
@@ -3131,8 +3131,8 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransform
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped {
   /**
   * A 128/192/256 bit key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
   */
@@ -3462,8 +3462,8 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
   readonly cryptoKeyName: string;
   /**
   * The wrapped data crypto key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
   */
@@ -3612,8 +3612,8 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransform
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped {
   /**
   * A 128/192/256 bit key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
   */
@@ -3998,8 +3998,8 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
   readonly commonAlphabet?: string;
   /**
   * This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range \[2, 95\]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is:
-
-''0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~'!@#$%^&*()_-+={[}]|:;"'<,>.?/''
+  * 
+  * ''0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~'!@#$%^&*()_-+={[}]|:;"'<,>.?/''
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#custom_alphabet DataLossPreventionDeidentifyTemplate#custom_alphabet}
   */
@@ -4279,8 +4279,8 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
   readonly cryptoKeyName: string;
   /**
   * The wrapped data crypto key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
   */
@@ -4429,8 +4429,8 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransform
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped {
   /**
   * A 128/192/256 bit key.
-
-A base64-encoded string.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
   */
@@ -4626,8 +4626,8 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
   readonly lowerBoundDays: number;
   /**
   * Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction.
-
-For example, 3 means shift date to at most 3 days into the future.
+  * 
+  * For example, 3 means shift date to at most 3 days into the future.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#upper_bound_days DataLossPreventionDeidentifyTemplate#upper_bound_days}
   */
@@ -5868,8 +5868,8 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransform
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig {
   /**
   * Size of each bucket (except for minimum and maximum buckets).
-So if lower_bound = 10, upper_bound = 89, and bucketSize = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+.
-Precision up to 2 decimals works.
+  * So if lower_bound = 10, upper_bound = 89, and bucketSize = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+.
+  * Precision up to 2 decimals works.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_deidentify_template#bucket_size DataLossPreventionDeidentifyTemplate#bucket_size}
   */

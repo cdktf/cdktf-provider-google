@@ -39,10 +39,10 @@ export interface DocumentAiWarehouseLocationConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * The KMS key used for CMEK encryption. It is required that
-the kms key is in the same region as the endpoint. The
-same key will be used for all provisioned resources, if
-encryption is available. If the kmsKey is left empty, no
-encryption will be enforced.
+  * the kms key is in the same region as the endpoint. The
+  * same key will be used for all provisioned resources, if
+  * encryption is available. If the kmsKey is left empty, no
+  * encryption will be enforced.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/document_ai_warehouse_location#kms_key DocumentAiWarehouseLocation#kms_key}
   */

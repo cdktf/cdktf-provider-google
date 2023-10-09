@@ -27,9 +27,9 @@ export interface CertificateManagerCertificateConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * Set of label tags associated with the Certificate resource.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate#labels CertificateManagerCertificate#labels}
   */
@@ -42,8 +42,8 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly location?: string;
   /**
   * A user-defined name of the certificate. Certificate names must be unique
-The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
-and all following characters must be a dash, underscore, letter or digit.
+  * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+  * and all following characters must be a dash, underscore, letter or digit.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate#name CertificateManagerCertificate#name}
   */
@@ -54,15 +54,15 @@ and all following characters must be a dash, underscore, letter or digit.
   readonly project?: string;
   /**
   * The scope of the certificate.
-
-DEFAULT: Certificates with default scope are served from core Google data centers.
-If unsure, choose this option.
-
-EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
-served from non-core Google data centers.
-
-ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
-see https://cloud.google.com/compute/docs/regions-zones
+  * 
+  * DEFAULT: Certificates with default scope are served from core Google data centers.
+  * If unsure, choose this option.
+  * 
+  * EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
+  * served from non-core Google data centers.
+  * 
+  * ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
+  * see https://cloud.google.com/compute/docs/regions-zones
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate#scope CertificateManagerCertificate#scope}
   */
@@ -243,15 +243,15 @@ export interface CertificateManagerCertificateManaged {
   readonly dnsAuthorizations?: string[];
   /**
   * The domains for which a managed SSL certificate will be generated.
-Wildcard domains are only supported with DNS challenge resolution
+  * Wildcard domains are only supported with DNS challenge resolution
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate#domains CertificateManagerCertificate#domains}
   */
   readonly domains?: string[];
   /**
   * The resource name for a CertificateIssuanceConfig used to configure private PKI certificates in the format projects/* /locations/* /certificateIssuanceConfigs/*.
-If this field is not set, the certificates will instead be publicly signed as documented at https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
-Either issuanceConfig or dnsAuthorizations should be specificed, but not both.
+  * If this field is not set, the certificates will instead be publicly signed as documented at https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
+  * Either issuanceConfig or dnsAuthorizations should be specificed, but not both.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate#issuance_config CertificateManagerCertificate#issuance_config}
    *
@@ -384,16 +384,16 @@ export class CertificateManagerCertificateManagedOutputReference extends cdktf.C
 export interface CertificateManagerCertificateSelfManaged {
   /**
   * The certificate chain in PEM-encoded form.
-
-Leaf certificate comes first, followed by intermediate ones if any.
+  * 
+  * Leaf certificate comes first, followed by intermediate ones if any.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate#certificate_pem CertificateManagerCertificate#certificate_pem}
   */
   readonly certificatePem?: string;
   /**
   * The certificate chain in PEM-encoded form.
-
-Leaf certificate comes first, followed by intermediate ones if any.
+  * 
+  * Leaf certificate comes first, followed by intermediate ones if any.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/certificate_manager_certificate#pem_certificate CertificateManagerCertificate#pem_certificate}
   */

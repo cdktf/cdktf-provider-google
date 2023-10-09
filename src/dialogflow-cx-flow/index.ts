@@ -33,27 +33,27 @@ export interface DialogflowCxFlowConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The language of the following fields in flow:
-Flow.event_handlers.trigger_fulfillment.messages
-Flow.event_handlers.trigger_fulfillment.conditional_cases
-Flow.transition_routes.trigger_fulfillment.messages
-Flow.transition_routes.trigger_fulfillment.conditional_cases
-If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+  * Flow.event_handlers.trigger_fulfillment.messages
+  * Flow.event_handlers.trigger_fulfillment.conditional_cases
+  * Flow.transition_routes.trigger_fulfillment.messages
+  * Flow.transition_routes.trigger_fulfillment.conditional_cases
+  * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#language_code DialogflowCxFlow#language_code}
   */
   readonly languageCode?: string;
   /**
   * The agent to create a flow for.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#parent DialogflowCxFlow#parent}
   */
   readonly parent?: string;
   /**
   * A flow's transition route group serve two purposes:
-They are responsible for matching the user's first utterances in the flow.
-They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
-Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+  * They are responsible for matching the user's first utterances in the flow.
+  * They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
+  * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#transition_route_groups DialogflowCxFlow#transition_route_groups}
   */
@@ -86,7 +86,7 @@ Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Fl
 export interface DialogflowCxFlowEventHandlersTriggerFulfillmentConditionalCases {
   /**
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
-See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#cases DialogflowCxFlow#cases}
   */
@@ -1274,14 +1274,14 @@ export interface DialogflowCxFlowEventHandlers {
   readonly event?: string;
   /**
   * The target flow to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#target_flow DialogflowCxFlow#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#target_page DialogflowCxFlow#target_page}
   */
@@ -1461,23 +1461,23 @@ export class DialogflowCxFlowEventHandlersList extends cdktf.ComplexList {
 export interface DialogflowCxFlowNluSettings {
   /**
   * To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold.
-If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+  * If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#classification_threshold DialogflowCxFlow#classification_threshold}
   */
   readonly classificationThreshold?: number;
   /**
   * Indicates NLU model training mode.
-* MODEL_TRAINING_MODE_AUTOMATIC: NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode.
-* MODEL_TRAINING_MODE_MANUAL: User needs to manually trigger NLU model training. Best for large flows whose models take long time to train. Possible values: ["MODEL_TRAINING_MODE_AUTOMATIC", "MODEL_TRAINING_MODE_MANUAL"]
+  * * MODEL_TRAINING_MODE_AUTOMATIC: NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode.
+  * * MODEL_TRAINING_MODE_MANUAL: User needs to manually trigger NLU model training. Best for large flows whose models take long time to train. Possible values: ["MODEL_TRAINING_MODE_AUTOMATIC", "MODEL_TRAINING_MODE_MANUAL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#model_training_mode DialogflowCxFlow#model_training_mode}
   */
   readonly modelTrainingMode?: string;
   /**
   * Indicates the type of NLU model.
-* MODEL_TYPE_STANDARD: Use standard NLU model.
-* MODEL_TYPE_ADVANCED: Use advanced NLU model. Possible values: ["MODEL_TYPE_STANDARD", "MODEL_TYPE_ADVANCED"]
+  * * MODEL_TYPE_STANDARD: Use standard NLU model.
+  * * MODEL_TYPE_ADVANCED: Use advanced NLU model. Possible values: ["MODEL_TYPE_STANDARD", "MODEL_TYPE_ADVANCED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#model_type DialogflowCxFlow#model_type}
   */
@@ -1720,7 +1720,7 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
 export interface DialogflowCxFlowTransitionRoutesTriggerFulfillmentConditionalCases {
   /**
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
-See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#cases DialogflowCxFlow#cases}
   */
@@ -2902,28 +2902,28 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
 export interface DialogflowCxFlowTransitionRoutes {
   /**
   * The condition to evaluate against form parameters or session parameters.
-At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+  * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#condition DialogflowCxFlow#condition}
   */
   readonly condition?: string;
   /**
   * The unique identifier of an Intent.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#intent DialogflowCxFlow#intent}
   */
   readonly intent?: string;
   /**
   * The target flow to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#target_flow DialogflowCxFlow#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
-Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+  * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_flow#target_page DialogflowCxFlow#target_page}
   */

@@ -143,11 +143,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 A name for the patch deployment in the project.
 
 When creating a name the following rules apply:
-Must contain only lowercase letters, numbers, and hyphens.
-Must start with a letter.
-Must be between 1-63 characters.
-Must end with a number or a letter.
-Must be unique within the project.
+
+* Must contain only lowercase letters, numbers, and hyphens.
+* Must start with a letter.
+* Must be between 1-63 characters.
+* Must end with a number or a letter.
+* Must be unique within the project.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#patch_deployment_id OsConfigPatchDeployment#patch_deployment_id}
 
@@ -1285,11 +1286,12 @@ public java.lang.String getPatchDeploymentId();
 A name for the patch deployment in the project.
 
 When creating a name the following rules apply:
-Must contain only lowercase letters, numbers, and hyphens.
-Must start with a letter.
-Must be between 1-63 characters.
-Must end with a number or a letter.
-Must be unique within the project.
+
+* Must contain only lowercase letters, numbers, and hyphens.
+* Must start with a letter.
+* Must be between 1-63 characters.
+* Must end with a number or a letter.
+* Must be unique within the project.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#patch_deployment_id OsConfigPatchDeployment#patch_deployment_id}
 
