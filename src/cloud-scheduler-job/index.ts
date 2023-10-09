@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job
 // generated from terraform resource schema
 
@@ -14,20 +9,20 @@ import * as cdktf from 'cdktf';
 export interface CloudSchedulerJobConfig extends cdktf.TerraformMetaArguments {
   /**
   * The deadline for job attempts. If the request handler does not respond by this deadline then the request is
-cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
-execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
-The allowed duration for this deadline is:
-* For HTTP targets, between 15 seconds and 30 minutes.
-* For App Engine HTTP targets, between 15 seconds and 24 hours.
-* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+  * cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+  * execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+  * The allowed duration for this deadline is:
+  * * For HTTP targets, between 15 seconds and 30 minutes.
+  * * For App Engine HTTP targets, between 15 seconds and 24 hours.
+  * * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#attempt_deadline CloudSchedulerJob#attempt_deadline}
   */
   readonly attemptDeadline?: string;
   /**
   * A human-readable description for the job.
-This string must not contain more than 500 characters.
+  * This string must not contain more than 500 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#description CloudSchedulerJob#description}
   */
@@ -69,7 +64,7 @@ This string must not contain more than 500 characters.
   readonly schedule?: string;
   /**
   * Specifies the time zone to be used in interpreting schedule.
-The value of this field must be a time zone name from the tz database.
+  * The value of this field must be a time zone name from the tz database.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#time_zone CloudSchedulerJob#time_zone}
   */
@@ -108,21 +103,21 @@ The value of this field must be a time zone name from the tz database.
 export interface CloudSchedulerJobAppEngineHttpTargetAppEngineRouting {
   /**
   * App instance.
-By default, the job is sent to an instance which is available when the job is attempted.
+  * By default, the job is sent to an instance which is available when the job is attempted.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#instance CloudSchedulerJob#instance}
   */
   readonly instance?: string;
   /**
   * App service.
-By default, the job is sent to the service which is the default service when the job is attempted.
+  * By default, the job is sent to the service which is the default service when the job is attempted.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#service CloudSchedulerJob#service}
   */
   readonly service?: string;
   /**
   * App version.
-By default, the job is sent to the version which is the default version when the job is attempted.
+  * By default, the job is sent to the version which is the default version when the job is attempted.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#version CloudSchedulerJob#version}
   */
@@ -236,18 +231,18 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
 export interface CloudSchedulerJobAppEngineHttpTarget {
   /**
   * HTTP request body.
-A request body is allowed only if the HTTP method is POST or PUT.
-It will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
-
-A base64-encoded string.
+  * A request body is allowed only if the HTTP method is POST or PUT.
+  * It will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#body CloudSchedulerJob#body}
   */
   readonly body?: string;
   /**
   * HTTP request headers.
-This map contains the header field names and values.
-Headers can be set when the job is created.
+  * This map contains the header field names and values.
+  * Headers can be set when the job is created.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#headers CloudSchedulerJob#headers}
   */
@@ -260,10 +255,10 @@ Headers can be set when the job is created.
   readonly httpMethod?: string;
   /**
   * The relative URI.
-The relative URL must begin with "/" and must be a valid HTTP relative URL.
-It can contain a path, query string arguments, and \# fragments.
-If the relative URL is empty, then the root path "/" will be used.
-No spaces are allowed, and the maximum length allowed is 2083 characters
+  * The relative URL must begin with "/" and must be a valid HTTP relative URL.
+  * It can contain a path, query string arguments, and \# fragments.
+  * If the relative URL is empty, then the root path "/" will be used.
+  * No spaces are allowed, and the maximum length allowed is 2083 characters
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#relative_uri CloudSchedulerJob#relative_uri}
   */
@@ -426,14 +421,14 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
 export interface CloudSchedulerJobHttpTargetOauthToken {
   /**
   * OAuth scope to be used for generating OAuth access token. If not specified,
-"https://www.googleapis.com/auth/cloud-platform" will be used.
+  * "https://www.googleapis.com/auth/cloud-platform" will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#scope CloudSchedulerJob#scope}
   */
   readonly scope?: string;
   /**
   * Service account email to be used for generating OAuth token.
-The service account must be within the same project as the job.
+  * The service account must be within the same project as the job.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#service_account_email CloudSchedulerJob#service_account_email}
   */
@@ -521,14 +516,14 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
 export interface CloudSchedulerJobHttpTargetOidcToken {
   /**
   * Audience to be used when generating OIDC token. If not specified,
-the URI specified in target will be used.
+  * the URI specified in target will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#audience CloudSchedulerJob#audience}
   */
   readonly audience?: string;
   /**
   * Service account email to be used for generating OAuth token.
-The service account must be within the same project as the job.
+  * The service account must be within the same project as the job.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#service_account_email CloudSchedulerJob#service_account_email}
   */
@@ -616,17 +611,17 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
 export interface CloudSchedulerJobHttpTarget {
   /**
   * HTTP request body.
-A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
-It is an error to set body on a job with an incompatible HttpMethod.
-
-A base64-encoded string.
+  * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+  * It is an error to set body on a job with an incompatible HttpMethod.
+  * 
+  * A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#body CloudSchedulerJob#body}
   */
   readonly body?: string;
   /**
   * This map contains the header field names and values.
-Repeated headers are not supported, but a header value can contain commas.
+  * Repeated headers are not supported, but a header value can contain commas.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#headers CloudSchedulerJob#headers}
   */
@@ -830,25 +825,25 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
 export interface CloudSchedulerJobPubsubTarget {
   /**
   * Attributes for PubsubMessage.
-Pubsub message must contain either non-empty data, or at least one attribute.
+  * Pubsub message must contain either non-empty data, or at least one attribute.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#attributes CloudSchedulerJob#attributes}
   */
   readonly attributes?: { [key: string]: string };
   /**
   * The message payload for PubsubMessage.
-Pubsub message must contain either non-empty data, or at least one attribute.
-
- A base64-encoded string.
+  * Pubsub message must contain either non-empty data, or at least one attribute.
+  * 
+  *  A base64-encoded string.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#data CloudSchedulerJob#data}
   */
   readonly data?: string;
   /**
   * The full resource name for the Cloud Pub/Sub topic to which
-messages will be published when a job is delivered. ~>**NOTE:**
-The topic name must be in the same format as required by PubSub's
-PublishRequest.name, e.g. 'projects/my-project/topics/my-topic'.
+  * messages will be published when a job is delivered. ~>**NOTE:**
+  * The topic name must be in the same format as required by PubSub's
+  * PublishRequest.name, e.g. 'projects/my-project/topics/my-topic'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#topic_name CloudSchedulerJob#topic_name}
   */
@@ -959,39 +954,39 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
 export interface CloudSchedulerJobRetryConfig {
   /**
   * The maximum amount of time to wait before retrying a job after it fails.
-A duration in seconds with up to nine fractional digits, terminated by 's'.
+  * A duration in seconds with up to nine fractional digits, terminated by 's'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#max_backoff_duration CloudSchedulerJob#max_backoff_duration}
   */
   readonly maxBackoffDuration?: string;
   /**
   * The time between retries will double maxDoublings times.
-A job's retry interval starts at minBackoffDuration,
-then doubles maxDoublings times, then increases linearly,
-and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
+  * A job's retry interval starts at minBackoffDuration,
+  * then doubles maxDoublings times, then increases linearly,
+  * and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#max_doublings CloudSchedulerJob#max_doublings}
   */
   readonly maxDoublings?: number;
   /**
   * The time limit for retrying a failed job, measured from time when an execution was first attempted.
-If specified with retryCount, the job will be retried until both limits are reached.
-A duration in seconds with up to nine fractional digits, terminated by 's'.
+  * If specified with retryCount, the job will be retried until both limits are reached.
+  * A duration in seconds with up to nine fractional digits, terminated by 's'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#max_retry_duration CloudSchedulerJob#max_retry_duration}
   */
   readonly maxRetryDuration?: string;
   /**
   * The minimum amount of time to wait before retrying a job after it fails.
-A duration in seconds with up to nine fractional digits, terminated by 's'.
+  * A duration in seconds with up to nine fractional digits, terminated by 's'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#min_backoff_duration CloudSchedulerJob#min_backoff_duration}
   */
   readonly minBackoffDuration?: string;
   /**
   * The number of attempts that the system will make to run a
-job using the exponential backoff procedure described by maxDoublings.
-Values greater than 5 and negative values are not allowed.
+  * job using the exponential backoff procedure described by maxDoublings.
+  * Values greater than 5 and negative values are not allowed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#retry_count CloudSchedulerJob#retry_count}
   */

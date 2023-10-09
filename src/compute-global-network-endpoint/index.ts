@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_network_endpoint
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeGlobalNetworkEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * Fully qualified domain name of network endpoint.
-This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
+  * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_network_endpoint#fqdn ComputeGlobalNetworkEndpoint#fqdn}
   */

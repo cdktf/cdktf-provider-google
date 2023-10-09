@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_group_named_port
 // generated from terraform resource schema
 
@@ -27,7 +22,7 @@ export interface ComputeInstanceGroupNamedPortAConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * The name for this named port. The name must be 1-63 characters
-long, and comply with RFC1035.
+  * long, and comply with RFC1035.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_instance_group_named_port#name ComputeInstanceGroupNamedPortA#name}
   */

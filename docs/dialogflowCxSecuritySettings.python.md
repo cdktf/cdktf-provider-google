@@ -229,7 +229,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 Defines what types of data to redact.
 
 If not set, defaults to not redacting any kind of data.
-REDACT_DISK_STORAGE: On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk. Possible values: ["REDACT_DISK_STORAGE"]
+
+* REDACT_DISK_STORAGE: On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk. Possible values: ["REDACT_DISK_STORAGE"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#redaction_scope DialogflowCxSecuritySettings#redaction_scope}
 
@@ -242,7 +243,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 Defines how we redact data.
 
 If not set, defaults to not redacting.
-REDACT_WITH_SERVICE: Call redaction service to clean up the data to be persisted. Possible values: ["REDACT_WITH_SERVICE"]
+
+* REDACT_WITH_SERVICE: Call redaction service to clean up the data to be persisted. Possible values: ["REDACT_WITH_SERVICE"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#redaction_strategy DialogflowCxSecuritySettings#redaction_strategy}
 
@@ -255,7 +257,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 Defines how long we retain persisted data that contains sensitive info.
 
 Only one of 'retention_window_days' and 'retention_strategy' may be set.
-REMOVE_AFTER_CONVERSATION: Removes data when the conversation ends. If there is no conversation explicitly established, a default conversation ends when the corresponding Dialogflow session ends. Possible values: ["REMOVE_AFTER_CONVERSATION"]
+
+* REMOVE_AFTER_CONVERSATION: Removes data when the conversation ends. If there is no conversation explicitly established, a default conversation ends when the corresponding Dialogflow session ends. Possible values: ["REMOVE_AFTER_CONVERSATION"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#retention_strategy DialogflowCxSecuritySettings#retention_strategy}
 
@@ -559,9 +562,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 File format for exported audio file.
 
 Currently only in telephony recordings.
-MULAW: G.711 mu-law PCM with 8kHz sample rate.
-MP3: MP3 file format.
-OGG: OGG Vorbis. Possible values: ["MULAW", "MP3", "OGG"]
+
+* MULAW: G.711 mu-law PCM with 8kHz sample rate.
+* MP3: MP3 file format.
+* OGG: OGG Vorbis. Possible values: ["MULAW", "MP3", "OGG"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#audio_format DialogflowCxSecuritySettings#audio_format}
 
@@ -1342,9 +1346,10 @@ audio_format: str
 File format for exported audio file.
 
 Currently only in telephony recordings.
-MULAW: G.711 mu-law PCM with 8kHz sample rate.
-MP3: MP3 file format.
-OGG: OGG Vorbis. Possible values: ["MULAW", "MP3", "OGG"]
+
+* MULAW: G.711 mu-law PCM with 8kHz sample rate.
+* MP3: MP3 file format.
+* OGG: OGG Vorbis. Possible values: ["MULAW", "MP3", "OGG"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#audio_format DialogflowCxSecuritySettings#audio_format}
 
@@ -1649,7 +1654,8 @@ redaction_scope: str
 Defines what types of data to redact.
 
 If not set, defaults to not redacting any kind of data.
-REDACT_DISK_STORAGE: On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk. Possible values: ["REDACT_DISK_STORAGE"]
+
+* REDACT_DISK_STORAGE: On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk. Possible values: ["REDACT_DISK_STORAGE"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#redaction_scope DialogflowCxSecuritySettings#redaction_scope}
 
@@ -1666,7 +1672,8 @@ redaction_strategy: str
 Defines how we redact data.
 
 If not set, defaults to not redacting.
-REDACT_WITH_SERVICE: Call redaction service to clean up the data to be persisted. Possible values: ["REDACT_WITH_SERVICE"]
+
+* REDACT_WITH_SERVICE: Call redaction service to clean up the data to be persisted. Possible values: ["REDACT_WITH_SERVICE"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#redaction_strategy DialogflowCxSecuritySettings#redaction_strategy}
 
@@ -1683,7 +1690,8 @@ retention_strategy: str
 Defines how long we retain persisted data that contains sensitive info.
 
 Only one of 'retention_window_days' and 'retention_strategy' may be set.
-REMOVE_AFTER_CONVERSATION: Removes data when the conversation ends. If there is no conversation explicitly established, a default conversation ends when the corresponding Dialogflow session ends. Possible values: ["REMOVE_AFTER_CONVERSATION"]
+
+* REMOVE_AFTER_CONVERSATION: Removes data when the conversation ends. If there is no conversation explicitly established, a default conversation ends when the corresponding Dialogflow session ends. Possible values: ["REMOVE_AFTER_CONVERSATION"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_security_settings#retention_strategy DialogflowCxSecuritySettings#retention_strategy}
 

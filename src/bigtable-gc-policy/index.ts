@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigtable_gc_policy
 // generated from terraform resource schema
 
@@ -20,8 +15,8 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly columnFamily: string;
   /**
   * The deletion policy for the GC policy. Setting ABANDON allows the resource
-				to be abandoned rather than deleted. This is useful for GC policy as it cannot be deleted
-				in a replicated instance. Possible values are: "ABANDON".
+  * 				to be abandoned rather than deleted. This is useful for GC policy as it cannot be deleted
+  * 				in a replicated instance. Possible values are: "ABANDON".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigtable_gc_policy#deletion_policy BigtableGcPolicy#deletion_policy}
   */

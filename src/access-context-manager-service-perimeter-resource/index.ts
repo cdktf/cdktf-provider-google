@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_service_perimeter_resource
 // generated from terraform resource schema
 
@@ -27,8 +22,8 @@ export interface AccessContextManagerServicePerimeterResourceConfig extends cdkt
   readonly perimeterName: string;
   /**
   * A GCP resource that is inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+  * Currently only projects are allowed.
+  * Format: projects/{project_number}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/access_context_manager_service_perimeter_resource#resource AccessContextManagerServicePerimeterResource#resource}
   */

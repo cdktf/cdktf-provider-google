@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface DataLossPreventionJobTriggerConfig extends cdktf.TerraformMetaA
   readonly id?: string;
   /**
   * The parent of the trigger, either in the format 'projects/{{project}}'
-or 'projects/{{project}}/locations/{{location}}'
+  * or 'projects/{{project}}/locations/{{location}}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#parent DataLossPreventionJobTrigger#parent}
   */
@@ -46,8 +41,8 @@ or 'projects/{{project}}/locations/{{location}}'
   readonly status?: string;
   /**
   * The trigger id can contain uppercase and lowercase letters, numbers, and hyphens;
-that is, it must match the regular expression: [a-zA-Z\d-_]+.
-The maximum length is 100 characters. Can be empty to allow the system to generate one.
+  * that is, it must match the regular expression: [a-zA-Z\d-_]+.
+  * The maximum length is 100 characters. Can be empty to allow the system to generate one.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#trigger_id DataLossPreventionJobTrigger#trigger_id}
   */
@@ -211,8 +206,8 @@ export interface DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransfor
   readonly projectId: string;
   /**
   * The ID of the table. The ID must contain only letters (a-z,
-A-Z), numbers (0-9), or underscores (_). The maximum length
-is 1,024 characters.
+  * A-Z), numbers (0-9), or underscores (_). The maximum length
+  * is 1,024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
   */
@@ -384,24 +379,24 @@ export class DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformati
 export interface DataLossPreventionJobTriggerInspectJobActionsDeidentify {
   /**
   * User settable Cloud Storage bucket and folders to store de-identified files.
-
-This field must be set for cloud storage deidentification.
-
-The output Cloud Storage bucket must be different from the input bucket.
-
-De-identified files will overwrite files in the output path.
-
-Form of: gs://bucket/folder/ or gs://bucket
+  * 
+  * This field must be set for cloud storage deidentification.
+  * 
+  * The output Cloud Storage bucket must be different from the input bucket.
+  * 
+  * De-identified files will overwrite files in the output path.
+  * 
+  * Form of: gs://bucket/folder/ or gs://bucket
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_output DataLossPreventionJobTrigger#cloud_storage_output}
   */
   readonly cloudStorageOutput: string;
   /**
   * List of user-specified file type groups to transform. If specified, only the files with these filetypes will be transformed.
-
-If empty, all supported files will be transformed. Supported types may be automatically added over time.
-
-If a file type is set in this field that isn't supported by the Deidentify action then the job will fail and will not be successfully created/started. Possible values: ["IMAGE", "TEXT_FILE", "CSV", "TSV"]
+  * 
+  * If empty, all supported files will be transformed. Supported types may be automatically added over time.
+  * 
+  * If a file type is set in this field that isn't supported by the Deidentify action then the job will fail and will not be successfully created/started. Possible values: ["IMAGE", "TEXT_FILE", "CSV", "TSV"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#file_types_to_transform DataLossPreventionJobTrigger#file_types_to_transform}
   */
@@ -775,7 +770,7 @@ export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutput
   readonly projectId: string;
   /**
   * Name of the table. If is not set a new one will be generated for you with the following format:
-'dlp_googleapis_yyyy_mm_dd_[dlp_job_id]'. Pacific timezone will be used for generating the date details.
+  * 'dlp_googleapis_yyyy_mm_dd_[dlp_job_id]'. Pacific timezone will be used for generating the date details.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
   */
@@ -883,13 +878,13 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
 export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig {
   /**
   * Schema used for writing the findings for Inspect jobs. This field is only used for
-Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding
-object. If appending to an existing table, any columns from the predefined schema
-that are missing will be added. No columns in the existing table will be deleted.
-
-If unspecified, then all available columns will be used for a new table or an (existing)
-table with no schema, and no changes will be made to an existing table that has a schema.
-Only for use with external storage. Possible values: ["BASIC_COLUMNS", "GCS_COLUMNS", "DATASTORE_COLUMNS", "BIG_QUERY_COLUMNS", "ALL_COLUMNS"]
+  * Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding
+  * object. If appending to an existing table, any columns from the predefined schema
+  * that are missing will be added. No columns in the existing table will be deleted.
+  * 
+  * If unspecified, then all available columns will be used for a new table or an (existing)
+  * table with no schema, and no changes will be made to an existing table that has a schema.
+  * Only for use with external storage. Possible values: ["BASIC_COLUMNS", "GCS_COLUMNS", "DATASTORE_COLUMNS", "BIG_QUERY_COLUMNS", "ALL_COLUMNS"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#output_schema DataLossPreventionJobTrigger#output_schema}
   */
@@ -1384,7 +1379,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesD
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStruct {
   /**
   * Words or phrases defining the dictionary. The dictionary must contain at least one
-phrase and every phrase must contain at least 2 characters that are letters or digits.
+  * phrase and every phrase must contain at least 2 characters that are letters or digits.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
   */
@@ -1609,7 +1604,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesI
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
-listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
@@ -1738,7 +1733,7 @@ export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTy
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression.
-Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
   */
@@ -1890,7 +1885,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesS
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType {
   /**
   * Resource name of the requested StoredInfoType, for example 'organizations/433245324/storedInfoTypes/432452342'
-or 'projects/project-id/storedInfoTypes/432452342'.
+  * or 'projects/project-id/storedInfoTypes/432452342'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
@@ -2004,7 +1999,7 @@ export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTy
   readonly exclusionType?: string;
   /**
   * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
-specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
+  * specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#likelihood DataLossPreventionJobTrigger#likelihood}
   */
@@ -2362,7 +2357,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesSensiti
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
@@ -2581,7 +2576,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFinding
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
@@ -3021,7 +3016,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
@@ -3240,7 +3235,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExcl
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStruct {
   /**
   * Words or phrases defining the dictionary. The dictionary must contain at least one
-phrase and every phrase must contain at least 2 characters that are letters or digits.
+  * phrase and every phrase must contain at least 2 characters that are letters or digits.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
   */
@@ -3401,14 +3396,14 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExcl
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex {
   /**
   * The index of the submatch to extract as findings. When not specified,
-the entire match is returned. No more than 3 may be included.
+  * the entire match is returned. No more than 3 may be included.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression. Its syntax
-(https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
   */
@@ -3755,7 +3750,7 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExcl
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
@@ -3980,7 +3975,7 @@ export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression.
-Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
   */
@@ -4248,14 +4243,14 @@ export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExcl
 export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex {
   /**
   * The index of the submatch to extract as findings. When not specified,
-the entire match is returned. No more than 3 may be included.
+  * the entire match is returned. No more than 3 may be included.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression. Its syntax
-(https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
   */
@@ -4352,11 +4347,11 @@ export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules
   readonly fixedLikelihood?: string;
   /**
   * Increase or decrease the likelihood by the specified number of levels. For example,
-if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
-then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKELY.
-Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
-adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
-will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
+  * if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
+  * then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKELY.
+  * Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
+  * adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
+  * will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#relative_likelihood DataLossPreventionJobTrigger#relative_likelihood}
   */
@@ -5566,23 +5561,23 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsT
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
   /**
   * Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted.
-If not set, or if set to 0, all rows will be scanned. Only one of rowsLimit and rowsLimitPercent can be
-specified. Cannot be used in conjunction with TimespanConfig.
+  * If not set, or if set to 0, all rows will be scanned. Only one of rowsLimit and rowsLimitPercent can be
+  * specified. Cannot be used in conjunction with TimespanConfig.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#rows_limit DataLossPreventionJobTrigger#rows_limit}
   */
   readonly rowsLimit?: number;
   /**
   * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down.
-Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
-rowsLimit and rowsLimitPercent can be specified. Cannot be used in conjunction with TimespanConfig.
+  * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
+  * rowsLimit and rowsLimitPercent can be specified. Cannot be used in conjunction with TimespanConfig.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#rows_limit_percent DataLossPreventionJobTrigger#rows_limit_percent}
   */
   readonly rowsLimitPercent?: number;
   /**
   * How to sample rows if not all rows are scanned. Meaningful only when used in conjunction with either
-rowsLimit or rowsLimitPercent. If not specified, rows are scanned in the order BigQuery reads them. Default value: "TOP" Possible values: ["TOP", "RANDOM_START"]
+  * rowsLimit or rowsLimitPercent. If not specified, rows are scanned in the order BigQuery reads them. Default value: "TOP" Possible values: ["TOP", "RANDOM_START"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
   */
@@ -5815,16 +5810,16 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorage
   readonly bucketName: string;
   /**
   * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
-least one of these regular expressions will be excluded from the scan.
+  * least one of these regular expressions will be excluded from the scan.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#exclude_regex DataLossPreventionJobTrigger#exclude_regex}
   */
   readonly excludeRegex?: string[];
   /**
   * A list of regular expressions matching file paths to include. All files in the bucket
-that match at least one of these regular expressions will be included in the set of files,
-except for those that also match an item in excludeRegex. Leaving this field empty will
-match all files by default (this is equivalent to including .* in the list)
+  * that match at least one of these regular expressions will be included in the set of files,
+  * except for those that also match an item in excludeRegex. Leaving this field empty will
+  * match all files by default (this is equivalent to including .* in the list)
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#include_regex DataLossPreventionJobTrigger#include_regex}
   */
@@ -5935,11 +5930,11 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet {
   /**
   * The Cloud Storage url of the file(s) to scan, in the format 'gs://<bucket>/<path>'. Trailing wildcard
-in the path is allowed.
-
-If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned
-non-recursively (content in sub-directories will not be scanned). This means that 'gs://mybucket/' is
-equivalent to 'gs://mybucket/*', and 'gs://mybucket/directory/' is equivalent to 'gs://mybucket/directory/*'.
+  * in the path is allowed.
+  * 
+  * If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned
+  * non-recursively (content in sub-directories will not be scanned). This means that 'gs://mybucket/' is
+  * equivalent to 'gs://mybucket/*', and 'gs://mybucket/directory/' is equivalent to 'gs://mybucket/directory/*'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#url DataLossPreventionJobTrigger#url}
   */
@@ -6036,36 +6031,36 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions {
   /**
   * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
-then the rest of the bytes are omitted.
+  * then the rest of the bytes are omitted.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file DataLossPreventionJobTrigger#bytes_limit_per_file}
   */
   readonly bytesLimitPerFile?: number;
   /**
   * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
-Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
+  * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file_percent DataLossPreventionJobTrigger#bytes_limit_per_file_percent}
   */
   readonly bytesLimitPerFilePercent?: number;
   /**
   * List of file type groups to include in the scan. If empty, all files are scanned and available data
-format processors are applied. In addition, the binary content of the selected files is always scanned as well.
-Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: ["BINARY_FILE", "TEXT_FILE", "IMAGE", "WORD", "PDF", "AVRO", "CSV", "TSV", "POWERPOINT", "EXCEL"]
+  * format processors are applied. In addition, the binary content of the selected files is always scanned as well.
+  * Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: ["BINARY_FILE", "TEXT_FILE", "IMAGE", "WORD", "PDF", "AVRO", "CSV", "TSV", "POWERPOINT", "EXCEL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#file_types DataLossPreventionJobTrigger#file_types}
   */
   readonly fileTypes?: string[];
   /**
   * Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
-Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
+  * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#files_limit_percent DataLossPreventionJobTrigger#files_limit_percent}
   */
   readonly filesLimitPercent?: number;
   /**
   * How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
-If not specified, scanning would start from the top. Possible values: ["TOP", "RANDOM_START"]
+  * If not specified, scanning would start from the top. Possible values: ["TOP", "RANDOM_START"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
   */
@@ -6667,27 +6662,27 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigHybridOption
   readonly description?: string;
   /**
   * To organize findings, these labels will be added to each finding.
-
-Label keys must be between 1 and 63 characters long and must conform to the following regular expression: '[a-z]([-a-z0-9]*[a-z0-9])?'.
-
-Label values must be between 0 and 63 characters long and must conform to the regular expression '([a-z]([-a-z0-9]*[a-z0-9])?)?'.
-
-No more than 10 labels can be associated with a given finding.
-
-Examples:
-* '"environment" : "production"'
-* '"pipeline" : "etl"'
+  * 
+  * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: '[a-z]([-a-z0-9]*[a-z0-9])?'.
+  * 
+  * Label values must be between 0 and 63 characters long and must conform to the regular expression '([a-z]([-a-z0-9]*[a-z0-9])?)?'.
+  * 
+  * No more than 10 labels can be associated with a given finding.
+  * 
+  * Examples:
+  * * '"environment" : "production"'
+  * * '"pipeline" : "etl"'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#labels DataLossPreventionJobTrigger#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * These are labels that each inspection request must include within their 'finding_labels' map. Request
-may contain others, but any missing one of these will be rejected.
-
-Label keys must be between 1 and 63 characters long and must conform to the following regular expression: '[a-z]([-a-z0-9]*[a-z0-9])?'.
-
-No more than 10 keys can be required.
+  * may contain others, but any missing one of these will be rejected.
+  * 
+  * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: '[a-z]([-a-z0-9]*[a-z0-9])?'.
+  * 
+  * No more than 10 keys can be required.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#required_finding_label_keys DataLossPreventionJobTrigger#required_finding_label_keys}
   */
@@ -6830,13 +6825,13 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsOut
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField {
   /**
   * Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery.
-
-For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was
-modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp
-field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column.
-
-For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the
-timestamp property does not exist or its value is empty or invalid.
+  * 
+  * For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was
+  * modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp
+  * field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column.
+  * 
+  * For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the
+  * timestamp property does not exist or its value is empty or invalid.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
@@ -6901,8 +6896,8 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTi
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig {
   /**
   * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
-scanning files that have not been modified since the last time the JobTrigger executed. This will
-be based on the time of the execution of the last run of the JobTrigger.
+  * scanning files that have not been modified since the last time the JobTrigger executed. This will
+  * be based on the time of the execution of the last run of the JobTrigger.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#enable_auto_population_of_timespan_config DataLossPreventionJobTrigger#enable_auto_population_of_timespan_config}
   */
@@ -7555,12 +7550,12 @@ export class DataLossPreventionJobTriggerTriggersManualOutputReference extends c
 export interface DataLossPreventionJobTriggerTriggersSchedule {
   /**
   * With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
-
-A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs.
-
-This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
-
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs.
+  * 
+  * This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
+  * 
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_job_trigger#recurrence_period_duration DataLossPreventionJobTrigger#recurrence_period_duration}
   */

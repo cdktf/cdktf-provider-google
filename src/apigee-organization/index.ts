@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_organization
 // generated from terraform resource schema
 
@@ -20,8 +15,8 @@ export interface ApigeeOrganizationConfig extends cdktf.TerraformMetaArguments {
   readonly analyticsRegion?: string;
   /**
   * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
-Valid only when 'RuntimeType' is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
+  * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+  * Valid only when 'RuntimeType' is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_organization#authorized_network ApigeeOrganization#authorized_network}
   */
@@ -40,10 +35,10 @@ Valid only when 'RuntimeType' is set to CLOUD. The value can be updated only whe
   readonly description?: string;
   /**
   * Flag that specifies whether the VPC Peering through Private Google Access should be
-disabled between the consumer network and Apigee. Required if an 'authorizedNetwork'
-on the consumer project is not provided, in which case the flag should be set to 'true'.
-Valid only when 'RuntimeType' is set to CLOUD. The value must be set before the creation
-of any Apigee runtime instance and can be updated only when there are no runtime instances.
+  * disabled between the consumer network and Apigee. Required if an 'authorizedNetwork'
+  * on the consumer project is not provided, in which case the flag should be set to 'true'.
+  * Valid only when 'RuntimeType' is set to CLOUD. The value must be set before the creation
+  * of any Apigee runtime instance and can be updated only when there are no runtime instances.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_organization#disable_vpc_peering ApigeeOrganization#disable_vpc_peering}
   */
@@ -69,18 +64,18 @@ of any Apigee runtime instance and can be updated only when there are no runtime
   readonly projectId: string;
   /**
   * Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
-is not EVALUATION). It controls how long Organization data will be retained after the initial delete
-operation completes. During this period, the Organization may be restored to its last known state.
-After this period, the Organization will no longer be able to be restored. Default value: "DELETION_RETENTION_UNSPECIFIED" Possible values: ["DELETION_RETENTION_UNSPECIFIED", "MINIMUM"]
+  * is not EVALUATION). It controls how long Organization data will be retained after the initial delete
+  * operation completes. During this period, the Organization may be restored to its last known state.
+  * After this period, the Organization will no longer be able to be restored. Default value: "DELETION_RETENTION_UNSPECIFIED" Possible values: ["DELETION_RETENTION_UNSPECIFIED", "MINIMUM"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_organization#retention ApigeeOrganization#retention}
   */
   readonly retention?: string;
   /**
   * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
-Update is not allowed after the organization is created.
-If not specified, a Google-Managed encryption key will be used.
-Valid only when 'RuntimeType' is CLOUD. For example: 'projects/foo/locations/us/keyRings/bar/cryptoKeys/baz'.
+  * Update is not allowed after the organization is created.
+  * If not specified, a Google-Managed encryption key will be used.
+  * Valid only when 'RuntimeType' is CLOUD. For example: 'projects/foo/locations/us/keyRings/bar/cryptoKeys/baz'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_organization#runtime_database_encryption_key_name ApigeeOrganization#runtime_database_encryption_key_name}
   */

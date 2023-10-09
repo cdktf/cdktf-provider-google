@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/pubsub_topic
 // generated from terraform resource schema
 
@@ -21,10 +16,10 @@ export interface PubsubTopicConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The resource name of the Cloud KMS CryptoKey to be used to protect access
-to messages published on this topic. Your project's PubSub service account
-('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
-The expected format is 'projects/* /locations/* /keyRings/* /cryptoKeys/*'
+  * to messages published on this topic. Your project's PubSub service account
+  * ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
+  * 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
+  * The expected format is 'projects/* /locations/* /keyRings/* /cryptoKeys/*'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/pubsub_topic#kms_key_name PubsubTopic#kms_key_name}
    *
@@ -33,22 +28,22 @@ The expected format is 'projects/* /locations/* /keyRings/* /cryptoKeys/*'
   readonly kmsKeyName?: string;
   /**
   * A set of key/value label pairs to assign to this Topic.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/pubsub_topic#labels PubsubTopic#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Indicates the minimum duration to retain a message after it is published
-to the topic. If this field is set, messages published to the topic in
-the last messageRetentionDuration are always available to subscribers.
-For instance, it allows any attached subscription to seek to a timestamp
-that is up to messageRetentionDuration in the past. If this field is not
-set, message retention is controlled by settings on individual subscriptions.
-Cannot be more than 31 days or less than 10 minutes.
+  * to the topic. If this field is set, messages published to the topic in
+  * the last messageRetentionDuration are always available to subscribers.
+  * For instance, it allows any attached subscription to seek to a timestamp
+  * that is up to messageRetentionDuration in the past. If this field is not
+  * set, message retention is controlled by settings on individual subscriptions.
+  * Cannot be more than 31 days or less than 10 minutes.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/pubsub_topic#message_retention_duration PubsubTopic#message_retention_duration}
   */
@@ -85,11 +80,11 @@ Cannot be more than 31 days or less than 10 minutes.
 export interface PubsubTopicMessageStoragePolicy {
   /**
   * A list of IDs of GCP regions where messages that are published to
-the topic may be persisted in storage. Messages published by
-publishers running in non-allowed GCP regions (or running outside
-of GCP altogether) will be routed for storage in one of the
-allowed regions. An empty list means that no regions are allowed,
-and is not a valid configuration.
+  * the topic may be persisted in storage. Messages published by
+  * publishers running in non-allowed GCP regions (or running outside
+  * of GCP altogether) will be routed for storage in one of the
+  * allowed regions. An empty list means that no regions are allowed,
+  * and is not a valid configuration.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/pubsub_topic#allowed_persistence_regions PubsubTopic#allowed_persistence_regions}
   */
@@ -160,9 +155,9 @@ export interface PubsubTopicSchemaSettings {
   readonly encoding?: string;
   /**
   * The name of the schema that messages published should be
-validated against. Format is projects/{project}/schemas/{schema}.
-The value of this field will be _deleted-schema_
-if the schema has been deleted.
+  * validated against. Format is projects/{project}/schemas/{schema}.
+  * The value of this field will be _deleted-schema_
+  * if the schema has been deleted.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/pubsub_topic#schema PubsubTopic#schema}
   */

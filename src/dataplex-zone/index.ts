@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_zone
 // generated from terraform resource schema
 
@@ -33,9 +28,9 @@ export interface DataplexZoneConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Optional. User defined labels for the zone.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field `effective_labels` for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field `effective_labels` for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataplex_zone#labels DataplexZone#labels}
   */

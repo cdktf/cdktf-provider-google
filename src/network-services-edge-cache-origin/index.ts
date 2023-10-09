@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin
 // generated from terraform resource schema
 
@@ -20,10 +15,10 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   readonly description?: string;
   /**
   * The Origin resource to try when the current origin cannot be reached.
-After maxAttempts is reached, the configured failoverOrigin will be used to fulfil the request.
-
-The value of timeout.maxAttemptsTimeout dictates the timeout across all origins.
-A reference to a Topic resource.
+  * After maxAttempts is reached, the configured failoverOrigin will be used to fulfil the request.
+  * 
+  * The value of timeout.maxAttemptsTimeout dictates the timeout across all origins.
+  * A reference to a Topic resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#failover_origin NetworkServicesEdgeCacheOrigin#failover_origin}
   */
@@ -37,52 +32,52 @@ A reference to a Topic resource.
   readonly id?: string;
   /**
   * Set of label tags associated with the EdgeCache resource.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#labels NetworkServicesEdgeCacheOrigin#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The maximum number of attempts to cache fill from this origin. Another attempt is made when a cache fill fails with one of the retryConditions.
-
-Once maxAttempts to this origin have failed the failoverOrigin will be used, if one is specified. That failoverOrigin may specify its own maxAttempts,
-retryConditions and failoverOrigin to control its own cache fill failures.
-
-The total number of allowed attempts to cache fill across this and failover origins is limited to four.
-The total time allowed for cache fill attempts across this and failover origins can be controlled with maxAttemptsTimeout.
-
-The last valid, non-retried response from all origins will be returned to the client.
-If no origin returns a valid response, an HTTP 502 will be returned to the client.
-
-Defaults to 1. Must be a value greater than 0 and less than 4.
+  * 
+  * Once maxAttempts to this origin have failed the failoverOrigin will be used, if one is specified. That failoverOrigin may specify its own maxAttempts,
+  * retryConditions and failoverOrigin to control its own cache fill failures.
+  * 
+  * The total number of allowed attempts to cache fill across this and failover origins is limited to four.
+  * The total time allowed for cache fill attempts across this and failover origins can be controlled with maxAttemptsTimeout.
+  * 
+  * The last valid, non-retried response from all origins will be returned to the client.
+  * If no origin returns a valid response, an HTTP 502 will be returned to the client.
+  * 
+  * Defaults to 1. Must be a value greater than 0 and less than 4.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#max_attempts NetworkServicesEdgeCacheOrigin#max_attempts}
   */
   readonly maxAttempts?: number;
   /**
   * Name of the resource; provided by the client when the resource is created.
-The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
-and all following characters must be a dash, underscore, letter or digit.
+  * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+  * and all following characters must be a dash, underscore, letter or digit.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#name NetworkServicesEdgeCacheOrigin#name}
   */
   readonly name: string;
   /**
   * A fully qualified domain name (FQDN) or IP address reachable over the public Internet, or the address of a Google Cloud Storage bucket.
-
-This address will be used as the origin for cache requests - e.g. FQDN: media-backend.example.com, IPv4: 35.218.1.1, IPv6: 2607:f8b0:4012:809::200e, Cloud Storage: gs://bucketname
-
-When providing an FQDN (hostname), it must be publicly resolvable (e.g. via Google public DNS) and IP addresses must be publicly routable.  It must not contain a protocol (e.g., https://) and it must not contain any slashes.
-If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
+  * 
+  * This address will be used as the origin for cache requests - e.g. FQDN: media-backend.example.com, IPv4: 35.218.1.1, IPv6: 2607:f8b0:4012:809::200e, Cloud Storage: gs://bucketname
+  * 
+  * When providing an FQDN (hostname), it must be publicly resolvable (e.g. via Google public DNS) and IP addresses must be publicly routable.  It must not contain a protocol (e.g., https://) and it must not contain any slashes.
+  * If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#origin_address NetworkServicesEdgeCacheOrigin#origin_address}
   */
   readonly originAddress: string;
   /**
   * The port to connect to the origin on.
-Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
+  * Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#port NetworkServicesEdgeCacheOrigin#port}
   */
@@ -93,31 +88,31 @@ Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
   readonly project?: string;
   /**
   * The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security & performance.
-
-When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: ["HTTP2", "HTTPS", "HTTP"]
+  * 
+  * When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: ["HTTP2", "HTTPS", "HTTP"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#protocol NetworkServicesEdgeCacheOrigin#protocol}
   */
   readonly protocol?: string;
   /**
   * Specifies one or more retry conditions for the configured origin.
-
-If the failure mode during a connection attempt to the origin matches the configured retryCondition(s),
-the origin request will be retried up to maxAttempts times. The failoverOrigin, if configured, will then be used to satisfy the request.
-
-The default retryCondition is "CONNECT_FAILURE".
-
-retryConditions apply to this origin, and not subsequent failoverOrigin(s),
-which may specify their own retryConditions and maxAttempts.
-
-Valid values are:
-
-- CONNECT_FAILURE: Retry on failures connecting to origins, for example due to connection timeouts.
-- HTTP_5XX: Retry if the origin responds with any 5xx response code, or if the origin does not respond at all, example: disconnects, reset, read timeout, connection failure, and refused streams.
-- GATEWAY_ERROR: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-- RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
-- NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
-- FORBIDDEN: Retry if the origin returns a HTTP 403 (Forbidden). Possible values: ["CONNECT_FAILURE", "HTTP_5XX", "GATEWAY_ERROR", "RETRIABLE_4XX", "NOT_FOUND", "FORBIDDEN"]
+  * 
+  * If the failure mode during a connection attempt to the origin matches the configured retryCondition(s),
+  * the origin request will be retried up to maxAttempts times. The failoverOrigin, if configured, will then be used to satisfy the request.
+  * 
+  * The default retryCondition is "CONNECT_FAILURE".
+  * 
+  * retryConditions apply to this origin, and not subsequent failoverOrigin(s),
+  * which may specify their own retryConditions and maxAttempts.
+  * 
+  * Valid values are:
+  * 
+  * - CONNECT_FAILURE: Retry on failures connecting to origins, for example due to connection timeouts.
+  * - HTTP_5XX: Retry if the origin responds with any 5xx response code, or if the origin does not respond at all, example: disconnects, reset, read timeout, connection failure, and refused streams.
+  * - GATEWAY_ERROR: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+  * - RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
+  * - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
+  * - FORBIDDEN: Retry if the origin returns a HTTP 403 (Forbidden). Possible values: ["CONNECT_FAILURE", "HTTP_5XX", "GATEWAY_ERROR", "RETRIABLE_4XX", "NOT_FOUND", "FORBIDDEN"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#retry_conditions NetworkServicesEdgeCacheOrigin#retry_conditions}
   */
@@ -168,8 +163,8 @@ export interface NetworkServicesEdgeCacheOriginAwsV4Authentication {
   readonly originRegion: string;
   /**
   * The Secret Manager secret version of the secret access key used by your origin.
-
-This is the resource name of the secret version in the format 'projects/* /secrets/* /versions/*' where the '*' values are replaced by the project, secret, and version you require.
+  * 
+  * This is the resource name of the secret version in the format 'projects/* /secrets/* /versions/*' where the '*' values are replaced by the project, secret, and version you require.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#secret_access_key_version NetworkServicesEdgeCacheOrigin#secret_access_key_version}
    *
@@ -288,13 +283,13 @@ export interface NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionR
   readonly headerValue: string;
   /**
   * Whether to replace all existing headers with the same name.
-
-By default, added header values are appended
-to the response or request headers with the
-same field names. The added values are
-separated by commas.
-
-To overwrite existing values, set 'replace' to 'true'.
+  * 
+  * By default, added header values are appended
+  * to the response or request headers with the
+  * same field names. The added values are
+  * separated by commas.
+  * 
+  * To overwrite existing values, set 'replace' to 'true'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#replace NetworkServicesEdgeCacheOrigin#replace}
   */
@@ -501,10 +496,10 @@ export class NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionOutpu
 export interface NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite {
   /**
   * Prior to forwarding the request to the selected
-origin, the request's host header is replaced with
-contents of the hostRewrite.
-
-This value must be between 1 and 255 characters.
+  * origin, the request's host header is replaced with
+  * contents of the hostRewrite.
+  * 
+  * This value must be between 1 and 255 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#host_rewrite NetworkServicesEdgeCacheOrigin#host_rewrite}
   */
@@ -668,9 +663,9 @@ export class NetworkServicesEdgeCacheOriginOriginOverrideActionOutputReference e
 export interface NetworkServicesEdgeCacheOriginOriginRedirect {
   /**
   * The set of redirect response codes that the CDN
-follows. Values of
-[RedirectConditions](https://cloud.google.com/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheOrigins#redirectconditions)
-are accepted.
+  * follows. Values of
+  * [RedirectConditions](https://cloud.google.com/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheOrigins#redirectconditions)
+  * are accepted.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#redirect_conditions NetworkServicesEdgeCacheOrigin#redirect_conditions}
   */
@@ -738,46 +733,46 @@ export class NetworkServicesEdgeCacheOriginOriginRedirectOutputReference extends
 export interface NetworkServicesEdgeCacheOriginTimeout {
   /**
   * The maximum duration to wait for a single origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
-
-Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
-
-The connectTimeout capped by the deadline set by the request's maxAttemptsTimeout.  The last connection attempt may have a smaller connectTimeout in order to adhere to the overall maxAttemptsTimeout.
+  * 
+  * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+  * 
+  * The connectTimeout capped by the deadline set by the request's maxAttemptsTimeout.  The last connection attempt may have a smaller connectTimeout in order to adhere to the overall maxAttemptsTimeout.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#connect_timeout NetworkServicesEdgeCacheOrigin#connect_timeout}
   */
   readonly connectTimeout?: string;
   /**
   * The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 504 will be returned if the timeout is reached before a response is returned.
-
-Defaults to 15 seconds. The timeout must be a value between 1s and 30s.
-
-If a failoverOrigin is specified, the maxAttemptsTimeout of the first configured origin sets the deadline for all connection attempts across all failoverOrigins.
+  * 
+  * Defaults to 15 seconds. The timeout must be a value between 1s and 30s.
+  * 
+  * If a failoverOrigin is specified, the maxAttemptsTimeout of the first configured origin sets the deadline for all connection attempts across all failoverOrigins.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#max_attempts_timeout NetworkServicesEdgeCacheOrigin#max_attempts_timeout}
   */
   readonly maxAttemptsTimeout?: string;
   /**
   * The maximum duration to wait between reads of a single HTTP connection/stream.
-
-Defaults to 15 seconds.  The timeout must be a value between 1s and 30s.
-
-The readTimeout is capped by the responseTimeout.  All reads of the HTTP connection/stream must be completed by the deadline set by the responseTimeout.
-
-If the response headers have already been written to the connection, the response will be truncated and logged.
+  * 
+  * Defaults to 15 seconds.  The timeout must be a value between 1s and 30s.
+  * 
+  * The readTimeout is capped by the responseTimeout.  All reads of the HTTP connection/stream must be completed by the deadline set by the responseTimeout.
+  * 
+  * If the response headers have already been written to the connection, the response will be truncated and logged.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#read_timeout NetworkServicesEdgeCacheOrigin#read_timeout}
   */
   readonly readTimeout?: string;
   /**
   * The maximum duration to wait for the last byte of a response to arrive when reading from the HTTP connection/stream.
-
-Defaults to 30 seconds. The timeout must be a value between 1s and 120s.
-
-The responseTimeout starts after the connection has been established.
-
-This also applies to HTTP Chunked Transfer Encoding responses, and/or when an open-ended Range request is made to the origin. Origins that take longer to write additional bytes to the response than the configured responseTimeout will result in an error being returned to the client.
-
-If the response headers have already been written to the connection, the response will be truncated and logged.
+  * 
+  * Defaults to 30 seconds. The timeout must be a value between 1s and 120s.
+  * 
+  * The responseTimeout starts after the connection has been established.
+  * 
+  * This also applies to HTTP Chunked Transfer Encoding responses, and/or when an open-ended Range request is made to the origin. Origins that take longer to write additional bytes to the response than the configured responseTimeout will result in an error being returned to the client.
+  * 
+  * If the response headers have already been written to the connection, the response will be truncated and logged.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_origin#response_timeout NetworkServicesEdgeCacheOrigin#response_timeout}
   */

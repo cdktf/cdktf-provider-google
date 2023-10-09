@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/firestore_database
 // generated from terraform resource schema
 
@@ -39,28 +34,28 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The location of the database. Available locations are listed at
-https://cloud.google.com/firestore/docs/locations.
+  * https://cloud.google.com/firestore/docs/locations.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
   */
   readonly locationId: string;
   /**
   * The ID to use for the database, which will become the final
-component of the database's resource name. This value should be 4-63
-characters. Valid characters are /[a-z][0-9]-/ with first character
-a letter and the last a letter or a number. Must not be
-UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
-"(default)" database id is also valid.
+  * component of the database's resource name. This value should be 4-63
+  * characters. Valid characters are /[a-z][0-9]-/ with first character
+  * a letter and the last a letter or a number. Must not be
+  * UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+  * "(default)" database id is also valid.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/firestore_database#name FirestoreDatabase#name}
   */
   readonly name: string;
   /**
   * Whether to enable the PITR feature on this database.
-If 'POINT_IN_TIME_RECOVERY_ENABLED' is selected, reads are supported on selected versions of the data from within the past 7 days.
-versionRetentionPeriod and earliestVersionTime can be used to determine the supported versions. These include reads against any timestamp within the past hour
-and reads against 1-minute snapshots beyond 1 hour and within 7 days.
-If 'POINT_IN_TIME_RECOVERY_DISABLED' is selected, reads are supported on any version of the data from within the past 1 hour. Default value: "POINT_IN_TIME_RECOVERY_DISABLED" Possible values: ["POINT_IN_TIME_RECOVERY_ENABLED", "POINT_IN_TIME_RECOVERY_DISABLED"]
+  * If 'POINT_IN_TIME_RECOVERY_ENABLED' is selected, reads are supported on selected versions of the data from within the past 7 days.
+  * versionRetentionPeriod and earliestVersionTime can be used to determine the supported versions. These include reads against any timestamp within the past hour
+  * and reads against 1-minute snapshots beyond 1 hour and within 7 days.
+  * If 'POINT_IN_TIME_RECOVERY_DISABLED' is selected, reads are supported on any version of the data from within the past 1 hour. Default value: "POINT_IN_TIME_RECOVERY_DISABLED" Possible values: ["POINT_IN_TIME_RECOVERY_ENABLED", "POINT_IN_TIME_RECOVERY_DISABLED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/firestore_database#point_in_time_recovery_enablement FirestoreDatabase#point_in_time_recovery_enablement}
   */
@@ -71,8 +66,8 @@ If 'POINT_IN_TIME_RECOVERY_DISABLED' is selected, reads are supported on any ver
   readonly project?: string;
   /**
   * The type of the database.
-See https://cloud.google.com/datastore/docs/firestore-or-datastore
-for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"]
+  * See https://cloud.google.com/datastore/docs/firestore-or-datastore
+  * for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/firestore_database#type FirestoreDatabase#type}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_resource_policy
 // generated from terraform resource schema
 
@@ -21,12 +16,12 @@ export interface DataGoogleComputeResourcePolicyConfig extends cdktf.TerraformMe
   readonly id?: string;
   /**
   * The name of the resource, provided by the client when initially creating
-the resource. The resource name must be 1-63 characters long, and comply
-with RFC1035. Specifically, the name must be 1-63 characters long and
-match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the
-first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character,
-which cannot be a dash.
+  * the resource. The resource name must be 1-63 characters long, and comply
+  * with RFC1035. Specifically, the name must be 1-63 characters long and
+  * match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the
+  * first character must be a lowercase letter, and all following characters
+  * must be a dash, lowercase letter, or digit, except the last character,
+  * which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_resource_policy#name DataGoogleComputeResourcePolicy#name}
   */

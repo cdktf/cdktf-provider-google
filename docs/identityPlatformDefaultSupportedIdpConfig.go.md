@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdefaultsupportedidpconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformdefaultsupportedidpconfig"
 
 identityplatformdefaultsupportedidpconfig.NewIdentityPlatformDefaultSupportedIdpConfig(scope Construct, id *string, config IdentityPlatformDefaultSupportedIdpConfigConfig) IdentityPlatformDefaultSupportedIdpConfig
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdefaultsupportedidpconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformdefaultsupportedidpconfig"
 
 identityplatformdefaultsupportedidpconfig.IdentityPlatformDefaultSupportedIdpConfig_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdefaultsupportedidpconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformdefaultsupportedidpconfig"
 
 identityplatformdefaultsupportedidpconfig.IdentityPlatformDefaultSupportedIdpConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ identityplatformdefaultsupportedidpconfig.IdentityPlatformDefaultSupportedIdpCon
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdefaultsupportedidpconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformdefaultsupportedidpconfig"
 
 identityplatformdefaultsupportedidpconfig.IdentityPlatformDefaultSupportedIdpConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdefaultsupportedidpconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformdefaultsupportedidpconfig"
 
 &identityplatformdefaultsupportedidpconfig.IdentityPlatformDefaultSupportedIdpConfigConfig {
 	Connection: interface{},
@@ -737,7 +737,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdef
 	Enabled: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfigTimeouts,
 }
 ```
 
@@ -870,25 +870,16 @@ IdpId *string
 
 ID of the IDP. Possible values include:.
 
-'apple.com'
-
-'facebook.com'
-
-'gc.apple.com'
-
-'github.com'
-
-'google.com'
-
-'linkedin.com'
-
-'microsoft.com'
-
-'playgames.google.com'
-
-'twitter.com'
-
-'yahoo.com'
+* 'apple.com'
+* 'facebook.com'
+* 'gc.apple.com'
+* 'github.com'
+* 'google.com'
+* 'linkedin.com'
+* 'microsoft.com'
+* 'playgames.google.com'
+* 'twitter.com'
+* 'yahoo.com'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_default_supported_idp_config#idp_id IdentityPlatformDefaultSupportedIdpConfig#idp_id}
 
@@ -954,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdefaultsupportedidpconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformdefaultsupportedidpconfig"
 
 &identityplatformdefaultsupportedidpconfig.IdentityPlatformDefaultSupportedIdpConfigTimeouts {
 	Create: *string,
@@ -1016,7 +1007,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig.IdentityPlatformDefaultSupportedIdpConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/identityplatformdefaultsupportedidpconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformdefaultsupportedidpconfig"
 
 identityplatformdefaultsupportedidpconfig.NewIdentityPlatformDefaultSupportedIdpConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformDefaultSupportedIdpConfigTimeoutsOutputReference
 ```

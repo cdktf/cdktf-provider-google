@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/privateca_certificate_authority
 // generated from terraform resource schema
 
@@ -27,7 +22,7 @@ export interface DataGooglePrivatecaCertificateAuthorityConfig extends cdktf.Ter
   readonly id?: string;
   /**
   * Location of the CertificateAuthority. A full list of valid locations can be found by
-running 'gcloud privateca locations list'.
+  * running 'gcloud privateca locations list'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/privateca_certificate_authority#location DataGooglePrivatecaCertificateAuthority#location}
   */

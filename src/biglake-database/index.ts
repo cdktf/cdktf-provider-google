@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database
 // generated from terraform resource schema
 
@@ -59,8 +54,8 @@ export interface BiglakeDatabaseHiveOptions {
   readonly locationUri?: string;
   /**
   * Stores user supplied Hive database parameters. An object containing a
-list of"key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * list of"key": value pairs.
+  * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#parameters BiglakeDatabase#parameters}
   */

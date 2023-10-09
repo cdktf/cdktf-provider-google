@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance
 // generated from terraform resource schema
 
@@ -14,8 +9,8 @@ import * as cdktf from 'cdktf';
 export interface LookerInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Network name in the consumer project in the format of: projects/{project}/global/networks/{network}
-Note that the consumer network may be in a different GCP project than the consumer
-project that is hosting the Looker Instance.
+  * Note that the consumer network may be in a different GCP project than the consumer
+  * project that is hosting the Looker Instance.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#consumer_network LookerInstance#consumer_network}
   */
@@ -35,11 +30,11 @@ project that is hosting the Looker Instance.
   readonly name: string;
   /**
   * Platform editions for a Looker instance. Each edition maps to a set of instance features, like its size. Must be one of these values:
-- LOOKER_CORE_TRIAL: trial instance
-- LOOKER_CORE_STANDARD: pay as you go standard instance
-- LOOKER_CORE_STANDARD_ANNUAL: subscription standard instance
-- LOOKER_CORE_ENTERPRISE_ANNUAL: subscription enterprise instance
-- LOOKER_CORE_EMBED_ANNUAL: subscription embed instance Default value: "LOOKER_CORE_TRIAL" Possible values: ["LOOKER_CORE_TRIAL", "LOOKER_CORE_STANDARD", "LOOKER_CORE_STANDARD_ANNUAL", "LOOKER_CORE_ENTERPRISE_ANNUAL", "LOOKER_CORE_EMBED_ANNUAL"]
+  * - LOOKER_CORE_TRIAL: trial instance
+  * - LOOKER_CORE_STANDARD: pay as you go standard instance
+  * - LOOKER_CORE_STANDARD_ANNUAL: subscription standard instance
+  * - LOOKER_CORE_ENTERPRISE_ANNUAL: subscription enterprise instance
+  * - LOOKER_CORE_EMBED_ANNUAL: subscription embed instance Default value: "LOOKER_CORE_TRIAL" Possible values: ["LOOKER_CORE_TRIAL", "LOOKER_CORE_STANDARD", "LOOKER_CORE_STANDARD_ANNUAL", "LOOKER_CORE_ENTERPRISE_ANNUAL", "LOOKER_CORE_EMBED_ANNUAL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#platform_edition LookerInstance#platform_edition}
   */
@@ -68,7 +63,7 @@ project that is hosting the Looker Instance.
   readonly region?: string;
   /**
   * Name of a reserved IP address range within the consumer network, to be used for
-private service access connection. User may or may not specify this in a request.
+  * private service access connection. User may or may not specify this in a request.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#reserved_range LookerInstance#reserved_range}
   */
@@ -119,11 +114,11 @@ private service access connection. User may or may not specify this in a request
 export interface LookerInstanceAdminSettings {
   /**
   * Email domain allowlist for the instance.
-
-Define the email domains to which your users can deliver Looker (Google Cloud core) content.
-Updating this list will restart the instance. Updating the allowed email domains from terraform
-means the value provided will be considered as the entire list and not an amendment to the
-existing list of allowed email domains.
+  * 
+  * Define the email domains to which your users can deliver Looker (Google Cloud core) content.
+  * Updating this list will restart the instance. Updating the allowed email domains from terraform
+  * means the value provided will be considered as the entire list and not an amendment to the
+  * existing list of allowed email domains.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#allowed_email_domains LookerInstance#allowed_email_domains}
   */
@@ -191,21 +186,21 @@ export class LookerInstanceAdminSettingsOutputReference extends cdktf.ComplexObj
 export interface LookerInstanceDenyMaintenancePeriodEndDate {
   /**
   * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0
-to specify a year by itself or a year and month where the day isn't significant.
+  * to specify a year by itself or a year and month where the day isn't significant.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#day LookerInstance#day}
   */
   readonly day?: number;
   /**
   * Month of a year. Must be from 1 to 12, or 0 to specify a year without a
-month and day.
+  * month and day.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#month LookerInstance#month}
   */
   readonly month?: number;
   /**
   * Year of the date. Must be from 1 to 9999, or 0 to specify a date without
-a year.
+  * a year.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#year LookerInstance#year}
   */
@@ -319,21 +314,21 @@ export class LookerInstanceDenyMaintenancePeriodEndDateOutputReference extends c
 export interface LookerInstanceDenyMaintenancePeriodStartDate {
   /**
   * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0
-to specify a year by itself or a year and month where the day isn't significant.
+  * to specify a year by itself or a year and month where the day isn't significant.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#day LookerInstance#day}
   */
   readonly day?: number;
   /**
   * Month of a year. Must be from 1 to 12, or 0 to specify a year without a
-month and day.
+  * month and day.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#month LookerInstance#month}
   */
   readonly month?: number;
   /**
   * Year of the date. Must be from 1 to 9999, or 0 to specify a date without
-a year.
+  * a year.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#year LookerInstance#year}
   */
@@ -948,14 +943,14 @@ export class LookerInstanceMaintenanceWindowStartTimeOutputReference extends cdk
 export interface LookerInstanceMaintenanceWindow {
   /**
   * Required. Day of the week for this MaintenanceWindow (in UTC).
-
-- MONDAY: Monday
-- TUESDAY: Tuesday
-- WEDNESDAY: Wednesday
-- THURSDAY: Thursday
-- FRIDAY: Friday
-- SATURDAY: Saturday
-- SUNDAY: Sunday Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  * 
+  * - MONDAY: Monday
+  * - TUESDAY: Tuesday
+  * - WEDNESDAY: Wednesday
+  * - THURSDAY: Thursday
+  * - FRIDAY: Friday
+  * - SATURDAY: Saturday
+  * - SUNDAY: Sunday Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/looker_instance#day_of_week LookerInstance#day_of_week}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_http_proxy
 // generated from terraform resource schema
 
@@ -20,11 +15,11 @@ export interface ComputeTargetHttpProxyConfig extends cdktf.TerraformMetaArgumen
   readonly description?: string;
   /**
   * Specifies how long to keep a connection open, after completing a response,
-while there is no matching traffic (in seconds). If an HTTP keepalive is
-not specified, a default value (610 seconds) will be used. For Global
-external HTTP(S) load balancer, the minimum allowed value is 5 seconds and
-the maximum allowed value is 1200 seconds. For Global external HTTP(S)
-load balancer (classic), this option is not available publicly.
+  * while there is no matching traffic (in seconds). If an HTTP keepalive is
+  * not specified, a default value (610 seconds) will be used. For Global
+  * external HTTP(S) load balancer, the minimum allowed value is 5 seconds and
+  * the maximum allowed value is 1200 seconds. For Global external HTTP(S)
+  * load balancer (classic), this option is not available publicly.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_http_proxy#http_keep_alive_timeout_sec ComputeTargetHttpProxy#http_keep_alive_timeout_sec}
   */
@@ -38,12 +33,12 @@ load balancer (classic), this option is not available publicly.
   readonly id?: string;
   /**
   * Name of the resource. Provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_http_proxy#name ComputeTargetHttpProxy#name}
   */
@@ -54,14 +49,14 @@ character, which cannot be a dash.
   readonly project?: string;
   /**
   * This field only applies when the forwarding rule that references
-this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+  * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_http_proxy#proxy_bind ComputeTargetHttpProxy#proxy_bind}
   */
   readonly proxyBind?: boolean | cdktf.IResolvable;
   /**
   * A reference to the UrlMap resource that defines the mapping from URL
-to the BackendService.
+  * to the BackendService.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_http_proxy#url_map ComputeTargetHttpProxy#url_map}
   */

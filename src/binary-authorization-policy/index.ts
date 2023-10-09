@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_policy
 // generated from terraform resource schema
 
@@ -20,8 +15,8 @@ export interface BinaryAuthorizationPolicyConfig extends cdktf.TerraformMetaArgu
   readonly description?: string;
   /**
   * Controls the evaluation of a Google-maintained global admission policy
-for common system-level images. Images not covered by the global
-policy will be subject to the project admission policy. Possible values: ["ENABLE", "DISABLE"]
+  * for common system-level images. Images not covered by the global
+  * policy will be subject to the project admission policy. Possible values: ["ENABLE", "DISABLE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_policy#global_policy_evaluation_mode BinaryAuthorizationPolicy#global_policy_evaluation_mode}
   */
@@ -65,9 +60,9 @@ policy will be subject to the project admission policy. Possible values: ["ENABL
 export interface BinaryAuthorizationPolicyAdmissionWhitelistPatterns {
   /**
   * An image name pattern to whitelist, in the form
-'registry/path/to/image'. This supports a trailing * as a
-wildcard, but this is allowed only in text after the registry/
-part.
+  * 'registry/path/to/image'. This supports a trailing * as a
+  * wildcard, but this is allowed only in text after the registry/
+  * part.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_policy#name_pattern BinaryAuthorizationPolicy#name_pattern}
   */
@@ -180,14 +175,14 @@ export interface BinaryAuthorizationPolicyClusterAdmissionRules {
   readonly evaluationMode: string;
   /**
   * The resource names of the attestors that must attest to a
-container image. If the attestor is in a different project from the
-policy, it should be specified in the format 'projects/* /attestors/*'.
-Each attestor must exist before a policy can reference it. To add an
-attestor to a policy the principal issuing the policy change
-request must be able to read the attestor resource.
-
-Note: this field must be non-empty when the evaluation_mode field
-specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+  * container image. If the attestor is in a different project from the
+  * policy, it should be specified in the format 'projects/* /attestors/*'.
+  * Each attestor must exist before a policy can reference it. To add an
+  * attestor to a policy the principal issuing the policy change
+  * request must be able to read the attestor resource.
+  * 
+  * Note: this field must be non-empty when the evaluation_mode field
+  * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_policy#require_attestations_by BinaryAuthorizationPolicy#require_attestations_by}
    *
@@ -361,14 +356,14 @@ export interface BinaryAuthorizationPolicyDefaultAdmissionRule {
   readonly evaluationMode: string;
   /**
   * The resource names of the attestors that must attest to a
-container image. If the attestor is in a different project from the
-policy, it should be specified in the format 'projects/* /attestors/*'.
-Each attestor must exist before a policy can reference it. To add an
-attestor to a policy the principal issuing the policy change
-request must be able to read the attestor resource.
-
-Note: this field must be non-empty when the evaluation_mode field
-specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+  * container image. If the attestor is in a different project from the
+  * policy, it should be specified in the format 'projects/* /attestors/*'.
+  * Each attestor must exist before a policy can reference it. To add an
+  * attestor to a policy the principal issuing the policy change
+  * request must be able to read the attestor resource.
+  * 
+  * Note: this field must be non-empty when the evaluation_mode field
+  * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_policy#require_attestations_by BinaryAuthorizationPolicy#require_attestations_by}
    *

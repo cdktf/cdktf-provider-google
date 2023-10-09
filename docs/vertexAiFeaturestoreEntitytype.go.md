@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytype.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.NewVertexAiFeaturestoreEntitytype(scope Construct, id *string, config VertexAiFeaturestoreEntitytypeConfig) VertexAiFeaturestoreEntitytype
 ```
@@ -338,7 +338,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytype.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytype_IsConstruct(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytype.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytype_IsTerraformElement(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytype_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytype.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytype_IsTerraformResource(x interface{}) *bool
 ```
@@ -803,7 +803,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 &vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytypeConfig {
 	Connection: interface{},
@@ -817,9 +817,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestor
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	MonitoringConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfig,
+	MonitoringConfig: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfig,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeTimeouts,
 }
 ```
 
@@ -967,7 +967,7 @@ Labels *map[string]*string
 
 A set of key/value label pairs to assign to this EntityType.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_featurestore_entitytype#labels VertexAiFeaturestoreEntitytype#labels}
@@ -1023,13 +1023,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 &vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytypeMonitoringConfig {
-	CategoricalThresholdConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfig,
-	ImportFeaturesAnalysis: github.com/cdktf/cdktf-provider-google-go/google/v10.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis,
-	NumericalThresholdConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfig,
-	SnapshotAnalysis: github.com/cdktf/cdktf-provider-google-go/google/v10.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysis,
+	CategoricalThresholdConfig: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfig,
+	ImportFeaturesAnalysis: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis,
+	NumericalThresholdConfig: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfig,
+	SnapshotAnalysis: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysis,
 }
 ```
 
@@ -1105,7 +1105,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 &vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfig {
 	Value: *f64,
@@ -1141,7 +1141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 &vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis {
 	AnomalyDetectionBaseline: *string,
@@ -1153,7 +1153,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis.property.anomalyDetectionBaseline">AnomalyDetectionBaseline</a></code> | <code>*string</code> | Defines the baseline to do anomaly detection for feature values imported by each [entityTypes.importFeatureValues][] operation. The value must be one of the values below: LATEST_STATS: Choose the later one statistics generated by either most recent snapshot analysis or previous import features analysis. If non of them exists, skip anomaly detection and only generate a statistics. MOST_RECENT_SNAPSHOT_STATS: Use the statistics generated by the most recent snapshot analysis if exists. PREVIOUS_IMPORT_FEATURES_STATS: Use the statistics generated by the previous import features analysis if exists. |
+| <code><a href="#@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis.property.anomalyDetectionBaseline">AnomalyDetectionBaseline</a></code> | <code>*string</code> | Defines the baseline to do anomaly detection for feature values imported by each [entityTypes.importFeatureValues][] operation. The value must be one of the values below: * LATEST_STATS: Choose the later one statistics generated by either most recent snapshot analysis or previous import features analysis. If non of them exists, skip anomaly detection and only generate a statistics. * MOST_RECENT_SNAPSHOT_STATS: Use the statistics generated by the most recent snapshot analysis if exists. * PREVIOUS_IMPORT_FEATURES_STATS: Use the statistics generated by the previous import features analysis if exists. |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis.property.state">State</a></code> | <code>*string</code> | Whether to enable / disable / inherite default hebavior for import features analysis. |
 
 ---
@@ -1166,7 +1166,7 @@ AnomalyDetectionBaseline *string
 
 - *Type:* *string
 
-Defines the baseline to do anomaly detection for feature values imported by each [entityTypes.importFeatureValues][] operation. The value must be one of the values below: LATEST_STATS: Choose the later one statistics generated by either most recent snapshot analysis or previous import features analysis. If non of them exists, skip anomaly detection and only generate a statistics. MOST_RECENT_SNAPSHOT_STATS: Use the statistics generated by the most recent snapshot analysis if exists. PREVIOUS_IMPORT_FEATURES_STATS: Use the statistics generated by the previous import features analysis if exists.
+Defines the baseline to do anomaly detection for feature values imported by each [entityTypes.importFeatureValues][] operation. The value must be one of the values below: * LATEST_STATS: Choose the later one statistics generated by either most recent snapshot analysis or previous import features analysis. If non of them exists, skip anomaly detection and only generate a statistics. * MOST_RECENT_SNAPSHOT_STATS: Use the statistics generated by the most recent snapshot analysis if exists. * PREVIOUS_IMPORT_FEATURES_STATS: Use the statistics generated by the previous import features analysis if exists.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_featurestore_entitytype#anomaly_detection_baseline VertexAiFeaturestoreEntitytype#anomaly_detection_baseline}
 
@@ -1183,9 +1183,10 @@ State *string
 Whether to enable / disable / inherite default hebavior for import features analysis.
 
 The value must be one of the values below:
-DEFAULT: The default behavior of whether to enable the monitoring. EntityType-level config: disabled.
-ENABLED: Explicitly enables import features analysis. EntityType-level config: by default enables import features analysis for all Features under it.
-DISABLED: Explicitly disables import features analysis. EntityType-level config: by default disables import features analysis for all Features under it.
+
+* DEFAULT: The default behavior of whether to enable the monitoring. EntityType-level config: disabled.
+* ENABLED: Explicitly enables import features analysis. EntityType-level config: by default enables import features analysis for all Features under it.
+* DISABLED: Explicitly disables import features analysis. EntityType-level config: by default disables import features analysis for all Features under it.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_featurestore_entitytype#state VertexAiFeaturestoreEntitytype#state}
 
@@ -1196,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 &vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfig {
 	Value: *f64,
@@ -1232,7 +1233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysis.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 &vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysis {
 	Disabled: interface{},
@@ -1305,7 +1306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 &vertexaifeaturestoreentitytype.VertexAiFeaturestoreEntitytypeTimeouts {
 	Create: *string,
@@ -1367,7 +1368,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.NewVertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfigOutputReference
 ```
@@ -1638,7 +1639,7 @@ func InternalValue() VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalTh
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysisOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.NewVertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysisOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysisOutputReference
 ```
@@ -1945,7 +1946,7 @@ func InternalValue() VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeature
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.NewVertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfigOutputReference
 ```
@@ -2216,7 +2217,7 @@ func InternalValue() VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThre
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.NewVertexAiFeaturestoreEntitytypeMonitoringConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreEntitytypeMonitoringConfigOutputReference
 ```
@@ -2633,7 +2634,7 @@ func InternalValue() VertexAiFeaturestoreEntitytypeMonitoringConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysisOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.NewVertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysisOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysisOutputReference
 ```
@@ -2969,7 +2970,7 @@ func InternalValue() VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnaly
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestoreEntitytype.VertexAiFeaturestoreEntitytypeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/vertexaifeaturestoreentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestoreentitytype"
 
 vertexaifeaturestoreentitytype.NewVertexAiFeaturestoreEntitytypeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreEntitytypeTimeoutsOutputReference
 ```

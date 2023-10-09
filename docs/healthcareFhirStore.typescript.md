@@ -1099,7 +1099,7 @@ public readonly name: string;
 
 The resource name for the FhirStore.
 
-* Changing this property may recreate the FHIR store (removing all data) **
+** Changing this property may recreate the FHIR store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#name HealthcareFhirStore#name}
 
@@ -1168,7 +1168,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 
-* Changing this property may recreate the FHIR store (removing all data) **
+** Changing this property may recreate the FHIR store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#disable_referential_integrity HealthcareFhirStore#disable_referential_integrity}
 
@@ -1190,7 +1190,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 
-* Changing this property may recreate the FHIR store (removing all data) **
+** Changing this property may recreate the FHIR store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#disable_resource_versioning HealthcareFhirStore#disable_resource_versioning}
 
@@ -1210,9 +1210,9 @@ Importing resource histories creates resource interactions that appear to have
 occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
 will fail with an error.
 
-* Changing this property may recreate the FHIR store (removing all data) **
+** Changing this property may recreate the FHIR store (removing all data) **
 
-* This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#enable_history_import HealthcareFhirStore#enable_history_import}
 
@@ -1276,7 +1276,7 @@ An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#labels HealthcareFhirStore#labels}
@@ -1525,10 +1525,10 @@ public readonly schemaType: string;
 
 Specifies the output schema type.
 
-ANALYTICS: Analytics schema defined by the FHIR community.
-See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
-ANALYTICS_V2: Analytics V2, similar to schema defined by the FHIR community, with added support for extensions with one or more occurrences and contained resources in stringified JSON.
-LOSSLESS: A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification. Default value: "ANALYTICS" Possible values: ["ANALYTICS", "ANALYTICS_V2", "LOSSLESS"]
+* ANALYTICS: Analytics schema defined by the FHIR community.
+  See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+ * ANALYTICS_V2: Analytics V2, similar to schema defined by the FHIR community, with added support for extensions with one or more occurrences and contained resources in stringified JSON.
+ * LOSSLESS: A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification. Default value: "ANALYTICS" Possible values: ["ANALYTICS", "ANALYTICS_V2", "LOSSLESS"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#schema_type HealthcareFhirStore#schema_type}
 

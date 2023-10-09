@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket
 // generated from terraform resource schema
 
@@ -32,7 +27,7 @@ export interface ComputeBackendBucketConfig extends cdktf.TerraformMetaArguments
   readonly customResponseHeaders?: string[];
   /**
   * An optional textual description of the resource; provided by the
-client when the resource is created.
+  * client when the resource is created.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#description ComputeBackendBucket#description}
   */
@@ -58,12 +53,12 @@ client when the resource is created.
   readonly id?: string;
   /**
   * Name of the resource. Provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035.  Specifically, the name must be 1-63 characters long and
-match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
-the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the
-last character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035.  Specifically, the name must be 1-63 characters long and
+  * match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
+  * the first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the
+  * last character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#name ComputeBackendBucket#name}
   */
@@ -187,15 +182,15 @@ export class ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersList extend
 export interface ComputeBackendBucketCdnPolicyCacheKeyPolicy {
   /**
   * Allows HTTP request headers (by name) to be used in the
-cache key.
+  * cache key.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#include_http_headers ComputeBackendBucket#include_http_headers}
   */
   readonly includeHttpHeaders?: string[];
   /**
   * Names of query string parameters to include in cache keys.
-Default parameters are always included. '&' and '=' will
-be percent encoded and not treated as delimiters.
+  * Default parameters are always included. '&' and '=' will
+  * be percent encoded and not treated as delimiters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#query_string_whitelist ComputeBackendBucket#query_string_whitelist}
   */
@@ -286,14 +281,14 @@ export class ComputeBackendBucketCdnPolicyCacheKeyPolicyOutputReference extends 
 export interface ComputeBackendBucketCdnPolicyNegativeCachingPolicy {
   /**
   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
-can be specified as values, and you cannot specify a status code more than once.
+  * can be specified as values, and you cannot specify a status code more than once.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#code ComputeBackendBucket#code}
   */
   readonly code?: number;
   /**
   * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
-(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+  * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#ttl ComputeBackendBucket#ttl}
   */
@@ -416,7 +411,7 @@ export class ComputeBackendBucketCdnPolicyNegativeCachingPolicyList extends cdkt
 export interface ComputeBackendBucketCdnPolicy {
   /**
   * Specifies the cache setting for all responses from this backend.
-The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: ["USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "CACHE_ALL_STATIC"]
+  * The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: ["USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "CACHE_ALL_STATIC"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#cache_mode ComputeBackendBucket#cache_mode}
   */
@@ -429,7 +424,7 @@ The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATI
   readonly clientTtl?: number;
   /**
   * Specifies the default TTL for cached content served by this origin for responses
-that do not have an existing valid TTL (max-age or s-max-age).
+  * that do not have an existing valid TTL (max-age or s-max-age).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#default_ttl ComputeBackendBucket#default_ttl}
   */
@@ -460,13 +455,13 @@ that do not have an existing valid TTL (max-age or s-max-age).
   readonly serveWhileStale?: number;
   /**
   * Maximum number of seconds the response to a signed URL request will
-be considered fresh. After this time period,
-the response will be revalidated before being served.
-When serving responses to signed URL requests,
-Cloud CDN will internally behave as though
-all responses from this backend had a "Cache-Control: public,
-max-age=[TTL]" header, regardless of any existing Cache-Control
-header. The actual headers served in responses will not be altered.
+  * be considered fresh. After this time period,
+  * the response will be revalidated before being served.
+  * When serving responses to signed URL requests,
+  * Cloud CDN will internally behave as though
+  * all responses from this backend had a "Cache-Control: public,
+  * max-age=[TTL]" header, regardless of any existing Cache-Control
+  * header. The actual headers served in responses will not be altered.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_backend_bucket#signed_url_cache_max_age_sec ComputeBackendBucket#signed_url_cache_max_age_sec}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/project_default_service_accounts
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMetaArguments {
   /**
   * The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE.
-				Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy.
+  * 				Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/project_default_service_accounts#action ProjectDefaultServiceAccounts#action}
   */
@@ -34,7 +29,7 @@ export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMeta
   readonly project: string;
   /**
   * The action to be performed in the default service accounts on the resource destroy.
-				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
+  * 				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/project_default_service_accounts#restore_policy ProjectDefaultServiceAccounts#restore_policy}
   */

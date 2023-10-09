@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The resource name for the DicomStore.
 
-* Changing this property may recreate the Dicom store (removing all data) **
+** Changing this property may recreate the Dicom store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#name HealthcareDicomStore#name}
 
@@ -166,7 +166,7 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#labels HealthcareDicomStore#labels}
@@ -1014,7 +1014,7 @@ public java.lang.String getName();
 
 The resource name for the DicomStore.
 
-* Changing this property may recreate the Dicom store (removing all data) **
+** Changing this property may recreate the Dicom store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#name HealthcareDicomStore#name}
 
@@ -1056,7 +1056,7 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_dicom_store#labels HealthcareDicomStore#labels}

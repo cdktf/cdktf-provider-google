@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_attached_cluster
 // generated from terraform resource schema
 
@@ -14,15 +9,15 @@ import * as cdktf from 'cdktf';
 export interface ContainerAttachedClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. Annotations on the cluster. This field has the same
-restrictions as Kubernetes annotations. The total size of all keys and
-values combined is limited to 256k. Key can have 2 segments: prefix (optional)
-and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
-Name must be 63 characters or less, begin and end with alphanumerics,
-with dashes (-), underscores (_), dots (.), and alphanumerics between.
-
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
+  * restrictions as Kubernetes annotations. The total size of all keys and
+  * values combined is limited to 256k. Key can have 2 segments: prefix (optional)
+  * and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
+  * Name must be 63 characters or less, begin and end with alphanumerics,
+  * with dashes (-), underscores (_), dots (.), and alphanumerics between.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_attached_cluster#annotations ContainerAttachedCluster#annotations}
   */
@@ -35,14 +30,14 @@ Please refer to the field 'effective_annotations' for all of the annotations pre
   readonly deletionPolicy?: string;
   /**
   * A human readable description of this attached cluster. Cannot be longer
-than 255 UTF-8 encoded bytes.
+  * than 255 UTF-8 encoded bytes.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_attached_cluster#description ContainerAttachedCluster#description}
   */
   readonly description?: string;
   /**
   * The Kubernetes distribution of the underlying attached cluster. Supported values:
-"eks", "aks".
+  * "eks", "aks".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_attached_cluster#distribution ContainerAttachedCluster#distribution}
   */
@@ -260,11 +255,11 @@ export class ContainerAttachedClusterWorkloadIdentityConfigList extends cdktf.Co
 export interface ContainerAttachedClusterAuthorization {
   /**
   * Users that can perform operations as a cluster admin. A managed
-ClusterRoleBinding will be created to grant the 'cluster-admin' ClusterRole
-to the users. Up to ten admin users can be provided.
-
-For more info on RBAC, see
-https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
+  * ClusterRoleBinding will be created to grant the 'cluster-admin' ClusterRole
+  * to the users. Up to ten admin users can be provided.
+  * 
+  * For more info on RBAC, see
+  * https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_attached_cluster#admin_users ContainerAttachedCluster#admin_users}
   */

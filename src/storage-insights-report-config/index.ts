@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_insights_report_config
 // generated from terraform resource schema
 
@@ -27,7 +22,7 @@ export interface StorageInsightsReportConfigConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * The location of the ReportConfig. The source and destination buckets specified in the ReportConfig
-must be in the same location.
+  * must be in the same location.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_insights_report_config#location StorageInsightsReportConfig#location}
   */

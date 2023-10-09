@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface MonitoringSloConfig extends cdktf.TerraformMetaArguments {
   /**
   * A calendar period, semantically "since the start of the current
-<calendarPeriod>". Possible values: ["DAY", "WEEK", "FORTNIGHT", "MONTH"]
+  * <calendarPeriod>". Possible values: ["DAY", "WEEK", "FORTNIGHT", "MONTH"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#calendar_period MonitoringSlo#calendar_period}
   */
@@ -27,7 +22,7 @@ export interface MonitoringSloConfig extends cdktf.TerraformMetaArguments {
   readonly displayName?: string;
   /**
   * The fraction of service that must be good in order for this objective
-to be met. 0 < goal <= 0.999
+  * to be met. 0 < goal <= 0.999
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#goal MonitoringSlo#goal}
   */
@@ -45,7 +40,7 @@ to be met. 0 < goal <= 0.999
   readonly project?: string;
   /**
   * A rolling time period, semantically "in the past X days".
-Must be between 1 to 30 days, inclusive.
+  * Must be between 1 to 30 days, inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#rolling_period_days MonitoringSlo#rolling_period_days}
   */
@@ -64,10 +59,10 @@ Must be between 1 to 30 days, inclusive.
   readonly sloId?: string;
   /**
   * This field is intended to be used for organizing and identifying the AlertPolicy
-objects.The field can contain up to 64 entries. Each key and value is limited
-to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys
-must begin with a letter.
+  * objects.The field can contain up to 64 entries. Each key and value is limited
+  * to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+  * can contain only lowercase letters, numerals, underscores, and dashes. Keys
+  * must begin with a letter.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#user_labels MonitoringSlo#user_labels}
   */
@@ -167,8 +162,8 @@ export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.Comp
 export interface MonitoringSloBasicSliLatency {
   /**
   * A duration string, e.g. 10s.
-Good service is defined to be the count of requests made to
-this service that return in no more than threshold.
+  * Good service is defined to be the count of requests made to
+  * this service that return in no more than threshold.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
   */
@@ -233,33 +228,33 @@ export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexOb
 export interface MonitoringSloBasicSli {
   /**
   * An optional set of locations to which this SLI is relevant.
-Telemetry from other locations will not be used to calculate
-performance for this SLI. If omitted, this SLI applies to all
-locations in which the Service has activity. For service types
-that don't support breaking down by location, setting this
-field will result in an error.
+  * Telemetry from other locations will not be used to calculate
+  * performance for this SLI. If omitted, this SLI applies to all
+  * locations in which the Service has activity. For service types
+  * that don't support breaking down by location, setting this
+  * field will result in an error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#location MonitoringSlo#location}
   */
   readonly location?: string[];
   /**
   * An optional set of RPCs to which this SLI is relevant.
-Telemetry from other methods will not be used to calculate
-performance for this SLI. If omitted, this SLI applies to all
-the Service's methods. For service types that don't support
-breaking down by method, setting this field will result in an
-error.
+  * Telemetry from other methods will not be used to calculate
+  * performance for this SLI. If omitted, this SLI applies to all
+  * the Service's methods. For service types that don't support
+  * breaking down by method, setting this field will result in an
+  * error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#method MonitoringSlo#method}
   */
   readonly method?: string[];
   /**
   * The set of API versions to which this SLI is relevant.
-Telemetry from other API versions will not be used to
-calculate performance for this SLI. If omitted,
-this SLI applies to all API versions. For service types
-that don't support breaking down by version, setting this
-field will result in an error.
+  * Telemetry from other API versions will not be used to
+  * calculate performance for this SLI. If omitted,
+  * this SLI applies to all API versions. For service types
+  * that don't support breaking down by version, setting this
+  * field will result in an error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#version MonitoringSlo#version}
   */
@@ -431,14 +426,14 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
 export interface MonitoringSloRequestBasedSliDistributionCutRange {
   /**
   * max value for the range (inclusive). If not given,
-will be set to 0
+  * will be set to 0
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
   */
   readonly max?: number;
   /**
   * Min value for the range (inclusive). If not given,
-will be set to 0
+  * will be set to 0
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
   */
@@ -529,10 +524,10 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
 export interface MonitoringSloRequestBasedSliDistributionCut {
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-aggregating values to quantify the good service provided.
-
-Must have ValueType = DISTRIBUTION and
-MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * aggregating values to quantify the good service provided.
+  * 
+  * Must have ValueType = DISTRIBUTION and
+  * MetricKind = DELTA or MetricKind = CUMULATIVE.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#distribution_filter MonitoringSlo#distribution_filter}
   */
@@ -623,40 +618,40 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
 export interface MonitoringSloRequestBasedSliGoodTotalRatio {
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying bad service provided, either demanded service that
-was not provided or demanded service that was of inadequate
-quality.
-
-Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-
-Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
-must be set (good + bad = total is assumed).
+  * quantifying bad service provided, either demanded service that
+  * was not provided or demanded service that was of inadequate
+  * quality.
+  * 
+  * Must have ValueType = DOUBLE or ValueType = INT64 and
+  * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
+  * must be set (good + bad = total is assumed).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#bad_service_filter MonitoringSlo#bad_service_filter}
   */
   readonly badServiceFilter?: string;
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying good service provided.
-Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-
-Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
-must be set (good + bad = total is assumed).
+  * quantifying good service provided.
+  * Must have ValueType = DOUBLE or ValueType = INT64 and
+  * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
+  * must be set (good + bad = total is assumed).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#good_service_filter MonitoringSlo#good_service_filter}
   */
   readonly goodServiceFilter?: string;
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying total demanded service.
-
-Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-
-Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
-must be set (good + bad = total is assumed).
+  * quantifying total demanded service.
+  * 
+  * Must have ValueType = DOUBLE or ValueType = INT64 and
+  * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * 
+  * Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
+  * must be set (good + bad = total is assumed).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#total_service_filter MonitoringSlo#total_service_filter}
   */
@@ -1062,8 +1057,8 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency {
   /**
   * A duration string, e.g. 10s.
-Good service is defined to be the count of requests made to
-this service that return in no more than threshold.
+  * Good service is defined to be the count of requests made to
+  * this service that return in no more than threshold.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
   */
@@ -1128,33 +1123,33 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance {
   /**
   * An optional set of locations to which this SLI is relevant.
-Telemetry from other locations will not be used to calculate
-performance for this SLI. If omitted, this SLI applies to all
-locations in which the Service has activity. For service types
-that don't support breaking down by location, setting this
-field will result in an error.
+  * Telemetry from other locations will not be used to calculate
+  * performance for this SLI. If omitted, this SLI applies to all
+  * locations in which the Service has activity. For service types
+  * that don't support breaking down by location, setting this
+  * field will result in an error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#location MonitoringSlo#location}
   */
   readonly location?: string[];
   /**
   * An optional set of RPCs to which this SLI is relevant.
-Telemetry from other methods will not be used to calculate
-performance for this SLI. If omitted, this SLI applies to all
-the Service's methods. For service types that don't support
-breaking down by method, setting this field will result in an
-error.
+  * Telemetry from other methods will not be used to calculate
+  * performance for this SLI. If omitted, this SLI applies to all
+  * the Service's methods. For service types that don't support
+  * breaking down by method, setting this field will result in an
+  * error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#method MonitoringSlo#method}
   */
   readonly method?: string[];
   /**
   * The set of API versions to which this SLI is relevant.
-Telemetry from other API versions will not be used to
-calculate performance for this SLI. If omitted,
-this SLI applies to all API versions. For service types
-that don't support breaking down by version, setting this
-field will result in an error.
+  * Telemetry from other API versions will not be used to
+  * calculate performance for this SLI. If omitted,
+  * this SLI applies to all API versions. For service types
+  * that don't support breaking down by version, setting this
+  * field will result in an error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#version MonitoringSlo#version}
   */
@@ -1326,14 +1321,14 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange {
   /**
   * max value for the range (inclusive). If not given,
-will be set to 0
+  * will be set to 0
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
   */
   readonly max?: number;
   /**
   * Min value for the range (inclusive). If not given,
-will be set to 0
+  * will be set to 0
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
   */
@@ -1424,10 +1419,10 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-aggregating values to quantify the good service provided.
-
-Must have ValueType = DISTRIBUTION and
-MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * aggregating values to quantify the good service provided.
+  * 
+  * Must have ValueType = DISTRIBUTION and
+  * MetricKind = DELTA or MetricKind = CUMULATIVE.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#distribution_filter MonitoringSlo#distribution_filter}
   */
@@ -1518,38 +1513,38 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio {
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying bad service provided, either demanded service that
-was not provided or demanded service that was of inadequate
-quality. Exactly two of
-good, bad, or total service filter must be defined (where
-good + bad = total is assumed)
-
-Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * quantifying bad service provided, either demanded service that
+  * was not provided or demanded service that was of inadequate
+  * quality. Exactly two of
+  * good, bad, or total service filter must be defined (where
+  * good + bad = total is assumed)
+  * 
+  * Must have ValueType = DOUBLE or ValueType = INT64 and
+  * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#bad_service_filter MonitoringSlo#bad_service_filter}
   */
   readonly badServiceFilter?: string;
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying good service provided. Exactly two of
-good, bad, or total service filter must be defined (where
-good + bad = total is assumed)
-
-Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * quantifying good service provided. Exactly two of
+  * good, bad, or total service filter must be defined (where
+  * good + bad = total is assumed)
+  * 
+  * Must have ValueType = DOUBLE or ValueType = INT64 and
+  * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#good_service_filter MonitoringSlo#good_service_filter}
   */
   readonly goodServiceFilter?: string;
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying total demanded service. Exactly two of
-good, bad, or total service filter must be defined (where
-good + bad = total is assumed)
-
-Must have ValueType = DOUBLE or ValueType = INT64 and
-must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+  * quantifying total demanded service. Exactly two of
+  * good, bad, or total service filter must be defined (where
+  * good + bad = total is assumed)
+  * 
+  * Must have ValueType = DOUBLE or ValueType = INT64 and
+  * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#total_service_filter MonitoringSlo#total_service_filter}
   */
@@ -1759,7 +1754,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThreshold {
   /**
   * If window performance >= threshold, the window is counted
-as good.
+  * as good.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
   */
@@ -1885,16 +1880,16 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
 export interface MonitoringSloWindowsBasedSliMetricMeanInRangeRange {
   /**
   * max value for the range (inclusive). If not given,
-will be set to "infinity", defining an open range
-">= range.min"
+  * will be set to "infinity", defining an open range
+  * ">= range.min"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
   */
   readonly max?: number;
   /**
   * Min value for the range (inclusive). If not given,
-will be set to "-infinity", defining an open range
-"< range.max"
+  * will be set to "-infinity", defining an open range
+  * "< range.max"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
   */
@@ -1985,11 +1980,11 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
 export interface MonitoringSloWindowsBasedSliMetricMeanInRange {
   /**
   * A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-specifying the TimeSeries to use for evaluating window
-The provided TimeSeries must have ValueType = INT64 or
-ValueType = DOUBLE and MetricKind = GAUGE. Mean value 'X'
-should satisfy 'range.min <= X <= range.max'
-under good service.
+  * specifying the TimeSeries to use for evaluating window
+  * The provided TimeSeries must have ValueType = INT64 or
+  * ValueType = DOUBLE and MetricKind = GAUGE. Mean value 'X'
+  * should satisfy 'range.min <= X <= range.max'
+  * under good service.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#time_series MonitoringSlo#time_series}
   */
@@ -2080,16 +2075,16 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
 export interface MonitoringSloWindowsBasedSliMetricSumInRangeRange {
   /**
   * max value for the range (inclusive). If not given,
-will be set to "infinity", defining an open range
-">= range.min"
+  * will be set to "infinity", defining an open range
+  * ">= range.min"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
   */
   readonly max?: number;
   /**
   * Min value for the range (inclusive). If not given,
-will be set to "-infinity", defining an open range
-"< range.max"
+  * will be set to "-infinity", defining an open range
+  * "< range.max"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
   */
@@ -2180,13 +2175,13 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
 export interface MonitoringSloWindowsBasedSliMetricSumInRange {
   /**
   * A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-specifying the TimeSeries to use for evaluating window
-quality. The provided TimeSeries must have
-ValueType = INT64 or ValueType = DOUBLE and
-MetricKind = GAUGE.
-
-Summed value 'X' should satisfy
-'range.min <= X <= range.max' for a good window.
+  * specifying the TimeSeries to use for evaluating window
+  * quality. The provided TimeSeries must have
+  * ValueType = INT64 or ValueType = DOUBLE and
+  * MetricKind = GAUGE.
+  * 
+  * Summed value 'X' should satisfy
+  * 'range.min <= X <= range.max' for a good window.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#time_series MonitoringSlo#time_series}
   */
@@ -2277,18 +2272,18 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
 export interface MonitoringSloWindowsBasedSli {
   /**
   * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-with ValueType = BOOL. The window is good if any true values
-appear in the window. One of 'good_bad_metric_filter',
-'good_total_ratio_threshold', 'metric_mean_in_range',
-'metric_sum_in_range' must be set for 'windows_based_sli'.
+  * with ValueType = BOOL. The window is good if any true values
+  * appear in the window. One of 'good_bad_metric_filter',
+  * 'good_total_ratio_threshold', 'metric_mean_in_range',
+  * 'metric_sum_in_range' must be set for 'windows_based_sli'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#good_bad_metric_filter MonitoringSlo#good_bad_metric_filter}
   */
   readonly goodBadMetricFilter?: string;
   /**
   * Duration over which window quality is evaluated, given as a
-duration string "{X}s" representing X seconds. Must be an
-integer fraction of a day and at least 60s.
+  * duration string "{X}s" representing X seconds. Must be an
+  * integer fraction of a day and at least 60s.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_slo#window_period MonitoringSlo#window_period}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_instance
 // generated from terraform resource schema
 
@@ -14,9 +9,9 @@ import * as cdktf from 'cdktf';
 export interface ApigeeInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. Customer accept list represents the list of projects (id/number) on customer
-side that can privately connect to the service attachment. It is an optional field
-which the customers can provide during the instance creation. By default, the customer
-project associated with the Apigee organization will be included to the list.
+  * side that can privately connect to the service attachment. It is an optional field
+  * which the customers can provide during the instance creation. By default, the customer
+  * project associated with the Apigee organization will be included to the list.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_instance#consumer_accept_list ApigeeInstance#consumer_accept_list}
   */
@@ -29,7 +24,7 @@ project associated with the Apigee organization will be included to the list.
   readonly description?: string;
   /**
   * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
-Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)'
+  * Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_instance#disk_encryption_key_name ApigeeInstance#disk_encryption_key_name}
   */
@@ -49,12 +44,12 @@ Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
   readonly id?: string;
   /**
   * IP range represents the customer-provided CIDR block of length 22 that will be used for
-the Apigee instance creation. This optional range, if provided, should be freely
-available as part of larger named range the customer has allocated to the Service
-Networking peering. If this is not provided, Apigee will automatically request for any
-available /22 CIDR block from Service Networking. The customer should use this CIDR block
-for configuring their firewall needs to allow traffic from Apigee.
-Input format: "a.b.c.d/22"
+  * the Apigee instance creation. This optional range, if provided, should be freely
+  * available as part of larger named range the customer has allocated to the Service
+  * Networking peering. If this is not provided, Apigee will automatically request for any
+  * available /22 CIDR block from Service Networking. The customer should use this CIDR block
+  * for configuring their firewall needs to allow traffic from Apigee.
+  * Input format: "a.b.c.d/22"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_instance#ip_range ApigeeInstance#ip_range}
   */
@@ -73,14 +68,14 @@ Input format: "a.b.c.d/22"
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee instance,
-in the format 'organizations/{{org_name}}'.
+  * in the format 'organizations/{{org_name}}'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_instance#org_id ApigeeInstance#org_id}
   */
   readonly orgId: string;
   /**
   * The size of the CIDR block range that will be reserved by the instance. For valid values,
-see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
+  * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_instance#peering_cidr_range ApigeeInstance#peering_cidr_range}
   */

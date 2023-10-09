@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironment(scope Construct, id *string, config ComposerEnvironmentConfig) ComposerEnvironment
 ```
@@ -338,7 +338,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.ComposerEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.ComposerEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ composerenvironment.ComposerEnvironment_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.ComposerEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -759,7 +759,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfig {
 	Connection: interface{},
@@ -770,12 +770,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	Config: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigA,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentTimeouts,
 }
 ```
 
@@ -925,8 +925,10 @@ User-defined labels for this environment.
 
 The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be <= 128 bytes in size.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+```
+			**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+			Please refer to the field 'effective_labels' for all of the labels present on the resource.
+```
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/composer_environment#labels ComposerEnvironment#labels}
 
@@ -981,23 +983,23 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigA {
-	DatabaseConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig,
-	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig,
+	DatabaseConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig,
+	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig,
 	EnvironmentSize: *string,
-	MaintenanceWindow: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow,
-	MasterAuthorizedNetworksConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig,
-	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigNodeConfig,
+	MaintenanceWindow: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow,
+	MasterAuthorizedNetworksConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig,
+	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigNodeConfig,
 	NodeCount: *f64,
-	PrivateEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig,
-	RecoveryConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigRecoveryConfig,
+	PrivateEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig,
+	RecoveryConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfig,
 	ResilienceMode: *string,
-	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigSoftwareConfig,
-	WebServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigWebServerConfig,
-	WebServerNetworkAccessControl: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl,
-	WorkloadsConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfig,
+	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfig,
+	WebServerConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWebServerConfig,
+	WebServerNetworkAccessControl: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl,
+	WorkloadsConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfig,
 }
 ```
 
@@ -1229,7 +1231,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigDatabaseConfig {
 	MachineType: *string,
@@ -1265,7 +1267,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigEncryptionConfig {
 	KmsKeyName: *string,
@@ -1299,7 +1301,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigMaintenanceWindow {
 	EndTime: *string,
@@ -1369,7 +1371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig {
 	Enabled: interface{},
@@ -1419,7 +1421,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks {
 	CidrBlock: *string,
@@ -1469,7 +1471,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigNodeConfig {
 	DiskSizeGb: *f64,
@@ -1661,7 +1663,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
 	ClusterIpv4CidrBlock: *string,
@@ -1749,7 +1751,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig {
 	CloudComposerConnectionSubnetwork: *string,
@@ -1907,10 +1909,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigRecoveryConfig {
-	ScheduledSnapshotsConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig,
+	ScheduledSnapshotsConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig,
 }
 ```
 
@@ -1941,7 +1943,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig {
 	Enabled: interface{},
@@ -2025,7 +2027,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigSoftwareConfig {
 	AirflowConfigOverrides: *map[string]*string,
@@ -2149,7 +2151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWebServerConfig {
 	MachineType: *string,
@@ -2185,7 +2187,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl {
 	AllowedIpRange: interface{},
@@ -2219,7 +2221,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange {
 	Value: *string,
@@ -2271,12 +2273,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfig {
-	Scheduler: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler,
-	WebServer: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer,
-	Worker: github.com/cdktf/cdktf-provider-google-go/google/v10.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorker,
+	Scheduler: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler,
+	WebServer: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer,
+	Worker: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorker,
 }
 ```
 
@@ -2337,7 +2339,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler {
 	Count: *f64,
@@ -2419,7 +2421,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer {
 	Cpu: *f64,
@@ -2485,7 +2487,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorker.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfigWorker {
 	Cpu: *f64,
@@ -2583,7 +2585,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentTimeouts {
 	Create: *string,
@@ -2645,7 +2647,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigAOutputReference
 ```
@@ -3476,7 +3478,7 @@ func InternalValue() ComposerEnvironmentConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigDatabaseConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigDatabaseConfigOutputReference
 ```
@@ -3747,7 +3749,7 @@ func InternalValue() ComposerEnvironmentConfigDatabaseConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigEncryptionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigEncryptionConfigOutputReference
 ```
@@ -4018,7 +4020,7 @@ func InternalValue() ComposerEnvironmentConfigEncryptionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigMaintenanceWindowOutputReference
 ```
@@ -4333,7 +4335,7 @@ func InternalValue() ComposerEnvironmentConfigMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList
 ```
@@ -4476,7 +4478,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference
 ```
@@ -4794,7 +4796,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference
 ```
@@ -5107,7 +5109,7 @@ func InternalValue() ComposerEnvironmentConfigMasterAuthorizedNetworksConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigNodeConfigIpAllocationPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComposerEnvironmentConfigNodeConfigIpAllocationPolicyList
 ```
@@ -5250,7 +5252,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference
 ```
@@ -5662,7 +5664,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigNodeConfigOutputReference
 ```
@@ -6214,7 +6216,7 @@ func InternalValue() ComposerEnvironmentConfigNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference
 ```
@@ -6695,7 +6697,7 @@ func InternalValue() ComposerEnvironmentConfigPrivateEnvironmentConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigRecoveryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigRecoveryConfigOutputReference
 ```
@@ -6986,7 +6988,7 @@ func InternalValue() ComposerEnvironmentConfigRecoveryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference
 ```
@@ -7344,7 +7346,7 @@ func InternalValue() ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigSoftwareConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigSoftwareConfigOutputReference
 ```
@@ -7767,7 +7769,7 @@ func InternalValue() ComposerEnvironmentConfigSoftwareConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWebServerConfigOutputReference
 ```
@@ -8038,7 +8040,7 @@ func InternalValue() ComposerEnvironmentConfigWebServerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList
 ```
@@ -8181,7 +8183,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference
 ```
@@ -8499,7 +8501,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference
 ```
@@ -8790,7 +8792,7 @@ func InternalValue() ComposerEnvironmentConfigWebServerNetworkAccessControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigOutputReference
 ```
@@ -9165,7 +9167,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigSchedulerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigSchedulerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigSchedulerOutputReference
 ```
@@ -9530,7 +9532,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfigScheduler
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigWebServerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigWebServerOutputReference
 ```
@@ -9866,7 +9868,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfigWebServer
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorkerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigWorkerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigWorkerOutputReference
 ```
@@ -10260,7 +10262,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfigWorker
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentTimeoutsOutputReference
 ```

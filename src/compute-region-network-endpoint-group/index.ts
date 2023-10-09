@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeRegionNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource. Provide this property when
-you create the resource.
+  * you create the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#description ComputeRegionNetworkEndpointGroup#description}
   */
@@ -28,20 +23,20 @@ you create the resource.
   readonly id?: string;
   /**
   * Name of the resource; provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#name ComputeRegionNetworkEndpointGroup#name}
   */
   readonly name: string;
   /**
   * This field is only used for PSC.
-The URL of the network to which all network endpoints in the NEG belong. Uses
-"default" project network if unspecified.
+  * The URL of the network to which all network endpoints in the NEG belong. Uses
+  * "default" project network if unspecified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#network ComputeRegionNetworkEndpointGroup#network}
   */
@@ -58,7 +53,7 @@ The URL of the network to which all network endpoints in the NEG belong. Uses
   readonly project?: string;
   /**
   * The target service url used to set up private service connection to
-a Google API or a PSC Producer Service Attachment.
+  * a Google API or a PSC Producer Service Attachment.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#psc_target_service ComputeRegionNetworkEndpointGroup#psc_target_service}
   */
@@ -71,7 +66,7 @@ a Google API or a PSC Producer Service Attachment.
   readonly region: string;
   /**
   * This field is only used for PSC.
-Optional URL of the subnetwork to which all network endpoints in the NEG belong.
+  * Optional URL of the subnetwork to which all network endpoints in the NEG belong.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#subnetwork ComputeRegionNetworkEndpointGroup#subnetwork}
   */
@@ -104,29 +99,29 @@ Optional URL of the subnetwork to which all network endpoints in the NEG belong.
 export interface ComputeRegionNetworkEndpointGroupAppEngine {
   /**
   * Optional serving service.
-The service name must be 1-63 characters long, and comply with RFC1035.
-Example value: "default", "my-service".
+  * The service name must be 1-63 characters long, and comply with RFC1035.
+  * Example value: "default", "my-service".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#service ComputeRegionNetworkEndpointGroup#service}
   */
   readonly service?: string;
   /**
   * A template to parse service and version fields from a request URL.
-URL mask allows for routing to multiple App Engine services without
-having to create multiple Network Endpoint Groups and backend services.
-
-For example, the request URLs "foo1-dot-appname.appspot.com/v1" and
-"foo1-dot-appname.appspot.com/v2" can be backed by the same Serverless NEG with
-URL mask "-dot-appname.appspot.com/". The URL mask will parse
-them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2" } respectively.
+  * URL mask allows for routing to multiple App Engine services without
+  * having to create multiple Network Endpoint Groups and backend services.
+  * 
+  * For example, the request URLs "foo1-dot-appname.appspot.com/v1" and
+  * "foo1-dot-appname.appspot.com/v2" can be backed by the same Serverless NEG with
+  * URL mask "-dot-appname.appspot.com/". The URL mask will parse
+  * them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2" } respectively.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#url_mask ComputeRegionNetworkEndpointGroup#url_mask}
   */
   readonly urlMask?: string;
   /**
   * Optional serving version.
-The version must be 1-63 characters long, and comply with RFC1035.
-Example value: "v1", "v2".
+  * The version must be 1-63 characters long, and comply with RFC1035.
+  * Example value: "v1", "v2".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#version ComputeRegionNetworkEndpointGroup#version}
   */
@@ -240,20 +235,20 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
 export interface ComputeRegionNetworkEndpointGroupCloudFunction {
   /**
   * A user-defined name of the Cloud Function.
-The function name is case-sensitive and must be 1-63 characters long.
-Example value: "func1".
+  * The function name is case-sensitive and must be 1-63 characters long.
+  * Example value: "func1".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#function ComputeRegionNetworkEndpointGroup#function}
   */
   readonly function?: string;
   /**
   * A template to parse function field from a request URL. URL mask allows
-for routing to multiple Cloud Functions without having to create
-multiple Network Endpoint Groups and backend services.
-
-For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
-can be backed by the same Serverless NEG with URL mask "/". The URL mask
-will parse them to { function = "function1" } and { function = "function2" } respectively.
+  * for routing to multiple Cloud Functions without having to create
+  * multiple Network Endpoint Groups and backend services.
+  * 
+  * For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
+  * can be backed by the same Serverless NEG with URL mask "/". The URL mask
+  * will parse them to { function = "function1" } and { function = "function2" } respectively.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#url_mask ComputeRegionNetworkEndpointGroup#url_mask}
   */
@@ -344,30 +339,30 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
 export interface ComputeRegionNetworkEndpointGroupCloudRun {
   /**
   * Cloud Run service is the main resource of Cloud Run.
-The service must be 1-63 characters long, and comply with RFC1035.
-Example value: "run-service".
+  * The service must be 1-63 characters long, and comply with RFC1035.
+  * Example value: "run-service".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#service ComputeRegionNetworkEndpointGroup#service}
   */
   readonly service?: string;
   /**
   * Cloud Run tag represents the "named-revision" to provide
-additional fine-grained traffic routing information.
-The tag must be 1-63 characters long, and comply with RFC1035.
-Example value: "revision-0010".
+  * additional fine-grained traffic routing information.
+  * The tag must be 1-63 characters long, and comply with RFC1035.
+  * Example value: "revision-0010".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#tag ComputeRegionNetworkEndpointGroup#tag}
   */
   readonly tag?: string;
   /**
   * A template to parse service and tag fields from a request URL.
-URL mask allows for routing to multiple Run services without having
-to create multiple network endpoint groups and backend services.
-
-For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2"
-an be backed by the same Serverless Network Endpoint Group (NEG) with
-URL mask ".domain.com/". The URL mask will parse them to { service="bar1", tag="foo1" }
-and { service="bar2", tag="foo2" } respectively.
+  * URL mask allows for routing to multiple Run services without having
+  * to create multiple network endpoint groups and backend services.
+  * 
+  * For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2"
+  * an be backed by the same Serverless Network Endpoint Group (NEG) with
+  * URL mask ".domain.com/". The URL mask will parse them to { service="bar1", tag="foo1" }
+  * and { service="bar2", tag="foo2" } respectively.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_network_endpoint_group#url_mask ComputeRegionNetworkEndpointGroup#url_mask}
   */

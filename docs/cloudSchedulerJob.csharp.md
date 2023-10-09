@@ -1335,10 +1335,11 @@ If the request handler does not respond by this deadline then the request is
 cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
 execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
-For HTTP targets, between 15 seconds and 30 minutes.
-For App Engine HTTP targets, between 15 seconds and 24 hours.
-**Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
+  A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_scheduler_job#attempt_deadline CloudSchedulerJob#attempt_deadline}
 

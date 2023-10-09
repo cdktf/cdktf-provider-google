@@ -123,11 +123,13 @@ Must be unique amongst siblings in the same scope
 The ID of the agent pool to create.
 
 The agentPoolId must meet the following requirements:
-Length of 128 characters or less.
-Not start with the string goog.
-Start with a lowercase ASCII character, followed by:
-Zero or more: lowercase Latin alphabet characters, numerals, hyphens (-), periods (.), underscores (_), or tildes (~).
-One or more numerals or lowercase ASCII characters.
+
+* Length of 128 characters or less.
+* Not start with the string goog.
+* Start with a lowercase ASCII character, followed by:
+
+  * Zero or more: lowercase Latin alphabet characters, numerals, hyphens (-), periods (.), underscores (_), or tildes (~).
+  * One or more numerals or lowercase ASCII characters.
 
 As expressed by the regular expression: ^(?!goog)[a-z](%5Ba-z0-9-._~%5D*%5Ba-z0-9%5D)?$.
 
@@ -1011,11 +1013,13 @@ public java.lang.String getName();
 The ID of the agent pool to create.
 
 The agentPoolId must meet the following requirements:
-Length of 128 characters or less.
-Not start with the string goog.
-Start with a lowercase ASCII character, followed by:
-Zero or more: lowercase Latin alphabet characters, numerals, hyphens (-), periods (.), underscores (_), or tildes (~).
-One or more numerals or lowercase ASCII characters.
+
+* Length of 128 characters or less.
+* Not start with the string goog.
+* Start with a lowercase ASCII character, followed by:
+
+  * Zero or more: lowercase Latin alphabet characters, numerals, hyphens (-), periods (.), underscores (_), or tildes (~).
+  * One or more numerals or lowercase ASCII characters.
 
 As expressed by the regular expression: ^(?!goog)[a-z](%5Ba-z0-9-._~%5D*%5Ba-z0-9%5D)?$.
 

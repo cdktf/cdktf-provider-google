@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_keystores_aliases_self_signed_cert
 // generated from terraform resource schema
 
@@ -14,8 +9,8 @@ import * as cdktf from 'cdktf';
 export interface ApigeeKeystoresAliasesSelfSignedCertConfig extends cdktf.TerraformMetaArguments {
   /**
   * Alias for the key/certificate pair. Values must match the regular expression [\w\s-.]{1,255}.
-This must be provided for all formats except selfsignedcert; self-signed certs may specify the alias in either
-this parameter or the JSON body.
+  * This must be provided for all formats except selfsignedcert; self-signed certs may specify the alias in either
+  * this parameter or the JSON body.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_keystores_aliases_self_signed_cert#alias ApigeeKeystoresAliasesSelfSignedCert#alias}
   */

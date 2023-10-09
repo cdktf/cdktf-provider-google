@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_capacity_commitment
 // generated from terraform resource schema
 
@@ -14,9 +9,9 @@ import * as cdktf from 'cdktf';
 export interface BigqueryCapacityCommitmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The optional capacity commitment ID. Capacity commitment name will be generated automatically if this field is
-empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character
-cannot be a dash. Max length is 64 characters. NOTE: this ID won't be kept if the capacity commitment is split
-or merged.
+  * empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character
+  * cannot be a dash. Max length is 64 characters. NOTE: this ID won't be kept if the capacity commitment is split
+  * or merged.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_capacity_commitment#capacity_commitment_id BigqueryCapacityCommitment#capacity_commitment_id}
   */
@@ -42,7 +37,7 @@ or merged.
   readonly id?: string;
   /**
   * The geographic location where the transfer config should reside.
-Examples: US, EU, asia-northeast1. The default value is US.
+  * Examples: US, EU, asia-northeast1. The default value is US.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_capacity_commitment#location BigqueryCapacityCommitment#location}
   */

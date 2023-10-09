@@ -955,7 +955,7 @@ public readonly labels: {[ key: string ]: string};
 
 Set of label tags associated with the EdgeCache resource.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset#labels NetworkServicesEdgeCacheKeyset#labels}
@@ -1174,8 +1174,8 @@ The name of the secret version in Secret Manager.
 
 The resource name of the secret version must be in the format 'projects/* /secrets/* /versions/*' where the '*' values are replaced by the secrets themselves.
 The secrets must be at least 16 bytes large.  The recommended secret size depends on the signature algorithm you are using.
-If you are using HMAC-SHA1, we suggest 20-byte secrets.
-If you are using HMAC-SHA256, we suggest 32-byte secrets.
+* If you are using HMAC-SHA1, we suggest 20-byte secrets.
+* If you are using HMAC-SHA256, we suggest 32-byte secrets.
 See RFC 2104, Section 3 for more details on these recommendations.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset#secret_version NetworkServicesEdgeCacheKeyset#secret_version}

@@ -878,25 +878,25 @@ public readonly idpId: string;
 
 ID of the IDP. Possible values include:.
 
-'apple.com'
+* 'apple.com'
 
-'facebook.com'
+* 'facebook.com'
 
-'gc.apple.com'
+* 'gc.apple.com'
 
-'github.com'
+* 'github.com'
 
-'google.com'
+* 'google.com'
 
-'linkedin.com'
+* 'linkedin.com'
 
-'microsoft.com'
+* 'microsoft.com'
 
-'playgames.google.com'
+* 'playgames.google.com'
 
-'twitter.com'
+* 'twitter.com'
 
-'yahoo.com'
+* 'yahoo.com'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_tenant_default_supported_idp_config#idp_id IdentityPlatformTenantDefaultSupportedIdpConfig#idp_id}
 

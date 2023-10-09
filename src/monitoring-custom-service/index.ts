@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_custom_service
 // generated from terraform resource schema
 
@@ -31,18 +26,18 @@ export interface MonitoringCustomServiceConfig extends cdktf.TerraformMetaArgume
   readonly project?: string;
   /**
   * An optional service ID to use. If not given, the server will generate a
-service ID.
+  * service ID.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_custom_service#service_id MonitoringCustomService#service_id}
   */
   readonly serviceId?: string;
   /**
   * Labels which have been used to annotate the service. Label keys must start
-with a letter. Label keys and values may contain lowercase letters,
-numbers, underscores, and dashes. Label keys and values have a maximum
-length of 63 characters, and must be less than 128 bytes in size. Up to 64
-label entries may be stored. For labels which do not have a semantic value,
-the empty string may be supplied for the label value.
+  * with a letter. Label keys and values may contain lowercase letters,
+  * numbers, underscores, and dashes. Label keys and values have a maximum
+  * length of 63 characters, and must be less than 128 bytes in size. Up to 64
+  * label entries may be stored. For labels which do not have a semantic value,
+  * the empty string may be supplied for the label value.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_custom_service#user_labels MonitoringCustomService#user_labels}
   */
@@ -63,8 +58,8 @@ the empty string may be supplied for the label value.
 export interface MonitoringCustomServiceTelemetry {
   /**
   * The full name of the resource that defines this service.
-Formatted as described in
-https://cloud.google.com/apis/design/resource_names.
+  * Formatted as described in
+  * https://cloud.google.com/apis/design/resource_names.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/monitoring_custom_service#resource_name MonitoringCustomService#resource_name}
   */

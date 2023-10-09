@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version
 // generated from terraform resource schema
 
@@ -45,9 +40,9 @@ export interface AppEngineStandardAppVersionConfig extends cdktf.TerraformMetaAr
   readonly inboundServices?: string[];
   /**
   * Instance class that is used to run this version. Valid values are
-AutomaticScaling: F1, F2, F4, F4_1G
-BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
-Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
+  * AutomaticScaling: F1, F2, F4, F4_1G
+  * BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+  * Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#instance_class AppEngineStandardAppVersion#instance_class}
   */
@@ -70,8 +65,8 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
   readonly runtime: string;
   /**
   * The version of the API in the given runtime environment.
-Please see the app.yaml reference for valid values at 'https://cloud.google.com/appengine/docs/standard/<language>/config/appref'\
-Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
+  * Please see the app.yaml reference for valid values at 'https://cloud.google.com/appengine/docs/standard/<language>/config/appref'\
+  * Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#runtime_api_version AppEngineStandardAppVersion#runtime_api_version}
   */
@@ -312,8 +307,8 @@ export class AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSetting
 export interface AppEngineStandardAppVersionAutomaticScaling {
   /**
   * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-
-Defaults to a runtime-specific value.
+  * 
+  * Defaults to a runtime-specific value.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#max_concurrent_requests AppEngineStandardAppVersion#max_concurrent_requests}
   */
@@ -326,7 +321,7 @@ Defaults to a runtime-specific value.
   readonly maxIdleInstances?: number;
   /**
   * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#max_pending_latency AppEngineStandardAppVersion#max_pending_latency}
   */
@@ -339,7 +334,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly minIdleInstances?: number;
   /**
   * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#min_pending_latency AppEngineStandardAppVersion#min_pending_latency}
   */
@@ -528,7 +523,7 @@ export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends 
 export interface AppEngineStandardAppVersionBasicScaling {
   /**
   * Duration of time after the last request that an instance must wait before the instance is shut down.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#idle_timeout AppEngineStandardAppVersion#idle_timeout}
   */
@@ -1088,29 +1083,29 @@ export class AppEngineStandardAppVersionHandlersScriptOutputReference extends cd
 export interface AppEngineStandardAppVersionHandlersStaticFiles {
   /**
   * Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
-static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
-against both your code and static data storage resource quotas.
+  * static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
+  * against both your code and static data storage resource quotas.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#application_readable AppEngineStandardAppVersion#application_readable}
   */
   readonly applicationReadable?: boolean | cdktf.IResolvable;
   /**
   * Time a static file served by this handler should be cached by web proxies and browsers.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#expiration AppEngineStandardAppVersion#expiration}
   */
   readonly expiration?: string;
   /**
   * HTTP headers to use for all responses from these URLs.
-An object containing a list of "key:value" value pairs.".
+  * An object containing a list of "key:value" value pairs.".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#http_headers AppEngineStandardAppVersion#http_headers}
   */
   readonly httpHeaders?: { [key: string]: string };
   /**
   * MIME type used to serve all files served by this handler.
-Defaults to file-specific MIME types, which are derived from each file's filename extension.
+  * Defaults to file-specific MIME types, which are derived from each file's filename extension.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#mime_type AppEngineStandardAppVersion#mime_type}
   */
@@ -1358,7 +1353,7 @@ export interface AppEngineStandardAppVersionHandlers {
   readonly securityLevel?: string;
   /**
   * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
-All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+  * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#url_regex AppEngineStandardAppVersion#url_regex}
   */
@@ -1736,9 +1731,9 @@ export class AppEngineStandardAppVersionLibrariesList extends cdktf.ComplexList 
 export interface AppEngineStandardAppVersionManualScaling {
   /**
   * Number of instances to assign to the service at the start.
-
-**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
-Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.
+  * 
+  * **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+  * Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_standard_app_version#instances AppEngineStandardAppVersion#instances}
   */

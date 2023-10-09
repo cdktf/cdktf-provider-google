@@ -1046,7 +1046,7 @@ public readonly annotations: {[ key: string ]: string};
 
 Allows clients to store small amounts of arbitrary data.
 
-*Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field `effective_annotations` for all of the annotations present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudbuildv2_connection#annotations Cloudbuildv2Connection#annotations}

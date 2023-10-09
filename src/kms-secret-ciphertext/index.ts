@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/kms_secret_ciphertext
 // generated from terraform resource schema
 
@@ -20,7 +15,7 @@ export interface KmsSecretCiphertextConfig extends cdktf.TerraformMetaArguments 
   readonly additionalAuthenticatedData?: string;
   /**
   * The full name of the CryptoKey that will be used to encrypt the provided plaintext.
-Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''
+  * Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/kms_secret_ciphertext#crypto_key KmsSecretCiphertext#crypto_key}
   */

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiammember"
 
 healthcaredicomstoreiammember.NewHealthcareDicomStoreIamMember(scope Construct, id *string, config HealthcareDicomStoreIamMemberConfig) HealthcareDicomStoreIamMember
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiammember"
 
 healthcaredicomstoreiammember.HealthcareDicomStoreIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiammember"
 
 healthcaredicomstoreiammember.HealthcareDicomStoreIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ healthcaredicomstoreiammember.HealthcareDicomStoreIamMember_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiammember"
 
 healthcaredicomstoreiammember.HealthcareDicomStoreIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiammember"
 
 &healthcaredicomstoreiammember.HealthcareDicomStoreIamMemberCondition {
 	Expression: *string,
@@ -723,7 +723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiammember"
 
 &healthcaredicomstoreiammember.HealthcareDicomStoreIamMemberConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstor
 	DicomStoreId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v10.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -902,7 +902,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStoreIamMember.HealthcareDicomStoreIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcaredicomstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiammember"
 
 healthcaredicomstoreiammember.NewHealthcareDicomStoreIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareDicomStoreIamMemberConditionOutputReference
 ```

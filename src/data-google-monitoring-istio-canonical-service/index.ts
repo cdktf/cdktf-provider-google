@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_istio_canonical_service
 // generated from terraform resource schema
 
@@ -14,14 +9,14 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleMonitoringIstioCanonicalServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the canonical service underlying this service.. 
-                        Corresponds to the destination_service_name metric label in Istio metrics.
+  *                         Corresponds to the destination_service_name metric label in Istio metrics.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_istio_canonical_service#canonical_service DataGoogleMonitoringIstioCanonicalService#canonical_service}
   */
   readonly canonicalService: string;
   /**
   * The namespace of the canonical service underlying this service.
-                        Corresponds to the destination_service_namespace metric label in Istio metrics.
+  *                         Corresponds to the destination_service_namespace metric label in Istio metrics.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_istio_canonical_service#canonical_service_namespace DataGoogleMonitoringIstioCanonicalService#canonical_service_namespace}
   */
@@ -35,7 +30,7 @@ export interface DataGoogleMonitoringIstioCanonicalServiceConfig extends cdktf.T
   readonly id?: string;
   /**
   * Identifier for the Istio mesh in which this canonical service is defined.
-                        Corresponds to the meshUid metric label in Istio metrics.
+  *                         Corresponds to the meshUid metric label in Istio metrics.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_istio_canonical_service#mesh_uid DataGoogleMonitoringIstioCanonicalService#mesh_uid}
   */

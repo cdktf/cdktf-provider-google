@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function
 // generated from terraform resource schema
 
@@ -27,17 +22,17 @@ export interface Cloudfunctions2FunctionConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
-It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
+  * It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#kms_key_name Cloudfunctions2Function#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * A set of key/value label pairs associated with this Cloud Function.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#labels Cloudfunctions2Function#labels}
   */
@@ -50,7 +45,7 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly location: string;
   /**
   * A user-defined name of the function. Function names must
-be unique globally and match pattern 'projects/* /locations/* /functions/*'.
+  * be unique globally and match pattern 'projects/* /locations/* /functions/*'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#name Cloudfunctions2Function#name}
    *
@@ -107,14 +102,14 @@ export interface Cloudfunctions2FunctionBuildConfigSourceRepoSource {
   readonly dir?: string;
   /**
   * Only trigger a build if the revision regex does
-NOT match the revision regex.
+  * NOT match the revision regex.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#invert_regex Cloudfunctions2Function#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * ID of the project that owns the Cloud Source Repository. If omitted, the
-project ID requesting the build is assumed.
+  * project ID requesting the build is assumed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#project_id Cloudfunctions2Function#project_id}
   */
@@ -338,7 +333,7 @@ export interface Cloudfunctions2FunctionBuildConfigSourceStorageSource {
   readonly bucket?: string;
   /**
   * Google Cloud Storage generation for the object. If the generation
-is omitted, the latest generation will be used.
+  * is omitted, the latest generation will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#generation Cloudfunctions2Function#generation}
   */
@@ -560,10 +555,10 @@ export interface Cloudfunctions2FunctionBuildConfig {
   readonly dockerRepository?: string;
   /**
   * The name of the function (as defined in source code) that will be executed.
-Defaults to the resource name suffix, if not specified. For backward
-compatibility, if function with given name is not found, then the system
-will try to use function named "function". For Node.js this is name of a
-function exported by the module specified in source_location.
+  * Defaults to the resource name suffix, if not specified. For backward
+  * compatibility, if function with given name is not found, then the system
+  * will try to use function named "function". For Node.js this is name of a
+  * function exported by the module specified in source_location.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#entry_point Cloudfunctions2Function#entry_point}
   */
@@ -576,7 +571,7 @@ function exported by the module specified in source_location.
   readonly environmentVariables?: { [key: string]: string };
   /**
   * The runtime in which to run the function. Required when deploying a new
-function, optional when updating an existing function.
+  * function, optional when updating an existing function.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#runtime Cloudfunctions2Function#runtime}
   */
@@ -776,25 +771,25 @@ export class Cloudfunctions2FunctionBuildConfigOutputReference extends cdktf.Com
 export interface Cloudfunctions2FunctionEventTriggerEventFilters {
   /**
   * 'Required. The name of a CloudEvents attribute.
-Currently, only a subset of attributes are supported for filtering. Use the 'gcloud eventarc providers describe' command to learn more about events and their attributes.
-Do not filter for the 'type' attribute here, as this is already achieved by the resource's 'event_type' attribute.
+  * Currently, only a subset of attributes are supported for filtering. Use the 'gcloud eventarc providers describe' command to learn more about events and their attributes.
+  * Do not filter for the 'type' attribute here, as this is already achieved by the resource's 'event_type' attribute.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#attribute Cloudfunctions2Function#attribute}
   */
   readonly attribute: string;
   /**
   * Optional. The operator used for matching the events with the value of
-the filter. If not specified, only events that have an exact key-value
-pair specified in the filter are matched.
-The only allowed value is 'match-path-pattern'.
-[See documentation on path patterns here](https://cloud.google.com/eventarc/docs/path-patterns)'
+  * the filter. If not specified, only events that have an exact key-value
+  * pair specified in the filter are matched.
+  * The only allowed value is 'match-path-pattern'.
+  * [See documentation on path patterns here](https://cloud.google.com/eventarc/docs/path-patterns)'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#operator Cloudfunctions2Function#operator}
   */
   readonly operator?: string;
   /**
   * Required. The value for the attribute.
-If the operator field is set as 'match-path-pattern', this value can be a path pattern instead of an exact value.
+  * If the operator field is set as 'match-path-pattern', this value can be a path pattern instead of an exact value.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#value Cloudfunctions2Function#value}
   */
@@ -940,14 +935,14 @@ export interface Cloudfunctions2FunctionEventTrigger {
   readonly eventType?: string;
   /**
   * The name of a Pub/Sub topic in the same project that will be used
-as the transport topic for the event delivery.
+  * as the transport topic for the event delivery.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#pubsub_topic Cloudfunctions2Function#pubsub_topic}
   */
   readonly pubsubTopic?: string;
   /**
   * Describes the retry policy in case of function's execution failure.
-Retried execution is charged as any other execution. Possible values: ["RETRY_POLICY_UNSPECIFIED", "RETRY_POLICY_DO_NOT_RETRY", "RETRY_POLICY_RETRY"]
+  * Retried execution is charged as any other execution. Possible values: ["RETRY_POLICY_UNSPECIFIED", "RETRY_POLICY_DO_NOT_RETRY", "RETRY_POLICY_RETRY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#retry_policy Cloudfunctions2Function#retry_policy}
   */
@@ -960,9 +955,9 @@ Retried execution is charged as any other execution. Possible values: ["RETRY_PO
   readonly serviceAccountEmail?: string;
   /**
   * The region that the trigger will be in. The trigger will only receive
-events originating in this region. It can be the same
-region as the function, a different region or multi-region, or the global
-region. If not provided, defaults to the same region as the function.
+  * events originating in this region. It can be the same
+  * region as the function, a different region or multi-region, or the global
+  * region. If not provided, defaults to the same region as the function.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#trigger_region Cloudfunctions2Function#trigger_region}
   */
@@ -1641,8 +1636,8 @@ export interface Cloudfunctions2FunctionServiceConfig {
   readonly availableCpu?: string;
   /**
   * The amount of memory available for a function.
-Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
-supplied the value is interpreted as bytes.
+  * Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
+  * supplied the value is interpreted as bytes.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#available_memory Cloudfunctions2Function#available_memory}
   */
@@ -1661,7 +1656,7 @@ supplied the value is interpreted as bytes.
   readonly ingressSettings?: string;
   /**
   * The limit on the maximum number of function instances that may coexist at a
-given time.
+  * given time.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#max_instance_count Cloudfunctions2Function#max_instance_count}
   */
@@ -1674,7 +1669,7 @@ given time.
   readonly maxInstanceRequestConcurrency?: number;
   /**
   * The limit on the minimum number of function instances that may coexist at a
-given time.
+  * given time.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#min_instance_count Cloudfunctions2Function#min_instance_count}
   */
@@ -1693,8 +1688,8 @@ given time.
   readonly serviceAccountEmail?: string;
   /**
   * The function execution timeout. Execution is considered failed and
-can be terminated if the function is not completed at the end of the
-timeout period. Defaults to 60 seconds.
+  * can be terminated if the function is not completed at the end of the
+  * timeout period. Defaults to 60 seconds.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloudfunctions2_function#timeout_seconds Cloudfunctions2Function#timeout_seconds}
   */

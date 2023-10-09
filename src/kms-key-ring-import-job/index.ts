@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/kms_key_ring_import_job
 // generated from terraform resource schema
 
@@ -33,14 +28,14 @@ export interface KmsKeyRingImportJobConfig extends cdktf.TerraformMetaArguments 
   readonly importMethod: string;
   /**
   * The KeyRing that this import job belongs to.
-Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
+  * Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/kms_key_ring_import_job#key_ring KmsKeyRingImportJob#key_ring}
   */
   readonly keyRing: string;
   /**
   * The protection level of the ImportJob. This must match the protectionLevel of the
-versionTemplate on the CryptoKey you attempt to import into. Possible values: ["SOFTWARE", "HSM", "EXTERNAL"]
+  * versionTemplate on the CryptoKey you attempt to import into. Possible values: ["SOFTWARE", "HSM", "EXTERNAL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/kms_key_ring_import_job#protection_level KmsKeyRingImportJob#protection_level}
   */

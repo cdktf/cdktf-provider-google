@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_fulfillment
 // generated from terraform resource schema
 
@@ -57,7 +52,7 @@ export interface DialogflowFulfillmentConfig extends cdktf.TerraformMetaArgument
 export interface DialogflowFulfillmentFeatures {
   /**
   * The type of the feature that enabled for fulfillment.
-* SMALLTALK: Fulfillment is enabled for SmallTalk. Possible values: ["SMALLTALK"]
+  * * SMALLTALK: Fulfillment is enabled for SmallTalk. Possible values: ["SMALLTALK"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_fulfillment#type DialogflowFulfillment#type}
   */

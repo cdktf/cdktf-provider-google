@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface DatastreamStreamConfig extends cdktf.TerraformMetaArguments {
   /**
   * A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data
-will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+  * will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#customer_managed_encryption_key DatastreamStream#customer_managed_encryption_key}
   */
@@ -40,9 +35,9 @@ will be encrypted using an internal Stream-specific encryption key provisioned t
   readonly id?: string;
   /**
   * Labels.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#labels DatastreamStream#labels}
   */
@@ -109,7 +104,7 @@ export interface DatastreamStreamBackfillAllMysqlExcludedObjectsMysqlDatabasesMy
   readonly column?: string;
   /**
   * The MySQL data type. Full data types list can be found here:
-https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+  * https://dev.mysql.com/doc/refman/8.0/en/data-types.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -667,7 +662,7 @@ export interface DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOr
   readonly column?: string;
   /**
   * The Oracle data type. Full data types list can be found here:
-https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
+  * https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -1145,7 +1140,7 @@ export interface DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlS
   readonly column?: string;
   /**
   * The PostgreSQL data type. Full data types list can be found here:
-https://www.postgresql.org/docs/current/datatype.html
+  * https://www.postgresql.org/docs/current/datatype.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -1847,7 +1842,7 @@ export class DatastreamStreamBackfillNoneOutputReference extends cdktf.ComplexOb
 export interface DatastreamStreamDestinationConfigBigqueryDestinationConfigSingleTargetDataset {
   /**
   * Dataset ID in the format projects/{project}/datasets/{dataset_id} or
-{project}:{dataset_id}
+  * {project}:{dataset_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#dataset_id DatastreamStream#dataset_id}
   */
@@ -1912,23 +1907,23 @@ export class DatastreamStreamDestinationConfigBigqueryDestinationConfigSingleTar
 export interface DatastreamStreamDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate {
   /**
   * If supplied, every created dataset will have its name prefixed by the provided value.
-The prefix and name will be separated by an underscore. i.e. _.
+  * The prefix and name will be separated by an underscore. i.e. _.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#dataset_id_prefix DatastreamStream#dataset_id_prefix}
   */
   readonly datasetIdPrefix?: string;
   /**
   * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery
-table. The BigQuery Service Account associated with your project requires access to this
-encryption key. i.e. projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryptoKey}.
-See https://cloud.google.com/bigquery/docs/customer-managed-encryption for more information.
+  * table. The BigQuery Service Account associated with your project requires access to this
+  * encryption key. i.e. projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryptoKey}.
+  * See https://cloud.google.com/bigquery/docs/customer-managed-encryption for more information.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#kms_key_name DatastreamStream#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * The geographic location where the dataset should reside.
-See https://cloud.google.com/bigquery/docs/locations for supported locations.
+  * See https://cloud.google.com/bigquery/docs/locations for supported locations.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#location DatastreamStream#location}
   */
@@ -2103,9 +2098,9 @@ export class DatastreamStreamDestinationConfigBigqueryDestinationConfigSourceHie
 export interface DatastreamStreamDestinationConfigBigqueryDestinationConfig {
   /**
   * The guaranteed data freshness (in seconds) when querying tables created by the stream.
-Editing this field will only affect new tables created in the future, but existing tables
-will not be impacted. Lower values mean that queries will return fresher data, but may result in higher cost.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+  * Editing this field will only affect new tables created in the future, but existing tables
+  * will not be impacted. Lower values mean that queries will return fresher data, but may result in higher cost.
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_freshness DatastreamStream#data_freshness}
   */
@@ -2365,7 +2360,7 @@ export class DatastreamStreamDestinationConfigGcsDestinationConfigJsonFileFormat
 export interface DatastreamStreamDestinationConfigGcsDestinationConfig {
   /**
   * The maximum duration for which new events are added before a file is closed and a new file is created.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#file_rotation_interval DatastreamStream#file_rotation_interval}
   */
@@ -2683,7 +2678,7 @@ export interface DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjectsMysq
   readonly column?: string;
   /**
   * The MySQL data type. Full data types list can be found here:
-https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+  * https://dev.mysql.com/doc/refman/8.0/en/data-types.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -3247,7 +3242,7 @@ export interface DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsMysq
   readonly column?: string;
   /**
   * The MySQL data type. Full data types list can be found here:
-https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+  * https://dev.mysql.com/doc/refman/8.0/en/data-types.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -3799,14 +3794,14 @@ export class DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjectsOutputRe
 export interface DatastreamStreamSourceConfigMysqlSourceConfig {
   /**
   * Maximum number of concurrent backfill tasks. The number should be non negative.
-If not set (or set to 0), the system's default value will be used.
+  * If not set (or set to 0), the system's default value will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
   */
   readonly maxConcurrentBackfillTasks?: number;
   /**
   * Maximum number of concurrent CDC tasks. The number should be non negative.
-If not set (or set to 0), the system's default value will be used.
+  * If not set (or set to 0), the system's default value will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
   */
@@ -3999,7 +3994,7 @@ export interface DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOra
   readonly column?: string;
   /**
   * The Oracle data type. Full data types list can be found here:
-https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
+  * https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -4477,7 +4472,7 @@ export interface DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOra
   readonly column?: string;
   /**
   * The Oracle data type. Full data types list can be found here:
-https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
+  * https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -4987,14 +4982,14 @@ export class DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjectsOut
 export interface DatastreamStreamSourceConfigOracleSourceConfig {
   /**
   * Maximum number of concurrent backfill tasks. The number should be non negative.
-If not set (or set to 0), the system's default value will be used.
+  * If not set (or set to 0), the system's default value will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
   */
   readonly maxConcurrentBackfillTasks?: number;
   /**
   * Maximum number of concurrent CDC tasks. The number should be non negative.
-If not set (or set to 0), the system's default value will be used.
+  * If not set (or set to 0), the system's default value will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
   */
@@ -5207,7 +5202,7 @@ export interface DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObject
   readonly column?: string;
   /**
   * The PostgreSQL data type. Full data types list can be found here:
-https://www.postgresql.org/docs/current/datatype.html
+  * https://www.postgresql.org/docs/current/datatype.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -5752,7 +5747,7 @@ export interface DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObject
   readonly column?: string;
   /**
   * The PostgreSQL data type. Full data types list can be found here:
-https://www.postgresql.org/docs/current/datatype.html
+  * https://www.postgresql.org/docs/current/datatype.html
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
   */
@@ -6291,21 +6286,21 @@ export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOut
 export interface DatastreamStreamSourceConfigPostgresqlSourceConfig {
   /**
   * Maximum number of concurrent backfill tasks. The number should be non
-negative. If not set (or set to 0), the system's default value will be used.
+  * negative. If not set (or set to 0), the system's default value will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
   */
   readonly maxConcurrentBackfillTasks?: number;
   /**
   * The name of the publication that includes the set of all tables
-that are defined in the stream's include_objects.
+  * that are defined in the stream's include_objects.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#publication DatastreamStream#publication}
   */
   readonly publication: string;
   /**
   * The name of the logical replication slot that's configured with
-the pgoutput plugin.
+  * the pgoutput plugin.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/datastream_stream#replication_slot DatastreamStream#replication_slot}
   */

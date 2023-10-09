@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareConsentStore.HealthcareConsentStore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareconsentstore"
 
 healthcareconsentstore.NewHealthcareConsentStore(scope Construct, id *string, config HealthcareConsentStoreConfig) HealthcareConsentStore
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareConsentStore.HealthcareConsentStore.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareconsentstore"
 
 healthcareconsentstore.HealthcareConsentStore_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareConsentStore.HealthcareConsentStore.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareconsentstore"
 
 healthcareconsentstore.HealthcareConsentStore_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ healthcareconsentstore.HealthcareConsentStore_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareConsentStore.HealthcareConsentStore.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareconsentstore"
 
 healthcareconsentstore.HealthcareConsentStore_IsTerraformResource(x interface{}) *bool
 ```
@@ -739,7 +739,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareConsentStore.HealthcareConsentStoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareconsentstore"
 
 &healthcareconsentstore.HealthcareConsentStoreConfig {
 	Connection: interface{},
@@ -755,7 +755,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentst
 	EnableConsentCreateOnUpdate: interface{},
 	Id: *string,
 	Labels: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.healthcareConsentStore.HealthcareConsentStoreTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.healthcareConsentStore.HealthcareConsentStoreTimeouts,
 }
 ```
 
@@ -946,7 +946,7 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_consent_store#labels HealthcareConsentStore#labels}
@@ -972,7 +972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareConsentStore.HealthcareConsentStoreTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareconsentstore"
 
 &healthcareconsentstore.HealthcareConsentStoreTimeouts {
 	Create: *string,
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareConsentStore.HealthcareConsentStoreTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcareconsentstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareconsentstore"
 
 healthcareconsentstore.NewHealthcareConsentStoreTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareConsentStoreTimeoutsOutputReference
 ```

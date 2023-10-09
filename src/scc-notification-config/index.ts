@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/scc_notification_config
 // generated from terraform resource schema
 
@@ -33,14 +28,14 @@ export interface SccNotificationConfigConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * The organization whose Cloud Security Command Center the Notification
-Config lives in.
+  * Config lives in.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/scc_notification_config#organization SccNotificationConfig#organization}
   */
   readonly organization: string;
   /**
   * The Pub/Sub topic to send notifications to. Its format is
-"projects/[project_id]/topics/[topic]".
+  * "projects/[project_id]/topics/[topic]".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/scc_notification_config#pubsub_topic SccNotificationConfig#pubsub_topic}
   */
@@ -61,30 +56,30 @@ Config lives in.
 export interface SccNotificationConfigStreamingConfig {
   /**
   * Expression that defines the filter to apply across create/update
-events of assets or findings as specified by the event type. The
-expression is a list of zero or more restrictions combined via
-logical operators AND and OR. Parentheses are supported, and OR
-has higher precedence than AND.
-
-Restrictions have the form <field> <operator> <value> and may have
-a - character in front of them to indicate negation. The fields
-map to those defined in the corresponding resource.
-
-The supported operators are:
-
-* = for all value types.
-* >, <, >=, <= for integer values.
-* :, meaning substring matching, for strings.
-
-The supported value types are:
-
-* string literals in quotes.
-* integer literals without quotes.
-* boolean literals true and false without quotes.
-
-See
-[Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
-for information on how to write a filter.
+  * events of assets or findings as specified by the event type. The
+  * expression is a list of zero or more restrictions combined via
+  * logical operators AND and OR. Parentheses are supported, and OR
+  * has higher precedence than AND.
+  * 
+  * Restrictions have the form <field> <operator> <value> and may have
+  * a - character in front of them to indicate negation. The fields
+  * map to those defined in the corresponding resource.
+  * 
+  * The supported operators are:
+  * 
+  * * = for all value types.
+  * * >, <, >=, <= for integer values.
+  * * :, meaning substring matching, for strings.
+  * 
+  * The supported value types are:
+  * 
+  * * string literals in quotes.
+  * * integer literals without quotes.
+  * * boolean literals true and false without quotes.
+  * 
+  * See
+  * [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
+  * for information on how to write a filter.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/scc_notification_config#filter SccNotificationConfig#filter}
   */

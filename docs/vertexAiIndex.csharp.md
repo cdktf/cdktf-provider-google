@@ -1065,8 +1065,9 @@ public string IndexUpdateMethod { get; set; }
 The update method to use with this Index.
 
 The value must be the followings. If not set, BATCH_UPDATE will be used by default.
-BATCH_UPDATE: user can call indexes.patch with files on Cloud Storage of datapoints to update.
-STREAM_UPDATE: user can call indexes.upsertDatapoints/DeleteDatapoints to update the Index and the updates will be applied in corresponding DeployedIndexes in nearly real-time.
+
+* BATCH_UPDATE: user can call indexes.patch with files on Cloud Storage of datapoints to update.
+* STREAM_UPDATE: user can call indexes.upsertDatapoints/DeleteDatapoints to update the Index and the updates will be applied in corresponding DeployedIndexes in nearly real-time.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_index#index_update_method VertexAiIndex#index_update_method}
 
@@ -1082,7 +1083,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 The labels with user-defined metadata to organize your Indexes.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_index#labels VertexAiIndex#labels}
@@ -1328,10 +1329,11 @@ public string DistanceMeasureType { get; set; }
 The distance measure used in nearest neighbor search.
 
 The value must be one of the followings:
-SQUARED_L2_DISTANCE: Euclidean (L_2) Distance
-L1_DISTANCE: Manhattan (L_1) Distance
-COSINE_DISTANCE: Cosine Distance. Defined as 1 - cosine similarity.
-DOT_PRODUCT_DISTANCE: Dot Product Distance. Defined as a negative of the dot product
+
+* SQUARED_L2_DISTANCE: Euclidean (L_2) Distance
+* L1_DISTANCE: Manhattan (L_1) Distance
+* COSINE_DISTANCE: Cosine Distance. Defined as 1 - cosine similarity.
+* DOT_PRODUCT_DISTANCE: Dot Product Distance. Defined as a negative of the dot product
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_index#distance_measure_type VertexAiIndex#distance_measure_type}
 
@@ -1348,8 +1350,9 @@ public string FeatureNormType { get; set; }
 Type of normalization to be carried out on each vector.
 
 The value must be one of the followings:
-UNIT_L2_NORM: Unit L2 normalization type
-NONE: No normalization type is specified.
+
+* UNIT_L2_NORM: Unit L2 normalization type
+* NONE: No normalization type is specified.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_index#feature_norm_type VertexAiIndex#feature_norm_type}
 
@@ -1367,9 +1370,10 @@ Index data is split into equal parts to be processed.
 
 These are called "shards".
 The shard size must be specified when creating an index. The value must be one of the followings:
-SHARD_SIZE_SMALL: Small (2GB)
-SHARD_SIZE_MEDIUM: Medium (20GB)
-SHARD_SIZE_LARGE: Large (50GB)
+
+* SHARD_SIZE_SMALL: Small (2GB)
+* SHARD_SIZE_MEDIUM: Medium (20GB)
+* SHARD_SIZE_LARGE: Large (50GB)
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/vertex_ai_index#shard_size VertexAiIndex#shard_size}
 

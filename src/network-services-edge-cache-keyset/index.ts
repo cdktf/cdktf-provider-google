@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset
 // generated from terraform resource schema
 
@@ -27,17 +22,17 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * Set of label tags associated with the EdgeCache resource.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset#labels NetworkServicesEdgeCacheKeyset#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Name of the resource; provided by the client when the resource is created.
-The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
-and all following characters must be a dash, underscore, letter or digit.
+  * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+  * and all following characters must be a dash, underscore, letter or digit.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset#name NetworkServicesEdgeCacheKeyset#name}
   */
@@ -68,8 +63,8 @@ and all following characters must be a dash, underscore, letter or digit.
 export interface NetworkServicesEdgeCacheKeysetPublicKey {
   /**
   * The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035.
-The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
-which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
+  * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
+  * which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset#id NetworkServicesEdgeCacheKeyset#id}
   *
@@ -85,7 +80,7 @@ which means the first character must be a letter, and all following characters m
   readonly managed?: boolean | cdktf.IResolvable;
   /**
   * The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
-Representations or encodings of the public key other than this will be rejected with an error.
+  * Representations or encodings of the public key other than this will be rejected with an error.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset#value NetworkServicesEdgeCacheKeyset#value}
   */
@@ -357,12 +352,12 @@ export class NetworkServicesEdgeCacheKeysetTimeoutsOutputReference extends cdktf
 export interface NetworkServicesEdgeCacheKeysetValidationSharedKeys {
   /**
   * The name of the secret version in Secret Manager.
-
-The resource name of the secret version must be in the format 'projects/* /secrets/* /versions/*' where the '*' values are replaced by the secrets themselves.
-The secrets must be at least 16 bytes large.  The recommended secret size depends on the signature algorithm you are using.
-* If you are using HMAC-SHA1, we suggest 20-byte secrets.
-* If you are using HMAC-SHA256, we suggest 32-byte secrets.
-See RFC 2104, Section 3 for more details on these recommendations.
+  * 
+  * The resource name of the secret version must be in the format 'projects/* /secrets/* /versions/*' where the '*' values are replaced by the secrets themselves.
+  * The secrets must be at least 16 bytes large.  The recommended secret size depends on the signature algorithm you are using.
+  * * If you are using HMAC-SHA1, we suggest 20-byte secrets.
+  * * If you are using HMAC-SHA256, we suggest 32-byte secrets.
+  * See RFC 2104, Section 3 for more details on these recommendations.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_services_edge_cache_keyset#secret_version NetworkServicesEdgeCacheKeyset#secret_version}
    *

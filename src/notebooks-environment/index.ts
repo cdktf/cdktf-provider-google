@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_environment
 // generated from terraform resource schema
 
@@ -39,14 +34,14 @@ export interface NotebooksEnvironmentConfig extends cdktf.TerraformMetaArguments
   readonly location: string;
   /**
   * The name specified for the Environment instance.
-Format: projects/{project_id}/locations/{location}/environments/{environmentId}
+  * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_environment#name NotebooksEnvironment#name}
   */
   readonly name: string;
   /**
   * Path to a Bash script that automatically runs after a notebook instance fully boots up.
-The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
+  * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_environment#post_startup_script NotebooksEnvironment#post_startup_script}
   */
@@ -77,7 +72,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
 export interface NotebooksEnvironmentContainerImage {
   /**
   * The path to the container image repository.
-For example: gcr.io/{project_id}/{imageName}
+  * For example: gcr.io/{project_id}/{imageName}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_environment#repository NotebooksEnvironment#repository}
   */
@@ -312,7 +307,7 @@ export interface NotebooksEnvironmentVmImage {
   readonly imageName?: string;
   /**
   * The name of the Google Cloud project that this VM image belongs to.
-Format: projects/{project_id}
+  * Format: projects/{project_id}
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
   */

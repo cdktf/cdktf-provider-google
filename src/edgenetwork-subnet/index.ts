@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/edgenetwork_subnet
 // generated from terraform resource schema
 
@@ -51,7 +46,7 @@ export interface EdgenetworkSubnetConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   /**
   * The ID of the network to which this router belongs.
-Must be of the form: 'projects/{{project}}/locations/{{location}}/zones/{{zone}}/networks/{{network_id}}'
+  * Must be of the form: 'projects/{{project}}/locations/{{location}}/zones/{{zone}}/networks/{{network_id}}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/edgenetwork_subnet#network EdgenetworkSubnet#network}
   */
