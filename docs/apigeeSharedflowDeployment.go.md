@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/apigeesharedflowdeployment"
 
 apigeesharedflowdeployment.NewApigeeSharedflowDeployment(scope Construct, id *string, config ApigeeSharedflowDeploymentConfig) ApigeeSharedflowDeployment
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/apigeesharedflowdeployment"
 
 apigeesharedflowdeployment.ApigeeSharedflowDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/apigeesharedflowdeployment"
 
 apigeesharedflowdeployment.ApigeeSharedflowDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ apigeesharedflowdeployment.ApigeeSharedflowDeployment_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/apigeesharedflowdeployment"
 
 apigeesharedflowdeployment.ApigeeSharedflowDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -703,7 +703,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/apigeesharedflowdeployment"
 
 &apigeesharedflowdeployment.ApigeeSharedflowDeploymentConfig {
 	Connection: interface{},
@@ -719,7 +719,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeploym
 	SharedflowId: *string,
 	Id: *string,
 	ServiceAccount: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts,
 }
 ```
 
@@ -920,7 +920,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/apigeesharedflowdeployment"
 
 &apigeesharedflowdeployment.ApigeeSharedflowDeploymentTimeouts {
 	Create: *string,
@@ -982,7 +982,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflowdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/apigeesharedflowdeployment"
 
 apigeesharedflowdeployment.NewApigeeSharedflowDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeSharedflowDeploymentTimeoutsOutputReference
 ```
