@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment
 // generated from terraform resource schema
 
@@ -20,7 +15,7 @@ export interface OsConfigPatchDeploymentConfig extends cdktf.TerraformMetaArgume
   readonly description?: string;
   /**
   * Duration of the patch. After the duration ends, the patch times out.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#duration OsConfigPatchDeployment#duration}
   */
@@ -34,11 +29,11 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly id?: string;
   /**
   * A name for the patch deployment in the project. When creating a name the following rules apply:
-* Must contain only lowercase letters, numbers, and hyphens.
-* Must start with a letter.
-* Must be between 1-63 characters.
-* Must end with a number or a letter.
-* Must be unique within the project.
+  * * Must contain only lowercase letters, numbers, and hyphens.
+  * * Must start with a letter.
+  * * Must be between 1-63 characters.
+  * * Must end with a number or a letter.
+  * * Must be unique within the project.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#patch_deployment_id OsConfigPatchDeployment#patch_deployment_id}
   */
@@ -189,15 +184,15 @@ export interface OsConfigPatchDeploymentInstanceFilter {
   readonly all?: boolean | cdktf.IResolvable;
   /**
   * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
-VMs when targeting configs, for example prefix="prod-".
+  * VMs when targeting configs, for example prefix="prod-".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#instance_name_prefixes OsConfigPatchDeployment#instance_name_prefixes}
   */
   readonly instanceNamePrefixes?: string[];
   /**
   * Targets any of the VM instances specified. Instances are specified by their URI in the 'form zones/{{zone}}/instances/{{instance_name}}',
-'projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}', or
-'https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}'
+  * 'projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}', or
+  * 'https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#instances OsConfigPatchDeployment#instances}
   */
@@ -369,7 +364,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
 export interface OsConfigPatchDeploymentOneTimeSchedule {
   /**
   * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
-accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+  * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#execute_time OsConfigPatchDeployment#execute_time}
   */
@@ -440,8 +435,8 @@ export interface OsConfigPatchDeploymentPatchConfigApt {
   readonly excludes?: string[];
   /**
   * An exclusive list of packages to be updated. These are the only packages that will be updated.
-If these packages are not installed, they will be ignored. This field cannot be specified with
-any other patch configuration fields.
+  * If these packages are not installed, they will be ignored. This field cannot be specified with
+  * any other patch configuration fields.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#exclusive_packages OsConfigPatchDeployment#exclusive_packages}
   */
@@ -747,7 +742,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
-be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
+  * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
@@ -1018,7 +1013,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
-be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
+  * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
@@ -1385,7 +1380,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
-be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
+  * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
@@ -1656,7 +1651,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig 
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
-be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
+  * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
@@ -1913,7 +1908,7 @@ export interface OsConfigPatchDeploymentPatchConfigWindowsUpdate {
   readonly excludes?: string[];
   /**
   * An exclusive list of kbs to be updated. These are the only patches that will be updated.
-This field must not be used with other patch configurations.
+  * This field must not be used with other patch configurations.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#exclusive_patches OsConfigPatchDeployment#exclusive_patches}
   */
@@ -2033,8 +2028,8 @@ export interface OsConfigPatchDeploymentPatchConfigYum {
   readonly excludes?: string[];
   /**
   * An exclusive list of packages to be updated. These are the only packages that will be updated.
-If these packages are not installed, they will be ignored. This field cannot be specified with
-any other patch configuration fields.
+  * If these packages are not installed, they will be ignored. This field cannot be specified with
+  * any other patch configuration fields.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#exclusive_packages OsConfigPatchDeployment#exclusive_packages}
   */
@@ -2195,7 +2190,7 @@ export interface OsConfigPatchDeploymentPatchConfigZypper {
   readonly excludes?: string[];
   /**
   * An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command.
-This field must not be used with any other patch configuration fields.
+  * This field must not be used with any other patch configuration fields.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#exclusive_patches OsConfigPatchDeployment#exclusive_patches}
   */
@@ -2814,8 +2809,8 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
 export interface OsConfigPatchDeploymentRecurringScheduleMonthly {
   /**
   * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
-Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
-will not run in February, April, June, etc.
+  * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
+  * will not run in February, April, June, etc.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#month_day OsConfigPatchDeployment#month_day}
   */
@@ -2912,7 +2907,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
 export interface OsConfigPatchDeploymentRecurringScheduleTimeOfDay {
   /**
   * Hours of day in 24 hour format. Should be from 0 to 23.
-An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+  * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#hours OsConfigPatchDeployment#hours}
   */
@@ -3227,14 +3222,14 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
 export interface OsConfigPatchDeploymentRecurringSchedule {
   /**
   * The end time at which a recurring patch deployment schedule is no longer active.
-A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+  * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#end_time OsConfigPatchDeployment#end_time}
   */
   readonly endTime?: string;
   /**
   * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
-A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+  * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#start_time OsConfigPatchDeployment#start_time}
   */

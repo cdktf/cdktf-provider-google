@@ -1106,7 +1106,7 @@ Annotations is a key value map stored with a resource that may be set by externa
 More
 info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
 
-*Note**: The Cloud Run API may add additional annotations that were not provided in your config.
+**Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 
@@ -1124,7 +1124,7 @@ keys to configure features on a Service:
 * 'run.googleapis.com/launch-stage' sets the [launch stage](https://cloud.google.com/run/docs/troubleshooting#launch-stage-validation)
   when a preview feature is used. For example, '"run.googleapis.com/launch-stage": "BETA"'
 
-*Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_service#annotations CloudRunService#annotations}
@@ -1144,7 +1144,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 May match selectors of replication controllers
 and routes.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_service#labels CloudRunService#labels}
@@ -1293,7 +1293,7 @@ Annotations is a key value map stored with a resource that may be set by externa
 More
 info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
 
-*Note**: The Cloud Run API may add additional annotations that were not provided in your config.
+**Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 

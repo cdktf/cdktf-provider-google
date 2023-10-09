@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface NetworkManagementConnectivityTestConfig extends cdktf.TerraformMetaArguments {
   /**
   * The user-supplied description of the Connectivity Test.
-Maximum of 512 characters.
+  * Maximum of 512 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#description NetworkManagementConnectivityTest#description}
   */
@@ -28,10 +23,10 @@ Maximum of 512 characters.
   readonly id?: string;
   /**
   * Resource labels to represent user-provided metadata.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#labels NetworkManagementConnectivityTest#labels}
   */
@@ -54,8 +49,8 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly protocol?: string;
   /**
   * Other projects that may be relevant for reachability analysis.
-This is applicable to scenarios where a test can cross project
-boundaries.
+  * This is applicable to scenarios where a test can cross project
+  * boundaries.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#related_projects NetworkManagementConnectivityTest#related_projects}
   */
@@ -88,8 +83,8 @@ export interface NetworkManagementConnectivityTestDestination {
   readonly instance?: string;
   /**
   * The IP address of the endpoint, which can be an external or
-internal IP. An IPv6 address is only allowed when the test's
-destination is a global load balancer VIP.
+  * internal IP. An IPv6 address is only allowed when the test's
+  * destination is a global load balancer VIP.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#ip_address NetworkManagementConnectivityTest#ip_address}
   */
@@ -102,20 +97,20 @@ destination is a global load balancer VIP.
   readonly network?: string;
   /**
   * The IP protocol port of the endpoint. Only applicable when
-protocol is TCP or UDP.
+  * protocol is TCP or UDP.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#port NetworkManagementConnectivityTest#port}
   */
   readonly port?: number;
   /**
   * Project ID where the endpoint is located. The Project ID can be
-derived from the URI if you provide a VM instance or network URI.
-The following are two cases where you must provide the project ID:
-1. Only the IP address is specified, and the IP address is within
-a GCP project. 2. When you are using Shared VPC and the IP address
-that you provide is from the service project. In this case, the
-network that the IP address resides in is defined in the host
-project.
+  * derived from the URI if you provide a VM instance or network URI.
+  * The following are two cases where you must provide the project ID:
+  * 1. Only the IP address is specified, and the IP address is within
+  * a GCP project. 2. When you are using Shared VPC and the IP address
+  * that you provide is from the service project. In this case, the
+  * network that the IP address resides in is defined in the host
+  * project.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#project_id NetworkManagementConnectivityTest#project_id}
   */
@@ -281,8 +276,8 @@ export interface NetworkManagementConnectivityTestSource {
   readonly instance?: string;
   /**
   * The IP address of the endpoint, which can be an external or
-internal IP. An IPv6 address is only allowed when the test's
-destination is a global load balancer VIP.
+  * internal IP. An IPv6 address is only allowed when the test's
+  * destination is a global load balancer VIP.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#ip_address NetworkManagementConnectivityTest#ip_address}
   */
@@ -301,22 +296,22 @@ destination is a global load balancer VIP.
   readonly networkType?: string;
   /**
   * The IP protocol port of the endpoint. Only applicable when
-protocol is TCP or UDP.
+  * protocol is TCP or UDP.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#port NetworkManagementConnectivityTest#port}
   */
   readonly port?: number;
   /**
   * Project ID where the endpoint is located. The Project ID can be
-derived from the URI if you provide a VM instance or network URI.
-The following are two cases where you must provide the project ID:
-
-1. Only the IP address is specified, and the IP address is
-   within a GCP project.
-2. When you are using Shared VPC and the IP address
-   that you provide is from the service project. In this case,
-   the network that the IP address resides in is defined in the
-   host project.
+  * derived from the URI if you provide a VM instance or network URI.
+  * The following are two cases where you must provide the project ID:
+  * 
+  * 1. Only the IP address is specified, and the IP address is
+  *    within a GCP project.
+  * 2. When you are using Shared VPC and the IP address
+  *    that you provide is from the service project. In this case,
+  *    the network that the IP address resides in is defined in the
+  *    host project.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/network_management_connectivity_test#project_id NetworkManagementConnectivityTest#project_id}
   */

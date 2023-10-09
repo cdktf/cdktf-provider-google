@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_workflow_template
 // generated from terraform resource schema
 
@@ -27,9 +22,9 @@ export interface DataprocWorkflowTemplateConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * Optional. The labels to associate with this template. These labels will be propagated to all jobs and clusters created by the workflow instance. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a template.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field `effective_labels` for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field `effective_labels` for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
   */

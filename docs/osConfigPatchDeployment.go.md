@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeployment(scope Construct, id *string, config OsConfigPatchDeploymentConfig) OsConfigPatchDeployment
 ```
@@ -411,7 +411,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.OsConfigPatchDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -443,7 +443,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.OsConfigPatchDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ osconfigpatchdeployment.OsConfigPatchDeployment_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.OsConfigPatchDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -942,7 +942,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentConfig {
 	Connection: interface{},
@@ -952,17 +952,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeploy
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	InstanceFilter: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentInstanceFilter,
+	InstanceFilter: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentInstanceFilter,
 	PatchDeploymentId: *string,
 	Description: *string,
 	Duration: *string,
 	Id: *string,
-	OneTimeSchedule: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentOneTimeSchedule,
-	PatchConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfig,
+	OneTimeSchedule: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentOneTimeSchedule,
+	PatchConfig: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfig,
 	Project: *string,
-	RecurringSchedule: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringSchedule,
-	Rollout: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRollout,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentTimeouts,
+	RecurringSchedule: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringSchedule,
+	Rollout: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRollout,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentTimeouts,
 }
 ```
 
@@ -1086,11 +1086,12 @@ PatchDeploymentId *string
 A name for the patch deployment in the project.
 
 When creating a name the following rules apply:
-Must contain only lowercase letters, numbers, and hyphens.
-Must start with a letter.
-Must be between 1-63 characters.
-Must end with a number or a letter.
-Must be unique within the project.
+
+* Must contain only lowercase letters, numbers, and hyphens.
+* Must start with a letter.
+* Must be between 1-63 characters.
+* Must end with a number or a letter.
+* Must be unique within the project.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/os_config_patch_deployment#patch_deployment_id OsConfigPatchDeployment#patch_deployment_id}
 
@@ -1229,7 +1230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentInstanceFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentInstanceFilter {
 	All: interface{},
@@ -1330,7 +1331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentInstanceFilterGroupLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentInstanceFilterGroupLabels {
 	Labels: *map[string]*string,
@@ -1364,7 +1365,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentOneTimeSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentOneTimeSchedule {
 	ExecuteTime: *string,
@@ -1398,18 +1399,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfig {
-	Apt: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigApt,
-	Goo: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigGoo,
+	Apt: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigApt,
+	Goo: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigGoo,
 	MigInstancesAllowed: interface{},
-	PostStep: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStep,
-	PreStep: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStep,
+	PostStep: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStep,
+	PreStep: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStep,
 	RebootConfig: *string,
-	WindowsUpdate: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigWindowsUpdate,
-	Yum: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigYum,
-	Zypper: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigZypper,
+	WindowsUpdate: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigWindowsUpdate,
+	Yum: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigYum,
+	Zypper: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigZypper,
 }
 ```
 
@@ -1560,7 +1561,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigApt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigApt {
 	Excludes: *[]*string,
@@ -1630,7 +1631,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigGoo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigGoo {
 	Enabled: interface{},
@@ -1664,11 +1665,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStep.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPostStep {
-	LinuxExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig,
-	WindowsExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig,
+	LinuxExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig,
+	WindowsExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig,
 }
 ```
 
@@ -1714,11 +1715,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
 	AllowedSuccessCodes: *[]*f64,
-	GcsObject: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject,
+	GcsObject: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject,
 	Interpreter: *string,
 	LocalPath: *string,
 }
@@ -1799,7 +1800,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject {
 	Bucket: *string,
@@ -1867,11 +1868,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig {
 	AllowedSuccessCodes: *[]*f64,
-	GcsObject: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject,
+	GcsObject: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject,
 	Interpreter: *string,
 	LocalPath: *string,
 }
@@ -1952,7 +1953,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject {
 	Bucket: *string,
@@ -2020,11 +2021,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStep.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPreStep {
-	LinuxExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig,
-	WindowsExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig,
+	LinuxExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig,
+	WindowsExecStepConfig: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig,
 }
 ```
 
@@ -2070,11 +2071,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
 	AllowedSuccessCodes: *[]*f64,
-	GcsObject: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject,
+	GcsObject: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject,
 	Interpreter: *string,
 	LocalPath: *string,
 }
@@ -2155,7 +2156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject {
 	Bucket: *string,
@@ -2223,11 +2224,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
 	AllowedSuccessCodes: *[]*f64,
-	GcsObject: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject,
+	GcsObject: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject,
 	Interpreter: *string,
 	LocalPath: *string,
 }
@@ -2308,7 +2309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject {
 	Bucket: *string,
@@ -2376,7 +2377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigWindowsUpdate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigWindowsUpdate {
 	Classifications: *[]*string,
@@ -2447,7 +2448,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigYum.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigYum {
 	Excludes: *[]*string,
@@ -2533,7 +2534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigZypper.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentPatchConfigZypper {
 	Categories: *[]*string,
@@ -2650,15 +2651,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRecurringSchedule {
-	TimeOfDay: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeOfDay,
-	TimeZone: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeZone,
+	TimeOfDay: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeOfDay,
+	TimeZone: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeZone,
 	EndTime: *string,
-	Monthly: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthly,
+	Monthly: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthly,
 	StartTime: *string,
-	Weekly: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleWeekly,
+	Weekly: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleWeekly,
 }
 ```
 
@@ -2769,11 +2770,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRecurringScheduleMonthly {
 	MonthDay: *f64,
-	WeekDayOfMonth: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth,
+	WeekDayOfMonth: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth,
 }
 ```
 
@@ -2823,7 +2824,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
 	DayOfWeek: *string,
@@ -2891,7 +2892,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeOfDay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRecurringScheduleTimeOfDay {
 	Hours: *f64,
@@ -2978,7 +2979,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeZone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRecurringScheduleTimeZone {
 	Id: *string,
@@ -3031,7 +3032,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleWeekly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRecurringScheduleWeekly {
 	DayOfWeek: *string,
@@ -3065,10 +3066,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRollout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRollout {
-	DisruptionBudget: github.com/cdktf/cdktf-provider-google-go/google/v10.osConfigPatchDeployment.OsConfigPatchDeploymentRolloutDisruptionBudget,
+	DisruptionBudget: github.com/cdktf/cdktf-provider-google-go/google.osConfigPatchDeployment.OsConfigPatchDeploymentRolloutDisruptionBudget,
 	Mode: *string,
 }
 ```
@@ -3115,7 +3116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRolloutDisruptionBudget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentRolloutDisruptionBudget {
 	Fixed: *f64,
@@ -3165,7 +3166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 &osconfigpatchdeployment.OsConfigPatchDeploymentTimeouts {
 	Create: *string,
@@ -3213,7 +3214,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentInstanceFilterGroupLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentInstanceFilterGroupLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OsConfigPatchDeploymentInstanceFilterGroupLabelsList
 ```
@@ -3356,7 +3357,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentInstanceFilterGroupLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentInstanceFilterGroupLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OsConfigPatchDeploymentInstanceFilterGroupLabelsOutputReference
 ```
@@ -3645,7 +3646,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentInstanceFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentInstanceFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentInstanceFilterOutputReference
 ```
@@ -4052,7 +4053,7 @@ func InternalValue() OsConfigPatchDeploymentInstanceFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentOneTimeScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentOneTimeScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentOneTimeScheduleOutputReference
 ```
@@ -4323,7 +4324,7 @@ func InternalValue() OsConfigPatchDeploymentOneTimeSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigAptOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigAptOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigAptOutputReference
 ```
@@ -4659,7 +4660,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigApt
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigGooOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigGooOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigGooOutputReference
 ```
@@ -4930,7 +4931,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigGoo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigOutputReference
 ```
@@ -5531,7 +5532,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference
 ```
@@ -5846,7 +5847,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference
 ```
@@ -6224,7 +6225,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPostStepOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPostStepOutputReference
 ```
@@ -6557,7 +6558,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPostStep
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference
 ```
@@ -6872,7 +6873,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference
 ```
@@ -7250,7 +7251,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference
 ```
@@ -7565,7 +7566,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference
 ```
@@ -7943,7 +7944,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPreStepOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPreStepOutputReference
 ```
@@ -8276,7 +8277,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPreStep
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference
 ```
@@ -8591,7 +8592,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepCon
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference
 ```
@@ -8969,7 +8970,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepCon
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference
 ```
@@ -9305,7 +9306,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigWindowsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigYumOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigYumOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigYumOutputReference
 ```
@@ -9670,7 +9671,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigYum
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentPatchConfigZypperOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentPatchConfigZypperOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentPatchConfigZypperOutputReference
 ```
@@ -10093,7 +10094,7 @@ func InternalValue() OsConfigPatchDeploymentPatchConfigZypper
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference
 ```
@@ -10413,7 +10414,7 @@ func InternalValue() OsConfigPatchDeploymentRecurringScheduleMonthly
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference
 ```
@@ -10735,7 +10736,7 @@ func InternalValue() OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMon
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRecurringScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRecurringScheduleOutputReference
 ```
@@ -11218,7 +11219,7 @@ func InternalValue() OsConfigPatchDeploymentRecurringSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference
 ```
@@ -11583,7 +11584,7 @@ func InternalValue() OsConfigPatchDeploymentRecurringScheduleTimeOfDay
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference
 ```
@@ -11883,7 +11884,7 @@ func InternalValue() OsConfigPatchDeploymentRecurringScheduleTimeZone
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference
 ```
@@ -12154,7 +12155,7 @@ func InternalValue() OsConfigPatchDeploymentRecurringScheduleWeekly
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference
 ```
@@ -12461,7 +12462,7 @@ func InternalValue() OsConfigPatchDeploymentRolloutDisruptionBudget
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentRolloutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentRolloutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentRolloutOutputReference
 ```
@@ -12767,7 +12768,7 @@ func InternalValue() OsConfigPatchDeploymentRollout
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigPatchDeployment.OsConfigPatchDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/osconfigpatchdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/osconfigpatchdeployment"
 
 osconfigpatchdeployment.NewOsConfigPatchDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsConfigPatchDeploymentTimeoutsOutputReference
 ```

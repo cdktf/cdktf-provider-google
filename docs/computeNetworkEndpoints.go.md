@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 computenetworkendpoints.NewComputeNetworkEndpoints(scope Construct, id *string, config ComputeNetworkEndpointsConfig) ComputeNetworkEndpoints
 ```
@@ -331,7 +331,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpoints.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 computenetworkendpoints.ComputeNetworkEndpoints_IsConstruct(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpoints.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 computenetworkendpoints.ComputeNetworkEndpoints_IsTerraformElement(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ computenetworkendpoints.ComputeNetworkEndpoints_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpoints.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 computenetworkendpoints.ComputeNetworkEndpoints_IsTerraformResource(x interface{}) *bool
 ```
@@ -708,7 +708,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 &computenetworkendpoints.ComputeNetworkEndpointsConfig {
 	Connection: interface{},
@@ -722,7 +722,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpo
 	Id: *string,
 	NetworkEndpoints: interface{},
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.computeNetworkEndpoints.ComputeNetworkEndpointsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeNetworkEndpoints.ComputeNetworkEndpointsTimeouts,
 	Zone: *string,
 }
 ```
@@ -905,7 +905,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 &computenetworkendpoints.ComputeNetworkEndpointsNetworkEndpoints {
 	IpAddress: *string,
@@ -920,7 +920,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpo
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.ipAddress">IpAddress</a></code> | <code>*string</code> | IPv4 address of network endpoint. |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.instance">Instance</a></code> | <code>*string</code> | The name for a specific VM instance that the IP address belongs to. |
-| <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.port">Port</a></code> | <code>*f64</code> | Port number of network endpoint. *Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'. |
+| <code><a href="#@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpoints.property.port">Port</a></code> | <code>*f64</code> | Port number of network endpoint. **Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'. |
 
 ---
 
@@ -967,7 +967,7 @@ Port *f64
 
 - *Type:* *f64
 
-Port number of network endpoint. *Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'.
+Port number of network endpoint. **Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_network_endpoints#port ComputeNetworkEndpoints#port}
 
@@ -978,7 +978,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 &computenetworkendpoints.ComputeNetworkEndpointsTimeouts {
 	Create: *string,
@@ -1040,7 +1040,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpointsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 computenetworkendpoints.NewComputeNetworkEndpointsNetworkEndpointsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeNetworkEndpointsNetworkEndpointsList
 ```
@@ -1183,7 +1183,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsNetworkEndpointsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 computenetworkendpoints.NewComputeNetworkEndpointsNetworkEndpointsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeNetworkEndpointsNetworkEndpointsOutputReference
 ```
@@ -1530,7 +1530,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpoints.ComputeNetworkEndpointsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computenetworkendpoints"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoints"
 
 computenetworkendpoints.NewComputeNetworkEndpointsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNetworkEndpointsTimeoutsOutputReference
 ```

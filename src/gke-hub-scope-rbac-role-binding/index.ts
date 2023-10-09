@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_scope_rbac_role_binding
 // generated from terraform resource schema
 
@@ -14,8 +9,8 @@ import * as cdktf from 'cdktf';
 export interface GkeHubScopeRbacRoleBindingConfig extends cdktf.TerraformMetaArguments {
   /**
   * Principal that is be authorized in the cluster (at least of one the oneof
-is required). Updating one will unset the other automatically.
-group is the group, as seen by the kubernetes cluster.
+  * is required). Updating one will unset the other automatically.
+  * group is the group, as seen by the kubernetes cluster.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_scope_rbac_role_binding#group GkeHubScopeRbacRoleBinding#group}
   */
@@ -29,10 +24,10 @@ group is the group, as seen by the kubernetes cluster.
   readonly id?: string;
   /**
   * Labels for this ScopeRBACRoleBinding.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_scope_rbac_role_binding#labels GkeHubScopeRbacRoleBinding#labels}
   */
@@ -55,9 +50,9 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly scopeRbacRoleBindingId: string;
   /**
   * Principal that is be authorized in the cluster (at least of one the oneof
-is required). Updating one will unset the other automatically.
-user is the name of the user as seen by the kubernetes cluster, example
-"alice" or "alice@domain.tld"
+  * is required). Updating one will unset the other automatically.
+  * user is the name of the user as seen by the kubernetes cluster, example
+  * "alice" or "alice@domain.tld"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_scope_rbac_role_binding#user GkeHubScopeRbacRoleBinding#user}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_attestor
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface BinaryAuthorizationAttestorConfig extends cdktf.TerraformMetaArguments {
   /**
   * A descriptive comment. This field may be updated. The field may be
-displayed in chooser dialogs.
+  * displayed in chooser dialogs.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_attestor#description BinaryAuthorizationAttestor#description}
   */
@@ -52,17 +47,17 @@ displayed in chooser dialogs.
 export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey {
   /**
   * A PEM-encoded public key, as described in
-'https://tools.ietf.org/html/rfc7468#section-13'
+  * 'https://tools.ietf.org/html/rfc7468#section-13'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_attestor#public_key_pem BinaryAuthorizationAttestor#public_key_pem}
   */
   readonly publicKeyPem?: string;
   /**
   * The signature algorithm used to verify a message against
-a signature using this key. These signature algorithm must
-match the structure and any object identifiers encoded in
-publicKeyPem (i.e. this algorithm must match that of the
-public key).
+  * a signature using this key. These signature algorithm must
+  * match the structure and any object identifiers encoded in
+  * publicKeyPem (i.e. this algorithm must match that of the
+  * public key).
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_attestor#signature_algorithm BinaryAuthorizationAttestor#signature_algorithm}
   */
@@ -153,14 +148,14 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
 export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
   /**
   * ASCII-armored representation of a PGP public key, as the
-entire output by the command
-'gpg --export --armor foo@example.com' (either LF or CRLF
-line endings). When using this field, id should be left
-blank. The BinAuthz API handlers will calculate the ID
-and fill it in automatically. BinAuthz computes this ID
-as the OpenPGP RFC4880 V4 fingerprint, represented as
-upper-case hex. If id is provided by the caller, it will
-be overwritten by the API-calculated ID.
+  * entire output by the command
+  * 'gpg --export --armor foo@example.com' (either LF or CRLF
+  * line endings). When using this field, id should be left
+  * blank. The BinAuthz API handlers will calculate the ID
+  * and fill it in automatically. BinAuthz computes this ID
+  * as the OpenPGP RFC4880 V4 fingerprint, represented as
+  * upper-case hex. If id is provided by the caller, it will
+  * be overwritten by the API-calculated ID.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_attestor#ascii_armored_pgp_public_key BinaryAuthorizationAttestor#ascii_armored_pgp_public_key}
   */
@@ -173,11 +168,11 @@ be overwritten by the API-calculated ID.
   readonly comment?: string;
   /**
   * The ID of this public key. Signatures verified by BinAuthz
-must include the ID of the public key that can be used to
-verify them, and that ID must match the contents of this
-field exactly. Additional restrictions on this field can
-be imposed based on which public key type is encapsulated.
-See the documentation on publicKey cases below for details.
+  * must include the ID of the public key that can be used to
+  * verify them, and that ID must match the contents of this
+  * field exactly. Additional restrictions on this field can
+  * be imposed based on which public key type is encapsulated.
+  * See the documentation on publicKey cases below for details.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_attestor#id BinaryAuthorizationAttestor#id}
   *
@@ -355,12 +350,12 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysList e
 export interface BinaryAuthorizationAttestorAttestationAuthorityNote {
   /**
   * The resource name of a ATTESTATION_AUTHORITY Note, created by the
-user. If the Note is in a different project from the Attestor, it
-should be specified in the format 'projects/* /notes/*' (or the legacy
-'providers/* /notes/*'). This field may not be updated.
-An attestation by this attestor is stored as a Container Analysis
-ATTESTATION_AUTHORITY Occurrence that names a container image
-and that links to this Note.
+  * user. If the Note is in a different project from the Attestor, it
+  * should be specified in the format 'projects/* /notes/*' (or the legacy
+  * 'providers/* /notes/*'). This field may not be updated.
+  * An attestation by this attestor is stored as a Container Analysis
+  * ATTESTATION_AUTHORITY Occurrence that names a container image
+  * and that links to this Note.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/binary_authorization_attestor#note_reference BinaryAuthorizationAttestor#note_reference}
    *

@@ -870,25 +870,16 @@ public string IdpId { get; set; }
 
 ID of the IDP. Possible values include:.
 
-'apple.com'
-
-'facebook.com'
-
-'gc.apple.com'
-
-'github.com'
-
-'google.com'
-
-'linkedin.com'
-
-'microsoft.com'
-
-'playgames.google.com'
-
-'twitter.com'
-
-'yahoo.com'
+* 'apple.com'
+* 'facebook.com'
+* 'gc.apple.com'
+* 'github.com'
+* 'google.com'
+* 'linkedin.com'
+* 'microsoft.com'
+* 'playgames.google.com'
+* 'twitter.com'
+* 'yahoo.com'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_default_supported_idp_config#idp_id IdentityPlatformDefaultSupportedIdpConfig#idp_id}
 

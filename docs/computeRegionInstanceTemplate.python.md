@@ -74,7 +74,7 @@ computeRegionInstanceTemplate.ComputeRegionInstanceTemplate(
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.guestAccelerator">guest_accelerator</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateGuestAccelerator">ComputeRegionInstanceTemplateGuestAccelerator</a>]]</code> | guest_accelerator block. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_instance_template#id ComputeRegionInstanceTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.instanceDescription">instance_description</a></code> | <code>str</code> | A description of the instance. |
-| <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | A set of key/value label pairs to assign to instances created from this template,. |
+| <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | A set of key/value label pairs to assign to instances created from this template, 				 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.metadata">metadata</a></code> | <code>typing.Mapping[str]</code> | Metadata key/value pairs to make available from within instances created from this template. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.metadataStartupScript">metadata_startup_script</a></code> | <code>str</code> | An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer.parameter.minCpuPlatform">min_cpu_platform</a></code> | <code>str</code> | Specifies a minimum CPU platform. |
@@ -251,9 +251,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Mapping[str]
 
-A set of key/value label pairs to assign to instances created from this template,.
+A set of key/value label pairs to assign to instances created from this template, 				 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_instance_template#labels ComputeRegionInstanceTemplate#labels}
@@ -2243,7 +2242,7 @@ computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig(
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.guestAccelerator">guest_accelerator</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateGuestAccelerator">ComputeRegionInstanceTemplateGuestAccelerator</a>]]</code> | guest_accelerator block. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_instance_template#id ComputeRegionInstanceTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.instanceDescription">instance_description</a></code> | <code>str</code> | A description of the instance. |
-| <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | A set of key/value label pairs to assign to instances created from this template,. |
+| <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | A set of key/value label pairs to assign to instances created from this template, 				 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.metadata">metadata</a></code> | <code>typing.Mapping[str]</code> | Metadata key/value pairs to make available from within instances created from this template. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.metadataStartupScript">metadata_startup_script</a></code> | <code>str</code> | An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. |
 | <code><a href="#@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.property.minCpuPlatform">min_cpu_platform</a></code> | <code>str</code> | Specifies a minimum CPU platform. |
@@ -2470,9 +2469,8 @@ labels: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-A set of key/value label pairs to assign to instances created from this template,.
+A set of key/value label pairs to assign to instances created from this template, 				 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_instance_template#labels ComputeRegionInstanceTemplate#labels}

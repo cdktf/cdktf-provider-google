@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_firewall_rule
 // generated from terraform resource schema
 
@@ -33,11 +28,11 @@ export interface AppEngineFirewallRuleConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * A positive integer that defines the order of rule evaluation.
-Rules with the lowest priority are evaluated first.
-
-A default rule at priority Int32.MaxValue matches all IPv4 and
-IPv6 traffic when no previous rule matches. Only the action of
-this rule can be modified by the user.
+  * Rules with the lowest priority are evaluated first.
+  * 
+  * A default rule at priority Int32.MaxValue matches all IPv4 and
+  * IPv6 traffic when no previous rule matches. Only the action of
+  * this rule can be modified by the user.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_firewall_rule#priority AppEngineFirewallRule#priority}
   */

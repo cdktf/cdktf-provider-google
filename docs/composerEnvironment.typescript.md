@@ -909,9 +909,9 @@ public readonly labels: {[ key: string ]: string};
 User-defined labels for this environment.
 
 The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be <= 128 bytes in size.
-
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/composer_environment#labels ComposerEnvironment#labels}
 

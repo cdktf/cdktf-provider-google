@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster
 // generated from terraform resource schema
 
@@ -14,11 +9,11 @@ import * as cdktf from 'cdktf';
 export interface AlloydbClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
-An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
+  * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#annotations AlloydbCluster#annotations}
   */
@@ -50,9 +45,9 @@ Please refer to the field 'effective_annotations' for all of the annotations pre
   readonly id?: string;
   /**
   * User-defined labels for the alloydb cluster.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#labels AlloydbCluster#labels}
   */
@@ -65,8 +60,8 @@ Please refer to the field 'effective_labels' for all of the labels present on th
   readonly location: string;
   /**
   * The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
-
-"projects/{projectNumber}/global/networks/{network_id}".
+  * 
+  * "projects/{projectNumber}/global/networks/{network_id}".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#network AlloydbCluster#network}
   */
@@ -617,7 +612,7 @@ export class AlloydbClusterAutomatedBackupPolicyQuantityBasedRetentionOutputRefe
 export interface AlloydbClusterAutomatedBackupPolicyTimeBasedRetention {
   /**
   * The retention period.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#retention_period AlloydbCluster#retention_period}
   */
@@ -964,10 +959,10 @@ export class AlloydbClusterAutomatedBackupPolicyWeeklyScheduleOutputReference ex
 export interface AlloydbClusterAutomatedBackupPolicy {
   /**
   * The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed.
-
-The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
-
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
+  * 
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#backup_window AlloydbCluster#backup_window}
   */
@@ -1311,8 +1306,8 @@ export interface AlloydbClusterContinuousBackupConfig {
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
-
-If not set, defaults to 14 days.
+  * 
+  * If not set, defaults to 14 days.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#recovery_window_days AlloydbCluster#recovery_window_days}
   */
@@ -1592,14 +1587,14 @@ export class AlloydbClusterInitialUserOutputReference extends cdktf.ComplexObjec
 export interface AlloydbClusterNetworkConfig {
   /**
   * The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
-If set, the instance IPs for this cluster will be created in the allocated range.
+  * If set, the instance IPs for this cluster will be created in the allocated range.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#allocated_ip_range AlloydbCluster#allocated_ip_range}
   */
   readonly allocatedIpRange?: string;
   /**
   * The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
-It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
+  * It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/alloydb_cluster#network AlloydbCluster#network}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service
 // generated from terraform resource schema
 
@@ -14,14 +9,14 @@ import * as cdktf from 'cdktf';
 export interface CloudRunV2ServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
-
-Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected in new resources.
-All system annotations in v1 now have a corresponding field in v2 Service.
-
-This field follows Kubernetes annotations' namespacing, limits, and rules.
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
+  * 
+  * Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected in new resources.
+  * All system annotations in v1 now have a corresponding field in v2 Service.
+  * 
+  * This field follows Kubernetes annotations' namespacing, limits, and rules.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#annotations CloudRunV2Service#annotations}
   */
@@ -59,22 +54,22 @@ Please refer to the field 'effective_annotations' for all of the annotations pre
   readonly ingress?: string;
   /**
   * Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component,
-environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
-
-Cloud Run API v2 does not support labels with  'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
-All system labels in v1 now have a corresponding field in v2 Service.
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
+  * 
+  * Cloud Run API v2 does not support labels with  'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
+  * All system labels in v1 now have a corresponding field in v2 Service.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#labels CloudRunV2Service#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
-If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
-
-For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
+  * If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
+  * 
+  * For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#launch_stage CloudRunV2Service#launch_stage}
   */
@@ -815,15 +810,15 @@ export class CloudRunV2ServiceTemplateContainersEnvList extends cdktf.ComplexLis
 export interface CloudRunV2ServiceTemplateContainersLivenessProbeGrpc {
   /**
   * Port number to access on the container. Number must be in the range 1 to 65535.
-If not specified, defaults to the same value as container.ports[0].containerPort.
+  * If not specified, defaults to the same value as container.ports[0].containerPort.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#port CloudRunV2Service#port}
   */
   readonly port?: number;
   /**
   * The name of the service to place in the gRPC HealthCheckRequest
-(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
-If this is not specified, the default behavior is defined by gRPC.
+  * (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+  * If this is not specified, the default behavior is defined by gRPC.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#service CloudRunV2Service#service}
   */
@@ -1045,7 +1040,7 @@ export interface CloudRunV2ServiceTemplateContainersLivenessProbeHttpGet {
   readonly path?: string;
   /**
   * Port number to access on the container. Number must be in the range 1 to 65535.
-If not specified, defaults to the same value as container.ports[0].containerPort.
+  * If not specified, defaults to the same value as container.ports[0].containerPort.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#port CloudRunV2Service#port}
   */
@@ -1630,15 +1625,15 @@ export class CloudRunV2ServiceTemplateContainersResourcesOutputReference extends
 export interface CloudRunV2ServiceTemplateContainersStartupProbeGrpc {
   /**
   * Port number to access on the container. Number must be in the range 1 to 65535.
-If not specified, defaults to the same value as container.ports[0].containerPort.
+  * If not specified, defaults to the same value as container.ports[0].containerPort.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#port CloudRunV2Service#port}
   */
   readonly port?: number;
   /**
   * The name of the service to place in the gRPC HealthCheckRequest
-(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
-If this is not specified, the default behavior is defined by gRPC.
+  * (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+  * If this is not specified, the default behavior is defined by gRPC.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#service CloudRunV2Service#service}
   */
@@ -1860,7 +1855,7 @@ export interface CloudRunV2ServiceTemplateContainersStartupProbeHttpGet {
   readonly path?: string;
   /**
   * Port number to access on the container. Must be in the range 1 to 65535.
-If not specified, defaults to the same value as container.ports[0].containerPort.
+  * If not specified, defaults to the same value as container.ports[0].containerPort.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#port CloudRunV2Service#port}
   */
@@ -1980,7 +1975,7 @@ export class CloudRunV2ServiceTemplateContainersStartupProbeHttpGetOutputReferen
 export interface CloudRunV2ServiceTemplateContainersStartupProbeTcpSocket {
   /**
   * Port number to access on the container. Must be in the range 1 to 65535.
-If not specified, defaults to the same value as container.ports[0].containerPort.
+  * If not specified, defaults to the same value as container.ports[0].containerPort.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#port CloudRunV2Service#port}
   */
@@ -3390,16 +3385,16 @@ export class CloudRunV2ServiceTemplateVolumesList extends cdktf.ComplexList {
 export interface CloudRunV2ServiceTemplateVpcAccessNetworkInterfaces {
   /**
   * The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both
-network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
-looked up from the subnetwork.
+  * network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
+  * looked up from the subnetwork.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#network CloudRunV2Service#network}
   */
   readonly network?: string;
   /**
   * The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or subnetwork must be specified. If both
-network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
-subnetwork with the same name with the network will be used.
+  * network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
+  * subnetwork with the same name with the network will be used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#subnetwork CloudRunV2Service#subnetwork}
   */
@@ -3676,11 +3671,11 @@ export class CloudRunV2ServiceTemplateVpcAccessOutputReference extends cdktf.Com
 export interface CloudRunV2ServiceTemplate {
   /**
   * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
-
-Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
-All system annotations in v1 now have a corresponding field in v2 RevisionTemplate.
-
-This field follows Kubernetes annotations' namespacing, limits, and rules.
+  * 
+  * Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
+  * All system annotations in v1 now have a corresponding field in v2 RevisionTemplate.
+  * 
+  * This field follows Kubernetes annotations' namespacing, limits, and rules.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#annotations CloudRunV2Service#annotations}
   */
@@ -3699,10 +3694,10 @@ This field follows Kubernetes annotations' namespacing, limits, and rules.
   readonly executionEnvironment?: string;
   /**
   * Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc.
-For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
-
-Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
-All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
+  * For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
+  * 
+  * Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
+  * All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#labels CloudRunV2Service#labels}
   */
@@ -3733,8 +3728,8 @@ All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
   readonly sessionAffinity?: boolean | cdktf.IResolvable;
   /**
   * Max allowed time for an instance to respond to a request.
-
-A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
+  * 
+  * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_service#timeout CloudRunV2Service#timeout}
   */

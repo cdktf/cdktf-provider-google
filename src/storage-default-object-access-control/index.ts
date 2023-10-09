@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_default_object_access_control
 // generated from terraform resource schema
 
@@ -20,14 +15,14 @@ export interface StorageDefaultObjectAccessControlConfig extends cdktf.Terraform
   readonly bucket: string;
   /**
   * The entity holding the permission, in one of the following forms:
-  * user-{{userId}}
-  * user-{{email}} (such as "user-liz@example.com")
-  * group-{{groupId}}
-  * group-{{email}} (such as "group-example@googlegroups.com")
-  * domain-{{domain}} (such as "domain-example.com")
-  * project-team-{{projectId}}
-  * allUsers
-  * allAuthenticatedUsers
+  *   * user-{{userId}}
+  *   * user-{{email}} (such as "user-liz@example.com")
+  *   * group-{{groupId}}
+  *   * group-{{email}} (such as "group-example@googlegroups.com")
+  *   * domain-{{domain}} (such as "domain-example.com")
+  *   * project-team-{{projectId}}
+  *   * allUsers
+  *   * allAuthenticatedUsers
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_default_object_access_control#entity StorageDefaultObjectAccessControl#entity}
   */

@@ -1020,9 +1020,9 @@ public string Kind { get; set; }
 
 Indicates whether the entity type can be automatically expanded.
 
-KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
-KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
-KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
+* KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
+* KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
+* KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#kind DialogflowCxEntityType#kind}
 
@@ -1038,8 +1038,8 @@ public string AutoExpansionMode { get; set; }
 
 Represents kinds of entities.
 
-AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
-AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity. Possible values: ["AUTO_EXPANSION_MODE_DEFAULT", "AUTO_EXPANSION_MODE_UNSPECIFIED"]
+* AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
+* AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity. Possible values: ["AUTO_EXPANSION_MODE_DEFAULT", "AUTO_EXPANSION_MODE_UNSPECIFIED"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_entity_type#auto_expansion_mode DialogflowCxEntityType#auto_expansion_mode}
 

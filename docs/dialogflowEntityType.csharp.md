@@ -876,10 +876,10 @@ public string Kind { get; set; }
 
 Indicates the kind of entity type.
 
-KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
-KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
-types can contain references to other entity types (with or without aliases).
-KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
+* KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
+* KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
+  types can contain references to other entity types (with or without aliases).
+* KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_entity_type#kind DialogflowEntityType#kind}
 
@@ -989,7 +989,8 @@ A collection of value synonyms.
 For example, if the entity type is vegetable, and value is scallions, a synonym
 could be green onions.
 For KIND_LIST entity types:
-This collection must contain exactly one synonym equal to value.
+
+* This collection must contain exactly one synonym equal to value.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_entity_type#synonyms DialogflowEntityType#synonyms}
 
@@ -1008,9 +1009,10 @@ The primary value associated with this entity entry.
 For example, if the entity type is vegetable, the value
 could be scallions.
 For KIND_MAP entity types:
-A reference value to be used in place of synonyms.
-For KIND_LIST entity types:
-A string that can contain references to other entity types (with or without aliases).
+
+* A reference value to be used in place of synonyms.
+  For KIND_LIST entity types:
+* A string that can contain references to other entity types (with or without aliases).
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_entity_type#value DialogflowEntityType#value}
 

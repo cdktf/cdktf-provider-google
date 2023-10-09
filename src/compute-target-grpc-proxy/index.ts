@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_grpc_proxy
 // generated from terraform resource schema
 
@@ -27,12 +22,12 @@ export interface ComputeTargetGrpcProxyConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * Name of the resource. Provided by the client when the resource
-is created. The name must be 1-63 characters long, and comply
-with RFC1035. Specifically, the name must be 1-63 characters long
-and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which
-means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit,
-except the last character, which cannot be a dash.
+  * is created. The name must be 1-63 characters long, and comply
+  * with RFC1035. Specifically, the name must be 1-63 characters long
+  * and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which
+  * means the first character must be a lowercase letter, and all
+  * following characters must be a dash, lowercase letter, or digit,
+  * except the last character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_grpc_proxy#name ComputeTargetGrpcProxy#name}
   */
@@ -43,23 +38,23 @@ except the last character, which cannot be a dash.
   readonly project?: string;
   /**
   * URL to the UrlMap resource that defines the mapping from URL to
-the BackendService. The protocol field in the BackendService
-must be set to GRPC.
+  * the BackendService. The protocol field in the BackendService
+  * must be set to GRPC.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_grpc_proxy#url_map ComputeTargetGrpcProxy#url_map}
   */
   readonly urlMap?: string;
   /**
   * If true, indicates that the BackendServices referenced by
-the urlMap may be accessed by gRPC applications without using
-a sidecar proxy. This will enable configuration checks on urlMap
-and its referenced BackendServices to not allow unsupported features.
-A gRPC application must use "xds:///" scheme in the target URI
-of the service it is connecting to. If false, indicates that the
-BackendServices referenced by the urlMap will be accessed by gRPC
-applications via a sidecar proxy. In this case, a gRPC application
-must not use "xds:///" scheme in the target URI of the service
-it is connecting to
+  * the urlMap may be accessed by gRPC applications without using
+  * a sidecar proxy. This will enable configuration checks on urlMap
+  * and its referenced BackendServices to not allow unsupported features.
+  * A gRPC application must use "xds:///" scheme in the target URI
+  * of the service it is connecting to. If false, indicates that the
+  * BackendServices referenced by the urlMap will be accessed by gRPC
+  * applications via a sidecar proxy. In this case, a gRPC application
+  * must not use "xds:///" scheme in the target URI of the service
+  * it is connecting to
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_target_grpc_proxy#validate_for_proxyless ComputeTargetGrpcProxy#validate_for_proxyless}
   */

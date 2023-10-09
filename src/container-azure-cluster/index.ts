@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_azure_cluster
 // generated from terraform resource schema
 
@@ -14,9 +9,9 @@ import * as cdktf from 'cdktf';
 export interface ContainerAzureClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
-
-**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
-Please refer to the field `effective_annotations` for all of the annotations present on the resource.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+  * Please refer to the field `effective_annotations` for all of the annotations present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_azure_cluster#annotations ContainerAzureCluster#annotations}
   */

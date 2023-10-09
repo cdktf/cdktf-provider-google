@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template
 // generated from terraform resource schema
 
@@ -33,19 +28,19 @@ export interface DataLossPreventionInspectTemplateConfig extends cdktf.Terraform
   readonly id?: string;
   /**
   * The parent of the inspect template in any of the following formats:
-
-* 'projects/{{project}}'
-* 'projects/{{project}}/locations/{{location}}'
-* 'organizations/{{organization_id}}'
-* 'organizations/{{organization_id}}/locations/{{location}}'
+  * 
+  * * 'projects/{{project}}'
+  * * 'projects/{{project}}/locations/{{location}}'
+  * * 'organizations/{{organization_id}}'
+  * * 'organizations/{{organization_id}}/locations/{{location}}'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#parent DataLossPreventionInspectTemplate#parent}
   */
   readonly parent: string;
   /**
   * The template id can contain uppercase and lowercase letters, numbers, and hyphens;
-that is, it must match the regular expression: [a-zA-Z\d-_]+. The maximum length is
-100 characters. Can be empty to allow the system to generate one.
+  * that is, it must match the regular expression: [a-zA-Z\d-_]+. The maximum length is
+  * 100 characters. Can be empty to allow the system to generate one.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#template_id DataLossPreventionInspectTemplate#template_id}
   */
@@ -130,7 +125,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListStruct {
   /**
   * Words or phrases defining the dictionary. The dictionary must contain at least one
-phrase and every phrase must contain at least 2 characters that are letters or digits.
+  * phrase and every phrase must contain at least 2 characters that are letters or digits.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#words DataLossPreventionInspectTemplate#words}
   */
@@ -355,7 +350,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
-listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
@@ -484,7 +479,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRe
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression.
-Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
@@ -636,7 +631,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensit
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType {
   /**
   * Resource name of the requested StoredInfoType, for example 'organizations/433245324/storedInfoTypes/432452342'
-or 'projects/project-id/storedInfoTypes/432452342'.
+  * or 'projects/project-id/storedInfoTypes/432452342'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
@@ -745,7 +740,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes {
   readonly exclusionType?: string;
   /**
   * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
-specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
+  * specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#likelihood DataLossPreventionInspectTemplate#likelihood}
   */
@@ -1103,7 +1098,7 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityS
 export interface DataLossPreventionInspectTemplateInspectConfigInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
@@ -1322,7 +1317,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
 export interface DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
@@ -1750,7 +1745,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensi
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
@@ -1969,7 +1964,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStruct {
   /**
   * Words or phrases defining the dictionary. The dictionary must contain at least one
-phrase and every phrase must contain at least 2 characters that are letters or digits.
+  * phrase and every phrase must contain at least 2 characters that are letters or digits.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#words DataLossPreventionInspectTemplate#words}
   */
@@ -2130,14 +2125,14 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex {
   /**
   * The index of the submatch to extract as findings. When not specified,
-the entire match is returned. No more than 3 may be included.
+  * the entire match is returned. No more than 3 may be included.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression. Its syntax
-(https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
@@ -2475,7 +2470,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
@@ -2700,7 +2695,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression.
-Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
@@ -2968,14 +2963,14 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex {
   /**
   * The index of the submatch to extract as findings. When not specified,
-the entire match is returned. No more than 3 may be included.
+  * the entire match is returned. No more than 3 may be included.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression. Its syntax
-(https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
@@ -3069,11 +3064,11 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
   readonly fixedLikelihood?: string;
   /**
   * Increase or decrease the likelihood by the specified number of levels. For example,
-if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
-then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKELY.
-Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
-adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
-will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
+  * if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
+  * then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKELY.
+  * Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
+  * adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
+  * will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_loss_prevention_inspect_template#relative_likelihood DataLossPreventionInspectTemplate#relative_likelihood}
   */

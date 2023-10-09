@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_env_keystore
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ApigeeEnvKeystoreConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Apigee environment group associated with the Apigee environment,
-in the format 'organizations/{{org_name}}/environments/{{env_name}}'.
+  * in the format 'organizations/{{org_name}}/environments/{{env_name}}'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_env_keystore#env_id ApigeeEnvKeystore#env_id}
   */

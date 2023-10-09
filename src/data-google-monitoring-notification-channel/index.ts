@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_notification_channel
 // generated from terraform resource schema
 
@@ -27,12 +22,12 @@ export interface DataGoogleMonitoringNotificationChannelConfig extends cdktf.Ter
   readonly id?: string;
   /**
   * Configuration fields that define the channel and its behavior. The
-permissible and required labels are specified in the
-NotificationChannelDescriptor corresponding to the type field.
-
-Labels with sensitive data are obfuscated by the API and therefore Terraform cannot
-determine if there are upstream changes to these fields. They can also be configured via
-the sensitive_labels block, but cannot be configured in both places.
+  * permissible and required labels are specified in the
+  * NotificationChannelDescriptor corresponding to the type field.
+  * 
+  * Labels with sensitive data are obfuscated by the API and therefore Terraform cannot
+  * determine if there are upstream changes to these fields. They can also be configured via
+  * the sensitive_labels block, but cannot be configured in both places.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/monitoring_notification_channel#labels DataGoogleMonitoringNotificationChannel#labels}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_tenant
 // generated from terraform resource schema
 
@@ -20,8 +15,8 @@ export interface IdentityPlatformTenantConfig extends cdktf.TerraformMetaArgumen
   readonly allowPasswordSignup?: boolean | cdktf.IResolvable;
   /**
   * Whether authentication is disabled for the tenant. If true, the users under
-the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
-are not able to manage its users.
+  * the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
+  * are not able to manage its users.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_tenant#disable_auth IdentityPlatformTenant#disable_auth}
   */

@@ -183,7 +183,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/database_migration_service_connection_profile#labels DatabaseMigrationServiceConnectionProfile#labels}
@@ -2155,7 +2155,7 @@ public java.util.Map<java.lang.String, java.lang.String> getLabels();
 
 The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/database_migration_service_connection_profile#labels DatabaseMigrationServiceConnectionProfile#labels}

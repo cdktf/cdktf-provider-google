@@ -55,8 +55,8 @@ ComputePerInstanceConfig.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.instanceGroupManager">instanceGroupManager</a></code> | <code>java.lang.String</code> | The instance group manager this instance config is part of. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The name for this per-instance config and its corresponding instance. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#id ComputePerInstanceConfig#id}. |
-| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.minimalAction">minimalAction</a></code> | <code>java.lang.String</code> | The minimal action to perform on the instance during an update. Default is 'NONE'. Possible values are: REPLACE RESTART REFRESH NONE. |
-| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.mostDisruptiveAllowedAction">mostDisruptiveAllowedAction</a></code> | <code>java.lang.String</code> | The most disruptive action to perform on the instance during an update. Default is 'REPLACE'. Possible values are: REPLACE RESTART REFRESH NONE. |
+| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.minimalAction">minimalAction</a></code> | <code>java.lang.String</code> | The minimal action to perform on the instance during an update. |
+| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.mostDisruptiveAllowedAction">mostDisruptiveAllowedAction</a></code> | <code>java.lang.String</code> | The most disruptive action to perform on the instance during an update. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.preservedState">preservedState</a></code> | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigPreservedState">ComputePerInstanceConfigPreservedState</a></code> | preserved_state block. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#project ComputePerInstanceConfig#project}. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfig.Initializer.parameter.removeInstanceStateOnDestroy">removeInstanceStateOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When true, deleting this config will immediately remove any specified state from the underlying instance. |
@@ -160,7 +160,14 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-The minimal action to perform on the instance during an update. Default is 'NONE'. Possible values are: REPLACE RESTART REFRESH NONE.
+The minimal action to perform on the instance during an update.
+
+Default is 'NONE'. Possible values are:
+
+* REPLACE
+* RESTART
+* REFRESH
+* NONE
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#minimal_action ComputePerInstanceConfig#minimal_action}
 
@@ -170,7 +177,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-The most disruptive action to perform on the instance during an update. Default is 'REPLACE'. Possible values are: REPLACE RESTART REFRESH NONE.
+The most disruptive action to perform on the instance during an update.
+
+Default is 'REPLACE'. Possible values are:
+
+* REPLACE
+* RESTART
+* REFRESH
+* NONE
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#most_disruptive_allowed_action ComputePerInstanceConfig#most_disruptive_allowed_action}
 
@@ -1036,8 +1050,8 @@ ComputePerInstanceConfigConfig.builder()
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.instanceGroupManager">instanceGroupManager</a></code> | <code>java.lang.String</code> | The instance group manager this instance config is part of. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.name">name</a></code> | <code>java.lang.String</code> | The name for this per-instance config and its corresponding instance. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#id ComputePerInstanceConfig#id}. |
-| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.minimalAction">minimalAction</a></code> | <code>java.lang.String</code> | The minimal action to perform on the instance during an update. Default is 'NONE'. Possible values are: REPLACE RESTART REFRESH NONE. |
-| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.mostDisruptiveAllowedAction">mostDisruptiveAllowedAction</a></code> | <code>java.lang.String</code> | The most disruptive action to perform on the instance during an update. Default is 'REPLACE'. Possible values are: REPLACE RESTART REFRESH NONE. |
+| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.minimalAction">minimalAction</a></code> | <code>java.lang.String</code> | The minimal action to perform on the instance during an update. |
+| <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.mostDisruptiveAllowedAction">mostDisruptiveAllowedAction</a></code> | <code>java.lang.String</code> | The most disruptive action to perform on the instance during an update. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.preservedState">preservedState</a></code> | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigPreservedState">ComputePerInstanceConfigPreservedState</a></code> | preserved_state block. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#project ComputePerInstanceConfig#project}. |
 | <code><a href="#@cdktf/provider-google.computePerInstanceConfig.ComputePerInstanceConfigConfig.property.removeInstanceStateOnDestroy">removeInstanceStateOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When true, deleting this config will immediately remove any specified state from the underlying instance. |
@@ -1167,7 +1181,14 @@ public java.lang.String getMinimalAction();
 
 - *Type:* java.lang.String
 
-The minimal action to perform on the instance during an update. Default is 'NONE'. Possible values are: REPLACE RESTART REFRESH NONE.
+The minimal action to perform on the instance during an update.
+
+Default is 'NONE'. Possible values are:
+
+* REPLACE
+* RESTART
+* REFRESH
+* NONE
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#minimal_action ComputePerInstanceConfig#minimal_action}
 
@@ -1181,7 +1202,14 @@ public java.lang.String getMostDisruptiveAllowedAction();
 
 - *Type:* java.lang.String
 
-The most disruptive action to perform on the instance during an update. Default is 'REPLACE'. Possible values are: REPLACE RESTART REFRESH NONE.
+The most disruptive action to perform on the instance during an update.
+
+Default is 'REPLACE'. Possible values are:
+
+* REPLACE
+* RESTART
+* REFRESH
+* NONE
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_per_instance_config#most_disruptive_allowed_action ComputePerInstanceConfig#most_disruptive_allowed_action}
 

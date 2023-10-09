@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_tag_template
 // generated from terraform resource schema
 
@@ -223,7 +218,7 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdk
 export interface DataCatalogTagTemplateFieldsType {
   /**
   * Represents primitive types - string, bool etc.
- Exactly one of 'primitive_type' or 'enum_type' must be set Possible values: ["DOUBLE", "STRING", "BOOL", "TIMESTAMP"]
+  *  Exactly one of 'primitive_type' or 'enum_type' must be set Possible values: ["DOUBLE", "STRING", "BOOL", "TIMESTAMP"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_tag_template#primitive_type DataCatalogTagTemplate#primitive_type}
   */
@@ -342,8 +337,8 @@ export interface DataCatalogTagTemplateFields {
   readonly isRequired?: boolean | cdktf.IResolvable;
   /**
   * The order of this field with respect to other fields in this tag template.
-A higher value indicates a more important field. The value can be negative.
-Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
+  * A higher value indicates a more important field. The value can be negative.
+  * Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_tag_template#order DataCatalogTagTemplate#order}
   */

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 dialogflowentitytype.NewDialogflowEntityType(scope Construct, id *string, config DialogflowEntityTypeConfig) DialogflowEntityType
 ```
@@ -331,7 +331,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityType.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 dialogflowentitytype.DialogflowEntityType_IsConstruct(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityType.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 dialogflowentitytype.DialogflowEntityType_IsTerraformElement(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ dialogflowentitytype.DialogflowEntityType_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityType.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 dialogflowentitytype.DialogflowEntityType_IsTerraformResource(x interface{}) *bool
 ```
@@ -741,7 +741,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityTypeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 &dialogflowentitytype.DialogflowEntityTypeConfig {
 	Connection: interface{},
@@ -757,7 +757,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytyp
 	Entities: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.dialogflowEntityType.DialogflowEntityTypeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowEntityType.DialogflowEntityTypeTimeouts,
 }
 ```
 
@@ -876,10 +876,10 @@ Kind *string
 
 Indicates the kind of entity type.
 
-KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
-KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
-types can contain references to other entity types (with or without aliases).
-KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
+* KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
+* KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
+  types can contain references to other entity types (with or without aliases).
+* KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_entity_type#kind DialogflowEntityType#kind}
 
@@ -959,7 +959,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityTypeEntities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 &dialogflowentitytype.DialogflowEntityTypeEntities {
 	Synonyms: *[]*string,
@@ -989,7 +989,8 @@ A collection of value synonyms.
 For example, if the entity type is vegetable, and value is scallions, a synonym
 could be green onions.
 For KIND_LIST entity types:
-This collection must contain exactly one synonym equal to value.
+
+* This collection must contain exactly one synonym equal to value.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_entity_type#synonyms DialogflowEntityType#synonyms}
 
@@ -1008,9 +1009,10 @@ The primary value associated with this entity entry.
 For example, if the entity type is vegetable, the value
 could be scallions.
 For KIND_MAP entity types:
-A reference value to be used in place of synonyms.
-For KIND_LIST entity types:
-A string that can contain references to other entity types (with or without aliases).
+
+* A reference value to be used in place of synonyms.
+  For KIND_LIST entity types:
+* A string that can contain references to other entity types (with or without aliases).
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_entity_type#value DialogflowEntityType#value}
 
@@ -1021,7 +1023,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityTypeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 &dialogflowentitytype.DialogflowEntityTypeTimeouts {
 	Create: *string,
@@ -1083,7 +1085,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityTypeEntitiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 dialogflowentitytype.NewDialogflowEntityTypeEntitiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowEntityTypeEntitiesList
 ```
@@ -1226,7 +1228,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityTypeEntitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 dialogflowentitytype.NewDialogflowEntityTypeEntitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowEntityTypeEntitiesOutputReference
 ```
@@ -1537,7 +1539,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowEntityType.DialogflowEntityTypeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowentitytype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowentitytype"
 
 dialogflowentitytype.NewDialogflowEntityTypeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowEntityTypeTimeoutsOutputReference
 ```

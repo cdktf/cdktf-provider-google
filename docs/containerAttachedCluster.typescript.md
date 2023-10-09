@@ -1416,7 +1416,7 @@ Name must be 63 characters or less, begin and end with alphanumerics,
 with dashes (-), underscores (_), dots (.), and alphanumerics between.
 
 
-*Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/container_attached_cluster#annotations ContainerAttachedCluster#annotations}

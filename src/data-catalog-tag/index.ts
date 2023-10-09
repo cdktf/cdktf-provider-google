@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_tag
 // generated from terraform resource schema
 
@@ -14,10 +9,10 @@ import * as cdktf from 'cdktf';
 export interface DataCatalogTagConfig extends cdktf.TerraformMetaArguments {
   /**
   * Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
-individual column based on that schema.
-
-For attaching a tag to a nested column, use '.' to separate the column names. Example:
-'outer_column.inner_column'
+  * individual column based on that schema.
+  * 
+  * For attaching a tag to a nested column, use '.' to separate the column names. Example:
+  * 'outer_column.inner_column'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_tag#column DataCatalogTag#column}
   */
@@ -31,15 +26,15 @@ For attaching a tag to a nested column, use '.' to separate the column names. Ex
   readonly id?: string;
   /**
   * The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
-all entries in that group.
+  * all entries in that group.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_tag#parent DataCatalogTag#parent}
   */
   readonly parent?: string;
   /**
   * The resource name of the tag template that this tag uses. Example:
-projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
-This field cannot be modified after creation.
+  * projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
+  * This field cannot be modified after creation.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/data_catalog_tag#template DataCatalogTag#template}
   */

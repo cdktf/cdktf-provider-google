@@ -1247,10 +1247,10 @@ forwarding rule. For global forwarding rules, this target must be a global
 load balancing resource.
 
 The forwarded traffic must be of a type appropriate to the target object.
-For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
-For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
- 'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
- 'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
+*  For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+*  For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
+  *  'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
+  *  'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
 
 
 For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
@@ -1305,10 +1305,10 @@ to the referenced 'target'.
 While creating a forwarding rule, specifying an 'IPAddress' is
 required under the following circumstances:
 
-When the 'target' is set to 'targetGrpcProxy' and
+* When the 'target' is set to 'targetGrpcProxy' and
 'validateForProxyless' is set to 'true', the
 'IPAddress' should be set to '0.0.0.0'.
-When the 'target' is a Private Service Connect Google APIs
+* When the 'target' is a Private Service Connect Google APIs
 bundle, you must specify an 'IPAddress'.
 
 
@@ -1319,15 +1319,15 @@ assigns an ephemeral IP address.
 Use one of the following formats to specify an IP address while creating a
 forwarding rule:
 
-IP address number, as in '100.1.2.3'
-IPv6 address range, as in '2600:1234::/96'
-Full resource URL, as in
+* IP address number, as in '100.1.2.3'
+* IPv6 address range, as in '2600:1234::/96'
+* Full resource URL, as in
 'https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name'
-Partial URL or by name, as in:
-'projects/project_id/regions/region/addresses/address-name'
-'regions/region/addresses/address-name'
-'global/addresses/address-name'
-'address-name'
+* Partial URL or by name, as in:
+  * 'projects/project_id/regions/region/addresses/address-name'
+  * 'regions/region/addresses/address-name'
+  * 'global/addresses/address-name'
+  * 'address-name'
 
 
 The forwarding rule's 'target',
@@ -1390,7 +1390,7 @@ public readonly labels: {[ key: string ]: string};
 
 Labels to apply to this forwarding rule.  A list of key->value pairs.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_forwarding_rule#labels ComputeGlobalForwardingRule#labels}
@@ -1477,8 +1477,8 @@ public readonly portRange: string;
 
 This field can only be used:.
 
-If 'IPProtocol' is one of TCP, UDP, or SCTP.
-By backend service-based network load balancers, target pool-based
+* If 'IPProtocol' is one of TCP, UDP, or SCTP.
+* By backend service-based network load balancers, target pool-based
 network load balancers, internal proxy load balancers, external proxy load
 balancers, Traffic Director, external protocol forwarding, and Classic VPN.
 Some products have restrictions on what ports can be used. See
@@ -1486,13 +1486,13 @@ Some products have restrictions on what ports can be used. See
 for details.
 
 
-TargetHttpProxy: 80, 8080
-TargetHttpsProxy: 443
-TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-              1883, 5222
-TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-              1883, 5222
-TargetVpnGateway: 500, 4500
+* TargetHttpProxy: 80, 8080
+* TargetHttpsProxy: 443
+* TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+                  1883, 5222
+* TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+                  1883, 5222
+* TargetVpnGateway: 500, 4500
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_forwarding_rule#port_range ComputeGlobalForwardingRule#port_range}
 

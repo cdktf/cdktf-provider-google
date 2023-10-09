@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership
 // generated from terraform resource schema
 
@@ -21,10 +16,10 @@ export interface GkeHubMembershipConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Labels to apply to this membership.
-
-
-**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
-Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  * 
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#labels GkeHubMembership#labels}
   */
@@ -61,7 +56,7 @@ Please refer to the field 'effective_labels' for all of the labels present on th
 export interface GkeHubMembershipAuthority {
   /**
   * A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://' and // be a valid
-with length <2000 characters. For example: 'https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster' (must be 'locations' rather than 'zones'). If the cluster is provisioned with Terraform, this is '"https://container.googleapis.com/v1/${google_container_cluster.my-cluster.id}"'.
+  * with length <2000 characters. For example: 'https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster' (must be 'locations' rather than 'zones'). If the cluster is provisioned with Terraform, this is '"https://container.googleapis.com/v1/${google_container_cluster.my-cluster.id}"'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#issuer GkeHubMembership#issuer}
   */
@@ -126,10 +121,10 @@ export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObjec
 export interface GkeHubMembershipEndpointGkeCluster {
   /**
   * Self-link of the GCP resource for the GKE cluster.
-For example: '//container.googleapis.com/projects/my-project/zones/us-west1-a/clusters/my-cluster'.
-It can be at the most 1000 characters in length. If the cluster is provisioned with Terraform,
-this can be '"//container.googleapis.com/${google_container_cluster.my-cluster.id}"' or
-'google_container_cluster.my-cluster.id'.
+  * For example: '//container.googleapis.com/projects/my-project/zones/us-west1-a/clusters/my-cluster'.
+  * It can be at the most 1000 characters in length. If the cluster is provisioned with Terraform,
+  * this can be '"//container.googleapis.com/${google_container_cluster.my-cluster.id}"' or
+  * 'google_container_cluster.my-cluster.id'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#resource_link GkeHubMembership#resource_link}
   */

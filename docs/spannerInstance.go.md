@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerInstance.SpannerInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstance"
 
 spannerinstance.NewSpannerInstance(scope Construct, id *string, config SpannerInstanceConfig) SpannerInstance
 ```
@@ -339,7 +339,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.spannerInstance.SpannerInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstance"
 
 spannerinstance.SpannerInstance_IsConstruct(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.spannerInstance.SpannerInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstance"
 
 spannerinstance.SpannerInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ spannerinstance.SpannerInstance_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.spannerInstance.SpannerInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstance"
 
 spannerinstance.SpannerInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -837,7 +837,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.spannerInstance.SpannerInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstance"
 
 &spannerinstance.SpannerInstanceConfig {
 	Connection: interface{},
@@ -856,7 +856,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
 	NumNodes: *f64,
 	ProcessingUnits: *f64,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.spannerInstance.SpannerInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.spannerInstance.SpannerInstanceTimeouts,
 }
 ```
 
@@ -1031,7 +1031,7 @@ Labels *map[string]*string
 
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/spanner_instance#labels SpannerInstance#labels}
@@ -1116,7 +1116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.spannerInstance.SpannerInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstance"
 
 &spannerinstance.SpannerInstanceTimeouts {
 	Create: *string,
@@ -1178,7 +1178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerInstance.SpannerInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/spannerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstance"
 
 spannerinstance.NewSpannerInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpannerInstanceTimeoutsOutputReference
 ```

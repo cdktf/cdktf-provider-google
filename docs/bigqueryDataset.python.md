@@ -296,7 +296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The labels associated with this dataset. You can use these to organize and group your datasets.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
@@ -1600,13 +1600,10 @@ special_group: str
 
 A special group to grant access to. Possible values include:.
 
-'projectOwners': Owners of the enclosing project.
-
-'projectReaders': Readers of the enclosing project.
-
-'projectWriters': Writers of the enclosing project.
-
-'allAuthenticatedUsers': All authenticated BigQuery users.
+* 'projectOwners': Owners of the enclosing project.
+* 'projectReaders': Readers of the enclosing project.
+* 'projectWriters': Writers of the enclosing project.
+* 'allAuthenticatedUsers': All authenticated BigQuery users.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#special_group BigqueryDataset#special_group}
 
@@ -2227,7 +2224,7 @@ labels: typing.Mapping[str]
 
 The labels associated with this dataset. You can use these to organize and group your datasets.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}

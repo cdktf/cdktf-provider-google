@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/artifact_registry_repository
 // generated from terraform resource schema
 
@@ -31,7 +26,7 @@ export interface DataGoogleArtifactRegistryRepositoryConfig extends cdktf.Terraf
   readonly project?: string;
   /**
   * The last part of the repository name, for example:
-"repo1"
+  * "repo1"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/artifact_registry_repository#repository_id DataGoogleArtifactRegistryRepository#repository_id}
   */

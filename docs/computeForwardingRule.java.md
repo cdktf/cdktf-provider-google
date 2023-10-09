@@ -75,7 +75,7 @@ ComputeForwardingRule.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Name of the resource; |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.allowGlobalAccess">allowGlobalAccess</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This field is used along with the 'backend_service' field for internal load balancing or with the 'target' field for internal TargetInstance. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.allowPscGlobalAccess">allowPscGlobalAccess</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region. |
-| <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.allPorts">allPorts</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This field can only be used: If 'IPProtocol' is one of TCP, UDP, or SCTP. |
+| <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.allPorts">allPorts</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This field can only be used: * If 'IPProtocol' is one of TCP, UDP, or SCTP. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.backendService">backendService</a></code> | <code>java.lang.String</code> | Identifies the backend service to which the forwarding rule sends traffic. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. Provide this property when you create the resource. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_forwarding_rule#id ComputeForwardingRule#id}. |
@@ -215,10 +215,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-This field can only be used: If 'IPProtocol' is one of TCP, UDP, or SCTP.
+This field can only be used: * If 'IPProtocol' is one of TCP, UDP, or SCTP.
 
-By internal TCP/UDP load balancers, backend service-based network load
-balancers, and internal and external protocol forwarding.
+* By internal TCP/UDP load balancers, backend service-based network load
+  balancers, and internal and external protocol forwarding.
 
 This option should be set to TRUE when the Forwarding Rule
 IPProtocol is set to L3_DEFAULT.
@@ -282,11 +282,11 @@ to the referenced 'target' or 'backendService'.
 While creating a forwarding rule, specifying an 'IPAddress' is
 required under the following circumstances:
 
-When the 'target' is set to 'targetGrpcProxy' and
-'validateForProxyless' is set to 'true', the
-'IPAddress' should be set to '0.0.0.0'.
-When the 'target' is a Private Service Connect Google APIs
-bundle, you must specify an 'IPAddress'.
+* When the 'target' is set to 'targetGrpcProxy' and
+  'validateForProxyless' is set to 'true', the
+  'IPAddress' should be set to '0.0.0.0'.
+* When the 'target' is a Private Service Connect Google APIs
+  bundle, you must specify an 'IPAddress'.
 
 Otherwise, you can optionally specify an IP address that references an
 existing static (reserved) IP address resource. When omitted, Google Cloud
@@ -295,15 +295,16 @@ assigns an ephemeral IP address.
 Use one of the following formats to specify an IP address while creating a
 forwarding rule:
 
-IP address number, as in '100.1.2.3'
-IPv6 address range, as in '2600:1234::/96'
-Full resource URL, as in
-'https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name'
-Partial URL or by name, as in:
-'projects/project_id/regions/region/addresses/address-name'
-'regions/region/addresses/address-name'
-'global/addresses/address-name'
-'address-name'
+* IP address number, as in '100.1.2.3'
+* IPv6 address range, as in '2600:1234::/96'
+* Full resource URL, as in
+  'https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name'
+* Partial URL or by name, as in:
+
+  * 'projects/project_id/regions/region/addresses/address-name'
+  * 'regions/region/addresses/address-name'
+  * 'global/addresses/address-name'
+  * 'address-name'
 
 The forwarding rule's 'target' or 'backendService',
 and in most cases, also the 'loadBalancingScheme', determine the
@@ -376,7 +377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Labels to apply to this forwarding rule.  A list of key->value pairs.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_forwarding_rule#labels ComputeForwardingRule#labels}
@@ -451,13 +452,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 This field can only be used:.
 
-If 'IPProtocol' is one of TCP, UDP, or SCTP.
-By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
-[port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
-for details.
+* If 'IPProtocol' is one of TCP, UDP, or SCTP.
+* By backend service-based network load balancers, target pool-based
+  network load balancers, internal proxy load balancers, external proxy load
+  balancers, Traffic Director, external protocol forwarding, and Classic VPN.
+  Some products have restrictions on what ports can be used. See
+  [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
+  for details.
 
 Only packets addressed to ports in the specified range will be forwarded to
 the backends configured with this forwarding rule.
@@ -482,9 +483,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 This field can only be used:.
 
-If 'IPProtocol' is one of TCP, UDP, or SCTP.
-By internal TCP/UDP load balancers, backend service-based network load
-balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
+* If 'IPProtocol' is one of TCP, UDP, or SCTP.
+* By internal TCP/UDP load balancers, backend service-based network load
+  balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
 
 You can specify a list of up to five ports by number, separated by commas.
 The ports can be contiguous or discontiguous. Only packets addressed to
@@ -595,10 +596,11 @@ forwarding rule. For global forwarding rules, this target must be a global
 load balancing resource.
 
 The forwarded traffic must be of a type appropriate to the target object.
-For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
-For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
-'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
-'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
+
+* For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+* For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
+* 'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
+* 'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
 
 For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
 
@@ -2015,7 +2017,7 @@ ComputeForwardingRuleConfig.builder()
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.name">name</a></code> | <code>java.lang.String</code> | Name of the resource; |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.allowGlobalAccess">allowGlobalAccess</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This field is used along with the 'backend_service' field for internal load balancing or with the 'target' field for internal TargetInstance. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.allowPscGlobalAccess">allowPscGlobalAccess</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region. |
-| <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.allPorts">allPorts</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This field can only be used: If 'IPProtocol' is one of TCP, UDP, or SCTP. |
+| <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.allPorts">allPorts</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This field can only be used: * If 'IPProtocol' is one of TCP, UDP, or SCTP. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.backendService">backendService</a></code> | <code>java.lang.String</code> | Identifies the backend service to which the forwarding rule sends traffic. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. Provide this property when you create the resource. |
 | <code><a href="#@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_forwarding_rule#id ComputeForwardingRule#id}. |
@@ -2181,10 +2183,10 @@ public java.lang.Object getAllPorts();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-This field can only be used: If 'IPProtocol' is one of TCP, UDP, or SCTP.
+This field can only be used: * If 'IPProtocol' is one of TCP, UDP, or SCTP.
 
-By internal TCP/UDP load balancers, backend service-based network load
-balancers, and internal and external protocol forwarding.
+* By internal TCP/UDP load balancers, backend service-based network load
+  balancers, and internal and external protocol forwarding.
 
 This option should be set to TRUE when the Forwarding Rule
 IPProtocol is set to L3_DEFAULT.
@@ -2264,11 +2266,11 @@ to the referenced 'target' or 'backendService'.
 While creating a forwarding rule, specifying an 'IPAddress' is
 required under the following circumstances:
 
-When the 'target' is set to 'targetGrpcProxy' and
-'validateForProxyless' is set to 'true', the
-'IPAddress' should be set to '0.0.0.0'.
-When the 'target' is a Private Service Connect Google APIs
-bundle, you must specify an 'IPAddress'.
+* When the 'target' is set to 'targetGrpcProxy' and
+  'validateForProxyless' is set to 'true', the
+  'IPAddress' should be set to '0.0.0.0'.
+* When the 'target' is a Private Service Connect Google APIs
+  bundle, you must specify an 'IPAddress'.
 
 Otherwise, you can optionally specify an IP address that references an
 existing static (reserved) IP address resource. When omitted, Google Cloud
@@ -2277,15 +2279,16 @@ assigns an ephemeral IP address.
 Use one of the following formats to specify an IP address while creating a
 forwarding rule:
 
-IP address number, as in '100.1.2.3'
-IPv6 address range, as in '2600:1234::/96'
-Full resource URL, as in
-'https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name'
-Partial URL or by name, as in:
-'projects/project_id/regions/region/addresses/address-name'
-'regions/region/addresses/address-name'
-'global/addresses/address-name'
-'address-name'
+* IP address number, as in '100.1.2.3'
+* IPv6 address range, as in '2600:1234::/96'
+* Full resource URL, as in
+  'https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name'
+* Partial URL or by name, as in:
+
+  * 'projects/project_id/regions/region/addresses/address-name'
+  * 'regions/region/addresses/address-name'
+  * 'global/addresses/address-name'
+  * 'address-name'
 
 The forwarding rule's 'target' or 'backendService',
 and in most cases, also the 'loadBalancingScheme', determine the
@@ -2374,7 +2377,7 @@ public java.util.Map<java.lang.String, java.lang.String> getLabels();
 
 Labels to apply to this forwarding rule.  A list of key->value pairs.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_forwarding_rule#labels ComputeForwardingRule#labels}
@@ -2469,13 +2472,13 @@ public java.lang.String getPortRange();
 
 This field can only be used:.
 
-If 'IPProtocol' is one of TCP, UDP, or SCTP.
-By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
-[port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
-for details.
+* If 'IPProtocol' is one of TCP, UDP, or SCTP.
+* By backend service-based network load balancers, target pool-based
+  network load balancers, internal proxy load balancers, external proxy load
+  balancers, Traffic Director, external protocol forwarding, and Classic VPN.
+  Some products have restrictions on what ports can be used. See
+  [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
+  for details.
 
 Only packets addressed to ports in the specified range will be forwarded to
 the backends configured with this forwarding rule.
@@ -2504,9 +2507,9 @@ public java.util.List<java.lang.String> getPorts();
 
 This field can only be used:.
 
-If 'IPProtocol' is one of TCP, UDP, or SCTP.
-By internal TCP/UDP load balancers, backend service-based network load
-balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
+* If 'IPProtocol' is one of TCP, UDP, or SCTP.
+* By internal TCP/UDP load balancers, backend service-based network load
+  balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
 
 You can specify a list of up to five ports by number, separated by commas.
 The ports can be contiguous or discontiguous. Only packets addressed to
@@ -2645,10 +2648,11 @@ forwarding rule. For global forwarding rules, this target must be a global
 load balancing resource.
 
 The forwarded traffic must be of a type appropriate to the target object.
-For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
-For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
-'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
-'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
+
+* For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+* For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
+* 'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
+* 'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
 
 For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
 

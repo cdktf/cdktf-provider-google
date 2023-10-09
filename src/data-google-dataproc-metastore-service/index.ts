@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface DataGoogleDataprocMetastoreServiceConfig extends cdktf.Terrafor
   readonly id?: string;
   /**
   * The location where the metastore service should reside.
-The default value is 'global'.
+  * The default value is 'global'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service#location DataGoogleDataprocMetastoreService#location}
   */
@@ -32,8 +27,8 @@ The default value is 'global'.
   readonly project?: string;
   /**
   * The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
-3 and 63 characters.
+  * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+  * 3 and 63 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/dataproc_metastore_service#service_id DataGoogleDataprocMetastoreService#service_id}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_connection
 // generated from terraform resource schema
 
@@ -39,12 +34,12 @@ export interface BigqueryConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The geographic location where the connection should reside.
-Cloud SQL instance must be in the same location as the connection
-with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
-Examples: US, EU, asia-northeast1, us-central1, europe-west1.
-Spanner Connections same as spanner region
-AWS allowed regions are aws-us-east-1
-Azure allowed regions are azure-eastus2
+  * Cloud SQL instance must be in the same location as the connection
+  * with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+  * Examples: US, EU, asia-northeast1, us-central1, europe-west1.
+  * Spanner Connections same as spanner region
+  * AWS allowed regions are aws-us-east-1
+  * Azure allowed regions are azure-eastus2
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/bigquery_connection#location BigqueryConnection#location}
   */

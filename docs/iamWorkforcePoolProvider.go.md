@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProvider(scope Construct, id *string, config IamWorkforcePoolProviderConfig) IamWorkforcePoolProvider
 ```
@@ -372,7 +372,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.IamWorkforcePoolProvider_IsConstruct(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.IamWorkforcePoolProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ iamworkforcepoolprovider.IamWorkforcePoolProvider_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.IamWorkforcePoolProvider_IsTerraformResource(x interface{}) *bool
 ```
@@ -903,7 +903,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderConfig {
 	Connection: interface{},
@@ -922,9 +922,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolpro
 	Disabled: interface{},
 	DisplayName: *string,
 	Id: *string,
-	Oidc: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidc,
-	Saml: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkforcePoolProvider.IamWorkforcePoolProviderSaml,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeouts,
+	Oidc: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidc,
+	Saml: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderSaml,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeouts,
 }
 ```
 
@@ -1086,10 +1086,11 @@ A [Common Expression Language](https://opensource.google/projects/cel) expressio
 The expression must output a boolean representing whether to allow the federation.
 
 The following keywords may be referenced in the expressions:
-'assertion': JSON representing the authentication credential issued by the provider.
-'google': The Google attributes mapped from the assertion in the 'attribute_mappings'.
-'google.profile_photo' and 'google.display_name' are not supported.
-'attribute': The custom attributes mapped from the assertion in the 'attribute_mappings'.
+
+* 'assertion': JSON representing the authentication credential issued by the provider.
+* 'google': The Google attributes mapped from the assertion in the 'attribute_mappings'.
+  'google.profile_photo' and 'google.display_name' are not supported.
+* 'attribute': The custom attributes mapped from the assertion in the 'attribute_mappings'.
 
 The maximum length of the attribute condition expression is 4096 characters.
 If unspecified, all valid authentication credentials will be accepted.
@@ -1117,18 +1118,19 @@ Maps attributes from the authentication credentials issued by an external identi
 Each key must be a string specifying the Google Cloud IAM attribute to map to.
 
 The following keys are supported:
-'google.subject': The principal IAM is authenticating. You can reference this value in IAM bindings.
-This is also the subject that appears in Cloud Logging logs. This is a required field and
-the mapped subject cannot exceed 127 bytes.
-'google.groups': Groups the authenticating user belongs to. You can grant groups access to
-resources using an IAM 'principalSet' binding; access applies to all members of the group.
-'google.display_name': The name of the authenticated user. This is an optional field and
-the mapped display name cannot exceed 100 bytes. If not set, 'google.subject' will be displayed instead.
-This attribute cannot be referenced in IAM bindings.
-'google.profile_photo': The URL that specifies the authenticated user's thumbnail photo.
-This is an optional field. When set, the image will be visible as the user's profile picture.
-If not set, a generic user icon will be displayed instead.
-This attribute cannot be referenced in IAM bindings.
+
+* 'google.subject': The principal IAM is authenticating. You can reference this value in IAM bindings.
+  This is also the subject that appears in Cloud Logging logs. This is a required field and
+  the mapped subject cannot exceed 127 bytes.
+* 'google.groups': Groups the authenticating user belongs to. You can grant groups access to
+  resources using an IAM 'principalSet' binding; access applies to all members of the group.
+* 'google.display_name': The name of the authenticated user. This is an optional field and
+  the mapped display name cannot exceed 100 bytes. If not set, 'google.subject' will be displayed instead.
+  This attribute cannot be referenced in IAM bindings.
+* 'google.profile_photo': The URL that specifies the authenticated user's thumbnail photo.
+  This is an optional field. When set, the image will be visible as the user's profile picture.
+  If not set, a generic user icon will be displayed instead.
+  This attribute cannot be referenced in IAM bindings.
 
 You can also provide custom attributes by specifying 'attribute.{custom_attribute}', where {custom_attribute}
 is the name of the custom attribute to be mapped. You can define a maximum of 50 custom attributes.
@@ -1136,12 +1138,13 @@ The maximum length of a mapped attribute key is 100 characters, and the key may 
 
 You can reference these attributes in IAM policies to define fine-grained access for a workforce pool
 to Google Cloud resources. For example:
-'google.subject':
-'principal://iam.googleapis.com/locations/{location}/workforcePools/{pool}/subject/{value}'
-'google.groups':
-'principalSet://iam.googleapis.com/locations/{location}/workforcePools/{pool}/group/{value}'
-'attribute.{custom_attribute}':
-'principalSet://iam.googleapis.com/locations/{location}/workforcePools/{pool}/attribute.{custom_attribute}/{value}'
+
+* 'google.subject':
+  'principal://iam.googleapis.com/locations/{location}/workforcePools/{pool}/subject/{value}'
+* 'google.groups':
+  'principalSet://iam.googleapis.com/locations/{location}/workforcePools/{pool}/group/{value}'
+* 'attribute.{custom_attribute}':
+  'principalSet://iam.googleapis.com/locations/{location}/workforcePools/{pool}/attribute.{custom_attribute}/{value}'
 
 Each value must be a [Common Expression Language](https://opensource.google/projects/cel)
 function that maps an identity provider credential to the normalized attribute specified
@@ -1272,13 +1275,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidc {
 	ClientId: *string,
 	IssuerUri: *string,
-	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecret,
-	WebSsoConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfig,
+	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecret,
+	WebSsoConfig: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfig,
 }
 ```
 
@@ -1354,10 +1357,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidcClientSecret {
-	Value: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValue,
+	Value: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValue,
 }
 ```
 
@@ -1388,7 +1391,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidcClientSecretValue {
 	PlainText: *string,
@@ -1422,7 +1425,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidcWebSsoConfig {
 	AssertionClaimsBehavior: *string,
@@ -1451,8 +1454,8 @@ AssertionClaimsBehavior *string
 
 The behavior for how OIDC Claims are included in the 'assertion' object used for attribute mapping and attribute condition.
 
-MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS: Merge the UserInfo Endpoint Claims with ID Token Claims, preferring UserInfo Claim Values for the same Claim Name. This option is available only for the Authorization Code Flow.
-ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: ["MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS", "ONLY_ID_TOKEN_CLAIMS"]
+* MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS: Merge the UserInfo Endpoint Claims with ID Token Claims, preferring UserInfo Claim Values for the same Claim Name. This option is available only for the Authorization Code Flow.
+* ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: ["MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS", "ONLY_ID_TOKEN_CLAIMS"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/iam_workforce_pool_provider#assertion_claims_behavior IamWorkforcePoolProvider#assertion_claims_behavior}
 
@@ -1469,8 +1472,9 @@ ResponseType *string
 The Response Type to request for in the OIDC Authorization Request for web sign-in.
 
 The 'CODE' Response Type is recommended to avoid the Implicit Flow, for security reasons.
-CODE: The 'response_type=code' selection uses the Authorization Code Flow for web sign-in. Requires a configured client secret.
-ID_TOKEN: The 'response_type=id_token' selection uses the Implicit Flow for web sign-in. Possible values: ["CODE", "ID_TOKEN"]
+
+* CODE: The 'response_type=code' selection uses the Authorization Code Flow for web sign-in. Requires a configured client secret.
+* ID_TOKEN: The 'response_type=id_token' selection uses the Implicit Flow for web sign-in. Possible values: ["CODE", "ID_TOKEN"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/iam_workforce_pool_provider#response_type IamWorkforcePoolProvider#response_type}
 
@@ -1498,7 +1502,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderSaml.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderSaml {
 	IdpMetadataXml: *string,
@@ -1548,7 +1552,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderTimeouts {
 	Create: *string,
@@ -1610,7 +1614,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcClientSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcClientSecretOutputReference
 ```
@@ -1901,7 +1905,7 @@ func InternalValue() IamWorkforcePoolProviderOidcClientSecret
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcClientSecretValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcClientSecretValueOutputReference
 ```
@@ -2183,7 +2187,7 @@ func InternalValue() IamWorkforcePoolProviderOidcClientSecretValue
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcOutputReference
 ```
@@ -2560,7 +2564,7 @@ func InternalValue() IamWorkforcePoolProviderOidc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcWebSsoConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcWebSsoConfigOutputReference
 ```
@@ -2882,7 +2886,7 @@ func InternalValue() IamWorkforcePoolProviderOidcWebSsoConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderSamlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderSamlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderSamlOutputReference
 ```
@@ -3153,7 +3157,7 @@ func InternalValue() IamWorkforcePoolProviderSaml
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderTimeoutsOutputReference
 ```

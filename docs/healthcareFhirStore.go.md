@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStore(scope Construct, id *string, config HealthcareFhirStoreConfig) HealthcareFhirStore
 ```
@@ -386,7 +386,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStore.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.HealthcareFhirStore_IsConstruct(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStore.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.HealthcareFhirStore_IsTerraformElement(x interface{}) *bool
 ```
@@ -432,7 +432,7 @@ healthcarefhirstore.HealthcareFhirStore_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStore.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.HealthcareFhirStore_IsTerraformResource(x interface{}) *bool
 ```
@@ -972,7 +972,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 &healthcarefhirstore.HealthcareFhirStoreConfig {
 	Connection: interface{},
@@ -993,9 +993,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore
 	EnableUpdateCreate: interface{},
 	Id: *string,
 	Labels: *map[string]*string,
-	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.healthcareFhirStore.HealthcareFhirStoreNotificationConfig,
+	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareFhirStore.HealthcareFhirStoreNotificationConfig,
 	StreamConfigs: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.healthcareFhirStore.HealthcareFhirStoreTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.healthcareFhirStore.HealthcareFhirStoreTimeouts,
 }
 ```
 
@@ -1121,7 +1121,7 @@ Name *string
 
 The resource name for the FhirStore.
 
-* Changing this property may recreate the FHIR store (removing all data) **
+** Changing this property may recreate the FHIR store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#name HealthcareFhirStore#name}
 
@@ -1190,7 +1190,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 
-* Changing this property may recreate the FHIR store (removing all data) **
+** Changing this property may recreate the FHIR store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#disable_referential_integrity HealthcareFhirStore#disable_referential_integrity}
 
@@ -1212,7 +1212,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 
-* Changing this property may recreate the FHIR store (removing all data) **
+** Changing this property may recreate the FHIR store (removing all data) **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#disable_resource_versioning HealthcareFhirStore#disable_resource_versioning}
 
@@ -1232,8 +1232,9 @@ Importing resource histories creates resource interactions that appear to have
 occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
 will fail with an error.
 
-* Changing this property may recreate the FHIR store (removing all data) **
-* This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
+** Changing this property may recreate the FHIR store (removing all data) **
+
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#enable_history_import HealthcareFhirStore#enable_history_import}
 
@@ -1296,7 +1297,7 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#labels HealthcareFhirStore#labels}
@@ -1350,7 +1351,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreNotificationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 &healthcarefhirstore.HealthcareFhirStoreNotificationConfig {
 	PubsubTopic: *string,
@@ -1391,10 +1392,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 &healthcarefhirstore.HealthcareFhirStoreStreamConfigs {
-	BigqueryDestination: github.com/cdktf/cdktf-provider-google-go/google/v10.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestination,
+	BigqueryDestination: github.com/cdktf/cdktf-provider-google-go/google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestination,
 	ResourceTypes: *[]*string,
 }
 ```
@@ -1445,11 +1446,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 &healthcarefhirstore.HealthcareFhirStoreStreamConfigsBigqueryDestination {
 	DatasetUri: *string,
-	SchemaConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig,
+	SchemaConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig,
 }
 ```
 
@@ -1495,11 +1496,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 &healthcarefhirstore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig {
 	RecursiveStructureDepth: *f64,
-	LastUpdatedPartitionConfig: github.com/cdktf/cdktf-provider-google-go/google/v10.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig,
+	LastUpdatedPartitionConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig,
 	SchemaType: *string,
 }
 ```
@@ -1557,10 +1558,10 @@ SchemaType *string
 
 Specifies the output schema type.
 
-ANALYTICS: Analytics schema defined by the FHIR community.
-See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
-ANALYTICS_V2: Analytics V2, similar to schema defined by the FHIR community, with added support for extensions with one or more occurrences and contained resources in stringified JSON.
-LOSSLESS: A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification. Default value: "ANALYTICS" Possible values: ["ANALYTICS", "ANALYTICS_V2", "LOSSLESS"]
+* ANALYTICS: Analytics schema defined by the FHIR community.
+  See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+* ANALYTICS_V2: Analytics V2, similar to schema defined by the FHIR community, with added support for extensions with one or more occurrences and contained resources in stringified JSON.
+* LOSSLESS: A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification. Default value: "ANALYTICS" Possible values: ["ANALYTICS", "ANALYTICS_V2", "LOSSLESS"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/healthcare_fhir_store#schema_type HealthcareFhirStore#schema_type}
 
@@ -1571,7 +1572,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 &healthcarefhirstore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig {
 	Type: *string,
@@ -1621,7 +1622,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 &healthcarefhirstore.HealthcareFhirStoreTimeouts {
 	Create: *string,
@@ -1683,7 +1684,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreNotificationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStoreNotificationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareFhirStoreNotificationConfigOutputReference
 ```
@@ -1954,7 +1955,7 @@ func InternalValue() HealthcareFhirStoreNotificationConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference
 ```
@@ -2260,7 +2261,7 @@ func InternalValue() HealthcareFhirStoreStreamConfigsBigqueryDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfigOutputReference
 ```
@@ -2560,7 +2561,7 @@ func InternalValue() HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutputReference
 ```
@@ -2902,7 +2903,7 @@ func InternalValue() HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStoreStreamConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HealthcareFhirStoreStreamConfigsList
 ```
@@ -3045,7 +3046,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreStreamConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStoreStreamConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HealthcareFhirStoreStreamConfigsOutputReference
 ```
@@ -3376,7 +3377,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStore.HealthcareFhirStoreTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/healthcarefhirstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstore"
 
 healthcarefhirstore.NewHealthcareFhirStoreTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareFhirStoreTimeoutsOutputReference
 ```

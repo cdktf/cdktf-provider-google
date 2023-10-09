@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric
 // generated from terraform resource schema
 
@@ -14,14 +9,14 @@ import * as cdktf from 'cdktf';
 export interface LoggingMetricConfig extends cdktf.TerraformMetaArguments {
   /**
   * The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in projects
-are supported. The bucket has to be in the same project as the metric.
+  * are supported. The bucket has to be in the same project as the metric.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#bucket_name LoggingMetric#bucket_name}
   */
   readonly bucketName?: string;
   /**
   * A description of this metric, which is used in documentation. The maximum length of the
-description is 8000 characters.
+  * description is 8000 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#description LoggingMetric#description}
   */
@@ -34,7 +29,7 @@ description is 8000 characters.
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
-is used to match log entries.
+  * is used to match log entries.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#filter LoggingMetric#filter}
   */
@@ -48,19 +43,19 @@ is used to match log entries.
   readonly id?: string;
   /**
   * A map from a label key string to an extractor expression which is used to extract data from a log
-entry field and assign as the label value. Each label key specified in the LabelDescriptor must
-have an associated extractor expression in this map. The syntax of the extractor expression is
-the same as for the valueExtractor field.
+  * entry field and assign as the label value. Each label key specified in the LabelDescriptor must
+  * have an associated extractor expression in this map. The syntax of the extractor expression is
+  * the same as for the valueExtractor field.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#label_extractors LoggingMetric#label_extractors}
   */
   readonly labelExtractors?: { [key: string]: string };
   /**
   * The client-assigned metric identifier. Examples - "error_count", "nginx/requests".
-Metric identifiers are limited to 100 characters and can include only the following
-characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
-character (/) denotes a hierarchy of name pieces, and it cannot be the first character
-of the name.
+  * Metric identifiers are limited to 100 characters and can include only the following
+  * characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
+  * character (/) denotes a hierarchy of name pieces, and it cannot be the first character
+  * of the name.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#name LoggingMetric#name}
   */
@@ -71,12 +66,12 @@ of the name.
   readonly project?: string;
   /**
   * A valueExtractor is required when using a distribution logs-based metric to extract the values to
-record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
-REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
-the value is to be extracted. 2. regex - A regular expression using the Google RE2 syntax
-(https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
-log entry field. The value of the field is converted to a string before applying the regex. It is an
-error to specify a regex that does not include exactly one capture group.
+  * record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
+  * REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
+  * the value is to be extracted. 2. regex - A regular expression using the Google RE2 syntax
+  * (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
+  * log entry field. The value of the field is converted to a string before applying the regex. It is an
+  * error to specify a regex that does not include exactly one capture group.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#value_extractor LoggingMetric#value_extractor}
   */
@@ -678,32 +673,32 @@ export class LoggingMetricMetricDescriptorLabelsList extends cdktf.ComplexList {
 export interface LoggingMetricMetricDescriptor {
   /**
   * A concise name for the metric, which can be displayed in user interfaces. Use sentence case
-without an ending period, for example "Request count". This field is optional but it is
-recommended to be set for any metrics associated with user-visible concepts, such as Quota.
+  * without an ending period, for example "Request count". This field is optional but it is
+  * recommended to be set for any metrics associated with user-visible concepts, such as Quota.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#display_name LoggingMetric#display_name}
   */
   readonly displayName?: string;
   /**
   * Whether the metric records instantaneous values, changes to a value, etc.
-Some combinations of metricKind and valueType might not be supported.
-For counter metrics, set this to DELTA. Possible values: ["DELTA", "GAUGE", "CUMULATIVE"]
+  * Some combinations of metricKind and valueType might not be supported.
+  * For counter metrics, set this to DELTA. Possible values: ["DELTA", "GAUGE", "CUMULATIVE"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#metric_kind LoggingMetric#metric_kind}
   */
   readonly metricKind: string;
   /**
   * The unit in which the metric value is reported. It is only applicable if the valueType is
-'INT64', 'DOUBLE', or 'DISTRIBUTION'. The supported units are a subset of
-[The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
+  * 'INT64', 'DOUBLE', or 'DISTRIBUTION'. The supported units are a subset of
+  * [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#unit LoggingMetric#unit}
   */
   readonly unit?: string;
   /**
   * Whether the measurement is an integer, a floating-point number, etc.
-Some combinations of metricKind and valueType might not be supported.
-For counter metrics, set this to INT64. Possible values: ["BOOL", "INT64", "DOUBLE", "STRING", "DISTRIBUTION", "MONEY"]
+  * Some combinations of metricKind and valueType might not be supported.
+  * For counter metrics, set this to INT64. Possible values: ["BOOL", "INT64", "DOUBLE", "STRING", "DISTRIBUTION", "MONEY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_metric#value_type LoggingMetric#value_type}
   */

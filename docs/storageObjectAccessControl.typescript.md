@@ -746,7 +746,7 @@ const storageObjectAccessControlConfig: storageObjectAccessControl.StorageObject
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.bucket">bucket</a></code> | <code>string</code> | The name of the bucket. |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.entity">entity</a></code> | <code>string</code> | The entity holding the permission, in one of the following forms: user-{{userId}} user-{{email}} (such as "user-liz@example.com") group-{{groupId}} group-{{email}} (such as "group-example@googlegroups.com") domain-{{domain}} (such as "domain-example.com") project-team-{{projectId}} allUsers allAuthenticatedUsers. |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.entity">entity</a></code> | <code>string</code> | The entity holding the permission, in one of the following forms:   * user-{{userId}}   * user-{{email}} (such as "user-liz@example.com")   * group-{{groupId}}   * group-{{email}} (such as "group-example@googlegroups.com")   * domain-{{domain}} (such as "domain-example.com")   * project-team-{{projectId}}   * allUsers   * allAuthenticatedUsers. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.object">object</a></code> | <code>string</code> | The name of the object to apply the access control to. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.role">role</a></code> | <code>string</code> | The access permission for the entity. Possible values: ["OWNER", "READER"]. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_object_access_control#id StorageObjectAccessControl#id}. |
@@ -846,7 +846,7 @@ public readonly entity: string;
 
 - *Type:* string
 
-The entity holding the permission, in one of the following forms: user-{{userId}} user-{{email}} (such as "user-liz@example.com") group-{{groupId}} group-{{email}} (such as "group-example@googlegroups.com") domain-{{domain}} (such as "domain-example.com") project-team-{{projectId}} allUsers allAuthenticatedUsers.
+The entity holding the permission, in one of the following forms:   * user-{{userId}}   * user-{{email}} (such as "user-liz@example.com")   * group-{{groupId}}   * group-{{email}} (such as "group-example@googlegroups.com")   * domain-{{domain}} (such as "domain-example.com")   * project-team-{{projectId}}   * allUsers   * allAuthenticatedUsers.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_object_access_control#entity StorageObjectAccessControl#entity}
 

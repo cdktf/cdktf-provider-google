@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_bucket
 // generated from terraform resource schema
 
@@ -638,7 +633,7 @@ export interface StorageBucketLifecycleRuleCondition {
   readonly daysSinceCustomTime?: number;
   /**
   * Number of days elapsed since the noncurrent timestamp of an object. This
-										condition is relevant only for versioned objects.
+  * 										condition is relevant only for versioned objects.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
   */

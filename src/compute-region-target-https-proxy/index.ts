@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_target_https_proxy
 // generated from terraform resource schema
 
@@ -27,12 +22,12 @@ export interface ComputeRegionTargetHttpsProxyConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * Name of the resource. Provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_target_https_proxy#name ComputeRegionTargetHttpsProxy#name}
   */
@@ -43,30 +38,30 @@ character, which cannot be a dash.
   readonly project?: string;
   /**
   * The Region in which the created target https proxy should reside.
-If it is not provided, the provider region is used.
+  * If it is not provided, the provider region is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_target_https_proxy#region ComputeRegionTargetHttpsProxy#region}
   */
   readonly region?: string;
   /**
   * A list of RegionSslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+  * connections between users and the load balancer. Currently, exactly
+  * one SSL certificate must be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_target_https_proxy#ssl_certificates ComputeRegionTargetHttpsProxy#ssl_certificates}
   */
   readonly sslCertificates: string[];
   /**
   * A reference to the Region SslPolicy resource that will be associated with
-the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
-resource will not have any SSL policy configured.
+  * the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
+  * resource will not have any SSL policy configured.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_target_https_proxy#ssl_policy ComputeRegionTargetHttpsProxy#ssl_policy}
   */
   readonly sslPolicy?: string;
   /**
   * A reference to the RegionUrlMap resource that defines the mapping from URL
-to the RegionBackendService.
+  * to the RegionBackendService.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_target_https_proxy#url_map ComputeRegionTargetHttpsProxy#url_map}
   */

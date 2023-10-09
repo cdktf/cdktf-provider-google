@@ -199,7 +199,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Labels to apply to this Snapshot.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#labels ComputeSnapshot#labels}
@@ -1421,7 +1421,7 @@ public java.util.Map<java.lang.String, java.lang.String> getLabels();
 
 Labels to apply to this Snapshot.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_snapshot#labels ComputeSnapshot#labels}

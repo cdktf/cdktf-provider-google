@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_source_representation_instance
 // generated from terraform resource schema
 
@@ -69,7 +64,7 @@ export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMe
   readonly password?: string;
   /**
   * The externally accessible port for the source database server.
-Defaults to 3306.
+  * Defaults to 3306.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_source_representation_instance#port SqlSourceRepresentationInstance#port}
   */
@@ -80,7 +75,7 @@ Defaults to 3306.
   readonly project?: string;
   /**
   * The Region in which the created instance should reside.
-If it is not provided, the provider region is used.
+  * If it is not provided, the provider region is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/sql_source_representation_instance#region SqlSourceRepresentationInstance#region}
   */

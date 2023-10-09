@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/iap_brand
 // generated from terraform resource schema
 
@@ -31,10 +26,10 @@ export interface IapBrandConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * Support email displayed on the OAuth consent screen. Can be either a
-user or group email. When a user email is specified, the caller must
-be the user with the associated email address. When a group email is
-specified, the caller can be either a user or a service account which
-is an owner of the specified group in Cloud Identity.
+  * user or group email. When a user email is specified, the caller must
+  * be the user with the associated email address. When a group email is
+  * specified, the caller can be either a user or a service account which
+  * is an owner of the specified group in Cloud Identity.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/iap_brand#support_email IapBrand#support_email}
   */

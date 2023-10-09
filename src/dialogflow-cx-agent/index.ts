@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_agent
 // generated from terraform resource schema
 
@@ -20,7 +15,7 @@ export interface DialogflowCxAgentConfig extends cdktf.TerraformMetaArguments {
   readonly avatarUri?: string;
   /**
   * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
-for a list of the currently supported language codes. This field cannot be updated after creation.
+  * for a list of the currently supported language codes. This field cannot be updated after creation.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_agent#default_language_code DialogflowCxAgent#default_language_code}
   */
@@ -58,10 +53,10 @@ for a list of the currently supported language codes. This field cannot be updat
   readonly id?: string;
   /**
   * The name of the location this agent is located in.
-
-~> **Note:** The first time you are deploying an Agent in your project you must configure location settings.
- This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.
- Another options is to use global location so you don't need to manually configure location settings.
+  * 
+  * ~> **Note:** The first time you are deploying an Agent in your project you must configure location settings.
+  *  This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.
+  *  Another options is to use global location so you don't need to manually configure location settings.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_agent#location DialogflowCxAgent#location}
   */
@@ -84,7 +79,7 @@ for a list of the currently supported language codes. This field cannot be updat
   readonly supportedLanguageCodes?: string[];
   /**
   * The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
-Europe/Paris.
+  * Europe/Paris.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_cx_agent#time_zone DialogflowCxAgent#time_zone}
   */

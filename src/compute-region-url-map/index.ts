@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface ComputeRegionUrlMapConfig extends cdktf.TerraformMetaArguments {
   /**
   * The full or partial URL of the defaultService resource to which traffic is directed if
-none of the hostRules match. If defaultRouteAction is additionally specified, advanced
-routing actions like URL Rewrites, etc. take effect prior to sending the request to the
-backend. However, if defaultService is specified, defaultRouteAction cannot contain any
-weightedBackendServices. Conversely, if routeAction specifies any
-weightedBackendServices, service must not be specified.  Only one of defaultService,
-defaultUrlRedirect or defaultRouteAction.weightedBackendService must be set.
+  * none of the hostRules match. If defaultRouteAction is additionally specified, advanced
+  * routing actions like URL Rewrites, etc. take effect prior to sending the request to the
+  * backend. However, if defaultService is specified, defaultRouteAction cannot contain any
+  * weightedBackendServices. Conversely, if routeAction specifies any
+  * weightedBackendServices, service must not be specified.  Only one of defaultService,
+  * defaultUrlRedirect or defaultRouteAction.weightedBackendService must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#default_service ComputeRegionUrlMap#default_service}
   */
   readonly defaultService?: string;
   /**
   * An optional description of this resource. Provide this property when
-you create the resource.
+  * you create the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#description ComputeRegionUrlMap#description}
   */
@@ -40,12 +35,12 @@ you create the resource.
   readonly id?: string;
   /**
   * Name of the resource. Provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#name ComputeRegionUrlMap#name}
   */
@@ -56,7 +51,7 @@ character, which cannot be a dash.
   readonly project?: string;
   /**
   * The Region in which the url map should reside.
-If it is not provided, the provider region is used.
+  * If it is not provided, the provider region is used.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#region ComputeRegionUrlMap#region}
   */
@@ -101,7 +96,7 @@ If it is not provided, the provider region is used.
 export interface ComputeRegionUrlMapDefaultRouteActionCorsPolicy {
   /**
   * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header.
-Default is false.
+  * Default is false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_credentials ComputeRegionUrlMap#allow_credentials}
   */
@@ -120,15 +115,15 @@ Default is false.
   readonly allowMethods?: string[];
   /**
   * Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
-please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+  * please see en.cppreference.com/w/cpp/regex/ecmascript
+  * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_origin_regexes ComputeRegionUrlMap#allow_origin_regexes}
   */
   readonly allowOriginRegexes?: string[];
   /**
   * Specifies the list of origins that will be allowed to do CORS requests.
-An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+  * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_origins ComputeRegionUrlMap#allow_origins}
   */
@@ -147,7 +142,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
   readonly exposeHeaders?: string[];
   /**
   * Specifies how long results of a preflight request can be cached in seconds.
-This translates to the Access-Control-Max-Age header.
+  * This translates to the Access-Control-Max-Age header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#max_age ComputeRegionUrlMap#max_age}
   */
@@ -376,14 +371,14 @@ export class ComputeRegionUrlMapDefaultRouteActionCorsPolicyOutputReference exte
 export interface ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyAbort {
   /**
   * The HTTP status code used to abort the request.
-The value must be between 200 and 599 inclusive.
+  * The value must be between 200 and 599 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#http_status ComputeRegionUrlMap#http_status}
   */
   readonly httpStatus?: number;
   /**
   * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
-The value must be between 0.0 and 100.0 inclusive.
+  * The value must be between 0.0 and 100.0 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
@@ -474,14 +469,14 @@ export class ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutpu
 export interface ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
-represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+  * represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
-Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+  * Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -572,7 +567,7 @@ export class ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixed
 export interface ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelay {
   /**
   * The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
-The value must be between 0.0 and 100.0 inclusive.
+  * The value must be between 0.0 and 100.0 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
@@ -765,8 +760,8 @@ export class ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyOutputRefe
 export interface ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy {
   /**
   * The full or partial URL to the RegionBackendService resource being mirrored to.
-The backend service configured for a mirroring policy must reference backends that are of the same type as the original backend service matched in the URL map.
-Serverless NEG backends are not currently supported as a mirrored backend service.
+  * The backend service configured for a mirroring policy must reference backends that are of the same type as the original backend service matched in the URL map.
+  * Serverless NEG backends are not currently supported as a mirrored backend service.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
@@ -834,14 +829,14 @@ export class ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicyOutputRefer
 export interface ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
-represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+  * represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
-Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+  * Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -938,17 +933,17 @@ export interface ComputeRegionUrlMapDefaultRouteActionRetryPolicy {
   readonly numRetries?: number;
   /**
   * Specifies one or more conditions when this retry policy applies.
-Valid values are listed below. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true: cancelled, deadline-exceeded, internal, resource-exhausted, unavailable.
-  - 5xx : retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams.
-  - gateway-error : Similar to 5xx, but only applies to response codes 502, 503 or 504.
-  - connect-failure : a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts.
-  - retriable-4xx : a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409.
-  - refused-stream : a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-  - cancelled : a retry is attempted if the gRPC status code in the response header is set to cancelled.
-  - deadline-exceeded : a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded.
-  - internal :  a retry is attempted if the gRPC status code in the response header is set to internal.
-  - resource-exhausted : a retry is attempted if the gRPC status code in the response header is set to resource-exhausted.
-  - unavailable : a retry is attempted if the gRPC status code in the response header is set to unavailable.
+  * Valid values are listed below. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true: cancelled, deadline-exceeded, internal, resource-exhausted, unavailable.
+  *   - 5xx : retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams.
+  *   - gateway-error : Similar to 5xx, but only applies to response codes 502, 503 or 504.
+  *   - connect-failure : a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts.
+  *   - retriable-4xx : a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409.
+  *   - refused-stream : a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+  *   - cancelled : a retry is attempted if the gRPC status code in the response header is set to cancelled.
+  *   - deadline-exceeded : a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded.
+  *   - internal :  a retry is attempted if the gRPC status code in the response header is set to internal.
+  *   - resource-exhausted : a retry is attempted if the gRPC status code in the response header is set to resource-exhausted.
+  *   - unavailable : a retry is attempted if the gRPC status code in the response header is set to unavailable.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#retry_conditions ComputeRegionUrlMap#retry_conditions}
   */
@@ -1164,14 +1159,14 @@ export class ComputeRegionUrlMapDefaultRouteActionTimeoutOutputReference extends
 export interface ComputeRegionUrlMapDefaultRouteActionUrlRewrite {
   /**
   * Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite.
-The value must be from 1 to 255 characters.
+  * The value must be from 1 to 255 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#host_rewrite ComputeRegionUrlMap#host_rewrite}
   */
   readonly hostRewrite?: string;
   /**
   * Before forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite.
-The value must be from 1 to 1024 characters.
+  * The value must be from 1 to 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_prefix_rewrite ComputeRegionUrlMap#path_prefix_rewrite}
   */
@@ -1274,7 +1269,7 @@ export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHea
   readonly headerValue?: string;
   /**
   * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
-The default value is false.
+  * The default value is false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -1432,7 +1427,7 @@ export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHea
   readonly headerValue?: string;
   /**
   * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
-The default value is false.
+  * The default value is false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -1738,8 +1733,8 @@ export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices {
   readonly backendService?: string;
   /**
   * Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all weightedBackendService weights in routeAction) .
-The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backend service, subsequent requests are sent to the same backend service as determined by the backend service's session affinity policy.
-The value must be from 0 to 1000.
+  * The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backend service, subsequent requests are sent to the same backend service as determined by the backend service's session affinity policy.
+  * The value must be from 0 to 1000.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#weight ComputeRegionUrlMap#weight}
   */
@@ -2132,63 +2127,63 @@ export class ComputeRegionUrlMapDefaultRouteActionOutputReference extends cdktf.
 export interface ComputeRegionUrlMapDefaultUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one that was
-supplied in the request. The value must be between 1 and 255 characters.
+  * supplied in the request. The value must be between 1 and 255 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
   /**
   * If set to true, the URL scheme in the redirected request is set to https. If set to
-false, the URL scheme of the redirected request will remain the same as that of the
-request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
-true for TargetHttpsProxy is not permitted. The default is set to false.
+  * false, the URL scheme of the redirected request will remain the same as that of the
+  * request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+  * true for TargetHttpsProxy is not permitted. The default is set to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one that was
-supplied in the request. pathRedirect cannot be supplied together with
-prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
-original request will be used for the redirect. The value must be between 1 and 1024
-characters.
+  * supplied in the request. pathRedirect cannot be supplied together with
+  * prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+  * original request will be used for the redirect. The value must be between 1 and 1024
+  * characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
   /**
   * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.
-prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
-neither. If neither is supplied, the path of the original request will be used for
-the redirect. The value must be between 1 and 1024 characters.
+  * retaining the remaining portion of the URL before redirecting the request.
+  * prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+  * neither. If neither is supplied, the path of the original request will be used for
+  * the redirect. The value must be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
   /**
   * The HTTP Status code to use for this RedirectAction. Supported values are:
-
-* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-* FOUND, which corresponds to 302.
-
-* SEE_OTHER which corresponds to 303.
-
-* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.
-
-* PERMANENT_REDIRECT, which corresponds to 308. In this case,
-the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+  * 
+  * * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+  * 
+  * * FOUND, which corresponds to 302.
+  * 
+  * * SEE_OTHER which corresponds to 303.
+  * 
+  * * TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+  * will be retained.
+  * 
+  * * PERMANENT_REDIRECT, which corresponds to 308. In this case,
+  * the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
   /**
   * If set to true, any accompanying query portion of the original URL is removed prior
-to redirecting the request. If set to false, the query portion of the original URL is
-retained.
- This field is required to ensure an empty block is not set. The normal default value is false.
+  * to redirecting the request. If set to false, the query portion of the original URL is
+  * retained.
+  *  This field is required to ensure an empty block is not set. The normal default value is false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
@@ -2368,23 +2363,23 @@ export class ComputeRegionUrlMapDefaultUrlRedirectOutputReference extends cdktf.
 export interface ComputeRegionUrlMapHostRule {
   /**
   * An optional description of this HostRule. Provide this property
-when you create the resource.
+  * when you create the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#description ComputeRegionUrlMap#description}
   */
   readonly description?: string;
   /**
   * The list of host patterns to match. They must be valid
-hostnames, except * will match any string of ([a-z0-9-.]*). In
-that case, * must be the first character and must be followed in
-the pattern by either - or ..
+  * hostnames, except * will match any string of ([a-z0-9-.]*). In
+  * that case, * must be the first character and must be followed in
+  * the pattern by either - or ..
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#hosts ComputeRegionUrlMap#hosts}
   */
   readonly hosts: string[];
   /**
   * The name of the PathMatcher to use to match the path portion of
-the URL if the hostRule matches the URL's host portion.
+  * the URL if the hostRule matches the URL's host portion.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_matcher ComputeRegionUrlMap#path_matcher}
   */
@@ -2524,63 +2519,63 @@ export class ComputeRegionUrlMapHostRuleList extends cdktf.ComplexList {
 export interface ComputeRegionUrlMapPathMatcherDefaultUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one that was
-supplied in the request. The value must be between 1 and 255 characters.
+  * supplied in the request. The value must be between 1 and 255 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
   /**
   * If set to true, the URL scheme in the redirected request is set to https. If set to
-false, the URL scheme of the redirected request will remain the same as that of the
-request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
-true for TargetHttpsProxy is not permitted. The default is set to false.
+  * false, the URL scheme of the redirected request will remain the same as that of the
+  * request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+  * true for TargetHttpsProxy is not permitted. The default is set to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one that was
-supplied in the request. pathRedirect cannot be supplied together with
-prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
-original request will be used for the redirect. The value must be between 1 and 1024
-characters.
+  * supplied in the request. pathRedirect cannot be supplied together with
+  * prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+  * original request will be used for the redirect. The value must be between 1 and 1024
+  * characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
   /**
   * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
-retaining the remaining portion of the URL before redirecting the request.
-prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
-neither. If neither is supplied, the path of the original request will be used for
-the redirect. The value must be between 1 and 1024 characters.
+  * retaining the remaining portion of the URL before redirecting the request.
+  * prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+  * neither. If neither is supplied, the path of the original request will be used for
+  * the redirect. The value must be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
   /**
   * The HTTP Status code to use for this RedirectAction. Supported values are:
-
-* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-* FOUND, which corresponds to 302.
-
-* SEE_OTHER which corresponds to 303.
-
-* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.
-
-* PERMANENT_REDIRECT, which corresponds to 308. In this case,
-the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+  * 
+  * * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+  * 
+  * * FOUND, which corresponds to 302.
+  * 
+  * * SEE_OTHER which corresponds to 303.
+  * 
+  * * TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+  * will be retained.
+  * 
+  * * PERMANENT_REDIRECT, which corresponds to 308. In this case,
+  * the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
   /**
   * If set to true, any accompanying query portion of the original URL is removed prior
-to redirecting the request. If set to false, the query portion of the original URL is
-retained.
- This field is required to ensure an empty block is not set. The normal default value is false.
+  * to redirecting the request. If set to false, the query portion of the original URL is
+  * retained.
+  *  This field is required to ensure an empty block is not set. The normal default value is false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
@@ -2760,8 +2755,8 @@ export class ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference ext
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
   /**
   * In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+  * actual request can include user credentials. This translates to the Access-
+  * Control-Allow-Credentials header. Defaults to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_credentials ComputeRegionUrlMap#allow_credentials}
   */
@@ -2780,15 +2775,15 @@ Control-Allow-Credentials header. Defaults to false.
   readonly allowMethods?: string[];
   /**
   * Specifies the regular expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+  * regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+  * An origin is allowed if it matches either allow_origins or allow_origin_regex.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_origin_regexes ComputeRegionUrlMap#allow_origin_regexes}
   */
   readonly allowOriginRegexes?: string[];
   /**
   * Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+  * origin is allowed if it matches either allow_origins or allow_origin_regex.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_origins ComputeRegionUrlMap#allow_origins}
   */
@@ -2807,7 +2802,7 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
   readonly exposeHeaders?: string[];
   /**
   * Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+  * translates to the content for the Access-Control-Max-Age header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#max_age ComputeRegionUrlMap#max_age}
   */
@@ -3033,15 +3028,15 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputRe
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
   /**
   * The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+  * and 599 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#http_status ComputeRegionUrlMap#http_status}
   */
   readonly httpStatus: number;
   /**
   * The percentage of traffic (connections/operations/requests) which will be
-aborted as part of fault injection. The value must be between 0.0 and 100.0
-inclusive.
+  * aborted as part of fault injection. The value must be between 0.0 and 100.0
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
@@ -3126,15 +3121,15 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * less than one second are represented with a 0 'seconds' field and a positive
+  * 'nanos' field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -3222,8 +3217,8 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
   /**
   * The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+  * be introduced as part of fault injection. The value must be between 0.0 and
+  * 100.0 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
@@ -3474,15 +3469,15 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolic
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * less than one second are represented with a 0 'seconds' field and a positive
+  * 'nanos' field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -3576,27 +3571,27 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
   readonly numRetries?: number;
   /**
   * Specifies one or more conditions when this retry rule applies. Valid values are:
-
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if
-the gRPC status code in the response header is set to unavailable
+  * 
+  * - 5xx: Loadbalancer will attempt a retry if the backend service responds with
+  * any 5xx response code, or if the backend service does not respond at all,
+  * example: disconnects, reset, read timeout, connection failure, and refused
+  * streams.
+  * - gateway-error: Similar to 5xx, but only applies to response codes
+  * 502, 503 or 504.
+  * - connect-failure: Loadbalancer will retry on failures
+  * connecting to backend services, for example due to connection timeouts.
+  * - retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+  * Currently the only retriable error supported is 409.
+  * - refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+  * REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+  * - cancelled: Loadbalancer will retry if the gRPC status code in the response
+  * header is set to cancelled
+  * - deadline-exceeded: Loadbalancer will retry if the
+  * gRPC status code in the response header is set to deadline-exceeded
+  * - resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+  * header is set to resource-exhausted
+  * - unavailable: Loadbalancer will retry if
+  * the gRPC status code in the response header is set to unavailable
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#retry_conditions ComputeRegionUrlMap#retry_conditions}
   */
@@ -3716,15 +3711,15 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputR
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * less than one second are represented with a 0 'seconds' field and a positive
+  * 'nanos' field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -3812,16 +3807,16 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputRefer
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
   /**
   * Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+  * header is replaced with contents of hostRewrite. The value must be between 1 and
+  * 255 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#host_rewrite ComputeRegionUrlMap#host_rewrite}
   */
   readonly hostRewrite?: string;
   /**
   * Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+  * portion of the request's path is replaced by pathPrefixRewrite. The value must
+  * be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_prefix_rewrite ComputeRegionUrlMap#path_prefix_rewrite}
   */
@@ -3924,8 +3919,8 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBacken
   readonly headerValue: string;
   /**
   * If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+  * header. If true, headerValue is set for the header, discarding any values that
+  * were set for that header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -4074,8 +4069,8 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBacken
   readonly headerValue: string;
   /**
   * If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+  * header. If true, headerValue is set for the header, discarding any values that
+  * were set for that header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -4212,14 +4207,14 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+  * prior to forwarding the request to the backendService.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
   */
   readonly requestHeadersToRemove?: string[];
   /**
   * A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+  * prior to sending the response back to the client.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
   */
@@ -4368,19 +4363,19 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices {
   /**
   * The default RegionBackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+  * forwarding the request to backendService, the loadbalancer applies any relevant
+  * headerActions specified as part of this backendServiceWeight.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService: string;
   /**
   * Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
-The value must be between 0 and 1000
+  * (sum of all weightedBackendService weights in routeAction) . The selection of a
+  * backend service is determined only for new traffic. Once a user's request has
+  * been directed to a backendService, subsequent requests will be sent to the same
+  * backendService as determined by the BackendService's session affinity policy.
+  * The value must be between 0 and 1000
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#weight ComputeRegionUrlMap#weight}
   */
@@ -4767,66 +4762,66 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
 export interface ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one
-that was supplied in the request. The value must be between 1 and 255
-characters.
+  * that was supplied in the request. The value must be between 1 and 255
+  * characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
   /**
   * If set to true, the URL scheme in the redirected request is set to https.
-If set to false, the URL scheme of the redirected request will remain the
-same as that of the request. This must only be set for UrlMaps used in
-TargetHttpProxys. Setting this true for TargetHttpsProxy is not
-permitted. The default is set to false.
+  * If set to false, the URL scheme of the redirected request will remain the
+  * same as that of the request. This must only be set for UrlMaps used in
+  * TargetHttpProxys. Setting this true for TargetHttpsProxy is not
+  * permitted. The default is set to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one
-that was supplied in the request. pathRedirect cannot be supplied
-together with prefixRedirect. Supply one alone or neither. If neither is
-supplied, the path of the original request will be used for the redirect.
-The value must be between 1 and 1024 characters.
+  * that was supplied in the request. pathRedirect cannot be supplied
+  * together with prefixRedirect. Supply one alone or neither. If neither is
+  * supplied, the path of the original request will be used for the redirect.
+  * The value must be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
   /**
   * The prefix that replaces the prefixMatch specified in the
-HttpRouteRuleMatch, retaining the remaining portion of the URL before
-redirecting the request. prefixRedirect cannot be supplied together with
-pathRedirect. Supply one alone or neither. If neither is supplied, the
-path of the original request will be used for the redirect. The value
-must be between 1 and 1024 characters.
+  * HttpRouteRuleMatch, retaining the remaining portion of the URL before
+  * redirecting the request. prefixRedirect cannot be supplied together with
+  * pathRedirect. Supply one alone or neither. If neither is supplied, the
+  * path of the original request will be used for the redirect. The value
+  * must be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
   /**
   * The HTTP Status code to use for this RedirectAction. Supported values are:
-
-* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-* FOUND, which corresponds to 302.
-
-* SEE_OTHER which corresponds to 303.
-
-* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.
-
-* PERMANENT_REDIRECT, which corresponds to 308. In this case,
-the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+  * 
+  * * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+  * 
+  * * FOUND, which corresponds to 302.
+  * 
+  * * SEE_OTHER which corresponds to 303.
+  * 
+  * * TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+  * will be retained.
+  * 
+  * * PERMANENT_REDIRECT, which corresponds to 308. In this case,
+  * the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
   /**
   * If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
- This field is required to ensure an empty block is not set. The normal default value is false.
+  * prior to redirecting the request. If set to false, the query portion of the
+  * original URL is retained.
+  *  This field is required to ensure an empty block is not set. The normal default value is false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
@@ -5006,21 +5001,21 @@ export class ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference ex
 export interface ComputeRegionUrlMapPathMatcherPathRule {
   /**
   * The list of path patterns to match. Each must start with / and the only place a
-\* is allowed is at the end following a /. The string fed to the path matcher
-does not include any text after the first ? or #, and those chars are not
-allowed here.
+  * \* is allowed is at the end following a /. The string fed to the path matcher
+  * does not include any text after the first ? or #, and those chars are not
+  * allowed here.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#paths ComputeRegionUrlMap#paths}
   */
   readonly paths: string[];
   /**
   * The region backend service resource to which traffic is
-directed if this rule is matched. If routeAction is additionally specified,
-advanced routing actions like URL Rewrites, etc. take effect prior to sending
-the request to the backend. However, if service is specified, routeAction cannot
-contain any weightedBackendService s. Conversely, if routeAction specifies any
-weightedBackendServices, service must not be specified. Only one of urlRedirect,
-service or routeAction.weightedBackendService must be set.
+  * directed if this rule is matched. If routeAction is additionally specified,
+  * advanced routing actions like URL Rewrites, etc. take effect prior to sending
+  * the request to the backend. However, if service is specified, routeAction cannot
+  * contain any weightedBackendService s. Conversely, if routeAction specifies any
+  * weightedBackendServices, service must not be specified. Only one of urlRedirect,
+  * service or routeAction.weightedBackendService must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#service ComputeRegionUrlMap#service}
   */
@@ -5210,8 +5205,8 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHead
   readonly headerValue: string;
   /**
   * If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+  * header. If true, headerValue is set for the header, discarding any values that
+  * were set for that header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -5360,8 +5355,8 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHea
   readonly headerValue: string;
   /**
   * If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+  * header. If true, headerValue is set for the header, discarding any values that
+  * were set for that header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -5498,14 +5493,14 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeaders
 export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+  * prior to forwarding the request to the backendService.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
   */
   readonly requestHeadersToRemove?: string[];
   /**
   * A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+  * prior to sending the response back to the client.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
   */
@@ -5744,59 +5739,59 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRang
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches {
   /**
   * The value should exactly match contents of exactMatch. Only one of exactMatch,
-prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+  * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#exact_match ComputeRegionUrlMap#exact_match}
   */
   readonly exactMatch?: string;
   /**
   * The name of the HTTP header to match. For matching against the HTTP request's
-authority, use a headerMatch with the header name ":authority". For matching a
-request's method, use the headerName ":method".
+  * authority, use a headerMatch with the header name ":authority". For matching a
+  * request's method, use the headerName ":method".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
   /**
   * If set to false, the headerMatch is considered a match if the match criteria
-above are met. If set to true, the headerMatch is considered a match if the
-match criteria above are NOT met. Defaults to false.
+  * above are met. If set to true, the headerMatch is considered a match if the
+  * match criteria above are NOT met. Defaults to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#invert_match ComputeRegionUrlMap#invert_match}
   */
   readonly invertMatch?: boolean | cdktf.IResolvable;
   /**
   * The value of the header must start with the contents of prefixMatch. Only one of
-exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.
+  * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+  * must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#prefix_match ComputeRegionUrlMap#prefix_match}
   */
   readonly prefixMatch?: string;
   /**
   * A header with the contents of headerName must exist. The match takes place
-whether or not the request's header has a value or not. Only one of exactMatch,
-prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+  * whether or not the request's header has a value or not. Only one of exactMatch,
+  * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#present_match ComputeRegionUrlMap#present_match}
   */
   readonly presentMatch?: boolean | cdktf.IResolvable;
   /**
   * The value of the header must match the regular expression specified in
-regexMatch. For regular expression grammar, please see:
-en.cppreference.com/w/cpp/regex/ecmascript  For matching against a port
-specified in the HTTP request, use a headerMatch with headerName set to PORT and
-a regular expression that satisfies the RFC2616 Host header's port specifier.
-Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-rangeMatch must be set.
+  * regexMatch. For regular expression grammar, please see:
+  * en.cppreference.com/w/cpp/regex/ecmascript  For matching against a port
+  * specified in the HTTP request, use a headerMatch with headerName set to PORT and
+  * a regular expression that satisfies the RFC2616 Host header's port specifier.
+  * Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+  * rangeMatch must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#regex_match ComputeRegionUrlMap#regex_match}
   */
   readonly regexMatch?: string;
   /**
   * The value of the header must end with the contents of suffixMatch. Only one of
-exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.
+  * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+  * must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#suffix_match ComputeRegionUrlMap#suffix_match}
   */
@@ -6060,14 +6055,14 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesList
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels {
   /**
   * Name of metadata label. The name can have a maximum length of 1024 characters
-and must be at least 1 character long.
+  * and must be at least 1 character long.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#name ComputeRegionUrlMap#name}
   */
   readonly name: string;
   /**
   * The value of the label must match the specified value. value can have a maximum
-length of 1024 characters.
+  * length of 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#value ComputeRegionUrlMap#value}
   */
@@ -6184,12 +6179,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFi
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters {
   /**
   * Specifies how individual filterLabel matches within the list of filterLabels
-contribute towards the overall metadataFilter match. Supported values are:
-
-* MATCH_ANY: At least one of the filterLabels must have a matching label in the
-provided metadata.
-* MATCH_ALL: All filterLabels must have matching labels in
-the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"]
+  * contribute towards the overall metadataFilter match. Supported values are:
+  * 
+  * * MATCH_ANY: At least one of the filterLabels must have a matching label in the
+  * provided metadata.
+  * * MATCH_ALL: All filterLabels must have matching labels in
+  * the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#filter_match_criteria ComputeRegionUrlMap#filter_match_criteria}
   */
@@ -6312,32 +6307,32 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersLi
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches {
   /**
   * The queryParameterMatch matches if the value of the parameter exactly matches
-the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
-must be set.
+  * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+  * must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#exact_match ComputeRegionUrlMap#exact_match}
   */
   readonly exactMatch?: string;
   /**
   * The name of the query parameter to match. The query parameter must exist in the
-request, in the absence of which the request match fails.
+  * request, in the absence of which the request match fails.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#name ComputeRegionUrlMap#name}
   */
   readonly name: string;
   /**
   * Specifies that the queryParameterMatch matches if the request contains the query
-parameter, irrespective of whether the parameter has a value or not. Only one of
-presentMatch, exactMatch and regexMatch must be set.
+  * parameter, irrespective of whether the parameter has a value or not. Only one of
+  * presentMatch, exactMatch and regexMatch must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#present_match ComputeRegionUrlMap#present_match}
   */
   readonly presentMatch?: boolean | cdktf.IResolvable;
   /**
   * The queryParameterMatch matches if the value of the parameter matches the
-regular expression specified by regexMatch. For the regular expression grammar,
-please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
-exactMatch and regexMatch must be set.
+  * regular expression specified by regexMatch. For the regular expression grammar,
+  * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+  * exactMatch and regexMatch must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#regex_match ComputeRegionUrlMap#regex_match}
   */
@@ -6503,36 +6498,36 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMat
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRules {
   /**
   * For satisfying the matchRule condition, the path of the request must exactly
-match the value specified in fullPathMatch after removing any query parameters
-and anchor that may be part of the original URL. FullPathMatch must be between 1
-and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
-be specified.
+  * match the value specified in fullPathMatch after removing any query parameters
+  * and anchor that may be part of the original URL. FullPathMatch must be between 1
+  * and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
+  * be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#full_path_match ComputeRegionUrlMap#full_path_match}
   */
   readonly fullPathMatch?: string;
   /**
   * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
-Defaults to false.
+  * Defaults to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#ignore_case ComputeRegionUrlMap#ignore_case}
   */
   readonly ignoreCase?: boolean | cdktf.IResolvable;
   /**
   * For satisfying the matchRule condition, the request's path must begin with the
-specified prefixMatch. prefixMatch must begin with a /. The value must be
-between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or
-regexMatch must be specified.
+  * specified prefixMatch. prefixMatch must begin with a /. The value must be
+  * between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or
+  * regexMatch must be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#prefix_match ComputeRegionUrlMap#prefix_match}
   */
   readonly prefixMatch?: string;
   /**
   * For satisfying the matchRule condition, the path of the request must satisfy the
-regular expression specified in regexMatch after removing any query parameters
-and anchor supplied with the original URL. For regular expression grammar please
-see en.cppreference.com/w/cpp/regex/ecmascript  Only one of prefixMatch,
-fullPathMatch or regexMatch must be specified.
+  * regular expression specified in regexMatch after removing any query parameters
+  * and anchor supplied with the original URL. For regular expression grammar please
+  * see en.cppreference.com/w/cpp/regex/ecmascript  Only one of prefixMatch,
+  * fullPathMatch or regexMatch must be specified.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#regex_match ComputeRegionUrlMap#regex_match}
   */
@@ -6788,8 +6783,8 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesList extends cdkt
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy {
   /**
   * In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+  * actual request can include user credentials. This translates to the Access-
+  * Control-Allow-Credentials header. Defaults to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_credentials ComputeRegionUrlMap#allow_credentials}
   */
@@ -6808,22 +6803,22 @@ Control-Allow-Credentials header. Defaults to false.
   readonly allowMethods?: string[];
   /**
   * Specifies the regular expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+  * regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+  * An origin is allowed if it matches either allow_origins or allow_origin_regex.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_origin_regexes ComputeRegionUrlMap#allow_origin_regexes}
   */
   readonly allowOriginRegexes?: string[];
   /**
   * Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+  * origin is allowed if it matches either allow_origins or allow_origin_regex.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#allow_origins ComputeRegionUrlMap#allow_origins}
   */
   readonly allowOrigins?: string[];
   /**
   * If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+  * which indicates that the CORS policy is in effect. Defaults to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#disabled ComputeRegionUrlMap#disabled}
   */
@@ -6836,7 +6831,7 @@ which indicates that the CORS policy is in effect. Defaults to false.
   readonly exposeHeaders?: string[];
   /**
   * Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+  * translates to the content for the Access-Control-Max-Age header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#max_age ComputeRegionUrlMap#max_age}
   */
@@ -7065,15 +7060,15 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutput
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort {
   /**
   * The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+  * and 599 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#http_status ComputeRegionUrlMap#http_status}
   */
   readonly httpStatus?: number;
   /**
   * The percentage of traffic (connections/operations/requests) which will be
-aborted as part of fault injection. The value must be between 0.0 and 100.0
-inclusive.
+  * aborted as part of fault injection. The value must be between 0.0 and 100.0
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
@@ -7164,15 +7159,15 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * less than one second are represented with a 0 'seconds' field and a positive
+  * 'nanos' field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -7260,8 +7255,8 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay {
   /**
   * The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+  * be introduced as part of fault injection. The value must be between 0.0 and
+  * 100.0 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
@@ -7518,15 +7513,15 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPol
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * less than one second are represented with a 0 'seconds' field and a positive
+  * 'nanos' field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -7620,27 +7615,27 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy 
   readonly numRetries: number;
   /**
   * Specifies one or more conditions when this retry rule applies. Valid values are:
-
-* 5xx: Loadbalancer will attempt a retry if the backend service responds with
-  any 5xx response code, or if the backend service does not respond at all,
-  example: disconnects, reset, read timeout, connection failure, and refused
-  streams.
-* gateway-error: Similar to 5xx, but only applies to response codes
-  502, 503 or 504.
-* connect-failure: Loadbalancer will retry on failures
-  connecting to backend services, for example due to connection timeouts.
-* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-  Currently the only retriable error supported is 409.
-* refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-  REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-* cancelled: Loadbalancer will retry if the gRPC status code in the response
-  header is set to cancelled
-* deadline-exceeded: Loadbalancer will retry if the
-  gRPC status code in the response header is set to deadline-exceeded
-* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-  header is set to resource-exhausted
-* unavailable: Loadbalancer will retry if the gRPC status code in
-  the response header is set to unavailable
+  * 
+  * * 5xx: Loadbalancer will attempt a retry if the backend service responds with
+  *   any 5xx response code, or if the backend service does not respond at all,
+  *   example: disconnects, reset, read timeout, connection failure, and refused
+  *   streams.
+  * * gateway-error: Similar to 5xx, but only applies to response codes
+  *   502, 503 or 504.
+  * * connect-failure: Loadbalancer will retry on failures
+  *   connecting to backend services, for example due to connection timeouts.
+  * * retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+  *   Currently the only retriable error supported is 409.
+  * * refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+  *   REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+  * * cancelled: Loadbalancer will retry if the gRPC status code in the response
+  *   header is set to cancelled
+  * * deadline-exceeded: Loadbalancer will retry if the
+  *   gRPC status code in the response header is set to deadline-exceeded
+  * * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+  *   header is set to resource-exhausted
+  * * unavailable: Loadbalancer will retry if the gRPC status code in
+  *   the response header is set to unavailable
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#retry_conditions ComputeRegionUrlMap#retry_conditions}
   */
@@ -7757,15 +7752,15 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutpu
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 'seconds' field and a positive
-'nanos' field. Must be from 0 to 999,999,999 inclusive.
+  * less than one second are represented with a 0 'seconds' field and a positive
+  * 'nanos' field. Must be from 0 to 999,999,999 inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+  * inclusive.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
@@ -7853,16 +7848,16 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputRef
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite {
   /**
   * Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+  * header is replaced with contents of hostRewrite. The value must be between 1 and
+  * 255 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#host_rewrite ComputeRegionUrlMap#host_rewrite}
   */
   readonly hostRewrite?: string;
   /**
   * Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+  * portion of the request's path is replaced by pathPrefixRewrite. The value must
+  * be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_prefix_rewrite ComputeRegionUrlMap#path_prefix_rewrite}
   */
@@ -7965,8 +7960,8 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBack
   readonly headerValue: string;
   /**
   * If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+  * header. If true, headerValue is set for the header, discarding any values that
+  * were set for that header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -8115,8 +8110,8 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBack
   readonly headerValue: string;
   /**
   * If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+  * header. If true, headerValue is set for the header, discarding any values that
+  * were set for that header.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
@@ -8253,14 +8248,14 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+  * prior to forwarding the request to the backendService.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
   */
   readonly requestHeadersToRemove?: string[];
   /**
   * A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+  * prior to sending the response back to the client.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
   */
@@ -8409,19 +8404,19 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices {
   /**
   * The default RegionBackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+  * forwarding the request to backendService, the loadbalancer applies any relevant
+  * headerActions specified as part of this backendServiceWeight.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService: string;
   /**
   * Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
-The value must be between 0 and 1000
+  * (sum of all weightedBackendService weights in routeAction) . The selection of a
+  * backend service is determined only for new traffic. Once a user's request has
+  * been directed to a backendService, subsequent requests will be sent to the same
+  * backendService as determined by the BackendService's session affinity policy.
+  * The value must be between 0 and 1000
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#weight ComputeRegionUrlMap#weight}
   */
@@ -8808,65 +8803,65 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
 export interface ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one
-that was supplied in the request. The value must be between 1 and 255
-characters.
+  * that was supplied in the request. The value must be between 1 and 255
+  * characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
   /**
   * If set to true, the URL scheme in the redirected request is set to https.
-If set to false, the URL scheme of the redirected request will remain the
-same as that of the request. This must only be set for UrlMaps used in
-TargetHttpProxys. Setting this true for TargetHttpsProxy is not
-permitted. The default is set to false.
+  * If set to false, the URL scheme of the redirected request will remain the
+  * same as that of the request. This must only be set for UrlMaps used in
+  * TargetHttpProxys. Setting this true for TargetHttpsProxy is not
+  * permitted. The default is set to false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
   /**
   * The path that will be used in the redirect response instead of the one
-that was supplied in the request. pathRedirect cannot be supplied
-together with prefixRedirect. Supply one alone or neither. If neither is
-supplied, the path of the original request will be used for the redirect.
-The value must be between 1 and 1024 characters.
+  * that was supplied in the request. pathRedirect cannot be supplied
+  * together with prefixRedirect. Supply one alone or neither. If neither is
+  * supplied, the path of the original request will be used for the redirect.
+  * The value must be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
   /**
   * The prefix that replaces the prefixMatch specified in the
-HttpRouteRuleMatch, retaining the remaining portion of the URL before
-redirecting the request. prefixRedirect cannot be supplied together with
-pathRedirect. Supply one alone or neither. If neither is supplied, the
-path of the original request will be used for the redirect. The value
-must be between 1 and 1024 characters.
+  * HttpRouteRuleMatch, retaining the remaining portion of the URL before
+  * redirecting the request. prefixRedirect cannot be supplied together with
+  * pathRedirect. Supply one alone or neither. If neither is supplied, the
+  * path of the original request will be used for the redirect. The value
+  * must be between 1 and 1024 characters.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
   /**
   * The HTTP Status code to use for this RedirectAction. Supported values are:
-
-* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-* FOUND, which corresponds to 302.
-
-* SEE_OTHER which corresponds to 303.
-
-* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.
-
-* PERMANENT_REDIRECT, which corresponds to 308. In this case,
-the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+  * 
+  * * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+  * 
+  * * FOUND, which corresponds to 302.
+  * 
+  * * SEE_OTHER which corresponds to 303.
+  * 
+  * * TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+  * will be retained.
+  * 
+  * * PERMANENT_REDIRECT, which corresponds to 308. In this case,
+  * the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
   /**
   * If set to true, any accompanying query portion of the original URL is
-removed prior to redirecting the request. If set to false, the query
-portion of the original URL is retained. The default value is false.
+  * removed prior to redirecting the request. If set to false, the query
+  * portion of the original URL is retained. The default value is false.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
@@ -9049,32 +9044,32 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference 
 export interface ComputeRegionUrlMapPathMatcherRouteRules {
   /**
   * For routeRules within a given pathMatcher, priority determines the order
-in which load balancer will interpret routeRules. RouteRules are evaluated
-in order of priority, from the lowest to highest number. The priority of
-a rule decreases as its number increases (1, 2, 3, N+1). The first rule
-that matches the request is applied.
-
-You cannot configure two or more routeRules with the same priority.
-Priority for each rule must be set to a number between 0 and
-2147483647 inclusive.
-
-Priority numbers can have gaps, which enable you to add or remove rules
-in the future without affecting the rest of the rules. For example,
-1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
-you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
-future without any impact on existing rules.
+  * in which load balancer will interpret routeRules. RouteRules are evaluated
+  * in order of priority, from the lowest to highest number. The priority of
+  * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+  * that matches the request is applied.
+  * 
+  * You cannot configure two or more routeRules with the same priority.
+  * Priority for each rule must be set to a number between 0 and
+  * 2147483647 inclusive.
+  * 
+  * Priority numbers can have gaps, which enable you to add or remove rules
+  * in the future without affecting the rest of the rules. For example,
+  * 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+  * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+  * future without any impact on existing rules.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#priority ComputeRegionUrlMap#priority}
   */
   readonly priority: number;
   /**
   * The region backend service resource to which traffic is
-directed if this rule is matched. If routeAction is additionally specified,
-advanced routing actions like URL Rewrites, etc. take effect prior to sending
-the request to the backend. However, if service is specified, routeAction cannot
-contain any weightedBackendService s. Conversely, if routeAction specifies any
-weightedBackendServices, service must not be specified. Only one of urlRedirect,
-service or routeAction.weightedBackendService must be set.
+  * directed if this rule is matched. If routeAction is additionally specified,
+  * advanced routing actions like URL Rewrites, etc. take effect prior to sending
+  * the request to the backend. However, if service is specified, routeAction cannot
+  * contain any weightedBackendService s. Conversely, if routeAction specifies any
+  * weightedBackendServices, service must not be specified. Only one of urlRedirect,
+  * service or routeAction.weightedBackendService must be set.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#service ComputeRegionUrlMap#service}
   */
@@ -9310,8 +9305,8 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesList extends cdktf.ComplexL
 export interface ComputeRegionUrlMapPathMatcher {
   /**
   * A reference to a RegionBackendService resource. This will be used if
-none of the pathRules defined by this PathMatcher is matched by
-the URL's path portion.
+  * none of the pathRules defined by this PathMatcher is matched by
+  * the URL's path portion.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_url_map#default_service ComputeRegionUrlMap#default_service}
   */

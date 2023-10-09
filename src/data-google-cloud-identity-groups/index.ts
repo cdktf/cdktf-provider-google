@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/cloud_identity_groups
 // generated from terraform resource schema
 
@@ -21,10 +16,10 @@ export interface DataGoogleCloudIdentityGroupsConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * The resource name of the entity under which this Group resides in the
-Cloud Identity resource hierarchy.
-
-Must be of the form identitysources/{identity_source_id} for external-identity-mapped
-groups or customers/{customer_id} for Google Groups.
+  * Cloud Identity resource hierarchy.
+  * 
+  * Must be of the form identitysources/{identity_source_id} for external-identity-mapped
+  * groups or customers/{customer_id} for Google Groups.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/cloud_identity_groups#parent DataGoogleCloudIdentityGroups#parent}
   */

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_network_endpoint_group
 // generated from terraform resource schema
 
@@ -14,14 +9,14 @@ import * as cdktf from 'cdktf';
 export interface ComputeGlobalNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * The default port used if the port number is not specified in the
-network endpoint.
+  * network endpoint.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_network_endpoint_group#default_port ComputeGlobalNetworkEndpointGroup#default_port}
   */
   readonly defaultPort?: number;
   /**
   * An optional description of this resource. Provide this property when
-you create the resource.
+  * you create the resource.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_network_endpoint_group#description ComputeGlobalNetworkEndpointGroup#description}
   */
@@ -35,12 +30,12 @@ you create the resource.
   readonly id?: string;
   /**
   * Name of the resource; provided by the client when the resource is
-created. The name must be 1-63 characters long, and comply with
-RFC1035. Specifically, the name must be 1-63 characters long and match
-the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
-first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+  * created. The name must be 1-63 characters long, and comply with
+  * RFC1035. Specifically, the name must be 1-63 characters long and match
+  * the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
+  * first character must be a lowercase letter, and all following
+  * characters must be a dash, lowercase letter, or digit, except the last
+  * character, which cannot be a dash.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_network_endpoint_group#name ComputeGlobalNetworkEndpointGroup#name}
   */

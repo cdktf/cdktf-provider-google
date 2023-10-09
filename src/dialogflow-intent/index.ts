@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent
 // generated from terraform resource schema
 
@@ -14,14 +9,14 @@ import * as cdktf from 'cdktf';
 export interface DialogflowIntentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the action associated with the intent.
-Note: The action name must not contain whitespaces.
+  * Note: The action name must not contain whitespaces.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#action DialogflowIntent#action}
   */
   readonly action?: string;
   /**
   * The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
-(i.e. default platform). Possible values: ["FACEBOOK", "SLACK", "TELEGRAM", "KIK", "SKYPE", "LINE", "VIBER", "ACTIONS_ON_GOOGLE", "GOOGLE_HANGOUTS"]
+  * (i.e. default platform). Possible values: ["FACEBOOK", "SLACK", "TELEGRAM", "KIK", "SKYPE", "LINE", "VIBER", "ACTIONS_ON_GOOGLE", "GOOGLE_HANGOUTS"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#default_response_platforms DialogflowIntent#default_response_platforms}
   */
@@ -34,8 +29,8 @@ Note: The action name must not contain whitespaces.
   readonly displayName: string;
   /**
   * The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
-the contexts must be present in the active user session for an event to trigger this intent. See the
-[events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
+  * the contexts must be present in the active user session for an event to trigger this intent. See the
+  * [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#events DialogflowIntent#events}
   */
@@ -49,7 +44,7 @@ the contexts must be present in the active user session for an event to trigger 
   readonly id?: string;
   /**
   * The list of context names required for this intent to be triggered.
-Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
+  * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#input_context_names DialogflowIntent#input_context_names}
   */
@@ -62,24 +57,24 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
   readonly isFallback?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether Machine Learning is disabled for the intent.
-Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
-ONLY match mode. Also, auto-markup in the UI is turned off.
+  * Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
+  * ONLY match mode. Also, auto-markup in the UI is turned off.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#ml_disabled DialogflowIntent#ml_disabled}
   */
   readonly mlDisabled?: boolean | cdktf.IResolvable;
   /**
   * The unique identifier of the parent intent in the chain of followup intents.
-Format: projects/<Project ID>/agent/intents/<Intent ID>.
+  * Format: projects/<Project ID>/agent/intents/<Intent ID>.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#parent_followup_intent_name DialogflowIntent#parent_followup_intent_name}
   */
   readonly parentFollowupIntentName?: string;
   /**
   * The priority of this intent. Higher numbers represent higher priorities.
-  - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
-  to the Normal priority in the console.
-  - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+  *   - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
+  *   to the Normal priority in the console.
+  *   - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#priority DialogflowIntent#priority}
   */
@@ -96,9 +91,9 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
   readonly resetContexts?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether webhooks are enabled for the intent.
-* WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
-* WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
-filling prompt is forwarded to the webhook. Possible values: ["WEBHOOK_STATE_ENABLED", "WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING"]
+  * * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
+  * * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
+  * filling prompt is forwarded to the webhook. Possible values: ["WEBHOOK_STATE_ENABLED", "WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_intent#webhook_state DialogflowIntent#webhook_state}
   */

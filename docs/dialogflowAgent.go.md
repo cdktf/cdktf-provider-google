@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.NewDialogflowAgent(scope Construct, id *string, config DialogflowAgentConfig) DialogflowAgent
 ```
@@ -360,7 +360,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsConstruct(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsTerraformElement(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ dialogflowagent.DialogflowAgent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsTerraformResource(x interface{}) *bool
 ```
@@ -924,7 +924,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 &dialogflowagent.DialogflowAgentConfig {
 	Connection: interface{},
@@ -947,7 +947,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
 	Project: *string,
 	SupportedLanguageCodes: *[]*string,
 	Tier: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.dialogflowAgent.DialogflowAgentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowAgent.DialogflowAgentTimeouts,
 }
 ```
 
@@ -1107,9 +1107,10 @@ API version displayed in Dialogflow console.
 If not specified, V2 API is assumed. Clients are free to query
 different service endpoints for different API versions. However, bots connectors and webhook calls will follow
 the specified API version.
-API_VERSION_V1: Legacy V1 API.
-API_VERSION_V2: V2 API.
-API_VERSION_V2_BETA_1: V2beta1 API. Possible values: ["API_VERSION_V1", "API_VERSION_V2", "API_VERSION_V2_BETA_1"]
+
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API. Possible values: ["API_VERSION_V1", "API_VERSION_V2", "API_VERSION_V2_BETA_1"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_agent#api_version DialogflowAgent#api_version}
 
@@ -1205,10 +1206,10 @@ MatchMode *string
 
 Determines how intents are detected from user queries.
 
-MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
-syntax and composite entities.
-MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
-using
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+  syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+  using
 
 ---
 
@@ -1249,11 +1250,12 @@ Tier *string
 The agent tier.
 
 If not specified, TIER_STANDARD is assumed.
-TIER_STANDARD: Standard tier.
-TIER_ENTERPRISE: Enterprise tier (Essentials).
-TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
-NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
-the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: ["TIER_STANDARD", "TIER_ENTERPRISE", "TIER_ENTERPRISE_PLUS"]
+
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+  NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+  the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: ["TIER_STANDARD", "TIER_ENTERPRISE", "TIER_ENTERPRISE_PLUS"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/dialogflow_agent#tier DialogflowAgent#tier}
 
@@ -1278,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 &dialogflowagent.DialogflowAgentTimeouts {
 	Create: *string,
@@ -1340,7 +1342,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.NewDialogflowAgentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowAgentTimeoutsOutputReference
 ```

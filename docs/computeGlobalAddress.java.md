@@ -163,8 +163,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of the address to reserve.
 
-EXTERNAL indicates public/external single IP address.
-INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"]
+* EXTERNAL indicates public/external single IP address.
+* INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_address#address_type ComputeGlobalAddress#address_type}
 
@@ -244,9 +244,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The purpose of the resource. Possible values include:.
 
-VPC_PEERING - for peer networks
-
-PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
+* VPC_PEERING - for peer networks
+* PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_address#purpose ComputeGlobalAddress#purpose}
 
@@ -1246,8 +1245,8 @@ public java.lang.String getAddressType();
 
 The type of the address to reserve.
 
-EXTERNAL indicates public/external single IP address.
-INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"]
+* EXTERNAL indicates public/external single IP address.
+* INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_address#address_type ComputeGlobalAddress#address_type}
 
@@ -1355,9 +1354,8 @@ public java.lang.String getPurpose();
 
 The purpose of the resource. Possible values include:.
 
-VPC_PEERING - for peer networks
-
-PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
+* VPC_PEERING - for peer networks
+* PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_global_address#purpose ComputeGlobalAddress#purpose}
 

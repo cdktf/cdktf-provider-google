@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/kms_crypto_key
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface DataGoogleKmsCryptoKeyConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The KeyRing that this key belongs to.
-Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
+  * Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/kms_crypto_key#key_ring DataGoogleKmsCryptoKey#key_ring}
   */

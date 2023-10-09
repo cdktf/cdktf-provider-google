@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 iamworkloadidentitypoolprovider.NewIamWorkloadIdentityPoolProvider(scope Construct, id *string, config IamWorkloadIdentityPoolProviderConfig) IamWorkloadIdentityPoolProvider
 ```
@@ -379,7 +379,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProvider_IsConstruct(x interface{}) *bool
 ```
@@ -411,7 +411,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -425,7 +425,7 @@ iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProvider_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProvider_IsTerraformResource(x interface{}) *bool
 ```
@@ -910,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderAws.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 &iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProviderAws {
 	AccountId: *string,
@@ -944,7 +944,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 &iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProviderConfig {
 	Connection: interface{},
@@ -958,14 +958,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentity
 	WorkloadIdentityPoolProviderId: *string,
 	AttributeCondition: *string,
 	AttributeMapping: *map[string]*string,
-	Aws: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderAws,
+	Aws: github.com/cdktf/cdktf-provider-google-go/google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderAws,
 	Description: *string,
 	Disabled: interface{},
 	DisplayName: *string,
 	Id: *string,
-	Oidc: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderOidc,
+	Oidc: github.com/cdktf/cdktf-provider-google-go/google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderOidc,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts,
 }
 ```
 
@@ -1114,9 +1114,10 @@ AttributeCondition *string
 The expression must output a boolean representing whether to allow the federation.
 
 The following keywords may be referenced in the expressions:
-'assertion': JSON representing the authentication credential issued by the provider.
-'google': The Google attributes mapped from the assertion in the 'attribute_mappings'.
-'attribute': The custom attributes mapped from the assertion in the 'attribute_mappings'.
+
+* 'assertion': JSON representing the authentication credential issued by the provider.
+* 'google': The Google attributes mapped from the assertion in the 'attribute_mappings'.
+* 'attribute': The custom attributes mapped from the assertion in the 'attribute_mappings'.
 
 The maximum length of the attribute condition expression is 4096 characters. If
 unspecified, all valid authentication credential are accepted.
@@ -1145,12 +1146,13 @@ Maps attributes from authentication credentials issued by an external identity p
 Each key must be a string specifying the Google Cloud IAM attribute to map to.
 
 The following keys are supported:
-'google.subject': The principal IAM is authenticating. You can reference this value
-in IAM bindings. This is also the subject that appears in Cloud Logging logs.
-Cannot exceed 127 characters.
-'google.groups': Groups the external identity belongs to. You can grant groups
-access to resources using an IAM 'principalSet' binding; access applies to all
-members of the group.
+
+* 'google.subject': The principal IAM is authenticating. You can reference this value
+  in IAM bindings. This is also the subject that appears in Cloud Logging logs.
+  Cannot exceed 127 characters.
+* 'google.groups': Groups the external identity belongs to. You can grant groups
+  access to resources using an IAM 'principalSet' binding; access applies to all
+  members of the group.
 
 You can also provide custom attributes by specifying 'attribute.{custom_attribute}',
 where '{custom_attribute}' is the name of the custom attribute to be mapped. You can
@@ -1159,12 +1161,13 @@ is 100 characters, and the key may only contain the characters [a-z0-9_].
 
 You can reference these attributes in IAM policies to define fine-grained access for a
 workload to Google Cloud resources. For example:
-'google.subject':
-'principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}'
-'google.groups':
-'principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}'
-'attribute.{custom_attribute}':
-'principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}'
+
+* 'google.subject':
+  'principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}'
+* 'google.groups':
+  'principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}'
+* 'attribute.{custom_attribute}':
+  'principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}'
 
 Each value must be a [Common Expression Language](https://opensource.google/projects/cel)
 function that maps an identity provider credential to the normalized attribute specified
@@ -1180,18 +1183,17 @@ For AWS providers, the following rules apply:
 
 * If no attribute mapping is defined, the following default mapping applies:
 
-```
-{
-  "google.subject":"assertion.arn",
-  "attribute.aws_role":
-    "assertion.arn.contains('assumed-role')"
-    " ? assertion.arn.extract('{account_arn}assumed-role/')"
-    "   + 'assumed-role/'"
-    "   + assertion.arn.extract('assumed-role/{role_name}/')"
-    " : assertion.arn",
-}
-```
-
+  ```
+  {
+    "google.subject":"assertion.arn",
+    "attribute.aws_role":
+      "assertion.arn.contains('assumed-role')"
+      " ? assertion.arn.extract('{account_arn}assumed-role/')"
+      "   + 'assumed-role/'"
+      "   + assertion.arn.extract('assumed-role/{role_name}/')"
+      " : assertion.arn",
+  }
+  ```
 * If any custom attribute mappings are defined, they must include a mapping to the
   'google.subject' attribute.
 
@@ -1201,9 +1203,9 @@ For OIDC providers, the following rules apply:
   'google.subject' attribute. For example, the following maps the 'sub' claim of the
   incoming credential to the 'subject' attribute on a Google token.
 
-```
-{"google.subject": "assertion.sub"}
-```
+  ```
+  {"google.subject": "assertion.sub"}
+  ```
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/iam_workload_identity_pool_provider#attribute_mapping IamWorkloadIdentityPoolProvider#attribute_mapping}
 
@@ -1325,7 +1327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderOidc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 &iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProviderOidc {
 	IssuerUri: *string,
@@ -1405,19 +1407,19 @@ the following fields:
 
 ```
 {
-"keys": [
-{
-      "kty": "RSA/EC",
-      "alg": "<algorithm>",
-      "use": "sig",
-      "kid": "<key-id>",
-      "n": "",
-      "e": "",
-      "x": "",
-      "y": "",
-      "crv": ""
-}
-]
+  "keys": [
+    {
+          "kty": "RSA/EC",
+          "alg": "<algorithm>",
+          "use": "sig",
+          "kid": "<key-id>",
+          "n": "",
+          "e": "",
+          "x": "",
+          "y": "",
+          "crv": ""
+    }
+  ]
 }
 ```
 
@@ -1430,7 +1432,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 &iamworkloadidentitypoolprovider.IamWorkloadIdentityPoolProviderTimeouts {
 	Create: *string,
@@ -1492,7 +1494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderAwsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 iamworkloadidentitypoolprovider.NewIamWorkloadIdentityPoolProviderAwsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkloadIdentityPoolProviderAwsOutputReference
 ```
@@ -1763,7 +1765,7 @@ func InternalValue() IamWorkloadIdentityPoolProviderAws
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderOidcOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 iamworkloadidentitypoolprovider.NewIamWorkloadIdentityPoolProviderOidcOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkloadIdentityPoolProviderOidcOutputReference
 ```
@@ -2092,7 +2094,7 @@ func InternalValue() IamWorkloadIdentityPoolProviderOidc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/iamworkloadidentitypoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypoolprovider"
 
 iamworkloadidentitypoolprovider.NewIamWorkloadIdentityPoolProviderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkloadIdentityPoolProviderTimeoutsOutputReference
 ```

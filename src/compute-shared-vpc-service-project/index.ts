@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_service_project
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMetaArguments {
   /**
   * The deletion policy for the shared VPC service. Setting ABANDON allows the resource
-				to be abandoned rather than deleted. Possible values are: "ABANDON".
+  * 				to be abandoned rather than deleted. Possible values are: "ABANDON".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_shared_vpc_service_project#deletion_policy ComputeSharedVpcServiceProject#deletion_policy}
   */

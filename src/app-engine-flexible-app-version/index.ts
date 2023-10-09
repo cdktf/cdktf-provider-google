@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version
 // generated from terraform resource schema
 
@@ -20,7 +15,7 @@ export interface AppEngineFlexibleAppVersionConfig extends cdktf.TerraformMetaAr
   readonly betaSettings?: { [key: string]: string };
   /**
   * Duration that static files should be cached by web proxies and browsers.
-Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
+  * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#default_expiration AppEngineFlexibleAppVersion#default_expiration}
   */
@@ -52,9 +47,9 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
   readonly inboundServices?: string[];
   /**
   * Instance class that is used to run this version. Valid values are
-AutomaticScaling: F1, F2, F4, F4_1G
-ManualScaling: B1, B2, B4, B8, B4_1G
-Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
+  * AutomaticScaling: F1, F2, F4, F4_1G
+  * ManualScaling: B1, B2, B4, B8, B4_1G
+  * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#instance_class AppEngineFlexibleAppVersion#instance_class}
   */
@@ -83,8 +78,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
   readonly runtime: string;
   /**
   * The version of the API in the given runtime environment.
-Please see the app.yaml reference for valid values at 'https://cloud.google.com/appengine/docs/standard/<language>/config/appref'\
-Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
+  * Please see the app.yaml reference for valid values at 'https://cloud.google.com/appengine/docs/standard/<language>/config/appref'\
+  * Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#runtime_api_version AppEngineFlexibleAppVersion#runtime_api_version}
   */
@@ -109,7 +104,7 @@ Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
   readonly service: string;
   /**
   * The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as
-default if this field is neither provided in app.yaml file nor through CLI flag.
+  * default if this field is neither provided in app.yaml file nor through CLI flag.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#service_account AppEngineFlexibleAppVersion#service_account}
   */
@@ -122,7 +117,7 @@ default if this field is neither provided in app.yaml file nor through CLI flag.
   readonly servingStatus?: string;
   /**
   * Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters, numbers, or hyphens.
-Reserved names,"default", "latest", and any name with the prefix "ah-".
+  * Reserved names,"default", "latest", and any name with the prefix "ah-".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#version_id AppEngineFlexibleAppVersion#version_id}
   */
@@ -886,16 +881,16 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
 export interface AppEngineFlexibleAppVersionAutomaticScaling {
   /**
   * The time period that the Autoscaler should wait before it starts collecting information from a new instance.
-This prevents the autoscaler from collecting information when the instance is initializing,
-during which the collected usage would not be reliable. Default: 120s
+  * This prevents the autoscaler from collecting information when the instance is initializing,
+  * during which the collected usage would not be reliable. Default: 120s
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#cool_down_period AppEngineFlexibleAppVersion#cool_down_period}
   */
   readonly coolDownPeriod?: string;
   /**
   * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-
-Defaults to a runtime-specific value.
+  * 
+  * Defaults to a runtime-specific value.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#max_concurrent_requests AppEngineFlexibleAppVersion#max_concurrent_requests}
   */
@@ -1279,8 +1274,8 @@ export interface AppEngineFlexibleAppVersionDeploymentCloudBuildOptions {
   readonly appYamlPath: string;
   /**
   * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
-
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#cloud_build_timeout AppEngineFlexibleAppVersion#cloud_build_timeout}
   */
@@ -1368,7 +1363,7 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
 export interface AppEngineFlexibleAppVersionDeploymentContainer {
   /**
   * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
-Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
+  * Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#image AppEngineFlexibleAppVersion#image}
   */
@@ -1829,13 +1824,13 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
 export interface AppEngineFlexibleAppVersionEndpointsApiService {
   /**
   * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
-
-By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
-When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
-and is required in this case.
-
-Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
-the configuration ID. In this case, configId must be omitted.
+  * 
+  * By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
+  * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
+  * and is required in this case.
+  * 
+  * Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
+  * the configuration ID. In this case, configId must be omitted.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#config_id AppEngineFlexibleAppVersion#config_id}
   */
@@ -1848,7 +1843,7 @@ the configuration ID. In this case, configId must be omitted.
   readonly disableTraceSampling?: boolean | cdktf.IResolvable;
   /**
   * Endpoints service name which is the name of the "service" resource in the Service Management API.
-For example "myapi.endpoints.myproject.cloud.goog"
+  * For example "myapi.endpoints.myproject.cloud.goog"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#name AppEngineFlexibleAppVersion#name}
   */
@@ -2116,37 +2111,37 @@ export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cd
 export interface AppEngineFlexibleAppVersionHandlersStaticFiles {
   /**
   * Whether files should also be uploaded as code data. By default, files declared in static file handlers are
-uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
-uploads are charged against both your code and static data storage resource quotas.
+  * uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
+  * uploads are charged against both your code and static data storage resource quotas.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#application_readable AppEngineFlexibleAppVersion#application_readable}
   */
   readonly applicationReadable?: boolean | cdktf.IResolvable;
   /**
   * Time a static file served by this handler should be cached by web proxies and browsers.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
-Default is '0s'
+  * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+  * Default is '0s'
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#expiration AppEngineFlexibleAppVersion#expiration}
   */
   readonly expiration?: string;
   /**
   * HTTP headers to use for all responses from these URLs.
-An object containing a list of "key:value" value pairs.".
+  * An object containing a list of "key:value" value pairs.".
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#http_headers AppEngineFlexibleAppVersion#http_headers}
   */
   readonly httpHeaders?: { [key: string]: string };
   /**
   * MIME type used to serve all files served by this handler.
-Defaults to file-specific MIME types, which are derived from each file's filename extension.
+  * Defaults to file-specific MIME types, which are derived from each file's filename extension.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#mime_type AppEngineFlexibleAppVersion#mime_type}
   */
   readonly mimeType?: string;
   /**
   * Path to the static files matched by the URL pattern, from the application root directory.
-The path can refer to text matched in groupings in the URL pattern.
+  * The path can refer to text matched in groupings in the URL pattern.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#path AppEngineFlexibleAppVersion#path}
   */
@@ -2388,7 +2383,7 @@ export interface AppEngineFlexibleAppVersionHandlers {
   readonly securityLevel?: string;
   /**
   * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
-All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+  * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#url_regex AppEngineFlexibleAppVersion#url_regex}
   */
@@ -2876,9 +2871,9 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
 export interface AppEngineFlexibleAppVersionManualScaling {
   /**
   * Number of instances to assign to the service at the start.
-
-**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
-Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.
+  * 
+  * **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+  * Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#instances AppEngineFlexibleAppVersion#instances}
   */
@@ -2967,11 +2962,11 @@ export interface AppEngineFlexibleAppVersionNetwork {
   readonly sessionAffinity?: boolean | cdktf.IResolvable;
   /**
   * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
-
-If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
-If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network.
-If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
-If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
+  * 
+  * If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
+  * If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network.
+  * If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
+  * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#subnetwork AppEngineFlexibleAppVersion#subnetwork}
   */
@@ -3128,7 +3123,7 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
 export interface AppEngineFlexibleAppVersionReadinessCheck {
   /**
   * A maximum time limit on application initialization, measured from moment the application successfully
-replies to a healthcheck until it is ready to serve traffic. Default: "300s"
+  * replies to a healthcheck until it is ready to serve traffic. Default: "300s"
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/app_engine_flexible_app_version#app_start_timeout AppEngineFlexibleAppVersion#app_start_timeout}
   */

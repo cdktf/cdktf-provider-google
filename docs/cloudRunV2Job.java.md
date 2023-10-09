@@ -161,7 +161,7 @@ All system annotations in v1 now have a corresponding field in v2 Job.
 
 This field follows Kubernetes annotations' namespacing, limits, and rules.
 
-*Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
@@ -221,7 +221,7 @@ environment, state, etc. For more information, visit https://cloud.google.com/re
 Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
 All system labels in v1 now have a corresponding field in v2 Job.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
@@ -1539,7 +1539,7 @@ All system annotations in v1 now have a corresponding field in v2 Job.
 
 This field follows Kubernetes annotations' namespacing, limits, and rules.
 
-*Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
@@ -1619,7 +1619,7 @@ environment, state, etc. For more information, visit https://cloud.google.com/re
 Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
 All system labels in v1 now have a corresponding field in v2 Job.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}

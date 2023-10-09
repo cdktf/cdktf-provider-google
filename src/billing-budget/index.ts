@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget
 // generated from terraform resource schema
 
@@ -65,35 +60,35 @@ export interface BillingBudgetConfig extends cdktf.TerraformMetaArguments {
 export interface BillingBudgetAllUpdatesRule {
   /**
   * Boolean. When set to true, disables default notifications sent
-when a threshold is exceeded. Default recipients are
-those with Billing Account Administrators and Billing
-Account Users IAM roles for the target account.
+  * when a threshold is exceeded. Default recipients are
+  * those with Billing Account Administrators and Billing
+  * Account Users IAM roles for the target account.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#disable_default_iam_recipients BillingBudget#disable_default_iam_recipients}
   */
   readonly disableDefaultIamRecipients?: boolean | cdktf.IResolvable;
   /**
   * The full resource name of a monitoring notification
-channel in the form
-projects/{project_id}/notificationChannels/{channel_id}.
-A maximum of 5 channels are allowed.
+  * channel in the form
+  * projects/{project_id}/notificationChannels/{channel_id}.
+  * A maximum of 5 channels are allowed.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#monitoring_notification_channels BillingBudget#monitoring_notification_channels}
   */
   readonly monitoringNotificationChannels?: string[];
   /**
   * The name of the Cloud Pub/Sub topic where budget related
-messages will be published, in the form
-projects/{project_id}/topics/{topic_id}. Updates are sent
-at regular intervals to the topic.
+  * messages will be published, in the form
+  * projects/{project_id}/topics/{topic_id}. Updates are sent
+  * at regular intervals to the topic.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#pubsub_topic BillingBudget#pubsub_topic}
   */
   readonly pubsubTopic?: string;
   /**
   * The schema version of the notification. Only "1.0" is
-accepted. It represents the JSON schema as defined in
-https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
+  * accepted. It represents the JSON schema as defined in
+  * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#schema_version BillingBudget#schema_version}
   */
@@ -236,19 +231,19 @@ export interface BillingBudgetAmountSpecifiedAmount {
   readonly currencyCode?: string;
   /**
   * Number of nano (10^-9) units of the amount.
-The value must be between -999,999,999 and +999,999,999
-inclusive. If units is positive, nanos must be positive or
-zero. If units is zero, nanos can be positive, zero, or
-negative. If units is negative, nanos must be negative or
-zero. For example $-1.75 is represented as units=-1 and
-nanos=-750,000,000.
+  * The value must be between -999,999,999 and +999,999,999
+  * inclusive. If units is positive, nanos must be positive or
+  * zero. If units is zero, nanos can be positive, zero, or
+  * negative. If units is negative, nanos must be negative or
+  * zero. For example $-1.75 is represented as units=-1 and
+  * nanos=-750,000,000.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#nanos BillingBudget#nanos}
   */
   readonly nanos?: number;
   /**
   * The whole units of the amount. For example if currencyCode
-is "USD", then 1 unit is one US dollar.
+  * is "USD", then 1 unit is one US dollar.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#units BillingBudget#units}
   */
@@ -362,9 +357,9 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
 export interface BillingBudgetAmount {
   /**
   * Configures a budget amount that is automatically set to 100% of
-last period's spend.
-Boolean. Set value to true to use. Do not set to false, instead
-use the 'specified_amount' block.
+  * last period's spend.
+  * Boolean. Set value to true to use. Do not set to false, instead
+  * use the 'specified_amount' block.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#last_period_amount BillingBudget#last_period_amount}
   */
@@ -786,77 +781,77 @@ export class BillingBudgetBudgetFilterCustomPeriodOutputReference extends cdktf.
 export interface BillingBudgetBudgetFilter {
   /**
   * A CalendarPeriod represents the abstract concept of a recurring time period that has a
-canonical start. Grammatically, "the start of the current CalendarPeriod".
-All calendar times begin at 12 AM US and Canadian Pacific Time (UTC-8).
-
-Exactly one of 'calendar_period', 'custom_period' must be provided. Possible values: ["MONTH", "QUARTER", "YEAR", "CALENDAR_PERIOD_UNSPECIFIED"]
+  * canonical start. Grammatically, "the start of the current CalendarPeriod".
+  * All calendar times begin at 12 AM US and Canadian Pacific Time (UTC-8).
+  * 
+  * Exactly one of 'calendar_period', 'custom_period' must be provided. Possible values: ["MONTH", "QUARTER", "YEAR", "CALENDAR_PERIOD_UNSPECIFIED"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#calendar_period BillingBudget#calendar_period}
   */
   readonly calendarPeriod?: string;
   /**
   * Optional. If creditTypesTreatment is INCLUDE_SPECIFIED_CREDITS,
-this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See a list of acceptable credit type values.
-If creditTypesTreatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty.
-
-**Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config.
+  * this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See a list of acceptable credit type values.
+  * If creditTypesTreatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty.
+  * 
+  * **Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#credit_types BillingBudget#credit_types}
   */
   readonly creditTypes?: string[];
   /**
   * Specifies how credits should be treated when determining spend
-for threshold calculations. Default value: "INCLUDE_ALL_CREDITS" Possible values: ["INCLUDE_ALL_CREDITS", "EXCLUDE_ALL_CREDITS", "INCLUDE_SPECIFIED_CREDITS"]
+  * for threshold calculations. Default value: "INCLUDE_ALL_CREDITS" Possible values: ["INCLUDE_ALL_CREDITS", "EXCLUDE_ALL_CREDITS", "INCLUDE_SPECIFIED_CREDITS"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#credit_types_treatment BillingBudget#credit_types_treatment}
   */
   readonly creditTypesTreatment?: string;
   /**
   * A single label and value pair specifying that usage from only
-this set of labeled resources should be included in the budget.
+  * this set of labeled resources should be included in the budget.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#labels BillingBudget#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * A set of projects of the form projects/{project_number},
-specifying that usage from only this set of projects should be
-included in the budget. If omitted, the report will include
-all usage for the billing account, regardless of which project
-the usage occurred on.
+  * specifying that usage from only this set of projects should be
+  * included in the budget. If omitted, the report will include
+  * all usage for the billing account, regardless of which project
+  * the usage occurred on.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#projects BillingBudget#projects}
   */
   readonly projects?: string[];
   /**
   * A set of folder and organization names of the form folders/{folderId} or organizations/{organizationId},
-specifying that usage from only this set of folders and organizations should be included in the budget.
-If omitted, the budget includes all usage that the billing account pays for. If the folder or organization
-contains projects that are paid for by a different Cloud Billing account, the budget doesn't apply to those projects.
+  * specifying that usage from only this set of folders and organizations should be included in the budget.
+  * If omitted, the budget includes all usage that the billing account pays for. If the folder or organization
+  * contains projects that are paid for by a different Cloud Billing account, the budget doesn't apply to those projects.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#resource_ancestors BillingBudget#resource_ancestors}
   */
   readonly resourceAncestors?: string[];
   /**
   * A set of services of the form services/{service_id},
-specifying that usage from only this set of services should be
-included in the budget. If omitted, the report will include
-usage for all the services. The service names are available
-through the Catalog API:
-https://cloud.google.com/billing/v1/how-tos/catalog-api.
+  * specifying that usage from only this set of services should be
+  * included in the budget. If omitted, the report will include
+  * usage for all the services. The service names are available
+  * through the Catalog API:
+  * https://cloud.google.com/billing/v1/how-tos/catalog-api.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#services BillingBudget#services}
   */
   readonly services?: string[];
   /**
   * A set of subaccounts of the form billingAccounts/{account_id},
-specifying that usage from only this set of subaccounts should
-be included in the budget. If a subaccount is set to the name of
-the parent account, usage from the parent account will be included.
-If the field is omitted, the report will include usage from the parent
-account and all subaccounts, if they exist.
-
-**Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config.
+  * specifying that usage from only this set of subaccounts should
+  * be included in the budget. If a subaccount is set to the name of
+  * the parent account, usage from the parent account will be included.
+  * If the field is omitted, the report will include usage from the parent
+  * account and all subaccounts, if they exist.
+  * 
+  * **Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#subaccounts BillingBudget#subaccounts}
   */
@@ -1114,14 +1109,14 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
 export interface BillingBudgetThresholdRules {
   /**
   * The type of basis used to determine if spend has passed
-the threshold. Default value: "CURRENT_SPEND" Possible values: ["CURRENT_SPEND", "FORECASTED_SPEND"]
+  * the threshold. Default value: "CURRENT_SPEND" Possible values: ["CURRENT_SPEND", "FORECASTED_SPEND"]
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#spend_basis BillingBudget#spend_basis}
   */
   readonly spendBasis?: string;
   /**
   * Send an alert when this threshold is exceeded. This is a
-1.0-based percentage, so 0.5 = 50%. Must be >= 0.
+  * 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/billing_budget#threshold_percent BillingBudget#threshold_percent}
   */

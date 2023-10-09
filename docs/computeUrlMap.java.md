@@ -2095,20 +2095,20 @@ public java.util.List<java.lang.String> getRetryConditions();
 
 Specfies one or more conditions when this retry rule applies. Valid values are:.
 
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
-or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
-for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
-This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+  or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
+  for example due to connection timeouts.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+  Currently the only retriable error supported is 409.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+  This reset type indicates that it is safe to retry.
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
@@ -2710,17 +2710,13 @@ public java.lang.String getRedirectResponseCode();
 
 The HTTP Status code to use for this RedirectAction. Supported values are:.
 
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-FOUND, which corresponds to 302.
-
-SEE_OTHER which corresponds to 303.
-
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.
-
-PERMANENT_REDIRECT, which corresponds to 308. In this case,
-the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+  will be retained.
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
+  the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 
@@ -3763,20 +3759,20 @@ public java.util.List<java.lang.String> getRetryConditions();
 
 Specfies one or more conditions when this retry rule applies. Valid values are:.
 
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
-or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
-for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
-This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+  or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
+  for example due to connection timeouts.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+  Currently the only retriable error supported is 409.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+  This reset type indicates that it is safe to retry.
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
@@ -4378,17 +4374,13 @@ public java.lang.String getRedirectResponseCode();
 
 The HTTP Status code to use for this RedirectAction. Supported values are:.
 
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-FOUND, which corresponds to 302.
-
-SEE_OTHER which corresponds to 303.
-
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.
-
-PERMANENT_REDIRECT, which corresponds to 308. In this case,
-the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+  will be retained.
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
+  the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 
@@ -5303,26 +5295,26 @@ public java.util.List<java.lang.String> getRetryConditions();
 
 Specifies one or more conditions when this retry rule applies. Valid values are:.
 
-5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.
-refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-unavailable: Loadbalancer will retry if
-the gRPC status code in the response header is set to unavailable
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with
+  any 5xx response code, or if the backend service does not respond at all,
+  example: disconnects, reset, read timeout, connection failure, and refused
+  streams.
+* gateway-error: Similar to 5xx, but only applies to response codes
+  502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures
+  connecting to backend services, for example due to connection timeouts.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+  Currently the only retriable error supported is 409.
+* refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+  REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+* cancelled: Loadbalancer will retry if the gRPC status code in the response
+  header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the
+  gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+  header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if
+  the gRPC status code in the response header is set to unavailable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
@@ -5926,17 +5918,13 @@ public java.lang.String getRedirectResponseCode();
 
 The HTTP Status code to use for this RedirectAction. Supported values are:.
 
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-FOUND, which corresponds to 302.
-
-SEE_OTHER which corresponds to 303.
-
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
-will be retained.
-
-PERMANENT_REDIRECT, which corresponds to 308. In this case,
-the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+  will be retained.
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
+  the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 
@@ -7502,26 +7490,26 @@ public java.util.List<java.lang.String> getRetryConditions();
 
 Specfies one or more conditions when this retry rule applies. Valid values are:.
 
-5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.
-refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with
+  any 5xx response code, or if the backend service does not respond at all,
+  example: disconnects, reset, read timeout, connection failure, and refused
+  streams.
+* gateway-error: Similar to 5xx, but only applies to response codes
+  502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures
+  connecting to backend services, for example due to connection timeouts.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+  Currently the only retriable error supported is 409.
+* refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+  REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+* cancelled: Loadbalancer will retry if the gRPC status code in the response
+  header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the
+  gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+  header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in
+  the response header is set to unavailable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
@@ -8125,15 +8113,11 @@ public java.lang.String getRedirectResponseCode();
 
 The HTTP Status code to use for this RedirectAction. Supported values are:.
 
-MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-
-FOUND, which corresponds to 302.
-
-SEE_OTHER which corresponds to 303.
-
-TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method will be retained.
-
-PERMANENT_REDIRECT, which corresponds to 308. In this case, the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method will be retained.
+* PERMANENT_REDIRECT, which corresponds to 308. In this case, the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 

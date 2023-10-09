@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.NewComputeRegionDisk(scope Construct, id *string, config ComputeRegionDiskConfig) ComputeRegionDisk
 ```
@@ -447,7 +447,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDisk.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.ComputeRegionDisk_IsConstruct(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDisk.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.ComputeRegionDisk_IsTerraformElement(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ computeregiondisk.ComputeRegionDisk_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDisk.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.ComputeRegionDisk_IsTerraformResource(x interface{}) *bool
 ```
@@ -1198,7 +1198,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskAsyncPrimaryDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 &computeregiondisk.ComputeRegionDiskAsyncPrimaryDisk {
 	Disk: *string,
@@ -1232,7 +1232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 &computeregiondisk.ComputeRegionDiskConfig {
 	Connection: interface{},
@@ -1244,9 +1244,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
 	Provisioners: *[]interface{},
 	Name: *string,
 	ReplicaZones: *[]*string,
-	AsyncPrimaryDisk: github.com/cdktf/cdktf-provider-google-go/google/v10.computeRegionDisk.ComputeRegionDiskAsyncPrimaryDisk,
+	AsyncPrimaryDisk: github.com/cdktf/cdktf-provider-google-go/google.computeRegionDisk.ComputeRegionDiskAsyncPrimaryDisk,
 	Description: *string,
-	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v10.computeRegionDisk.ComputeRegionDiskDiskEncryptionKey,
+	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeRegionDisk.ComputeRegionDiskDiskEncryptionKey,
 	GuestOsFeatures: interface{},
 	Id: *string,
 	Labels: *map[string]*string,
@@ -1257,8 +1257,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
 	Size: *f64,
 	Snapshot: *string,
 	SourceDisk: *string,
-	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v10.computeRegionDisk.ComputeRegionDiskSourceSnapshotEncryptionKey,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.computeRegionDisk.ComputeRegionDiskTimeouts,
+	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeRegionDisk.ComputeRegionDiskSourceSnapshotEncryptionKey,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRegionDisk.ComputeRegionDiskTimeouts,
 	Type: *string,
 }
 ```
@@ -1482,7 +1482,7 @@ Labels *map[string]*string
 
 Labels to apply to this disk.  A list of key->value pairs.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#labels ComputeRegionDisk#labels}
@@ -1586,10 +1586,10 @@ You can provide this as
 a partial or full URL to the resource. For example, the following are
 valid values:
 
-'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot'
-'projects/project/global/snapshots/snapshot'
-'global/snapshots/snapshot'
-'snapshot'
+* 'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot'
+* 'projects/project/global/snapshots/snapshot'
+* 'global/snapshots/snapshot'
+* 'snapshot'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#snapshot ComputeRegionDisk#snapshot}
 
@@ -1608,12 +1608,12 @@ The source disk used to create this disk.
 You can provide this as a partial or full URL to the resource.
 For example, the following are valid values:
 
-https://www.googleapis.com/compute/v1/projects/{project}/zones/{zone}/disks/{disk}
-https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/disks/{disk}
-projects/{project}/zones/{zone}/disks/{disk}
-projects/{project}/regions/{region}/disks/{disk}
-zones/{zone}/disks/{disk}
-regions/{region}/disks/{disk}
+* https://www.googleapis.com/compute/v1/projects/{project}/zones/{zone}/disks/{disk}
+* https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/disks/{disk}
+* projects/{project}/zones/{zone}/disks/{disk}
+* projects/{project}/regions/{region}/disks/{disk}
+* zones/{zone}/disks/{disk}
+* regions/{region}/disks/{disk}
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_region_disk#source_disk ComputeRegionDisk#source_disk}
 
@@ -1668,7 +1668,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 &computeregiondisk.ComputeRegionDiskDiskEncryptionKey {
 	KmsKeyName: *string,
@@ -1718,7 +1718,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskGuestOsFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 &computeregiondisk.ComputeRegionDiskGuestOsFeatures {
 	Type: *string,
@@ -1754,7 +1754,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskSourceSnapshotEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 &computeregiondisk.ComputeRegionDiskSourceSnapshotEncryptionKey {
 	RawKey: *string,
@@ -1788,7 +1788,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 &computeregiondisk.ComputeRegionDiskTimeouts {
 	Create: *string,
@@ -1850,7 +1850,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskAsyncPrimaryDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.NewComputeRegionDiskAsyncPrimaryDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionDiskAsyncPrimaryDiskOutputReference
 ```
@@ -2121,7 +2121,7 @@ func InternalValue() ComputeRegionDiskAsyncPrimaryDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.NewComputeRegionDiskDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionDiskDiskEncryptionKeyOutputReference
 ```
@@ -2439,7 +2439,7 @@ func InternalValue() ComputeRegionDiskDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskGuestOsFeaturesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.NewComputeRegionDiskGuestOsFeaturesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionDiskGuestOsFeaturesList
 ```
@@ -2582,7 +2582,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskGuestOsFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.NewComputeRegionDiskGuestOsFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionDiskGuestOsFeaturesOutputReference
 ```
@@ -2871,7 +2871,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.NewComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference
 ```
@@ -3160,7 +3160,7 @@ func InternalValue() ComputeRegionDiskSourceSnapshotEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionDisk.ComputeRegionDiskTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeregiondisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregiondisk"
 
 computeregiondisk.NewComputeRegionDiskTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionDiskTimeoutsOutputReference
 ```

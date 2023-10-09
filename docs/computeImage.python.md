@@ -225,7 +225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Labels to apply to this Image.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#labels ComputeImage#labels}
@@ -282,10 +282,10 @@ URL of the source image used to create this image.
 In order to create an image, you must provide the full or partial
 URL of one of the following:
 
-The selfLink URL
-This property
-The rawDisk.source URL
-The sourceDisk URL
+* The selfLink URL
+* This property
+* The rawDisk.source URL
+* The sourceDisk URL
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source_image ComputeImage#source_image}
 
@@ -299,11 +299,11 @@ URL of the source snapshot used to create this image.
 
 In order to create an image, you must provide the full or partial URL of one of the following:
 
-The selfLink URL
-This property
-The sourceImage URL
-The rawDisk.source URL
-The sourceDisk URL
+* The selfLink URL
+* This property
+* The sourceImage URL
+* The rawDisk.source URL
+* The sourceDisk URL
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source_snapshot ComputeImage#source_snapshot}
 
@@ -1730,7 +1730,7 @@ labels: typing.Mapping[str]
 
 Labels to apply to this Image.
 
-*Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#labels ComputeImage#labels}
@@ -1807,10 +1807,10 @@ URL of the source image used to create this image.
 In order to create an image, you must provide the full or partial
 URL of one of the following:
 
-The selfLink URL
-This property
-The rawDisk.source URL
-The sourceDisk URL
+* The selfLink URL
+* This property
+* The rawDisk.source URL
+* The sourceDisk URL
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source_image ComputeImage#source_image}
 
@@ -1828,11 +1828,11 @@ URL of the source snapshot used to create this image.
 
 In order to create an image, you must provide the full or partial URL of one of the following:
 
-The selfLink URL
-This property
-The sourceImage URL
-The rawDisk.source URL
-The sourceDisk URL
+* The selfLink URL
+* This property
+* The sourceImage URL
+* The rawDisk.source URL
+* The sourceDisk URL
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_image#source_snapshot ComputeImage#source_snapshot}
 

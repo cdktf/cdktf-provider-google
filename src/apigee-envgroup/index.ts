@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_envgroup
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface ApigeeEnvgroupConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee environment group,
-in the format 'organizations/{{org_name}}'.
+  * in the format 'organizations/{{org_name}}'.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/apigee_envgroup#org_id ApigeeEnvgroup#org_id}
   */

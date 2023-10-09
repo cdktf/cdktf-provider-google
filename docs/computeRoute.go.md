@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRoute.ComputeRoute.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeroute"
 
 computeroute.NewComputeRoute(scope Construct, id *string, config ComputeRouteConfig) ComputeRoute
 ```
@@ -367,7 +367,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRoute.ComputeRoute.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeroute"
 
 computeroute.ComputeRoute_IsConstruct(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRoute.ComputeRoute.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeroute"
 
 computeroute.ComputeRoute_IsTerraformElement(x interface{}) *bool
 ```
@@ -413,7 +413,7 @@ computeroute.ComputeRoute_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRoute.ComputeRoute.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeroute"
 
 computeroute.ComputeRoute_IsTerraformResource(x interface{}) *bool
 ```
@@ -964,7 +964,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRoute.ComputeRouteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeroute"
 
 &computeroute.ComputeRouteConfig {
 	Connection: interface{},
@@ -988,7 +988,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
 	Priority: *f64,
 	Project: *string,
 	Tags: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.computeRoute.ComputeRouteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRoute.ComputeRouteTimeouts,
 }
 ```
 
@@ -1182,10 +1182,11 @@ URL to a gateway that should handle matching packets.
 
 Currently, you can only specify the internet gateway, using a full or
 partial valid URL:
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway'
-'projects/project/global/gateways/default-internet-gateway'
-'global/gateways/default-internet-gateway'
-The string 'default-internet-gateway'.
+
+* 'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway'
+* 'projects/project/global/gateways/default-internet-gateway'
+* 'global/gateways/default-internet-gateway'
+* The string 'default-internet-gateway'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_route#next_hop_gateway ComputeRoute#next_hop_gateway}
 
@@ -1204,9 +1205,10 @@ The IP address or URL to a forwarding rule of type loadBalancingScheme=INTERNAL 
 With the GA provider you can only specify the forwarding
 rule as a partial or full URL. For example, the following
 are all valid values:
-10.128.0.56
-https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule
+
+* 10.128.0.56
+* https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
+* regions/region/forwardingRules/forwardingRule
 
 When the beta provider, you can also specify the IP address
 of a forwarding rule from the same VPC or any peered VPC.
@@ -1229,10 +1231,11 @@ NextHopInstance *string
 URL to an instance that should handle matching packets.
 
 You can specify this as a full or partial URL. For example:
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance'
-'projects/project/zones/zone/instances/instance'
-'zones/zone/instances/instance'
-Just the instance name, with the zone in 'next_hop_instance_zone'.
+
+* 'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance'
+* 'projects/project/zones/zone/instances/instance'
+* 'zones/zone/instances/instance'
+* Just the instance name, with the zone in 'next_hop_instance_zone'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/compute_route#next_hop_instance ComputeRoute#next_hop_instance}
 
@@ -1347,7 +1350,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRoute.ComputeRouteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeroute"
 
 &computeroute.ComputeRouteTimeouts {
 	Create: *string,
@@ -1395,7 +1398,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRoute.ComputeRouteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/computeroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeroute"
 
 computeroute.NewComputeRouteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRouteTimeoutsOutputReference
 ```
