@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osLoginSshPublicKey.OsLoginSshPublicKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/osloginsshpublickey"
 
 osloginsshpublickey.NewOsLoginSshPublicKey(scope Construct, id *string, config OsLoginSshPublicKeyConfig) OsLoginSshPublicKey
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.osLoginSshPublicKey.OsLoginSshPublicKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/osloginsshpublickey"
 
 osloginsshpublickey.OsLoginSshPublicKey_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.osLoginSshPublicKey.OsLoginSshPublicKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/osloginsshpublickey"
 
 osloginsshpublickey.OsLoginSshPublicKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ osloginsshpublickey.OsLoginSshPublicKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.osLoginSshPublicKey.OsLoginSshPublicKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/osloginsshpublickey"
 
 osloginsshpublickey.OsLoginSshPublicKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -699,7 +699,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osLoginSshPublicKey.OsLoginSshPublicKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/osloginsshpublickey"
 
 &osloginsshpublickey.OsLoginSshPublicKeyConfig {
 	Connection: interface{},
@@ -714,7 +714,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
 	ExpirationTimeUsec: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.osLoginSshPublicKey.OsLoginSshPublicKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.osLoginSshPublicKey.OsLoginSshPublicKeyTimeouts,
 }
 ```
 
@@ -898,7 +898,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.osLoginSshPublicKey.OsLoginSshPublicKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/osloginsshpublickey"
 
 &osloginsshpublickey.OsLoginSshPublicKeyTimeouts {
 	Create: *string,
@@ -960,7 +960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osLoginSshPublicKey.OsLoginSshPublicKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/osloginsshpublickey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/osloginsshpublickey"
 
 osloginsshpublickey.NewOsLoginSshPublicKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OsLoginSshPublicKeyTimeoutsOutputReference
 ```
