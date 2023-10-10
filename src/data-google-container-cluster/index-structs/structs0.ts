@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 import * as cdktf from 'cdktf';
 export interface DataGoogleContainerClusterAddonsConfigCloudrunConfig {
 }
@@ -4200,6 +4195,11 @@ export class DataGoogleContainerClusterNodeConfigLinuxNodeConfigOutputReference 
     }
   }
 
+  // cgroup_mode - computed: true, optional: false, required: false
+  public get cgroupMode() {
+    return this.getStringAttribute('cgroup_mode');
+  }
+
   // sysctls - computed: true, optional: false, required: false
   private _sysctls = new cdktf.StringMap(this, "sysctls");
   public get sysctls() {
@@ -6118,6 +6118,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigOutputRe
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // cgroup_mode - computed: true, optional: false, required: false
+  public get cgroupMode() {
+    return this.getStringAttribute('cgroup_mode');
   }
 
   // sysctls - computed: true, optional: false, required: false

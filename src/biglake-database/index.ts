@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database
+// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface BiglakeDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The parent catalog.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#catalog BiglakeDatabase#catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#catalog BiglakeDatabase#catalog}
   */
   readonly catalog: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#id BiglakeDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#id BiglakeDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,25 +23,25 @@ export interface BiglakeDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the database.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#name BiglakeDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#name BiglakeDatabase#name}
   */
   readonly name: string;
   /**
   * The database type.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#type BiglakeDatabase#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#type BiglakeDatabase#type}
   */
   readonly type: string;
   /**
   * hive_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#hive_options BiglakeDatabase#hive_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#hive_options BiglakeDatabase#hive_options}
   */
   readonly hiveOptions: BiglakeDatabaseHiveOptions;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#timeouts BiglakeDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#timeouts BiglakeDatabase#timeouts}
   */
   readonly timeouts?: BiglakeDatabaseTimeouts;
 }
@@ -54,7 +49,7 @@ export interface BiglakeDatabaseHiveOptions {
   /**
   * Cloud Storage folder URI where the database data is stored, starting with "gs://".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#location_uri BiglakeDatabase#location_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#location_uri BiglakeDatabase#location_uri}
   */
   readonly locationUri?: string;
   /**
@@ -62,7 +57,7 @@ export interface BiglakeDatabaseHiveOptions {
   * list of"key": value pairs.
   * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#parameters BiglakeDatabase#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#parameters BiglakeDatabase#parameters}
   */
   readonly parameters?: { [key: string]: string };
 }
@@ -150,15 +145,15 @@ export class BiglakeDatabaseHiveOptionsOutputReference extends cdktf.ComplexObje
 }
 export interface BiglakeDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#create BiglakeDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#create BiglakeDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#delete BiglakeDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#delete BiglakeDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database#update BiglakeDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database#update BiglakeDatabase#update}
   */
   readonly update?: string;
 }
@@ -279,7 +274,7 @@ export class BiglakeDatabaseTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database google_biglake_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database google_biglake_database}
 */
 export class BiglakeDatabase extends cdktf.TerraformResource {
 
@@ -293,7 +288,7 @@ export class BiglakeDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/biglake_database google_biglake_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/biglake_database google_biglake_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -304,7 +299,7 @@ export class BiglakeDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_biglake_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.0.0',
+        providerVersion: '5.1.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

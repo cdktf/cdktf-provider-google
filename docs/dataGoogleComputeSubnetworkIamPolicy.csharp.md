@@ -1,6 +1,6 @@
 # `data_google_compute_subnetwork_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_subnetwork_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_compute_subnetwork_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy).
 
 # `dataGoogleComputeSubnetworkIamPolicy` Submodule <a name="`dataGoogleComputeSubnetworkIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_subnetwork_iam_
 
 ### DataGoogleComputeSubnetworkIamPolicy <a name="DataGoogleComputeSubnetworkIamPolicy" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicy.Initializer"></a>
 
@@ -652,10 +652,10 @@ new DataGoogleComputeSubnetworkIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.subnetwork">Subnetwork</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#subnetwork DataGoogleComputeSubnetworkIamPolicy#subnetwork}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#id DataGoogleComputeSubnetworkIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#project DataGoogleComputeSubnetworkIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#region DataGoogleComputeSubnetworkIamPolicy#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.subnetwork">Subnetwork</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#subnetwork DataGoogleComputeSubnetworkIamPolicy#subnetwork}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#id DataGoogleComputeSubnetworkIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#project DataGoogleComputeSubnetworkIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetworkIamPolicy.DataGoogleComputeSubnetworkIamPolicyConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#region DataGoogleComputeSubnetworkIamPolicy#region}. |
 
 ---
 
@@ -737,7 +737,7 @@ public string Subnetwork { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#subnetwork DataGoogleComputeSubnetworkIamPolicy#subnetwork}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#subnetwork DataGoogleComputeSubnetworkIamPolicy#subnetwork}.
 
 ---
 
@@ -749,7 +749,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#id DataGoogleComputeSubnetworkIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#id DataGoogleComputeSubnetworkIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -764,7 +764,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#project DataGoogleComputeSubnetworkIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#project DataGoogleComputeSubnetworkIamPolicy#project}.
 
 ---
 
@@ -776,7 +776,7 @@ public string Region { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_subnetwork_iam_policy#region DataGoogleComputeSubnetworkIamPolicy#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_subnetwork_iam_policy#region DataGoogleComputeSubnetworkIamPolicy#region}.
 
 ---
 
