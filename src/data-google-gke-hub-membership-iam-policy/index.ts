@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/gke_hub_membership_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/gke_hub_membership_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleGkeHubMembershipIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/gke_hub_membership_iam_policy#id DataGoogleGkeHubMembershipIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/gke_hub_membership_iam_policy#id DataGoogleGkeHubMembershipIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/gke_hub_membership_iam_policy#membership_id DataGoogleGkeHubMembershipIamPolicy#membership_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/gke_hub_membership_iam_policy#location DataGoogleGkeHubMembershipIamPolicy#location}
+  */
+  readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/gke_hub_membership_iam_policy#membership_id DataGoogleGkeHubMembershipIamPolicy#membership_id}
   */
   readonly membershipId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/gke_hub_membership_iam_policy#project DataGoogleGkeHubMembershipIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/gke_hub_membership_iam_policy#project DataGoogleGkeHubMembershipIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/gke_hub_membership_iam_policy google_gke_hub_membership_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/gke_hub_membership_iam_policy google_gke_hub_membership_iam_policy}
 */
 export class DataGoogleGkeHubMembershipIamPolicy extends cdktf.TerraformDataSource {
 
@@ -44,7 +48,7 @@ export class DataGoogleGkeHubMembershipIamPolicy extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/gke_hub_membership_iam_policy google_gke_hub_membership_iam_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/gke_hub_membership_iam_policy google_gke_hub_membership_iam_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -55,7 +59,7 @@ export class DataGoogleGkeHubMembershipIamPolicy extends cdktf.TerraformDataSour
       terraformResourceType: 'google_gke_hub_membership_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.0.0',
+        providerVersion: '5.1.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -67,6 +71,7 @@ export class DataGoogleGkeHubMembershipIamPolicy extends cdktf.TerraformDataSour
       forEach: config.forEach
     });
     this._id = config.id;
+    this._location = config.location;
     this._membershipId = config.membershipId;
     this._project = config.project;
   }
@@ -94,6 +99,22 @@ export class DataGoogleGkeHubMembershipIamPolicy extends cdktf.TerraformDataSour
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // location - computed: true, optional: true, required: false
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
   }
 
   // membership_id - computed: false, optional: false, required: true
@@ -137,6 +158,7 @@ export class DataGoogleGkeHubMembershipIamPolicy extends cdktf.TerraformDataSour
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      location: cdktf.stringToTerraform(this._location),
       membership_id: cdktf.stringToTerraform(this._membershipId),
       project: cdktf.stringToTerraform(this._project),
     };

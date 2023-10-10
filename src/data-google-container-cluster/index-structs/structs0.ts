@@ -4200,6 +4200,11 @@ export class DataGoogleContainerClusterNodeConfigLinuxNodeConfigOutputReference 
     }
   }
 
+  // cgroup_mode - computed: true, optional: false, required: false
+  public get cgroupMode() {
+    return this.getStringAttribute('cgroup_mode');
+  }
+
   // sysctls - computed: true, optional: false, required: false
   private _sysctls = new cdktf.StringMap(this, "sysctls");
   public get sysctls() {
@@ -6118,6 +6123,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigOutputRe
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // cgroup_mode - computed: true, optional: false, required: false
+  public get cgroupMode() {
+    return this.getStringAttribute('cgroup_mode');
   }
 
   // sysctls - computed: true, optional: false, required: false

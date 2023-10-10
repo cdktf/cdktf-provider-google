@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_forwarding_rule
+// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_forwarding_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_forwarding_rule#id DataGoogleComputeForwardingRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_forwarding_rule#id DataGoogleComputeForwardingRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,11 +34,11 @@ export interface DataGoogleComputeForwardingRuleConfig extends cdktf.TerraformMe
   * APIs, the forwarding rule name must be a 1-20 characters string with
   * lowercase letters and numbers and must start with a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_forwarding_rule#name DataGoogleComputeForwardingRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_forwarding_rule#name DataGoogleComputeForwardingRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_forwarding_rule#project DataGoogleComputeForwardingRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_forwarding_rule#project DataGoogleComputeForwardingRule#project}
   */
   readonly project?: string;
   /**
@@ -46,7 +46,7 @@ export interface DataGoogleComputeForwardingRuleConfig extends cdktf.TerraformMe
   * 
   * This field is not applicable to global forwarding rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_forwarding_rule#region DataGoogleComputeForwardingRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_forwarding_rule#region DataGoogleComputeForwardingRule#region}
   */
   readonly region?: string;
 }
@@ -121,7 +121,7 @@ export class DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsList ex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule}
 */
 export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
@@ -135,7 +135,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -146,7 +146,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.0.0',
+        providerVersion: '5.1.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

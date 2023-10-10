@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config
+// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,48 +15,54 @@ export interface IdentityPlatformConfigConfig extends cdktf.TerraformMetaArgumen
   /**
   * List of domains authorized for OAuth redirects.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
   */
   readonly authorizedDomains?: string[];
   /**
   * Whether anonymous users will be auto-deleted after a period of 30 days
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
   */
   readonly autodeleteAnonymousUsers?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}
   */
   readonly project?: string;
   /**
   * blocking_functions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
   */
   readonly blockingFunctions?: IdentityPlatformConfigBlockingFunctions;
   /**
   * quota block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
   */
   readonly quota?: IdentityPlatformConfigQuota;
   /**
   * sign_in block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#sign_in IdentityPlatformConfig#sign_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#sign_in IdentityPlatformConfig#sign_in}
   */
   readonly signIn?: IdentityPlatformConfigSignIn;
   /**
+  * sms_region_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#sms_region_config IdentityPlatformConfig#sms_region_config}
+  */
+  readonly smsRegionConfig?: IdentityPlatformConfigSmsRegionConfig;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformConfigTimeouts;
 }
@@ -64,19 +70,19 @@ export interface IdentityPlatformConfigBlockingFunctionsForwardInboundCredential
   /**
   * Whether to pass the user's OAuth identity provider's access token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
   */
   readonly accessToken?: boolean | cdktf.IResolvable;
   /**
   * Whether to pass the user's OIDC identity provider's ID token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
   */
   readonly idToken?: boolean | cdktf.IResolvable;
   /**
   * Whether to pass the user's OAuth identity provider's refresh token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
   */
   readonly refreshToken?: boolean | cdktf.IResolvable;
 }
@@ -187,13 +193,13 @@ export class IdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOut
 }
 export interface IdentityPlatformConfigBlockingFunctionsTriggers {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}
   */
   readonly eventType: string;
   /**
   * HTTP URI trigger for the Cloud Function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
   */
   readonly functionUri: string;
 }
@@ -314,13 +320,13 @@ export interface IdentityPlatformConfigBlockingFunctions {
   /**
   * forward_inbound_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
   */
   readonly forwardInboundCredentials?: IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials;
   /**
   * triggers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
   */
   readonly triggers: IdentityPlatformConfigBlockingFunctionsTriggers[] | cdktf.IResolvable;
 }
@@ -407,19 +413,19 @@ export interface IdentityPlatformConfigQuotaSignUpQuotaConfig {
   /**
   * A sign up APIs quota that customers can override temporarily.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
   */
   readonly quota?: number;
   /**
   * How long this quota will be active for. It is measurred in seconds, e.g., Example: "9.615s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
   */
   readonly quotaDuration?: string;
   /**
   * When this quota will take affect.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
   */
   readonly startTime?: string;
 }
@@ -532,7 +538,7 @@ export interface IdentityPlatformConfigQuota {
   /**
   * sign_up_quota_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
   */
   readonly signUpQuotaConfig?: IdentityPlatformConfigQuotaSignUpQuotaConfig;
 }
@@ -683,7 +689,7 @@ export interface IdentityPlatformConfigSignInAnonymous {
   /**
   * Whether anonymous user auth is enabled for the project or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -747,7 +753,7 @@ export interface IdentityPlatformConfigSignInEmail {
   /**
   * Whether email auth is enabled for the project or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
@@ -755,7 +761,7 @@ export interface IdentityPlatformConfigSignInEmail {
   * password must be provided to sign in. If false, a user may sign in via either
   * email/password or email link.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#password_required IdentityPlatformConfig#password_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#password_required IdentityPlatformConfig#password_required}
   */
   readonly passwordRequired?: boolean | cdktf.IResolvable;
 }
@@ -842,13 +848,13 @@ export interface IdentityPlatformConfigSignInPhoneNumber {
   /**
   * Whether phone number auth is enabled for the project or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * A map of <test phone number, fake code> that can be used for phone auth testing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#test_phone_numbers IdentityPlatformConfig#test_phone_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#test_phone_numbers IdentityPlatformConfig#test_phone_numbers}
   */
   readonly testPhoneNumbers?: { [key: string]: string };
 }
@@ -935,25 +941,25 @@ export interface IdentityPlatformConfigSignIn {
   /**
   * Whether to allow more than one account to have the same email.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#allow_duplicate_emails IdentityPlatformConfig#allow_duplicate_emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#allow_duplicate_emails IdentityPlatformConfig#allow_duplicate_emails}
   */
   readonly allowDuplicateEmails?: boolean | cdktf.IResolvable;
   /**
   * anonymous block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#anonymous IdentityPlatformConfig#anonymous}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#anonymous IdentityPlatformConfig#anonymous}
   */
   readonly anonymous?: IdentityPlatformConfigSignInAnonymous;
   /**
   * email block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#email IdentityPlatformConfig#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#email IdentityPlatformConfig#email}
   */
   readonly email?: IdentityPlatformConfigSignInEmail;
   /**
   * phone_number block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#phone_number IdentityPlatformConfig#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#phone_number IdentityPlatformConfig#phone_number}
   */
   readonly phoneNumber?: IdentityPlatformConfigSignInPhoneNumber;
 }
@@ -1091,17 +1097,247 @@ export class IdentityPlatformConfigSignInOutputReference extends cdktf.ComplexOb
     return this._phoneNumber.internalValue;
   }
 }
+export interface IdentityPlatformConfigSmsRegionConfigAllowByDefault {
+  /**
+  * Two letter unicode region codes to disallow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#disallowed_regions IdentityPlatformConfig#disallowed_regions}
+  */
+  readonly disallowedRegions?: string[];
+}
+
+export function identityPlatformConfigSmsRegionConfigAllowByDefaultToTerraform(struct?: IdentityPlatformConfigSmsRegionConfigAllowByDefaultOutputReference | IdentityPlatformConfigSmsRegionConfigAllowByDefault): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disallowed_regions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.disallowedRegions),
+  }
+}
+
+export class IdentityPlatformConfigSmsRegionConfigAllowByDefaultOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformConfigSmsRegionConfigAllowByDefault | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._disallowedRegions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disallowedRegions = this._disallowedRegions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigSmsRegionConfigAllowByDefault | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._disallowedRegions = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._disallowedRegions = value.disallowedRegions;
+    }
+  }
+
+  // disallowed_regions - computed: false, optional: true, required: false
+  private _disallowedRegions?: string[]; 
+  public get disallowedRegions() {
+    return this.getListAttribute('disallowed_regions');
+  }
+  public set disallowedRegions(value: string[]) {
+    this._disallowedRegions = value;
+  }
+  public resetDisallowedRegions() {
+    this._disallowedRegions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disallowedRegionsInput() {
+    return this._disallowedRegions;
+  }
+}
+export interface IdentityPlatformConfigSmsRegionConfigAllowlistOnly {
+  /**
+  * Two letter unicode region codes to allow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#allowed_regions IdentityPlatformConfig#allowed_regions}
+  */
+  readonly allowedRegions?: string[];
+}
+
+export function identityPlatformConfigSmsRegionConfigAllowlistOnlyToTerraform(struct?: IdentityPlatformConfigSmsRegionConfigAllowlistOnlyOutputReference | IdentityPlatformConfigSmsRegionConfigAllowlistOnly): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_regions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedRegions),
+  }
+}
+
+export class IdentityPlatformConfigSmsRegionConfigAllowlistOnlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformConfigSmsRegionConfigAllowlistOnly | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedRegions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedRegions = this._allowedRegions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigSmsRegionConfigAllowlistOnly | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedRegions = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedRegions = value.allowedRegions;
+    }
+  }
+
+  // allowed_regions - computed: false, optional: true, required: false
+  private _allowedRegions?: string[]; 
+  public get allowedRegions() {
+    return this.getListAttribute('allowed_regions');
+  }
+  public set allowedRegions(value: string[]) {
+    this._allowedRegions = value;
+  }
+  public resetAllowedRegions() {
+    this._allowedRegions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedRegionsInput() {
+    return this._allowedRegions;
+  }
+}
+export interface IdentityPlatformConfigSmsRegionConfig {
+  /**
+  * allow_by_default block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#allow_by_default IdentityPlatformConfig#allow_by_default}
+  */
+  readonly allowByDefault?: IdentityPlatformConfigSmsRegionConfigAllowByDefault;
+  /**
+  * allowlist_only block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#allowlist_only IdentityPlatformConfig#allowlist_only}
+  */
+  readonly allowlistOnly?: IdentityPlatformConfigSmsRegionConfigAllowlistOnly;
+}
+
+export function identityPlatformConfigSmsRegionConfigToTerraform(struct?: IdentityPlatformConfigSmsRegionConfigOutputReference | IdentityPlatformConfigSmsRegionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allow_by_default: identityPlatformConfigSmsRegionConfigAllowByDefaultToTerraform(struct!.allowByDefault),
+    allowlist_only: identityPlatformConfigSmsRegionConfigAllowlistOnlyToTerraform(struct!.allowlistOnly),
+  }
+}
+
+export class IdentityPlatformConfigSmsRegionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformConfigSmsRegionConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowByDefault?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowByDefault = this._allowByDefault?.internalValue;
+    }
+    if (this._allowlistOnly?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowlistOnly = this._allowlistOnly?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigSmsRegionConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowByDefault.internalValue = undefined;
+      this._allowlistOnly.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowByDefault.internalValue = value.allowByDefault;
+      this._allowlistOnly.internalValue = value.allowlistOnly;
+    }
+  }
+
+  // allow_by_default - computed: false, optional: true, required: false
+  private _allowByDefault = new IdentityPlatformConfigSmsRegionConfigAllowByDefaultOutputReference(this, "allow_by_default");
+  public get allowByDefault() {
+    return this._allowByDefault;
+  }
+  public putAllowByDefault(value: IdentityPlatformConfigSmsRegionConfigAllowByDefault) {
+    this._allowByDefault.internalValue = value;
+  }
+  public resetAllowByDefault() {
+    this._allowByDefault.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowByDefaultInput() {
+    return this._allowByDefault.internalValue;
+  }
+
+  // allowlist_only - computed: false, optional: true, required: false
+  private _allowlistOnly = new IdentityPlatformConfigSmsRegionConfigAllowlistOnlyOutputReference(this, "allowlist_only");
+  public get allowlistOnly() {
+    return this._allowlistOnly;
+  }
+  public putAllowlistOnly(value: IdentityPlatformConfigSmsRegionConfigAllowlistOnly) {
+    this._allowlistOnly.internalValue = value;
+  }
+  public resetAllowlistOnly() {
+    this._allowlistOnly.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowlistOnlyInput() {
+    return this._allowlistOnly.internalValue;
+  }
+}
 export interface IdentityPlatformConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}
   */
   readonly update?: string;
 }
@@ -1222,7 +1458,7 @@ export class IdentityPlatformConfigTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config google_identity_platform_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config google_identity_platform_config}
 */
 export class IdentityPlatformConfig extends cdktf.TerraformResource {
 
@@ -1236,7 +1472,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/identity_platform_config google_identity_platform_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/identity_platform_config google_identity_platform_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1247,7 +1483,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_identity_platform_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.0.0',
+        providerVersion: '5.1.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -1265,6 +1501,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
     this._blockingFunctions.internalValue = config.blockingFunctions;
     this._quota.internalValue = config.quota;
     this._signIn.internalValue = config.signIn;
+    this._smsRegionConfig.internalValue = config.smsRegionConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1389,6 +1626,22 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
     return this._signIn.internalValue;
   }
 
+  // sms_region_config - computed: false, optional: true, required: false
+  private _smsRegionConfig = new IdentityPlatformConfigSmsRegionConfigOutputReference(this, "sms_region_config");
+  public get smsRegionConfig() {
+    return this._smsRegionConfig;
+  }
+  public putSmsRegionConfig(value: IdentityPlatformConfigSmsRegionConfig) {
+    this._smsRegionConfig.internalValue = value;
+  }
+  public resetSmsRegionConfig() {
+    this._smsRegionConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smsRegionConfigInput() {
+    return this._smsRegionConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new IdentityPlatformConfigTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1418,6 +1671,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
       blocking_functions: identityPlatformConfigBlockingFunctionsToTerraform(this._blockingFunctions.internalValue),
       quota: identityPlatformConfigQuotaToTerraform(this._quota.internalValue),
       sign_in: identityPlatformConfigSignInToTerraform(this._signIn.internalValue),
+      sms_region_config: identityPlatformConfigSmsRegionConfigToTerraform(this._smsRegionConfig.internalValue),
       timeouts: identityPlatformConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

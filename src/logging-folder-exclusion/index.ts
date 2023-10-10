@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion
+// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,27 +15,27 @@ export interface LoggingFolderExclusionConfig extends cdktf.TerraformMetaArgumen
   /**
   * A human-readable description.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion#description LoggingFolderExclusion#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion#description LoggingFolderExclusion#description}
   */
   readonly description?: string;
   /**
   * Whether this exclusion rule should be disabled or not. This defaults to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion#disabled LoggingFolderExclusion#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion#disabled LoggingFolderExclusion#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion#filter LoggingFolderExclusion#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion#filter LoggingFolderExclusion#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion#folder LoggingFolderExclusion#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion#folder LoggingFolderExclusion#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion#id LoggingFolderExclusion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion#id LoggingFolderExclusion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -44,13 +44,13 @@ export interface LoggingFolderExclusionConfig extends cdktf.TerraformMetaArgumen
   /**
   * The name of the logging exclusion.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion#name LoggingFolderExclusion#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion#name LoggingFolderExclusion#name}
   */
   readonly name: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion google_logging_folder_exclusion}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion google_logging_folder_exclusion}
 */
 export class LoggingFolderExclusion extends cdktf.TerraformResource {
 
@@ -64,7 +64,7 @@ export class LoggingFolderExclusion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_folder_exclusion google_logging_folder_exclusion} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_folder_exclusion google_logging_folder_exclusion} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -75,7 +75,7 @@ export class LoggingFolderExclusion extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_folder_exclusion',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.0.0',
+        providerVersion: '5.1.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

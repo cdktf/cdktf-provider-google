@@ -1,6 +1,6 @@
 # `google_gke_hub_feature_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_gke_hub_feature_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding).
+Refer to the Terraform Registory for docs: [`google_gke_hub_feature_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding).
 
 # `gkeHubFeatureIamBinding` Submodule <a name="`gkeHubFeatureIamBinding` Submodule" id="@cdktf/provider-google.gkeHubFeatureIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_gke_hub_feature_iam_binding`
 
 ### GkeHubFeatureIamBinding <a name="GkeHubFeatureIamBinding" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding google_gke_hub_feature_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding google_gke_hub_feature_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBinding.Initializer"></a>
 
@@ -734,9 +734,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/gkehubfeatureiambin
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#expression GkeHubFeatureIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#title GkeHubFeatureIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#description GkeHubFeatureIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#expression GkeHubFeatureIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#title GkeHubFeatureIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#description GkeHubFeatureIamBinding#description}. |
 
 ---
 
@@ -748,7 +748,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#expression GkeHubFeatureIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#expression GkeHubFeatureIamBinding#expression}.
 
 ---
 
@@ -760,7 +760,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#title GkeHubFeatureIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#title GkeHubFeatureIamBinding#title}.
 
 ---
 
@@ -772,7 +772,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#description GkeHubFeatureIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#description GkeHubFeatureIamBinding#description}.
 
 ---
 
@@ -812,13 +812,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/gkehubfeatureiambin
 | <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#members GkeHubFeatureIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#name GkeHubFeatureIamBinding#name}. |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#role GkeHubFeatureIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#members GkeHubFeatureIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#name GkeHubFeatureIamBinding#name}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#role GkeHubFeatureIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition">GkeHubFeatureIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#id GkeHubFeatureIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#location GkeHubFeatureIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#project GkeHubFeatureIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#id GkeHubFeatureIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#location GkeHubFeatureIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#project GkeHubFeatureIamBinding#project}. |
 
 ---
 
@@ -900,7 +900,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#members GkeHubFeatureIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#members GkeHubFeatureIamBinding#members}.
 
 ---
 
@@ -912,7 +912,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#name GkeHubFeatureIamBinding#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#name GkeHubFeatureIamBinding#name}.
 
 ---
 
@@ -924,7 +924,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#role GkeHubFeatureIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#role GkeHubFeatureIamBinding#role}.
 
 ---
 
@@ -938,7 +938,7 @@ Condition GkeHubFeatureIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#condition GkeHubFeatureIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#condition GkeHubFeatureIamBinding#condition}
 
 ---
 
@@ -950,7 +950,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#id GkeHubFeatureIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#id GkeHubFeatureIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -965,7 +965,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#location GkeHubFeatureIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#location GkeHubFeatureIamBinding#location}.
 
 ---
 
@@ -977,7 +977,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_feature_iam_binding#project GkeHubFeatureIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_feature_iam_binding#project GkeHubFeatureIamBinding#project}.
 
 ---
 

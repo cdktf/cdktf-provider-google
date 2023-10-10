@@ -1,6 +1,6 @@
 # `google_storage_notification`
 
-Refer to the Terraform Registory for docs: [`google_storage_notification`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification).
+Refer to the Terraform Registory for docs: [`google_storage_notification`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification).
 
 # `storageNotification` Submodule <a name="`storageNotification` Submodule" id="@cdktf/provider-google.storageNotification"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_storage_notification`](https
 
 ### StorageNotification <a name="StorageNotification" id="@cdktf/provider-google.storageNotification.StorageNotification"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification google_storage_notification}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification google_storage_notification}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageNotification.StorageNotification.Initializer"></a>
 
@@ -53,7 +53,7 @@ StorageNotification.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotification.Initializer.parameter.topic">topic</a></code> | <code>java.lang.String</code> | The Cloud Pub/Sub topic to which this subscription publishes. |
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotification.Initializer.parameter.customAttributes">customAttributes</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription. |
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotification.Initializer.parameter.eventTypes">eventTypes</a></code> | <code>java.util.List<java.lang.String></code> | List of event type filters for this notification config. |
-| <code><a href="#@cdktf/provider-google.storageNotification.StorageNotification.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#id StorageNotification#id}. |
+| <code><a href="#@cdktf/provider-google.storageNotification.StorageNotification.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#id StorageNotification#id}. |
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotification.Initializer.parameter.objectNamePrefix">objectNamePrefix</a></code> | <code>java.lang.String</code> | Specifies a prefix path filter for this notification config. |
 
 ---
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#bucket StorageNotification#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#bucket StorageNotification#bucket}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The desired content of the Payload. One of "JSON_API_V1" or "NONE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#payload_format StorageNotification#payload_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#payload_format StorageNotification#payload_format}
 
 ---
 
@@ -146,7 +146,7 @@ The Cloud Pub/Sub topic to which this subscription publishes.
 
 Expects either the  topic name, assumed to belong to the default GCP provider project, or the project-level name,  i.e. projects/my-gcp-project/topics/my-topic or my-topic. If the project is not set in the provider, you will need to use the project-level name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#topic StorageNotification#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#topic StorageNotification#topic}
 
 ---
 
@@ -156,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#custom_attributes StorageNotification#custom_attributes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#custom_attributes StorageNotification#custom_attributes}
 
 ---
 
@@ -168,7 +168,7 @@ List of event type filters for this notification config.
 
 If not specified, Cloud Storage will send notifications for all event types. The valid types are: "OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE", "OBJECT_DELETE", "OBJECT_ARCHIVE"
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#event_types StorageNotification#event_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#event_types StorageNotification#event_types}
 
 ---
 
@@ -176,7 +176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#id StorageNotification#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#id StorageNotification#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -191,7 +191,7 @@ Specifies a prefix path filter for this notification config.
 
 Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#object_name_prefix StorageNotification#object_name_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#object_name_prefix StorageNotification#object_name_prefix}
 
 ---
 
@@ -904,7 +904,7 @@ StorageNotificationConfig.builder()
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotificationConfig.property.topic">topic</a></code> | <code>java.lang.String</code> | The Cloud Pub/Sub topic to which this subscription publishes. |
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotificationConfig.property.customAttributes">customAttributes</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription. |
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotificationConfig.property.eventTypes">eventTypes</a></code> | <code>java.util.List<java.lang.String></code> | List of event type filters for this notification config. |
-| <code><a href="#@cdktf/provider-google.storageNotification.StorageNotificationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#id StorageNotification#id}. |
+| <code><a href="#@cdktf/provider-google.storageNotification.StorageNotificationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#id StorageNotification#id}. |
 | <code><a href="#@cdktf/provider-google.storageNotification.StorageNotificationConfig.property.objectNamePrefix">objectNamePrefix</a></code> | <code>java.lang.String</code> | Specifies a prefix path filter for this notification config. |
 
 ---
@@ -989,7 +989,7 @@ public java.lang.String getBucket();
 
 The name of the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#bucket StorageNotification#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#bucket StorageNotification#bucket}
 
 ---
 
@@ -1003,7 +1003,7 @@ public java.lang.String getPayloadFormat();
 
 The desired content of the Payload. One of "JSON_API_V1" or "NONE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#payload_format StorageNotification#payload_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#payload_format StorageNotification#payload_format}
 
 ---
 
@@ -1019,7 +1019,7 @@ The Cloud Pub/Sub topic to which this subscription publishes.
 
 Expects either the  topic name, assumed to belong to the default GCP provider project, or the project-level name,  i.e. projects/my-gcp-project/topics/my-topic or my-topic. If the project is not set in the provider, you will need to use the project-level name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#topic StorageNotification#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#topic StorageNotification#topic}
 
 ---
 
@@ -1033,7 +1033,7 @@ public java.util.Map<java.lang.String, java.lang.String> getCustomAttributes();
 
 A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#custom_attributes StorageNotification#custom_attributes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#custom_attributes StorageNotification#custom_attributes}
 
 ---
 
@@ -1049,7 +1049,7 @@ List of event type filters for this notification config.
 
 If not specified, Cloud Storage will send notifications for all event types. The valid types are: "OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE", "OBJECT_DELETE", "OBJECT_ARCHIVE"
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#event_types StorageNotification#event_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#event_types StorageNotification#event_types}
 
 ---
 
@@ -1061,7 +1061,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#id StorageNotification#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#id StorageNotification#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1080,7 +1080,7 @@ Specifies a prefix path filter for this notification config.
 
 Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/storage_notification#object_name_prefix StorageNotification#object_name_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_notification#object_name_prefix StorageNotification#object_name_prefix}
 
 ---
 

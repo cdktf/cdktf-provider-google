@@ -1,6 +1,6 @@
 # `google_gke_hub_membership_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_gke_hub_membership_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding).
+Refer to the Terraform Registory for docs: [`google_gke_hub_membership_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding).
 
 # `gkeHubMembershipIamBinding` Submodule <a name="`gkeHubMembershipIamBinding` Submodule" id="@cdktf/provider-google.gkeHubMembershipIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_gke_hub_membership_iam_bindi
 
 ### GkeHubMembershipIamBinding <a name="GkeHubMembershipIamBinding" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding google_gke_hub_membership_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding google_gke_hub_membership_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.Initializer"></a>
 
@@ -73,6 +73,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.putCondition">PutCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.resetCondition">ResetCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.resetId">ResetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.resetLocation">ResetLocation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.resetProject">ResetProject</a></code> | *No description.* |
 
 ---
@@ -285,6 +286,12 @@ private void ResetCondition()
 private void ResetId()
 ```
 
+##### `ResetLocation` <a name="ResetLocation" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.resetLocation"></a>
+
+```csharp
+private void ResetLocation()
+```
+
 ##### `ResetProject` <a name="ResetProject" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.resetProject"></a>
 
 ```csharp
@@ -383,11 +390,13 @@ GkeHubMembershipIamBinding.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.etag">Etag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.conditionInput">ConditionInput</a></code> | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition">GkeHubMembershipIamBindingCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.membershipIdInput">MembershipIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.membersInput">MembersInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.roleInput">RoleInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.id">Id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.location">Location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.members">Members</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.membershipId">MembershipId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.project">Project</a></code> | <code>string</code> | *No description.* |
@@ -577,6 +586,16 @@ public string IdInput { get; }
 
 ---
 
+##### `LocationInput`<sup>Optional</sup> <a name="LocationInput" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.locationInput"></a>
+
+```csharp
+public string LocationInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `MembershipIdInput`<sup>Optional</sup> <a name="MembershipIdInput" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.membershipIdInput"></a>
 
 ```csharp
@@ -621,6 +640,16 @@ public string RoleInput { get; }
 
 ```csharp
 public string Id { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Location`<sup>Required</sup> <a name="Location" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.property.location"></a>
+
+```csharp
+public string Location { get; }
 ```
 
 - *Type:* string
@@ -705,9 +734,9 @@ new GkeHubMembershipIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#expression GkeHubMembershipIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#title GkeHubMembershipIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#description GkeHubMembershipIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#expression GkeHubMembershipIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#title GkeHubMembershipIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#description GkeHubMembershipIamBinding#description}. |
 
 ---
 
@@ -719,7 +748,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#expression GkeHubMembershipIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#expression GkeHubMembershipIamBinding#expression}.
 
 ---
 
@@ -731,7 +760,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#title GkeHubMembershipIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#title GkeHubMembershipIamBinding#title}.
 
 ---
 
@@ -743,7 +772,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#description GkeHubMembershipIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#description GkeHubMembershipIamBinding#description}.
 
 ---
 
@@ -767,6 +796,7 @@ new GkeHubMembershipIamBindingConfig {
     string Role,
     GkeHubMembershipIamBindingCondition Condition = null,
     string Id = null,
+    string Location = null,
     string Project = null
 };
 ```
@@ -782,12 +812,13 @@ new GkeHubMembershipIamBindingConfig {
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#members GkeHubMembershipIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.membershipId">MembershipId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#membership_id GkeHubMembershipIamBinding#membership_id}. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#role GkeHubMembershipIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#members GkeHubMembershipIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.membershipId">MembershipId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#membership_id GkeHubMembershipIamBinding#membership_id}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#role GkeHubMembershipIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition">GkeHubMembershipIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#id GkeHubMembershipIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#project GkeHubMembershipIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#id GkeHubMembershipIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#location GkeHubMembershipIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#project GkeHubMembershipIamBinding#project}. |
 
 ---
 
@@ -869,7 +900,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#members GkeHubMembershipIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#members GkeHubMembershipIamBinding#members}.
 
 ---
 
@@ -881,7 +912,7 @@ public string MembershipId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#membership_id GkeHubMembershipIamBinding#membership_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#membership_id GkeHubMembershipIamBinding#membership_id}.
 
 ---
 
@@ -893,7 +924,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#role GkeHubMembershipIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#role GkeHubMembershipIamBinding#role}.
 
 ---
 
@@ -907,7 +938,7 @@ public GkeHubMembershipIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#condition GkeHubMembershipIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#condition GkeHubMembershipIamBinding#condition}
 
 ---
 
@@ -919,10 +950,22 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#id GkeHubMembershipIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#id GkeHubMembershipIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `Location`<sup>Optional</sup> <a name="Location" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.property.location"></a>
+
+```csharp
+public string Location { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#location GkeHubMembershipIamBinding#location}.
 
 ---
 
@@ -934,7 +977,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership_iam_binding#project GkeHubMembershipIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership_iam_binding#project GkeHubMembershipIamBinding#project}.
 
 ---
 

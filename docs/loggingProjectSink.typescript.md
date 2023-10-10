@@ -1,6 +1,6 @@
 # `google_logging_project_sink`
 
-Refer to the Terraform Registory for docs: [`google_logging_project_sink`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink).
+Refer to the Terraform Registory for docs: [`google_logging_project_sink`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink).
 
 # `loggingProjectSink` Submodule <a name="`loggingProjectSink` Submodule" id="@cdktf/provider-google.loggingProjectSink"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_logging_project_sink`](https
 
 ### LoggingProjectSink <a name="LoggingProjectSink" id="@cdktf/provider-google.loggingProjectSink.LoggingProjectSink"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink google_logging_project_sink}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink google_logging_project_sink}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectSink.LoggingProjectSink.Initializer"></a>
 
@@ -853,7 +853,7 @@ Whether to use BigQuery's partition tables.
 
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#use_partitioned_tables LoggingProjectSink#use_partitioned_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#use_partitioned_tables LoggingProjectSink#use_partitioned_tables}
 
 ---
 
@@ -885,7 +885,7 @@ const loggingProjectSinkConfig: loggingProjectSink.LoggingProjectSinkConfig = { 
 | <code><a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkConfig.property.disabled">disabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | If set to True, then this sink is disabled and it does not export any log entries. |
 | <code><a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkConfig.property.exclusions">exclusions</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkExclusions">LoggingProjectSinkExclusions</a>[]</code> | exclusions block. |
 | <code><a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkConfig.property.filter">filter</a></code> | <code>string</code> | The filter to apply when exporting logs. Only log entries that match the filter are exported. |
-| <code><a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#id LoggingProjectSink#id}. |
+| <code><a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#id LoggingProjectSink#id}. |
 | <code><a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkConfig.property.project">project</a></code> | <code>string</code> | The ID of the project to create the sink in. |
 | <code><a href="#@cdktf/provider-google.loggingProjectSink.LoggingProjectSinkConfig.property.uniqueWriterIdentity">uniqueWriterIdentity</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether or not to create a unique identity associated with this sink. |
 
@@ -973,7 +973,7 @@ The destination of the sink (or, in other words, where logs are written to).
 
 Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#destination LoggingProjectSink#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#destination LoggingProjectSink#destination}
 
 ---
 
@@ -987,7 +987,7 @@ public readonly name: string;
 
 The name of the logging sink.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#name LoggingProjectSink#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#name LoggingProjectSink#name}
 
 ---
 
@@ -1001,7 +1001,7 @@ public readonly bigqueryOptions: LoggingProjectSinkBigqueryOptions;
 
 bigquery_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#bigquery_options LoggingProjectSink#bigquery_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#bigquery_options LoggingProjectSink#bigquery_options}
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly description: string;
 
 A description of this sink. The maximum length of the description is 8000 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#description LoggingProjectSink#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#description LoggingProjectSink#description}
 
 ---
 
@@ -1029,7 +1029,7 @@ public readonly disabled: boolean | IResolvable;
 
 If set to True, then this sink is disabled and it does not export any log entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#disabled LoggingProjectSink#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#disabled LoggingProjectSink#disabled}
 
 ---
 
@@ -1043,7 +1043,7 @@ public readonly exclusions: IResolvable | LoggingProjectSinkExclusions[];
 
 exclusions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#exclusions LoggingProjectSink#exclusions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#exclusions LoggingProjectSink#exclusions}
 
 ---
 
@@ -1057,7 +1057,7 @@ public readonly filter: string;
 
 The filter to apply when exporting logs. Only log entries that match the filter are exported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#filter LoggingProjectSink#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#filter LoggingProjectSink#filter}
 
 ---
 
@@ -1069,7 +1069,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#id LoggingProjectSink#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#id LoggingProjectSink#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1088,7 +1088,7 @@ The ID of the project to create the sink in.
 
 If omitted, the project associated with the provider is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#project LoggingProjectSink#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#project LoggingProjectSink#project}
 
 ---
 
@@ -1104,7 +1104,7 @@ Whether or not to create a unique identity associated with this sink.
 
 If false (the legacy behavior), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#unique_writer_identity LoggingProjectSink#unique_writer_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#unique_writer_identity LoggingProjectSink#unique_writer_identity}
 
 ---
 
@@ -1141,7 +1141,7 @@ An advanced logs filter that matches the log entries to be excluded.
 
 By using the sample function, you can exclude less than 100% of the matching log entries
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#filter LoggingProjectSink#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#filter LoggingProjectSink#filter}
 
 ---
 
@@ -1157,7 +1157,7 @@ A client-assigned identifier, such as "load-balancer-exclusion".
 
 Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#name LoggingProjectSink#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#name LoggingProjectSink#name}
 
 ---
 
@@ -1171,7 +1171,7 @@ public readonly description: string;
 
 A description of this exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#description LoggingProjectSink#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#description LoggingProjectSink#description}
 
 ---
 
@@ -1185,7 +1185,7 @@ public readonly disabled: boolean | IResolvable;
 
 If set to True, then this exclusion is disabled and it does not exclude any log entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/logging_project_sink#disabled LoggingProjectSink#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/logging_project_sink#disabled LoggingProjectSink#disabled}
 
 ---
 

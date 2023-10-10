@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/certificate_manager_certificate_map
+// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/certificate_manager_certificate_map
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCertificateManagerCertificateMapConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/certificate_manager_certificate_map#id DataGoogleCertificateManagerCertificateMap#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/certificate_manager_certificate_map#id DataGoogleCertificateManagerCertificateMap#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,13 +23,13 @@ export interface DataGoogleCertificateManagerCertificateMapConfig extends cdktf.
   * A user-defined name of the Certificate Map. Certificate Map names must be unique
   * globally and match the pattern 'projects/* /locations/* /certificateMaps/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/certificate_manager_certificate_map#name DataGoogleCertificateManagerCertificateMap#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/certificate_manager_certificate_map#name DataGoogleCertificateManagerCertificateMap#name}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/certificate_manager_certificate_map#project DataGoogleCertificateManagerCertificateMap#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/certificate_manager_certificate_map#project DataGoogleCertificateManagerCertificateMap#project}
   */
   readonly project?: string;
 }
@@ -179,7 +179,7 @@ export class DataGoogleCertificateManagerCertificateMapGclbTargetsList extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/certificate_manager_certificate_map google_certificate_manager_certificate_map}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/certificate_manager_certificate_map google_certificate_manager_certificate_map}
 */
 export class DataGoogleCertificateManagerCertificateMap extends cdktf.TerraformDataSource {
 
@@ -193,7 +193,7 @@ export class DataGoogleCertificateManagerCertificateMap extends cdktf.TerraformD
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/data-sources/certificate_manager_certificate_map google_certificate_manager_certificate_map} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/certificate_manager_certificate_map google_certificate_manager_certificate_map} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -204,7 +204,7 @@ export class DataGoogleCertificateManagerCertificateMap extends cdktf.TerraformD
       terraformResourceType: 'google_certificate_manager_certificate_map',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.0.0',
+        providerVersion: '5.1.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

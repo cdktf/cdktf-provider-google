@@ -1,6 +1,6 @@
 # `google_gke_hub_membership`
 
-Refer to the Terraform Registory for docs: [`google_gke_hub_membership`](https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership).
+Refer to the Terraform Registory for docs: [`google_gke_hub_membership`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership).
 
 # `gkeHubMembership` Submodule <a name="`gkeHubMembership` Submodule" id="@cdktf/provider-google.gkeHubMembership"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_gke_hub_membership`](https:/
 
 ### GkeHubMembership <a name="GkeHubMembership" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembership"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership google_gke_hub_membership}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership google_gke_hub_membership}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembership.Initializer"></a>
 
@@ -77,6 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetEndpoint">ResetEndpoint</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetLabels">ResetLabels</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetLocation">ResetLocation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetProject">ResetProject</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
@@ -326,6 +327,12 @@ func ResetId()
 func ResetLabels()
 ```
 
+##### `ResetLocation` <a name="ResetLocation" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetLocation"></a>
+
+```go
+func ResetLocation()
+```
+
 ##### `ResetProject` <a name="ResetProject" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembership.resetProject"></a>
 
 ```go
@@ -436,11 +443,13 @@ gkehubmembership.GkeHubMembership_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.endpointInput">EndpointInput</a></code> | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipEndpoint">GkeHubMembershipEndpoint</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.labelsInput">LabelsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.locationInput">LocationInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.membershipIdInput">MembershipIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.labels">Labels</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.location">Location</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.membershipId">MembershipId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.project">Project</a></code> | <code>*string</code> | *No description.* |
 
@@ -688,6 +697,16 @@ func LabelsInput() *map[string]*string
 
 ---
 
+##### `LocationInput`<sup>Optional</sup> <a name="LocationInput" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.locationInput"></a>
+
+```go
+func LocationInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `MembershipIdInput`<sup>Optional</sup> <a name="MembershipIdInput" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.membershipIdInput"></a>
 
 ```go
@@ -735,6 +754,16 @@ func Labels() *map[string]*string
 ```
 
 - *Type:* *map[string]*string
+
+---
+
+##### `Location`<sup>Required</sup> <a name="Location" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembership.property.location"></a>
+
+```go
+func Location() *string
+```
+
+- *Type:* *string
 
 ---
 
@@ -811,7 +840,7 @@ A JSON Web Token (JWT) issuer URI.
 'issuer' must start with 'https://' and // be a valid
 with length <2000 characters. For example: 'https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster' (must be 'locations' rather than 'zones'). If the cluster is provisioned with Terraform, this is '"https://container.googleapis.com/v1/${google_container_cluster.my-cluster.id}"'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#issuer GkeHubMembership#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#issuer GkeHubMembership#issuer}
 
 ---
 
@@ -835,6 +864,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/gkehubmembership"
 	Endpoint: github.com/cdktf/cdktf-provider-google-go/google/v10.gkeHubMembership.GkeHubMembershipEndpoint,
 	Id: *string,
 	Labels: *map[string]*string,
+	Location: *string,
 	Project: *string,
 	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.gkeHubMembership.GkeHubMembershipTimeouts,
 }
@@ -854,9 +884,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/gkehubmembership"
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.membershipId">MembershipId</a></code> | <code>*string</code> | The client-provided identifier of the membership. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.authority">Authority</a></code> | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipAuthority">GkeHubMembershipAuthority</a></code> | authority block. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.endpoint">Endpoint</a></code> | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipEndpoint">GkeHubMembershipEndpoint</a></code> | endpoint block. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#id GkeHubMembership#id}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#id GkeHubMembership#id}. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels to apply to this membership. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#project GkeHubMembership#project}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.location">Location</a></code> | <code>*string</code> | Location of the membership. The default value is 'global'. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#project GkeHubMembership#project}. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipTimeouts">GkeHubMembershipTimeouts</a></code> | timeouts block. |
 
 ---
@@ -941,7 +972,7 @@ MembershipId *string
 
 The client-provided identifier of the membership.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#membership_id GkeHubMembership#membership_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#membership_id GkeHubMembership#membership_id}
 
 ---
 
@@ -955,7 +986,7 @@ Authority GkeHubMembershipAuthority
 
 authority block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#authority GkeHubMembership#authority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#authority GkeHubMembership#authority}
 
 ---
 
@@ -969,7 +1000,7 @@ Endpoint GkeHubMembershipEndpoint
 
 endpoint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#endpoint GkeHubMembership#endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#endpoint GkeHubMembership#endpoint}
 
 ---
 
@@ -981,7 +1012,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#id GkeHubMembership#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#id GkeHubMembership#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1001,7 +1032,21 @@ Labels to apply to this membership.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#labels GkeHubMembership#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#labels GkeHubMembership#labels}
+
+---
+
+##### `Location`<sup>Optional</sup> <a name="Location" id="@cdktf/provider-google.gkeHubMembership.GkeHubMembershipConfig.property.location"></a>
+
+```go
+Location *string
+```
+
+- *Type:* *string
+
+Location of the membership. The default value is 'global'.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#location GkeHubMembership#location}
 
 ---
 
@@ -1013,7 +1058,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#project GkeHubMembership#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#project GkeHubMembership#project}.
 
 ---
 
@@ -1027,7 +1072,7 @@ Timeouts GkeHubMembershipTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#timeouts GkeHubMembership#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#timeouts GkeHubMembership#timeouts}
 
 ---
 
@@ -1061,7 +1106,7 @@ GkeCluster GkeHubMembershipEndpointGkeCluster
 
 gke_cluster block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#gke_cluster GkeHubMembership#gke_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#gke_cluster GkeHubMembership#gke_cluster}
 
 ---
 
@@ -1100,7 +1145,7 @@ It can be at the most 1000 characters in length. If the cluster is provisioned w
 this can be '"//container.googleapis.com/${google_container_cluster.my-cluster.id}"' or
 'google_container_cluster.my-cluster.id'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#resource_link GkeHubMembership#resource_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#resource_link GkeHubMembership#resource_link}
 
 ---
 
@@ -1122,9 +1167,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/gkehubmembership"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#create GkeHubMembership#create}. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#delete GkeHubMembership#delete}. |
-| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#update GkeHubMembership#update}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#create GkeHubMembership#create}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#delete GkeHubMembership#delete}. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembership.GkeHubMembershipTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#update GkeHubMembership#update}. |
 
 ---
 
@@ -1136,7 +1181,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#create GkeHubMembership#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#create GkeHubMembership#create}.
 
 ---
 
@@ -1148,7 +1193,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#delete GkeHubMembership#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#delete GkeHubMembership#delete}.
 
 ---
 
@@ -1160,7 +1205,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.0.0/docs/resources/gke_hub_membership#update GkeHubMembership#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_membership#update GkeHubMembership#update}.
 
 ---
 
