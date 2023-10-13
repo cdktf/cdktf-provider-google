@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSink(scope Construct, id *string, config LoggingFolderSinkConfig) LoggingFolderSink
 ```
@@ -345,7 +345,7 @@ func ResetIncludeChildren()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.LoggingFolderSink_IsConstruct(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.LoggingFolderSink_IsTerraformElement(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ loggingfoldersink.LoggingFolderSink_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.LoggingFolderSink_IsTerraformResource(x interface{}) *bool
 ```
@@ -821,7 +821,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkBigqueryOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 &loggingfoldersink.LoggingFolderSinkBigqueryOptions {
 	UsePartitionedTables: interface{},
@@ -857,7 +857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 &loggingfoldersink.LoggingFolderSinkConfig {
 	Connection: interface{},
@@ -870,7 +870,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
 	Destination: *string,
 	Folder: *string,
 	Name: *string,
-	BigqueryOptions: github.com/cdktf/cdktf-provider-google-go/google/v10.loggingFolderSink.LoggingFolderSinkBigqueryOptions,
+	BigqueryOptions: github.com/cdktf/cdktf-provider-google-go/google.loggingFolderSink.LoggingFolderSinkBigqueryOptions,
 	Description: *string,
 	Disabled: interface{},
 	Exclusions: interface{},
@@ -1124,7 +1124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkExclusions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 &loggingfoldersink.LoggingFolderSinkExclusions {
 	Filter: *string,
@@ -1212,7 +1212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkBigqueryOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSinkBigqueryOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingFolderSinkBigqueryOptionsOutputReference
 ```
@@ -1483,7 +1483,7 @@ func InternalValue() LoggingFolderSinkBigqueryOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkExclusionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSinkExclusionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoggingFolderSinkExclusionsList
 ```
@@ -1626,7 +1626,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkExclusionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSinkExclusionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LoggingFolderSinkExclusionsOutputReference
 ```
