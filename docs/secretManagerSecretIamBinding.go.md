@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretIamBinding.SecretManagerSecretIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiambinding"
 
 secretmanagersecretiambinding.NewSecretManagerSecretIamBinding(scope Construct, id *string, config SecretManagerSecretIamBindingConfig) SecretManagerSecretIamBinding
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secretManagerSecretIamBinding.SecretManagerSecretIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiambinding"
 
 secretmanagersecretiambinding.SecretManagerSecretIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secretManagerSecretIamBinding.SecretManagerSecretIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiambinding"
 
 secretmanagersecretiambinding.SecretManagerSecretIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ secretmanagersecretiambinding.SecretManagerSecretIamBinding_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secretManagerSecretIamBinding.SecretManagerSecretIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiambinding"
 
 secretmanagersecretiambinding.SecretManagerSecretIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretIamBinding.SecretManagerSecretIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiambinding"
 
 &secretmanagersecretiambinding.SecretManagerSecretIamBindingCondition {
 	Expression: *string,
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretIamBinding.SecretManagerSecretIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiambinding"
 
 &secretmanagersecretiambinding.SecretManagerSecretIamBindingConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiamb
 	Members: *[]*string,
 	Role: *string,
 	SecretId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecretIamBinding.SecretManagerSecretIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v11.secretManagerSecretIamBinding.SecretManagerSecretIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretIamBinding.SecretManagerSecretIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiambinding"
 
 secretmanagersecretiambinding.NewSecretManagerSecretIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretIamBindingConditionOutputReference
 ```

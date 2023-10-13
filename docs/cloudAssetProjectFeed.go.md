@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeed(scope Construct, id *string, config CloudAssetProjectFeedConfig) CloudAssetProjectFeed
 ```
@@ -365,7 +365,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.CloudAssetProjectFeed_IsConstruct(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.CloudAssetProjectFeed_IsTerraformElement(x interface{}) *bool
 ```
@@ -411,7 +411,7 @@ cloudassetprojectfeed.CloudAssetProjectFeed_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.CloudAssetProjectFeed_IsTerraformResource(x interface{}) *bool
 ```
@@ -841,7 +841,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedCondition {
 	Expression: *string,
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedConfig {
 	Connection: interface{},
@@ -937,15 +937,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	FeedId: *string,
-	FeedOutputConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfig,
+	FeedOutputConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfig,
 	AssetNames: *[]*string,
 	AssetTypes: *[]*string,
 	BillingProject: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudAssetProjectFeed.CloudAssetProjectFeedCondition,
 	ContentType: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts,
 }
 ```
 
@@ -1204,10 +1204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedFeedOutputConfig {
-	PubsubDestination: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination,
+	PubsubDestination: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination,
 }
 ```
 
@@ -1238,7 +1238,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination {
 	Topic: *string,
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedTimeouts {
 	Create: *string,
@@ -1334,7 +1334,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedConditionOutputReference
 ```
@@ -1692,7 +1692,7 @@ func InternalValue() CloudAssetProjectFeedCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedFeedOutputConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedFeedOutputConfigOutputReference
 ```
@@ -1976,7 +1976,7 @@ func InternalValue() CloudAssetProjectFeedFeedOutputConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference
 ```
@@ -2247,7 +2247,7 @@ func InternalValue() CloudAssetProjectFeedFeedOutputConfigPubsubDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedTimeoutsOutputReference
 ```

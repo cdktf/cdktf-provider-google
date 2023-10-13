@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 healthcaredicomstore.NewHealthcareDicomStore(scope Construct, id *string, config HealthcareDicomStoreConfig) HealthcareDicomStore
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStore.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 healthcaredicomstore.HealthcareDicomStore_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStore.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 healthcaredicomstore.HealthcareDicomStore_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ healthcaredicomstore.HealthcareDicomStore_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStore.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 healthcaredicomstore.HealthcareDicomStore_IsTerraformResource(x interface{}) *bool
 ```
@@ -734,7 +734,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 &healthcaredicomstore.HealthcareDicomStoreConfig {
 	Connection: interface{},
@@ -748,8 +748,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
 	Name: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareDicomStore.HealthcareDicomStoreNotificationConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.healthcareDicomStore.HealthcareDicomStoreTimeouts,
+	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.healthcareDicomStore.HealthcareDicomStoreNotificationConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.healthcareDicomStore.HealthcareDicomStoreTimeouts,
 }
 ```
 
@@ -949,7 +949,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStoreNotificationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 &healthcaredicomstore.HealthcareDicomStoreNotificationConfig {
 	PubsubTopic: *string,
@@ -990,7 +990,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStoreTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 &healthcaredicomstore.HealthcareDicomStoreTimeouts {
 	Create: *string,
@@ -1052,7 +1052,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStoreNotificationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 healthcaredicomstore.NewHealthcareDicomStoreNotificationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareDicomStoreNotificationConfigOutputReference
 ```
@@ -1323,7 +1323,7 @@ func InternalValue() HealthcareDicomStoreNotificationConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStore.HealthcareDicomStoreTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstore"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcaredicomstore"
 
 healthcaredicomstore.NewHealthcareDicomStoreTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareDicomStoreTimeoutsOutputReference
 ```

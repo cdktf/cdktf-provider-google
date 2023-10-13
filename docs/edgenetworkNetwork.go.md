@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgenetworkNetwork.EdgenetworkNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgenetworknetwork"
 
 edgenetworknetwork.NewEdgenetworkNetwork(scope Construct, id *string, config EdgenetworkNetworkConfig) EdgenetworkNetwork
 ```
@@ -325,7 +325,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.edgenetworkNetwork.EdgenetworkNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgenetworknetwork"
 
 edgenetworknetwork.EdgenetworkNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.edgenetworkNetwork.EdgenetworkNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgenetworknetwork"
 
 edgenetworknetwork.EdgenetworkNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ edgenetworknetwork.EdgenetworkNetwork_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.edgenetworkNetwork.EdgenetworkNetwork.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgenetworknetwork"
 
 edgenetworknetwork.EdgenetworkNetwork_IsTerraformResource(x interface{}) *bool
 ```
@@ -801,7 +801,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.edgenetworkNetwork.EdgenetworkNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgenetworknetwork"
 
 &edgenetworknetwork.EdgenetworkNetworkConfig {
 	Connection: interface{},
@@ -819,7 +819,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
 	Labels: *map[string]*string,
 	Mtu: *f64,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.edgenetworkNetwork.EdgenetworkNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.edgenetworkNetwork.EdgenetworkNetworkTimeouts,
 }
 ```
 
@@ -1046,7 +1046,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.edgenetworkNetwork.EdgenetworkNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgenetworknetwork"
 
 &edgenetworknetwork.EdgenetworkNetworkTimeouts {
 	Create: *string,
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgenetworkNetwork.EdgenetworkNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgenetworknetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgenetworknetwork"
 
 edgenetworknetwork.NewEdgenetworkNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EdgenetworkNetworkTimeoutsOutputReference
 ```

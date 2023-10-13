@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 dialogflowintent.NewDialogflowIntent(scope Construct, id *string, config DialogflowIntentConfig) DialogflowIntent
 ```
@@ -374,7 +374,7 @@ func ResetWebhookState()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 dialogflowintent.DialogflowIntent_IsConstruct(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 dialogflowintent.DialogflowIntent_IsTerraformElement(x interface{}) *bool
 ```
@@ -420,7 +420,7 @@ dialogflowintent.DialogflowIntent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 dialogflowintent.DialogflowIntent_IsTerraformResource(x interface{}) *bool
 ```
@@ -960,7 +960,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 &dialogflowintent.DialogflowIntentConfig {
 	Connection: interface{},
@@ -982,7 +982,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
 	Priority: *f64,
 	Project: *string,
 	ResetContexts: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowIntent.DialogflowIntentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.dialogflowIntent.DialogflowIntentTimeouts,
 	WebhookState: *string,
 }
 ```
@@ -1302,7 +1302,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntentFollowupIntentInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 &dialogflowintent.DialogflowIntentFollowupIntentInfo {
 
@@ -1315,7 +1315,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 &dialogflowintent.DialogflowIntentTimeouts {
 	Create: *string,
@@ -1377,7 +1377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntentFollowupIntentInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 dialogflowintent.NewDialogflowIntentFollowupIntentInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowIntentFollowupIntentInfoList
 ```
@@ -1509,7 +1509,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntentFollowupIntentInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 dialogflowintent.NewDialogflowIntentFollowupIntentInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowIntentFollowupIntentInfoOutputReference
 ```
@@ -1798,7 +1798,7 @@ func InternalValue() DialogflowIntentFollowupIntentInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowIntent.DialogflowIntentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowintent"
 
 dialogflowintent.NewDialogflowIntentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowIntentTimeoutsOutputReference
 ```
