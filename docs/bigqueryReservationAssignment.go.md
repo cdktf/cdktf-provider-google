@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservationAssignment.BigqueryReservationAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassignment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryreservationassignment"
 
 bigqueryreservationassignment.NewBigqueryReservationAssignment(scope Construct, id *string, config BigqueryReservationAssignmentConfig) BigqueryReservationAssignment
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryReservationAssignment.BigqueryReservationAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassignment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryreservationassignment"
 
 bigqueryreservationassignment.BigqueryReservationAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryReservationAssignment.BigqueryReservationAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassignment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryreservationassignment"
 
 bigqueryreservationassignment.BigqueryReservationAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ bigqueryreservationassignment.BigqueryReservationAssignment_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryReservationAssignment.BigqueryReservationAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassignment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryreservationassignment"
 
 bigqueryreservationassignment.BigqueryReservationAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryReservationAssignment.BigqueryReservationAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassignment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryreservationassignment"
 
 &bigqueryreservationassignment.BigqueryReservationAssignmentConfig {
 	Connection: interface{},
@@ -748,7 +748,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassi
 	Id: *string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.bigqueryReservationAssignment.BigqueryReservationAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.bigqueryReservationAssignment.BigqueryReservationAssignmentTimeouts,
 }
 ```
 
@@ -947,7 +947,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryReservationAssignment.BigqueryReservationAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassignment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryreservationassignment"
 
 &bigqueryreservationassignment.BigqueryReservationAssignmentTimeouts {
 	Create: *string,
@@ -995,7 +995,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservationAssignment.BigqueryReservationAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryreservationassignment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryreservationassignment"
 
 bigqueryreservationassignment.NewBigqueryReservationAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryReservationAssignmentTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 projectiamauditconfig.NewProjectIamAuditConfig(scope Construct, id *string, config ProjectIamAuditConfigConfig) ProjectIamAuditConfig
 ```
@@ -290,7 +290,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 projectiamauditconfig.ProjectIamAuditConfig_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 projectiamauditconfig.ProjectIamAuditConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ projectiamauditconfig.ProjectIamAuditConfig_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 projectiamauditconfig.ProjectIamAuditConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -634,7 +634,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfigAuditLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 &projectiamauditconfig.ProjectIamAuditConfigAuditLogConfig {
 	LogType: *string,
@@ -686,7 +686,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 &projectiamauditconfig.ProjectIamAuditConfigConfig {
 	Connection: interface{},
@@ -853,7 +853,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfigAuditLogConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 projectiamauditconfig.NewProjectIamAuditConfigAuditLogConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ProjectIamAuditConfigAuditLogConfigList
 ```
@@ -996,7 +996,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamAuditConfig.ProjectIamAuditConfigAuditLogConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/projectiamauditconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/projectiamauditconfig"
 
 projectiamauditconfig.NewProjectIamAuditConfigAuditLogConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ProjectIamAuditConfigAuditLogConfigOutputReference
 ```

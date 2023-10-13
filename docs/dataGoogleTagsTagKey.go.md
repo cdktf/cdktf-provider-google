@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagoogletagstagkey"
 
 datagoogletagstagkey.NewDataGoogleTagsTagKey(scope Construct, id *string, config DataGoogleTagsTagKeyConfig) DataGoogleTagsTagKey
 ```
@@ -270,7 +270,7 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagoogletagstagkey"
 
 datagoogletagstagkey.DataGoogleTagsTagKey_IsConstruct(x interface{}) *bool
 ```
@@ -302,7 +302,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagoogletagstagkey"
 
 datagoogletagstagkey.DataGoogleTagsTagKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ datagoogletagstagkey.DataGoogleTagsTagKey_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagoogletagstagkey"
 
 datagoogletagstagkey.DataGoogleTagsTagKey_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -603,7 +603,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagoogletagstagkey"
 
 &datagoogletagstagkey.DataGoogleTagsTagKeyConfig {
 	Connection: interface{},

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunService(scope Construct, id *string, config CloudRunServiceConfig) CloudRunService
 ```
@@ -371,7 +371,7 @@ func ResetTraffic()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudRunService.CloudRunService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.CloudRunService_IsConstruct(x interface{}) *bool
 ```
@@ -403,7 +403,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudRunService.CloudRunService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.CloudRunService_IsTerraformElement(x interface{}) *bool
 ```
@@ -417,7 +417,7 @@ cloudrunservice.CloudRunService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudRunService.CloudRunService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.CloudRunService_IsTerraformResource(x interface{}) *bool
 ```
@@ -825,7 +825,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceConfig {
 	Connection: interface{},
@@ -839,10 +839,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
 	Name: *string,
 	AutogenerateRevisionName: interface{},
 	Id: *string,
-	Metadata: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceMetadata,
+	Metadata: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceMetadata,
 	Project: *string,
-	Template: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplate,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTimeouts,
+	Template: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplate,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTimeouts,
 	Traffic: interface{},
 }
 ```
@@ -1074,7 +1074,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceMetadata {
 	Annotations: *map[string]*string,
@@ -1170,7 +1170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceStatus {
 
@@ -1183,7 +1183,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceStatusConditions {
 
@@ -1196,7 +1196,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusTraffic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceStatusTraffic {
 
@@ -1209,11 +1209,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplate {
-	Metadata: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateMetadata,
-	Spec: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpec,
+	Metadata: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateMetadata,
+	Spec: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpec,
 }
 ```
 
@@ -1259,7 +1259,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateMetadata {
 	Annotations: *map[string]*string,
@@ -1387,7 +1387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpec {
 	ContainerConcurrency: *f64,
@@ -1496,7 +1496,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainers {
 	Image: *string,
@@ -1504,11 +1504,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
 	Command: *[]*string,
 	Env: interface{},
 	EnvFrom: interface{},
-	LivenessProbe: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbe,
+	LivenessProbe: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbe,
 	Name: *string,
 	Ports: interface{},
-	Resources: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersResources,
-	StartupProbe: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbe,
+	Resources: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersResources,
+	StartupProbe: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbe,
 	VolumeMounts: interface{},
 	WorkingDir: *string,
 }
@@ -1706,12 +1706,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnv.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnv {
 	Name: *string,
 	Value: *string,
-	ValueFrom: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFrom,
+	ValueFrom: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFrom,
 }
 ```
 
@@ -1772,12 +1772,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFrom.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnvFrom {
-	ConfigMapRef: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef,
+	ConfigMapRef: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef,
 	Prefix: *string,
-	SecretRef: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRef,
+	SecretRef: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRef,
 }
 ```
 
@@ -1838,10 +1838,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef {
-	LocalObjectReference: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference,
+	LocalObjectReference: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference,
 	Optional: interface{},
 }
 ```
@@ -1888,7 +1888,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference {
 	Name: *string,
@@ -1922,10 +1922,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRef.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnvFromSecretRef {
-	LocalObjectReference: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference,
+	LocalObjectReference: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference,
 	Optional: interface{},
 }
 ```
@@ -1972,7 +1972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference {
 	Name: *string,
@@ -2006,10 +2006,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFrom.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnvValueFrom {
-	SecretKeyRef: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef,
+	SecretKeyRef: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef,
 }
 ```
 
@@ -2040,7 +2040,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef {
 	Key: *string,
@@ -2096,12 +2096,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersLivenessProbe {
 	FailureThreshold: *f64,
-	Grpc: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeGrpc,
-	HttpGet: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGet,
+	Grpc: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeGrpc,
+	HttpGet: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGet,
 	InitialDelaySeconds: *f64,
 	PeriodSeconds: *f64,
 	TimeoutSeconds: *f64,
@@ -2215,7 +2215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeGrpc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersLivenessProbeGrpc {
 	Port: *f64,
@@ -2268,7 +2268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGet {
 	HttpHeaders: interface{},
@@ -2337,7 +2337,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeaders {
 	Name: *string,
@@ -2387,7 +2387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersPorts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersPorts {
 	ContainerPort: *f64,
@@ -2457,7 +2457,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersResources {
 	Limits: *map[string]*string,
@@ -2515,15 +2515,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersStartupProbe {
 	FailureThreshold: *f64,
-	Grpc: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeGrpc,
-	HttpGet: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeHttpGet,
+	Grpc: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeGrpc,
+	HttpGet: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeHttpGet,
 	InitialDelaySeconds: *f64,
 	PeriodSeconds: *f64,
-	TcpSocket: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeTcpSocket,
+	TcpSocket: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeTcpSocket,
 	TimeoutSeconds: *f64,
 }
 ```
@@ -2650,7 +2650,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeGrpc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersStartupProbeGrpc {
 	Port: *f64,
@@ -2703,7 +2703,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeHttpGet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersStartupProbeHttpGet {
 	HttpHeaders: interface{},
@@ -2772,7 +2772,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeaders {
 	Name: *string,
@@ -2822,7 +2822,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeTcpSocket.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersStartupProbeTcpSocket {
 	Port: *f64,
@@ -2859,7 +2859,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersVolumeMounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecContainersVolumeMounts {
 	MountPath: *string,
@@ -2909,11 +2909,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecVolumes {
 	Name: *string,
-	Secret: github.com/cdktf/cdktf-provider-google-go/google.cloudRunService.CloudRunServiceTemplateSpecVolumesSecret,
+	Secret: github.com/cdktf/cdktf-provider-google-go/google/v10.cloudRunService.CloudRunServiceTemplateSpecVolumesSecret,
 }
 ```
 
@@ -2959,7 +2959,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumesSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecVolumesSecret {
 	SecretName: *string,
@@ -3040,7 +3040,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumesSecretItems.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTemplateSpecVolumesSecretItems {
 	Key: *string,
@@ -3115,7 +3115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTimeouts {
 	Create: *string,
@@ -3175,7 +3175,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTraffic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 &cloudrunservice.CloudRunServiceTraffic {
 	Percent: *f64,
@@ -3263,7 +3263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceMetadataOutputReference
 ```
@@ -3676,7 +3676,7 @@ func InternalValue() CloudRunServiceMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusConditionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceStatusConditionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceStatusConditionsList
 ```
@@ -3808,7 +3808,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceStatusConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceStatusConditionsOutputReference
 ```
@@ -4119,7 +4119,7 @@ func InternalValue() CloudRunServiceStatusConditions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceStatusList
 ```
@@ -4251,7 +4251,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceStatusOutputReference
 ```
@@ -4584,7 +4584,7 @@ func InternalValue() CloudRunServiceStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusTrafficList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceStatusTrafficList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceStatusTrafficList
 ```
@@ -4716,7 +4716,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceStatusTrafficOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceStatusTrafficOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceStatusTrafficOutputReference
 ```
@@ -5038,7 +5038,7 @@ func InternalValue() CloudRunServiceStatusTraffic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateMetadataOutputReference
 ```
@@ -5447,7 +5447,7 @@ func InternalValue() CloudRunServiceTemplateMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateOutputReference
 ```
@@ -5780,7 +5780,7 @@ func InternalValue() CloudRunServiceTemplate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReferenceOutputReference
 ```
@@ -6051,7 +6051,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLoc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputReference
 ```
@@ -6371,7 +6371,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvFromList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecContainersEnvFromList
 ```
@@ -6514,7 +6514,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvFromOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecContainersEnvFromOutputReference
 ```
@@ -6894,7 +6894,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReferenceOutputReference
 ```
@@ -7165,7 +7165,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalO
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReference
 ```
@@ -7485,7 +7485,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersEnvFromSecretRef
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecContainersEnvList
 ```
@@ -7628,7 +7628,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecContainersEnvOutputReference
 ```
@@ -7995,7 +7995,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFromOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvValueFromOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersEnvValueFromOutputReference
 ```
@@ -8279,7 +8279,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersEnvValueFrom
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefOutputReference
 ```
@@ -8572,7 +8572,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecContainersList
 ```
@@ -8715,7 +8715,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeGrpcOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersLivenessProbeGrpcOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersLivenessProbeGrpcOutputReference
 ```
@@ -9022,7 +9022,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersLivenessProbeGrpc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeadersList
 ```
@@ -9165,7 +9165,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetHttpHeadersOutputReference
 ```
@@ -9483,7 +9483,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersLivenessProbeHttpGetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersLivenessProbeHttpGetOutputReference
 ```
@@ -9832,7 +9832,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersLivenessProbeHttpGet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersLivenessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersLivenessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersLivenessProbeOutputReference
 ```
@@ -10281,7 +10281,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersLivenessProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecContainersOutputReference
 ```
@@ -10980,7 +10980,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersPortsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersPortsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecContainersPortsList
 ```
@@ -11123,7 +11123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersPortsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersPortsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecContainersPortsOutputReference
 ```
@@ -11477,7 +11477,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersResourcesOutputReference
 ```
@@ -11784,7 +11784,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersResources
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeGrpcOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersStartupProbeGrpcOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersStartupProbeGrpcOutputReference
 ```
@@ -12091,7 +12091,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersStartupProbeGrpc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeadersList
 ```
@@ -12234,7 +12234,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecContainersStartupProbeHttpGetHttpHeadersOutputReference
 ```
@@ -12552,7 +12552,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeHttpGetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersStartupProbeHttpGetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersStartupProbeHttpGetOutputReference
 ```
@@ -12901,7 +12901,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersStartupProbeHttpGet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersStartupProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersStartupProbeOutputReference
 ```
@@ -13392,7 +13392,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersStartupProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersStartupProbeTcpSocketOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersStartupProbeTcpSocketOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecContainersStartupProbeTcpSocketOutputReference
 ```
@@ -13670,7 +13670,7 @@ func InternalValue() CloudRunServiceTemplateSpecContainersStartupProbeTcpSocket
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersVolumeMountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersVolumeMountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecContainersVolumeMountsList
 ```
@@ -13813,7 +13813,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecContainersVolumeMountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecContainersVolumeMountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecContainersVolumeMountsOutputReference
 ```
@@ -14124,7 +14124,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecOutputReference
 ```
@@ -14555,7 +14555,7 @@ func InternalValue() CloudRunServiceTemplateSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecVolumesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecVolumesList
 ```
@@ -14698,7 +14698,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecVolumesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecVolumesOutputReference
 ```
@@ -15029,7 +15029,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumesSecretItemsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecVolumesSecretItemsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTemplateSpecVolumesSecretItemsList
 ```
@@ -15172,7 +15172,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumesSecretItemsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecVolumesSecretItemsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTemplateSpecVolumesSecretItemsOutputReference
 ```
@@ -15512,7 +15512,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTemplateSpecVolumesSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTemplateSpecVolumesSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTemplateSpecVolumesSecretOutputReference
 ```
@@ -15854,7 +15854,7 @@ func InternalValue() CloudRunServiceTemplateSpecVolumesSecret
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunServiceTimeoutsOutputReference
 ```
@@ -16190,7 +16190,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTrafficList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTrafficList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudRunServiceTrafficList
 ```
@@ -16333,7 +16333,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunService.CloudRunServiceTrafficOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v10/cloudrunservice"
 
 cloudrunservice.NewCloudRunServiceTrafficOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudRunServiceTrafficOutputReference
 ```
