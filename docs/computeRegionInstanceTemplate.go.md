@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplate(scope Construct, id *string, config ComputeRegionInstanceTemplateConfig) ComputeRegionInstanceTemplate
 ```
@@ -581,7 +581,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.ComputeRegionInstanceTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -613,7 +613,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.ComputeRegionInstanceTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -627,7 +627,7 @@ computeregioninstancetemplate.ComputeRegionInstanceTemplate_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.ComputeRegionInstanceTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -1453,7 +1453,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateAdvancedMachineFeatures {
 	EnableNestedVirtualization: interface{},
@@ -1523,7 +1523,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfidentialInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateConfidentialInstanceConfig {
 	EnableConfidentialCompute: interface{},
@@ -1557,7 +1557,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateConfig {
 	Connection: interface{},
@@ -1569,9 +1569,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancete
 	Provisioners: *[]interface{},
 	Disk: interface{},
 	MachineType: *string,
-	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateAdvancedMachineFeatures,
+	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateAdvancedMachineFeatures,
 	CanIpForward: interface{},
-	ConfidentialInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfidentialInstanceConfig,
+	ConfidentialInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfidentialInstanceConfig,
 	Description: *string,
 	GuestAccelerator: interface{},
 	Id: *string,
@@ -1583,16 +1583,16 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancete
 	Name: *string,
 	NamePrefix: *string,
 	NetworkInterface: interface{},
-	NetworkPerformanceConfig: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkPerformanceConfig,
+	NetworkPerformanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkPerformanceConfig,
 	Project: *string,
 	Region: *string,
-	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinity,
+	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinity,
 	ResourcePolicies: *[]*string,
-	Scheduling: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateScheduling,
-	ServiceAccount: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateServiceAccount,
-	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateShieldedInstanceConfig,
+	Scheduling: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateScheduling,
+	ServiceAccount: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateServiceAccount,
+	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateShieldedInstanceConfig,
 	Tags: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateTimeouts,
 }
 ```
 
@@ -2088,13 +2088,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateDisk {
 	AutoDelete: interface{},
 	Boot: interface{},
 	DeviceName: *string,
-	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskDiskEncryptionKey,
+	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskDiskEncryptionKey,
 	DiskName: *string,
 	DiskSizeGb: *f64,
 	DiskType: *string,
@@ -2105,9 +2105,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancete
 	ResourcePolicies: *[]*string,
 	Source: *string,
 	SourceImage: *string,
-	SourceImageEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceImageEncryptionKey,
+	SourceImageEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceImageEncryptionKey,
 	SourceSnapshot: *string,
-	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKey,
+	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKey,
 	Type: *string,
 }
 ```
@@ -2413,7 +2413,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateDiskDiskEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2447,7 +2447,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceImageEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateDiskSourceImageEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2500,7 +2500,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2553,7 +2553,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateGuestAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateGuestAccelerator {
 	Count: *f64,
@@ -2603,7 +2603,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateNetworkInterface {
 	AccessConfig: interface{},
@@ -2825,7 +2825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateNetworkInterfaceAccessConfig {
 	NatIp: *string,
@@ -2879,7 +2879,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceAliasIpRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateNetworkInterfaceAliasIpRange {
 	IpCidrRange: *string,
@@ -2933,7 +2933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfig {
 	NetworkTier: *string,
@@ -2969,7 +2969,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkPerformanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateNetworkPerformanceConfig {
 	TotalEgressBandwidthTier: *string,
@@ -3003,11 +3003,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateReservationAffinity {
 	Type: *string,
-	SpecificReservation: github.com/cdktf/cdktf-provider-google-go/google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinitySpecificReservation,
+	SpecificReservation: github.com/cdktf/cdktf-provider-google-go/google/v11.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinitySpecificReservation,
 }
 ```
 
@@ -3053,7 +3053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinitySpecificReservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateReservationAffinitySpecificReservation {
 	Key: *string,
@@ -3105,7 +3105,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateScheduling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateScheduling {
 	AutomaticRestart: interface{},
@@ -3253,7 +3253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeout {
 	Seconds: *f64,
@@ -3307,7 +3307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateSchedulingNodeAffinities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateSchedulingNodeAffinities {
 	Key: *string,
@@ -3367,7 +3367,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateServiceAccount {
 	Scopes: *[]*string,
@@ -3419,7 +3419,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateShieldedInstanceConfig {
 	EnableIntegrityMonitoring: interface{},
@@ -3491,7 +3491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 &computeregioninstancetemplate.ComputeRegionInstanceTemplateTimeouts {
 	Create: *string,
@@ -3539,7 +3539,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateAdvancedMachineFeaturesOutputReference
 ```
@@ -3875,7 +3875,7 @@ func InternalValue() ComputeRegionInstanceTemplateAdvancedMachineFeatures
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateConfidentialInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateConfidentialInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateConfidentialInstanceConfigOutputReference
 ```
@@ -4146,7 +4146,7 @@ func InternalValue() ComputeRegionInstanceTemplateConfidentialInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateDiskDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateDiskDiskEncryptionKeyOutputReference
 ```
@@ -4417,7 +4417,7 @@ func InternalValue() ComputeRegionInstanceTemplateDiskDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateDiskList
 ```
@@ -4560,7 +4560,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateDiskOutputReference
 ```
@@ -5388,7 +5388,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceImageEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateDiskSourceImageEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateDiskSourceImageEncryptionKeyOutputReference
 ```
@@ -5688,7 +5688,7 @@ func InternalValue() ComputeRegionInstanceTemplateDiskSourceImageEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference
 ```
@@ -5988,7 +5988,7 @@ func InternalValue() ComputeRegionInstanceTemplateDiskSourceSnapshotEncryptionKe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateGuestAcceleratorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateGuestAcceleratorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateGuestAcceleratorList
 ```
@@ -6131,7 +6131,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateGuestAcceleratorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateGuestAcceleratorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateGuestAcceleratorOutputReference
 ```
@@ -6442,7 +6442,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceAccessConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceAccessConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceAccessConfigList
 ```
@@ -6585,7 +6585,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceAccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceAccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceAccessConfigOutputReference
 ```
@@ -6921,7 +6921,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceAliasIpRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceAliasIpRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceAliasIpRangeList
 ```
@@ -7064,7 +7064,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceAliasIpRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceAliasIpRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceAliasIpRangeOutputReference
 ```
@@ -7382,7 +7382,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfigList
 ```
@@ -7525,7 +7525,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceIpv6AccessConfigOutputReference
 ```
@@ -7858,7 +7858,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceList
 ```
@@ -8001,7 +8001,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateNetworkInterfaceOutputReference
 ```
@@ -8677,7 +8677,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateNetworkPerformanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateNetworkPerformanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateNetworkPerformanceConfigOutputReference
 ```
@@ -8948,7 +8948,7 @@ func InternalValue() ComputeRegionInstanceTemplateNetworkPerformanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateReservationAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateReservationAffinityOutputReference
 ```
@@ -9261,7 +9261,7 @@ func InternalValue() ComputeRegionInstanceTemplateReservationAffinity
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateReservationAffinitySpecificReservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateReservationAffinitySpecificReservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateReservationAffinitySpecificReservationOutputReference
 ```
@@ -9554,7 +9554,7 @@ func InternalValue() ComputeRegionInstanceTemplateReservationAffinitySpecificRes
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeoutList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeoutList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeoutList
 ```
@@ -9697,7 +9697,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateSchedulingLocalSsdRecoveryTimeoutOutputReference
 ```
@@ -10015,7 +10015,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateSchedulingNodeAffinitiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateSchedulingNodeAffinitiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionInstanceTemplateSchedulingNodeAffinitiesList
 ```
@@ -10158,7 +10158,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateSchedulingNodeAffinitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateSchedulingNodeAffinitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionInstanceTemplateSchedulingNodeAffinitiesOutputReference
 ```
@@ -10491,7 +10491,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateSchedulingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateSchedulingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateSchedulingOutputReference
 ```
@@ -10998,7 +10998,7 @@ func InternalValue() ComputeRegionInstanceTemplateScheduling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateServiceAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateServiceAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateServiceAccountOutputReference
 ```
@@ -11298,7 +11298,7 @@ func InternalValue() ComputeRegionInstanceTemplateServiceAccount
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateShieldedInstanceConfigOutputReference
 ```
@@ -11634,7 +11634,7 @@ func InternalValue() ComputeRegionInstanceTemplateShieldedInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionInstanceTemplate.ComputeRegionInstanceTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregioninstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/computeregioninstancetemplate"
 
 computeregioninstancetemplate.NewComputeRegionInstanceTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionInstanceTemplateTimeoutsOutputReference
 ```

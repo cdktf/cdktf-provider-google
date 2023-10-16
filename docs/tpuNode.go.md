@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tpuNode.TpuNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.NewTpuNode(scope Construct, id *string, config TpuNodeConfig) TpuNode
 ```
@@ -366,7 +366,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.tpuNode.TpuNode.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.TpuNode_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.tpuNode.TpuNode.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.TpuNode_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ tpunode.TpuNode_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.tpuNode.TpuNode.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.TpuNode_IsTerraformResource(x interface{}) *bool
 ```
@@ -941,7 +941,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tpuNode.TpuNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 &tpunode.TpuNodeConfig {
 	Connection: interface{},
@@ -960,8 +960,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
 	Labels: *map[string]*string,
 	Network: *string,
 	Project: *string,
-	SchedulingConfig: github.com/cdktf/cdktf-provider-google-go/google.tpuNode.TpuNodeSchedulingConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.tpuNode.TpuNodeTimeouts,
+	SchedulingConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.tpuNode.TpuNodeSchedulingConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.tpuNode.TpuNodeTimeouts,
 	UseServiceNetworking: interface{},
 	Zone: *string,
 }
@@ -1271,7 +1271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tpuNode.TpuNodeNetworkEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 &tpunode.TpuNodeNetworkEndpoints {
 
@@ -1284,7 +1284,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tpuNode.TpuNodeSchedulingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 &tpunode.TpuNodeSchedulingConfig {
 	Preemptible: interface{},
@@ -1318,7 +1318,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tpuNode.TpuNodeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 &tpunode.TpuNodeTimeouts {
 	Create: *string,
@@ -1380,7 +1380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tpuNode.TpuNodeNetworkEndpointsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.NewTpuNodeNetworkEndpointsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) TpuNodeNetworkEndpointsList
 ```
@@ -1512,7 +1512,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tpuNode.TpuNodeNetworkEndpointsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.NewTpuNodeNetworkEndpointsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) TpuNodeNetworkEndpointsOutputReference
 ```
@@ -1801,7 +1801,7 @@ func InternalValue() TpuNodeNetworkEndpoints
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tpuNode.TpuNodeSchedulingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.NewTpuNodeSchedulingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TpuNodeSchedulingConfigOutputReference
 ```
@@ -2072,7 +2072,7 @@ func InternalValue() TpuNodeSchedulingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tpuNode.TpuNodeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/tpunode"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/tpunode"
 
 tpunode.NewTpuNodeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TpuNodeTimeoutsOutputReference
 ```
