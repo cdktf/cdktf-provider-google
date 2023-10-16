@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,17 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer.
+  * Currently, you may specify up to 15 certificates. Certificate manager certificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+  * sslCertificates and certificateManagerCertificates fields can not be defined together.
+  * Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificates/{resourceName}' or just the self_link 'projects/{project}/locations/{location}/certificates/{resourceName}'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#certificate_manager_certificates ComputeTargetHttpsProxy#certificate_manager_certificates}
+  */
+  readonly certificateManagerCertificates?: string[];
+  /**
   * A reference to the CertificateMap resource uri that identifies a certificate map
   * associated with the given target proxy. This field can only be set for global target proxies.
   * Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#certificate_map ComputeTargetHttpsProxy#certificate_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#certificate_map ComputeTargetHttpsProxy#certificate_map}
   */
   readonly certificateMap?: string;
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#description ComputeTargetHttpsProxy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#description ComputeTargetHttpsProxy#description}
   */
   readonly description?: string;
   /**
@@ -34,11 +38,11 @@ export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArgume
   * the maximum allowed value is 1200 seconds. For Global external HTTP(S)
   * load balancer (classic), this option is not available publicly.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#http_keep_alive_timeout_sec ComputeTargetHttpsProxy#http_keep_alive_timeout_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#http_keep_alive_timeout_sec ComputeTargetHttpsProxy#http_keep_alive_timeout_sec}
   */
   readonly httpKeepAliveTimeoutSec?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#id ComputeTargetHttpsProxy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#id ComputeTargetHttpsProxy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -53,18 +57,18 @@ export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArgume
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#name ComputeTargetHttpsProxy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#name ComputeTargetHttpsProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#project ComputeTargetHttpsProxy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#project ComputeTargetHttpsProxy#project}
   */
   readonly project?: string;
   /**
   * This field only applies when the forwarding rule that references
   * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#proxy_bind ComputeTargetHttpsProxy#proxy_bind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#proxy_bind ComputeTargetHttpsProxy#proxy_bind}
   */
   readonly proxyBind?: boolean | cdktf.IResolvable;
   /**
@@ -73,7 +77,7 @@ export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArgume
   * or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
   * specified, Google manages whether QUIC is used. Default value: "NONE" Possible values: ["NONE", "ENABLE", "DISABLE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#quic_override ComputeTargetHttpsProxy#quic_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#quic_override ComputeTargetHttpsProxy#quic_override}
   */
   readonly quicOverride?: string;
   /**
@@ -87,14 +91,15 @@ export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArgume
   * loadBalancingScheme consult ServerTlsPolicy documentation.
   * If left blank, communications are not encrypted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#server_tls_policy ComputeTargetHttpsProxy#server_tls_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#server_tls_policy ComputeTargetHttpsProxy#server_tls_policy}
   */
   readonly serverTlsPolicy?: string;
   /**
-  * A list of SslCertificate resource URLs or Certificate Manager certificate URLs that are used to authenticate
-  * connections between users and the load balancer. At least one resource must be specified.
+  * URLs to SslCertificate resources that are used to authenticate connections between users and the load balancer.
+  * Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+  * sslCertificates and certificateManagerCertificates can not be defined together.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#ssl_certificates ComputeTargetHttpsProxy#ssl_certificates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#ssl_certificates ComputeTargetHttpsProxy#ssl_certificates}
   */
   readonly sslCertificates?: string[];
   /**
@@ -102,34 +107,34 @@ export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArgume
   * the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
   * resource will not have any SSL policy configured.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#ssl_policy ComputeTargetHttpsProxy#ssl_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#ssl_policy ComputeTargetHttpsProxy#ssl_policy}
   */
   readonly sslPolicy?: string;
   /**
   * A reference to the UrlMap resource that defines the mapping from URL
   * to the BackendService.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#url_map ComputeTargetHttpsProxy#url_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#url_map ComputeTargetHttpsProxy#url_map}
   */
   readonly urlMap: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#timeouts ComputeTargetHttpsProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#timeouts ComputeTargetHttpsProxy#timeouts}
   */
   readonly timeouts?: ComputeTargetHttpsProxyTimeouts;
 }
 export interface ComputeTargetHttpsProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#create ComputeTargetHttpsProxy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#create ComputeTargetHttpsProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#delete ComputeTargetHttpsProxy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#delete ComputeTargetHttpsProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy#update ComputeTargetHttpsProxy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy#update ComputeTargetHttpsProxy#update}
   */
   readonly update?: string;
 }
@@ -250,7 +255,7 @@ export class ComputeTargetHttpsProxyTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy google_compute_target_https_proxy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy google_compute_target_https_proxy}
 */
 export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
 
@@ -264,7 +269,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_target_https_proxy google_compute_target_https_proxy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_target_https_proxy google_compute_target_https_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -275,7 +280,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_target_https_proxy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -286,6 +291,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._certificateManagerCertificates = config.certificateManagerCertificates;
     this._certificateMap = config.certificateMap;
     this._description = config.description;
     this._httpKeepAliveTimeoutSec = config.httpKeepAliveTimeoutSec;
@@ -304,6 +310,22 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // certificate_manager_certificates - computed: false, optional: true, required: false
+  private _certificateManagerCertificates?: string[]; 
+  public get certificateManagerCertificates() {
+    return this.getListAttribute('certificate_manager_certificates');
+  }
+  public set certificateManagerCertificates(value: string[]) {
+    this._certificateManagerCertificates = value;
+  }
+  public resetCertificateManagerCertificates() {
+    this._certificateManagerCertificates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateManagerCertificatesInput() {
+    return this._certificateManagerCertificates;
+  }
 
   // certificate_map - computed: false, optional: true, required: false
   private _certificateMap?: string; 
@@ -528,6 +550,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      certificate_manager_certificates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._certificateManagerCertificates),
       certificate_map: cdktf.stringToTerraform(this._certificateMap),
       description: cdktf.stringToTerraform(this._description),
       http_keep_alive_timeout_sec: cdktf.numberToTerraform(this._httpKeepAliveTimeoutSec),

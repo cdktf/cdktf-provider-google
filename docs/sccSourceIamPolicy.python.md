@@ -1,6 +1,6 @@
 # `google_scc_source_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_scc_source_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy).
+Refer to the Terraform Registory for docs: [`google_scc_source_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy).
 
 # `sccSourceIamPolicy` Submodule <a name="`sccSourceIamPolicy` Submodule" id="@cdktf/provider-google.sccSourceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_scc_source_iam_policy`](http
 
 ### SccSourceIamPolicy <a name="SccSourceIamPolicy" id="@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy google_scc_source_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy google_scc_source_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer"></a>
 
@@ -43,10 +43,10 @@ sccSourceIamPolicy.SccSourceIamPolicy(
 | <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.organization">organization</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.source">source</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.organization">organization</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.source">source</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}. |
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -775,10 +775,10 @@ sccSourceIamPolicy.SccSourceIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.organization">organization</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.source">source</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.organization">organization</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.source">source</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}. |
 
 ---
 
@@ -860,7 +860,7 @@ organization: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#organization SccSourceIamPolicy#organization}.
 
 ---
 
@@ -872,7 +872,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#policy_data SccSourceIamPolicy#policy_data}.
 
 ---
 
@@ -884,7 +884,7 @@ source: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#source SccSourceIamPolicy#source}.
 
 ---
 
@@ -896,7 +896,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/scc_source_iam_policy#id SccSourceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

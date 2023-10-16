@@ -1,3 +1,3 @@
 # `google_storage_bucket_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_storage_bucket_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_bucket_iam_policy).
+Refer to the Terraform Registory for docs: [`google_storage_bucket_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_bucket_iam_policy).

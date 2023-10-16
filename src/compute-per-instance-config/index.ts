@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#id ComputePerInstanceConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#id ComputePerInstanceConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,7 +17,7 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   /**
   * The instance group manager this instance config is part of.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#instance_group_manager ComputePerInstanceConfig#instance_group_manager}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#instance_group_manager ComputePerInstanceConfig#instance_group_manager}
   */
   readonly instanceGroupManager: string;
   /**
@@ -33,7 +28,7 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   * * REFRESH
   * * NONE
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#minimal_action ComputePerInstanceConfig#minimal_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#minimal_action ComputePerInstanceConfig#minimal_action}
   */
   readonly minimalAction?: string;
   /**
@@ -44,17 +39,17 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   * * REFRESH
   * * NONE
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#most_disruptive_allowed_action ComputePerInstanceConfig#most_disruptive_allowed_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#most_disruptive_allowed_action ComputePerInstanceConfig#most_disruptive_allowed_action}
   */
   readonly mostDisruptiveAllowedAction?: string;
   /**
   * The name for this per-instance config and its corresponding instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#name ComputePerInstanceConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#name ComputePerInstanceConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#project ComputePerInstanceConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#project ComputePerInstanceConfig#project}
   */
   readonly project?: string;
   /**
@@ -62,25 +57,25 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   * When false, deleting this config will *not* immediately remove any state from the underlying instance.
   * State will be removed on the next instance recreation or update.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#remove_instance_state_on_destroy ComputePerInstanceConfig#remove_instance_state_on_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#remove_instance_state_on_destroy ComputePerInstanceConfig#remove_instance_state_on_destroy}
   */
   readonly removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * Zone where the containing instance group manager is located
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#zone ComputePerInstanceConfig#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#zone ComputePerInstanceConfig#zone}
   */
   readonly zone?: string;
   /**
   * preserved_state block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#preserved_state ComputePerInstanceConfig#preserved_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#preserved_state ComputePerInstanceConfig#preserved_state}
   */
   readonly preservedState?: ComputePerInstanceConfigPreservedState;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#timeouts ComputePerInstanceConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#timeouts ComputePerInstanceConfig#timeouts}
   */
   readonly timeouts?: ComputePerInstanceConfigTimeouts;
 }
@@ -92,26 +87,26 @@ export interface ComputePerInstanceConfigPreservedStateDisk {
   * 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently
   * deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#delete_rule ComputePerInstanceConfig#delete_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#delete_rule ComputePerInstanceConfig#delete_rule}
   */
   readonly deleteRule?: string;
   /**
   * A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#device_name ComputePerInstanceConfig#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#device_name ComputePerInstanceConfig#device_name}
   */
   readonly deviceName: string;
   /**
   * The mode of the disk. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#mode ComputePerInstanceConfig#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#mode ComputePerInstanceConfig#mode}
   */
   readonly mode?: string;
   /**
   * The URI of an existing persistent disk to attach under the specified device-name in the format
   * 'projects/project-id/zones/zone/disks/disk-name'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#source ComputePerInstanceConfig#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#source ComputePerInstanceConfig#source}
   */
   readonly source: string;
 }
@@ -269,19 +264,469 @@ export class ComputePerInstanceConfigPreservedStateDiskList extends cdktf.Comple
     return new ComputePerInstanceConfigPreservedStateDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ComputePerInstanceConfigPreservedStateExternalIpIpAddress {
+  /**
+  * The URL of the reservation for this IP address.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#address ComputePerInstanceConfig#address}
+  */
+  readonly address?: string;
+}
+
+export function computePerInstanceConfigPreservedStateExternalIpIpAddressToTerraform(struct?: ComputePerInstanceConfigPreservedStateExternalIpIpAddressOutputReference | ComputePerInstanceConfigPreservedStateExternalIpIpAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+  }
+}
+
+export class ComputePerInstanceConfigPreservedStateExternalIpIpAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputePerInstanceConfigPreservedStateExternalIpIpAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePerInstanceConfigPreservedStateExternalIpIpAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._address = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._address = value.address;
+    }
+  }
+
+  // address - computed: false, optional: true, required: false
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  public resetAddress() {
+    this._address = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address;
+  }
+}
+export interface ComputePerInstanceConfigPreservedStateExternalIp {
+  /**
+  * These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#auto_delete ComputePerInstanceConfig#auto_delete}
+  */
+  readonly autoDelete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#interface_name ComputePerInstanceConfig#interface_name}
+  */
+  readonly interfaceName: string;
+  /**
+  * ip_address block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#ip_address ComputePerInstanceConfig#ip_address}
+  */
+  readonly ipAddress?: ComputePerInstanceConfigPreservedStateExternalIpIpAddress;
+}
+
+export function computePerInstanceConfigPreservedStateExternalIpToTerraform(struct?: ComputePerInstanceConfigPreservedStateExternalIp | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auto_delete: cdktf.stringToTerraform(struct!.autoDelete),
+    interface_name: cdktf.stringToTerraform(struct!.interfaceName),
+    ip_address: computePerInstanceConfigPreservedStateExternalIpIpAddressToTerraform(struct!.ipAddress),
+  }
+}
+
+export class ComputePerInstanceConfigPreservedStateExternalIpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputePerInstanceConfigPreservedStateExternalIp | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoDelete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoDelete = this._autoDelete;
+    }
+    if (this._interfaceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interfaceName = this._interfaceName;
+    }
+    if (this._ipAddress?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePerInstanceConfigPreservedStateExternalIp | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._autoDelete = undefined;
+      this._interfaceName = undefined;
+      this._ipAddress.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._autoDelete = value.autoDelete;
+      this._interfaceName = value.interfaceName;
+      this._ipAddress.internalValue = value.ipAddress;
+    }
+  }
+
+  // auto_delete - computed: false, optional: true, required: false
+  private _autoDelete?: string; 
+  public get autoDelete() {
+    return this.getStringAttribute('auto_delete');
+  }
+  public set autoDelete(value: string) {
+    this._autoDelete = value;
+  }
+  public resetAutoDelete() {
+    this._autoDelete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoDeleteInput() {
+    return this._autoDelete;
+  }
+
+  // interface_name - computed: false, optional: false, required: true
+  private _interfaceName?: string; 
+  public get interfaceName() {
+    return this.getStringAttribute('interface_name');
+  }
+  public set interfaceName(value: string) {
+    this._interfaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceNameInput() {
+    return this._interfaceName;
+  }
+
+  // ip_address - computed: false, optional: true, required: false
+  private _ipAddress = new ComputePerInstanceConfigPreservedStateExternalIpIpAddressOutputReference(this, "ip_address");
+  public get ipAddress() {
+    return this._ipAddress;
+  }
+  public putIpAddress(value: ComputePerInstanceConfigPreservedStateExternalIpIpAddress) {
+    this._ipAddress.internalValue = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress.internalValue;
+  }
+}
+
+export class ComputePerInstanceConfigPreservedStateExternalIpList extends cdktf.ComplexList {
+  public internalValue? : ComputePerInstanceConfigPreservedStateExternalIp[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputePerInstanceConfigPreservedStateExternalIpOutputReference {
+    return new ComputePerInstanceConfigPreservedStateExternalIpOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputePerInstanceConfigPreservedStateInternalIpIpAddress {
+  /**
+  * The URL of the reservation for this IP address.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#address ComputePerInstanceConfig#address}
+  */
+  readonly address?: string;
+}
+
+export function computePerInstanceConfigPreservedStateInternalIpIpAddressToTerraform(struct?: ComputePerInstanceConfigPreservedStateInternalIpIpAddressOutputReference | ComputePerInstanceConfigPreservedStateInternalIpIpAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+  }
+}
+
+export class ComputePerInstanceConfigPreservedStateInternalIpIpAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputePerInstanceConfigPreservedStateInternalIpIpAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePerInstanceConfigPreservedStateInternalIpIpAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._address = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._address = value.address;
+    }
+  }
+
+  // address - computed: false, optional: true, required: false
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  public resetAddress() {
+    this._address = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address;
+  }
+}
+export interface ComputePerInstanceConfigPreservedStateInternalIp {
+  /**
+  * These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#auto_delete ComputePerInstanceConfig#auto_delete}
+  */
+  readonly autoDelete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#interface_name ComputePerInstanceConfig#interface_name}
+  */
+  readonly interfaceName: string;
+  /**
+  * ip_address block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#ip_address ComputePerInstanceConfig#ip_address}
+  */
+  readonly ipAddress?: ComputePerInstanceConfigPreservedStateInternalIpIpAddress;
+}
+
+export function computePerInstanceConfigPreservedStateInternalIpToTerraform(struct?: ComputePerInstanceConfigPreservedStateInternalIp | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auto_delete: cdktf.stringToTerraform(struct!.autoDelete),
+    interface_name: cdktf.stringToTerraform(struct!.interfaceName),
+    ip_address: computePerInstanceConfigPreservedStateInternalIpIpAddressToTerraform(struct!.ipAddress),
+  }
+}
+
+export class ComputePerInstanceConfigPreservedStateInternalIpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputePerInstanceConfigPreservedStateInternalIp | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoDelete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoDelete = this._autoDelete;
+    }
+    if (this._interfaceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interfaceName = this._interfaceName;
+    }
+    if (this._ipAddress?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePerInstanceConfigPreservedStateInternalIp | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._autoDelete = undefined;
+      this._interfaceName = undefined;
+      this._ipAddress.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._autoDelete = value.autoDelete;
+      this._interfaceName = value.interfaceName;
+      this._ipAddress.internalValue = value.ipAddress;
+    }
+  }
+
+  // auto_delete - computed: false, optional: true, required: false
+  private _autoDelete?: string; 
+  public get autoDelete() {
+    return this.getStringAttribute('auto_delete');
+  }
+  public set autoDelete(value: string) {
+    this._autoDelete = value;
+  }
+  public resetAutoDelete() {
+    this._autoDelete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoDeleteInput() {
+    return this._autoDelete;
+  }
+
+  // interface_name - computed: false, optional: false, required: true
+  private _interfaceName?: string; 
+  public get interfaceName() {
+    return this.getStringAttribute('interface_name');
+  }
+  public set interfaceName(value: string) {
+    this._interfaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceNameInput() {
+    return this._interfaceName;
+  }
+
+  // ip_address - computed: false, optional: true, required: false
+  private _ipAddress = new ComputePerInstanceConfigPreservedStateInternalIpIpAddressOutputReference(this, "ip_address");
+  public get ipAddress() {
+    return this._ipAddress;
+  }
+  public putIpAddress(value: ComputePerInstanceConfigPreservedStateInternalIpIpAddress) {
+    this._ipAddress.internalValue = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress.internalValue;
+  }
+}
+
+export class ComputePerInstanceConfigPreservedStateInternalIpList extends cdktf.ComplexList {
+  public internalValue? : ComputePerInstanceConfigPreservedStateInternalIp[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputePerInstanceConfigPreservedStateInternalIpOutputReference {
+    return new ComputePerInstanceConfigPreservedStateInternalIpOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputePerInstanceConfigPreservedState {
   /**
   * Preserved metadata defined for this instance. This is a list of key->value pairs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#metadata ComputePerInstanceConfig#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#metadata ComputePerInstanceConfig#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
   * disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#disk ComputePerInstanceConfig#disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#disk ComputePerInstanceConfig#disk}
   */
   readonly disk?: ComputePerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable;
+  /**
+  * external_ip block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#external_ip ComputePerInstanceConfig#external_ip}
+  */
+  readonly externalIp?: ComputePerInstanceConfigPreservedStateExternalIp[] | cdktf.IResolvable;
+  /**
+  * internal_ip block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#internal_ip ComputePerInstanceConfig#internal_ip}
+  */
+  readonly internalIp?: ComputePerInstanceConfigPreservedStateInternalIp[] | cdktf.IResolvable;
 }
 
 export function computePerInstanceConfigPreservedStateToTerraform(struct?: ComputePerInstanceConfigPreservedStateOutputReference | ComputePerInstanceConfigPreservedState): any {
@@ -292,6 +737,8 @@ export function computePerInstanceConfigPreservedStateToTerraform(struct?: Compu
   return {
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     disk: cdktf.listMapper(computePerInstanceConfigPreservedStateDiskToTerraform, true)(struct!.disk),
+    external_ip: cdktf.listMapper(computePerInstanceConfigPreservedStateExternalIpToTerraform, true)(struct!.externalIp),
+    internal_ip: cdktf.listMapper(computePerInstanceConfigPreservedStateInternalIpToTerraform, true)(struct!.internalIp),
   }
 }
 
@@ -317,6 +764,14 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.disk = this._disk?.internalValue;
     }
+    if (this._externalIp?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalIp = this._externalIp?.internalValue;
+    }
+    if (this._internalIp?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.internalIp = this._internalIp?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -325,11 +780,15 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
       this.isEmptyObject = false;
       this._metadata = undefined;
       this._disk.internalValue = undefined;
+      this._externalIp.internalValue = undefined;
+      this._internalIp.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._metadata = value.metadata;
       this._disk.internalValue = value.disk;
+      this._externalIp.internalValue = value.externalIp;
+      this._internalIp.internalValue = value.internalIp;
     }
   }
 
@@ -364,18 +823,50 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
   public get diskInput() {
     return this._disk.internalValue;
   }
+
+  // external_ip - computed: false, optional: true, required: false
+  private _externalIp = new ComputePerInstanceConfigPreservedStateExternalIpList(this, "external_ip", true);
+  public get externalIp() {
+    return this._externalIp;
+  }
+  public putExternalIp(value: ComputePerInstanceConfigPreservedStateExternalIp[] | cdktf.IResolvable) {
+    this._externalIp.internalValue = value;
+  }
+  public resetExternalIp() {
+    this._externalIp.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalIpInput() {
+    return this._externalIp.internalValue;
+  }
+
+  // internal_ip - computed: false, optional: true, required: false
+  private _internalIp = new ComputePerInstanceConfigPreservedStateInternalIpList(this, "internal_ip", true);
+  public get internalIp() {
+    return this._internalIp;
+  }
+  public putInternalIp(value: ComputePerInstanceConfigPreservedStateInternalIp[] | cdktf.IResolvable) {
+    this._internalIp.internalValue = value;
+  }
+  public resetInternalIp() {
+    this._internalIp.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internalIpInput() {
+    return this._internalIp.internalValue;
+  }
 }
 export interface ComputePerInstanceConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#create ComputePerInstanceConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#create ComputePerInstanceConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#delete ComputePerInstanceConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#delete ComputePerInstanceConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config#update ComputePerInstanceConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config#update ComputePerInstanceConfig#update}
   */
   readonly update?: string;
 }
@@ -496,7 +987,7 @@ export class ComputePerInstanceConfigTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config google_compute_per_instance_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config google_compute_per_instance_config}
 */
 export class ComputePerInstanceConfig extends cdktf.TerraformResource {
 
@@ -510,7 +1001,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_per_instance_config google_compute_per_instance_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_per_instance_config google_compute_per_instance_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -521,7 +1012,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_per_instance_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

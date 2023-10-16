@@ -1,3 +1,3 @@
 # `data_google_sourcerepo_repository`
 
-Refer to the Terraform Registory for docs: [`data_google_sourcerepo_repository`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/sourcerepo_repository).
+Refer to the Terraform Registory for docs: [`data_google_sourcerepo_repository`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/sourcerepo_repository).
