@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMeta
   * The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE.
   * 				Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#action ProjectDefaultServiceAccounts#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#action ProjectDefaultServiceAccounts#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#id ProjectDefaultServiceAccounts#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#id ProjectDefaultServiceAccounts#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,34 +29,34 @@ export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMeta
   /**
   * The project ID where service accounts are created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#project ProjectDefaultServiceAccounts#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#project ProjectDefaultServiceAccounts#project}
   */
   readonly project: string;
   /**
   * The action to be performed in the default service accounts on the resource destroy.
   * 				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#restore_policy ProjectDefaultServiceAccounts#restore_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#restore_policy ProjectDefaultServiceAccounts#restore_policy}
   */
   readonly restorePolicy?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#timeouts ProjectDefaultServiceAccounts#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#timeouts ProjectDefaultServiceAccounts#timeouts}
   */
   readonly timeouts?: ProjectDefaultServiceAccountsTimeouts;
 }
 export interface ProjectDefaultServiceAccountsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#create ProjectDefaultServiceAccounts#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#create ProjectDefaultServiceAccounts#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#delete ProjectDefaultServiceAccounts#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#delete ProjectDefaultServiceAccounts#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts#read ProjectDefaultServiceAccounts#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts#read ProjectDefaultServiceAccounts#read}
   */
   readonly read?: string;
 }
@@ -177,7 +177,7 @@ export class ProjectDefaultServiceAccountsTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts google_project_default_service_accounts}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts google_project_default_service_accounts}
 */
 export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
 
@@ -191,7 +191,7 @@ export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/project_default_service_accounts google_project_default_service_accounts} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_default_service_accounts google_project_default_service_accounts} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -202,7 +202,7 @@ export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
       terraformResourceType: 'google_project_default_service_accounts',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

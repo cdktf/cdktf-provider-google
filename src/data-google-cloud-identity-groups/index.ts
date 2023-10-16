@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/cloud_identity_groups
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_identity_groups
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudIdentityGroupsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/cloud_identity_groups#id DataGoogleCloudIdentityGroups#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_identity_groups#id DataGoogleCloudIdentityGroups#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,7 +26,7 @@ export interface DataGoogleCloudIdentityGroupsConfig extends cdktf.TerraformMeta
   * Must be of the form identitysources/{identity_source_id} for external-identity-mapped
   * groups or customers/{customer_id} for Google Groups.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/cloud_identity_groups#parent DataGoogleCloudIdentityGroups#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_identity_groups#parent DataGoogleCloudIdentityGroups#parent}
   */
   readonly parent: string;
 }
@@ -207,7 +207,7 @@ export class DataGoogleCloudIdentityGroupsGroupsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/cloud_identity_groups google_cloud_identity_groups}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_identity_groups google_cloud_identity_groups}
 */
 export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
 
@@ -221,7 +221,7 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/cloud_identity_groups google_cloud_identity_groups} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_identity_groups google_cloud_identity_groups} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -232,7 +232,7 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloud_identity_groups',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

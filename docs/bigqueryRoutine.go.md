@@ -1,6 +1,6 @@
 # `google_bigquery_routine`
 
-Refer to the Terraform Registory for docs: [`google_bigquery_routine`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine).
+Refer to the Terraform Registory for docs: [`google_bigquery_routine`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine).
 
 # `bigqueryRoutine` Submodule <a name="`bigqueryRoutine` Submodule" id="@cdktf/provider-google.bigqueryRoutine"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_bigquery_routine`](https://r
 
 ### BigqueryRoutine <a name="BigqueryRoutine" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine google_bigquery_routine}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine google_bigquery_routine}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutine(scope Construct, id *string, config BigqueryRoutineConfig) BigqueryRoutine
 ```
@@ -366,7 +366,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 bigqueryroutine.BigqueryRoutine_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 bigqueryroutine.BigqueryRoutine_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ bigqueryroutine.BigqueryRoutine_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 bigqueryroutine.BigqueryRoutine_IsTerraformResource(x interface{}) *bool
 ```
@@ -941,7 +941,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArguments.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 &bigqueryroutine.BigqueryRoutineArguments {
 	ArgumentKind: *string,
@@ -972,7 +972,7 @@ ArgumentKind *string
 
 Defaults to FIXED_TYPE. Default value: "FIXED_TYPE" Possible values: ["FIXED_TYPE", "ANY_TYPE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#argument_kind BigqueryRoutine#argument_kind}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#argument_kind BigqueryRoutine#argument_kind}
 
 ---
 
@@ -994,7 +994,7 @@ or replaced STRUCT field type with RECORD field type, we currently cannot
 suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#data_type BigqueryRoutine#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#data_type BigqueryRoutine#data_type}
 
 ---
 
@@ -1008,7 +1008,7 @@ Mode *string
 
 Specifies whether the argument is input or output. Can be set for procedures only. Possible values: ["IN", "OUT", "INOUT"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#mode BigqueryRoutine#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#mode BigqueryRoutine#mode}
 
 ---
 
@@ -1022,7 +1022,7 @@ Name *string
 
 The name of this argument. Can be absent for function return argument.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#name BigqueryRoutine#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#name BigqueryRoutine#name}
 
 ---
 
@@ -1031,7 +1031,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 &bigqueryroutine.BigqueryRoutineConfig {
 	Connection: interface{},
@@ -1054,7 +1054,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
 	Project: *string,
 	ReturnTableType: *string,
 	ReturnType: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.bigqueryRoutine.BigqueryRoutineTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.bigqueryRoutine.BigqueryRoutineTimeouts,
 }
 ```
 
@@ -1076,10 +1076,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.arguments">Arguments</a></code> | <code>interface{}</code> | arguments block. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.description">Description</a></code> | <code>*string</code> | The description of the routine if defined. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.determinismLevel">DeterminismLevel</a></code> | <code>*string</code> | The determinism level of the JavaScript UDF if defined. Possible values: ["DETERMINISM_LEVEL_UNSPECIFIED", "DETERMINISTIC", "NOT_DETERMINISTIC"]. |
-| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#id BigqueryRoutine#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#id BigqueryRoutine#id}. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.importedLibraries">ImportedLibraries</a></code> | <code>*[]*string</code> | Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.language">Language</a></code> | <code>*string</code> | The language of the routine. Possible values: ["SQL", "JAVASCRIPT"]. |
-| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#project BigqueryRoutine#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#project BigqueryRoutine#project}. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.returnTableType">ReturnTableType</a></code> | <code>*string</code> | Optional. Can be set only if routineType = "TABLE_VALUED_FUNCTION". |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.returnType">ReturnType</a></code> | <code>*string</code> | A JSON schema for the return type. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts">BigqueryRoutineTimeouts</a></code> | timeouts block. |
@@ -1166,7 +1166,7 @@ DatasetId *string
 
 The ID of the dataset containing this routine.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#dataset_id BigqueryRoutine#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#dataset_id BigqueryRoutine#dataset_id}
 
 ---
 
@@ -1183,7 +1183,7 @@ The body of the routine.
 For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#definition_body BigqueryRoutine#definition_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#definition_body BigqueryRoutine#definition_body}
 
 ---
 
@@ -1199,7 +1199,7 @@ The ID of the the routine.
 
 The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#routine_id BigqueryRoutine#routine_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#routine_id BigqueryRoutine#routine_id}
 
 ---
 
@@ -1213,7 +1213,7 @@ RoutineType *string
 
 The type of routine. Possible values: ["SCALAR_FUNCTION", "PROCEDURE", "TABLE_VALUED_FUNCTION"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#routine_type BigqueryRoutine#routine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#routine_type BigqueryRoutine#routine_type}
 
 ---
 
@@ -1227,7 +1227,7 @@ Arguments interface{}
 
 arguments block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#arguments BigqueryRoutine#arguments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#arguments BigqueryRoutine#arguments}
 
 ---
 
@@ -1241,7 +1241,7 @@ Description *string
 
 The description of the routine if defined.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#description BigqueryRoutine#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#description BigqueryRoutine#description}
 
 ---
 
@@ -1255,7 +1255,7 @@ DeterminismLevel *string
 
 The determinism level of the JavaScript UDF if defined. Possible values: ["DETERMINISM_LEVEL_UNSPECIFIED", "DETERMINISTIC", "NOT_DETERMINISTIC"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#determinism_level BigqueryRoutine#determinism_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#determinism_level BigqueryRoutine#determinism_level}
 
 ---
 
@@ -1267,7 +1267,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#id BigqueryRoutine#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#id BigqueryRoutine#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1284,7 +1284,7 @@ ImportedLibraries *[]*string
 
 Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#imported_libraries BigqueryRoutine#imported_libraries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#imported_libraries BigqueryRoutine#imported_libraries}
 
 ---
 
@@ -1298,7 +1298,7 @@ Language *string
 
 The language of the routine. Possible values: ["SQL", "JAVASCRIPT"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#language BigqueryRoutine#language}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#language BigqueryRoutine#language}
 
 ---
 
@@ -1310,7 +1310,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#project BigqueryRoutine#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#project BigqueryRoutine#project}.
 
 ---
 
@@ -1328,7 +1328,7 @@ If absent, the return table type is inferred from definitionBody at query time i
 that references this routine. If present, then the columns in the evaluated table result will
 be cast to match the column types specificed in return table type, at query time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#return_table_type BigqueryRoutine#return_table_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#return_table_type BigqueryRoutine#return_table_type}
 
 ---
 
@@ -1352,7 +1352,7 @@ d the order of values or replaced STRUCT field type with RECORD field type, we c
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#return_type BigqueryRoutine#return_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#return_type BigqueryRoutine#return_type}
 
 ---
 
@@ -1366,7 +1366,7 @@ Timeouts BigqueryRoutineTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#timeouts BigqueryRoutine#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#timeouts BigqueryRoutine#timeouts}
 
 ---
 
@@ -1375,7 +1375,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 &bigqueryroutine.BigqueryRoutineTimeouts {
 	Create: *string,
@@ -1388,9 +1388,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#create BigqueryRoutine#create}. |
-| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#delete BigqueryRoutine#delete}. |
-| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#update BigqueryRoutine#update}. |
+| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#create BigqueryRoutine#create}. |
+| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#delete BigqueryRoutine#delete}. |
+| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#update BigqueryRoutine#update}. |
 
 ---
 
@@ -1402,7 +1402,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#create BigqueryRoutine#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#create BigqueryRoutine#create}.
 
 ---
 
@@ -1414,7 +1414,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#delete BigqueryRoutine#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#delete BigqueryRoutine#delete}.
 
 ---
 
@@ -1426,7 +1426,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/bigquery_routine#update BigqueryRoutine#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/bigquery_routine#update BigqueryRoutine#update}.
 
 ---
 
@@ -1437,7 +1437,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutineArgumentsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BigqueryRoutineArgumentsList
 ```
@@ -1580,7 +1580,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutineArgumentsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BigqueryRoutineArgumentsOutputReference
 ```
@@ -1963,7 +1963,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryRoutineTimeoutsOutputReference
 ```

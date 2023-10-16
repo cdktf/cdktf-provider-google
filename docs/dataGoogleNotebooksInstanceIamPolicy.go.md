@@ -1,6 +1,6 @@
 # `data_google_notebooks_instance_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_notebooks_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_notebooks_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy).
 
 # `dataGoogleNotebooksInstanceIamPolicy` Submodule <a name="`dataGoogleNotebooksInstanceIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_notebooks_instance_iam_
 
 ### DataGoogleNotebooksInstanceIamPolicy <a name="DataGoogleNotebooksInstanceIamPolicy" id="@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy google_notebooks_instance_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy google_notebooks_instance_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglenotebooksinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglenotebooksinstanceiampolicy"
 
 datagooglenotebooksinstanceiampolicy.NewDataGoogleNotebooksInstanceIamPolicy(scope Construct, id *string, config DataGoogleNotebooksInstanceIamPolicyConfig) DataGoogleNotebooksInstanceIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglenotebooksinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglenotebooksinstanceiampolicy"
 
 datagooglenotebooksinstanceiampolicy.DataGoogleNotebooksInstanceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglenotebooksinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglenotebooksinstanceiampolicy"
 
 datagooglenotebooksinstanceiampolicy.DataGoogleNotebooksInstanceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagooglenotebooksinstanceiampolicy.DataGoogleNotebooksInstanceIamPolicy_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglenotebooksinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglenotebooksinstanceiampolicy"
 
 datagooglenotebooksinstanceiampolicy.DataGoogleNotebooksInstanceIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -624,7 +624,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglenotebooksinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglenotebooksinstanceiampolicy"
 
 &datagooglenotebooksinstanceiampolicy.DataGoogleNotebooksInstanceIamPolicyConfig {
 	Connection: interface{},
@@ -652,10 +652,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglenotebooks
 | <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.instanceName">InstanceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#instance_name DataGoogleNotebooksInstanceIamPolicy#instance_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#id DataGoogleNotebooksInstanceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#location DataGoogleNotebooksInstanceIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#project DataGoogleNotebooksInstanceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.instanceName">InstanceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#instance_name DataGoogleNotebooksInstanceIamPolicy#instance_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#id DataGoogleNotebooksInstanceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#location DataGoogleNotebooksInstanceIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNotebooksInstanceIamPolicy.DataGoogleNotebooksInstanceIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#project DataGoogleNotebooksInstanceIamPolicy#project}. |
 
 ---
 
@@ -737,7 +737,7 @@ InstanceName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#instance_name DataGoogleNotebooksInstanceIamPolicy#instance_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#instance_name DataGoogleNotebooksInstanceIamPolicy#instance_name}.
 
 ---
 
@@ -749,7 +749,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#id DataGoogleNotebooksInstanceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#id DataGoogleNotebooksInstanceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -764,7 +764,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#location DataGoogleNotebooksInstanceIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#location DataGoogleNotebooksInstanceIamPolicy#location}.
 
 ---
 
@@ -776,7 +776,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/notebooks_instance_iam_policy#project DataGoogleNotebooksInstanceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/notebooks_instance_iam_policy#project DataGoogleNotebooksInstanceIamPolicy#project}.
 
 ---
 

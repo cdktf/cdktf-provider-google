@@ -1,6 +1,6 @@
 # `data_google_bigquery_table_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_bigquery_table_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_bigquery_table_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy).
 
 # `dataGoogleBigqueryTableIamPolicy` Submodule <a name="`dataGoogleBigqueryTableIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_bigquery_table_iam_poli
 
 ### DataGoogleBigqueryTableIamPolicy <a name="DataGoogleBigqueryTableIamPolicy" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy google_bigquery_table_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy google_bigquery_table_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.NewDataGoogleBigqueryTableIamPolicy(scope Construct, id *string, config DataGoogleBigqueryTableIamPolicyConfig) DataGoogleBigqueryTableIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -617,7 +617,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
 
 &datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicyConfig {
 	Connection: interface{},
@@ -645,10 +645,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/datagooglebigqueryt
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.datasetId">DatasetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#dataset_id DataGoogleBigqueryTableIamPolicy#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.tableId">TableId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#table_id DataGoogleBigqueryTableIamPolicy#table_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#id DataGoogleBigqueryTableIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#project DataGoogleBigqueryTableIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.datasetId">DatasetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#dataset_id DataGoogleBigqueryTableIamPolicy#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.tableId">TableId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#table_id DataGoogleBigqueryTableIamPolicy#table_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#id DataGoogleBigqueryTableIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#project DataGoogleBigqueryTableIamPolicy#project}. |
 
 ---
 
@@ -730,7 +730,7 @@ DatasetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#dataset_id DataGoogleBigqueryTableIamPolicy#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#dataset_id DataGoogleBigqueryTableIamPolicy#dataset_id}.
 
 ---
 
@@ -742,7 +742,7 @@ TableId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#table_id DataGoogleBigqueryTableIamPolicy#table_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#table_id DataGoogleBigqueryTableIamPolicy#table_id}.
 
 ---
 
@@ -754,7 +754,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#id DataGoogleBigqueryTableIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#id DataGoogleBigqueryTableIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -769,7 +769,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/bigquery_table_iam_policy#project DataGoogleBigqueryTableIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/bigquery_table_iam_policy#project DataGoogleBigqueryTableIamPolicy#project}.
 
 ---
 

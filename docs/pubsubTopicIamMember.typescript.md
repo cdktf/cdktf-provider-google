@@ -1,6 +1,6 @@
 # `google_pubsub_topic_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_pubsub_topic_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member).
+Refer to the Terraform Registory for docs: [`google_pubsub_topic_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member).
 
 # `pubsubTopicIamMember` Submodule <a name="`pubsubTopicIamMember` Submodule" id="@cdktf/provider-google.pubsubTopicIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_pubsub_topic_iam_member`](ht
 
 ### PubsubTopicIamMember <a name="PubsubTopicIamMember" id="@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member google_pubsub_topic_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member google_pubsub_topic_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMember.Initializer"></a>
 
@@ -701,9 +701,9 @@ const pubsubTopicIamMemberCondition: pubsubTopicIamMember.PubsubTopicIamMemberCo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#expression PubsubTopicIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#title PubsubTopicIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#description PubsubTopicIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#expression PubsubTopicIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#title PubsubTopicIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#description PubsubTopicIamMember#description}. |
 
 ---
 
@@ -715,7 +715,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#expression PubsubTopicIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#expression PubsubTopicIamMember#expression}.
 
 ---
 
@@ -727,7 +727,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#title PubsubTopicIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#title PubsubTopicIamMember#title}.
 
 ---
 
@@ -739,7 +739,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#description PubsubTopicIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#description PubsubTopicIamMember#description}.
 
 ---
 
@@ -764,12 +764,12 @@ const pubsubTopicIamMemberConfig: pubsubTopicIamMember.PubsubTopicIamMemberConfi
 | <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#member PubsubTopicIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#role PubsubTopicIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.topic">topic</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#topic PubsubTopicIamMember#topic}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#member PubsubTopicIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#role PubsubTopicIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.topic">topic</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#topic PubsubTopicIamMember#topic}. |
 | <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberCondition">PubsubTopicIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#id PubsubTopicIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#project PubsubTopicIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#id PubsubTopicIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.pubsubTopicIamMember.PubsubTopicIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#project PubsubTopicIamMember#project}. |
 
 ---
 
@@ -851,7 +851,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#member PubsubTopicIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#member PubsubTopicIamMember#member}.
 
 ---
 
@@ -863,7 +863,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#role PubsubTopicIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#role PubsubTopicIamMember#role}.
 
 ---
 
@@ -875,7 +875,7 @@ public readonly topic: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#topic PubsubTopicIamMember#topic}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#topic PubsubTopicIamMember#topic}.
 
 ---
 
@@ -889,7 +889,7 @@ public readonly condition: PubsubTopicIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#condition PubsubTopicIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#condition PubsubTopicIamMember#condition}
 
 ---
 
@@ -901,7 +901,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#id PubsubTopicIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#id PubsubTopicIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -916,7 +916,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/pubsub_topic_iam_member#project PubsubTopicIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_topic_iam_member#project PubsubTopicIamMember#project}.
 
 ---
 

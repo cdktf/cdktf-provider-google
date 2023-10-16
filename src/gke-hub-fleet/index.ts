@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,24 +16,24 @@ export interface GkeHubFleetConfig extends cdktf.TerraformMetaArguments {
   * A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters.
   * Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet#display_name GkeHubFleet#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet#display_name GkeHubFleet#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet#id GkeHubFleet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet#id GkeHubFleet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet#project GkeHubFleet#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet#project GkeHubFleet#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet#timeouts GkeHubFleet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet#timeouts GkeHubFleet#timeouts}
   */
   readonly timeouts?: GkeHubFleetTimeouts;
 }
@@ -103,15 +103,15 @@ export class GkeHubFleetStateList extends cdktf.ComplexList {
 }
 export interface GkeHubFleetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet#create GkeHubFleet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet#create GkeHubFleet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet#delete GkeHubFleet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet#delete GkeHubFleet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet#update GkeHubFleet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet#update GkeHubFleet#update}
   */
   readonly update?: string;
 }
@@ -232,7 +232,7 @@ export class GkeHubFleetTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet google_gke_hub_fleet}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet google_gke_hub_fleet}
 */
 export class GkeHubFleet extends cdktf.TerraformResource {
 
@@ -246,7 +246,7 @@ export class GkeHubFleet extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/gke_hub_fleet google_gke_hub_fleet} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/gke_hub_fleet google_gke_hub_fleet} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -257,7 +257,7 @@ export class GkeHubFleet extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_hub_fleet',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

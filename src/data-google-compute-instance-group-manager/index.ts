@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager#id DataGoogleComputeInstanceGroupManager#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager#id DataGoogleComputeInstanceGroupManager#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,25 +22,25 @@ export interface DataGoogleComputeInstanceGroupManagerConfig extends cdktf.Terra
   /**
   * The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager#name DataGoogleComputeInstanceGroupManager#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager#name DataGoogleComputeInstanceGroupManager#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager#project DataGoogleComputeInstanceGroupManager#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager#project DataGoogleComputeInstanceGroupManager#project}
   */
   readonly project?: string;
   /**
   * The URL of the created resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager#self_link DataGoogleComputeInstanceGroupManager#self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager#self_link DataGoogleComputeInstanceGroupManager#self_link}
   */
   readonly selfLink?: string;
   /**
   * The zone that instances in this group should be created in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager#zone DataGoogleComputeInstanceGroupManager#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager#zone DataGoogleComputeInstanceGroupManager#zone}
   */
   readonly zone?: string;
 }
@@ -313,6 +313,144 @@ export class DataGoogleComputeInstanceGroupManagerStatefulDiskList extends cdktf
   */
   public get(index: number): DataGoogleComputeInstanceGroupManagerStatefulDiskOutputReference {
     return new DataGoogleComputeInstanceGroupManagerStatefulDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeInstanceGroupManagerStatefulExternalIp {
+}
+
+export function dataGoogleComputeInstanceGroupManagerStatefulExternalIpToTerraform(struct?: DataGoogleComputeInstanceGroupManagerStatefulExternalIp): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeInstanceGroupManagerStatefulExternalIpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceGroupManagerStatefulExternalIp | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceGroupManagerStatefulExternalIp | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // delete_rule - computed: true, optional: false, required: false
+  public get deleteRule() {
+    return this.getStringAttribute('delete_rule');
+  }
+
+  // interface_name - computed: true, optional: false, required: false
+  public get interfaceName() {
+    return this.getStringAttribute('interface_name');
+  }
+}
+
+export class DataGoogleComputeInstanceGroupManagerStatefulExternalIpList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceGroupManagerStatefulExternalIpOutputReference {
+    return new DataGoogleComputeInstanceGroupManagerStatefulExternalIpOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeInstanceGroupManagerStatefulInternalIp {
+}
+
+export function dataGoogleComputeInstanceGroupManagerStatefulInternalIpToTerraform(struct?: DataGoogleComputeInstanceGroupManagerStatefulInternalIp): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeInstanceGroupManagerStatefulInternalIpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceGroupManagerStatefulInternalIp | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceGroupManagerStatefulInternalIp | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // delete_rule - computed: true, optional: false, required: false
+  public get deleteRule() {
+    return this.getStringAttribute('delete_rule');
+  }
+
+  // interface_name - computed: true, optional: false, required: false
+  public get interfaceName() {
+    return this.getStringAttribute('interface_name');
+  }
+}
+
+export class DataGoogleComputeInstanceGroupManagerStatefulInternalIpList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceGroupManagerStatefulInternalIpOutputReference {
+    return new DataGoogleComputeInstanceGroupManagerStatefulInternalIpOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs {
@@ -834,7 +972,7 @@ export class DataGoogleComputeInstanceGroupManagerVersionList extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager}
 */
 export class DataGoogleComputeInstanceGroupManager extends cdktf.TerraformDataSource {
 
@@ -848,7 +986,7 @@ export class DataGoogleComputeInstanceGroupManager extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -859,7 +997,7 @@ export class DataGoogleComputeInstanceGroupManager extends cdktf.TerraformDataSo
       terraformResourceType: 'google_compute_instance_group_manager',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -997,6 +1135,18 @@ export class DataGoogleComputeInstanceGroupManager extends cdktf.TerraformDataSo
   private _statefulDisk = new DataGoogleComputeInstanceGroupManagerStatefulDiskList(this, "stateful_disk", true);
   public get statefulDisk() {
     return this._statefulDisk;
+  }
+
+  // stateful_external_ip - computed: true, optional: false, required: false
+  private _statefulExternalIp = new DataGoogleComputeInstanceGroupManagerStatefulExternalIpList(this, "stateful_external_ip", false);
+  public get statefulExternalIp() {
+    return this._statefulExternalIp;
+  }
+
+  // stateful_internal_ip - computed: true, optional: false, required: false
+  private _statefulInternalIp = new DataGoogleComputeInstanceGroupManagerStatefulInternalIpList(this, "stateful_internal_ip", false);
+  public get statefulInternalIp() {
+    return this._statefulInternalIp;
   }
 
   // status - computed: true, optional: false, required: false

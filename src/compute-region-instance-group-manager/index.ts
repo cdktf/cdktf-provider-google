@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,29 +15,29 @@ export interface ComputeRegionInstanceGroupManagerConfig extends cdktf.Terraform
   /**
   * The base instance name to use for instances in this group. The value must be a valid RFC1035 name. Supported characters are lowercase letters, numbers, and hyphens (-). Instances are named by appending a hyphen and a random four-character string to the base instance name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#base_instance_name ComputeRegionInstanceGroupManager#base_instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#base_instance_name ComputeRegionInstanceGroupManager#base_instance_name}
   */
   readonly baseInstanceName: string;
   /**
   * An optional textual description of the instance group manager.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#description ComputeRegionInstanceGroupManager#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#description ComputeRegionInstanceGroupManager#description}
   */
   readonly description?: string;
   /**
   * The shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#distribution_policy_target_shape ComputeRegionInstanceGroupManager#distribution_policy_target_shape}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#distribution_policy_target_shape ComputeRegionInstanceGroupManager#distribution_policy_target_shape}
   */
   readonly distributionPolicyTargetShape?: string;
   /**
   * The distribution policy for this managed instance group. You can specify one or more values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#distribution_policy_zones ComputeRegionInstanceGroupManager#distribution_policy_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#distribution_policy_zones ComputeRegionInstanceGroupManager#distribution_policy_zones}
   */
   readonly distributionPolicyZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#id ComputeRegionInstanceGroupManager#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#id ComputeRegionInstanceGroupManager#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -46,91 +46,103 @@ export interface ComputeRegionInstanceGroupManagerConfig extends cdktf.Terraform
   /**
   * Pagination behavior of the listManagedInstances API method for this managed instance group. Valid values are: "PAGELESS", "PAGINATED". If PAGELESS (default), Pagination is disabled for the group's listManagedInstances API method. maxResults and pageToken query parameters are ignored and all instances are returned in a single response. If PAGINATED, pagination is enabled, maxResults and pageToken query parameters are respected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#list_managed_instances_results ComputeRegionInstanceGroupManager#list_managed_instances_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#list_managed_instances_results ComputeRegionInstanceGroupManager#list_managed_instances_results}
   */
   readonly listManagedInstancesResults?: string;
   /**
   * The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#name ComputeRegionInstanceGroupManager#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#name ComputeRegionInstanceGroupManager#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#project ComputeRegionInstanceGroupManager#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#project ComputeRegionInstanceGroupManager#project}
   */
   readonly project?: string;
   /**
   * The region where the managed instance group resides.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#region ComputeRegionInstanceGroupManager#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#region ComputeRegionInstanceGroupManager#region}
   */
   readonly region?: string;
   /**
   * The full URL of all target pools to which new instances in the group are added. Updating the target pools attribute does not affect existing instances.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#target_pools ComputeRegionInstanceGroupManager#target_pools}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#target_pools ComputeRegionInstanceGroupManager#target_pools}
   */
   readonly targetPools?: string[];
   /**
   * The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set. Defaults to 0.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#target_size ComputeRegionInstanceGroupManager#target_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#target_size ComputeRegionInstanceGroupManager#target_size}
   */
   readonly targetSize?: number;
   /**
   * Whether to wait for all instances to be created/updated before returning. Note that if this is set to true and the operation does not succeed, Terraform will continue trying until it times out.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#wait_for_instances ComputeRegionInstanceGroupManager#wait_for_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#wait_for_instances ComputeRegionInstanceGroupManager#wait_for_instances}
   */
   readonly waitForInstances?: boolean | cdktf.IResolvable;
   /**
   * When used with wait_for_instances specifies the status to wait for. When STABLE is specified this resource will wait until the instances are stable before returning. When UPDATED is set, it will wait for the version target to be reached and any per instance configs to be effective as well as all instances to be stable before returning.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#wait_for_instances_status ComputeRegionInstanceGroupManager#wait_for_instances_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#wait_for_instances_status ComputeRegionInstanceGroupManager#wait_for_instances_status}
   */
   readonly waitForInstancesStatus?: string;
   /**
   * auto_healing_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#auto_healing_policies ComputeRegionInstanceGroupManager#auto_healing_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#auto_healing_policies ComputeRegionInstanceGroupManager#auto_healing_policies}
   */
   readonly autoHealingPolicies?: ComputeRegionInstanceGroupManagerAutoHealingPolicies;
   /**
   * instance_lifecycle_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#instance_lifecycle_policy ComputeRegionInstanceGroupManager#instance_lifecycle_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#instance_lifecycle_policy ComputeRegionInstanceGroupManager#instance_lifecycle_policy}
   */
   readonly instanceLifecyclePolicy?: ComputeRegionInstanceGroupManagerInstanceLifecyclePolicy;
   /**
   * named_port block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#named_port ComputeRegionInstanceGroupManager#named_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#named_port ComputeRegionInstanceGroupManager#named_port}
   */
   readonly namedPort?: ComputeRegionInstanceGroupManagerNamedPort[] | cdktf.IResolvable;
   /**
   * stateful_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#stateful_disk ComputeRegionInstanceGroupManager#stateful_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#stateful_disk ComputeRegionInstanceGroupManager#stateful_disk}
   */
   readonly statefulDisk?: ComputeRegionInstanceGroupManagerStatefulDisk[] | cdktf.IResolvable;
   /**
+  * stateful_external_ip block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#stateful_external_ip ComputeRegionInstanceGroupManager#stateful_external_ip}
+  */
+  readonly statefulExternalIp?: ComputeRegionInstanceGroupManagerStatefulExternalIp[] | cdktf.IResolvable;
+  /**
+  * stateful_internal_ip block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#stateful_internal_ip ComputeRegionInstanceGroupManager#stateful_internal_ip}
+  */
+  readonly statefulInternalIp?: ComputeRegionInstanceGroupManagerStatefulInternalIp[] | cdktf.IResolvable;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#timeouts ComputeRegionInstanceGroupManager#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#timeouts ComputeRegionInstanceGroupManager#timeouts}
   */
   readonly timeouts?: ComputeRegionInstanceGroupManagerTimeouts;
   /**
   * update_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#update_policy ComputeRegionInstanceGroupManager#update_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#update_policy ComputeRegionInstanceGroupManager#update_policy}
   */
   readonly updatePolicy?: ComputeRegionInstanceGroupManagerUpdatePolicy;
   /**
   * version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#version ComputeRegionInstanceGroupManager#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#version ComputeRegionInstanceGroupManager#version}
   */
   readonly version: ComputeRegionInstanceGroupManagerVersion[] | cdktf.IResolvable;
 }
@@ -412,13 +424,13 @@ export interface ComputeRegionInstanceGroupManagerAutoHealingPolicies {
   /**
   * The health check resource that signals autohealing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#health_check ComputeRegionInstanceGroupManager#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#health_check ComputeRegionInstanceGroupManager#health_check}
   */
   readonly healthCheck: string;
   /**
   * The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#initial_delay_sec ComputeRegionInstanceGroupManager#initial_delay_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#initial_delay_sec ComputeRegionInstanceGroupManager#initial_delay_sec}
   */
   readonly initialDelaySec: number;
 }
@@ -502,7 +514,7 @@ export interface ComputeRegionInstanceGroupManagerInstanceLifecyclePolicy {
   /**
   * Specifies whether to apply the group's latest configuration when repairing a VM. Valid options are: YES, NO. If YES and you updated the group's instance template or per-instance configurations after the VM was created, then these changes are applied when VM is repaired. If NO (default), then updates are applied in accordance with the group's update policy type.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#force_update_on_repair ComputeRegionInstanceGroupManager#force_update_on_repair}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#force_update_on_repair ComputeRegionInstanceGroupManager#force_update_on_repair}
   */
   readonly forceUpdateOnRepair?: string;
 }
@@ -569,13 +581,13 @@ export interface ComputeRegionInstanceGroupManagerNamedPort {
   /**
   * The name of the port.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#name ComputeRegionInstanceGroupManager#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#name ComputeRegionInstanceGroupManager#name}
   */
   readonly name: string;
   /**
   * The port number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#port ComputeRegionInstanceGroupManager#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#port ComputeRegionInstanceGroupManager#port}
   */
   readonly port: number;
 }
@@ -691,13 +703,13 @@ export interface ComputeRegionInstanceGroupManagerStatefulDisk {
   /**
   * A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#delete_rule ComputeRegionInstanceGroupManager#delete_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#delete_rule ComputeRegionInstanceGroupManager#delete_rule}
   */
   readonly deleteRule?: string;
   /**
   * The device name of the disk to be attached.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#device_name ComputeRegionInstanceGroupManager#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#device_name ComputeRegionInstanceGroupManager#device_name}
   */
   readonly deviceName: string;
 }
@@ -812,17 +824,273 @@ export class ComputeRegionInstanceGroupManagerStatefulDiskList extends cdktf.Com
     return new ComputeRegionInstanceGroupManagerStatefulDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ComputeRegionInstanceGroupManagerStatefulExternalIp {
+  /**
+  * A value that prescribes what should happen to an associated static Address resource when a VM instance is permanently deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the IP when the VM is deleted, but do not delete the address resource. ON_PERMANENT_INSTANCE_DELETION will delete the stateful address when the VM is permanently deleted from the instance group. The default is NEVER.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#delete_rule ComputeRegionInstanceGroupManager#delete_rule}
+  */
+  readonly deleteRule?: string;
+  /**
+  * The network interface name
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#interface_name ComputeRegionInstanceGroupManager#interface_name}
+  */
+  readonly interfaceName?: string;
+}
+
+export function computeRegionInstanceGroupManagerStatefulExternalIpToTerraform(struct?: ComputeRegionInstanceGroupManagerStatefulExternalIp | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    delete_rule: cdktf.stringToTerraform(struct!.deleteRule),
+    interface_name: cdktf.stringToTerraform(struct!.interfaceName),
+  }
+}
+
+export class ComputeRegionInstanceGroupManagerStatefulExternalIpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionInstanceGroupManagerStatefulExternalIp | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deleteRule !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteRule = this._deleteRule;
+    }
+    if (this._interfaceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interfaceName = this._interfaceName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionInstanceGroupManagerStatefulExternalIp | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deleteRule = undefined;
+      this._interfaceName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deleteRule = value.deleteRule;
+      this._interfaceName = value.interfaceName;
+    }
+  }
+
+  // delete_rule - computed: false, optional: true, required: false
+  private _deleteRule?: string; 
+  public get deleteRule() {
+    return this.getStringAttribute('delete_rule');
+  }
+  public set deleteRule(value: string) {
+    this._deleteRule = value;
+  }
+  public resetDeleteRule() {
+    this._deleteRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteRuleInput() {
+    return this._deleteRule;
+  }
+
+  // interface_name - computed: false, optional: true, required: false
+  private _interfaceName?: string; 
+  public get interfaceName() {
+    return this.getStringAttribute('interface_name');
+  }
+  public set interfaceName(value: string) {
+    this._interfaceName = value;
+  }
+  public resetInterfaceName() {
+    this._interfaceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceNameInput() {
+    return this._interfaceName;
+  }
+}
+
+export class ComputeRegionInstanceGroupManagerStatefulExternalIpList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionInstanceGroupManagerStatefulExternalIp[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionInstanceGroupManagerStatefulExternalIpOutputReference {
+    return new ComputeRegionInstanceGroupManagerStatefulExternalIpOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeRegionInstanceGroupManagerStatefulInternalIp {
+  /**
+  * A value that prescribes what should happen to an associated static Address resource when a VM instance is permanently deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the IP when the VM is deleted, but do not delete the address resource. ON_PERMANENT_INSTANCE_DELETION will delete the stateful address when the VM is permanently deleted from the instance group. The default is NEVER.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#delete_rule ComputeRegionInstanceGroupManager#delete_rule}
+  */
+  readonly deleteRule?: string;
+  /**
+  * The network interface name
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#interface_name ComputeRegionInstanceGroupManager#interface_name}
+  */
+  readonly interfaceName?: string;
+}
+
+export function computeRegionInstanceGroupManagerStatefulInternalIpToTerraform(struct?: ComputeRegionInstanceGroupManagerStatefulInternalIp | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    delete_rule: cdktf.stringToTerraform(struct!.deleteRule),
+    interface_name: cdktf.stringToTerraform(struct!.interfaceName),
+  }
+}
+
+export class ComputeRegionInstanceGroupManagerStatefulInternalIpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionInstanceGroupManagerStatefulInternalIp | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deleteRule !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteRule = this._deleteRule;
+    }
+    if (this._interfaceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interfaceName = this._interfaceName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionInstanceGroupManagerStatefulInternalIp | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deleteRule = undefined;
+      this._interfaceName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deleteRule = value.deleteRule;
+      this._interfaceName = value.interfaceName;
+    }
+  }
+
+  // delete_rule - computed: false, optional: true, required: false
+  private _deleteRule?: string; 
+  public get deleteRule() {
+    return this.getStringAttribute('delete_rule');
+  }
+  public set deleteRule(value: string) {
+    this._deleteRule = value;
+  }
+  public resetDeleteRule() {
+    this._deleteRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteRuleInput() {
+    return this._deleteRule;
+  }
+
+  // interface_name - computed: false, optional: true, required: false
+  private _interfaceName?: string; 
+  public get interfaceName() {
+    return this.getStringAttribute('interface_name');
+  }
+  public set interfaceName(value: string) {
+    this._interfaceName = value;
+  }
+  public resetInterfaceName() {
+    this._interfaceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceNameInput() {
+    return this._interfaceName;
+  }
+}
+
+export class ComputeRegionInstanceGroupManagerStatefulInternalIpList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionInstanceGroupManagerStatefulInternalIp[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionInstanceGroupManagerStatefulInternalIpOutputReference {
+    return new ComputeRegionInstanceGroupManagerStatefulInternalIpOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionInstanceGroupManagerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#create ComputeRegionInstanceGroupManager#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#create ComputeRegionInstanceGroupManager#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#delete ComputeRegionInstanceGroupManager#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#delete ComputeRegionInstanceGroupManager#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#update ComputeRegionInstanceGroupManager#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#update ComputeRegionInstanceGroupManager#update}
   */
   readonly update?: string;
 }
@@ -945,55 +1213,55 @@ export interface ComputeRegionInstanceGroupManagerUpdatePolicy {
   /**
   * The instance redistribution policy for regional managed instance groups. Valid values are: "PROACTIVE", "NONE". If PROACTIVE (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If NONE, proactive redistribution is disabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#instance_redistribution_type ComputeRegionInstanceGroupManager#instance_redistribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#instance_redistribution_type ComputeRegionInstanceGroupManager#instance_redistribution_type}
   */
   readonly instanceRedistributionType?: string;
   /**
   * The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with max_surge_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#max_surge_fixed ComputeRegionInstanceGroupManager#max_surge_fixed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#max_surge_fixed ComputeRegionInstanceGroupManager#max_surge_fixed}
   */
   readonly maxSurgeFixed?: number;
   /**
   * The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with max_surge_fixed. Percent value is only allowed for regional managed instance groups with size at least 10.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#max_surge_percent ComputeRegionInstanceGroupManager#max_surge_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#max_surge_percent ComputeRegionInstanceGroupManager#max_surge_percent}
   */
   readonly maxSurgePercent?: number;
   /**
   * The maximum number of instances that can be unavailable during the update process. Conflicts with max_unavailable_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#max_unavailable_fixed ComputeRegionInstanceGroupManager#max_unavailable_fixed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#max_unavailable_fixed ComputeRegionInstanceGroupManager#max_unavailable_fixed}
   */
   readonly maxUnavailableFixed?: number;
   /**
   * The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with max_unavailable_fixed. Percent value is only allowed for regional managed instance groups with size at least 10.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#max_unavailable_percent ComputeRegionInstanceGroupManager#max_unavailable_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#max_unavailable_percent ComputeRegionInstanceGroupManager#max_unavailable_percent}
   */
   readonly maxUnavailablePercent?: number;
   /**
   * Minimal action to be taken on an instance. You can specify either REFRESH to update without stopping instances, RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a REFRESH, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#minimal_action ComputeRegionInstanceGroupManager#minimal_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#minimal_action ComputeRegionInstanceGroupManager#minimal_action}
   */
   readonly minimalAction: string;
   /**
   * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#most_disruptive_allowed_action ComputeRegionInstanceGroupManager#most_disruptive_allowed_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#most_disruptive_allowed_action ComputeRegionInstanceGroupManager#most_disruptive_allowed_action}
   */
   readonly mostDisruptiveAllowedAction?: string;
   /**
   * The instance replacement method for regional managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#replacement_method ComputeRegionInstanceGroupManager#replacement_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#replacement_method ComputeRegionInstanceGroupManager#replacement_method}
   */
   readonly replacementMethod?: string;
   /**
   * The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#type ComputeRegionInstanceGroupManager#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#type ComputeRegionInstanceGroupManager#type}
   */
   readonly type: string;
 }
@@ -1238,13 +1506,13 @@ export interface ComputeRegionInstanceGroupManagerVersionTargetSize {
   /**
   * The number of instances which are managed for this version. Conflicts with percent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#fixed ComputeRegionInstanceGroupManager#fixed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#fixed ComputeRegionInstanceGroupManager#fixed}
   */
   readonly fixed?: number;
   /**
   * The number of instances (calculated as percentage) which are managed for this version. Conflicts with fixed. Note that when using percent, rounding will be in favor of explicitly set target_size values; a managed instance group with 2 instances and 2 versions, one of which has a target_size.percent of 60 will create 2 instances of that version.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#percent ComputeRegionInstanceGroupManager#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#percent ComputeRegionInstanceGroupManager#percent}
   */
   readonly percent?: number;
 }
@@ -1334,19 +1602,19 @@ export interface ComputeRegionInstanceGroupManagerVersion {
   /**
   * The full URL to an instance template from which all new instances of this version will be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#instance_template ComputeRegionInstanceGroupManager#instance_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#instance_template ComputeRegionInstanceGroupManager#instance_template}
   */
   readonly instanceTemplate: string;
   /**
   * Version name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#name ComputeRegionInstanceGroupManager#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#name ComputeRegionInstanceGroupManager#name}
   */
   readonly name?: string;
   /**
   * target_size block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager#target_size ComputeRegionInstanceGroupManager#target_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager#target_size ComputeRegionInstanceGroupManager#target_size}
   */
   readonly targetSize?: ComputeRegionInstanceGroupManagerVersionTargetSize;
 }
@@ -1486,7 +1754,7 @@ export class ComputeRegionInstanceGroupManagerVersionList extends cdktf.ComplexL
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager google_compute_region_instance_group_manager}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager google_compute_region_instance_group_manager}
 */
 export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
 
@@ -1500,7 +1768,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/compute_region_instance_group_manager google_compute_region_instance_group_manager} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/compute_region_instance_group_manager google_compute_region_instance_group_manager} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1511,7 +1779,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_instance_group_manager',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -1539,6 +1807,8 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
     this._instanceLifecyclePolicy.internalValue = config.instanceLifecyclePolicy;
     this._namedPort.internalValue = config.namedPort;
     this._statefulDisk.internalValue = config.statefulDisk;
+    this._statefulExternalIp.internalValue = config.statefulExternalIp;
+    this._statefulInternalIp.internalValue = config.statefulInternalIp;
     this._timeouts.internalValue = config.timeouts;
     this._updatePolicy.internalValue = config.updatePolicy;
     this._version.internalValue = config.version;
@@ -1835,6 +2105,38 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
     return this._statefulDisk.internalValue;
   }
 
+  // stateful_external_ip - computed: false, optional: true, required: false
+  private _statefulExternalIp = new ComputeRegionInstanceGroupManagerStatefulExternalIpList(this, "stateful_external_ip", false);
+  public get statefulExternalIp() {
+    return this._statefulExternalIp;
+  }
+  public putStatefulExternalIp(value: ComputeRegionInstanceGroupManagerStatefulExternalIp[] | cdktf.IResolvable) {
+    this._statefulExternalIp.internalValue = value;
+  }
+  public resetStatefulExternalIp() {
+    this._statefulExternalIp.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statefulExternalIpInput() {
+    return this._statefulExternalIp.internalValue;
+  }
+
+  // stateful_internal_ip - computed: false, optional: true, required: false
+  private _statefulInternalIp = new ComputeRegionInstanceGroupManagerStatefulInternalIpList(this, "stateful_internal_ip", false);
+  public get statefulInternalIp() {
+    return this._statefulInternalIp;
+  }
+  public putStatefulInternalIp(value: ComputeRegionInstanceGroupManagerStatefulInternalIp[] | cdktf.IResolvable) {
+    this._statefulInternalIp.internalValue = value;
+  }
+  public resetStatefulInternalIp() {
+    this._statefulInternalIp.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statefulInternalIpInput() {
+    return this._statefulInternalIp.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ComputeRegionInstanceGroupManagerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1903,6 +2205,8 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
       instance_lifecycle_policy: computeRegionInstanceGroupManagerInstanceLifecyclePolicyToTerraform(this._instanceLifecyclePolicy.internalValue),
       named_port: cdktf.listMapper(computeRegionInstanceGroupManagerNamedPortToTerraform, true)(this._namedPort.internalValue),
       stateful_disk: cdktf.listMapper(computeRegionInstanceGroupManagerStatefulDiskToTerraform, true)(this._statefulDisk.internalValue),
+      stateful_external_ip: cdktf.listMapper(computeRegionInstanceGroupManagerStatefulExternalIpToTerraform, true)(this._statefulExternalIp.internalValue),
+      stateful_internal_ip: cdktf.listMapper(computeRegionInstanceGroupManagerStatefulInternalIpToTerraform, true)(this._statefulInternalIp.internalValue),
       timeouts: computeRegionInstanceGroupManagerTimeoutsToTerraform(this._timeouts.internalValue),
       update_policy: computeRegionInstanceGroupManagerUpdatePolicyToTerraform(this._updatePolicy.internalValue),
       version: cdktf.listMapper(computeRegionInstanceGroupManagerVersionToTerraform, true)(this._version.internalValue),

@@ -1,6 +1,6 @@
 # `google_storage_insights_report_config`
 
-Refer to the Terraform Registory for docs: [`google_storage_insights_report_config`](https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config).
+Refer to the Terraform Registory for docs: [`google_storage_insights_report_config`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config).
 
 # `storageInsightsReportConfig` Submodule <a name="`storageInsightsReportConfig` Submodule" id="@cdktf/provider-google.storageInsightsReportConfig"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_storage_insights_report_conf
 
 ### StorageInsightsReportConfig <a name="StorageInsightsReportConfig" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config google_storage_insights_report_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config google_storage_insights_report_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfig(scope Construct, id *string, config StorageInsightsReportConfigConfig) StorageInsightsReportConfig
 ```
@@ -364,7 +364,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.StorageInsightsReportConfig_IsConstruct(x interface{}) *bool
 ```
@@ -396,7 +396,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.StorageInsightsReportConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -410,7 +410,7 @@ storageinsightsreportconfig.StorageInsightsReportConfig_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.StorageInsightsReportConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -796,7 +796,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigConfig {
 	Connection: interface{},
@@ -806,14 +806,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsrepo
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	CsvOptions: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigCsvOptions,
+	CsvOptions: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigCsvOptions,
 	Location: *string,
 	DisplayName: *string,
-	FrequencyOptions: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptions,
+	FrequencyOptions: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptions,
 	Id: *string,
-	ObjectMetadataReportOptions: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptions,
+	ObjectMetadataReportOptions: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptions,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts,
 }
 ```
 
@@ -832,9 +832,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsrepo
 | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.location">Location</a></code> | <code>*string</code> | The location of the ReportConfig. The source and destination buckets specified in the ReportConfig must be in the same location. |
 | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | The editable display name of the inventory report configuration. Has a limit of 256 characters. Can be empty. |
 | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.frequencyOptions">FrequencyOptions</a></code> | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptions">StorageInsightsReportConfigFrequencyOptions</a></code> | frequency_options block. |
-| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#id StorageInsightsReportConfig#id}. |
+| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#id StorageInsightsReportConfig#id}. |
 | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.objectMetadataReportOptions">ObjectMetadataReportOptions</a></code> | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptions">StorageInsightsReportConfigObjectMetadataReportOptions</a></code> | object_metadata_report_options block. |
-| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#project StorageInsightsReportConfig#project}. |
+| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#project StorageInsightsReportConfig#project}. |
 | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts">StorageInsightsReportConfigTimeouts</a></code> | timeouts block. |
 
 ---
@@ -919,7 +919,7 @@ CsvOptions StorageInsightsReportConfigCsvOptions
 
 csv_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#csv_options StorageInsightsReportConfig#csv_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#csv_options StorageInsightsReportConfig#csv_options}
 
 ---
 
@@ -933,7 +933,7 @@ Location *string
 
 The location of the ReportConfig. The source and destination buckets specified in the ReportConfig must be in the same location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#location StorageInsightsReportConfig#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#location StorageInsightsReportConfig#location}
 
 ---
 
@@ -947,7 +947,7 @@ DisplayName *string
 
 The editable display name of the inventory report configuration. Has a limit of 256 characters. Can be empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#display_name StorageInsightsReportConfig#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#display_name StorageInsightsReportConfig#display_name}
 
 ---
 
@@ -961,7 +961,7 @@ FrequencyOptions StorageInsightsReportConfigFrequencyOptions
 
 frequency_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#frequency_options StorageInsightsReportConfig#frequency_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#frequency_options StorageInsightsReportConfig#frequency_options}
 
 ---
 
@@ -973,7 +973,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#id StorageInsightsReportConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#id StorageInsightsReportConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -990,7 +990,7 @@ ObjectMetadataReportOptions StorageInsightsReportConfigObjectMetadataReportOptio
 
 object_metadata_report_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#object_metadata_report_options StorageInsightsReportConfig#object_metadata_report_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#object_metadata_report_options StorageInsightsReportConfig#object_metadata_report_options}
 
 ---
 
@@ -1002,7 +1002,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#project StorageInsightsReportConfig#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#project StorageInsightsReportConfig#project}.
 
 ---
 
@@ -1016,7 +1016,7 @@ Timeouts StorageInsightsReportConfigTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#timeouts StorageInsightsReportConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#timeouts StorageInsightsReportConfig#timeouts}
 
 ---
 
@@ -1025,7 +1025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigCsvOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigCsvOptions {
 	Delimiter: *string,
@@ -1054,7 +1054,7 @@ Delimiter *string
 
 The delimiter used to separate the fields in the inventory report CSV file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#delimiter StorageInsightsReportConfig#delimiter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#delimiter StorageInsightsReportConfig#delimiter}
 
 ---
 
@@ -1068,7 +1068,7 @@ HeaderRequired interface{}
 
 The boolean that indicates whether or not headers are included in the inventory report CSV file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#header_required StorageInsightsReportConfig#header_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#header_required StorageInsightsReportConfig#header_required}
 
 ---
 
@@ -1082,7 +1082,7 @@ RecordSeparator *string
 
 The character used to separate the records in the inventory report CSV file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#record_separator StorageInsightsReportConfig#record_separator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#record_separator StorageInsightsReportConfig#record_separator}
 
 ---
 
@@ -1091,12 +1091,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigFrequencyOptions {
-	EndDate: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsEndDate,
+	EndDate: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsEndDate,
 	Frequency: *string,
-	StartDate: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsStartDate,
+	StartDate: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsStartDate,
 }
 ```
 
@@ -1120,7 +1120,7 @@ EndDate StorageInsightsReportConfigFrequencyOptionsEndDate
 
 end_date block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#end_date StorageInsightsReportConfig#end_date}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#end_date StorageInsightsReportConfig#end_date}
 
 ---
 
@@ -1134,7 +1134,7 @@ Frequency *string
 
 The frequency in which inventory reports are generated. Values are DAILY or WEEKLY. Possible values: ["DAILY", "WEEKLY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#frequency StorageInsightsReportConfig#frequency}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#frequency StorageInsightsReportConfig#frequency}
 
 ---
 
@@ -1148,7 +1148,7 @@ StartDate StorageInsightsReportConfigFrequencyOptionsStartDate
 
 start_date block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#start_date StorageInsightsReportConfig#start_date}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#start_date StorageInsightsReportConfig#start_date}
 
 ---
 
@@ -1157,7 +1157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsEndDate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigFrequencyOptionsEndDate {
 	Day: *f64,
@@ -1186,7 +1186,7 @@ Day *f64
 
 The day of the month to stop generating inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#day StorageInsightsReportConfig#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#day StorageInsightsReportConfig#day}
 
 ---
 
@@ -1200,7 +1200,7 @@ Month *f64
 
 The month to stop generating inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#month StorageInsightsReportConfig#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#month StorageInsightsReportConfig#month}
 
 ---
 
@@ -1214,7 +1214,7 @@ Year *f64
 
 The year to stop generating inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#year StorageInsightsReportConfig#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#year StorageInsightsReportConfig#year}
 
 ---
 
@@ -1223,7 +1223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsStartDate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigFrequencyOptionsStartDate {
 	Day: *f64,
@@ -1252,7 +1252,7 @@ Day *f64
 
 The day of the month to start generating inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#day StorageInsightsReportConfig#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#day StorageInsightsReportConfig#day}
 
 ---
 
@@ -1266,7 +1266,7 @@ Month *f64
 
 The month to start generating inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#month StorageInsightsReportConfig#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#month StorageInsightsReportConfig#month}
 
 ---
 
@@ -1280,7 +1280,7 @@ Year *f64
 
 The year to start generating inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#year StorageInsightsReportConfig#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#year StorageInsightsReportConfig#year}
 
 ---
 
@@ -1289,12 +1289,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigObjectMetadataReportOptions {
 	MetadataFields: *[]*string,
-	StorageDestinationOptions: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageDestinationOptions,
-	StorageFilters: github.com/cdktf/cdktf-provider-google-go/google/v10.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageFilters,
+	StorageDestinationOptions: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageDestinationOptions,
+	StorageFilters: github.com/cdktf/cdktf-provider-google-go/google/v11.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageFilters,
 }
 ```
 
@@ -1318,7 +1318,7 @@ MetadataFields *[]*string
 
 The metadata fields included in an inventory report.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#metadata_fields StorageInsightsReportConfig#metadata_fields}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#metadata_fields StorageInsightsReportConfig#metadata_fields}
 
 ---
 
@@ -1332,7 +1332,7 @@ StorageDestinationOptions StorageInsightsReportConfigObjectMetadataReportOptions
 
 storage_destination_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#storage_destination_options StorageInsightsReportConfig#storage_destination_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#storage_destination_options StorageInsightsReportConfig#storage_destination_options}
 
 ---
 
@@ -1346,7 +1346,7 @@ StorageFilters StorageInsightsReportConfigObjectMetadataReportOptionsStorageFilt
 
 storage_filters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#storage_filters StorageInsightsReportConfig#storage_filters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#storage_filters StorageInsightsReportConfig#storage_filters}
 
 ---
 
@@ -1355,7 +1355,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageDestinationOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageDestinationOptions {
 	Bucket: *string,
@@ -1382,7 +1382,7 @@ Bucket *string
 
 The destination bucket that stores the generated inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#bucket StorageInsightsReportConfig#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#bucket StorageInsightsReportConfig#bucket}
 
 ---
 
@@ -1396,7 +1396,7 @@ DestinationPath *string
 
 The path within the destination bucket to store generated inventory reports.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#destination_path StorageInsightsReportConfig#destination_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#destination_path StorageInsightsReportConfig#destination_path}
 
 ---
 
@@ -1405,7 +1405,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageFilters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageFilters {
 	Bucket: *string,
@@ -1430,7 +1430,7 @@ Bucket *string
 
 The filter to use when specifying which bucket to generate inventory reports for.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#bucket StorageInsightsReportConfig#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#bucket StorageInsightsReportConfig#bucket}
 
 ---
 
@@ -1439,7 +1439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 &storageinsightsreportconfig.StorageInsightsReportConfigTimeouts {
 	Create: *string,
@@ -1452,9 +1452,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsrepo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#create StorageInsightsReportConfig#create}. |
-| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#delete StorageInsightsReportConfig#delete}. |
-| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#update StorageInsightsReportConfig#update}. |
+| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#create StorageInsightsReportConfig#create}. |
+| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#delete StorageInsightsReportConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#update StorageInsightsReportConfig#update}. |
 
 ---
 
@@ -1466,7 +1466,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#create StorageInsightsReportConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#create StorageInsightsReportConfig#create}.
 
 ---
 
@@ -1478,7 +1478,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#delete StorageInsightsReportConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#delete StorageInsightsReportConfig#delete}.
 
 ---
 
@@ -1490,7 +1490,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/storage_insights_report_config#update StorageInsightsReportConfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/storage_insights_report_config#update StorageInsightsReportConfig#update}.
 
 ---
 
@@ -1501,7 +1501,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigCsvOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigCsvOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigCsvOptionsOutputReference
 ```
@@ -1837,7 +1837,7 @@ func InternalValue() StorageInsightsReportConfigCsvOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsEndDateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigFrequencyOptionsEndDateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigFrequencyOptionsEndDateOutputReference
 ```
@@ -2152,7 +2152,7 @@ func InternalValue() StorageInsightsReportConfigFrequencyOptionsEndDate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigFrequencyOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigFrequencyOptionsOutputReference
 ```
@@ -2493,7 +2493,7 @@ func InternalValue() StorageInsightsReportConfigFrequencyOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigFrequencyOptionsStartDateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigFrequencyOptionsStartDateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigFrequencyOptionsStartDateOutputReference
 ```
@@ -2808,7 +2808,7 @@ func InternalValue() StorageInsightsReportConfigFrequencyOptionsStartDate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigObjectMetadataReportOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigObjectMetadataReportOptionsOutputReference
 ```
@@ -3156,7 +3156,7 @@ func InternalValue() StorageInsightsReportConfigObjectMetadataReportOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageDestinationOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigObjectMetadataReportOptionsStorageDestinationOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigObjectMetadataReportOptionsStorageDestinationOptionsOutputReference
 ```
@@ -3456,7 +3456,7 @@ func InternalValue() StorageInsightsReportConfigObjectMetadataReportOptionsStora
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigObjectMetadataReportOptionsStorageFiltersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigObjectMetadataReportOptionsStorageFiltersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigObjectMetadataReportOptionsStorageFiltersOutputReference
 ```
@@ -3734,7 +3734,7 @@ func InternalValue() StorageInsightsReportConfigObjectMetadataReportOptionsStora
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageInsightsReportConfig.StorageInsightsReportConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v10/storageinsightsreportconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/storageinsightsreportconfig"
 
 storageinsightsreportconfig.NewStorageInsightsReportConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageInsightsReportConfigTimeoutsOutputReference
 ```

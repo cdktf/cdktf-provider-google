@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels
+// https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface AccessContextManagerAccessLevelsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#id AccessContextManagerAccessLevels#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#id AccessContextManagerAccessLevels#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,19 +23,19 @@ export interface AccessContextManagerAccessLevelsConfig extends cdktf.TerraformM
   * The AccessPolicy this AccessLevel lives in.
   * Format: accessPolicies/{policy_id}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#parent AccessContextManagerAccessLevels#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#parent AccessContextManagerAccessLevels#parent}
   */
   readonly parent: string;
   /**
   * access_levels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#access_levels AccessContextManagerAccessLevels#access_levels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#access_levels AccessContextManagerAccessLevels#access_levels}
   */
   readonly accessLevels?: AccessContextManagerAccessLevelsAccessLevels[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#timeouts AccessContextManagerAccessLevels#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#timeouts AccessContextManagerAccessLevels#timeouts}
   */
   readonly timeouts?: AccessContextManagerAccessLevelsTimeouts;
 }
@@ -45,13 +45,13 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevi
   * of this OS satisfies the constraint.
   * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#minimum_version AccessContextManagerAccessLevels#minimum_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#minimum_version AccessContextManagerAccessLevels#minimum_version}
   */
   readonly minimumVersion?: string;
   /**
   * The operating system type of the device. Possible values: ["OS_UNSPECIFIED", "DESKTOP_MAC", "DESKTOP_WINDOWS", "DESKTOP_LINUX", "DESKTOP_CHROME_OS", "ANDROID", "IOS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#os_type AccessContextManagerAccessLevels#os_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#os_type AccessContextManagerAccessLevels#os_type}
   */
   readonly osType: string;
 }
@@ -171,39 +171,39 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevi
   * A list of allowed device management levels.
   * An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#allowed_device_management_levels AccessContextManagerAccessLevels#allowed_device_management_levels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#allowed_device_management_levels AccessContextManagerAccessLevels#allowed_device_management_levels}
   */
   readonly allowedDeviceManagementLevels?: string[];
   /**
   * A list of allowed encryptions statuses.
   * An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "ENCRYPTION_UNSUPPORTED", "UNENCRYPTED", "ENCRYPTED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#allowed_encryption_statuses AccessContextManagerAccessLevels#allowed_encryption_statuses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#allowed_encryption_statuses AccessContextManagerAccessLevels#allowed_encryption_statuses}
   */
   readonly allowedEncryptionStatuses?: string[];
   /**
   * Whether the device needs to be approved by the customer admin.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#require_admin_approval AccessContextManagerAccessLevels#require_admin_approval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#require_admin_approval AccessContextManagerAccessLevels#require_admin_approval}
   */
   readonly requireAdminApproval?: boolean | cdktf.IResolvable;
   /**
   * Whether the device needs to be corp owned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#require_corp_owned AccessContextManagerAccessLevels#require_corp_owned}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#require_corp_owned AccessContextManagerAccessLevels#require_corp_owned}
   */
   readonly requireCorpOwned?: boolean | cdktf.IResolvable;
   /**
   * Whether or not screenlock is required for the DevicePolicy
   * to be true. Defaults to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#require_screen_lock AccessContextManagerAccessLevels#require_screen_lock}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#require_screen_lock AccessContextManagerAccessLevels#require_screen_lock}
   */
   readonly requireScreenLock?: boolean | cdktf.IResolvable;
   /**
   * os_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#os_constraints AccessContextManagerAccessLevels#os_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#os_constraints AccessContextManagerAccessLevels#os_constraints}
   */
   readonly osConstraints?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicyOsConstraints[] | cdktf.IResolvable;
 }
@@ -394,7 +394,7 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditions {
   * listed subnets in order for this Condition to be true.
   * If empty, all IP addresses are allowed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#ip_subnetworks AccessContextManagerAccessLevels#ip_subnetworks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#ip_subnetworks AccessContextManagerAccessLevels#ip_subnetworks}
   */
   readonly ipSubnetworks?: string[];
   /**
@@ -407,7 +407,7 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditions {
   * groups, etc.).
   * Formats: 'user:{emailid}', 'serviceAccount:{emailid}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#members AccessContextManagerAccessLevels#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#members AccessContextManagerAccessLevels#members}
   */
   readonly members?: string[];
   /**
@@ -415,7 +415,7 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditions {
   * a NAND over its non-empty fields, each field must be false for
   * the Condition overall to be satisfied. Defaults to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#negate AccessContextManagerAccessLevels#negate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#negate AccessContextManagerAccessLevels#negate}
   */
   readonly negate?: boolean | cdktf.IResolvable;
   /**
@@ -423,7 +423,7 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditions {
   * countries/regions.
   * Format: A valid ISO 3166-1 alpha-2 code.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#regions AccessContextManagerAccessLevels#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#regions AccessContextManagerAccessLevels#regions}
   */
   readonly regions?: string[];
   /**
@@ -433,13 +433,13 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasicConditions {
   * granted for the Condition to be true.
   * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#required_access_levels AccessContextManagerAccessLevels#required_access_levels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#required_access_levels AccessContextManagerAccessLevels#required_access_levels}
   */
   readonly requiredAccessLevels?: string[];
   /**
   * device_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#device_policy AccessContextManagerAccessLevels#device_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#device_policy AccessContextManagerAccessLevels#device_policy}
   */
   readonly devicePolicy?: AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy;
 }
@@ -657,13 +657,13 @@ export interface AccessContextManagerAccessLevelsAccessLevelsBasic {
   * OR is used, at least one Condition in conditions must be satisfied
   * for the AccessLevel to be applied. Default value: "AND" Possible values: ["AND", "OR"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#combining_function AccessContextManagerAccessLevels#combining_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#combining_function AccessContextManagerAccessLevels#combining_function}
   */
   readonly combiningFunction?: string;
   /**
   * conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#conditions AccessContextManagerAccessLevels#conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#conditions AccessContextManagerAccessLevels#conditions}
   */
   readonly conditions: AccessContextManagerAccessLevelsAccessLevelsBasicConditions[] | cdktf.IResolvable;
 }
@@ -750,25 +750,25 @@ export interface AccessContextManagerAccessLevelsAccessLevelsCustomExpr {
   /**
   * Description of the expression
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#description AccessContextManagerAccessLevels#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#description AccessContextManagerAccessLevels#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#expression AccessContextManagerAccessLevels#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#expression AccessContextManagerAccessLevels#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#location AccessContextManagerAccessLevels#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#location AccessContextManagerAccessLevels#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#title AccessContextManagerAccessLevels#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#title AccessContextManagerAccessLevels#title}
   */
   readonly title?: string;
 }
@@ -901,7 +901,7 @@ export interface AccessContextManagerAccessLevelsAccessLevelsCustom {
   /**
   * expr block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#expr AccessContextManagerAccessLevels#expr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#expr AccessContextManagerAccessLevels#expr}
   */
   readonly expr: AccessContextManagerAccessLevelsAccessLevelsCustomExpr;
 }
@@ -965,7 +965,7 @@ export interface AccessContextManagerAccessLevelsAccessLevels {
   /**
   * Description of the AccessLevel and its use. Does not affect behavior.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#description AccessContextManagerAccessLevels#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#description AccessContextManagerAccessLevels#description}
   */
   readonly description?: string;
   /**
@@ -973,25 +973,25 @@ export interface AccessContextManagerAccessLevelsAccessLevels {
   * with a letter and only include alphanumeric and '_'.
   * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#name AccessContextManagerAccessLevels#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#name AccessContextManagerAccessLevels#name}
   */
   readonly name: string;
   /**
   * Human readable title. Must be unique within the Policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#title AccessContextManagerAccessLevels#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#title AccessContextManagerAccessLevels#title}
   */
   readonly title: string;
   /**
   * basic block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#basic AccessContextManagerAccessLevels#basic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#basic AccessContextManagerAccessLevels#basic}
   */
   readonly basic?: AccessContextManagerAccessLevelsAccessLevelsBasic;
   /**
   * custom block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#custom AccessContextManagerAccessLevels#custom}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#custom AccessContextManagerAccessLevels#custom}
   */
   readonly custom?: AccessContextManagerAccessLevelsAccessLevelsCustom;
 }
@@ -1174,15 +1174,15 @@ export class AccessContextManagerAccessLevelsAccessLevelsList extends cdktf.Comp
 }
 export interface AccessContextManagerAccessLevelsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#create AccessContextManagerAccessLevels#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#create AccessContextManagerAccessLevels#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#delete AccessContextManagerAccessLevels#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#delete AccessContextManagerAccessLevels#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels#update AccessContextManagerAccessLevels#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels#update AccessContextManagerAccessLevels#update}
   */
   readonly update?: string;
 }
@@ -1303,7 +1303,7 @@ export class AccessContextManagerAccessLevelsTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels google_access_context_manager_access_levels}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels google_access_context_manager_access_levels}
 */
 export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
 
@@ -1317,7 +1317,7 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.1.0/docs/resources/access_context_manager_access_levels google_access_context_manager_access_levels} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_access_levels google_access_context_manager_access_levels} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1328,7 +1328,7 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
       terraformResourceType: 'google_access_context_manager_access_levels',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.1.0',
+        providerVersion: '5.2.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
