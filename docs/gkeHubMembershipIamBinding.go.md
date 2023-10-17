@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/gkehubmembershipiambinding"
 
 gkehubmembershipiambinding.NewGkeHubMembershipIamBinding(scope Construct, id *string, config GkeHubMembershipIamBindingConfig) GkeHubMembershipIamBinding
 ```
@@ -311,7 +311,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/gkehubmembershipiambinding"
 
 gkehubmembershipiambinding.GkeHubMembershipIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/gkehubmembershipiambinding"
 
 gkehubmembershipiambinding.GkeHubMembershipIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ gkehubmembershipiambinding.GkeHubMembershipIamBinding_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/gkehubmembershipiambinding"
 
 gkehubmembershipiambinding.GkeHubMembershipIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/gkehubmembershipiambinding"
 
 &gkehubmembershipiambinding.GkeHubMembershipIamBindingCondition {
 	Expression: *string,
@@ -781,7 +781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/gkehubmembershipiambinding"
 
 &gkehubmembershipiambinding.GkeHubMembershipIamBindingConfig {
 	Connection: interface{},
@@ -794,7 +794,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambind
 	Members: *[]*string,
 	MembershipId: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v11.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipIamBinding.GkeHubMembershipIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/gkehubmembershipiambinding"
 
 gkehubmembershipiambinding.NewGkeHubMembershipIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubMembershipIamBindingConditionOutputReference
 ```

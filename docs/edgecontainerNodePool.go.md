@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 edgecontainernodepool.NewEdgecontainerNodePool(scope Construct, id *string, config EdgecontainerNodePoolConfig) EdgecontainerNodePool
 ```
@@ -358,7 +358,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 edgecontainernodepool.EdgecontainerNodePool_IsConstruct(x interface{}) *bool
 ```
@@ -390,7 +390,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 edgecontainernodepool.EdgecontainerNodePool_IsTerraformElement(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ edgecontainernodepool.EdgecontainerNodePool_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 edgecontainernodepool.EdgecontainerNodePool_IsTerraformResource(x interface{}) *bool
 ```
@@ -922,7 +922,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 &edgecontainernodepool.EdgecontainerNodePoolConfig {
 	Connection: interface{},
@@ -939,11 +939,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
 	NodeLocation: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	LocalDiskEncryption: github.com/cdktf/cdktf-provider-google-go/google.edgecontainerNodePool.EdgecontainerNodePoolLocalDiskEncryption,
+	LocalDiskEncryption: github.com/cdktf/cdktf-provider-google-go/google/v11.edgecontainerNodePool.EdgecontainerNodePoolLocalDiskEncryption,
 	MachineFilter: *string,
-	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google.edgecontainerNodePool.EdgecontainerNodePoolNodeConfig,
+	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.edgecontainerNodePool.EdgecontainerNodePoolNodeConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.edgecontainerNodePool.EdgecontainerNodePoolTimeouts,
 }
 ```
 
@@ -1221,7 +1221,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolLocalDiskEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 &edgecontainernodepool.EdgecontainerNodePoolLocalDiskEncryption {
 	KmsKey: *string,
@@ -1255,7 +1255,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 &edgecontainernodepool.EdgecontainerNodePoolNodeConfig {
 	Labels: *map[string]*string,
@@ -1289,7 +1289,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 &edgecontainernodepool.EdgecontainerNodePoolTimeouts {
 	Create: *string,
@@ -1351,7 +1351,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolLocalDiskEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 edgecontainernodepool.NewEdgecontainerNodePoolLocalDiskEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EdgecontainerNodePoolLocalDiskEncryptionOutputReference
 ```
@@ -1651,7 +1651,7 @@ func InternalValue() EdgecontainerNodePoolLocalDiskEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 edgecontainernodepool.NewEdgecontainerNodePoolNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EdgecontainerNodePoolNodeConfigOutputReference
 ```
@@ -1929,7 +1929,7 @@ func InternalValue() EdgecontainerNodePoolNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/edgecontainernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v11/edgecontainernodepool"
 
 edgecontainernodepool.NewEdgecontainerNodePoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EdgecontainerNodePoolTimeoutsOutputReference
 ```
