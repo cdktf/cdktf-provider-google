@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicy(scope Construct, id *string, config DataGoogleIamPolicyConfig) DataGoogleIamPolicy
 ```
@@ -318,7 +318,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.DataGoogleIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.DataGoogleIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ datagoogleiampolicy.DataGoogleIamPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.DataGoogleIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ datagoogleiampolicy.DataGoogleIamPolicy_IsTerraformDataSource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.DataGoogleIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -662,7 +662,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyAuditConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 &datagoogleiampolicy.DataGoogleIamPolicyAuditConfig {
 	AuditLogConfigs: interface{},
@@ -710,7 +710,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyAuditConfigAuditLogConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 &datagoogleiampolicy.DataGoogleIamPolicyAuditConfigAuditLogConfigs {
 	LogType: *string,
@@ -756,12 +756,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 &datagoogleiampolicy.DataGoogleIamPolicyBinding {
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.dataGoogleIamPolicy.DataGoogleIamPolicyBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataGoogleIamPolicy.DataGoogleIamPolicyBindingCondition,
 }
 ```
 
@@ -818,7 +818,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 &datagoogleiampolicy.DataGoogleIamPolicyBindingCondition {
 	Expression: *string,
@@ -878,7 +878,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 &datagoogleiampolicy.DataGoogleIamPolicyConfig {
 	Connection: interface{},
@@ -1031,7 +1031,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyAuditConfigAuditLogConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicyAuditConfigAuditLogConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleIamPolicyAuditConfigAuditLogConfigsList
 ```
@@ -1174,7 +1174,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyAuditConfigAuditLogConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicyAuditConfigAuditLogConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleIamPolicyAuditConfigAuditLogConfigsOutputReference
 ```
@@ -1492,7 +1492,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyAuditConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicyAuditConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleIamPolicyAuditConfigList
 ```
@@ -1635,7 +1635,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyAuditConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicyAuditConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleIamPolicyAuditConfigOutputReference
 ```
@@ -1959,7 +1959,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicyBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataGoogleIamPolicyBindingConditionOutputReference
 ```
@@ -2281,7 +2281,7 @@ func InternalValue() DataGoogleIamPolicyBindingCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyBindingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicyBindingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleIamPolicyBindingList
 ```
@@ -2424,7 +2424,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamPolicy.DataGoogleIamPolicyBindingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiampolicy"
 
 datagoogleiampolicy.NewDataGoogleIamPolicyBindingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleIamPolicyBindingOutputReference
 ```
