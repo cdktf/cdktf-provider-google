@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyring"
 
 datagooglekmskeyring.NewDataGoogleKmsKeyRing(scope Construct, id *string, config DataGoogleKmsKeyRingConfig) DataGoogleKmsKeyRing
 ```
@@ -285,7 +285,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyring"
 
 datagooglekmskeyring.DataGoogleKmsKeyRing_IsConstruct(x interface{}) *bool
 ```
@@ -317,7 +317,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyring"
 
 datagooglekmskeyring.DataGoogleKmsKeyRing_IsTerraformElement(x interface{}) *bool
 ```
@@ -331,7 +331,7 @@ datagooglekmskeyring.DataGoogleKmsKeyRing_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyring"
 
 datagooglekmskeyring.DataGoogleKmsKeyRing_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ datagooglekmskeyring.DataGoogleKmsKeyRing_IsTerraformDataSource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyring"
 
 datagooglekmskeyring.DataGoogleKmsKeyRing_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -640,7 +640,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyring"
 
 &datagooglekmskeyring.DataGoogleKmsKeyRingConfig {
 	Connection: interface{},
