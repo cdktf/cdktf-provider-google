@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunction(scope Construct, id *string, config CloudfunctionsFunctionConfig) CloudfunctionsFunction
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.putEventTrigger">PutEventTrigger</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.putSecretEnvironmentVariables">PutSecretEnvironmentVariables</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.putSecretVolumes">PutSecretVolumes</a></code> | *No description.* |
@@ -171,6 +174,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.getAnyMapAttribute"></a>
 
@@ -280,6 +299,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.interpolationForAttribute"></a>
 
 ```go
@@ -289,6 +326,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -539,13 +600,14 @@ func ResetVpcConnectorEgressSettings()
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a CloudfunctionsFunction resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.CloudfunctionsFunction_IsConstruct(x interface{}) *bool
 ```
@@ -577,7 +639,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.CloudfunctionsFunction_IsTerraformElement(x interface{}) *bool
 ```
@@ -591,7 +653,7 @@ cloudfunctionsfunction.CloudfunctionsFunction_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.CloudfunctionsFunction_IsTerraformResource(x interface{}) *bool
 ```
@@ -599,6 +661,50 @@ cloudfunctionsfunction.CloudfunctionsFunction_IsTerraformResource(x interface{})
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
+
+cloudfunctionsfunction.CloudfunctionsFunction_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a CloudfunctionsFunction resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the CloudfunctionsFunction to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing CloudfunctionsFunction that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudfunctions_function#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunction.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the CloudfunctionsFunction to import is found.
 
 ---
 
@@ -1527,7 +1633,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionConfig {
 	Connection: interface{},
@@ -1547,7 +1653,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunct
 	DockerRepository: *string,
 	EntryPoint: *string,
 	EnvironmentVariables: *map[string]*string,
-	EventTrigger: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudfunctionsFunction.CloudfunctionsFunctionEventTrigger,
+	EventTrigger: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudfunctionsFunction.CloudfunctionsFunctionEventTrigger,
 	HttpsTriggerSecurityLevel: *string,
 	HttpsTriggerUrl: *string,
 	Id: *string,
@@ -1563,9 +1669,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunct
 	ServiceAccountEmail: *string,
 	SourceArchiveBucket: *string,
 	SourceArchiveObject: *string,
-	SourceRepository: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudfunctionsFunction.CloudfunctionsFunctionSourceRepository,
+	SourceRepository: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudfunctionsFunction.CloudfunctionsFunctionSourceRepository,
 	Timeout: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudfunctionsFunction.CloudfunctionsFunctionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudfunctionsFunction.CloudfunctionsFunctionTimeouts,
 	TriggerHttp: interface{},
 	VpcConnector: *string,
 	VpcConnectorEgressSettings: *string,
@@ -2157,12 +2263,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionEventTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionEventTrigger {
 	EventType: *string,
 	Resource: *string,
-	FailurePolicy: github.com/cdktf/cdktf-provider-google-go/google/v11.cloudfunctionsFunction.CloudfunctionsFunctionEventTriggerFailurePolicy,
+	FailurePolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudfunctionsFunction.CloudfunctionsFunctionEventTriggerFailurePolicy,
 }
 ```
 
@@ -2225,7 +2331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionEventTriggerFailurePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionEventTriggerFailurePolicy {
 	Retry: interface{},
@@ -2259,7 +2365,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretEnvironmentVariables.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionSecretEnvironmentVariables {
 	Key: *string,
@@ -2345,7 +2451,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretVolumes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionSecretVolumes {
 	MountPath: *string,
@@ -2431,7 +2537,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretVolumesVersions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionSecretVolumesVersions {
 	Path: *string,
@@ -2485,7 +2591,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSourceRepository.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionSourceRepository {
 	Url: *string,
@@ -2519,7 +2625,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 &cloudfunctionsfunction.CloudfunctionsFunctionTimeouts {
 	Create: *string,
@@ -2595,7 +2701,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionEventTriggerFailurePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference
 ```
@@ -2866,7 +2972,7 @@ func InternalValue() CloudfunctionsFunctionEventTriggerFailurePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionEventTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionEventTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudfunctionsFunctionEventTriggerOutputReference
 ```
@@ -3201,7 +3307,7 @@ func InternalValue() CloudfunctionsFunctionEventTrigger
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretEnvironmentVariablesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionSecretEnvironmentVariablesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudfunctionsFunctionSecretEnvironmentVariablesList
 ```
@@ -3344,7 +3450,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretEnvironmentVariablesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionSecretEnvironmentVariablesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudfunctionsFunctionSecretEnvironmentVariablesOutputReference
 ```
@@ -3706,7 +3812,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretVolumesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionSecretVolumesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudfunctionsFunctionSecretVolumesList
 ```
@@ -3849,7 +3955,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretVolumesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionSecretVolumesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudfunctionsFunctionSecretVolumesOutputReference
 ```
@@ -4231,7 +4337,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretVolumesVersionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionSecretVolumesVersionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudfunctionsFunctionSecretVolumesVersionsList
 ```
@@ -4374,7 +4480,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSecretVolumesVersionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionSecretVolumesVersionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudfunctionsFunctionSecretVolumesVersionsOutputReference
 ```
@@ -4685,7 +4791,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionSourceRepositoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionSourceRepositoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudfunctionsFunctionSourceRepositoryOutputReference
 ```
@@ -4967,7 +5073,7 @@ func InternalValue() CloudfunctionsFunctionSourceRepository
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunction.CloudfunctionsFunctionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/cloudfunctionsfunction"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudfunctionsfunction"
 
 cloudfunctionsfunction.NewCloudfunctionsFunctionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudfunctionsFunctionTimeoutsOutputReference
 ```

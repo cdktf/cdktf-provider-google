@@ -1288,6 +1288,20 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "google_cloud_scheduler_job";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a CloudSchedulerJob resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the CloudSchedulerJob to import
+  * @param importFromId The id of the existing CloudSchedulerJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloud_scheduler_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the CloudSchedulerJob to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_cloud_scheduler_job", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

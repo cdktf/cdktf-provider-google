@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagoogleiaptunnelinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiaptunnelinstanceiampolicy"
 
 datagoogleiaptunnelinstanceiampolicy.NewDataGoogleIapTunnelInstanceIamPolicy(scope Construct, id *string, config DataGoogleIapTunnelInstanceIamPolicyConfig) DataGoogleIapTunnelInstanceIamPolicy
 ```
@@ -285,13 +285,14 @@ func ResetZone()
 | <code><a href="#@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.isTerraformDataSource">IsTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataGoogleIapTunnelInstanceIamPolicy resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagoogleiaptunnelinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiaptunnelinstanceiampolicy"
 
 datagoogleiaptunnelinstanceiampolicy.DataGoogleIapTunnelInstanceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +324,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagoogleiaptunnelinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiaptunnelinstanceiampolicy"
 
 datagoogleiaptunnelinstanceiampolicy.DataGoogleIapTunnelInstanceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +338,7 @@ datagoogleiaptunnelinstanceiampolicy.DataGoogleIapTunnelInstanceIamPolicy_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagoogleiaptunnelinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiaptunnelinstanceiampolicy"
 
 datagoogleiaptunnelinstanceiampolicy.DataGoogleIapTunnelInstanceIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,6 +346,50 @@ datagoogleiaptunnelinstanceiampolicy.DataGoogleIapTunnelInstanceIamPolicy_IsTerr
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiaptunnelinstanceiampolicy"
+
+datagoogleiaptunnelinstanceiampolicy.DataGoogleIapTunnelInstanceIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataGoogleIapTunnelInstanceIamPolicy resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataGoogleIapTunnelInstanceIamPolicy to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataGoogleIapTunnelInstanceIamPolicy that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/iap_tunnel_instance_iam_policy#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicy.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataGoogleIapTunnelInstanceIamPolicy to import is found.
 
 ---
 
@@ -624,7 +669,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIapTunnelInstanceIamPolicy.DataGoogleIapTunnelInstanceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagoogleiaptunnelinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiaptunnelinstanceiampolicy"
 
 &datagoogleiaptunnelinstanceiampolicy.DataGoogleIapTunnelInstanceIamPolicyConfig {
 	Connection: interface{},

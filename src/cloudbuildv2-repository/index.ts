@@ -178,6 +178,20 @@ export class Cloudbuildv2Repository extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "google_cloudbuildv2_repository";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a Cloudbuildv2Repository resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the Cloudbuildv2Repository to import
+  * @param importFromId The id of the existing Cloudbuildv2Repository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_repository#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the Cloudbuildv2Repository to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_cloudbuildv2_repository", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

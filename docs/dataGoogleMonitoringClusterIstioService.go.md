@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 datagooglemonitoringclusteristioservice.NewDataGoogleMonitoringClusterIstioService(scope Construct, id *string, config DataGoogleMonitoringClusterIstioServiceConfig) DataGoogleMonitoringClusterIstioService
 ```
@@ -278,13 +278,14 @@ func ResetProject()
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.isTerraformDataSource">IsTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataGoogleMonitoringClusterIstioService resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioService_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +317,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioService_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +331,7 @@ datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioService_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -338,6 +339,50 @@ datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioService_
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
+
+datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataGoogleMonitoringClusterIstioService resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataGoogleMonitoringClusterIstioService to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataGoogleMonitoringClusterIstioService that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/monitoring_cluster_istio_service#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioService.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataGoogleMonitoringClusterIstioService to import is found.
 
 ---
 
@@ -694,7 +739,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 &datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioServiceConfig {
 	Connection: interface{},
@@ -899,7 +944,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioServiceTelemetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 &datagooglemonitoringclusteristioservice.DataGoogleMonitoringClusterIstioServiceTelemetry {
 
@@ -914,7 +959,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitorin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioServiceTelemetryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 datagooglemonitoringclusteristioservice.NewDataGoogleMonitoringClusterIstioServiceTelemetryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleMonitoringClusterIstioServiceTelemetryList
 ```
@@ -1046,7 +1091,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringClusterIstioService.DataGoogleMonitoringClusterIstioServiceTelemetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringclusteristioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringclusteristioservice"
 
 datagooglemonitoringclusteristioservice.NewDataGoogleMonitoringClusterIstioServiceTelemetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleMonitoringClusterIstioServiceTelemetryOutputReference
 ```

@@ -504,6 +504,20 @@ export class EdgecontainerVpnConnection extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "google_edgecontainer_vpn_connection";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a EdgecontainerVpnConnection resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the EdgecontainerVpnConnection to import
+  * @param importFromId The id of the existing EdgecontainerVpnConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/edgecontainer_vpn_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the EdgecontainerVpnConnection to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_edgecontainer_vpn_connection", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

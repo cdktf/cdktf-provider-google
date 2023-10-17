@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstance(scope Construct, id *string, config MemcacheInstanceConfig) MemcacheInstance
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.putMaintenancePolicy">PutMaintenancePolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.putMemcacheParameters">PutMemcacheParameters</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.putNodeConfig">PutNodeConfig</a></code> | *No description.* |
@@ -151,6 +154,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.getAnyMapAttribute"></a>
 
@@ -260,6 +279,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.interpolationForAttribute"></a>
 
 ```go
@@ -269,6 +306,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -393,13 +454,14 @@ func ResetZones()
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a MemcacheInstance resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.MemcacheInstance_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +493,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.MemcacheInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +507,7 @@ memcacheinstance.MemcacheInstance_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.MemcacheInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -453,6 +515,50 @@ memcacheinstance.MemcacheInstance_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
+
+memcacheinstance.MemcacheInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a MemcacheInstance resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the MemcacheInstance to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing MemcacheInstance that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/memcache_instance#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the MemcacheInstance to import is found.
 
 ---
 
@@ -1029,7 +1135,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceConfig {
 	Connection: interface{},
@@ -1040,18 +1146,18 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.memcacheInstance.MemcacheInstanceNodeConfig,
+	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.memcacheInstance.MemcacheInstanceNodeConfig,
 	NodeCount: *f64,
 	AuthorizedNetwork: *string,
 	DisplayName: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	MaintenancePolicy: github.com/cdktf/cdktf-provider-google-go/google/v11.memcacheInstance.MemcacheInstanceMaintenancePolicy,
-	MemcacheParameters: github.com/cdktf/cdktf-provider-google-go/google/v11.memcacheInstance.MemcacheInstanceMemcacheParameters,
+	MaintenancePolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.memcacheInstance.MemcacheInstanceMaintenancePolicy,
+	MemcacheParameters: github.com/cdktf/cdktf-provider-google-go/google/v12.memcacheInstance.MemcacheInstanceMemcacheParameters,
 	MemcacheVersion: *string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.memcacheInstance.MemcacheInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.memcacheInstance.MemcacheInstanceTimeouts,
 	Zones: *[]*string,
 }
 ```
@@ -1361,7 +1467,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceMaintenancePolicy {
 	WeeklyMaintenanceWindow: interface{},
@@ -1411,12 +1517,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow {
 	Day: *string,
 	Duration: *string,
-	StartTime: github.com/cdktf/cdktf-provider-google-go/google/v11.memcacheInstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime,
+	StartTime: github.com/cdktf/cdktf-provider-google-go/google/v12.memcacheInstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime,
 }
 ```
 
@@ -1492,7 +1598,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
 	Hours: *f64,
@@ -1580,7 +1686,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenanceSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceMaintenanceSchedule {
 
@@ -1593,7 +1699,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMemcacheNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceMemcacheNodes {
 
@@ -1606,7 +1712,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMemcacheParameters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceMemcacheParameters {
 	Params: *map[string]*string,
@@ -1640,7 +1746,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceNodeConfig {
 	CpuCount: *f64,
@@ -1690,7 +1796,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 &memcacheinstance.MemcacheInstanceTimeouts {
 	Create: *string,
@@ -1752,7 +1858,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMaintenancePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MemcacheInstanceMaintenancePolicyOutputReference
 ```
@@ -2087,7 +2193,7 @@ func InternalValue() MemcacheInstanceMaintenancePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowList
 ```
@@ -2230,7 +2336,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference
 ```
@@ -2576,7 +2682,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference
 ```
@@ -2941,7 +3047,7 @@ func InternalValue() MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowSta
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenanceScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMaintenanceScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MemcacheInstanceMaintenanceScheduleList
 ```
@@ -3073,7 +3179,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenanceScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMaintenanceScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MemcacheInstanceMaintenanceScheduleOutputReference
 ```
@@ -3373,7 +3479,7 @@ func InternalValue() MemcacheInstanceMaintenanceSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMemcacheNodesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMemcacheNodesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MemcacheInstanceMemcacheNodesList
 ```
@@ -3505,7 +3611,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMemcacheNodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMemcacheNodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MemcacheInstanceMemcacheNodesOutputReference
 ```
@@ -3827,7 +3933,7 @@ func InternalValue() MemcacheInstanceMemcacheNodes
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceMemcacheParametersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceMemcacheParametersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MemcacheInstanceMemcacheParametersOutputReference
 ```
@@ -4116,7 +4222,7 @@ func InternalValue() MemcacheInstanceMemcacheParameters
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MemcacheInstanceNodeConfigOutputReference
 ```
@@ -4409,7 +4515,7 @@ func InternalValue() MemcacheInstanceNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/memcacheinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/memcacheinstance"
 
 memcacheinstance.NewMemcacheInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MemcacheInstanceTimeoutsOutputReference
 ```

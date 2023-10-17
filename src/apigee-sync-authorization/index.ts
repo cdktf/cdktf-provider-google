@@ -184,6 +184,20 @@ export class ApigeeSyncAuthorization extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "google_apigee_sync_authorization";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ApigeeSyncAuthorization resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ApigeeSyncAuthorization to import
+  * @param importFromId The id of the existing ApigeeSyncAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/apigee_sync_authorization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ApigeeSyncAuthorization to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_apigee_sync_authorization", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

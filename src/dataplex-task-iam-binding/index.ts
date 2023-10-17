@@ -174,6 +174,20 @@ export class DataplexTaskIamBinding extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "google_dataplex_task_iam_binding";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataplexTaskIamBinding resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataplexTaskIamBinding to import
+  * @param importFromId The id of the existing DataplexTaskIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/dataplex_task_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataplexTaskIamBinding to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_dataplex_task_iam_binding", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

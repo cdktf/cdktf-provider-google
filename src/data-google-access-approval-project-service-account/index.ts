@@ -35,6 +35,20 @@ export class DataGoogleAccessApprovalProjectServiceAccount extends cdktf.Terrafo
   // =================
   public static readonly tfResourceType = "google_access_approval_project_service_account";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataGoogleAccessApprovalProjectServiceAccount resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataGoogleAccessApprovalProjectServiceAccount to import
+  * @param importFromId The id of the existing DataGoogleAccessApprovalProjectServiceAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/access_approval_project_service_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataGoogleAccessApprovalProjectServiceAccount to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_access_approval_project_service_account", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

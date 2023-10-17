@@ -13880,6 +13880,20 @@ export class ContainerCluster extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "google_container_cluster";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ContainerCluster resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ContainerCluster to import
+  * @param importFromId The id of the existing ContainerCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/container_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ContainerCluster to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_container_cluster", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

@@ -317,6 +317,20 @@ export class DataGoogleComputeRouterStatus extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "google_compute_router_status";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataGoogleComputeRouterStatus resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataGoogleComputeRouterStatus to import
+  * @param importFromId The id of the existing DataGoogleComputeRouterStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataGoogleComputeRouterStatus to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_compute_router_status", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
