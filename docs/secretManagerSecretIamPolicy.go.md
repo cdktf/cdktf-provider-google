@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.NewSecretManagerSecretIamPolicy(scope Construct, id *string, config SecretManagerSecretIamPolicyConfig) SecretManagerSecretIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -628,7 +628,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiampolicy"
 
 &secretmanagersecretiampolicy.SecretManagerSecretIamPolicyConfig {
 	Connection: interface{},

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.NewDataGoogleBigqueryTableIamPolicy(scope Construct, id *string, config DataGoogleBigqueryTableIamPolicyConfig) DataGoogleBigqueryTableIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytableiampolicy"
 
 datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -617,7 +617,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBigqueryTableIamPolicy.DataGoogleBigqueryTableIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglebigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytableiampolicy"
 
 &datagooglebigquerytableiampolicy.DataGoogleBigqueryTableIamPolicyConfig {
 	Connection: interface{},

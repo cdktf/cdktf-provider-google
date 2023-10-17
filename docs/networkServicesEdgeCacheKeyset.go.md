@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeyset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NewNetworkServicesEdgeCacheKeyset(scope Construct, id *string, config NetworkServicesEdgeCacheKeysetConfig) NetworkServicesEdgeCacheKeyset
 ```
@@ -358,7 +358,7 @@ func ResetValidationSharedKeys()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeyset.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeyset_IsConstruct(x interface{}) *bool
 ```
@@ -390,7 +390,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeyset.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeyset_IsTerraformElement(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeyset_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeyset.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeyset_IsTerraformResource(x interface{}) *bool
 ```
@@ -801,7 +801,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 &networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeysetConfig {
 	Connection: interface{},
@@ -817,7 +817,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedge
 	Labels: *map[string]*string,
 	Project: *string,
 	PublicKey: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetTimeouts,
 	ValidationSharedKeys: interface{},
 }
 ```
@@ -1037,7 +1037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetPublicKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 &networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeysetPublicKey {
 	Id: *string,
@@ -1113,7 +1113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 &networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeysetTimeouts {
 	Create: *string,
@@ -1173,7 +1173,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetValidationSharedKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 &networkservicesedgecachekeyset.NetworkServicesEdgeCacheKeysetValidationSharedKeys {
 	SecretVersion: *string,
@@ -1218,7 +1218,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetPublicKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NewNetworkServicesEdgeCacheKeysetPublicKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheKeysetPublicKeyList
 ```
@@ -1361,7 +1361,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetPublicKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NewNetworkServicesEdgeCacheKeysetPublicKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheKeysetPublicKeyOutputReference
 ```
@@ -1708,7 +1708,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NewNetworkServicesEdgeCacheKeysetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheKeysetTimeoutsOutputReference
 ```
@@ -2044,7 +2044,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetValidationSharedKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NewNetworkServicesEdgeCacheKeysetValidationSharedKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheKeysetValidationSharedKeysList
 ```
@@ -2187,7 +2187,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheKeyset.NetworkServicesEdgeCacheKeysetValidationSharedKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/networkservicesedgecachekeyset"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecachekeyset"
 
 networkservicesedgecachekeyset.NewNetworkServicesEdgeCacheKeysetValidationSharedKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheKeysetValidationSharedKeysOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.NewDialogflowFulfillment(scope Construct, id *string, config DialogflowFulfillmentConfig) DialogflowFulfillment
 ```
@@ -351,7 +351,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.DialogflowFulfillment_IsConstruct(x interface{}) *bool
 ```
@@ -383,7 +383,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.DialogflowFulfillment_IsTerraformElement(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ dialogflowfulfillment.DialogflowFulfillment_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.DialogflowFulfillment_IsTerraformResource(x interface{}) *bool
 ```
@@ -761,7 +761,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 &dialogflowfulfillment.DialogflowFulfillmentConfig {
 	Connection: interface{},
@@ -774,10 +774,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillme
 	DisplayName: *string,
 	Enabled: interface{},
 	Features: interface{},
-	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google/v11.dialogflowFulfillment.DialogflowFulfillmentGenericWebService,
+	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google.dialogflowFulfillment.DialogflowFulfillmentGenericWebService,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.dialogflowFulfillment.DialogflowFulfillmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowFulfillment.DialogflowFulfillmentTimeouts,
 }
 ```
 
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 &dialogflowfulfillment.DialogflowFulfillmentFeatures {
 	Type: *string,
@@ -1008,7 +1008,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentGenericWebService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 &dialogflowfulfillment.DialogflowFulfillmentGenericWebService {
 	Uri: *string,
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 &dialogflowfulfillment.DialogflowFulfillmentTimeouts {
 	Create: *string,
@@ -1152,7 +1152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentFeaturesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.NewDialogflowFulfillmentFeaturesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowFulfillmentFeaturesList
 ```
@@ -1295,7 +1295,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.NewDialogflowFulfillmentFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowFulfillmentFeaturesOutputReference
 ```
@@ -1584,7 +1584,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentGenericWebServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.NewDialogflowFulfillmentGenericWebServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowFulfillmentGenericWebServiceOutputReference
 ```
@@ -1942,7 +1942,7 @@ func InternalValue() DialogflowFulfillmentGenericWebService
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowFulfillment.DialogflowFulfillmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/dialogflowfulfillment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowfulfillment"
 
 dialogflowfulfillment.NewDialogflowFulfillmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowFulfillmentTimeoutsOutputReference
 ```

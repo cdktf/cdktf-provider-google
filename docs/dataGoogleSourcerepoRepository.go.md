@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepository.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 datagooglesourcereporepository.NewDataGoogleSourcerepoRepository(scope Construct, id *string, config DataGoogleSourcerepoRepositoryConfig) DataGoogleSourcerepoRepository
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepository.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 datagooglesourcereporepository.DataGoogleSourcerepoRepository_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepository.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 datagooglesourcereporepository.DataGoogleSourcerepoRepository_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglesourcereporepository.DataGoogleSourcerepoRepository_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepository.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 datagooglesourcereporepository.DataGoogleSourcerepoRepository_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -606,7 +606,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepositoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 &datagooglesourcereporepository.DataGoogleSourcerepoRepositoryConfig {
 	Connection: interface{},
@@ -755,7 +755,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepositoryPubsubConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 &datagooglesourcereporepository.DataGoogleSourcerepoRepositoryPubsubConfigs {
 
@@ -770,7 +770,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcerep
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepositoryPubsubConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 datagooglesourcereporepository.NewDataGoogleSourcerepoRepositoryPubsubConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSourcerepoRepositoryPubsubConfigsList
 ```
@@ -902,7 +902,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSourcerepoRepository.DataGoogleSourcerepoRepositoryPubsubConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglesourcereporepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepository"
 
 datagooglesourcereporepository.NewDataGoogleSourcerepoRepositoryPubsubConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSourcerepoRepositoryPubsubConfigsOutputReference
 ```
