@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2Store(scope Construct, id *string, config HealthcareHl7V2StoreConfig) HealthcareHl7V2Store
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.putNotificationConfig">PutNotificationConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.putNotificationConfigs">PutNotificationConfigs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.putParserConfig">PutParserConfig</a></code> | *No description.* |
@@ -146,6 +149,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.getAnyMapAttribute"></a>
 
@@ -255,6 +274,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.interpolationForAttribute"></a>
 
 ```go
@@ -264,6 +301,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -358,13 +419,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a HealthcareHl7V2Store resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.HealthcareHl7V2Store_IsConstruct(x interface{}) *bool
 ```
@@ -396,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformElement(x interface{}) *bool
 ```
@@ -410,7 +472,7 @@ healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformResource(x interface{}) *bool
 ```
@@ -418,6 +480,50 @@ healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformResource(x interface{}) *bo
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
+
+healthcarehl7v2store.HealthcareHl7V2Store_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a HealthcareHl7V2Store resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the HealthcareHl7V2Store to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing HealthcareHl7V2Store that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/healthcare_hl7_v2_store#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the HealthcareHl7V2Store to import is found.
 
 ---
 
@@ -818,7 +924,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreConfig {
 	Connection: interface{},
@@ -832,10 +938,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2stor
 	Name: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig,
+	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig,
 	NotificationConfigs: interface{},
-	ParserConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts,
+	ParserConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts,
 }
 ```
 
@@ -1065,7 +1171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreNotificationConfig {
 	PubsubTopic: *string,
@@ -1106,7 +1212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreNotificationConfigs {
 	PubsubTopic: *string,
@@ -1174,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreParserConfig {
 	AllowNullHeader: interface{},
@@ -1260,7 +1366,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreTimeouts {
 	Create: *string,
@@ -1322,7 +1428,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreNotificationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareHl7V2StoreNotificationConfigOutputReference
 ```
@@ -1593,7 +1699,7 @@ func InternalValue() HealthcareHl7V2StoreNotificationConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreNotificationConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HealthcareHl7V2StoreNotificationConfigsList
 ```
@@ -1736,7 +1842,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreNotificationConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HealthcareHl7V2StoreNotificationConfigsOutputReference
 ```
@@ -2054,7 +2160,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreParserConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareHl7V2StoreParserConfigOutputReference
 ```
@@ -2419,7 +2525,7 @@ func InternalValue() HealthcareHl7V2StoreParserConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareHl7V2StoreTimeoutsOutputReference
 ```

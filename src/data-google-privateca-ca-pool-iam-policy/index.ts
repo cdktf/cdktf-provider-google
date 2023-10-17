@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/privateca_ca_pool_iam_policy
 // generated from terraform resource schema
 
@@ -42,6 +37,20 @@ export class DataGooglePrivatecaCaPoolIamPolicy extends cdktf.TerraformDataSourc
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "google_privateca_ca_pool_iam_policy";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataGooglePrivatecaCaPoolIamPolicy resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataGooglePrivatecaCaPoolIamPolicy to import
+  * @param importFromId The id of the existing DataGooglePrivatecaCaPoolIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/privateca_ca_pool_iam_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataGooglePrivatecaCaPoolIamPolicy to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_privateca_ca_pool_iam_policy", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

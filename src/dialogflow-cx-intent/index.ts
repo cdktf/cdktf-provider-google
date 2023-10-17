@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/dialogflow_cx_intent
 // generated from terraform resource schema
 
@@ -671,6 +666,20 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "google_dialogflow_cx_intent";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DialogflowCxIntent resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DialogflowCxIntent to import
+  * @param importFromId The id of the existing DialogflowCxIntent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/dialogflow_cx_intent#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DialogflowCxIntent to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_dialogflow_cx_intent", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

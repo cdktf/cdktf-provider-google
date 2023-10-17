@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.NewDataGoogleMonitoringNotificationChannel(scope Construct, id *string, config DataGoogleMonitoringNotificationChannelConfig) DataGoogleMonitoringNotificationChannel
 ```
@@ -306,13 +306,14 @@ func ResetUserLabels()
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isTerraformDataSource">IsTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataGoogleMonitoringNotificationChannel resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_IsConstruct(x interface{}) *bool
 ```
@@ -344,7 +345,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_IsTerraformElement(x interface{}) *bool
 ```
@@ -358,7 +359,7 @@ datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -366,6 +367,50 @@ datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
+
+datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataGoogleMonitoringNotificationChannel resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataGoogleMonitoringNotificationChannel to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataGoogleMonitoringNotificationChannel that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/monitoring_notification_channel#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataGoogleMonitoringNotificationChannel to import is found.
 
 ---
 
@@ -733,7 +778,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 &datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannelConfig {
 	Connection: interface{},
@@ -944,7 +989,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelSensitiveLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 &datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannelSensitiveLabels {
 
@@ -959,7 +1004,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitorin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelSensitiveLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.NewDataGoogleMonitoringNotificationChannelSensitiveLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleMonitoringNotificationChannelSensitiveLabelsList
 ```
@@ -1091,7 +1136,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelSensitiveLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.NewDataGoogleMonitoringNotificationChannelSensitiveLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleMonitoringNotificationChannelSensitiveLabelsOutputReference
 ```

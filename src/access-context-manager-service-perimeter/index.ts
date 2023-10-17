@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_service_perimeter
 // generated from terraform resource schema
 
@@ -3652,6 +3647,20 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "google_access_context_manager_service_perimeter";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a AccessContextManagerServicePerimeter resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AccessContextManagerServicePerimeter to import
+  * @param importFromId The id of the existing AccessContextManagerServicePerimeter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/access_context_manager_service_perimeter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AccessContextManagerServicePerimeter to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_access_context_manager_service_perimeter", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

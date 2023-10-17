@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsService(scope Construct, id *string, config EndpointsServiceConfig) EndpointsService
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.resetGrpcConfig">ResetGrpcConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.resetId">ResetId</a></code> | *No description.* |
@@ -143,6 +146,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-google.endpointsService.EndpointsService.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.endpointsService.EndpointsService.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.endpointsService.EndpointsService.getAnyMapAttribute"></a>
 
@@ -252,6 +271,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.endpointsService.EndpointsService.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.endpointsService.EndpointsService.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.endpointsService.EndpointsService.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.endpointsService.EndpointsService.interpolationForAttribute"></a>
 
 ```go
@@ -261,6 +298,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.endpointsService.EndpointsService.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.endpointsService.EndpointsService.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.endpointsService.EndpointsService.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.endpointsService.EndpointsService.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -319,13 +380,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a EndpointsService resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.endpointsService.EndpointsService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.EndpointsService_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +419,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.endpointsService.EndpointsService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.EndpointsService_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +433,7 @@ endpointsservice.EndpointsService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.endpointsService.EndpointsService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.EndpointsService_IsTerraformResource(x interface{}) *bool
 ```
@@ -379,6 +441,50 @@ endpointsservice.EndpointsService_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.endpointsService.EndpointsService.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.endpointsService.EndpointsService.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
+
+endpointsservice.EndpointsService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a EndpointsService resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.endpointsService.EndpointsService.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.endpointsService.EndpointsService.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the EndpointsService to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.endpointsService.EndpointsService.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing EndpointsService that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/endpoints_service#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.endpointsService.EndpointsService.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the EndpointsService to import is found.
 
 ---
 
@@ -768,7 +874,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceApis.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceApis {
 
@@ -781,7 +887,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisMethods.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceApisMethods {
 
@@ -794,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceConfig {
 	Connection: interface{},
@@ -810,7 +916,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
 	OpenapiConfig: *string,
 	Project: *string,
 	ProtocOutputBase64: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.endpointsService.EndpointsServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.endpointsService.EndpointsServiceTimeouts,
 }
 ```
 
@@ -1013,7 +1119,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceEndpoints {
 
@@ -1026,7 +1132,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceTimeouts {
 	Create: *string,
@@ -1088,7 +1194,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EndpointsServiceApisList
 ```
@@ -1220,7 +1326,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisMethodsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisMethodsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EndpointsServiceApisMethodsList
 ```
@@ -1352,7 +1458,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisMethodsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisMethodsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EndpointsServiceApisMethodsOutputReference
 ```
@@ -1663,7 +1769,7 @@ func InternalValue() EndpointsServiceApisMethods
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EndpointsServiceApisOutputReference
 ```
@@ -1974,7 +2080,7 @@ func InternalValue() EndpointsServiceApis
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceEndpointsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceEndpointsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EndpointsServiceEndpointsList
 ```
@@ -2106,7 +2212,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceEndpointsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceEndpointsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EndpointsServiceEndpointsOutputReference
 ```
@@ -2395,7 +2501,7 @@ func InternalValue() EndpointsServiceEndpoints
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EndpointsServiceTimeoutsOutputReference
 ```

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/logging_project_exclusion
 // generated from terraform resource schema
 
@@ -58,6 +53,20 @@ export class LoggingProjectExclusion extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "google_logging_project_exclusion";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a LoggingProjectExclusion resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the LoggingProjectExclusion to import
+  * @param importFromId The id of the existing LoggingProjectExclusion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/logging_project_exclusion#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the LoggingProjectExclusion to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_logging_project_exclusion", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

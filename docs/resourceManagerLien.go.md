@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.NewResourceManagerLien(scope Construct, id *string, config ResourceManagerLienConfig) ResourceManagerLien
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
@@ -139,6 +142,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.getAnyMapAttribute"></a>
 
@@ -248,6 +267,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.interpolationForAttribute"></a>
 
 ```go
@@ -257,6 +294,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -291,13 +352,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a ResourceManagerLien resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.ResourceManagerLien_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.ResourceManagerLien_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +405,7 @@ resourcemanagerlien.ResourceManagerLien_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.ResourceManagerLien_IsTerraformResource(x interface{}) *bool
 ```
@@ -351,6 +413,50 @@ resourcemanagerlien.ResourceManagerLien_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
+
+resourcemanagerlien.ResourceManagerLien_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a ResourceManagerLien resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the ResourceManagerLien to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing ResourceManagerLien that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/resource_manager_lien#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the ResourceManagerLien to import is found.
 
 ---
 
@@ -696,7 +802,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLienConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 &resourcemanagerlien.ResourceManagerLienConfig {
 	Connection: interface{},
@@ -711,7 +817,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien
 	Reason: *string,
 	Restrictions: *[]*string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.resourceManagerLien.ResourceManagerLienTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.resourceManagerLien.ResourceManagerLienTimeouts,
 }
 ```
 
@@ -904,7 +1010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 &resourcemanagerlien.ResourceManagerLienTimeouts {
 	Create: *string,
@@ -952,7 +1058,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/resourcemanagerlien"
+import "github.com/cdktf/cdktf-provider-google-go/google/resourcemanagerlien"
 
 resourcemanagerlien.NewResourceManagerLienTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceManagerLienTimeoutsOutputReference
 ```

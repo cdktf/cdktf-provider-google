@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatus(scope Construct, id *string, config DataGoogleComputeRouterStatusConfig) DataGoogleComputeRouterStatus
 ```
@@ -285,13 +285,14 @@ func ResetRegion()
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isTerraformDataSource">IsTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataGoogleComputeRouterStatus resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +324,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +338,7 @@ datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,6 +346,50 @@ datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformDataSourc
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
+
+datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataGoogleComputeRouterStatus resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataGoogleComputeRouterStatus to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataGoogleComputeRouterStatus that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataGoogleComputeRouterStatus to import is found.
 
 ---
 
@@ -635,7 +680,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutes {
 
@@ -648,7 +693,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesForRouter {
 
@@ -661,7 +706,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusConfig {
 	Connection: interface{},
@@ -830,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterList
 ```
@@ -962,7 +1007,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterOutputReference
 ```
@@ -1394,7 +1439,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutesForRouter
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesList
 ```
@@ -1526,7 +1571,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesOutputReference
 ```

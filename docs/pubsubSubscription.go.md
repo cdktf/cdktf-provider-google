@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscription(scope Construct, id *string, config PubsubSubscriptionConfig) PubsubSubscription
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.putBigqueryConfig">PutBigqueryConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.putCloudStorageConfig">PutCloudStorageConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.putDeadLetterPolicy">PutDeadLetterPolicy</a></code> | *No description.* |
@@ -159,6 +162,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.getAnyMapAttribute"></a>
 
@@ -268,6 +287,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.interpolationForAttribute"></a>
 
 ```go
@@ -277,6 +314,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -467,13 +528,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.pubsubSubscription.PubsubSubscription.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a PubsubSubscription resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.PubsubSubscription_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +567,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.PubsubSubscription_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +581,7 @@ pubsubsubscription.PubsubSubscription_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.PubsubSubscription_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,6 +589,50 @@ pubsubsubscription.PubsubSubscription_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
+
+pubsubsubscription.PubsubSubscription_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a PubsubSubscription resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the PubsubSubscription to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing PubsubSubscription that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/pubsub_subscription#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscription.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the PubsubSubscription to import is found.
 
 ---
 
@@ -1136,7 +1242,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionBigqueryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionBigqueryConfig {
 	Table: *string,
@@ -1222,11 +1328,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionCloudStorageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionCloudStorageConfig {
 	Bucket: *string,
-	AvroConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionCloudStorageConfigAvroConfig,
+	AvroConfig: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionCloudStorageConfigAvroConfig,
 	FilenamePrefix: *string,
 	FilenameSuffix: *string,
 	MaxBytes: *f64,
@@ -1345,7 +1451,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionCloudStorageConfigAvroConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionCloudStorageConfigAvroConfig {
 	WriteMetadata: interface{},
@@ -1379,7 +1485,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionConfig {
 	Connection: interface{},
@@ -1392,21 +1498,21 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
 	Name: *string,
 	Topic: *string,
 	AckDeadlineSeconds: *f64,
-	BigqueryConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionBigqueryConfig,
-	CloudStorageConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionCloudStorageConfig,
-	DeadLetterPolicy: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionDeadLetterPolicy,
+	BigqueryConfig: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionBigqueryConfig,
+	CloudStorageConfig: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionCloudStorageConfig,
+	DeadLetterPolicy: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionDeadLetterPolicy,
 	EnableExactlyOnceDelivery: interface{},
 	EnableMessageOrdering: interface{},
-	ExpirationPolicy: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionExpirationPolicy,
+	ExpirationPolicy: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionExpirationPolicy,
 	Filter: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	MessageRetentionDuration: *string,
 	Project: *string,
-	PushConfig: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionPushConfig,
+	PushConfig: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionPushConfig,
 	RetainAckedMessages: interface{},
-	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionRetryPolicy,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionTimeouts,
+	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionRetryPolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionTimeouts,
 }
 ```
 
@@ -1815,7 +1921,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionDeadLetterPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionDeadLetterPolicy {
 	DeadLetterTopic: *string,
@@ -1884,7 +1990,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionExpirationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionExpirationPolicy {
 	Ttl: *string,
@@ -1924,13 +2030,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionPushConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionPushConfig {
 	PushEndpoint: *string,
 	Attributes: *map[string]*string,
-	NoWrapper: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionPushConfigNoWrapper,
-	OidcToken: github.com/cdktf/cdktf-provider-google-go/google/v11.pubsubSubscription.PubsubSubscriptionPushConfigOidcToken,
+	NoWrapper: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionPushConfigNoWrapper,
+	OidcToken: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscription.PubsubSubscriptionPushConfigOidcToken,
 }
 ```
 
@@ -2028,7 +2134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionPushConfigNoWrapper.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionPushConfigNoWrapper {
 	WriteMetadata: interface{},
@@ -2065,7 +2171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionPushConfigOidcToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionPushConfigOidcToken {
 	ServiceAccountEmail: *string,
@@ -2126,7 +2232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionRetryPolicy {
 	MaximumBackoff: *string,
@@ -2182,7 +2288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 &pubsubsubscription.PubsubSubscriptionTimeouts {
 	Create: *string,
@@ -2244,7 +2350,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionBigqueryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionBigqueryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionBigqueryConfigOutputReference
 ```
@@ -2602,7 +2708,7 @@ func InternalValue() PubsubSubscriptionBigqueryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionCloudStorageConfigAvroConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionCloudStorageConfigAvroConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionCloudStorageConfigAvroConfigOutputReference
 ```
@@ -2880,7 +2986,7 @@ func InternalValue() PubsubSubscriptionCloudStorageConfigAvroConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionCloudStorageConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionCloudStorageConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionCloudStorageConfigOutputReference
 ```
@@ -3320,7 +3426,7 @@ func InternalValue() PubsubSubscriptionCloudStorageConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionDeadLetterPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionDeadLetterPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionDeadLetterPolicyOutputReference
 ```
@@ -3627,7 +3733,7 @@ func InternalValue() PubsubSubscriptionDeadLetterPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionExpirationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionExpirationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionExpirationPolicyOutputReference
 ```
@@ -3898,7 +4004,7 @@ func InternalValue() PubsubSubscriptionExpirationPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionPushConfigNoWrapperOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionPushConfigNoWrapperOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionPushConfigNoWrapperOutputReference
 ```
@@ -4169,7 +4275,7 @@ func InternalValue() PubsubSubscriptionPushConfigNoWrapper
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionPushConfigOidcTokenOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionPushConfigOidcTokenOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionPushConfigOidcTokenOutputReference
 ```
@@ -4469,7 +4575,7 @@ func InternalValue() PubsubSubscriptionPushConfigOidcToken
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionPushConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionPushConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionPushConfigOutputReference
 ```
@@ -4853,7 +4959,7 @@ func InternalValue() PubsubSubscriptionPushConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionRetryPolicyOutputReference
 ```
@@ -5160,7 +5266,7 @@ func InternalValue() PubsubSubscriptionRetryPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscription.PubsubSubscriptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/pubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscription"
 
 pubsubsubscription.NewPubsubSubscriptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionTimeoutsOutputReference
 ```

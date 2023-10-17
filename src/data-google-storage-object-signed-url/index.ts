@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/storage_object_signed_url
 // generated from terraform resource schema
 
@@ -62,6 +57,20 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "google_storage_object_signed_url";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataGoogleStorageObjectSignedUrl resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataGoogleStorageObjectSignedUrl to import
+  * @param importFromId The id of the existing DataGoogleStorageObjectSignedUrl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/storage_object_signed_url#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataGoogleStorageObjectSignedUrl to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "google_storage_object_signed_url", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

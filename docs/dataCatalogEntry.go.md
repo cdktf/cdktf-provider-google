@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntry(scope Construct, id *string, config DataCatalogEntryConfig) DataCatalogEntry
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.putGcsFilesetSpec">PutGcsFilesetSpec</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.resetDescription">ResetDescription</a></code> | *No description.* |
@@ -148,6 +151,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.getAnyMapAttribute"></a>
 
@@ -257,6 +276,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.interpolationForAttribute"></a>
 
 ```go
@@ -266,6 +303,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -360,13 +421,14 @@ func ResetUserSpecifiedType()
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataCatalogEntry resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.DataCatalogEntry_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +460,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.DataCatalogEntry_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +474,7 @@ datacatalogentry.DataCatalogEntry_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.DataCatalogEntry_IsTerraformResource(x interface{}) *bool
 ```
@@ -420,6 +482,50 @@ datacatalogentry.DataCatalogEntry_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
+
+datacatalogentry.DataCatalogEntry_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataCatalogEntry resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataCatalogEntry to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataCatalogEntry that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/data_catalog_entry#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntry.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataCatalogEntry to import is found.
 
 ---
 
@@ -919,7 +1025,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryDateShardedSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryBigqueryDateShardedSpec {
 
@@ -932,7 +1038,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryBigqueryTableSpec {
 
@@ -945,7 +1051,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecTableSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryBigqueryTableSpecTableSpec {
 
@@ -958,7 +1064,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecViewSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryBigqueryTableSpecViewSpec {
 
@@ -971,7 +1077,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryConfig {
 	Connection: interface{},
@@ -985,11 +1091,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
 	EntryId: *string,
 	Description: *string,
 	DisplayName: *string,
-	GcsFilesetSpec: github.com/cdktf/cdktf-provider-google-go/google/v11.dataCatalogEntry.DataCatalogEntryGcsFilesetSpec,
+	GcsFilesetSpec: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogEntry.DataCatalogEntryGcsFilesetSpec,
 	Id: *string,
 	LinkedResource: *string,
 	Schema: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v11.dataCatalogEntry.DataCatalogEntryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogEntry.DataCatalogEntryTimeouts,
 	Type: *string,
 	UserSpecifiedSystem: *string,
 	UserSpecifiedType: *string,
@@ -1286,7 +1392,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryGcsFilesetSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryGcsFilesetSpec {
 	FilePatterns: *[]*string,
@@ -1334,7 +1440,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs {
 
@@ -1347,7 +1453,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 &datacatalogentry.DataCatalogEntryTimeouts {
 	Create: *string,
@@ -1409,7 +1515,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryDateShardedSpecList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryDateShardedSpecList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCatalogEntryBigqueryDateShardedSpecList
 ```
@@ -1541,7 +1647,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryDateShardedSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryDateShardedSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCatalogEntryBigqueryDateShardedSpecOutputReference
 ```
@@ -1841,7 +1947,7 @@ func InternalValue() DataCatalogEntryBigqueryDateShardedSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryTableSpecList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCatalogEntryBigqueryTableSpecList
 ```
@@ -1973,7 +2079,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryTableSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCatalogEntryBigqueryTableSpecOutputReference
 ```
@@ -2273,7 +2379,7 @@ func InternalValue() DataCatalogEntryBigqueryTableSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecTableSpecList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryTableSpecTableSpecList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCatalogEntryBigqueryTableSpecTableSpecList
 ```
@@ -2405,7 +2511,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecTableSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryTableSpecTableSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCatalogEntryBigqueryTableSpecTableSpecOutputReference
 ```
@@ -2683,7 +2789,7 @@ func InternalValue() DataCatalogEntryBigqueryTableSpecTableSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecViewSpecList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryTableSpecViewSpecList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCatalogEntryBigqueryTableSpecViewSpecList
 ```
@@ -2815,7 +2921,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryBigqueryTableSpecViewSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryBigqueryTableSpecViewSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCatalogEntryBigqueryTableSpecViewSpecOutputReference
 ```
@@ -3093,7 +3199,7 @@ func InternalValue() DataCatalogEntryBigqueryTableSpecViewSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryGcsFilesetSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryGcsFilesetSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogEntryGcsFilesetSpecOutputReference
 ```
@@ -3375,7 +3481,7 @@ func InternalValue() DataCatalogEntryGcsFilesetSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsList
 ```
@@ -3507,7 +3613,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsOutputReference
 ```
@@ -3796,7 +3902,7 @@ func InternalValue() DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntry.DataCatalogEntryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v11/datacatalogentry"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentry"
 
 datacatalogentry.NewDataCatalogEntryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogEntryTimeoutsOutputReference
 ```
