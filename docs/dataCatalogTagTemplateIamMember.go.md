@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 datacatalogtagtemplateiammember.NewDataCatalogTagTemplateIamMember(scope Construct, id *string, config DataCatalogTagTemplateIamMemberConfig) DataCatalogTagTemplateIamMember
 ```
@@ -373,7 +373,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMember_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMember_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -827,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 &datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMemberCondition {
 	Expression: *string,
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 &datacatalogtagtemplateiammember.DataCatalogTagTemplateIamMemberConfig {
 	Connection: interface{},
@@ -900,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplatei
 	Member: *string,
 	Role: *string,
 	TagTemplate: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTagTemplateIamMember.DataCatalogTagTemplateIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogtagtemplateiammember"
 
 datacatalogtagtemplateiammember.NewDataCatalogTagTemplateIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogTagTemplateIamMemberConditionOutputReference
 ```
