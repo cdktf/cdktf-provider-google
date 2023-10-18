@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetric(scope Construct, id *string, config LoggingMetricConfig) LoggingMetric
 ```
@@ -441,7 +441,7 @@ func ResetValueExtractor()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingMetric.LoggingMetric.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.LoggingMetric_IsConstruct(x interface{}) *bool
 ```
@@ -473,7 +473,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingMetric.LoggingMetric.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.LoggingMetric_IsTerraformElement(x interface{}) *bool
 ```
@@ -487,7 +487,7 @@ loggingmetric.LoggingMetric_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingMetric.LoggingMetric.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.LoggingMetric_IsTerraformResource(x interface{}) *bool
 ```
@@ -501,7 +501,7 @@ loggingmetric.LoggingMetric_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingMetric.LoggingMetric.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.LoggingMetric_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -994,12 +994,12 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricBucketOptions {
-	ExplicitBuckets: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingMetric.LoggingMetricBucketOptionsExplicitBuckets,
-	ExponentialBuckets: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingMetric.LoggingMetricBucketOptionsExponentialBuckets,
-	LinearBuckets: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingMetric.LoggingMetricBucketOptionsLinearBuckets,
+	ExplicitBuckets: github.com/cdktf/cdktf-provider-google-go/google.loggingMetric.LoggingMetricBucketOptionsExplicitBuckets,
+	ExponentialBuckets: github.com/cdktf/cdktf-provider-google-go/google.loggingMetric.LoggingMetricBucketOptionsExponentialBuckets,
+	LinearBuckets: github.com/cdktf/cdktf-provider-google-go/google.loggingMetric.LoggingMetricBucketOptionsLinearBuckets,
 }
 ```
 
@@ -1060,7 +1060,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptionsExplicitBuckets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricBucketOptionsExplicitBuckets {
 	Bounds: *[]*f64,
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptionsExponentialBuckets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricBucketOptionsExponentialBuckets {
 	GrowthFactor: *f64,
@@ -1160,7 +1160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptionsLinearBuckets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricBucketOptionsLinearBuckets {
 	NumFiniteBuckets: *f64,
@@ -1226,7 +1226,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricConfig {
 	Connection: interface{},
@@ -1239,14 +1239,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
 	Filter: *string,
 	Name: *string,
 	BucketName: *string,
-	BucketOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingMetric.LoggingMetricBucketOptions,
+	BucketOptions: github.com/cdktf/cdktf-provider-google-go/google.loggingMetric.LoggingMetricBucketOptions,
 	Description: *string,
 	Disabled: interface{},
 	Id: *string,
 	LabelExtractors: *map[string]*string,
-	MetricDescriptor: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingMetric.LoggingMetricMetricDescriptor,
+	MetricDescriptor: github.com/cdktf/cdktf-provider-google-go/google.loggingMetric.LoggingMetricMetricDescriptor,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingMetric.LoggingMetricTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.loggingMetric.LoggingMetricTimeouts,
 	ValueExtractor: *string,
 }
 ```
@@ -1539,7 +1539,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricMetricDescriptor {
 	MetricKind: *string,
@@ -1651,7 +1651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptorLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricMetricDescriptorLabels {
 	Key: *string,
@@ -1717,7 +1717,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingMetric.LoggingMetricTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 &loggingmetric.LoggingMetricTimeouts {
 	Create: *string,
@@ -1779,7 +1779,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptionsExplicitBucketsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricBucketOptionsExplicitBucketsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingMetricBucketOptionsExplicitBucketsOutputReference
 ```
@@ -2050,7 +2050,7 @@ func InternalValue() LoggingMetricBucketOptionsExplicitBuckets
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptionsExponentialBucketsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricBucketOptionsExponentialBucketsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingMetricBucketOptionsExponentialBucketsOutputReference
 ```
@@ -2365,7 +2365,7 @@ func InternalValue() LoggingMetricBucketOptionsExponentialBuckets
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptionsLinearBucketsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricBucketOptionsLinearBucketsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingMetricBucketOptionsLinearBucketsOutputReference
 ```
@@ -2680,7 +2680,7 @@ func InternalValue() LoggingMetricBucketOptionsLinearBuckets
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricBucketOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingMetricBucketOptionsOutputReference
 ```
@@ -3055,7 +3055,7 @@ func InternalValue() LoggingMetricBucketOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptorLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricMetricDescriptorLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoggingMetricMetricDescriptorLabelsList
 ```
@@ -3198,7 +3198,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptorLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricMetricDescriptorLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LoggingMetricMetricDescriptorLabelsOutputReference
 ```
@@ -3545,7 +3545,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricMetricDescriptorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingMetricMetricDescriptorOutputReference
 ```
@@ -3938,7 +3938,7 @@ func InternalValue() LoggingMetricMetricDescriptor
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingMetric.LoggingMetricTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingmetric"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingmetric"
 
 loggingmetric.NewLoggingMetricTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingMetricTimeoutsOutputReference
 ```
