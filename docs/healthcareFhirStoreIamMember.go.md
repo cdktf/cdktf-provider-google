@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 healthcarefhirstoreiammember.NewHealthcareFhirStoreIamMember(scope Construct, id *string, config HealthcareFhirStoreIamMemberConfig) HealthcareFhirStoreIamMember
 ```
@@ -359,7 +359,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 healthcarefhirstoreiammember.HealthcareFhirStoreIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 healthcarefhirstoreiammember.HealthcareFhirStoreIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ healthcarefhirstoreiammember.HealthcareFhirStoreIamMember_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 healthcarefhirstoreiammember.HealthcareFhirStoreIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ healthcarefhirstoreiammember.HealthcareFhirStoreIamMember_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 healthcarefhirstoreiammember.HealthcareFhirStoreIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -769,7 +769,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 &healthcarefhirstoreiammember.HealthcareFhirStoreIamMemberCondition {
 	Expression: *string,
@@ -829,7 +829,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 &healthcarefhirstoreiammember.HealthcareFhirStoreIamMemberConfig {
 	Connection: interface{},
@@ -842,7 +842,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiamm
 	FhirStoreId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -1008,7 +1008,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareFhirStoreIamMember.HealthcareFhirStoreIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/healthcarefhirstoreiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/healthcarefhirstoreiammember"
 
 healthcarefhirstoreiammember.NewHealthcareFhirStoreIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareFhirStoreIamMemberConditionOutputReference
 ```

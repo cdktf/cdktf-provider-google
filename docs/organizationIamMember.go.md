@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 organizationiammember.NewOrganizationIamMember(scope Construct, id *string, config OrganizationIamMemberConfig) OrganizationIamMember
 ```
@@ -359,7 +359,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 organizationiammember.OrganizationIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 organizationiammember.OrganizationIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ organizationiammember.OrganizationIamMember_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 organizationiammember.OrganizationIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ organizationiammember.OrganizationIamMember_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 organizationiammember.OrganizationIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -769,7 +769,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 &organizationiammember.OrganizationIamMemberCondition {
 	Expression: *string,
@@ -829,7 +829,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 &organizationiammember.OrganizationIamMemberConfig {
 	Connection: interface{},
@@ -842,7 +842,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
 	Member: *string,
 	OrgId: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.organizationIamMember.OrganizationIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.organizationIamMember.OrganizationIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -1010,7 +1010,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationIamMember.OrganizationIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/organizationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiammember"
 
 organizationiammember.NewOrganizationIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrganizationIamMemberConditionOutputReference
 ```

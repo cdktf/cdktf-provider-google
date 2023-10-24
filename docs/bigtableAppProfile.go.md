@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfile(scope Construct, id *string, config BigtableAppProfileConfig) BigtableAppProfile
 ```
@@ -421,7 +421,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_IsConstruct(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_IsTerraformElement(x interface{}) *bool
 ```
@@ -467,7 +467,7 @@ bigtableappprofile.BigtableAppProfile_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_IsTerraformResource(x interface{}) *bool
 ```
@@ -481,7 +481,7 @@ bigtableappprofile.BigtableAppProfile_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -941,7 +941,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileConfig {
 	Connection: interface{},
@@ -959,8 +959,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 	MultiClusterRoutingClusterIds: *[]*string,
 	MultiClusterRoutingUseAny: interface{},
 	Project: *string,
-	SingleClusterRouting: github.com/cdktf/cdktf-provider-google-go/google.bigtableAppProfile.BigtableAppProfileSingleClusterRouting,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.bigtableAppProfile.BigtableAppProfileTimeouts,
+	SingleClusterRouting: github.com/cdktf/cdktf-provider-google-go/google/v12.bigtableAppProfile.BigtableAppProfileSingleClusterRouting,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.bigtableAppProfile.BigtableAppProfileTimeouts,
 }
 ```
 
@@ -1207,7 +1207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileSingleClusterRouting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileSingleClusterRouting {
 	ClusterId: *string,
@@ -1259,7 +1259,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileTimeouts {
 	Create: *string,
@@ -1321,7 +1321,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileSingleClusterRoutingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfileSingleClusterRoutingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableAppProfileSingleClusterRoutingOutputReference
 ```
@@ -1621,7 +1621,7 @@ func InternalValue() BigtableAppProfileSingleClusterRouting
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfileTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableAppProfileTimeoutsOutputReference
 ```

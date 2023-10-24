@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKey(scope Construct, id *string, config ApikeysKeyConfig) ApikeysKey
 ```
@@ -393,7 +393,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apikeysKey.ApikeysKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.ApikeysKey_IsConstruct(x interface{}) *bool
 ```
@@ -425,7 +425,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apikeysKey.ApikeysKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.ApikeysKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -439,7 +439,7 @@ apikeyskey.ApikeysKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apikeysKey.ApikeysKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.ApikeysKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ apikeyskey.ApikeysKey_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apikeysKey.ApikeysKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.ApikeysKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -836,7 +836,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyConfig {
 	Connection: interface{},
@@ -850,8 +850,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
 	DisplayName: *string,
 	Id: *string,
 	Project: *string,
-	Restrictions: github.com/cdktf/cdktf-provider-google-go/google.apikeysKey.ApikeysKeyRestrictions,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apikeysKey.ApikeysKeyTimeouts,
+	Restrictions: github.com/cdktf/cdktf-provider-google-go/google/v12.apikeysKey.ApikeysKeyRestrictions,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.apikeysKey.ApikeysKeyTimeouts,
 }
 ```
 
@@ -1037,14 +1037,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyRestrictions {
-	AndroidKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google.apikeysKey.ApikeysKeyRestrictionsAndroidKeyRestrictions,
+	AndroidKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google/v12.apikeysKey.ApikeysKeyRestrictionsAndroidKeyRestrictions,
 	ApiTargets: interface{},
-	BrowserKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google.apikeysKey.ApikeysKeyRestrictionsBrowserKeyRestrictions,
-	IosKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google.apikeysKey.ApikeysKeyRestrictionsIosKeyRestrictions,
-	ServerKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google.apikeysKey.ApikeysKeyRestrictionsServerKeyRestrictions,
+	BrowserKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google/v12.apikeysKey.ApikeysKeyRestrictionsBrowserKeyRestrictions,
+	IosKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google/v12.apikeysKey.ApikeysKeyRestrictionsIosKeyRestrictions,
+	ServerKeyRestrictions: github.com/cdktf/cdktf-provider-google-go/google/v12.apikeysKey.ApikeysKeyRestrictionsServerKeyRestrictions,
 }
 ```
 
@@ -1135,7 +1135,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsAndroidKeyRestrictions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyRestrictionsAndroidKeyRestrictions {
 	AllowedApplications: interface{},
@@ -1169,7 +1169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications {
 	PackageName: *string,
@@ -1221,7 +1221,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsApiTargets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyRestrictionsApiTargets {
 	Service: *string,
@@ -1275,7 +1275,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsBrowserKeyRestrictions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyRestrictionsBrowserKeyRestrictions {
 	AllowedReferrers: *[]*string,
@@ -1309,7 +1309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsIosKeyRestrictions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyRestrictionsIosKeyRestrictions {
 	AllowedBundleIds: *[]*string,
@@ -1343,7 +1343,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsServerKeyRestrictions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyRestrictionsServerKeyRestrictions {
 	AllowedIps: *[]*string,
@@ -1377,7 +1377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apikeysKey.ApikeysKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 &apikeyskey.ApikeysKeyTimeouts {
 	Create: *string,
@@ -1439,7 +1439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsList
 ```
@@ -1582,7 +1582,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsOutputReference
 ```
@@ -1893,7 +1893,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsAndroidKeyRestrictionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsAndroidKeyRestrictionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApikeysKeyRestrictionsAndroidKeyRestrictionsOutputReference
 ```
@@ -2177,7 +2177,7 @@ func InternalValue() ApikeysKeyRestrictionsAndroidKeyRestrictions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsApiTargetsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsApiTargetsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApikeysKeyRestrictionsApiTargetsList
 ```
@@ -2320,7 +2320,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsApiTargetsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsApiTargetsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApikeysKeyRestrictionsApiTargetsOutputReference
 ```
@@ -2638,7 +2638,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsBrowserKeyRestrictionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsBrowserKeyRestrictionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApikeysKeyRestrictionsBrowserKeyRestrictionsOutputReference
 ```
@@ -2909,7 +2909,7 @@ func InternalValue() ApikeysKeyRestrictionsBrowserKeyRestrictions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsIosKeyRestrictionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsIosKeyRestrictionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApikeysKeyRestrictionsIosKeyRestrictionsOutputReference
 ```
@@ -3180,7 +3180,7 @@ func InternalValue() ApikeysKeyRestrictionsIosKeyRestrictions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApikeysKeyRestrictionsOutputReference
 ```
@@ -3639,7 +3639,7 @@ func InternalValue() ApikeysKeyRestrictions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyRestrictionsServerKeyRestrictionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyRestrictionsServerKeyRestrictionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApikeysKeyRestrictionsServerKeyRestrictionsOutputReference
 ```
@@ -3910,7 +3910,7 @@ func InternalValue() ApikeysKeyRestrictionsServerKeyRestrictions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apikeysKey.ApikeysKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apikeyskey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apikeyskey"
 
 apikeyskey.NewApikeysKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApikeysKeyTimeoutsOutputReference
 ```

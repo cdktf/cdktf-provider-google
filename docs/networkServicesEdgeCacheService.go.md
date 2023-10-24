@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheService(scope Construct, id *string, config NetworkServicesEdgeCacheServiceConfig) NetworkServicesEdgeCacheService
 ```
@@ -455,7 +455,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NetworkServicesEdgeCacheService_IsConstruct(x interface{}) *bool
 ```
@@ -487,7 +487,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NetworkServicesEdgeCacheService_IsTerraformElement(x interface{}) *bool
 ```
@@ -501,7 +501,7 @@ networkservicesedgecacheservice.NetworkServicesEdgeCacheService_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NetworkServicesEdgeCacheService_IsTerraformResource(x interface{}) *bool
 ```
@@ -515,7 +515,7 @@ networkservicesedgecacheservice.NetworkServicesEdgeCacheService_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NetworkServicesEdgeCacheService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1096,7 +1096,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceConfig {
 	Connection: interface{},
@@ -1107,7 +1107,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecach
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	Routing: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRouting,
+	Routing: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRouting,
 	Description: *string,
 	DisableHttp2: interface{},
 	DisableQuic: interface{},
@@ -1115,11 +1115,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecach
 	EdgeSslCertificates: *[]*string,
 	Id: *string,
 	Labels: *map[string]*string,
-	LogConfig: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceLogConfig,
+	LogConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceLogConfig,
 	Project: *string,
 	RequireTls: interface{},
 	SslPolicy: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceTimeouts,
 }
 ```
 
@@ -1439,7 +1439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceLogConfig {
 	Enable: interface{},
@@ -1491,7 +1491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRouting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRouting {
 	HostRule: interface{},
@@ -1541,7 +1541,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingHostRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingHostRule {
 	Hosts: *[]*string,
@@ -1626,7 +1626,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcher {
 	Name: *string,
@@ -1692,16 +1692,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule {
 	MatchRule: interface{},
 	Priority: *string,
 	Description: *string,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction,
 	Origin: *string,
-	RouteAction: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction,
-	UrlRedirect: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect,
+	RouteAction: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction,
+	UrlRedirect: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect,
 }
 ```
 
@@ -1831,7 +1831,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
 	RequestHeaderToAdd: interface{},
@@ -1913,7 +1913,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd {
 	HeaderName: *string,
@@ -1979,7 +1979,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove {
 	HeaderName: *string,
@@ -2013,7 +2013,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd {
 	HeaderName: *string,
@@ -2079,7 +2079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove {
 	HeaderName: *string,
@@ -2115,7 +2115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
 	FullPathMatch: *string,
@@ -2236,7 +2236,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch {
 	HeaderName: *string,
@@ -2354,7 +2354,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch {
 	Name: *string,
@@ -2422,12 +2422,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
-	CdnPolicy: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy,
-	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy,
-	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite,
+	CdnPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy,
+	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy,
+	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite,
 }
 ```
 
@@ -2488,11 +2488,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy {
-	AddSignatures: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures,
-	CacheKeyPolicy: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy,
+	AddSignatures: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures,
+	CacheKeyPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy,
 	CacheMode: *string,
 	ClientTtl: *string,
 	DefaultTtl: *string,
@@ -2502,7 +2502,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecach
 	SignedRequestKeyset: *string,
 	SignedRequestMaximumExpirationTtl: *string,
 	SignedRequestMode: *string,
-	SignedTokenOptions: github.com/cdktf/cdktf-provider-google-go/google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions,
+	SignedTokenOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions,
 }
 ```
 
@@ -2764,7 +2764,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures {
 	Actions: *[]*string,
@@ -2901,7 +2901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
 	ExcludedQueryParameters: *[]*string,
@@ -3063,7 +3063,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions {
 	AllowedSignatureAlgorithms: *[]*string,
@@ -3121,7 +3121,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy {
 	MaxAge: *string,
@@ -3265,7 +3265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite {
 	HostRewrite: *string,
@@ -3341,7 +3341,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
 	HostRedirect: *string,
@@ -3475,7 +3475,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 &networkservicesedgecacheservice.NetworkServicesEdgeCacheServiceTimeouts {
 	Create: *string,
@@ -3537,7 +3537,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceLogConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceLogConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceLogConfigOutputReference
 ```
@@ -3844,7 +3844,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceLogConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingHostRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingHostRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingHostRuleList
 ```
@@ -3987,7 +3987,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingHostRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingHostRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingHostRuleOutputReference
 ```
@@ -4327,7 +4327,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingOutputReference
 ```
@@ -4646,7 +4646,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRouting
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherList
 ```
@@ -4789,7 +4789,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherOutputReference
 ```
@@ -5142,7 +5142,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionOutputReference
 ```
@@ -5559,7 +5559,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleH
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddList
 ```
@@ -5702,7 +5702,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddOutputReference
 ```
@@ -6042,7 +6042,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveList
 ```
@@ -6185,7 +6185,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveOutputReference
 ```
@@ -6474,7 +6474,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddList
 ```
@@ -6617,7 +6617,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddOutputReference
 ```
@@ -6957,7 +6957,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveList
 ```
@@ -7100,7 +7100,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveOutputReference
 ```
@@ -7389,7 +7389,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleList
 ```
@@ -7532,7 +7532,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchList
 ```
@@ -7675,7 +7675,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchOutputReference
 ```
@@ -8109,7 +8109,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleList
 ```
@@ -8252,7 +8252,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleOutputReference
 ```
@@ -8719,7 +8719,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchList
 ```
@@ -8862,7 +8862,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchOutputReference
 ```
@@ -9209,7 +9209,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleOutputReference
 ```
@@ -9717,7 +9717,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesOutputReference
 ```
@@ -10104,7 +10104,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference
 ```
@@ -10556,7 +10556,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference
 ```
@@ -11192,7 +11192,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsOutputReference
 ```
@@ -11499,7 +11499,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference
 ```
@@ -11944,7 +11944,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionOutputReference
 ```
@@ -12319,7 +12319,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference
 ```
@@ -12655,7 +12655,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectOutputReference
 ```
@@ -13078,7 +13078,7 @@ func InternalValue() NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleU
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesEdgeCacheService.NetworkServicesEdgeCacheServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesedgecacheservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkservicesedgecacheservice"
 
 networkservicesedgecacheservice.NewNetworkServicesEdgeCacheServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesEdgeCacheServiceTimeoutsOutputReference
 ```
