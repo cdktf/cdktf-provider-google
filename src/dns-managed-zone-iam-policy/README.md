@@ -1,3 +1,3 @@
 # `google_dns_managed_zone_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_dns_managed_zone_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/dns_managed_zone_iam_policy).
+Refer to the Terraform Registory for docs: [`google_dns_managed_zone_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dns_managed_zone_iam_policy).

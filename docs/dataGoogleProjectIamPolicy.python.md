@@ -1,6 +1,6 @@
 # `data_google_project_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_project_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_project_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy).
 
 # `dataGoogleProjectIamPolicy` Submodule <a name="`dataGoogleProjectIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleProjectIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_project_iam_policy`](ht
 
 ### DataGoogleProjectIamPolicy <a name="DataGoogleProjectIamPolicy" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy google_project_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy google_project_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy(
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -478,7 +478,7 @@ The construct id used in the generated config for the DataGoogleProjectIamPolicy
 
 The id of the existing DataGoogleProjectIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -748,8 +748,8 @@ dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}. |
 
 ---
 
@@ -831,7 +831,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#project DataGoogleProjectIamPolicy#project}.
 
 ---
 
@@ -843,7 +843,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/project_iam_policy#id DataGoogleProjectIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

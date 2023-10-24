@@ -1,6 +1,6 @@
 # `data_google_cloud_run_locations`
 
-Refer to the Terraform Registory for docs: [`data_google_cloud_run_locations`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_run_locations).
+Refer to the Terraform Registory for docs: [`data_google_cloud_run_locations`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/cloud_run_locations).
 
 # `dataGoogleCloudRunLocations` Submodule <a name="`dataGoogleCloudRunLocations` Submodule" id="@cdktf/provider-google.dataGoogleCloudRunLocations"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_cloud_run_locations`](h
 
 ### DataGoogleCloudRunLocations <a name="DataGoogleCloudRunLocations" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_run_locations google_cloud_run_locations}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/cloud_run_locations google_cloud_run_locations}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudrunlocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudrunlocations"
 
 datagooglecloudrunlocations.NewDataGoogleCloudRunLocations(scope Construct, id *string, config DataGoogleCloudRunLocationsConfig) DataGoogleCloudRunLocations
 ```
@@ -285,7 +285,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudrunlocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudrunlocations"
 
 datagooglecloudrunlocations.DataGoogleCloudRunLocations_IsConstruct(x interface{}) *bool
 ```
@@ -317,7 +317,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudrunlocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudrunlocations"
 
 datagooglecloudrunlocations.DataGoogleCloudRunLocations_IsTerraformElement(x interface{}) *bool
 ```
@@ -331,7 +331,7 @@ datagooglecloudrunlocations.DataGoogleCloudRunLocations_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudrunlocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudrunlocations"
 
 datagooglecloudrunlocations.DataGoogleCloudRunLocations_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ datagooglecloudrunlocations.DataGoogleCloudRunLocations_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudrunlocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudrunlocations"
 
 datagooglecloudrunlocations.DataGoogleCloudRunLocations_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -374,7 +374,7 @@ The construct id used in the generated config for the DataGoogleCloudRunLocation
 
 The id of the existing DataGoogleCloudRunLocations that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_run_locations#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/cloud_run_locations#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -607,7 +607,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudrunlocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudrunlocations"
 
 &datagooglecloudrunlocations.DataGoogleCloudRunLocationsConfig {
 	Connection: interface{},
@@ -633,8 +633,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudrunl
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
 
 ---
 
@@ -716,7 +716,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -731,7 +731,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
 
 ---
 

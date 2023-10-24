@@ -1,6 +1,6 @@
 # `google_project_usage_export_bucket`
 
-Refer to the Terraform Registory for docs: [`google_project_usage_export_bucket`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket).
+Refer to the Terraform Registory for docs: [`google_project_usage_export_bucket`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket).
 
 # `projectUsageExportBucket` Submodule <a name="`projectUsageExportBucket` Submodule" id="@cdktf/provider-google.projectUsageExportBucket"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_project_usage_export_bucket`
 
 ### ProjectUsageExportBucket <a name="ProjectUsageExportBucket" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket google_project_usage_export_bucket}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket google_project_usage_export_bucket}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 projectusageexportbucket.NewProjectUsageExportBucket(scope Construct, id *string, config ProjectUsageExportBucketConfig) ProjectUsageExportBucket
 ```
@@ -373,7 +373,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 projectusageexportbucket.ProjectUsageExportBucket_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 projectusageexportbucket.ProjectUsageExportBucket_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ projectusageexportbucket.ProjectUsageExportBucket_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 projectusageexportbucket.ProjectUsageExportBucket_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ projectusageexportbucket.ProjectUsageExportBucket_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 projectusageexportbucket.ProjectUsageExportBucket_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -462,7 +462,7 @@ The construct id used in the generated config for the ProjectUsageExportBucket t
 
 The id of the existing ProjectUsageExportBucket that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -772,7 +772,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 &projectusageexportbucket.ProjectUsageExportBucketConfig {
 	Connection: interface{},
@@ -786,7 +786,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportb
 	Id: *string,
 	Prefix: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.projectUsageExportBucket.ProjectUsageExportBucketTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts,
 }
 ```
 
@@ -802,7 +802,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportb
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.bucketName">BucketName</a></code> | <code>*string</code> | The bucket to store reports in. |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}. |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.prefix">Prefix</a></code> | <code>*string</code> | A prefix for the reports, for instance, the project name. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.project">Project</a></code> | <code>*string</code> | The project to set the export bucket on. If it is not provided, the provider project is used. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a></code> | timeouts block. |
@@ -889,7 +889,7 @@ BucketName *string
 
 The bucket to store reports in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
 
 ---
 
@@ -901,7 +901,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -918,7 +918,7 @@ Prefix *string
 
 A prefix for the reports, for instance, the project name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
 
 ---
 
@@ -932,7 +932,7 @@ Project *string
 
 The project to set the export bucket on. If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#project ProjectUsageExportBucket#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#project ProjectUsageExportBucket#project}
 
 ---
 
@@ -946,7 +946,7 @@ Timeouts ProjectUsageExportBucketTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
 
 ---
 
@@ -955,7 +955,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 &projectusageexportbucket.ProjectUsageExportBucketTimeouts {
 	Create: *string,
@@ -967,8 +967,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportb
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#create ProjectUsageExportBucket#create}. |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}. |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#create ProjectUsageExportBucket#create}. |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}. |
 
 ---
 
@@ -980,7 +980,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#create ProjectUsageExportBucket#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#create ProjectUsageExportBucket#create}.
 
 ---
 
@@ -992,7 +992,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}.
 
 ---
 
@@ -1003,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectusageexportbucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectusageexportbucket"
 
 projectusageexportbucket.NewProjectUsageExportBucketTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ProjectUsageExportBucketTimeoutsOutputReference
 ```

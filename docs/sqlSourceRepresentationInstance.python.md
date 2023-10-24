@@ -1,6 +1,6 @@
 # `google_sql_source_representation_instance`
 
-Refer to the Terraform Registory for docs: [`google_sql_source_representation_instance`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance).
+Refer to the Terraform Registory for docs: [`google_sql_source_representation_instance`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance).
 
 # `sqlSourceRepresentationInstance` Submodule <a name="`sqlSourceRepresentationInstance` Submodule" id="@cdktf/provider-google.sqlSourceRepresentationInstance"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_sql_source_representation_in
 
 ### SqlSourceRepresentationInstance <a name="SqlSourceRepresentationInstance" id="@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance google_sql_source_representation_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance google_sql_source_representation_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer"></a>
 
@@ -54,16 +54,16 @@ sqlSourceRepresentationInstance.SqlSourceRepresentationInstance(
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.databaseVersion">database_version</a></code> | <code>str</code> | The MySQL version running on your source database server. |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.host">host</a></code> | <code>str</code> | The externally accessible IPv4 address for the source database server. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.host">host</a></code> | <code>str</code> | The IPv4 address and port for the external server, or the the DNS address for the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of the source representation instance. Use any valid Cloud SQL instance name. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.caCertificate">ca_certificate</a></code> | <code>str</code> | The CA certificate on the external server. Include only if SSL/TLS is used on the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.clientCertificate">client_certificate</a></code> | <code>str</code> | The client certificate on the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.clientKey">client_key</a></code> | <code>str</code> | The private key file for the client certificate on the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.dumpFilePath">dump_file_path</a></code> | <code>str</code> | A file in the bucket that contains the data from the external server. |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.password">password</a></code> | <code>str</code> | The password for the replication user account. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.port">port</a></code> | <code>typing.Union[int, float]</code> | The externally accessible port for the source database server. Defaults to 3306. |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.region">region</a></code> | <code>str</code> | The Region in which the created instance should reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceTimeouts">SqlSourceRepresentationInstanceTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstance.Initializer.parameter.username">username</a></code> | <code>str</code> | The replication user account on the external server. |
@@ -138,7 +138,7 @@ The MySQL version running on your source database server.
 
 Possible values: ["MYSQL_5_6", "MYSQL_5_7", "MYSQL_8_0", "POSTGRES_9_6", "POSTGRES_10", "POSTGRES_11", "POSTGRES_12", "POSTGRES_13", "POSTGRES_14"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#database_version SqlSourceRepresentationInstance#database_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#database_version SqlSourceRepresentationInstance#database_version}
 
 ---
 
@@ -146,9 +146,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-The externally accessible IPv4 address for the source database server.
+The IPv4 address and port for the external server, or the the DNS address for the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#host SqlSourceRepresentationInstance#host}
+If the external server is hosted on Cloud SQL, the port is 5432.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#host SqlSourceRepresentationInstance#host}
 
 ---
 
@@ -158,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the source representation instance. Use any valid Cloud SQL instance name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#name SqlSourceRepresentationInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#name SqlSourceRepresentationInstance#name}
 
 ---
 
@@ -168,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The CA certificate on the external server. Include only if SSL/TLS is used on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#ca_certificate SqlSourceRepresentationInstance#ca_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#ca_certificate SqlSourceRepresentationInstance#ca_certificate}
 
 ---
 
@@ -180,7 +182,7 @@ The client certificate on the external server.
 
 Required only for server-client authentication. Include only if SSL/TLS is used on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#client_certificate SqlSourceRepresentationInstance#client_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#client_certificate SqlSourceRepresentationInstance#client_certificate}
 
 ---
 
@@ -192,7 +194,7 @@ The private key file for the client certificate on the external server.
 
 Required only for server-client authentication. Include only if SSL/TLS is used on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#client_key SqlSourceRepresentationInstance#client_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#client_key SqlSourceRepresentationInstance#client_key}
 
 ---
 
@@ -202,7 +204,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A file in the bucket that contains the data from the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#dump_file_path SqlSourceRepresentationInstance#dump_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#dump_file_path SqlSourceRepresentationInstance#dump_file_path}
 
 ---
 
@@ -210,7 +212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -223,7 +225,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The password for the replication user account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#password SqlSourceRepresentationInstance#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#password SqlSourceRepresentationInstance#password}
 
 ---
 
@@ -233,7 +235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The externally accessible port for the source database server. Defaults to 3306.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#port SqlSourceRepresentationInstance#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#port SqlSourceRepresentationInstance#port}
 
 ---
 
@@ -241,7 +243,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}.
 
 ---
 
@@ -251,7 +253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Region in which the created instance should reside. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#region SqlSourceRepresentationInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#region SqlSourceRepresentationInstance#region}
 
 ---
 
@@ -261,7 +263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#timeouts SqlSourceRepresentationInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#timeouts SqlSourceRepresentationInstance#timeouts}
 
 ---
 
@@ -271,7 +273,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The replication user account on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#username SqlSourceRepresentationInstance#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#username SqlSourceRepresentationInstance#username}
 
 ---
 
@@ -601,7 +603,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#create SqlSourceRepresentationInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#create SqlSourceRepresentationInstance#create}.
 
 ---
 
@@ -609,7 +611,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#delete SqlSourceRepresentationInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#delete SqlSourceRepresentationInstance#delete}.
 
 ---
 
@@ -793,7 +795,7 @@ The construct id used in the generated config for the SqlSourceRepresentationIns
 
 The id of the existing SqlSourceRepresentationInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1340,16 +1342,16 @@ sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig(
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.databaseVersion">database_version</a></code> | <code>str</code> | The MySQL version running on your source database server. |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.host">host</a></code> | <code>str</code> | The externally accessible IPv4 address for the source database server. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.host">host</a></code> | <code>str</code> | The IPv4 address and port for the external server, or the the DNS address for the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.name">name</a></code> | <code>str</code> | The name of the source representation instance. Use any valid Cloud SQL instance name. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.caCertificate">ca_certificate</a></code> | <code>str</code> | The CA certificate on the external server. Include only if SSL/TLS is used on the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.clientCertificate">client_certificate</a></code> | <code>str</code> | The client certificate on the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.clientKey">client_key</a></code> | <code>str</code> | The private key file for the client certificate on the external server. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.dumpFilePath">dump_file_path</a></code> | <code>str</code> | A file in the bucket that contains the data from the external server. |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.password">password</a></code> | <code>str</code> | The password for the replication user account. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.port">port</a></code> | <code>typing.Union[int, float]</code> | The externally accessible port for the source database server. Defaults to 3306. |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.region">region</a></code> | <code>str</code> | The Region in which the created instance should reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceTimeouts">SqlSourceRepresentationInstanceTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceConfig.property.username">username</a></code> | <code>str</code> | The replication user account on the external server. |
@@ -1438,7 +1440,7 @@ The MySQL version running on your source database server.
 
 Possible values: ["MYSQL_5_6", "MYSQL_5_7", "MYSQL_8_0", "POSTGRES_9_6", "POSTGRES_10", "POSTGRES_11", "POSTGRES_12", "POSTGRES_13", "POSTGRES_14"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#database_version SqlSourceRepresentationInstance#database_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#database_version SqlSourceRepresentationInstance#database_version}
 
 ---
 
@@ -1450,9 +1452,11 @@ host: str
 
 - *Type:* str
 
-The externally accessible IPv4 address for the source database server.
+The IPv4 address and port for the external server, or the the DNS address for the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#host SqlSourceRepresentationInstance#host}
+If the external server is hosted on Cloud SQL, the port is 5432.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#host SqlSourceRepresentationInstance#host}
 
 ---
 
@@ -1466,7 +1470,7 @@ name: str
 
 The name of the source representation instance. Use any valid Cloud SQL instance name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#name SqlSourceRepresentationInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#name SqlSourceRepresentationInstance#name}
 
 ---
 
@@ -1480,7 +1484,7 @@ ca_certificate: str
 
 The CA certificate on the external server. Include only if SSL/TLS is used on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#ca_certificate SqlSourceRepresentationInstance#ca_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#ca_certificate SqlSourceRepresentationInstance#ca_certificate}
 
 ---
 
@@ -1496,7 +1500,7 @@ The client certificate on the external server.
 
 Required only for server-client authentication. Include only if SSL/TLS is used on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#client_certificate SqlSourceRepresentationInstance#client_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#client_certificate SqlSourceRepresentationInstance#client_certificate}
 
 ---
 
@@ -1512,7 +1516,7 @@ The private key file for the client certificate on the external server.
 
 Required only for server-client authentication. Include only if SSL/TLS is used on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#client_key SqlSourceRepresentationInstance#client_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#client_key SqlSourceRepresentationInstance#client_key}
 
 ---
 
@@ -1526,7 +1530,7 @@ dump_file_path: str
 
 A file in the bucket that contains the data from the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#dump_file_path SqlSourceRepresentationInstance#dump_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#dump_file_path SqlSourceRepresentationInstance#dump_file_path}
 
 ---
 
@@ -1538,7 +1542,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1555,7 +1559,7 @@ password: str
 
 The password for the replication user account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#password SqlSourceRepresentationInstance#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#password SqlSourceRepresentationInstance#password}
 
 ---
 
@@ -1569,7 +1573,7 @@ port: typing.Union[int, float]
 
 The externally accessible port for the source database server. Defaults to 3306.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#port SqlSourceRepresentationInstance#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#port SqlSourceRepresentationInstance#port}
 
 ---
 
@@ -1581,7 +1585,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}.
 
 ---
 
@@ -1595,7 +1599,7 @@ region: str
 
 The Region in which the created instance should reside. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#region SqlSourceRepresentationInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#region SqlSourceRepresentationInstance#region}
 
 ---
 
@@ -1609,7 +1613,7 @@ timeouts: SqlSourceRepresentationInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#timeouts SqlSourceRepresentationInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#timeouts SqlSourceRepresentationInstance#timeouts}
 
 ---
 
@@ -1623,7 +1627,7 @@ username: str
 
 The replication user account on the external server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#username SqlSourceRepresentationInstance#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#username SqlSourceRepresentationInstance#username}
 
 ---
 
@@ -1644,8 +1648,8 @@ sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#create SqlSourceRepresentationInstance#create}. |
-| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#delete SqlSourceRepresentationInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#create SqlSourceRepresentationInstance#create}. |
+| <code><a href="#@cdktf/provider-google.sqlSourceRepresentationInstance.SqlSourceRepresentationInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#delete SqlSourceRepresentationInstance#delete}. |
 
 ---
 
@@ -1657,7 +1661,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#create SqlSourceRepresentationInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#create SqlSourceRepresentationInstance#create}.
 
 ---
 
@@ -1669,7 +1673,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/sql_source_representation_instance#delete SqlSourceRepresentationInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/sql_source_representation_instance#delete SqlSourceRepresentationInstance#delete}.
 
 ---
 

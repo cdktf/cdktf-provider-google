@@ -1,6 +1,6 @@
 # `google_iap_app_engine_version_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_iap_app_engine_version_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy).
+Refer to the Terraform Registory for docs: [`google_iap_app_engine_version_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy).
 
 # `iapAppEngineVersionIamPolicy` Submodule <a name="`iapAppEngineVersionIamPolicy` Submodule" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_iap_app_engine_version_iam_p
 
 ### IapAppEngineVersionIamPolicy <a name="IapAppEngineVersionIamPolicy" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy google_iap_app_engine_version_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy google_iap_app_engine_version_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniampolicy"
 
 iapappengineversioniampolicy.NewIapAppEngineVersionIamPolicy(scope Construct, id *string, config IapAppEngineVersionIamPolicyConfig) IapAppEngineVersionIamPolicy
 ```
@@ -346,7 +346,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniampolicy"
 
 iapappengineversioniampolicy.IapAppEngineVersionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniampolicy"
 
 iapappengineversioniampolicy.IapAppEngineVersionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ iapappengineversioniampolicy.IapAppEngineVersionIamPolicy_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniampolicy"
 
 iapappengineversioniampolicy.IapAppEngineVersionIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ iapappengineversioniampolicy.IapAppEngineVersionIamPolicy_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniampolicy"
 
 iapappengineversioniampolicy.IapAppEngineVersionIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -435,7 +435,7 @@ The construct id used in the generated config for the IapAppEngineVersionIamPoli
 
 The id of the existing IapAppEngineVersionIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -778,7 +778,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniampolicy"
 
 &iapappengineversioniampolicy.IapAppEngineVersionIamPolicyConfig {
 	Connection: interface{},
@@ -808,12 +808,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversion
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.appId">AppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#app_id IapAppEngineVersionIamPolicy#app_id}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#policy_data IapAppEngineVersionIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.service">Service</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#service IapAppEngineVersionIamPolicy#service}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.versionId">VersionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#version_id IapAppEngineVersionIamPolicy#version_id}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#id IapAppEngineVersionIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#project IapAppEngineVersionIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.appId">AppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#app_id IapAppEngineVersionIamPolicy#app_id}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#policy_data IapAppEngineVersionIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.service">Service</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#service IapAppEngineVersionIamPolicy#service}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.versionId">VersionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#version_id IapAppEngineVersionIamPolicy#version_id}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#id IapAppEngineVersionIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamPolicy.IapAppEngineVersionIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#project IapAppEngineVersionIamPolicy#project}. |
 
 ---
 
@@ -895,7 +895,7 @@ AppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#app_id IapAppEngineVersionIamPolicy#app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#app_id IapAppEngineVersionIamPolicy#app_id}.
 
 ---
 
@@ -907,7 +907,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#policy_data IapAppEngineVersionIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#policy_data IapAppEngineVersionIamPolicy#policy_data}.
 
 ---
 
@@ -919,7 +919,7 @@ Service *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#service IapAppEngineVersionIamPolicy#service}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#service IapAppEngineVersionIamPolicy#service}.
 
 ---
 
@@ -931,7 +931,7 @@ VersionId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#version_id IapAppEngineVersionIamPolicy#version_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#version_id IapAppEngineVersionIamPolicy#version_id}.
 
 ---
 
@@ -943,7 +943,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#id IapAppEngineVersionIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#id IapAppEngineVersionIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -958,7 +958,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/iap_app_engine_version_iam_policy#project IapAppEngineVersionIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/iap_app_engine_version_iam_policy#project IapAppEngineVersionIamPolicy#project}.
 
 ---
 
