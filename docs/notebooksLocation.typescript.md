@@ -1,6 +1,6 @@
 # `google_notebooks_location`
 
-Refer to the Terraform Registory for docs: [`google_notebooks_location`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location).
+Refer to the Terraform Registory for docs: [`google_notebooks_location`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location).
 
 # `notebooksLocation` Submodule <a name="`notebooksLocation` Submodule" id="@cdktf/provider-google.notebooksLocation"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_notebooks_location`](https:/
 
 ### NotebooksLocation <a name="NotebooksLocation" id="@cdktf/provider-google.notebooksLocation.NotebooksLocation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location google_notebooks_location}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location google_notebooks_location}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksLocation.NotebooksLocation.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the NotebooksLocation to impor
 
 The id of the existing NotebooksLocation that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -777,9 +777,9 @@ const notebooksLocationConfig: notebooksLocation.NotebooksLocationConfig = { ...
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#id NotebooksLocation#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#id NotebooksLocation#id}. |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.name">name</a></code> | <code>string</code> | Name of the Location resource. |
-| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#project NotebooksLocation#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#project NotebooksLocation#project}. |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -862,7 +862,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#id NotebooksLocation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#id NotebooksLocation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -879,7 +879,7 @@ public readonly name: string;
 
 Name of the Location resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#name NotebooksLocation#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#name NotebooksLocation#name}
 
 ---
 
@@ -891,7 +891,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#project NotebooksLocation#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#project NotebooksLocation#project}.
 
 ---
 
@@ -905,7 +905,7 @@ public readonly timeouts: NotebooksLocationTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#timeouts NotebooksLocation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#timeouts NotebooksLocation#timeouts}
 
 ---
 
@@ -923,9 +923,9 @@ const notebooksLocationTimeouts: notebooksLocation.NotebooksLocationTimeouts = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#create NotebooksLocation#create}. |
-| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#delete NotebooksLocation#delete}. |
-| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#update NotebooksLocation#update}. |
+| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#create NotebooksLocation#create}. |
+| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#delete NotebooksLocation#delete}. |
+| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#update NotebooksLocation#update}. |
 
 ---
 
@@ -937,7 +937,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#create NotebooksLocation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#create NotebooksLocation#create}.
 
 ---
 
@@ -949,7 +949,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#delete NotebooksLocation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#delete NotebooksLocation#delete}.
 
 ---
 
@@ -961,7 +961,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/notebooks_location#update NotebooksLocation#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/notebooks_location#update NotebooksLocation#update}.
 
 ---
 

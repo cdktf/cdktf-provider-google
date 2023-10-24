@@ -1,6 +1,6 @@
 # `google_cloudbuildv2_connection_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_cloudbuildv2_connection_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding).
+Refer to the Terraform Registory for docs: [`google_cloudbuildv2_connection_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding).
 
 # `cloudbuildv2ConnectionIamBinding` Submodule <a name="`cloudbuildv2ConnectionIamBinding` Submodule" id="@cdktf/provider-google.cloudbuildv2ConnectionIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_cloudbuildv2_connection_iam_
 
 ### Cloudbuildv2ConnectionIamBinding <a name="Cloudbuildv2ConnectionIamBinding" id="@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding google_cloudbuildv2_connection_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding google_cloudbuildv2_connection_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBinding.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the Cloudbuildv2ConnectionIamB
 
 The id of the existing Cloudbuildv2ConnectionIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -840,9 +840,9 @@ new Cloudbuildv2ConnectionIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#expression Cloudbuildv2ConnectionIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#title Cloudbuildv2ConnectionIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#description Cloudbuildv2ConnectionIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#expression Cloudbuildv2ConnectionIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#title Cloudbuildv2ConnectionIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#description Cloudbuildv2ConnectionIamBinding#description}. |
 
 ---
 
@@ -854,7 +854,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#expression Cloudbuildv2ConnectionIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#expression Cloudbuildv2ConnectionIamBinding#expression}.
 
 ---
 
@@ -866,7 +866,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#title Cloudbuildv2ConnectionIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#title Cloudbuildv2ConnectionIamBinding#title}.
 
 ---
 
@@ -878,7 +878,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#description Cloudbuildv2ConnectionIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#description Cloudbuildv2ConnectionIamBinding#description}.
 
 ---
 
@@ -918,13 +918,13 @@ new Cloudbuildv2ConnectionIamBindingConfig {
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#members Cloudbuildv2ConnectionIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#name Cloudbuildv2ConnectionIamBinding#name}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#role Cloudbuildv2ConnectionIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#members Cloudbuildv2ConnectionIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#name Cloudbuildv2ConnectionIamBinding#name}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#role Cloudbuildv2ConnectionIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingCondition">Cloudbuildv2ConnectionIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#id Cloudbuildv2ConnectionIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#location Cloudbuildv2ConnectionIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#project Cloudbuildv2ConnectionIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#id Cloudbuildv2ConnectionIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#location Cloudbuildv2ConnectionIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamBinding.Cloudbuildv2ConnectionIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#project Cloudbuildv2ConnectionIamBinding#project}. |
 
 ---
 
@@ -1006,7 +1006,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#members Cloudbuildv2ConnectionIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#members Cloudbuildv2ConnectionIamBinding#members}.
 
 ---
 
@@ -1018,7 +1018,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#name Cloudbuildv2ConnectionIamBinding#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#name Cloudbuildv2ConnectionIamBinding#name}.
 
 ---
 
@@ -1030,7 +1030,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#role Cloudbuildv2ConnectionIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#role Cloudbuildv2ConnectionIamBinding#role}.
 
 ---
 
@@ -1044,7 +1044,7 @@ public Cloudbuildv2ConnectionIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#condition Cloudbuildv2ConnectionIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#condition Cloudbuildv2ConnectionIamBinding#condition}
 
 ---
 
@@ -1056,7 +1056,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#id Cloudbuildv2ConnectionIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#id Cloudbuildv2ConnectionIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1071,7 +1071,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#location Cloudbuildv2ConnectionIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#location Cloudbuildv2ConnectionIamBinding#location}.
 
 ---
 
@@ -1083,7 +1083,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/cloudbuildv2_connection_iam_binding#project Cloudbuildv2ConnectionIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/cloudbuildv2_connection_iam_binding#project Cloudbuildv2ConnectionIamBinding#project}.
 
 ---
 

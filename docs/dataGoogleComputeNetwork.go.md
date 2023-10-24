@@ -1,6 +1,6 @@
 # `data_google_compute_network`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_network`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network).
+Refer to the Terraform Registory for docs: [`data_google_compute_network`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network).
 
 # `dataGoogleComputeNetwork` Submodule <a name="`dataGoogleComputeNetwork` Submodule" id="@cdktf/provider-google.dataGoogleComputeNetwork"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_network`](https
 
 ### DataGoogleComputeNetwork <a name="DataGoogleComputeNetwork" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network google_compute_network}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network google_compute_network}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.Initializer"></a>
 
@@ -374,7 +374,7 @@ The construct id used in the generated config for the DataGoogleComputeNetwork t
 
 The id of the existing DataGoogleComputeNetwork that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -404,6 +404,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.description">Description</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.gatewayIpv4">GatewayIpv4</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.internalIpv6Range">InternalIpv6Range</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.selfLink">SelfLink</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.subnetworksSelfLinks">SubnetworksSelfLinks</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
@@ -557,6 +558,16 @@ func GatewayIpv4() *string
 
 ---
 
+##### `InternalIpv6Range`<sup>Required</sup> <a name="InternalIpv6Range" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.internalIpv6Range"></a>
+
+```go
+func InternalIpv6Range() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SelfLink`<sup>Required</sup> <a name="SelfLink" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.property.selfLink"></a>
 
 ```go
@@ -689,9 +700,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputene
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network#name DataGoogleComputeNetwork#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network#id DataGoogleComputeNetwork#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network#project DataGoogleComputeNetwork#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network#name DataGoogleComputeNetwork#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network#id DataGoogleComputeNetwork#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network#project DataGoogleComputeNetwork#project}. |
 
 ---
 
@@ -773,7 +784,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network#name DataGoogleComputeNetwork#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network#name DataGoogleComputeNetwork#name}.
 
 ---
 
@@ -785,7 +796,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network#id DataGoogleComputeNetwork#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network#id DataGoogleComputeNetwork#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -800,7 +811,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/data-sources/compute_network#project DataGoogleComputeNetwork#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/compute_network#project DataGoogleComputeNetwork#project}.
 
 ---
 

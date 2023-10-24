@@ -1,6 +1,6 @@
 # `google_monitoring_slo`
 
-Refer to the Terraform Registory for docs: [`google_monitoring_slo`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo).
+Refer to the Terraform Registory for docs: [`google_monitoring_slo`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo).
 
 # `monitoringSlo` Submodule <a name="`monitoringSlo` Submodule" id="@cdktf/provider-google.monitoringSlo"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_monitoring_slo`](https://reg
 
 ### MonitoringSlo <a name="MonitoringSlo" id="@cdktf/provider-google.monitoringSlo.MonitoringSlo"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo google_monitoring_slo}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo google_monitoring_slo}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringSlo.MonitoringSlo.Initializer"></a>
 
@@ -550,7 +550,7 @@ The construct id used in the generated config for the MonitoringSlo to import.
 
 The id of the existing MonitoringSlo that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1074,7 +1074,7 @@ public readonly availability: MonitoringSloBasicSliAvailability;
 
 availability block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#availability MonitoringSlo#availability}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#availability MonitoringSlo#availability}
 
 ---
 
@@ -1088,7 +1088,7 @@ public readonly latency: MonitoringSloBasicSliLatency;
 
 latency block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#latency MonitoringSlo#latency}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#latency MonitoringSlo#latency}
 
 ---
 
@@ -1108,7 +1108,7 @@ locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#location MonitoringSlo#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#location MonitoringSlo#location}
 
 ---
 
@@ -1128,7 +1128,7 @@ the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#method MonitoringSlo#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#method MonitoringSlo#method}
 
 ---
 
@@ -1148,7 +1148,7 @@ this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#version MonitoringSlo#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#version MonitoringSlo#version}
 
 ---
 
@@ -1180,7 +1180,7 @@ public readonly enabled: boolean | IResolvable;
 
 Whether an availability SLI is enabled or not. Must be set to true. Defaults to 'true'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#enabled MonitoringSlo#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#enabled MonitoringSlo#enabled}
 
 ---
 
@@ -1212,7 +1212,7 @@ public readonly threshold: string;
 
 A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
 
 ---
 
@@ -1242,8 +1242,8 @@ const monitoringSloConfig: monitoringSlo.MonitoringSloConfig = { ... }
 | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.basicSli">basicSli</a></code> | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloBasicSli">MonitoringSloBasicSli</a></code> | basic_sli block. |
 | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.calendarPeriod">calendarPeriod</a></code> | <code>string</code> | A calendar period, semantically "since the start of the current <calendarPeriod>". Possible values: ["DAY", "WEEK", "FORTNIGHT", "MONTH"]. |
 | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.displayName">displayName</a></code> | <code>string</code> | Name used for UI elements listing this SLO. |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#id MonitoringSlo#id}. |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#project MonitoringSlo#project}. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#id MonitoringSlo#id}. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#project MonitoringSlo#project}. |
 | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.requestBasedSli">requestBasedSli</a></code> | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSli">MonitoringSloRequestBasedSli</a></code> | request_based_sli block. |
 | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.rollingPeriodDays">rollingPeriodDays</a></code> | <code>number</code> | A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive. |
 | <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloConfig.property.sloId">sloId</a></code> | <code>string</code> | The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead. |
@@ -1335,7 +1335,7 @@ The fraction of service that must be good in order for this objective to be met.
 
 0 < goal <= 0.999
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#goal MonitoringSlo#goal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#goal MonitoringSlo#goal}
 
 ---
 
@@ -1349,7 +1349,7 @@ public readonly service: string;
 
 ID of the service to which this SLO belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#service MonitoringSlo#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#service MonitoringSlo#service}
 
 ---
 
@@ -1363,7 +1363,7 @@ public readonly basicSli: MonitoringSloBasicSli;
 
 basic_sli block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#basic_sli MonitoringSlo#basic_sli}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#basic_sli MonitoringSlo#basic_sli}
 
 ---
 
@@ -1377,7 +1377,7 @@ public readonly calendarPeriod: string;
 
 A calendar period, semantically "since the start of the current <calendarPeriod>". Possible values: ["DAY", "WEEK", "FORTNIGHT", "MONTH"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#calendar_period MonitoringSlo#calendar_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#calendar_period MonitoringSlo#calendar_period}
 
 ---
 
@@ -1391,7 +1391,7 @@ public readonly displayName: string;
 
 Name used for UI elements listing this SLO.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#display_name MonitoringSlo#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#display_name MonitoringSlo#display_name}
 
 ---
 
@@ -1403,7 +1403,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#id MonitoringSlo#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#id MonitoringSlo#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1418,7 +1418,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#project MonitoringSlo#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#project MonitoringSlo#project}.
 
 ---
 
@@ -1432,7 +1432,7 @@ public readonly requestBasedSli: MonitoringSloRequestBasedSli;
 
 request_based_sli block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#request_based_sli MonitoringSlo#request_based_sli}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#request_based_sli MonitoringSlo#request_based_sli}
 
 ---
 
@@ -1446,7 +1446,7 @@ public readonly rollingPeriodDays: number;
 
 A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#rolling_period_days MonitoringSlo#rolling_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#rolling_period_days MonitoringSlo#rolling_period_days}
 
 ---
 
@@ -1460,7 +1460,7 @@ public readonly sloId: string;
 
 The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#slo_id MonitoringSlo#slo_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#slo_id MonitoringSlo#slo_id}
 
 ---
 
@@ -1474,7 +1474,7 @@ public readonly timeouts: MonitoringSloTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#timeouts MonitoringSlo#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#timeouts MonitoringSlo#timeouts}
 
 ---
 
@@ -1488,7 +1488,7 @@ public readonly userLabels: {[ key: string ]: string};
 
 This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#user_labels MonitoringSlo#user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#user_labels MonitoringSlo#user_labels}
 
 ---
 
@@ -1502,7 +1502,7 @@ public readonly windowsBasedSli: MonitoringSloWindowsBasedSli;
 
 windows_based_sli block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#windows_based_sli MonitoringSlo#windows_based_sli}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#windows_based_sli MonitoringSlo#windows_based_sli}
 
 ---
 
@@ -1535,7 +1535,7 @@ public readonly distributionCut: MonitoringSloRequestBasedSliDistributionCut;
 
 distribution_cut block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#distribution_cut MonitoringSlo#distribution_cut}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#distribution_cut MonitoringSlo#distribution_cut}
 
 ---
 
@@ -1549,7 +1549,7 @@ public readonly goodTotalRatio: MonitoringSloRequestBasedSliGoodTotalRatio;
 
 good_total_ratio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#good_total_ratio MonitoringSlo#good_total_ratio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#good_total_ratio MonitoringSlo#good_total_ratio}
 
 ---
 
@@ -1585,7 +1585,7 @@ A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filt
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#distribution_filter MonitoringSlo#distribution_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#distribution_filter MonitoringSlo#distribution_filter}
 
 ---
 
@@ -1599,7 +1599,7 @@ public readonly range: MonitoringSloRequestBasedSliDistributionCutRange;
 
 range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
 
 ---
 
@@ -1632,7 +1632,7 @@ public readonly max: number;
 
 max value for the range (inclusive). If not given, will be set to 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
 
 ---
 
@@ -1646,7 +1646,7 @@ public readonly min: number;
 
 Min value for the range (inclusive). If not given, will be set to 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
 
 ---
 
@@ -1686,7 +1686,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
 must be set (good + bad = total is assumed).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#bad_service_filter MonitoringSlo#bad_service_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#bad_service_filter MonitoringSlo#bad_service_filter}
 
 ---
 
@@ -1703,7 +1703,7 @@ A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filt
 Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
 must be set (good + bad = total is assumed).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#good_service_filter MonitoringSlo#good_service_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#good_service_filter MonitoringSlo#good_service_filter}
 
 ---
 
@@ -1723,7 +1723,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 Exactly two of 'good_service_filter','bad_service_filter','total_service_filter'
 must be set (good + bad = total is assumed).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#total_service_filter MonitoringSlo#total_service_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#total_service_filter MonitoringSlo#total_service_filter}
 
 ---
 
@@ -1741,9 +1741,9 @@ const monitoringSloTimeouts: monitoringSlo.MonitoringSloTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#create MonitoringSlo#create}. |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#delete MonitoringSlo#delete}. |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#update MonitoringSlo#update}. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#create MonitoringSlo#create}. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#delete MonitoringSlo#delete}. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#update MonitoringSlo#update}. |
 
 ---
 
@@ -1755,7 +1755,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#create MonitoringSlo#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#create MonitoringSlo#create}.
 
 ---
 
@@ -1767,7 +1767,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#delete MonitoringSlo#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#delete MonitoringSlo#delete}.
 
 ---
 
@@ -1779,7 +1779,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#update MonitoringSlo#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#update MonitoringSlo#update}.
 
 ---
 
@@ -1815,7 +1815,7 @@ public readonly goodBadMetricFilter: string;
 
 A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) with ValueType = BOOL. The window is good if any true values appear in the window. One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#good_bad_metric_filter MonitoringSlo#good_bad_metric_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#good_bad_metric_filter MonitoringSlo#good_bad_metric_filter}
 
 ---
 
@@ -1829,7 +1829,7 @@ public readonly goodTotalRatioThreshold: MonitoringSloWindowsBasedSliGoodTotalRa
 
 good_total_ratio_threshold block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#good_total_ratio_threshold MonitoringSlo#good_total_ratio_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#good_total_ratio_threshold MonitoringSlo#good_total_ratio_threshold}
 
 ---
 
@@ -1843,7 +1843,7 @@ public readonly metricMeanInRange: MonitoringSloWindowsBasedSliMetricMeanInRange
 
 metric_mean_in_range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#metric_mean_in_range MonitoringSlo#metric_mean_in_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#metric_mean_in_range MonitoringSlo#metric_mean_in_range}
 
 ---
 
@@ -1857,7 +1857,7 @@ public readonly metricSumInRange: MonitoringSloWindowsBasedSliMetricSumInRange;
 
 metric_sum_in_range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#metric_sum_in_range MonitoringSlo#metric_sum_in_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#metric_sum_in_range MonitoringSlo#metric_sum_in_range}
 
 ---
 
@@ -1874,7 +1874,7 @@ Duration over which window quality is evaluated, given as a duration string "{X}
 Must be an
 integer fraction of a day and at least 60s.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#window_period MonitoringSlo#window_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#window_period MonitoringSlo#window_period}
 
 ---
 
@@ -1908,7 +1908,7 @@ public readonly basicSliPerformance: MonitoringSloWindowsBasedSliGoodTotalRatioT
 
 basic_sli_performance block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#basic_sli_performance MonitoringSlo#basic_sli_performance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#basic_sli_performance MonitoringSlo#basic_sli_performance}
 
 ---
 
@@ -1922,7 +1922,7 @@ public readonly performance: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold
 
 performance block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#performance MonitoringSlo#performance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#performance MonitoringSlo#performance}
 
 ---
 
@@ -1936,7 +1936,7 @@ public readonly threshold: number;
 
 If window performance >= threshold, the window is counted as good.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
 
 ---
 
@@ -1972,7 +1972,7 @@ public readonly availability: MonitoringSloWindowsBasedSliGoodTotalRatioThreshol
 
 availability block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#availability MonitoringSlo#availability}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#availability MonitoringSlo#availability}
 
 ---
 
@@ -1986,7 +1986,7 @@ public readonly latency: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasi
 
 latency block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#latency MonitoringSlo#latency}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#latency MonitoringSlo#latency}
 
 ---
 
@@ -2006,7 +2006,7 @@ locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#location MonitoringSlo#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#location MonitoringSlo#location}
 
 ---
 
@@ -2026,7 +2026,7 @@ the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#method MonitoringSlo#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#method MonitoringSlo#method}
 
 ---
 
@@ -2046,7 +2046,7 @@ this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#version MonitoringSlo#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#version MonitoringSlo#version}
 
 ---
 
@@ -2078,7 +2078,7 @@ public readonly enabled: boolean | IResolvable;
 
 Whether an availability SLI is enabled or not. Must be set to 'true. Defaults to 'true'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#enabled MonitoringSlo#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#enabled MonitoringSlo#enabled}
 
 ---
 
@@ -2110,7 +2110,7 @@ public readonly threshold: string;
 
 A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#threshold MonitoringSlo#threshold}
 
 ---
 
@@ -2143,7 +2143,7 @@ public readonly distributionCut: MonitoringSloWindowsBasedSliGoodTotalRatioThres
 
 distribution_cut block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#distribution_cut MonitoringSlo#distribution_cut}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#distribution_cut MonitoringSlo#distribution_cut}
 
 ---
 
@@ -2157,7 +2157,7 @@ public readonly goodTotalRatio: MonitoringSloWindowsBasedSliGoodTotalRatioThresh
 
 good_total_ratio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#good_total_ratio MonitoringSlo#good_total_ratio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#good_total_ratio MonitoringSlo#good_total_ratio}
 
 ---
 
@@ -2193,7 +2193,7 @@ A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filt
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#distribution_filter MonitoringSlo#distribution_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#distribution_filter MonitoringSlo#distribution_filter}
 
 ---
 
@@ -2207,7 +2207,7 @@ public readonly range: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerfor
 
 range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
 
 ---
 
@@ -2240,7 +2240,7 @@ public readonly max: number;
 
 max value for the range (inclusive). If not given, will be set to 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
 
 ---
 
@@ -2254,7 +2254,7 @@ public readonly min: number;
 
 Min value for the range (inclusive). If not given, will be set to 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
 
 ---
 
@@ -2291,7 +2291,7 @@ A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filt
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#bad_service_filter MonitoringSlo#bad_service_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#bad_service_filter MonitoringSlo#bad_service_filter}
 
 ---
 
@@ -2308,7 +2308,7 @@ A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filt
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#good_service_filter MonitoringSlo#good_service_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#good_service_filter MonitoringSlo#good_service_filter}
 
 ---
 
@@ -2325,7 +2325,7 @@ A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filt
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#total_service_filter MonitoringSlo#total_service_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#total_service_filter MonitoringSlo#total_service_filter}
 
 ---
 
@@ -2358,7 +2358,7 @@ public readonly range: MonitoringSloWindowsBasedSliMetricMeanInRangeRange;
 
 range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
 
 ---
 
@@ -2372,7 +2372,7 @@ public readonly timeSeries: string;
 
 A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Mean value 'X' should satisfy 'range.min <= X <= range.max' under good service.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#time_series MonitoringSlo#time_series}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#time_series MonitoringSlo#time_series}
 
 ---
 
@@ -2405,7 +2405,7 @@ public readonly max: number;
 
 max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
 
 ---
 
@@ -2419,7 +2419,7 @@ public readonly min: number;
 
 Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
 
 ---
 
@@ -2452,7 +2452,7 @@ public readonly range: MonitoringSloWindowsBasedSliMetricSumInRangeRange;
 
 range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#range MonitoringSlo#range}
 
 ---
 
@@ -2469,7 +2469,7 @@ A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specif
 Summed value 'X' should satisfy
 'range.min <= X <= range.max' for a good window.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#time_series MonitoringSlo#time_series}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#time_series MonitoringSlo#time_series}
 
 ---
 
@@ -2502,7 +2502,7 @@ public readonly max: number;
 
 max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#max MonitoringSlo#max}
 
 ---
 
@@ -2516,7 +2516,7 @@ public readonly min: number;
 
 Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/monitoring_slo#min MonitoringSlo#min}
 
 ---
 

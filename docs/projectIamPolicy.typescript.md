@@ -1,6 +1,6 @@
 # `google_project_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_project_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy).
+Refer to the Terraform Registory for docs: [`google_project_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy).
 
 # `projectIamPolicy` Submodule <a name="`projectIamPolicy` Submodule" id="@cdktf/provider-google.projectIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_project_iam_policy`](https:/
 
 ### ProjectIamPolicy <a name="ProjectIamPolicy" id="@cdktf/provider-google.projectIamPolicy.ProjectIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy google_project_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy google_project_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamPolicy.ProjectIamPolicy.Initializer"></a>
 
@@ -428,7 +428,7 @@ The construct id used in the generated config for the ProjectIamPolicy to import
 
 The id of the existing ProjectIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -721,9 +721,9 @@ const projectIamPolicyConfig: projectIamPolicy.ProjectIamPolicyConfig = { ... }
 | <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy#policy_data ProjectIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy#project ProjectIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy#id ProjectIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy#policy_data ProjectIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy#project ProjectIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.projectIamPolicy.ProjectIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy#id ProjectIamPolicy#id}. |
 
 ---
 
@@ -805,7 +805,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy#policy_data ProjectIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy#policy_data ProjectIamPolicy#policy_data}.
 
 ---
 
@@ -817,7 +817,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy#project ProjectIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy#project ProjectIamPolicy#project}.
 
 ---
 
@@ -829,7 +829,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.2.0/docs/resources/project_iam_policy#id ProjectIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/project_iam_policy#id ProjectIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
