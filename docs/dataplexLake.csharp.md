@@ -1,6 +1,6 @@
 # `google_dataplex_lake`
 
-Refer to the Terraform Registory for docs: [`google_dataplex_lake`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake).
+Refer to the Terraform Registory for docs: [`google_dataplex_lake`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake).
 
 # `dataplexLake` Submodule <a name="`dataplexLake` Submodule" id="@cdktf/provider-google.dataplexLake"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_dataplex_lake`](https://regi
 
 ### DataplexLake <a name="DataplexLake" id="@cdktf/provider-google.dataplexLake.DataplexLake"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake google_dataplex_lake}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake google_dataplex_lake}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexLake.DataplexLake.Initializer"></a>
 
@@ -496,7 +496,7 @@ The construct id used in the generated config for the DataplexLake to import.
 
 The id of the existing DataplexLake that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1043,7 +1043,7 @@ new DataplexLakeConfig {
 | <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.name">Name</a></code> | <code>string</code> | The name of the lake. |
 | <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.description">Description</a></code> | <code>string</code> | Optional. Description of the lake. |
 | <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Optional. User friendly display name. |
-| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#id DataplexLake#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#id DataplexLake#id}. |
 | <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Optional. User-defined labels for the lake. |
 | <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.metastore">Metastore</a></code> | <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeMetastore">DataplexLakeMetastore</a></code> | metastore block. |
 | <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeConfig.property.project">Project</a></code> | <code>string</code> | The project for the resource. |
@@ -1131,7 +1131,7 @@ public string Location { get; set; }
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#location DataplexLake#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#location DataplexLake#location}
 
 ---
 
@@ -1145,7 +1145,7 @@ public string Name { get; set; }
 
 The name of the lake.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#name DataplexLake#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#name DataplexLake#name}
 
 ---
 
@@ -1159,7 +1159,7 @@ public string Description { get; set; }
 
 Optional. Description of the lake.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#description DataplexLake#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#description DataplexLake#description}
 
 ---
 
@@ -1173,7 +1173,7 @@ public string DisplayName { get; set; }
 
 Optional. User friendly display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#display_name DataplexLake#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#display_name DataplexLake#display_name}
 
 ---
 
@@ -1185,7 +1185,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#id DataplexLake#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#id DataplexLake#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1205,7 +1205,7 @@ Optional. User-defined labels for the lake.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field `effective_labels` for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#labels DataplexLake#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#labels DataplexLake#labels}
 
 ---
 
@@ -1219,7 +1219,7 @@ public DataplexLakeMetastore Metastore { get; set; }
 
 metastore block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#metastore DataplexLake#metastore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#metastore DataplexLake#metastore}
 
 ---
 
@@ -1233,7 +1233,7 @@ public string Project { get; set; }
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#project DataplexLake#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#project DataplexLake#project}
 
 ---
 
@@ -1247,7 +1247,7 @@ public DataplexLakeTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#timeouts DataplexLake#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#timeouts DataplexLake#timeouts}
 
 ---
 
@@ -1281,7 +1281,7 @@ public string Service { get; set; }
 
 Optional. A relative reference to the Dataproc Metastore (https://cloud.google.com/dataproc-metastore/docs) service associated with the lake: `projects/{project_id}/locations/{location_id}/services/{service_id}`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#service DataplexLake#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#service DataplexLake#service}
 
 ---
 
@@ -1316,9 +1316,9 @@ new DataplexLakeTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#create DataplexLake#create}. |
-| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#delete DataplexLake#delete}. |
-| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#update DataplexLake#update}. |
+| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#create DataplexLake#create}. |
+| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#delete DataplexLake#delete}. |
+| <code><a href="#@cdktf/provider-google.dataplexLake.DataplexLakeTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#update DataplexLake#update}. |
 
 ---
 
@@ -1330,7 +1330,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#create DataplexLake#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#create DataplexLake#create}.
 
 ---
 
@@ -1342,7 +1342,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#delete DataplexLake#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#delete DataplexLake#delete}.
 
 ---
 
@@ -1354,7 +1354,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_lake#update DataplexLake#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_lake#update DataplexLake#update}.
 
 ---
 

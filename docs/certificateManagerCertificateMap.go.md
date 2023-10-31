@@ -1,6 +1,6 @@
 # `google_certificate_manager_certificate_map`
 
-Refer to the Terraform Registory for docs: [`google_certificate_manager_certificate_map`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map).
+Refer to the Terraform Registory for docs: [`google_certificate_manager_certificate_map`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map).
 
 # `certificateManagerCertificateMap` Submodule <a name="`certificateManagerCertificateMap` Submodule" id="@cdktf/provider-google.certificateManagerCertificateMap"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_certificate_manager_certific
 
 ### CertificateManagerCertificateMap <a name="CertificateManagerCertificateMap" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMap"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map google_certificate_manager_certificate_map}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map google_certificate_manager_certificate_map}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMap.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.NewCertificateManagerCertificateMap(scope Construct, id *string, config CertificateManagerCertificateMapConfig) CertificateManagerCertificateMap
 ```
@@ -380,7 +380,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMap.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.CertificateManagerCertificateMap_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMap.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.CertificateManagerCertificateMap_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ certificatemanagercertificatemap.CertificateManagerCertificateMap_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMap.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.CertificateManagerCertificateMap_IsTerraformResource(x interface{}) *bool
 ```
@@ -440,7 +440,7 @@ certificatemanagercertificatemap.CertificateManagerCertificateMap_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMap.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.CertificateManagerCertificateMap_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -469,7 +469,7 @@ The construct id used in the generated config for the CertificateManagerCertific
 
 The id of the existing CertificateManagerCertificateMap that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -856,7 +856,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 &certificatemanagercertificatemap.CertificateManagerCertificateMapConfig {
 	Connection: interface{},
@@ -871,7 +871,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagerc
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts,
 }
 ```
 
@@ -888,9 +888,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagerc
 | <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.name">Name</a></code> | <code>*string</code> | A user-defined name of the Certificate Map. |
 | <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.description">Description</a></code> | <code>*string</code> | A human-readable description of the resource. |
-| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#id CertificateManagerCertificateMap#id}. |
+| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#id CertificateManagerCertificateMap#id}. |
 | <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Set of labels associated with a Certificate Map resource. |
-| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#project CertificateManagerCertificateMap#project}. |
+| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#project CertificateManagerCertificateMap#project}. |
 | <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts">CertificateManagerCertificateMapTimeouts</a></code> | timeouts block. |
 
 ---
@@ -978,7 +978,7 @@ A user-defined name of the Certificate Map.
 Certificate Map names must be unique
 globally and match the pattern 'projects/* /locations/* /certificateMaps/*'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#name CertificateManagerCertificateMap#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#name CertificateManagerCertificateMap#name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -994,7 +994,7 @@ Description *string
 
 A human-readable description of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#description CertificateManagerCertificateMap#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#description CertificateManagerCertificateMap#description}
 
 ---
 
@@ -1006,7 +1006,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#id CertificateManagerCertificateMap#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#id CertificateManagerCertificateMap#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1026,7 +1026,7 @@ Set of labels associated with a Certificate Map resource.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#labels CertificateManagerCertificateMap#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#labels CertificateManagerCertificateMap#labels}
 
 ---
 
@@ -1038,7 +1038,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#project CertificateManagerCertificateMap#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#project CertificateManagerCertificateMap#project}.
 
 ---
 
@@ -1052,7 +1052,7 @@ Timeouts CertificateManagerCertificateMapTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#timeouts CertificateManagerCertificateMap#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#timeouts CertificateManagerCertificateMap#timeouts}
 
 ---
 
@@ -1061,7 +1061,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapGclbTargets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 &certificatemanagercertificatemap.CertificateManagerCertificateMapGclbTargets {
 
@@ -1074,7 +1074,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapGclbTargetsIpConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 &certificatemanagercertificatemap.CertificateManagerCertificateMapGclbTargetsIpConfigs {
 
@@ -1087,7 +1087,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 &certificatemanagercertificatemap.CertificateManagerCertificateMapTimeouts {
 	Create: *string,
@@ -1100,9 +1100,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagerc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#create CertificateManagerCertificateMap#create}. |
-| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#delete CertificateManagerCertificateMap#delete}. |
-| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#update CertificateManagerCertificateMap#update}. |
+| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#create CertificateManagerCertificateMap#create}. |
+| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#delete CertificateManagerCertificateMap#delete}. |
+| <code><a href="#@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#update CertificateManagerCertificateMap#update}. |
 
 ---
 
@@ -1114,7 +1114,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#create CertificateManagerCertificateMap#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#create CertificateManagerCertificateMap#create}.
 
 ---
 
@@ -1126,7 +1126,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#delete CertificateManagerCertificateMap#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#delete CertificateManagerCertificateMap#delete}.
 
 ---
 
@@ -1138,7 +1138,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/certificate_manager_certificate_map#update CertificateManagerCertificateMap#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/certificate_manager_certificate_map#update CertificateManagerCertificateMap#update}.
 
 ---
 
@@ -1149,7 +1149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapGclbTargetsIpConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.NewCertificateManagerCertificateMapGclbTargetsIpConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CertificateManagerCertificateMapGclbTargetsIpConfigsList
 ```
@@ -1281,7 +1281,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapGclbTargetsIpConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.NewCertificateManagerCertificateMapGclbTargetsIpConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CertificateManagerCertificateMapGclbTargetsIpConfigsOutputReference
 ```
@@ -1570,7 +1570,7 @@ func InternalValue() CertificateManagerCertificateMapGclbTargetsIpConfigs
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapGclbTargetsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.NewCertificateManagerCertificateMapGclbTargetsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CertificateManagerCertificateMapGclbTargetsList
 ```
@@ -1702,7 +1702,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapGclbTargetsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.NewCertificateManagerCertificateMapGclbTargetsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CertificateManagerCertificateMapGclbTargetsOutputReference
 ```
@@ -2002,7 +2002,7 @@ func InternalValue() CertificateManagerCertificateMapGclbTargets
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificateMap.CertificateManagerCertificateMapTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/certificatemanagercertificatemap"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificatemap"
 
 certificatemanagercertificatemap.NewCertificateManagerCertificateMapTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateManagerCertificateMapTimeoutsOutputReference
 ```

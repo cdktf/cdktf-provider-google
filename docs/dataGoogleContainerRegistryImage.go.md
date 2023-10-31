@@ -1,6 +1,6 @@
 # `data_google_container_registry_image`
 
-Refer to the Terraform Registory for docs: [`data_google_container_registry_image`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image).
+Refer to the Terraform Registory for docs: [`data_google_container_registry_image`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image).
 
 # `dataGoogleContainerRegistryImage` Submodule <a name="`dataGoogleContainerRegistryImage` Submodule" id="@cdktf/provider-google.dataGoogleContainerRegistryImage"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_container_registry_imag
 
 ### DataGoogleContainerRegistryImage <a name="DataGoogleContainerRegistryImage" id="@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImage"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image google_container_registry_image}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image google_container_registry_image}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainerregistryimage"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryimage"
 
 datagooglecontainerregistryimage.NewDataGoogleContainerRegistryImage(scope Construct, id *string, config DataGoogleContainerRegistryImageConfig) DataGoogleContainerRegistryImage
 ```
@@ -306,7 +306,7 @@ func ResetTag()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImage.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainerregistryimage"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryimage"
 
 datagooglecontainerregistryimage.DataGoogleContainerRegistryImage_IsConstruct(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImage.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainerregistryimage"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryimage"
 
 datagooglecontainerregistryimage.DataGoogleContainerRegistryImage_IsTerraformElement(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ datagooglecontainerregistryimage.DataGoogleContainerRegistryImage_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImage.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainerregistryimage"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryimage"
 
 datagooglecontainerregistryimage.DataGoogleContainerRegistryImage_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ datagooglecontainerregistryimage.DataGoogleContainerRegistryImage_IsTerraformDat
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImage.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainerregistryimage"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryimage"
 
 datagooglecontainerregistryimage.DataGoogleContainerRegistryImage_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -395,7 +395,7 @@ The construct id used in the generated config for the DataGoogleContainerRegistr
 
 The id of the existing DataGoogleContainerRegistryImage that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -716,7 +716,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainerregistryimage"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryimage"
 
 &datagooglecontainerregistryimage.DataGoogleContainerRegistryImageConfig {
 	Connection: interface{},
@@ -746,12 +746,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainer
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#name DataGoogleContainerRegistryImage#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.digest">Digest</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#digest DataGoogleContainerRegistryImage#digest}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#id DataGoogleContainerRegistryImage#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#project DataGoogleContainerRegistryImage#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#region DataGoogleContainerRegistryImage#region}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.tag">Tag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#tag DataGoogleContainerRegistryImage#tag}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#name DataGoogleContainerRegistryImage#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.digest">Digest</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#digest DataGoogleContainerRegistryImage#digest}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#id DataGoogleContainerRegistryImage#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#project DataGoogleContainerRegistryImage#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#region DataGoogleContainerRegistryImage#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryImage.DataGoogleContainerRegistryImageConfig.property.tag">Tag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#tag DataGoogleContainerRegistryImage#tag}. |
 
 ---
 
@@ -833,7 +833,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#name DataGoogleContainerRegistryImage#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#name DataGoogleContainerRegistryImage#name}.
 
 ---
 
@@ -845,7 +845,7 @@ Digest *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#digest DataGoogleContainerRegistryImage#digest}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#digest DataGoogleContainerRegistryImage#digest}.
 
 ---
 
@@ -857,7 +857,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#id DataGoogleContainerRegistryImage#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#id DataGoogleContainerRegistryImage#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -872,7 +872,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#project DataGoogleContainerRegistryImage#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#project DataGoogleContainerRegistryImage#project}.
 
 ---
 
@@ -884,7 +884,7 @@ Region *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#region DataGoogleContainerRegistryImage#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#region DataGoogleContainerRegistryImage#region}.
 
 ---
 
@@ -896,7 +896,7 @@ Tag *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/container_registry_image#tag DataGoogleContainerRegistryImage#tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/container_registry_image#tag DataGoogleContainerRegistryImage#tag}.
 
 ---
 

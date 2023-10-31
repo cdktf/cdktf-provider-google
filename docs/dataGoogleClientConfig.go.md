@@ -1,6 +1,6 @@
 # `data_google_client_config`
 
-Refer to the Terraform Registory for docs: [`data_google_client_config`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/client_config).
+Refer to the Terraform Registory for docs: [`data_google_client_config`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/client_config).
 
 # `dataGoogleClientConfig` Submodule <a name="`dataGoogleClientConfig` Submodule" id="@cdktf/provider-google.dataGoogleClientConfig"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_client_config`](https:/
 
 ### DataGoogleClientConfig <a name="DataGoogleClientConfig" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/client_config google_client_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/client_config google_client_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.NewDataGoogleClientConfig(scope Construct, id *string, config DataGoogleClientConfigConfig) DataGoogleClientConfig
 ```
@@ -271,7 +271,7 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.DataGoogleClientConfig_IsConstruct(x interface{}) *bool
 ```
@@ -303,7 +303,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.DataGoogleClientConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -317,7 +317,7 @@ datagoogleclientconfig.DataGoogleClientConfig_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.DataGoogleClientConfig_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -331,7 +331,7 @@ datagoogleclientconfig.DataGoogleClientConfig_IsTerraformDataSource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.DataGoogleClientConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -360,7 +360,7 @@ The construct id used in the generated config for the DataGoogleClientConfig to 
 
 The id of the existing DataGoogleClientConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/client_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/client_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -593,7 +593,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 &datagoogleclientconfig.DataGoogleClientConfigConfig {
 	Connection: interface{},

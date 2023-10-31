@@ -1,6 +1,6 @@
 # `google_firestore_field`
 
-Refer to the Terraform Registory for docs: [`google_firestore_field`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field).
+Refer to the Terraform Registory for docs: [`google_firestore_field`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field).
 
 # `firestoreField` Submodule <a name="`firestoreField` Submodule" id="@cdktf/provider-google.firestoreField"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_firestore_field`](https://re
 
 ### FirestoreField <a name="FirestoreField" id="@cdktf/provider-google.firestoreField.FirestoreField"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field google_firestore_field}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field google_firestore_field}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.NewFirestoreField(scope Construct, id *string, config FirestoreFieldConfig) FirestoreField
 ```
@@ -413,7 +413,7 @@ func ResetTtlConfig()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firestoreField.FirestoreField.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.FirestoreField_IsConstruct(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firestoreField.FirestoreField.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.FirestoreField_IsTerraformElement(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ firestorefield.FirestoreField_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firestoreField.FirestoreField.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.FirestoreField_IsTerraformResource(x interface{}) *bool
 ```
@@ -473,7 +473,7 @@ firestorefield.FirestoreField_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.firestoreField.FirestoreField.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.FirestoreField_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -502,7 +502,7 @@ The construct id used in the generated config for the FirestoreField to import.
 
 The id of the existing FirestoreField that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -889,7 +889,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 &firestorefield.FirestoreFieldConfig {
 	Connection: interface{},
@@ -903,10 +903,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
 	Field: *string,
 	Database: *string,
 	Id: *string,
-	IndexConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreField.FirestoreFieldIndexConfig,
+	IndexConfig: github.com/cdktf/cdktf-provider-google-go/google.firestoreField.FirestoreFieldIndexConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreField.FirestoreFieldTimeouts,
-	TtlConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreField.FirestoreFieldTtlConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.firestoreField.FirestoreFieldTimeouts,
+	TtlConfig: github.com/cdktf/cdktf-provider-google-go/google.firestoreField.FirestoreFieldTtlConfig,
 }
 ```
 
@@ -924,9 +924,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.collection">Collection</a></code> | <code>*string</code> | The id of the collection group to configure. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.field">Field</a></code> | <code>*string</code> | The id of the field to configure. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.database">Database</a></code> | <code>*string</code> | The Firestore database id. Defaults to '"(default)"'. |
-| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#id FirestoreField#id}. |
+| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#id FirestoreField#id}. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.indexConfig">IndexConfig</a></code> | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfig">FirestoreFieldIndexConfig</a></code> | index_config block. |
-| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#project FirestoreField#project}. |
+| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#project FirestoreField#project}. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts">FirestoreFieldTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldConfig.property.ttlConfig">TtlConfig</a></code> | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTtlConfig">FirestoreFieldTtlConfig</a></code> | ttl_config block. |
 
@@ -1012,7 +1012,7 @@ Collection *string
 
 The id of the collection group to configure.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#collection FirestoreField#collection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#collection FirestoreField#collection}
 
 ---
 
@@ -1026,7 +1026,7 @@ Field *string
 
 The id of the field to configure.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#field FirestoreField#field}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#field FirestoreField#field}
 
 ---
 
@@ -1040,7 +1040,7 @@ Database *string
 
 The Firestore database id. Defaults to '"(default)"'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#database FirestoreField#database}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#database FirestoreField#database}
 
 ---
 
@@ -1052,7 +1052,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#id FirestoreField#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#id FirestoreField#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1069,7 +1069,7 @@ IndexConfig FirestoreFieldIndexConfig
 
 index_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#index_config FirestoreField#index_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#index_config FirestoreField#index_config}
 
 ---
 
@@ -1081,7 +1081,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#project FirestoreField#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#project FirestoreField#project}.
 
 ---
 
@@ -1095,7 +1095,7 @@ Timeouts FirestoreFieldTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#timeouts FirestoreField#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#timeouts FirestoreField#timeouts}
 
 ---
 
@@ -1109,7 +1109,7 @@ TtlConfig FirestoreFieldTtlConfig
 
 ttl_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#ttl_config FirestoreField#ttl_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#ttl_config FirestoreField#ttl_config}
 
 ---
 
@@ -1118,7 +1118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 &firestorefield.FirestoreFieldIndexConfig {
 	Indexes: interface{},
@@ -1143,7 +1143,7 @@ Indexes interface{}
 
 indexes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#indexes FirestoreField#indexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#indexes FirestoreField#indexes}
 
 ---
 
@@ -1152,7 +1152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 &firestorefield.FirestoreFieldIndexConfigIndexes {
 	ArrayConfig: *string,
@@ -1181,7 +1181,7 @@ ArrayConfig *string
 
 Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["CONTAINS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#array_config FirestoreField#array_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#array_config FirestoreField#array_config}
 
 ---
 
@@ -1195,7 +1195,7 @@ Order *string
 
 Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=, !=. Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#order FirestoreField#order}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#order FirestoreField#order}
 
 ---
 
@@ -1213,7 +1213,7 @@ Collection scoped queries require you specify
 the collection at query time. Collection group scope allows queries across all
 collections with the same id. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#query_scope FirestoreField#query_scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#query_scope FirestoreField#query_scope}
 
 ---
 
@@ -1222,7 +1222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 &firestorefield.FirestoreFieldTimeouts {
 	Create: *string,
@@ -1235,9 +1235,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#create FirestoreField#create}. |
-| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#delete FirestoreField#delete}. |
-| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#update FirestoreField#update}. |
+| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#create FirestoreField#create}. |
+| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#delete FirestoreField#delete}. |
+| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#update FirestoreField#update}. |
 
 ---
 
@@ -1249,7 +1249,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#create FirestoreField#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#create FirestoreField#create}.
 
 ---
 
@@ -1261,7 +1261,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#delete FirestoreField#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#delete FirestoreField#delete}.
 
 ---
 
@@ -1273,7 +1273,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/firestore_field#update FirestoreField#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/firestore_field#update FirestoreField#update}.
 
 ---
 
@@ -1282,7 +1282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldTtlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 &firestorefield.FirestoreFieldTtlConfig {
 
@@ -1297,7 +1297,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.NewFirestoreFieldIndexConfigIndexesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirestoreFieldIndexConfigIndexesList
 ```
@@ -1440,7 +1440,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.NewFirestoreFieldIndexConfigIndexesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirestoreFieldIndexConfigIndexesOutputReference
 ```
@@ -1794,7 +1794,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.NewFirestoreFieldIndexConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreFieldIndexConfigOutputReference
 ```
@@ -2085,7 +2085,7 @@ func InternalValue() FirestoreFieldIndexConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.NewFirestoreFieldTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreFieldTimeoutsOutputReference
 ```
@@ -2421,7 +2421,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldTtlConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestorefield"
 
 firestorefield.NewFirestoreFieldTtlConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreFieldTtlConfigOutputReference
 ```

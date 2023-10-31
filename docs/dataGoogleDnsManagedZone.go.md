@@ -1,6 +1,6 @@
 # `data_google_dns_managed_zone`
 
-Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/dns_managed_zone).
+Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/dns_managed_zone).
 
 # `dataGoogleDnsManagedZone` Submodule <a name="`dataGoogleDnsManagedZone` Submodule" id="@cdktf/provider-google.dataGoogleDnsManagedZone"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone`](http
 
 ### DataGoogleDnsManagedZone <a name="DataGoogleDnsManagedZone" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglednsmanagedzone"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzone"
 
 datagooglednsmanagedzone.NewDataGoogleDnsManagedZone(scope Construct, id *string, config DataGoogleDnsManagedZoneConfig) DataGoogleDnsManagedZone
 ```
@@ -278,7 +278,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglednsmanagedzone"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzone"
 
 datagooglednsmanagedzone.DataGoogleDnsManagedZone_IsConstruct(x interface{}) *bool
 ```
@@ -310,7 +310,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglednsmanagedzone"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzone"
 
 datagooglednsmanagedzone.DataGoogleDnsManagedZone_IsTerraformElement(x interface{}) *bool
 ```
@@ -324,7 +324,7 @@ datagooglednsmanagedzone.DataGoogleDnsManagedZone_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglednsmanagedzone"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzone"
 
 datagooglednsmanagedzone.DataGoogleDnsManagedZone_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ datagooglednsmanagedzone.DataGoogleDnsManagedZone_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglednsmanagedzone"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzone"
 
 datagooglednsmanagedzone.DataGoogleDnsManagedZone_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -367,7 +367,7 @@ The construct id used in the generated config for the DataGoogleDnsManagedZone t
 
 The id of the existing DataGoogleDnsManagedZone that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/dns_managed_zone#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/dns_managed_zone#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglednsmanagedzone"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzone"
 
 &datagooglednsmanagedzone.DataGoogleDnsManagedZoneConfig {
 	Connection: interface{},
@@ -766,7 +766,7 @@ Name *string
 
 A unique name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
 
 ---
 
@@ -780,7 +780,7 @@ Project *string
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
 
 ---
 

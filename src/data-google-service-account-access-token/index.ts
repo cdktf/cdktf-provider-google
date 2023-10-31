@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token
+// https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +8,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleServiceAccountAccessTokenConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token#delegates DataGoogleServiceAccountAccessToken#delegates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token#delegates DataGoogleServiceAccountAccessToken#delegates}
   */
   readonly delegates?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token#id DataGoogleServiceAccountAccessToken#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token#id DataGoogleServiceAccountAccessToken#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token#lifetime DataGoogleServiceAccountAccessToken#lifetime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token#lifetime DataGoogleServiceAccountAccessToken#lifetime}
   */
   readonly lifetime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token#scopes DataGoogleServiceAccountAccessToken#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token#scopes DataGoogleServiceAccountAccessToken#scopes}
   */
   readonly scopes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token#target_service_account DataGoogleServiceAccountAccessToken#target_service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token#target_service_account DataGoogleServiceAccountAccessToken#target_service_account}
   */
   readonly targetServiceAccount: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token google_service_account_access_token}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token google_service_account_access_token}
 */
 export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSource {
 
@@ -54,7 +49,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   * Generates CDKTF code for importing a DataGoogleServiceAccountAccessToken resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleServiceAccountAccessToken to import
-  * @param importFromId The id of the existing DataGoogleServiceAccountAccessToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleServiceAccountAccessToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleServiceAccountAccessToken to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -66,7 +61,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/service_account_access_token google_service_account_access_token} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/service_account_access_token google_service_account_access_token} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -77,7 +72,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
       terraformResourceType: 'google_service_account_access_token',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.3.0',
+        providerVersion: '5.4.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `google_logging_folder_sink`
 
-Refer to the Terraform Registory for docs: [`google_logging_folder_sink`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink).
+Refer to the Terraform Registory for docs: [`google_logging_folder_sink`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink).
 
 # `loggingFolderSink` Submodule <a name="`loggingFolderSink` Submodule" id="@cdktf/provider-google.loggingFolderSink"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_logging_folder_sink`](https:
 
 ### LoggingFolderSink <a name="LoggingFolderSink" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink google_logging_folder_sink}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink google_logging_folder_sink}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSink(scope Construct, id *string, config LoggingFolderSinkConfig) LoggingFolderSink
 ```
@@ -407,7 +407,7 @@ func ResetIncludeChildren()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.LoggingFolderSink_IsConstruct(x interface{}) *bool
 ```
@@ -439,7 +439,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.LoggingFolderSink_IsTerraformElement(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ loggingfoldersink.LoggingFolderSink_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.LoggingFolderSink_IsTerraformResource(x interface{}) *bool
 ```
@@ -467,7 +467,7 @@ loggingfoldersink.LoggingFolderSink_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSink.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.LoggingFolderSink_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -496,7 +496,7 @@ The construct id used in the generated config for the LoggingFolderSink to impor
 
 The id of the existing LoggingFolderSink that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -927,7 +927,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkBigqueryOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 &loggingfoldersink.LoggingFolderSinkBigqueryOptions {
 	UsePartitionedTables: interface{},
@@ -954,7 +954,7 @@ Whether to use BigQuery's partition tables.
 
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#use_partitioned_tables LoggingFolderSink#use_partitioned_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#use_partitioned_tables LoggingFolderSink#use_partitioned_tables}
 
 ---
 
@@ -963,7 +963,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 &loggingfoldersink.LoggingFolderSinkConfig {
 	Connection: interface{},
@@ -976,7 +976,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
 	Destination: *string,
 	Folder: *string,
 	Name: *string,
-	BigqueryOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingFolderSink.LoggingFolderSinkBigqueryOptions,
+	BigqueryOptions: github.com/cdktf/cdktf-provider-google-go/google.loggingFolderSink.LoggingFolderSinkBigqueryOptions,
 	Description: *string,
 	Disabled: interface{},
 	Exclusions: interface{},
@@ -1005,7 +1005,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
 | <code><a href="#@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | If set to True, then this sink is disabled and it does not export any log entries. |
 | <code><a href="#@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.property.exclusions">Exclusions</a></code> | <code>interface{}</code> | exclusions block. |
 | <code><a href="#@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.property.filter">Filter</a></code> | <code>*string</code> | The filter to apply when exporting logs. Only log entries that match the filter are exported. |
-| <code><a href="#@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#id LoggingFolderSink#id}. |
+| <code><a href="#@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#id LoggingFolderSink#id}. |
 | <code><a href="#@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkConfig.property.includeChildren">IncludeChildren</a></code> | <code>interface{}</code> | Whether or not to include children folders in the sink export. |
 
 ---
@@ -1092,7 +1092,7 @@ The destination of the sink (or, in other words, where logs are written to).
 
 Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#destination LoggingFolderSink#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#destination LoggingFolderSink#destination}
 
 ---
 
@@ -1106,7 +1106,7 @@ Folder *string
 
 The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is accepted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#folder LoggingFolderSink#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#folder LoggingFolderSink#folder}
 
 ---
 
@@ -1120,7 +1120,7 @@ Name *string
 
 The name of the logging sink.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
 
 ---
 
@@ -1134,7 +1134,7 @@ BigqueryOptions LoggingFolderSinkBigqueryOptions
 
 bigquery_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#bigquery_options LoggingFolderSink#bigquery_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#bigquery_options LoggingFolderSink#bigquery_options}
 
 ---
 
@@ -1148,7 +1148,7 @@ Description *string
 
 A description of this sink. The maximum length of the description is 8000 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
 
 ---
 
@@ -1162,7 +1162,7 @@ Disabled interface{}
 
 If set to True, then this sink is disabled and it does not export any log entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
 
 ---
 
@@ -1176,7 +1176,7 @@ Exclusions interface{}
 
 exclusions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#exclusions LoggingFolderSink#exclusions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#exclusions LoggingFolderSink#exclusions}
 
 ---
 
@@ -1190,7 +1190,7 @@ Filter *string
 
 The filter to apply when exporting logs. Only log entries that match the filter are exported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
 
 ---
 
@@ -1202,7 +1202,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#id LoggingFolderSink#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#id LoggingFolderSink#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1221,7 +1221,7 @@ Whether or not to include children folders in the sink export.
 
 If true, logs associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#include_children LoggingFolderSink#include_children}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#include_children LoggingFolderSink#include_children}
 
 ---
 
@@ -1230,7 +1230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkExclusions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 &loggingfoldersink.LoggingFolderSinkExclusions {
 	Filter: *string,
@@ -1263,7 +1263,7 @@ An advanced logs filter that matches the log entries to be excluded.
 
 By using the sample function, you can exclude less than 100% of the matching log entries
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
 
 ---
 
@@ -1279,7 +1279,7 @@ A client-assigned identifier, such as "load-balancer-exclusion".
 
 Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
 
 ---
 
@@ -1293,7 +1293,7 @@ Description *string
 
 A description of this exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
 
 ---
 
@@ -1307,7 +1307,7 @@ Disabled interface{}
 
 If set to True, then this exclusion is disabled and it does not exclude any log entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
 
 ---
 
@@ -1318,7 +1318,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkBigqueryOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSinkBigqueryOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingFolderSinkBigqueryOptionsOutputReference
 ```
@@ -1589,7 +1589,7 @@ func InternalValue() LoggingFolderSinkBigqueryOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkExclusionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSinkExclusionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoggingFolderSinkExclusionsList
 ```
@@ -1732,7 +1732,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSink.LoggingFolderSinkExclusionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingfoldersink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersink"
 
 loggingfoldersink.NewLoggingFolderSinkExclusionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LoggingFolderSinkExclusionsOutputReference
 ```

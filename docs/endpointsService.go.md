@@ -1,6 +1,6 @@
 # `google_endpoints_service`
 
-Refer to the Terraform Registory for docs: [`google_endpoints_service`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service).
+Refer to the Terraform Registory for docs: [`google_endpoints_service`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service).
 
 # `endpointsService` Submodule <a name="`endpointsService` Submodule" id="@cdktf/provider-google.endpointsService"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_endpoints_service`](https://
 
 ### EndpointsService <a name="EndpointsService" id="@cdktf/provider-google.endpointsService.EndpointsService"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service google_endpoints_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service google_endpoints_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsService(scope Construct, id *string, config EndpointsServiceConfig) EndpointsService
 ```
@@ -387,7 +387,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.endpointsService.EndpointsService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.EndpointsService_IsConstruct(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.endpointsService.EndpointsService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.EndpointsService_IsTerraformElement(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ endpointsservice.EndpointsService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.endpointsService.EndpointsService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.EndpointsService_IsTerraformResource(x interface{}) *bool
 ```
@@ -447,7 +447,7 @@ endpointsservice.EndpointsService_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.endpointsService.EndpointsService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.EndpointsService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -476,7 +476,7 @@ The construct id used in the generated config for the EndpointsService to import
 
 The id of the existing EndpointsService that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -874,7 +874,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceApis.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceApis {
 
@@ -887,7 +887,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisMethods.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceApisMethods {
 
@@ -900,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceConfig {
 	Connection: interface{},
@@ -916,7 +916,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
 	OpenapiConfig: *string,
 	Project: *string,
 	ProtocOutputBase64: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.endpointsService.EndpointsServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.endpointsService.EndpointsServiceTimeouts,
 }
 ```
 
@@ -933,7 +933,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.serviceName">ServiceName</a></code> | <code>*string</code> | The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.grpcConfig">GrpcConfig</a></code> | <code>*string</code> | The full text of the Service Config YAML file (Example located here). |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#id EndpointsService#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#id EndpointsService#id}. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.openapiConfig">OpenapiConfig</a></code> | <code>*string</code> | The full text of the OpenAPI YAML configuration as described here. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.project">Project</a></code> | <code>*string</code> | The project ID that the service belongs to. If not provided, provider project is used. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.protocOutputBase64">ProtocOutputBase64</a></code> | <code>*string</code> | The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file, base64-encoded. |
@@ -1021,7 +1021,7 @@ ServiceName *string
 
 The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#service_name EndpointsService#service_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#service_name EndpointsService#service_name}
 
 ---
 
@@ -1037,7 +1037,7 @@ The full text of the Service Config YAML file (Example located here).
 
 If provided, must also provide protoc_output_base64. open_api config must not be provided.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#grpc_config EndpointsService#grpc_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#grpc_config EndpointsService#grpc_config}
 
 ---
 
@@ -1049,7 +1049,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#id EndpointsService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#id EndpointsService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1068,7 +1068,7 @@ The full text of the OpenAPI YAML configuration as described here.
 
 Either this, or both of grpc_config and protoc_output_base64 must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#openapi_config EndpointsService#openapi_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#openapi_config EndpointsService#openapi_config}
 
 ---
 
@@ -1082,7 +1082,7 @@ Project *string
 
 The project ID that the service belongs to. If not provided, provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#project EndpointsService#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#project EndpointsService#project}
 
 ---
 
@@ -1096,7 +1096,7 @@ ProtocOutputBase64 *string
 
 The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file, base64-encoded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#protoc_output_base64 EndpointsService#protoc_output_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#protoc_output_base64 EndpointsService#protoc_output_base64}
 
 ---
 
@@ -1110,7 +1110,7 @@ Timeouts EndpointsServiceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#timeouts EndpointsService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#timeouts EndpointsService#timeouts}
 
 ---
 
@@ -1119,7 +1119,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceEndpoints {
 
@@ -1132,7 +1132,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 &endpointsservice.EndpointsServiceTimeouts {
 	Create: *string,
@@ -1145,9 +1145,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#create EndpointsService#create}. |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#delete EndpointsService#delete}. |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#update EndpointsService#update}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#create EndpointsService#create}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#delete EndpointsService#delete}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#update EndpointsService#update}. |
 
 ---
 
@@ -1159,7 +1159,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#create EndpointsService#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#create EndpointsService#create}.
 
 ---
 
@@ -1171,7 +1171,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#delete EndpointsService#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#delete EndpointsService#delete}.
 
 ---
 
@@ -1183,7 +1183,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/endpoints_service#update EndpointsService#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/endpoints_service#update EndpointsService#update}.
 
 ---
 
@@ -1194,7 +1194,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EndpointsServiceApisList
 ```
@@ -1326,7 +1326,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisMethodsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisMethodsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EndpointsServiceApisMethodsList
 ```
@@ -1458,7 +1458,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisMethodsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisMethodsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EndpointsServiceApisMethodsOutputReference
 ```
@@ -1769,7 +1769,7 @@ func InternalValue() EndpointsServiceApisMethods
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceApisOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceApisOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EndpointsServiceApisOutputReference
 ```
@@ -2080,7 +2080,7 @@ func InternalValue() EndpointsServiceApis
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceEndpointsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceEndpointsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EndpointsServiceEndpointsList
 ```
@@ -2212,7 +2212,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceEndpointsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceEndpointsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EndpointsServiceEndpointsOutputReference
 ```
@@ -2501,7 +2501,7 @@ func InternalValue() EndpointsServiceEndpoints
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsservice"
 
 endpointsservice.NewEndpointsServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EndpointsServiceTimeoutsOutputReference
 ```
