@@ -1,6 +1,6 @@
 # `data_google_client_openid_userinfo`
 
-Refer to the Terraform Registory for docs: [`data_google_client_openid_userinfo`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/client_openid_userinfo).
+Refer to the Terraform Registory for docs: [`data_google_client_openid_userinfo`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/client_openid_userinfo).
 
 # `dataGoogleClientOpenidUserinfo` Submodule <a name="`dataGoogleClientOpenidUserinfo` Submodule" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_client_openid_userinfo`
 
 ### DataGoogleClientOpenidUserinfo <a name="DataGoogleClientOpenidUserinfo" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo.DataGoogleClientOpenidUserinfo"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo.DataGoogleClientOpenidUserinfo.Initializer"></a>
 
@@ -448,7 +448,7 @@ The construct id used in the generated config for the DataGoogleClientOpenidUser
 
 The id of the existing DataGoogleClientOpenidUserinfo that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/data-sources/client_openid_userinfo#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/client_openid_userinfo#import import section} in the documentation of this resource for the id to use
 
 ---
 

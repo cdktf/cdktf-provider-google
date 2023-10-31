@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareHl7V2StoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}
   */
   readonly hl7V2StoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#condition HealthcareHl7V2StoreIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#condition HealthcareHl7V2StoreIamMember#condition}
   */
   readonly condition?: HealthcareHl7V2StoreIamMemberCondition;
 }
 export interface HealthcareHl7V2StoreIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}
   */
   readonly title: string;
 }
@@ -153,7 +153,7 @@ export class HealthcareHl7V2StoreIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member google_healthcare_hl7_v2_store_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member google_healthcare_hl7_v2_store_iam_member}
 */
 export class HealthcareHl7V2StoreIamMember extends cdktf.TerraformResource {
 
@@ -169,7 +169,7 @@ export class HealthcareHl7V2StoreIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HealthcareHl7V2StoreIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HealthcareHl7V2StoreIamMember to import
-  * @param importFromId The id of the existing HealthcareHl7V2StoreIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HealthcareHl7V2StoreIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HealthcareHl7V2StoreIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -181,7 +181,7 @@ export class HealthcareHl7V2StoreIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/healthcare_hl7_v2_store_iam_member google_healthcare_hl7_v2_store_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/healthcare_hl7_v2_store_iam_member google_healthcare_hl7_v2_store_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -192,7 +192,7 @@ export class HealthcareHl7V2StoreIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_hl7_v2_store_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.3.0',
+        providerVersion: '5.4.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `google_dataplex_datascan_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_dataplex_datascan_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member).
+Refer to the Terraform Registory for docs: [`google_dataplex_datascan_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member).
 
 # `dataplexDatascanIamMember` Submodule <a name="`dataplexDatascanIamMember` Submodule" id="@cdktf/provider-google.dataplexDatascanIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_dataplex_datascan_iam_member
 
 ### DataplexDatascanIamMember <a name="DataplexDatascanIamMember" id="@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member google_dataplex_datascan_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member google_dataplex_datascan_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMember.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the DataplexDatascanIamMember 
 
 The id of the existing DataplexDatascanIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -840,9 +840,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniam
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#expression DataplexDatascanIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#title DataplexDatascanIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#description DataplexDatascanIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#expression DataplexDatascanIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#title DataplexDatascanIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#description DataplexDatascanIamMember#description}. |
 
 ---
 
@@ -854,7 +854,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#expression DataplexDatascanIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#expression DataplexDatascanIamMember#expression}.
 
 ---
 
@@ -866,7 +866,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#title DataplexDatascanIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#title DataplexDatascanIamMember#title}.
 
 ---
 
@@ -878,7 +878,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#description DataplexDatascanIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#description DataplexDatascanIamMember#description}.
 
 ---
 
@@ -918,13 +918,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniam
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.dataScanId">DataScanId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#data_scan_id DataplexDatascanIamMember#data_scan_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#member DataplexDatascanIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#role DataplexDatascanIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.dataScanId">DataScanId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#data_scan_id DataplexDatascanIamMember#data_scan_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#member DataplexDatascanIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#role DataplexDatascanIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberCondition">DataplexDatascanIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#id DataplexDatascanIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#location DataplexDatascanIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#project DataplexDatascanIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#id DataplexDatascanIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#location DataplexDatascanIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamMember.DataplexDatascanIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#project DataplexDatascanIamMember#project}. |
 
 ---
 
@@ -1006,7 +1006,7 @@ DataScanId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#data_scan_id DataplexDatascanIamMember#data_scan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#data_scan_id DataplexDatascanIamMember#data_scan_id}.
 
 ---
 
@@ -1018,7 +1018,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#member DataplexDatascanIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#member DataplexDatascanIamMember#member}.
 
 ---
 
@@ -1030,7 +1030,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#role DataplexDatascanIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#role DataplexDatascanIamMember#role}.
 
 ---
 
@@ -1044,7 +1044,7 @@ Condition DataplexDatascanIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#condition DataplexDatascanIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#condition DataplexDatascanIamMember#condition}
 
 ---
 
@@ -1056,7 +1056,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#id DataplexDatascanIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#id DataplexDatascanIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1071,7 +1071,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#location DataplexDatascanIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#location DataplexDatascanIamMember#location}.
 
 ---
 
@@ -1083,7 +1083,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.3.0/docs/resources/dataplex_datascan_iam_member#project DataplexDatascanIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/dataplex_datascan_iam_member#project DataplexDatascanIamMember#project}.
 
 ---
 

@@ -562,6 +562,7 @@ Object.defineProperty(exports, 'monitoringService', { get: function () { return 
 Object.defineProperty(exports, 'monitoringSlo', { get: function () { return require('./monitoring-slo'); } });
 Object.defineProperty(exports, 'monitoringUptimeCheckConfig', { get: function () { return require('./monitoring-uptime-check-config'); } });
 Object.defineProperty(exports, 'networkConnectivityHub', { get: function () { return require('./network-connectivity-hub'); } });
+Object.defineProperty(exports, 'networkConnectivityPolicyBasedRoute', { get: function () { return require('./network-connectivity-policy-based-route'); } });
 Object.defineProperty(exports, 'networkConnectivityServiceConnectionPolicy', { get: function () { return require('./network-connectivity-service-connection-policy'); } });
 Object.defineProperty(exports, 'networkConnectivitySpoke', { get: function () { return require('./network-connectivity-spoke'); } });
 Object.defineProperty(exports, 'networkManagementConnectivityTest', { get: function () { return require('./network-management-connectivity-test'); } });
@@ -621,6 +622,9 @@ Object.defineProperty(exports, 'pubsubLiteReservation', { get: function () { ret
 Object.defineProperty(exports, 'pubsubLiteSubscription', { get: function () { return require('./pubsub-lite-subscription'); } });
 Object.defineProperty(exports, 'pubsubLiteTopic', { get: function () { return require('./pubsub-lite-topic'); } });
 Object.defineProperty(exports, 'pubsubSchema', { get: function () { return require('./pubsub-schema'); } });
+Object.defineProperty(exports, 'pubsubSchemaIamBinding', { get: function () { return require('./pubsub-schema-iam-binding'); } });
+Object.defineProperty(exports, 'pubsubSchemaIamMember', { get: function () { return require('./pubsub-schema-iam-member'); } });
+Object.defineProperty(exports, 'pubsubSchemaIamPolicy', { get: function () { return require('./pubsub-schema-iam-policy'); } });
 Object.defineProperty(exports, 'pubsubSubscription', { get: function () { return require('./pubsub-subscription'); } });
 Object.defineProperty(exports, 'pubsubSubscriptionIamBinding', { get: function () { return require('./pubsub-subscription-iam-binding'); } });
 Object.defineProperty(exports, 'pubsubSubscriptionIamMember', { get: function () { return require('./pubsub-subscription-iam-member'); } });
@@ -737,6 +741,7 @@ Object.defineProperty(exports, 'dataGoogleBinaryAuthorizationAttestorIamPolicy',
 Object.defineProperty(exports, 'dataGoogleCertificateManagerCertificateMap', { get: function () { return require('./data-google-certificate-manager-certificate-map'); } });
 Object.defineProperty(exports, 'dataGoogleClientConfig', { get: function () { return require('./data-google-client-config'); } });
 Object.defineProperty(exports, 'dataGoogleClientOpenidUserinfo', { get: function () { return require('./data-google-client-openid-userinfo'); } });
+Object.defineProperty(exports, 'dataGoogleCloudIdentityGroupLookup', { get: function () { return require('./data-google-cloud-identity-group-lookup'); } });
 Object.defineProperty(exports, 'dataGoogleCloudIdentityGroupMemberships', { get: function () { return require('./data-google-cloud-identity-group-memberships'); } });
 Object.defineProperty(exports, 'dataGoogleCloudIdentityGroups', { get: function () { return require('./data-google-cloud-identity-groups'); } });
 Object.defineProperty(exports, 'dataGoogleCloudRunLocations', { get: function () { return require('./data-google-cloud-run-locations'); } });
@@ -885,6 +890,7 @@ Object.defineProperty(exports, 'dataGoogleProjectIamPolicy', { get: function () 
 Object.defineProperty(exports, 'dataGoogleProjectOrganizationPolicy', { get: function () { return require('./data-google-project-organization-policy'); } });
 Object.defineProperty(exports, 'dataGoogleProjectService', { get: function () { return require('./data-google-project-service'); } });
 Object.defineProperty(exports, 'dataGoogleProjects', { get: function () { return require('./data-google-projects'); } });
+Object.defineProperty(exports, 'dataGooglePubsubSchemaIamPolicy', { get: function () { return require('./data-google-pubsub-schema-iam-policy'); } });
 Object.defineProperty(exports, 'dataGooglePubsubSubscription', { get: function () { return require('./data-google-pubsub-subscription'); } });
 Object.defineProperty(exports, 'dataGooglePubsubSubscriptionIamPolicy', { get: function () { return require('./data-google-pubsub-subscription-iam-policy'); } });
 Object.defineProperty(exports, 'dataGooglePubsubTopic', { get: function () { return require('./data-google-pubsub-topic'); } });
