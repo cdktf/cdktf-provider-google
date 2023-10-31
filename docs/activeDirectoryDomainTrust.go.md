@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrust.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 activedirectorydomaintrust.NewActiveDirectoryDomainTrust(scope Construct, id *string, config ActiveDirectoryDomainTrustConfig) ActiveDirectoryDomainTrust
 ```
@@ -373,7 +373,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrust.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 activedirectorydomaintrust.ActiveDirectoryDomainTrust_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrust.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 activedirectorydomaintrust.ActiveDirectoryDomainTrust_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ activedirectorydomaintrust.ActiveDirectoryDomainTrust_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrust.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 activedirectorydomaintrust.ActiveDirectoryDomainTrust_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ activedirectorydomaintrust.ActiveDirectoryDomainTrust_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrust.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 activedirectorydomaintrust.ActiveDirectoryDomainTrust_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -882,7 +882,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrustConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 &activedirectorydomaintrust.ActiveDirectoryDomainTrustConfig {
 	Connection: interface{},
@@ -901,7 +901,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintr
 	Id: *string,
 	Project: *string,
 	SelectiveAuthentication: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrustTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.activeDirectoryDomainTrust.ActiveDirectoryDomainTrustTimeouts,
 }
 ```
 
@@ -1143,7 +1143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrustTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 &activedirectorydomaintrust.ActiveDirectoryDomainTrustTimeouts {
 	Create: *string,
@@ -1205,7 +1205,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.activeDirectoryDomainTrust.ActiveDirectoryDomainTrustTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/activedirectorydomaintrust"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/activedirectorydomaintrust"
 
 activedirectorydomaintrust.NewActiveDirectoryDomainTrustTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ActiveDirectoryDomainTrustTimeoutsOutputReference
 ```

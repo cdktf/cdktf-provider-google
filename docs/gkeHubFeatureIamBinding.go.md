@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 gkehubfeatureiambinding.NewGkeHubFeatureIamBinding(scope Construct, id *string, config GkeHubFeatureIamBindingConfig) GkeHubFeatureIamBinding
 ```
@@ -373,7 +373,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 gkehubfeatureiambinding.GkeHubFeatureIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 gkehubfeatureiambinding.GkeHubFeatureIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ gkehubfeatureiambinding.GkeHubFeatureIamBinding_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 gkehubfeatureiambinding.GkeHubFeatureIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ gkehubfeatureiambinding.GkeHubFeatureIamBinding_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 gkehubfeatureiambinding.GkeHubFeatureIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -827,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 &gkehubfeatureiambinding.GkeHubFeatureIamBindingCondition {
 	Expression: *string,
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 &gkehubfeatureiambinding.GkeHubFeatureIamBindingConfig {
 	Connection: interface{},
@@ -900,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFeatureIamBinding.GkeHubFeatureIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkehubfeatureiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfeatureiambinding"
 
 gkehubfeatureiambinding.NewGkeHubFeatureIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubFeatureIamBindingConditionOutputReference
 ```

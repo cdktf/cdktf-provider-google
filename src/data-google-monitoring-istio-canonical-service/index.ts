@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/monitoring_istio_canonical_service
 // generated from terraform resource schema
 

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiampolicy"
 
 billingaccountiampolicy.NewBillingAccountIamPolicy(scope Construct, id *string, config BillingAccountIamPolicyConfig) BillingAccountIamPolicy
 ```
@@ -339,7 +339,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiampolicy"
 
 billingaccountiampolicy.BillingAccountIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiampolicy"
 
 billingaccountiampolicy.BillingAccountIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ billingaccountiampolicy.BillingAccountIamPolicy_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiampolicy"
 
 billingaccountiampolicy.BillingAccountIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ billingaccountiampolicy.BillingAccountIamPolicy_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiampolicy"
 
 billingaccountiampolicy.BillingAccountIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -705,7 +705,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiampolicy"
 
 &billingaccountiampolicy.BillingAccountIamPolicyConfig {
 	Connection: interface{},

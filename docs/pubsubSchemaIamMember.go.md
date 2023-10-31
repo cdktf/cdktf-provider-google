@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 pubsubschemaiammember.NewPubsubSchemaIamMember(scope Construct, id *string, config PubsubSchemaIamMemberConfig) PubsubSchemaIamMember
 ```
@@ -366,7 +366,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 pubsubschemaiammember.PubsubSchemaIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 pubsubschemaiammember.PubsubSchemaIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ pubsubschemaiammember.PubsubSchemaIamMember_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 pubsubschemaiammember.PubsubSchemaIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ pubsubschemaiammember.PubsubSchemaIamMember_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 pubsubschemaiammember.PubsubSchemaIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -798,7 +798,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 &pubsubschemaiammember.PubsubSchemaIamMemberCondition {
 	Expression: *string,
@@ -858,7 +858,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 &pubsubschemaiammember.PubsubSchemaIamMemberConfig {
 	Connection: interface{},
@@ -871,7 +871,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
 	Member: *string,
 	Role: *string,
 	Schema: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1051,7 +1051,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiammember"
 
 pubsubschemaiammember.NewPubsubSchemaIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSchemaIamMemberConditionOutputReference
 ```
