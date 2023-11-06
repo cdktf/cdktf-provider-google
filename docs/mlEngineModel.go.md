@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.mlEngineModel.MlEngineModel.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 mlenginemodel.NewMlEngineModel(scope Construct, id *string, config MlEngineModelConfig) MlEngineModel
 ```
@@ -421,7 +421,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.mlEngineModel.MlEngineModel.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 mlenginemodel.MlEngineModel_IsConstruct(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.mlEngineModel.MlEngineModel.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 mlenginemodel.MlEngineModel_IsTerraformElement(x interface{}) *bool
 ```
@@ -467,7 +467,7 @@ mlenginemodel.MlEngineModel_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.mlEngineModel.MlEngineModel.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 mlenginemodel.MlEngineModel_IsTerraformResource(x interface{}) *bool
 ```
@@ -481,7 +481,7 @@ mlenginemodel.MlEngineModel_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.mlEngineModel.MlEngineModel.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 mlenginemodel.MlEngineModel_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -952,7 +952,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.mlEngineModel.MlEngineModelConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 &mlenginemodel.MlEngineModelConfig {
 	Connection: interface{},
@@ -963,7 +963,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	DefaultVersion: github.com/cdktf/cdktf-provider-google-go/google/v12.mlEngineModel.MlEngineModelDefaultVersion,
+	DefaultVersion: github.com/cdktf/cdktf-provider-google-go/google.mlEngineModel.MlEngineModelDefaultVersion,
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
@@ -971,7 +971,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
 	OnlinePredictionLogging: interface{},
 	Project: *string,
 	Regions: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.mlEngineModel.MlEngineModelTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.mlEngineModel.MlEngineModelTimeouts,
 }
 ```
 
@@ -1216,7 +1216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.mlEngineModel.MlEngineModelDefaultVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 &mlenginemodel.MlEngineModelDefaultVersion {
 	Name: *string,
@@ -1250,7 +1250,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.mlEngineModel.MlEngineModelTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 &mlenginemodel.MlEngineModelTimeouts {
 	Create: *string,
@@ -1298,7 +1298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.mlEngineModel.MlEngineModelDefaultVersionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 mlenginemodel.NewMlEngineModelDefaultVersionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MlEngineModelDefaultVersionOutputReference
 ```
@@ -1569,7 +1569,7 @@ func InternalValue() MlEngineModelDefaultVersion
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.mlEngineModel.MlEngineModelTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/mlenginemodel"
+import "github.com/cdktf/cdktf-provider-google-go/google/mlenginemodel"
 
 mlenginemodel.NewMlEngineModelTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MlEngineModelTimeoutsOutputReference
 ```

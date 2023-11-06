@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascanIamPolicy.DataplexDatascanIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexdatascaniampolicy"
 
 dataplexdatascaniampolicy.NewDataplexDatascanIamPolicy(scope Construct, id *string, config DataplexDatascanIamPolicyConfig) DataplexDatascanIamPolicy
 ```
@@ -353,7 +353,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexDatascanIamPolicy.DataplexDatascanIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexdatascaniampolicy"
 
 dataplexdatascaniampolicy.DataplexDatascanIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexDatascanIamPolicy.DataplexDatascanIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexdatascaniampolicy"
 
 dataplexdatascaniampolicy.DataplexDatascanIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ dataplexdatascaniampolicy.DataplexDatascanIamPolicy_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexDatascanIamPolicy.DataplexDatascanIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexdatascaniampolicy"
 
 dataplexdatascaniampolicy.DataplexDatascanIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -413,7 +413,7 @@ dataplexdatascaniampolicy.DataplexDatascanIamPolicy_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexDatascanIamPolicy.DataplexDatascanIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexdatascaniampolicy"
 
 dataplexdatascaniampolicy.DataplexDatascanIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -763,7 +763,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascanIamPolicy.DataplexDatascanIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplexdatascaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexdatascaniampolicy"
 
 &dataplexdatascaniampolicy.DataplexDatascanIamPolicyConfig {
 	Connection: interface{},

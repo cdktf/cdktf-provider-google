@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModule(scope Construct, id *string, config SccFolderCustomModuleConfig) SccFolderCustomModule
 ```
@@ -372,7 +372,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.SccFolderCustomModule_IsConstruct(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.SccFolderCustomModule_IsTerraformElement(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ sccfoldercustommodule.SccFolderCustomModule_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.SccFolderCustomModule_IsTerraformResource(x interface{}) *bool
 ```
@@ -432,7 +432,7 @@ sccfoldercustommodule.SccFolderCustomModule_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.SccFolderCustomModule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -837,7 +837,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleConfig {
 	Connection: interface{},
@@ -847,12 +847,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodu
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	CustomConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.sccFolderCustomModule.SccFolderCustomModuleCustomConfig,
+	CustomConfig: github.com/cdktf/cdktf-provider-google-go/google.sccFolderCustomModule.SccFolderCustomModuleCustomConfig,
 	DisplayName: *string,
 	EnablementState: *string,
 	Folder: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.sccFolderCustomModule.SccFolderCustomModuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.sccFolderCustomModule.SccFolderCustomModuleTimeouts,
 }
 ```
 
@@ -1042,14 +1042,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleCustomConfig {
-	Predicate: github.com/cdktf/cdktf-provider-google-go/google/v12.sccFolderCustomModule.SccFolderCustomModuleCustomConfigPredicate,
+	Predicate: github.com/cdktf/cdktf-provider-google-go/google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigPredicate,
 	Recommendation: *string,
-	ResourceSelector: github.com/cdktf/cdktf-provider-google-go/google/v12.sccFolderCustomModule.SccFolderCustomModuleCustomConfigResourceSelector,
+	ResourceSelector: github.com/cdktf/cdktf-provider-google-go/google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigResourceSelector,
 	Severity: *string,
-	CustomOutput: github.com/cdktf/cdktf-provider-google-go/google/v12.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutput,
+	CustomOutput: github.com/cdktf/cdktf-provider-google-go/google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutput,
 	Description: *string,
 }
 ```
@@ -1162,7 +1162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutput.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleCustomConfigCustomOutput {
 	Properties: interface{},
@@ -1196,11 +1196,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleCustomConfigCustomOutputProperties {
 	Name: *string,
-	ValueExpression: github.com/cdktf/cdktf-provider-google-go/google/v12.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpression,
+	ValueExpression: github.com/cdktf/cdktf-provider-google-go/google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpression,
 }
 ```
 
@@ -1246,7 +1246,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpression {
 	Expression: *string,
@@ -1331,7 +1331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigPredicate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleCustomConfigPredicate {
 	Expression: *string,
@@ -1416,7 +1416,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigResourceSelector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleCustomConfigResourceSelector {
 	ResourceTypes: *[]*string,
@@ -1450,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 &sccfoldercustommodule.SccFolderCustomModuleTimeouts {
 	Create: *string,
@@ -1512,7 +1512,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleCustomConfigCustomOutputOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderCustomModuleCustomConfigCustomOutputOutputReference
 ```
@@ -1803,7 +1803,7 @@ func InternalValue() SccFolderCustomModuleCustomConfigCustomOutput
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleCustomConfigCustomOutputPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SccFolderCustomModuleCustomConfigCustomOutputPropertiesList
 ```
@@ -1946,7 +1946,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleCustomConfigCustomOutputPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SccFolderCustomModuleCustomConfigCustomOutputPropertiesOutputReference
 ```
@@ -2284,7 +2284,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpressionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpressionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpressionOutputReference
 ```
@@ -2642,7 +2642,7 @@ func InternalValue() SccFolderCustomModuleCustomConfigCustomOutputPropertiesValu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleCustomConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderCustomModuleCustomConfigOutputReference
 ```
@@ -3076,7 +3076,7 @@ func InternalValue() SccFolderCustomModuleCustomConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigPredicateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleCustomConfigPredicateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderCustomModuleCustomConfigPredicateOutputReference
 ```
@@ -3434,7 +3434,7 @@ func InternalValue() SccFolderCustomModuleCustomConfigPredicate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleCustomConfigResourceSelectorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleCustomConfigResourceSelectorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderCustomModuleCustomConfigResourceSelectorOutputReference
 ```
@@ -3705,7 +3705,7 @@ func InternalValue() SccFolderCustomModuleCustomConfigResourceSelector
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderCustomModule.SccFolderCustomModuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccfoldercustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldercustommodule"
 
 sccfoldercustommodule.NewSccFolderCustomModuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderCustomModuleTimeoutsOutputReference
 ```
