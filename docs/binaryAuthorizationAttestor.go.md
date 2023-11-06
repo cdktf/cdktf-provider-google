@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.NewBinaryAuthorizationAttestor(scope Construct, id *string, config BinaryAuthorizationAttestorConfig) BinaryAuthorizationAttestor
 ```
@@ -386,7 +386,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.BinaryAuthorizationAttestor_IsConstruct(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.BinaryAuthorizationAttestor_IsTerraformElement(x interface{}) *bool
 ```
@@ -432,7 +432,7 @@ binaryauthorizationattestor.BinaryAuthorizationAttestor_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.BinaryAuthorizationAttestor_IsTerraformResource(x interface{}) *bool
 ```
@@ -446,7 +446,7 @@ binaryauthorizationattestor.BinaryAuthorizationAttestor_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestor.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.BinaryAuthorizationAttestor_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -807,7 +807,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNote.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 &binaryauthorizationattestor.BinaryAuthorizationAttestorAttestationAuthorityNote {
 	NoteReference: *string,
@@ -866,13 +866,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 &binaryauthorizationattestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
 	AsciiArmoredPgpPublicKey: *string,
 	Comment: *string,
 	Id: *string,
-	PkixPublicKey: github.com/cdktf/cdktf-provider-google-go/google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey,
+	PkixPublicKey: github.com/cdktf/cdktf-provider-google-go/google/v12.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey,
 }
 ```
 
@@ -958,7 +958,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 &binaryauthorizationattestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey {
 	PublicKeyPem: *string,
@@ -1013,7 +1013,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 &binaryauthorizationattestor.BinaryAuthorizationAttestorConfig {
 	Connection: interface{},
@@ -1023,12 +1023,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationatte
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	AttestationAuthorityNote: github.com/cdktf/cdktf-provider-google-go/google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNote,
+	AttestationAuthorityNote: github.com/cdktf/cdktf-provider-google-go/google/v12.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNote,
 	Name: *string,
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.binaryAuthorizationAttestor.BinaryAuthorizationAttestorTimeouts,
 }
 ```
 
@@ -1210,7 +1210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 &binaryauthorizationattestor.BinaryAuthorizationAttestorTimeouts {
 	Create: *string,
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.NewBinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference
 ```
@@ -1596,7 +1596,7 @@ func InternalValue() BinaryAuthorizationAttestorAttestationAuthorityNote
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.NewBinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysList
 ```
@@ -1739,7 +1739,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.NewBinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysOutputReference
 ```
@@ -2135,7 +2135,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.NewBinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference
 ```
@@ -2442,7 +2442,7 @@ func InternalValue() BinaryAuthorizationAttestorAttestationAuthorityNotePublicKe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.binaryAuthorizationAttestor.BinaryAuthorizationAttestorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/binaryauthorizationattestor"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/binaryauthorizationattestor"
 
 binaryauthorizationattestor.NewBinaryAuthorizationAttestorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BinaryAuthorizationAttestorTimeoutsOutputReference
 ```
