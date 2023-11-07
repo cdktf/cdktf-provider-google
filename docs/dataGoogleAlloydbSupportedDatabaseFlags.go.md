@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.NewDataGoogleAlloydbSupportedDatabaseFlags(scope Construct, id *string, config DataGoogleAlloydbSupportedDatabaseFlagsConfig) DataGoogleAlloydbSupportedDatabaseFlags
 ```
@@ -285,7 +285,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlags.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlags_IsConstruct(x interface{}) *bool
 ```
@@ -317,7 +317,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlags.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlags_IsTerraformElement(x interface{}) *bool
 ```
@@ -331,7 +331,7 @@ datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlags_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlags.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlags_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlags_
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlags.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlags_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -629,7 +629,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 &datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlagsConfig {
 	Connection: interface{},
@@ -780,7 +780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 &datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlags {
 
@@ -793,7 +793,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsuppor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 &datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictions {
 
@@ -806,7 +806,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsuppor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 &datagooglealloydbsupporteddatabaseflags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictions {
 
@@ -821,7 +821,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsuppor
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.NewDataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictionsList
 ```
@@ -953,7 +953,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.NewDataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsIntegerRestrictionsOutputReference
 ```
@@ -1242,7 +1242,7 @@ func InternalValue() DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFla
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.NewDataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsList
 ```
@@ -1374,7 +1374,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.NewDataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsOutputReference
 ```
@@ -1729,7 +1729,7 @@ func InternalValue() DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFla
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.NewDataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictionsList
 ```
@@ -1861,7 +1861,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbSupportedDatabaseFlags.DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbsupporteddatabaseflags"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglealloydbsupporteddatabaseflags"
 
 datagooglealloydbsupporteddatabaseflags.NewDataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsStringRestrictionsOutputReference
 ```

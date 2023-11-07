@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 datafusioninstanceiambinding.NewDataFusionInstanceIamBinding(scope Construct, id *string, config DataFusionInstanceIamBindingConfig) DataFusionInstanceIamBinding
 ```
@@ -373,7 +373,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 datafusioninstanceiambinding.DataFusionInstanceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 datafusioninstanceiambinding.DataFusionInstanceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ datafusioninstanceiambinding.DataFusionInstanceIamBinding_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 datafusioninstanceiambinding.DataFusionInstanceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ datafusioninstanceiambinding.DataFusionInstanceIamBinding_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 datafusioninstanceiambinding.DataFusionInstanceIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -827,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 &datafusioninstanceiambinding.DataFusionInstanceIamBindingCondition {
 	Expression: *string,
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 &datafusioninstanceiambinding.DataFusionInstanceIamBindingConfig {
 	Connection: interface{},
@@ -900,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambi
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataFusionInstanceIamBinding.DataFusionInstanceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.dataFusionInstanceIamBinding.DataFusionInstanceIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstanceIamBinding.DataFusionInstanceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datafusioninstanceiambinding"
 
 datafusioninstanceiambinding.NewDataFusionInstanceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFusionInstanceIamBindingConditionOutputReference
 ```
