@@ -730,6 +730,7 @@ export * as dataGoogleBigqueryAnalyticsHubDataExchangeIamPolicy from './data-goo
 export * as dataGoogleBigqueryAnalyticsHubListingIamPolicy from './data-google-bigquery-analytics-hub-listing-iam-policy';
 export * as dataGoogleBigqueryConnectionIamPolicy from './data-google-bigquery-connection-iam-policy';
 export * as dataGoogleBigqueryDatapolicyDataPolicyIamPolicy from './data-google-bigquery-datapolicy-data-policy-iam-policy';
+export * as dataGoogleBigqueryDataset from './data-google-bigquery-dataset';
 export * as dataGoogleBigqueryDatasetIamPolicy from './data-google-bigquery-dataset-iam-policy';
 export * as dataGoogleBigqueryDefaultServiceAccount from './data-google-bigquery-default-service-account';
 export * as dataGoogleBigqueryTableIamPolicy from './data-google-bigquery-table-iam-policy';

@@ -730,6 +730,7 @@ Object.defineProperty(exports, 'dataGoogleBigqueryAnalyticsHubDataExchangeIamPol
 Object.defineProperty(exports, 'dataGoogleBigqueryAnalyticsHubListingIamPolicy', { get: function () { return require('./data-google-bigquery-analytics-hub-listing-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryConnectionIamPolicy', { get: function () { return require('./data-google-bigquery-connection-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryDatapolicyDataPolicyIamPolicy', { get: function () { return require('./data-google-bigquery-datapolicy-data-policy-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleBigqueryDataset', { get: function () { return require('./data-google-bigquery-dataset'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryDatasetIamPolicy', { get: function () { return require('./data-google-bigquery-dataset-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryDefaultServiceAccount', { get: function () { return require('./data-google-bigquery-default-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryTableIamPolicy', { get: function () { return require('./data-google-bigquery-table-iam-policy'); } });

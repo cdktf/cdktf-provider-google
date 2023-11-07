@@ -1,6 +1,6 @@
 # `data_google_healthcare_dataset_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_healthcare_dataset_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_healthcare_dataset_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy).
 
 # `dataGoogleHealthcareDatasetIamPolicy` Submodule <a name="`dataGoogleHealthcareDatasetIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_healthcare_dataset_iam_
 
 ### DataGoogleHealthcareDatasetIamPolicy <a name="DataGoogleHealthcareDatasetIamPolicy" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy google_healthcare_dataset_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy google_healthcare_dataset_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy(
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer.parameter.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer.parameter.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -478,7 +478,7 @@ The construct id used in the generated config for the DataGoogleHealthcareDatase
 
 The id of the existing DataGoogleHealthcareDatasetIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -748,8 +748,8 @@ dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.property.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.property.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}. |
 
 ---
 
@@ -831,7 +831,7 @@ dataset_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#dataset_id DataGoogleHealthcareDatasetIamPolicy#dataset_id}.
 
 ---
 
@@ -843,7 +843,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/healthcare_dataset_iam_policy#id DataGoogleHealthcareDatasetIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

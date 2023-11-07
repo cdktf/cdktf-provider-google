@@ -1,6 +1,6 @@
 # `data_google_compute_vpn_gateway`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_vpn_gateway`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway).
+Refer to the Terraform Registory for docs: [`data_google_compute_vpn_gateway`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway).
 
 # `dataGoogleComputeVpnGateway` Submodule <a name="`dataGoogleComputeVpnGateway` Submodule" id="@cdktf/provider-google.dataGoogleComputeVpnGateway"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_vpn_gateway`](h
 
 ### DataGoogleComputeVpnGateway <a name="DataGoogleComputeVpnGateway" id="@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway google_compute_vpn_gateway}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway google_compute_vpn_gateway}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer"></a>
 
@@ -45,10 +45,10 @@ DataGoogleComputeVpnGateway.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -135,7 +135,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
 
 ---
 
@@ -143,7 +143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
 
 ---
 
@@ -478,7 +478,7 @@ The construct id used in the generated config for the DataGoogleComputeVpnGatewa
 
 The id of the existing DataGoogleComputeVpnGateway that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -809,10 +809,10 @@ DataGoogleComputeVpnGatewayConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
 
 ---
 
@@ -894,7 +894,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
 
 ---
 
@@ -906,7 +906,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -921,7 +921,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
 
 ---
 
@@ -933,7 +933,7 @@ public java.lang.String getRegion();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
 
 ---
 

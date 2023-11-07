@@ -3,7 +3,7 @@
 
 This repo builds and publishes the Terraform google Provider bindings for [CDK for Terraform](https://cdk.tf).
 
-Is based directly on google 5.4.0
+Is based directly on google 5.5.0
 
 ## Available Packages
 
@@ -63,7 +63,7 @@ This project is explicitly not tracking the Terraform google Provider version 1:
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform google Provider](https://registry.terraform.io/providers/hashicorp/google/5.4.0)
+- [Terraform google Provider](https://registry.terraform.io/providers/hashicorp/google/5.5.0)
     - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-google/releases)
 - [Terraform Engine](https://terraform.io)
 
