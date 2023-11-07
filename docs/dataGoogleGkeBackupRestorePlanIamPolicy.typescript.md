@@ -1,6 +1,6 @@
 # `data_google_gke_backup_restore_plan_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_gke_backup_restore_plan_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_gke_backup_restore_plan_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy).
 
 # `dataGoogleGkeBackupRestorePlanIamPolicy` Submodule <a name="`dataGoogleGkeBackupRestorePlanIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_gke_backup_restore_plan
 
 ### DataGoogleGkeBackupRestorePlanIamPolicy <a name="DataGoogleGkeBackupRestorePlanIamPolicy" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy google_gke_backup_restore_plan_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy google_gke_backup_restore_plan_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.Initializer"></a>
 
@@ -381,7 +381,7 @@ The construct id used in the generated config for the DataGoogleGkeBackupRestore
 
 The id of the existing DataGoogleGkeBackupRestorePlanIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -685,10 +685,10 @@ const dataGoogleGkeBackupRestorePlanIamPolicyConfig: dataGoogleGkeBackupRestoreP
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#name DataGoogleGkeBackupRestorePlanIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#id DataGoogleGkeBackupRestorePlanIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#location DataGoogleGkeBackupRestorePlanIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#project DataGoogleGkeBackupRestorePlanIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#name DataGoogleGkeBackupRestorePlanIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#id DataGoogleGkeBackupRestorePlanIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#location DataGoogleGkeBackupRestorePlanIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#project DataGoogleGkeBackupRestorePlanIamPolicy#project}. |
 
 ---
 
@@ -770,7 +770,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#name DataGoogleGkeBackupRestorePlanIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#name DataGoogleGkeBackupRestorePlanIamPolicy#name}.
 
 ---
 
@@ -782,7 +782,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#id DataGoogleGkeBackupRestorePlanIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#id DataGoogleGkeBackupRestorePlanIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -797,7 +797,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#location DataGoogleGkeBackupRestorePlanIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#location DataGoogleGkeBackupRestorePlanIamPolicy#location}.
 
 ---
 
@@ -809,7 +809,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/gke_backup_restore_plan_iam_policy#project DataGoogleGkeBackupRestorePlanIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/gke_backup_restore_plan_iam_policy#project DataGoogleGkeBackupRestorePlanIamPolicy#project}.
 
 ---
 

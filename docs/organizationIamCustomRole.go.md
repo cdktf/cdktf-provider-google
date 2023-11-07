@@ -1,6 +1,6 @@
 # `google_organization_iam_custom_role`
 
-Refer to the Terraform Registory for docs: [`google_organization_iam_custom_role`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role).
+Refer to the Terraform Registory for docs: [`google_organization_iam_custom_role`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role).
 
 # `organizationIamCustomRole` Submodule <a name="`organizationIamCustomRole` Submodule" id="@cdktf/provider-google.organizationIamCustomRole"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_organization_iam_custom_role
 
 ### OrganizationIamCustomRole <a name="OrganizationIamCustomRole" id="@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRole"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role google_organization_iam_custom_role}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role google_organization_iam_custom_role}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRole.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiamcustomrole"
 
 organizationiamcustomrole.NewOrganizationIamCustomRole(scope Construct, id *string, config OrganizationIamCustomRoleConfig) OrganizationIamCustomRole
 ```
@@ -353,7 +353,7 @@ func ResetStage()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRole.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiamcustomrole"
 
 organizationiamcustomrole.OrganizationIamCustomRole_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRole.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiamcustomrole"
 
 organizationiamcustomrole.OrganizationIamCustomRole_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ organizationiamcustomrole.OrganizationIamCustomRole_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRole.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiamcustomrole"
 
 organizationiamcustomrole.OrganizationIamCustomRole_IsTerraformResource(x interface{}) *bool
 ```
@@ -413,7 +413,7 @@ organizationiamcustomrole.OrganizationIamCustomRole_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRole.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiamcustomrole"
 
 organizationiamcustomrole.OrganizationIamCustomRole_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -442,7 +442,7 @@ The construct id used in the generated config for the OrganizationIamCustomRole 
 
 The id of the existing OrganizationIamCustomRole that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -818,7 +818,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRoleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiamcustomrole"
 
 &organizationiamcustomrole.OrganizationIamCustomRoleConfig {
 	Connection: interface{},
@@ -854,7 +854,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/organizationiamcust
 | <code><a href="#@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRoleConfig.property.roleId">RoleId</a></code> | <code>*string</code> | The role id to use for this role. |
 | <code><a href="#@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRoleConfig.property.title">Title</a></code> | <code>*string</code> | A human-readable title for the role. |
 | <code><a href="#@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRoleConfig.property.description">Description</a></code> | <code>*string</code> | A human-readable description for the role. |
-| <code><a href="#@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRoleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#id OrganizationIamCustomRole#id}. |
+| <code><a href="#@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRoleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#id OrganizationIamCustomRole#id}. |
 | <code><a href="#@cdktf/provider-google.organizationIamCustomRole.OrganizationIamCustomRoleConfig.property.stage">Stage</a></code> | <code>*string</code> | The current launch stage of the role. Defaults to GA. |
 
 ---
@@ -939,7 +939,7 @@ OrgId *string
 
 The numeric ID of the organization in which you want to create a custom role.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#org_id OrganizationIamCustomRole#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#org_id OrganizationIamCustomRole#org_id}
 
 ---
 
@@ -955,7 +955,7 @@ The names of the permissions this role grants when bound in an IAM policy.
 
 At least one permission must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#permissions OrganizationIamCustomRole#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#permissions OrganizationIamCustomRole#permissions}
 
 ---
 
@@ -969,7 +969,7 @@ RoleId *string
 
 The role id to use for this role.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#role_id OrganizationIamCustomRole#role_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#role_id OrganizationIamCustomRole#role_id}
 
 ---
 
@@ -983,7 +983,7 @@ Title *string
 
 A human-readable title for the role.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#title OrganizationIamCustomRole#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#title OrganizationIamCustomRole#title}
 
 ---
 
@@ -997,7 +997,7 @@ Description *string
 
 A human-readable description for the role.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#description OrganizationIamCustomRole#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#description OrganizationIamCustomRole#description}
 
 ---
 
@@ -1009,7 +1009,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#id OrganizationIamCustomRole#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#id OrganizationIamCustomRole#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1026,7 +1026,7 @@ Stage *string
 
 The current launch stage of the role. Defaults to GA.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/organization_iam_custom_role#stage OrganizationIamCustomRole#stage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/organization_iam_custom_role#stage OrganizationIamCustomRole#stage}
 
 ---
 

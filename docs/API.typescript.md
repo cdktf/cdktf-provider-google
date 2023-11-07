@@ -334,6 +334,7 @@ The following submodules are available:
 - [dataGoogleBigqueryAnalyticsHubListingIamPolicy](./dataGoogleBigqueryAnalyticsHubListingIamPolicy.typescript.md)
 - [dataGoogleBigqueryConnectionIamPolicy](./dataGoogleBigqueryConnectionIamPolicy.typescript.md)
 - [dataGoogleBigqueryDatapolicyDataPolicyIamPolicy](./dataGoogleBigqueryDatapolicyDataPolicyIamPolicy.typescript.md)
+- [dataGoogleBigqueryDataset](./dataGoogleBigqueryDataset.typescript.md)
 - [dataGoogleBigqueryDatasetIamPolicy](./dataGoogleBigqueryDatasetIamPolicy.typescript.md)
 - [dataGoogleBigqueryDefaultServiceAccount](./dataGoogleBigqueryDefaultServiceAccount.typescript.md)
 - [dataGoogleBigqueryTableIamPolicy](./dataGoogleBigqueryTableIamPolicy.typescript.md)

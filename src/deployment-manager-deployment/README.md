@@ -1,3 +1,3 @@
 # `google_deployment_manager_deployment`
 
-Refer to the Terraform Registory for docs: [`google_deployment_manager_deployment`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/deployment_manager_deployment).
+Refer to the Terraform Registory for docs: [`google_deployment_manager_deployment`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/deployment_manager_deployment).

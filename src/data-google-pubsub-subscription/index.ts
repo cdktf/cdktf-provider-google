@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/pubsub_subscription
+// https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/pubsub_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGooglePubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/pubsub_subscription#id DataGooglePubsubSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/pubsub_subscription#id DataGooglePubsubSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,11 +17,11 @@ export interface DataGooglePubsubSubscriptionConfig extends cdktf.TerraformMetaA
   /**
   * Name of the subscription.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/pubsub_subscription#name DataGooglePubsubSubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/pubsub_subscription#name DataGooglePubsubSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/pubsub_subscription#project DataGooglePubsubSubscription#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/pubsub_subscription#project DataGooglePubsubSubscription#project}
   */
   readonly project?: string;
 }
@@ -687,7 +682,7 @@ export class DataGooglePubsubSubscriptionRetryPolicyList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/pubsub_subscription google_pubsub_subscription}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/pubsub_subscription google_pubsub_subscription}
 */
 export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
 
@@ -703,7 +698,7 @@ export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGooglePubsubSubscription resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGooglePubsubSubscription to import
-  * @param importFromId The id of the existing DataGooglePubsubSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/pubsub_subscription#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGooglePubsubSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/pubsub_subscription#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGooglePubsubSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -715,7 +710,7 @@ export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/pubsub_subscription google_pubsub_subscription} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/pubsub_subscription google_pubsub_subscription} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -726,7 +721,7 @@ export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_pubsub_subscription',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.4.0',
+        providerVersion: '5.5.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

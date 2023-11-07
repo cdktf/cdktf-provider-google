@@ -334,6 +334,7 @@ The following submodules are available:
 - [dataGoogleBigqueryAnalyticsHubListingIamPolicy](./dataGoogleBigqueryAnalyticsHubListingIamPolicy.go.md)
 - [dataGoogleBigqueryConnectionIamPolicy](./dataGoogleBigqueryConnectionIamPolicy.go.md)
 - [dataGoogleBigqueryDatapolicyDataPolicyIamPolicy](./dataGoogleBigqueryDatapolicyDataPolicyIamPolicy.go.md)
+- [dataGoogleBigqueryDataset](./dataGoogleBigqueryDataset.go.md)
 - [dataGoogleBigqueryDatasetIamPolicy](./dataGoogleBigqueryDatasetIamPolicy.go.md)
 - [dataGoogleBigqueryDefaultServiceAccount](./dataGoogleBigqueryDefaultServiceAccount.go.md)
 - [dataGoogleBigqueryTableIamPolicy](./dataGoogleBigqueryTableIamPolicy.go.md)

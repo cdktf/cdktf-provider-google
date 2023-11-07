@@ -1,6 +1,6 @@
 # `data_google_sql_backup_run`
 
-Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run).
+Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run).
 
 # `dataGoogleSqlBackupRun` Submodule <a name="`dataGoogleSqlBackupRun` Submodule" id="@cdktf/provider-google.dataGoogleSqlBackupRun"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https:
 
 ### DataGoogleSqlBackupRun <a name="DataGoogleSqlBackupRun" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run google_sql_backup_run}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run google_sql_backup_run}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.Initializer"></a>
 
@@ -388,7 +388,7 @@ The construct id used in the generated config for the DataGoogleSqlBackupRun to 
 
 The id of the existing DataGoogleSqlBackupRun that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -740,7 +740,7 @@ new DataGoogleSqlBackupRunConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.instance">Instance</a></code> | <code>string</code> | Name of the database instance. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.backupId">BackupId</a></code> | <code>double</code> | The identifier for this backup run. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.mostRecent">MostRecent</a></code> | <code>object</code> | Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.project">Project</a></code> | <code>string</code> | Project ID of the project that contains the instance. |
 
@@ -826,7 +826,7 @@ public string Instance { get; set; }
 
 Name of the database instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
 
 ---
 
@@ -842,7 +842,7 @@ The identifier for this backup run.
 
 Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
 
 ---
 
@@ -854,7 +854,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -871,7 +871,7 @@ public object MostRecent { get; set; }
 
 Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
 
 ---
 
@@ -885,7 +885,7 @@ public string Project { get; set; }
 
 Project ID of the project that contains the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
 
 ---
 

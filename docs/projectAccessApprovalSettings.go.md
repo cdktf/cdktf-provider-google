@@ -1,6 +1,6 @@
 # `google_project_access_approval_settings`
 
-Refer to the Terraform Registory for docs: [`google_project_access_approval_settings`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings).
+Refer to the Terraform Registory for docs: [`google_project_access_approval_settings`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings).
 
 # `projectAccessApprovalSettings` Submodule <a name="`projectAccessApprovalSettings` Submodule" id="@cdktf/provider-google.projectAccessApprovalSettings"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_project_access_approval_sett
 
 ### ProjectAccessApprovalSettings <a name="ProjectAccessApprovalSettings" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings google_project_access_approval_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings google_project_access_approval_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.NewProjectAccessApprovalSettings(scope Construct, id *string, config ProjectAccessApprovalSettingsConfig) ProjectAccessApprovalSettings
 ```
@@ -393,7 +393,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.ProjectAccessApprovalSettings_IsConstruct(x interface{}) *bool
 ```
@@ -425,7 +425,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.ProjectAccessApprovalSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -439,7 +439,7 @@ projectaccessapprovalsettings.ProjectAccessApprovalSettings_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.ProjectAccessApprovalSettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ projectaccessapprovalsettings.ProjectAccessApprovalSettings_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.ProjectAccessApprovalSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -482,7 +482,7 @@ The construct id used in the generated config for the ProjectAccessApprovalSetti
 
 The id of the existing ProjectAccessApprovalSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -880,7 +880,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 &projectaccessapprovalsettings.ProjectAccessApprovalSettingsConfig {
 	Connection: interface{},
@@ -896,7 +896,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprov
 	Id: *string,
 	NotificationEmails: *[]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts,
 }
 ```
 
@@ -914,7 +914,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprov
 | <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.enrolledServices">EnrolledServices</a></code> | <code>interface{}</code> | enrolled_services block. |
 | <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.projectId">ProjectId</a></code> | <code>*string</code> | ID of the project of the access approval settings. |
 | <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.activeKeyVersion">ActiveKeyVersion</a></code> | <code>*string</code> | The asymmetric crypto key version to use for signing approval requests. |
-| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#id ProjectAccessApprovalSettings#id}. |
+| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#id ProjectAccessApprovalSettings#id}. |
 | <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.notificationEmails">NotificationEmails</a></code> | <code>*[]*string</code> | A list of email addresses to which notifications relating to approval requests should be sent. |
 | <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.project">Project</a></code> | <code>*string</code> | Project id. |
 | <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts">ProjectAccessApprovalSettingsTimeouts</a></code> | timeouts block. |
@@ -1001,7 +1001,7 @@ EnrolledServices interface{}
 
 enrolled_services block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#enrolled_services ProjectAccessApprovalSettings#enrolled_services}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#enrolled_services ProjectAccessApprovalSettings#enrolled_services}
 
 ---
 
@@ -1015,7 +1015,7 @@ ProjectId *string
 
 ID of the project of the access approval settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#project_id ProjectAccessApprovalSettings#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#project_id ProjectAccessApprovalSettings#project_id}
 
 ---
 
@@ -1032,7 +1032,7 @@ The asymmetric crypto key version to use for signing approval requests.
 Empty active_key_version indicates that a Google-managed key should be used for signing.
 This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#active_key_version ProjectAccessApprovalSettings#active_key_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#active_key_version ProjectAccessApprovalSettings#active_key_version}
 
 ---
 
@@ -1044,7 +1044,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#id ProjectAccessApprovalSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#id ProjectAccessApprovalSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1064,7 +1064,7 @@ A list of email addresses to which notifications relating to approval requests s
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#notification_emails ProjectAccessApprovalSettings#notification_emails}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#notification_emails ProjectAccessApprovalSettings#notification_emails}
 
 ---
 
@@ -1078,7 +1078,7 @@ Project *string
 
 Project id.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#project ProjectAccessApprovalSettings#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#project ProjectAccessApprovalSettings#project}
 
 ---
 
@@ -1092,7 +1092,7 @@ Timeouts ProjectAccessApprovalSettingsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#timeouts ProjectAccessApprovalSettings#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#timeouts ProjectAccessApprovalSettings#timeouts}
 
 ---
 
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsEnrolledServices.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 &projectaccessapprovalsettings.ProjectAccessApprovalSettingsEnrolledServices {
 	CloudProduct: *string,
@@ -1140,7 +1140,7 @@ iam.googleapis.com
 pubsub.googleapis.com
 storage.googleapis.com
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#cloud_product ProjectAccessApprovalSettings#cloud_product}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#cloud_product ProjectAccessApprovalSettings#cloud_product}
 
 ---
 
@@ -1154,7 +1154,7 @@ EnrollmentLevel *string
 
 The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#enrollment_level ProjectAccessApprovalSettings#enrollment_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#enrollment_level ProjectAccessApprovalSettings#enrollment_level}
 
 ---
 
@@ -1163,7 +1163,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 &projectaccessapprovalsettings.ProjectAccessApprovalSettingsTimeouts {
 	Create: *string,
@@ -1176,9 +1176,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprov
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#create ProjectAccessApprovalSettings#create}. |
-| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#delete ProjectAccessApprovalSettings#delete}. |
-| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#update ProjectAccessApprovalSettings#update}. |
+| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#create ProjectAccessApprovalSettings#create}. |
+| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#delete ProjectAccessApprovalSettings#delete}. |
+| <code><a href="#@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#update ProjectAccessApprovalSettings#update}. |
 
 ---
 
@@ -1190,7 +1190,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#create ProjectAccessApprovalSettings#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#create ProjectAccessApprovalSettings#create}.
 
 ---
 
@@ -1202,7 +1202,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#delete ProjectAccessApprovalSettings#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#delete ProjectAccessApprovalSettings#delete}.
 
 ---
 
@@ -1214,7 +1214,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/project_access_approval_settings#update ProjectAccessApprovalSettings#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/project_access_approval_settings#update ProjectAccessApprovalSettings#update}.
 
 ---
 
@@ -1225,7 +1225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsEnrolledServicesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.NewProjectAccessApprovalSettingsEnrolledServicesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ProjectAccessApprovalSettingsEnrolledServicesList
 ```
@@ -1368,7 +1368,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsEnrolledServicesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.NewProjectAccessApprovalSettingsEnrolledServicesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ProjectAccessApprovalSettingsEnrolledServicesOutputReference
 ```
@@ -1686,7 +1686,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectAccessApprovalSettings.ProjectAccessApprovalSettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectaccessapprovalsettings"
 
 projectaccessapprovalsettings.NewProjectAccessApprovalSettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ProjectAccessApprovalSettingsTimeoutsOutputReference
 ```

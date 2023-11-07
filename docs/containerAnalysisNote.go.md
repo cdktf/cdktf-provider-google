@@ -1,6 +1,6 @@
 # `google_container_analysis_note`
 
-Refer to the Terraform Registory for docs: [`google_container_analysis_note`](https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note).
+Refer to the Terraform Registory for docs: [`google_container_analysis_note`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note).
 
 # `containerAnalysisNote` Submodule <a name="`containerAnalysisNote` Submodule" id="@cdktf/provider-google.containerAnalysisNote"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_container_analysis_note`](ht
 
 ### ContainerAnalysisNote <a name="ContainerAnalysisNote" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNote"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note google_container_analysis_note}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note google_container_analysis_note}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNote.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.NewContainerAnalysisNote(scope Construct, id *string, config ContainerAnalysisNoteConfig) ContainerAnalysisNote
 ```
@@ -427,7 +427,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNote.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.ContainerAnalysisNote_IsConstruct(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNote.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.ContainerAnalysisNote_IsTerraformElement(x interface{}) *bool
 ```
@@ -473,7 +473,7 @@ containeranalysisnote.ContainerAnalysisNote_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNote.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.ContainerAnalysisNote_IsTerraformResource(x interface{}) *bool
 ```
@@ -487,7 +487,7 @@ containeranalysisnote.ContainerAnalysisNote_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNote.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.ContainerAnalysisNote_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -516,7 +516,7 @@ The construct id used in the generated config for the ContainerAnalysisNote to i
 
 The id of the existing ContainerAnalysisNote that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -969,10 +969,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthority.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 &containeranalysisnote.ContainerAnalysisNoteAttestationAuthority {
-	Hint: github.com/cdktf/cdktf-provider-google-go/google/v12.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthorityHint,
+	Hint: github.com/cdktf/cdktf-provider-google-go/google.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthorityHint,
 }
 ```
 
@@ -994,7 +994,7 @@ Hint ContainerAnalysisNoteAttestationAuthorityHint
 
 hint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#hint ContainerAnalysisNote#hint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#hint ContainerAnalysisNote#hint}
 
 ---
 
@@ -1003,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthorityHint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 &containeranalysisnote.ContainerAnalysisNoteAttestationAuthorityHint {
 	HumanReadableName: *string,
@@ -1028,7 +1028,7 @@ HumanReadableName *string
 
 The human readable name of this Attestation Authority, for example "qa".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#human_readable_name ContainerAnalysisNote#human_readable_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#human_readable_name ContainerAnalysisNote#human_readable_name}
 
 ---
 
@@ -1037,7 +1037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 &containeranalysisnote.ContainerAnalysisNoteConfig {
 	Connection: interface{},
@@ -1047,7 +1047,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisno
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	AttestationAuthority: github.com/cdktf/cdktf-provider-google-go/google/v12.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthority,
+	AttestationAuthority: github.com/cdktf/cdktf-provider-google-go/google.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthority,
 	Name: *string,
 	ExpirationTime: *string,
 	Id: *string,
@@ -1056,7 +1056,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisno
 	RelatedNoteNames: *[]*string,
 	RelatedUrl: interface{},
 	ShortDescription: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.containerAnalysisNote.ContainerAnalysisNoteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.containerAnalysisNote.ContainerAnalysisNoteTimeouts,
 }
 ```
 
@@ -1074,9 +1074,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisno
 | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.attestationAuthority">AttestationAuthority</a></code> | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthority">ContainerAnalysisNoteAttestationAuthority</a></code> | attestation_authority block. |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.name">Name</a></code> | <code>*string</code> | The name of the note. |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.expirationTime">ExpirationTime</a></code> | <code>*string</code> | Time of expiration for this note. Leave empty if note does not expire. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#id ContainerAnalysisNote#id}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#id ContainerAnalysisNote#id}. |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.longDescription">LongDescription</a></code> | <code>*string</code> | A detailed description of the note. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#project ContainerAnalysisNote#project}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#project ContainerAnalysisNote#project}. |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.relatedNoteNames">RelatedNoteNames</a></code> | <code>*[]*string</code> | Names of other notes related to this note. |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.relatedUrl">RelatedUrl</a></code> | <code>interface{}</code> | related_url block. |
 | <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteConfig.property.shortDescription">ShortDescription</a></code> | <code>*string</code> | A one sentence description of the note. |
@@ -1164,7 +1164,7 @@ AttestationAuthority ContainerAnalysisNoteAttestationAuthority
 
 attestation_authority block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#attestation_authority ContainerAnalysisNote#attestation_authority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#attestation_authority ContainerAnalysisNote#attestation_authority}
 
 ---
 
@@ -1178,7 +1178,7 @@ Name *string
 
 The name of the note.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#name ContainerAnalysisNote#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#name ContainerAnalysisNote#name}
 
 ---
 
@@ -1192,7 +1192,7 @@ ExpirationTime *string
 
 Time of expiration for this note. Leave empty if note does not expire.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#expiration_time ContainerAnalysisNote#expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#expiration_time ContainerAnalysisNote#expiration_time}
 
 ---
 
@@ -1204,7 +1204,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#id ContainerAnalysisNote#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#id ContainerAnalysisNote#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1221,7 +1221,7 @@ LongDescription *string
 
 A detailed description of the note.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#long_description ContainerAnalysisNote#long_description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#long_description ContainerAnalysisNote#long_description}
 
 ---
 
@@ -1233,7 +1233,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#project ContainerAnalysisNote#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#project ContainerAnalysisNote#project}.
 
 ---
 
@@ -1247,7 +1247,7 @@ RelatedNoteNames *[]*string
 
 Names of other notes related to this note.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#related_note_names ContainerAnalysisNote#related_note_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#related_note_names ContainerAnalysisNote#related_note_names}
 
 ---
 
@@ -1261,7 +1261,7 @@ RelatedUrl interface{}
 
 related_url block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#related_url ContainerAnalysisNote#related_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#related_url ContainerAnalysisNote#related_url}
 
 ---
 
@@ -1275,7 +1275,7 @@ ShortDescription *string
 
 A one sentence description of the note.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#short_description ContainerAnalysisNote#short_description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#short_description ContainerAnalysisNote#short_description}
 
 ---
 
@@ -1289,7 +1289,7 @@ Timeouts ContainerAnalysisNoteTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#timeouts ContainerAnalysisNote#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#timeouts ContainerAnalysisNote#timeouts}
 
 ---
 
@@ -1298,7 +1298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteRelatedUrl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 &containeranalysisnote.ContainerAnalysisNoteRelatedUrl {
 	Url: *string,
@@ -1325,7 +1325,7 @@ Url *string
 
 Specific URL associated with the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#url ContainerAnalysisNote#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#url ContainerAnalysisNote#url}
 
 ---
 
@@ -1339,7 +1339,7 @@ Label *string
 
 Label to describe usage of the URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#label ContainerAnalysisNote#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#label ContainerAnalysisNote#label}
 
 ---
 
@@ -1348,7 +1348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 &containeranalysisnote.ContainerAnalysisNoteTimeouts {
 	Create: *string,
@@ -1361,9 +1361,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisno
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#create ContainerAnalysisNote#create}. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#delete ContainerAnalysisNote#delete}. |
-| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#update ContainerAnalysisNote#update}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#create ContainerAnalysisNote#create}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#delete ContainerAnalysisNote#delete}. |
+| <code><a href="#@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#update ContainerAnalysisNote#update}. |
 
 ---
 
@@ -1375,7 +1375,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#create ContainerAnalysisNote#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#create ContainerAnalysisNote#create}.
 
 ---
 
@@ -1387,7 +1387,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#delete ContainerAnalysisNote#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#delete ContainerAnalysisNote#delete}.
 
 ---
 
@@ -1399,7 +1399,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.4.0/docs/resources/container_analysis_note#update ContainerAnalysisNote#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_analysis_note#update ContainerAnalysisNote#update}.
 
 ---
 
@@ -1410,7 +1410,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthorityHintOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.NewContainerAnalysisNoteAttestationAuthorityHintOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAnalysisNoteAttestationAuthorityHintOutputReference
 ```
@@ -1681,7 +1681,7 @@ func InternalValue() ContainerAnalysisNoteAttestationAuthorityHint
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteAttestationAuthorityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.NewContainerAnalysisNoteAttestationAuthorityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAnalysisNoteAttestationAuthorityOutputReference
 ```
@@ -1965,7 +1965,7 @@ func InternalValue() ContainerAnalysisNoteAttestationAuthority
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteRelatedUrlList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.NewContainerAnalysisNoteRelatedUrlList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAnalysisNoteRelatedUrlList
 ```
@@ -2108,7 +2108,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteRelatedUrlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.NewContainerAnalysisNoteRelatedUrlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAnalysisNoteRelatedUrlOutputReference
 ```
@@ -2426,7 +2426,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAnalysisNote.ContainerAnalysisNoteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/containeranalysisnote"
+import "github.com/cdktf/cdktf-provider-google-go/google/containeranalysisnote"
 
 containeranalysisnote.NewContainerAnalysisNoteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAnalysisNoteTimeoutsOutputReference
 ```
