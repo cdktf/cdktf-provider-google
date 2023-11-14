@@ -1,6 +1,6 @@
 # `data_google_cloud_tasks_queue_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_cloud_tasks_queue_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_cloud_tasks_queue_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy).
 
 # `dataGoogleCloudTasksQueueIamPolicy` Submodule <a name="`dataGoogleCloudTasksQueueIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_cloud_tasks_queue_iam_p
 
 ### DataGoogleCloudTasksQueueIamPolicy <a name="DataGoogleCloudTasksQueueIamPolicy" id="@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy google_cloud_tasks_queue_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy google_cloud_tasks_queue_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer"></a>
 
@@ -43,10 +43,10 @@ dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy(
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}. |
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -133,7 +133,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}.
 
 ---
 
@@ -141,7 +141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}.
 
 ---
 
@@ -512,7 +512,7 @@ The construct id used in the generated config for the DataGoogleCloudTasksQueueI
 
 The id of the existing DataGoogleCloudTasksQueueIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -828,10 +828,10 @@ dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudTasksQueueIamPolicy.DataGoogleCloudTasksQueueIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}. |
 
 ---
 
@@ -913,7 +913,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#name DataGoogleCloudTasksQueueIamPolicy#name}.
 
 ---
 
@@ -925,7 +925,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#id DataGoogleCloudTasksQueueIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -940,7 +940,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#location DataGoogleCloudTasksQueueIamPolicy#location}.
 
 ---
 
@@ -952,7 +952,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/cloud_tasks_queue_iam_policy#project DataGoogleCloudTasksQueueIamPolicy#project}.
 
 ---
 

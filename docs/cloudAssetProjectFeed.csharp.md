@@ -1,6 +1,6 @@
 # `google_cloud_asset_project_feed`
 
-Refer to the Terraform Registory for docs: [`google_cloud_asset_project_feed`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed).
+Refer to the Terraform Registory for docs: [`google_cloud_asset_project_feed`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed).
 
 # `cloudAssetProjectFeed` Submodule <a name="`cloudAssetProjectFeed` Submodule" id="@cdktf/provider-google.cloudAssetProjectFeed"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_cloud_asset_project_feed`](h
 
 ### CloudAssetProjectFeed <a name="CloudAssetProjectFeed" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed google_cloud_asset_project_feed}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed google_cloud_asset_project_feed}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.Initializer"></a>
 
@@ -516,7 +516,7 @@ The construct id used in the generated config for the CloudAssetProjectFeed to i
 
 The id of the existing CloudAssetProjectFeed that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -978,7 +978,7 @@ public string Expression { get; set; }
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#expression CloudAssetProjectFeed#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#expression CloudAssetProjectFeed#expression}
 
 ---
 
@@ -995,7 +995,7 @@ Description of the expression.
 This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#description CloudAssetProjectFeed#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#description CloudAssetProjectFeed#description}
 
 ---
 
@@ -1009,7 +1009,7 @@ public string Location { get; set; }
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#location CloudAssetProjectFeed#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#location CloudAssetProjectFeed#location}
 
 ---
 
@@ -1023,7 +1023,7 @@ public string Title { get; set; }
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#title CloudAssetProjectFeed#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#title CloudAssetProjectFeed#title}
 
 ---
 
@@ -1073,8 +1073,8 @@ new CloudAssetProjectFeedConfig {
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.billingProject">BillingProject</a></code> | <code>string</code> | The project whose identity will be used when sending messages to the destination pubsub topic. |
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedCondition">CloudAssetProjectFeedCondition</a></code> | condition block. |
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.contentType">ContentType</a></code> | <code>string</code> | Asset content type. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}. |
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts">CloudAssetProjectFeedTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1159,7 +1159,7 @@ public string FeedId { get; set; }
 
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#feed_id CloudAssetProjectFeed#feed_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#feed_id CloudAssetProjectFeed#feed_id}
 
 ---
 
@@ -1173,7 +1173,7 @@ public CloudAssetProjectFeedFeedOutputConfig FeedOutputConfig { get; set; }
 
 feed_output_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#feed_output_config CloudAssetProjectFeed#feed_output_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#feed_output_config CloudAssetProjectFeed#feed_output_config}
 
 ---
 
@@ -1192,7 +1192,7 @@ assetNames and assetTypes. Only asset updates matching specified assetNames and 
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#asset_names CloudAssetProjectFeed#asset_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#asset_names CloudAssetProjectFeed#asset_names}
 
 ---
 
@@ -1212,7 +1212,7 @@ the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#asset_types CloudAssetProjectFeed#asset_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#asset_types CloudAssetProjectFeed#asset_types}
 
 ---
 
@@ -1230,7 +1230,7 @@ It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#billing_project CloudAssetProjectFeed#billing_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#billing_project CloudAssetProjectFeed#billing_project}
 
 ---
 
@@ -1244,7 +1244,7 @@ public CloudAssetProjectFeedCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#condition CloudAssetProjectFeed#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#condition CloudAssetProjectFeed#condition}
 
 ---
 
@@ -1260,7 +1260,7 @@ Asset content type.
 
 If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "OS_INVENTORY", "ACCESS_POLICY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#content_type CloudAssetProjectFeed#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#content_type CloudAssetProjectFeed#content_type}
 
 ---
 
@@ -1272,7 +1272,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1287,7 +1287,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}.
 
 ---
 
@@ -1301,7 +1301,7 @@ public CloudAssetProjectFeedTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#timeouts CloudAssetProjectFeed#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#timeouts CloudAssetProjectFeed#timeouts}
 
 ---
 
@@ -1335,7 +1335,7 @@ public CloudAssetProjectFeedFeedOutputConfigPubsubDestination PubsubDestination 
 
 pubsub_destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#pubsub_destination CloudAssetProjectFeed#pubsub_destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#pubsub_destination CloudAssetProjectFeed#pubsub_destination}
 
 ---
 
@@ -1369,7 +1369,7 @@ public string Topic { get; set; }
 
 Destination on Cloud Pubsub topic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#topic CloudAssetProjectFeed#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#topic CloudAssetProjectFeed#topic}
 
 ---
 
@@ -1391,9 +1391,9 @@ new CloudAssetProjectFeedTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}. |
 
 ---
 
@@ -1405,7 +1405,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}.
 
 ---
 
@@ -1417,7 +1417,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}.
 
 ---
 
@@ -1429,7 +1429,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}.
 
 ---
 

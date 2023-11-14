@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster
+// https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,23 +13,23 @@ export interface ContainerAwsClusterConfig extends cdktf.TerraformMetaArguments 
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field `effective_annotations` for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#annotations ContainerAwsCluster#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#annotations ContainerAwsCluster#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#aws_region ContainerAwsCluster#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#aws_region ContainerAwsCluster#aws_region}
   */
   readonly awsRegion: string;
   /**
   * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#description ContainerAwsCluster#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#description ContainerAwsCluster#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#id ContainerAwsCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#id ContainerAwsCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -43,55 +38,55 @@ export interface ContainerAwsClusterConfig extends cdktf.TerraformMetaArguments 
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#location ContainerAwsCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#location ContainerAwsCluster#location}
   */
   readonly location: string;
   /**
   * The name of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#name ContainerAwsCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#name ContainerAwsCluster#name}
   */
   readonly name: string;
   /**
   * The project for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
   */
   readonly project?: string;
   /**
   * authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#authorization ContainerAwsCluster#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#authorization ContainerAwsCluster#authorization}
   */
   readonly authorization: ContainerAwsClusterAuthorization;
   /**
   * binary_authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#binary_authorization ContainerAwsCluster#binary_authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#binary_authorization ContainerAwsCluster#binary_authorization}
   */
   readonly binaryAuthorization?: ContainerAwsClusterBinaryAuthorization;
   /**
   * control_plane block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#control_plane ContainerAwsCluster#control_plane}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#control_plane ContainerAwsCluster#control_plane}
   */
   readonly controlPlane: ContainerAwsClusterControlPlane;
   /**
   * fleet block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#fleet ContainerAwsCluster#fleet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#fleet ContainerAwsCluster#fleet}
   */
   readonly fleet: ContainerAwsClusterFleet;
   /**
   * networking block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#networking ContainerAwsCluster#networking}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#networking ContainerAwsCluster#networking}
   */
   readonly networking: ContainerAwsClusterNetworking;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#timeouts ContainerAwsCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#timeouts ContainerAwsCluster#timeouts}
   */
   readonly timeouts?: ContainerAwsClusterTimeouts;
 }
@@ -169,11 +164,107 @@ export class ContainerAwsClusterWorkloadIdentityConfigList extends cdktf.Complex
     return new ContainerAwsClusterWorkloadIdentityConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerAwsClusterAuthorizationAdminGroups {
+  /**
+  * The name of the group, e.g. `my-group@domain.com`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#group ContainerAwsCluster#group}
+  */
+  readonly group: string;
+}
+
+export function containerAwsClusterAuthorizationAdminGroupsToTerraform(struct?: ContainerAwsClusterAuthorizationAdminGroups | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    group: cdktf.stringToTerraform(struct!.group),
+  }
+}
+
+export class ContainerAwsClusterAuthorizationAdminGroupsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAwsClusterAuthorizationAdminGroups | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._group !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.group = this._group;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAwsClusterAuthorizationAdminGroups | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._group = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._group = value.group;
+    }
+  }
+
+  // group - computed: false, optional: false, required: true
+  private _group?: string; 
+  public get group() {
+    return this.getStringAttribute('group');
+  }
+  public set group(value: string) {
+    this._group = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupInput() {
+    return this._group;
+  }
+}
+
+export class ContainerAwsClusterAuthorizationAdminGroupsList extends cdktf.ComplexList {
+  public internalValue? : ContainerAwsClusterAuthorizationAdminGroups[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAwsClusterAuthorizationAdminGroupsOutputReference {
+    return new ContainerAwsClusterAuthorizationAdminGroupsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAwsClusterAuthorizationAdminUsers {
   /**
   * The name of the user, e.g. `my-gcp-id@gmail.com`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#username ContainerAwsCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#username ContainerAwsCluster#username}
   */
   readonly username: string;
 }
@@ -267,9 +358,15 @@ export class ContainerAwsClusterAuthorizationAdminUsersList extends cdktf.Comple
 }
 export interface ContainerAwsClusterAuthorization {
   /**
+  * admin_groups block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#admin_groups ContainerAwsCluster#admin_groups}
+  */
+  readonly adminGroups?: ContainerAwsClusterAuthorizationAdminGroups[] | cdktf.IResolvable;
+  /**
   * admin_users block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#admin_users ContainerAwsCluster#admin_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#admin_users ContainerAwsCluster#admin_users}
   */
   readonly adminUsers: ContainerAwsClusterAuthorizationAdminUsers[] | cdktf.IResolvable;
 }
@@ -280,6 +377,7 @@ export function containerAwsClusterAuthorizationToTerraform(struct?: ContainerAw
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    admin_groups: cdktf.listMapper(containerAwsClusterAuthorizationAdminGroupsToTerraform, true)(struct!.adminGroups),
     admin_users: cdktf.listMapper(containerAwsClusterAuthorizationAdminUsersToTerraform, true)(struct!.adminUsers),
   }
 }
@@ -298,6 +396,10 @@ export class ContainerAwsClusterAuthorizationOutputReference extends cdktf.Compl
   public get internalValue(): ContainerAwsClusterAuthorization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._adminGroups?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.adminGroups = this._adminGroups?.internalValue;
+    }
     if (this._adminUsers?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminUsers = this._adminUsers?.internalValue;
@@ -308,12 +410,30 @@ export class ContainerAwsClusterAuthorizationOutputReference extends cdktf.Compl
   public set internalValue(value: ContainerAwsClusterAuthorization | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._adminGroups.internalValue = undefined;
       this._adminUsers.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._adminGroups.internalValue = value.adminGroups;
       this._adminUsers.internalValue = value.adminUsers;
     }
+  }
+
+  // admin_groups - computed: false, optional: true, required: false
+  private _adminGroups = new ContainerAwsClusterAuthorizationAdminGroupsList(this, "admin_groups", false);
+  public get adminGroups() {
+    return this._adminGroups;
+  }
+  public putAdminGroups(value: ContainerAwsClusterAuthorizationAdminGroups[] | cdktf.IResolvable) {
+    this._adminGroups.internalValue = value;
+  }
+  public resetAdminGroups() {
+    this._adminGroups.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminGroupsInput() {
+    return this._adminGroups.internalValue;
   }
 
   // admin_users - computed: false, optional: false, required: true
@@ -333,7 +453,7 @@ export interface ContainerAwsClusterBinaryAuthorization {
   /**
   * Mode of operation for Binary Authorization policy evaluation. Possible values: DISABLED, PROJECT_SINGLETON_POLICY_ENFORCE
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#evaluation_mode ContainerAwsCluster#evaluation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#evaluation_mode ContainerAwsCluster#evaluation_mode}
   */
   readonly evaluationMode?: string;
 }
@@ -400,13 +520,13 @@ export interface ContainerAwsClusterControlPlaneAwsServicesAuthentication {
   /**
   * The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#role_arn ContainerAwsCluster#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#role_arn ContainerAwsCluster#role_arn}
   */
   readonly roleArn: string;
   /**
   * Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#role_session_name ContainerAwsCluster#role_session_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#role_session_name ContainerAwsCluster#role_session_name}
   */
   readonly roleSessionName?: string;
 }
@@ -493,7 +613,7 @@ export interface ContainerAwsClusterControlPlaneConfigEncryption {
   /**
   * The ARN of the AWS KMS key used to encrypt cluster configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
   */
   readonly kmsKeyArn: string;
 }
@@ -557,7 +677,7 @@ export interface ContainerAwsClusterControlPlaneDatabaseEncryption {
   /**
   * The ARN of the AWS KMS key used to encrypt cluster secrets.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
   */
   readonly kmsKeyArn: string;
 }
@@ -621,31 +741,31 @@ export interface ContainerAwsClusterControlPlaneMainVolume {
   /**
   * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
   */
   readonly iops?: number;
   /**
   * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
   * Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
   */
   readonly sizeGib?: number;
   /**
-  * Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3.
+  * Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. If volume type is gp3 and throughput is not specified, the throughput will defaults to 125.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#throughput ContainerAwsCluster#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#throughput ContainerAwsCluster#throughput}
   */
   readonly throughput?: number;
   /**
   * Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -804,13 +924,13 @@ export interface ContainerAwsClusterControlPlaneProxyConfig {
   /**
   * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#secret_arn ContainerAwsCluster#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#secret_arn ContainerAwsCluster#secret_arn}
   */
   readonly secretArn: string;
   /**
   * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#secret_version ContainerAwsCluster#secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#secret_version ContainerAwsCluster#secret_version}
   */
   readonly secretVersion: string;
 }
@@ -894,31 +1014,31 @@ export interface ContainerAwsClusterControlPlaneRootVolume {
   /**
   * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
   */
   readonly iops?: number;
   /**
   * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
   * Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
   */
   readonly sizeGib?: number;
   /**
-  * Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3.
+  * Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. If volume type is gp3 and throughput is not specified, the throughput will defaults to 125.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#throughput ContainerAwsCluster#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#throughput ContainerAwsCluster#throughput}
   */
   readonly throughput?: number;
   /**
   * Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -1077,7 +1197,7 @@ export interface ContainerAwsClusterControlPlaneSshConfig {
   /**
   * The name of the EC2 key pair used to login into cluster machines.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#ec2_key_pair ContainerAwsCluster#ec2_key_pair}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#ec2_key_pair ContainerAwsCluster#ec2_key_pair}
   */
   readonly ec2KeyPair: string;
 }
@@ -1141,79 +1261,79 @@ export interface ContainerAwsClusterControlPlane {
   /**
   * The name of the AWS IAM instance pofile to assign to each control plane replica.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#iam_instance_profile ContainerAwsCluster#iam_instance_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#iam_instance_profile ContainerAwsCluster#iam_instance_profile}
   */
   readonly iamInstanceProfile: string;
   /**
   * Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#instance_type ContainerAwsCluster#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#instance_type ContainerAwsCluster#instance_type}
   */
   readonly instanceType?: string;
   /**
   * Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#security_group_ids ContainerAwsCluster#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#security_group_ids ContainerAwsCluster#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
   * The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#subnet_ids ContainerAwsCluster#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#subnet_ids ContainerAwsCluster#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
   * Optional. A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#tags ContainerAwsCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#tags ContainerAwsCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#version ContainerAwsCluster#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#version ContainerAwsCluster#version}
   */
   readonly version: string;
   /**
   * aws_services_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#aws_services_authentication ContainerAwsCluster#aws_services_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#aws_services_authentication ContainerAwsCluster#aws_services_authentication}
   */
   readonly awsServicesAuthentication: ContainerAwsClusterControlPlaneAwsServicesAuthentication;
   /**
   * config_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#config_encryption ContainerAwsCluster#config_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#config_encryption ContainerAwsCluster#config_encryption}
   */
   readonly configEncryption: ContainerAwsClusterControlPlaneConfigEncryption;
   /**
   * database_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#database_encryption ContainerAwsCluster#database_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#database_encryption ContainerAwsCluster#database_encryption}
   */
   readonly databaseEncryption: ContainerAwsClusterControlPlaneDatabaseEncryption;
   /**
   * main_volume block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#main_volume ContainerAwsCluster#main_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#main_volume ContainerAwsCluster#main_volume}
   */
   readonly mainVolume?: ContainerAwsClusterControlPlaneMainVolume;
   /**
   * proxy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#proxy_config ContainerAwsCluster#proxy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#proxy_config ContainerAwsCluster#proxy_config}
   */
   readonly proxyConfig?: ContainerAwsClusterControlPlaneProxyConfig;
   /**
   * root_volume block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#root_volume ContainerAwsCluster#root_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#root_volume ContainerAwsCluster#root_volume}
   */
   readonly rootVolume?: ContainerAwsClusterControlPlaneRootVolume;
   /**
   * ssh_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#ssh_config ContainerAwsCluster#ssh_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#ssh_config ContainerAwsCluster#ssh_config}
   */
   readonly sshConfig?: ContainerAwsClusterControlPlaneSshConfig;
 }
@@ -1538,7 +1658,7 @@ export interface ContainerAwsClusterFleet {
   /**
   * The number of the Fleet host project where this cluster will be registered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
   */
   readonly project?: string;
 }
@@ -1610,25 +1730,25 @@ export interface ContainerAwsClusterNetworking {
   /**
   * Disable the per node pool subnet security group rules on the control plane security group. When set to true, you must also provide one or more security groups that ensure node pools are able to send requests to the control plane on TCP/443 and TCP/8132. Failure to do so may result in unavailable node pools.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#per_node_pool_sg_rules_disabled ContainerAwsCluster#per_node_pool_sg_rules_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#per_node_pool_sg_rules_disabled ContainerAwsCluster#per_node_pool_sg_rules_disabled}
   */
   readonly perNodePoolSgRulesDisabled?: boolean | cdktf.IResolvable;
   /**
   * All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#pod_address_cidr_blocks ContainerAwsCluster#pod_address_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#pod_address_cidr_blocks ContainerAwsCluster#pod_address_cidr_blocks}
   */
   readonly podAddressCidrBlocks: string[];
   /**
   * All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#service_address_cidr_blocks ContainerAwsCluster#service_address_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#service_address_cidr_blocks ContainerAwsCluster#service_address_cidr_blocks}
   */
   readonly serviceAddressCidrBlocks: string[];
   /**
   * The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#vpc_id ContainerAwsCluster#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#vpc_id ContainerAwsCluster#vpc_id}
   */
   readonly vpcId: string;
 }
@@ -1753,15 +1873,15 @@ export class ContainerAwsClusterNetworkingOutputReference extends cdktf.ComplexO
 }
 export interface ContainerAwsClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#create ContainerAwsCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#create ContainerAwsCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#delete ContainerAwsCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#delete ContainerAwsCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#update ContainerAwsCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#update ContainerAwsCluster#update}
   */
   readonly update?: string;
 }
@@ -1882,7 +2002,7 @@ export class ContainerAwsClusterTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster google_container_aws_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster google_container_aws_cluster}
 */
 export class ContainerAwsCluster extends cdktf.TerraformResource {
 
@@ -1898,7 +2018,7 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerAwsCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerAwsCluster to import
-  * @param importFromId The id of the existing ContainerAwsCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerAwsCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerAwsCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1910,7 +2030,7 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/container_aws_cluster google_container_aws_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/container_aws_cluster google_container_aws_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1921,7 +2041,7 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_aws_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.5.0',
+        providerVersion: '5.6.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

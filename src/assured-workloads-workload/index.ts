@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload
+// https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,25 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, 'billingAccounts/012345-567890-ABCDEF`.
+  * Optional. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#billing_account AssuredWorkloadsWorkload#billing_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#billing_account AssuredWorkloadsWorkload#billing_account}
   */
-  readonly billingAccount: string;
+  readonly billingAccount?: string;
   /**
-  * Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS, HIPAA, EU_REGIONS_AND_SUPPORT, CA_REGIONS_AND_SUPPORT, ITAR, AU_REGIONS_AND_US_SUPPORT, ASSURED_WORKLOADS_FOR_PARTNERS
+  * Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS, HIPAA, HITRUST, EU_REGIONS_AND_SUPPORT, CA_REGIONS_AND_SUPPORT, ITAR, AU_REGIONS_AND_US_SUPPORT, ASSURED_WORKLOADS_FOR_PARTNERS, ISR_REGIONS, ISR_REGIONS_AND_SUPPORT, CA_PROTECTED_B, IL5, IL2, JP_REGIONS_AND_SUPPORT
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
   */
   readonly complianceRegime: string;
   /**
   * Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#id AssuredWorkloadsWorkload#id}
+  * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#enable_sovereign_controls AssuredWorkloadsWorkload#enable_sovereign_controls}
+  */
+  readonly enableSovereignControls?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#id AssuredWorkloadsWorkload#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -43,45 +44,206 @@ export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArgum
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field `effective_labels` for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#labels AssuredWorkloadsWorkload#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#labels AssuredWorkloadsWorkload#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#location AssuredWorkloadsWorkload#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#location AssuredWorkloadsWorkload#location}
   */
   readonly location: string;
   /**
   * The organization for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#organization AssuredWorkloadsWorkload#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#organization AssuredWorkloadsWorkload#organization}
   */
   readonly organization: string;
   /**
-  * Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
+  * Optional. Partner regime associated with this workload. Possible values: PARTNER_UNSPECIFIED, LOCAL_CONTROLS_BY_S3NS, SOVEREIGN_CONTROLS_BY_T_SYSTEMS, SOVEREIGN_CONTROLS_BY_SIA_MINSAIT, SOVEREIGN_CONTROLS_BY_PSN
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#partner AssuredWorkloadsWorkload#partner}
+  */
+  readonly partner?: string;
+  /**
+  * Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
   */
   readonly provisionedResourcesParent?: string;
   /**
+  * Optional. Indicates whether the e-mail notification for a violation is enabled for a workload. This value will be by default True, and if not present will be considered as true. This should only be updated via updateWorkload call. Any Changes to this field during the createWorkload call will not be honored. This will always be true while creating the workload.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#violation_notifications_enabled AssuredWorkloadsWorkload#violation_notifications_enabled}
+  */
+  readonly violationNotificationsEnabled?: boolean | cdktf.IResolvable;
+  /**
   * kms_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#kms_settings AssuredWorkloadsWorkload#kms_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#kms_settings AssuredWorkloadsWorkload#kms_settings}
   */
   readonly kmsSettings?: AssuredWorkloadsWorkloadKmsSettings;
   /**
+  * partner_permissions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#partner_permissions AssuredWorkloadsWorkload#partner_permissions}
+  */
+  readonly partnerPermissions?: AssuredWorkloadsWorkloadPartnerPermissions;
+  /**
   * resource_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#resource_settings AssuredWorkloadsWorkload#resource_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#resource_settings AssuredWorkloadsWorkload#resource_settings}
   */
   readonly resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#timeouts AssuredWorkloadsWorkload#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#timeouts AssuredWorkloadsWorkload#timeouts}
   */
   readonly timeouts?: AssuredWorkloadsWorkloadTimeouts;
+}
+export interface AssuredWorkloadsWorkloadComplianceStatus {
+}
+
+export function assuredWorkloadsWorkloadComplianceStatusToTerraform(struct?: AssuredWorkloadsWorkloadComplianceStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AssuredWorkloadsWorkloadComplianceStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AssuredWorkloadsWorkloadComplianceStatus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadComplianceStatus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // acknowledged_violation_count - computed: true, optional: false, required: false
+  public get acknowledgedViolationCount() {
+    return this.getNumberListAttribute('acknowledged_violation_count');
+  }
+
+  // active_violation_count - computed: true, optional: false, required: false
+  public get activeViolationCount() {
+    return this.getNumberListAttribute('active_violation_count');
+  }
+}
+
+export class AssuredWorkloadsWorkloadComplianceStatusList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AssuredWorkloadsWorkloadComplianceStatusOutputReference {
+    return new AssuredWorkloadsWorkloadComplianceStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AssuredWorkloadsWorkloadEkmProvisioningResponse {
+}
+
+export function assuredWorkloadsWorkloadEkmProvisioningResponseToTerraform(struct?: AssuredWorkloadsWorkloadEkmProvisioningResponse): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AssuredWorkloadsWorkloadEkmProvisioningResponse | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadEkmProvisioningResponse | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // ekm_provisioning_error_domain - computed: true, optional: false, required: false
+  public get ekmProvisioningErrorDomain() {
+    return this.getStringAttribute('ekm_provisioning_error_domain');
+  }
+
+  // ekm_provisioning_error_mapping - computed: true, optional: false, required: false
+  public get ekmProvisioningErrorMapping() {
+    return this.getStringAttribute('ekm_provisioning_error_mapping');
+  }
+
+  // ekm_provisioning_state - computed: true, optional: false, required: false
+  public get ekmProvisioningState() {
+    return this.getStringAttribute('ekm_provisioning_state');
+  }
+}
+
+export class AssuredWorkloadsWorkloadEkmProvisioningResponseList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference {
+    return new AssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface AssuredWorkloadsWorkloadResources {
 }
@@ -152,17 +314,86 @@ export class AssuredWorkloadsWorkloadResourcesList extends cdktf.ComplexList {
     return new AssuredWorkloadsWorkloadResourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface AssuredWorkloadsWorkloadSaaEnrollmentResponse {
+}
+
+export function assuredWorkloadsWorkloadSaaEnrollmentResponseToTerraform(struct?: AssuredWorkloadsWorkloadSaaEnrollmentResponse): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AssuredWorkloadsWorkloadSaaEnrollmentResponse | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadSaaEnrollmentResponse | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // setup_errors - computed: true, optional: false, required: false
+  public get setupErrors() {
+    return this.getListAttribute('setup_errors');
+  }
+
+  // setup_status - computed: true, optional: false, required: false
+  public get setupStatus() {
+    return this.getStringAttribute('setup_status');
+  }
+}
+
+export class AssuredWorkloadsWorkloadSaaEnrollmentResponseList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference {
+    return new AssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AssuredWorkloadsWorkloadKmsSettings {
   /**
   * Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
   */
   readonly nextRotationTime: string;
   /**
   * Required. Input only. Immutable. will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#rotation_period AssuredWorkloadsWorkload#rotation_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#rotation_period AssuredWorkloadsWorkload#rotation_period}
   */
   readonly rotationPeriod: string;
 }
@@ -242,17 +473,148 @@ export class AssuredWorkloadsWorkloadKmsSettingsOutputReference extends cdktf.Co
     return this._rotationPeriod;
   }
 }
+export interface AssuredWorkloadsWorkloadPartnerPermissions {
+  /**
+  * Optional. Allow partner to view violation alerts.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#assured_workloads_monitoring AssuredWorkloadsWorkload#assured_workloads_monitoring}
+  */
+  readonly assuredWorkloadsMonitoring?: boolean | cdktf.IResolvable;
+  /**
+  * Allow the partner to view inspectability logs and monitoring violations.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#data_logs_viewer AssuredWorkloadsWorkload#data_logs_viewer}
+  */
+  readonly dataLogsViewer?: boolean | cdktf.IResolvable;
+  /**
+  * Optional. Allow partner to view access approval logs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#service_access_approver AssuredWorkloadsWorkload#service_access_approver}
+  */
+  readonly serviceAccessApprover?: boolean | cdktf.IResolvable;
+}
+
+export function assuredWorkloadsWorkloadPartnerPermissionsToTerraform(struct?: AssuredWorkloadsWorkloadPartnerPermissionsOutputReference | AssuredWorkloadsWorkloadPartnerPermissions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    assured_workloads_monitoring: cdktf.booleanToTerraform(struct!.assuredWorkloadsMonitoring),
+    data_logs_viewer: cdktf.booleanToTerraform(struct!.dataLogsViewer),
+    service_access_approver: cdktf.booleanToTerraform(struct!.serviceAccessApprover),
+  }
+}
+
+export class AssuredWorkloadsWorkloadPartnerPermissionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AssuredWorkloadsWorkloadPartnerPermissions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._assuredWorkloadsMonitoring !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.assuredWorkloadsMonitoring = this._assuredWorkloadsMonitoring;
+    }
+    if (this._dataLogsViewer !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataLogsViewer = this._dataLogsViewer;
+    }
+    if (this._serviceAccessApprover !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccessApprover = this._serviceAccessApprover;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadPartnerPermissions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._assuredWorkloadsMonitoring = undefined;
+      this._dataLogsViewer = undefined;
+      this._serviceAccessApprover = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._assuredWorkloadsMonitoring = value.assuredWorkloadsMonitoring;
+      this._dataLogsViewer = value.dataLogsViewer;
+      this._serviceAccessApprover = value.serviceAccessApprover;
+    }
+  }
+
+  // assured_workloads_monitoring - computed: false, optional: true, required: false
+  private _assuredWorkloadsMonitoring?: boolean | cdktf.IResolvable; 
+  public get assuredWorkloadsMonitoring() {
+    return this.getBooleanAttribute('assured_workloads_monitoring');
+  }
+  public set assuredWorkloadsMonitoring(value: boolean | cdktf.IResolvable) {
+    this._assuredWorkloadsMonitoring = value;
+  }
+  public resetAssuredWorkloadsMonitoring() {
+    this._assuredWorkloadsMonitoring = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assuredWorkloadsMonitoringInput() {
+    return this._assuredWorkloadsMonitoring;
+  }
+
+  // data_logs_viewer - computed: false, optional: true, required: false
+  private _dataLogsViewer?: boolean | cdktf.IResolvable; 
+  public get dataLogsViewer() {
+    return this.getBooleanAttribute('data_logs_viewer');
+  }
+  public set dataLogsViewer(value: boolean | cdktf.IResolvable) {
+    this._dataLogsViewer = value;
+  }
+  public resetDataLogsViewer() {
+    this._dataLogsViewer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataLogsViewerInput() {
+    return this._dataLogsViewer;
+  }
+
+  // service_access_approver - computed: false, optional: true, required: false
+  private _serviceAccessApprover?: boolean | cdktf.IResolvable; 
+  public get serviceAccessApprover() {
+    return this.getBooleanAttribute('service_access_approver');
+  }
+  public set serviceAccessApprover(value: boolean | cdktf.IResolvable) {
+    this._serviceAccessApprover = value;
+  }
+  public resetServiceAccessApprover() {
+    this._serviceAccessApprover = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccessApproverInput() {
+    return this._serviceAccessApprover;
+  }
+}
 export interface AssuredWorkloadsWorkloadResourceSettings {
   /**
-  * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+  * User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#resource_id AssuredWorkloadsWorkload#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
+  */
+  readonly displayName?: string;
+  /**
+  * Resource identifier. For a project this represents projectId. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don't set this value as folder_id is assigned by Google.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#resource_id AssuredWorkloadsWorkload#resource_id}
   */
   readonly resourceId?: string;
   /**
   * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#resource_type AssuredWorkloadsWorkload#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#resource_type AssuredWorkloadsWorkload#resource_type}
   */
   readonly resourceType?: string;
 }
@@ -263,6 +625,7 @@ export function assuredWorkloadsWorkloadResourceSettingsToTerraform(struct?: Ass
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    display_name: cdktf.stringToTerraform(struct!.displayName),
     resource_id: cdktf.stringToTerraform(struct!.resourceId),
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
   }
@@ -288,6 +651,10 @@ export class AssuredWorkloadsWorkloadResourceSettingsOutputReference extends cdk
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._displayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.displayName = this._displayName;
+    }
     if (this._resourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceId = this._resourceId;
@@ -303,6 +670,7 @@ export class AssuredWorkloadsWorkloadResourceSettingsOutputReference extends cdk
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._displayName = undefined;
       this._resourceId = undefined;
       this._resourceType = undefined;
     }
@@ -313,9 +681,26 @@ export class AssuredWorkloadsWorkloadResourceSettingsOutputReference extends cdk
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._displayName = value.displayName;
       this._resourceId = value.resourceId;
       this._resourceType = value.resourceType;
     }
+  }
+
+  // display_name - computed: false, optional: true, required: false
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
   }
 
   // resource_id - computed: false, optional: true, required: false
@@ -372,15 +757,15 @@ export class AssuredWorkloadsWorkloadResourceSettingsList extends cdktf.ComplexL
 }
 export interface AssuredWorkloadsWorkloadTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#create AssuredWorkloadsWorkload#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#create AssuredWorkloadsWorkload#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#delete AssuredWorkloadsWorkload#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#delete AssuredWorkloadsWorkload#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#update AssuredWorkloadsWorkload#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#update AssuredWorkloadsWorkload#update}
   */
   readonly update?: string;
 }
@@ -501,7 +886,7 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload google_assured_workloads_workload}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload google_assured_workloads_workload}
 */
 export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
 
@@ -517,7 +902,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AssuredWorkloadsWorkload resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AssuredWorkloadsWorkload to import
-  * @param importFromId The id of the existing AssuredWorkloadsWorkload that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AssuredWorkloadsWorkload that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AssuredWorkloadsWorkload to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -529,7 +914,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/assured_workloads_workload google_assured_workloads_workload} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/assured_workloads_workload google_assured_workloads_workload} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -540,7 +925,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
       terraformResourceType: 'google_assured_workloads_workload',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.5.0',
+        providerVersion: '5.6.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -554,12 +939,16 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
     this._billingAccount = config.billingAccount;
     this._complianceRegime = config.complianceRegime;
     this._displayName = config.displayName;
+    this._enableSovereignControls = config.enableSovereignControls;
     this._id = config.id;
     this._labels = config.labels;
     this._location = config.location;
     this._organization = config.organization;
+    this._partner = config.partner;
     this._provisionedResourcesParent = config.provisionedResourcesParent;
+    this._violationNotificationsEnabled = config.violationNotificationsEnabled;
     this._kmsSettings.internalValue = config.kmsSettings;
+    this._partnerPermissions.internalValue = config.partnerPermissions;
     this._resourceSettings.internalValue = config.resourceSettings;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -568,13 +957,16 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // billing_account - computed: false, optional: false, required: true
+  // billing_account - computed: false, optional: true, required: false
   private _billingAccount?: string; 
   public get billingAccount() {
     return this.getStringAttribute('billing_account');
   }
   public set billingAccount(value: string) {
     this._billingAccount = value;
+  }
+  public resetBillingAccount() {
+    this._billingAccount = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get billingAccountInput() {
@@ -592,6 +984,17 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get complianceRegimeInput() {
     return this._complianceRegime;
+  }
+
+  // compliance_status - computed: true, optional: false, required: false
+  private _complianceStatus = new AssuredWorkloadsWorkloadComplianceStatusList(this, "compliance_status", false);
+  public get complianceStatus() {
+    return this._complianceStatus;
+  }
+
+  // compliant_but_disallowed_services - computed: true, optional: false, required: false
+  public get compliantButDisallowedServices() {
+    return this.getListAttribute('compliant_but_disallowed_services');
   }
 
   // create_time - computed: true, optional: false, required: false
@@ -618,6 +1021,28 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
     return this._effectiveLabels;
   }
 
+  // ekm_provisioning_response - computed: true, optional: false, required: false
+  private _ekmProvisioningResponse = new AssuredWorkloadsWorkloadEkmProvisioningResponseList(this, "ekm_provisioning_response", false);
+  public get ekmProvisioningResponse() {
+    return this._ekmProvisioningResponse;
+  }
+
+  // enable_sovereign_controls - computed: false, optional: true, required: false
+  private _enableSovereignControls?: boolean | cdktf.IResolvable; 
+  public get enableSovereignControls() {
+    return this.getBooleanAttribute('enable_sovereign_controls');
+  }
+  public set enableSovereignControls(value: boolean | cdktf.IResolvable) {
+    this._enableSovereignControls = value;
+  }
+  public resetEnableSovereignControls() {
+    this._enableSovereignControls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableSovereignControlsInput() {
+    return this._enableSovereignControls;
+  }
+
   // id - computed: true, optional: true, required: false
   private _id?: string; 
   public get id() {
@@ -632,6 +1057,11 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // kaj_enrollment_state - computed: true, optional: false, required: false
+  public get kajEnrollmentState() {
+    return this.getStringAttribute('kaj_enrollment_state');
   }
 
   // labels - computed: false, optional: true, required: false
@@ -681,6 +1111,22 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
     return this._organization;
   }
 
+  // partner - computed: false, optional: true, required: false
+  private _partner?: string; 
+  public get partner() {
+    return this.getStringAttribute('partner');
+  }
+  public set partner(value: string) {
+    this._partner = value;
+  }
+  public resetPartner() {
+    this._partner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partnerInput() {
+    return this._partner;
+  }
+
   // provisioned_resources_parent - computed: false, optional: true, required: false
   private _provisionedResourcesParent?: string; 
   public get provisionedResourcesParent() {
@@ -703,10 +1149,32 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
     return this._resources;
   }
 
+  // saa_enrollment_response - computed: true, optional: false, required: false
+  private _saaEnrollmentResponse = new AssuredWorkloadsWorkloadSaaEnrollmentResponseList(this, "saa_enrollment_response", false);
+  public get saaEnrollmentResponse() {
+    return this._saaEnrollmentResponse;
+  }
+
   // terraform_labels - computed: true, optional: false, required: false
   private _terraformLabels = new cdktf.StringMap(this, "terraform_labels");
   public get terraformLabels() {
     return this._terraformLabels;
+  }
+
+  // violation_notifications_enabled - computed: true, optional: true, required: false
+  private _violationNotificationsEnabled?: boolean | cdktf.IResolvable; 
+  public get violationNotificationsEnabled() {
+    return this.getBooleanAttribute('violation_notifications_enabled');
+  }
+  public set violationNotificationsEnabled(value: boolean | cdktf.IResolvable) {
+    this._violationNotificationsEnabled = value;
+  }
+  public resetViolationNotificationsEnabled() {
+    this._violationNotificationsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get violationNotificationsEnabledInput() {
+    return this._violationNotificationsEnabled;
   }
 
   // kms_settings - computed: false, optional: true, required: false
@@ -723,6 +1191,22 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get kmsSettingsInput() {
     return this._kmsSettings.internalValue;
+  }
+
+  // partner_permissions - computed: false, optional: true, required: false
+  private _partnerPermissions = new AssuredWorkloadsWorkloadPartnerPermissionsOutputReference(this, "partner_permissions");
+  public get partnerPermissions() {
+    return this._partnerPermissions;
+  }
+  public putPartnerPermissions(value: AssuredWorkloadsWorkloadPartnerPermissions) {
+    this._partnerPermissions.internalValue = value;
+  }
+  public resetPartnerPermissions() {
+    this._partnerPermissions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partnerPermissionsInput() {
+    return this._partnerPermissions.internalValue;
   }
 
   // resource_settings - computed: false, optional: true, required: false
@@ -766,12 +1250,16 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
       billing_account: cdktf.stringToTerraform(this._billingAccount),
       compliance_regime: cdktf.stringToTerraform(this._complianceRegime),
       display_name: cdktf.stringToTerraform(this._displayName),
+      enable_sovereign_controls: cdktf.booleanToTerraform(this._enableSovereignControls),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       organization: cdktf.stringToTerraform(this._organization),
+      partner: cdktf.stringToTerraform(this._partner),
       provisioned_resources_parent: cdktf.stringToTerraform(this._provisionedResourcesParent),
+      violation_notifications_enabled: cdktf.booleanToTerraform(this._violationNotificationsEnabled),
       kms_settings: assuredWorkloadsWorkloadKmsSettingsToTerraform(this._kmsSettings.internalValue),
+      partner_permissions: assuredWorkloadsWorkloadPartnerPermissionsToTerraform(this._partnerPermissions.internalValue),
       resource_settings: cdktf.listMapper(assuredWorkloadsWorkloadResourceSettingsToTerraform, true)(this._resourceSettings.internalValue),
       timeouts: assuredWorkloadsWorkloadTimeoutsToTerraform(this._timeouts.internalValue),
     };

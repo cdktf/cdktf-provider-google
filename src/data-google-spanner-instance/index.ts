@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance
+// https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -20,18 +15,18 @@ export interface DataGoogleSpannerInstanceConfig extends cdktf.TerraformMetaArgu
   * In order to obtain a valid list please consult the
   * [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance#config DataGoogleSpannerInstance#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance#config DataGoogleSpannerInstance#config}
   */
   readonly config?: string;
   /**
   * The descriptive name for this instance as it appears in UIs. Must be
   * unique per project and between 4 and 30 characters in length.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance#display_name DataGoogleSpannerInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance#display_name DataGoogleSpannerInstance#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance#id DataGoogleSpannerInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance#id DataGoogleSpannerInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -45,17 +40,226 @@ export interface DataGoogleSpannerInstanceConfig extends cdktf.TerraformMetaArgu
   * 
   * If not provided, a random string starting with 'tf-' will be selected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance#name DataGoogleSpannerInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance#name DataGoogleSpannerInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance#project DataGoogleSpannerInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance#project DataGoogleSpannerInstance#project}
   */
   readonly project?: string;
 }
+export interface DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimits {
+}
+
+export function dataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimitsToTerraform(struct?: DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimits): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimitsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimits | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimits | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // max_processing_units - computed: true, optional: false, required: false
+  public get maxProcessingUnits() {
+    return this.getNumberAttribute('max_processing_units');
+  }
+
+  // min_processing_units - computed: true, optional: false, required: false
+  public get minProcessingUnits() {
+    return this.getNumberAttribute('min_processing_units');
+  }
+}
+
+export class DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimitsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimitsOutputReference {
+    return new DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimitsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargets {
+}
+
+export function dataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargetsToTerraform(struct?: DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargets): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargetsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargets | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargets | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // high_priority_cpu_utilization_percent - computed: true, optional: false, required: false
+  public get highPriorityCpuUtilizationPercent() {
+    return this.getNumberAttribute('high_priority_cpu_utilization_percent');
+  }
+
+  // storage_utilization_percent - computed: true, optional: false, required: false
+  public get storageUtilizationPercent() {
+    return this.getNumberAttribute('storage_utilization_percent');
+  }
+}
+
+export class DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargetsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargetsOutputReference {
+    return new DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargetsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSpannerInstanceAutoscalingConfig {
+}
+
+export function dataGoogleSpannerInstanceAutoscalingConfigToTerraform(struct?: DataGoogleSpannerInstanceAutoscalingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSpannerInstanceAutoscalingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSpannerInstanceAutoscalingConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSpannerInstanceAutoscalingConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // autoscaling_limits - computed: true, optional: false, required: false
+  private _autoscalingLimits = new DataGoogleSpannerInstanceAutoscalingConfigAutoscalingLimitsList(this, "autoscaling_limits", false);
+  public get autoscalingLimits() {
+    return this._autoscalingLimits;
+  }
+
+  // autoscaling_targets - computed: true, optional: false, required: false
+  private _autoscalingTargets = new DataGoogleSpannerInstanceAutoscalingConfigAutoscalingTargetsList(this, "autoscaling_targets", false);
+  public get autoscalingTargets() {
+    return this._autoscalingTargets;
+  }
+}
+
+export class DataGoogleSpannerInstanceAutoscalingConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSpannerInstanceAutoscalingConfigOutputReference {
+    return new DataGoogleSpannerInstanceAutoscalingConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance google_spanner_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance google_spanner_instance}
 */
 export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
 
@@ -71,7 +275,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleSpannerInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleSpannerInstance to import
-  * @param importFromId The id of the existing DataGoogleSpannerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleSpannerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleSpannerInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -83,7 +287,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/spanner_instance google_spanner_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/spanner_instance google_spanner_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -94,7 +298,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_spanner_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.5.0',
+        providerVersion: '5.6.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -115,6 +319,12 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // autoscaling_config - computed: true, optional: false, required: false
+  private _autoscalingConfig = new DataGoogleSpannerInstanceAutoscalingConfigList(this, "autoscaling_config", false);
+  public get autoscalingConfig() {
+    return this._autoscalingConfig;
+  }
 
   // config - computed: false, optional: true, required: false
   private _config?: string; 

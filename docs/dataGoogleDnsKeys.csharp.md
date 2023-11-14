@@ -1,6 +1,6 @@
 # `data_google_dns_keys`
 
-Refer to the Terraform Registory for docs: [`data_google_dns_keys`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/dns_keys).
+Refer to the Terraform Registory for docs: [`data_google_dns_keys`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/dns_keys).
 
 # `dataGoogleDnsKeys` Submodule <a name="`dataGoogleDnsKeys` Submodule" id="@cdktf/provider-google.dataGoogleDnsKeys"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_dns_keys`](https://regi
 
 ### DataGoogleDnsKeys <a name="DataGoogleDnsKeys" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/dns_keys google_dns_keys}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/dns_keys google_dns_keys}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.Initializer"></a>
 
@@ -367,7 +367,7 @@ The construct id used in the generated config for the DataGoogleDnsKeys to impor
 
 The id of the existing DataGoogleDnsKeys that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/dns_keys#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/dns_keys#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -733,7 +733,7 @@ public string ManagedZone { get; set; }
 
 The Name of the zone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/dns_keys#managed_zone DataGoogleDnsKeys#managed_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/dns_keys#managed_zone DataGoogleDnsKeys#managed_zone}
 
 ---
 
@@ -747,7 +747,7 @@ public string Project { get; set; }
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/dns_keys#project DataGoogleDnsKeys#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/dns_keys#project DataGoogleDnsKeys#project}
 
 ---
 

@@ -1,6 +1,6 @@
 # `data_google_billing_account_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_billing_account_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/billing_account_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_billing_account_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/billing_account_iam_policy).
 
 # `dataGoogleBillingAccountIamPolicy` Submodule <a name="`dataGoogleBillingAccountIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_billing_account_iam_pol
 
 ### DataGoogleBillingAccountIamPolicy <a name="DataGoogleBillingAccountIamPolicy" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/billing_account_iam_policy google_billing_account_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/billing_account_iam_policy google_billing_account_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.NewDataGoogleBillingAccountIamPolicy(scope Construct, id *string, config DataGoogleBillingAccountIamPolicyConfig) DataGoogleBillingAccountIamPolicy
 ```
@@ -278,7 +278,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -310,7 +310,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -324,7 +324,7 @@ datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformD
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -367,7 +367,7 @@ The construct id used in the generated config for the DataGoogleBillingAccountIa
 
 The id of the existing DataGoogleBillingAccountIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/billing_account_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/billing_account_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -611,7 +611,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebillingaccountiampolicy"
 
 &datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicyConfig {
 	Connection: interface{},
@@ -637,8 +637,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingac
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.property.billingAccountId">BillingAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/billing_account_iam_policy#billing_account_id DataGoogleBillingAccountIamPolicy#billing_account_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/billing_account_iam_policy#id DataGoogleBillingAccountIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.property.billingAccountId">BillingAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/billing_account_iam_policy#billing_account_id DataGoogleBillingAccountIamPolicy#billing_account_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/billing_account_iam_policy#id DataGoogleBillingAccountIamPolicy#id}. |
 
 ---
 
@@ -720,7 +720,7 @@ BillingAccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/billing_account_iam_policy#billing_account_id DataGoogleBillingAccountIamPolicy#billing_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/billing_account_iam_policy#billing_account_id DataGoogleBillingAccountIamPolicy#billing_account_id}.
 
 ---
 
@@ -732,7 +732,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/billing_account_iam_policy#id DataGoogleBillingAccountIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/billing_account_iam_policy#id DataGoogleBillingAccountIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

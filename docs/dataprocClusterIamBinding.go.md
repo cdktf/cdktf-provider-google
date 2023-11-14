@@ -1,6 +1,6 @@
 # `google_dataproc_cluster_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_dataproc_cluster_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding).
+Refer to the Terraform Registory for docs: [`google_dataproc_cluster_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding).
 
 # `dataprocClusterIamBinding` Submodule <a name="`dataprocClusterIamBinding` Submodule" id="@cdktf/provider-google.dataprocClusterIamBinding"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_dataproc_cluster_iam_binding
 
 ### DataprocClusterIamBinding <a name="DataprocClusterIamBinding" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding google_dataproc_cluster_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding google_dataproc_cluster_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.NewDataprocClusterIamBinding(scope Construct, id *string, config DataprocClusterIamBindingConfig) DataprocClusterIamBinding
 ```
@@ -373,7 +373,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.DataprocClusterIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.DataprocClusterIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ dataprocclusteriambinding.DataprocClusterIamBinding_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.DataprocClusterIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ dataprocclusteriambinding.DataprocClusterIamBinding_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.DataprocClusterIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -462,7 +462,7 @@ The construct id used in the generated config for the DataprocClusterIamBinding 
 
 The id of the existing DataprocClusterIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -827,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 &dataprocclusteriambinding.DataprocClusterIamBindingCondition {
 	Expression: *string,
@@ -840,9 +840,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriamb
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#expression DataprocClusterIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#title DataprocClusterIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#description DataprocClusterIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#expression DataprocClusterIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#title DataprocClusterIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#description DataprocClusterIamBinding#description}. |
 
 ---
 
@@ -854,7 +854,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#expression DataprocClusterIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#expression DataprocClusterIamBinding#expression}.
 
 ---
 
@@ -866,7 +866,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#title DataprocClusterIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#title DataprocClusterIamBinding#title}.
 
 ---
 
@@ -878,7 +878,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#description DataprocClusterIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#description DataprocClusterIamBinding#description}.
 
 ---
 
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 &dataprocclusteriambinding.DataprocClusterIamBindingConfig {
 	Connection: interface{},
@@ -900,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriamb
 	Cluster: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocClusterIamBinding.DataprocClusterIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -918,13 +918,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriamb
 | <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.cluster">Cluster</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#cluster DataprocClusterIamBinding#cluster}. |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#members DataprocClusterIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#role DataprocClusterIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.cluster">Cluster</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#cluster DataprocClusterIamBinding#cluster}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#members DataprocClusterIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#role DataprocClusterIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition">DataprocClusterIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#id DataprocClusterIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#project DataprocClusterIamBinding#project}. |
-| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#region DataprocClusterIamBinding#region}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#id DataprocClusterIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#project DataprocClusterIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#region DataprocClusterIamBinding#region}. |
 
 ---
 
@@ -1006,7 +1006,7 @@ Cluster *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#cluster DataprocClusterIamBinding#cluster}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#cluster DataprocClusterIamBinding#cluster}.
 
 ---
 
@@ -1018,7 +1018,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#members DataprocClusterIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#members DataprocClusterIamBinding#members}.
 
 ---
 
@@ -1030,7 +1030,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#role DataprocClusterIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#role DataprocClusterIamBinding#role}.
 
 ---
 
@@ -1044,7 +1044,7 @@ Condition DataprocClusterIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#condition DataprocClusterIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#condition DataprocClusterIamBinding#condition}
 
 ---
 
@@ -1056,7 +1056,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#id DataprocClusterIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#id DataprocClusterIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1071,7 +1071,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#project DataprocClusterIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#project DataprocClusterIamBinding#project}.
 
 ---
 
@@ -1083,7 +1083,7 @@ Region *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/dataproc_cluster_iam_binding#region DataprocClusterIamBinding#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/dataproc_cluster_iam_binding#region DataprocClusterIamBinding#region}.
 
 ---
 
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.NewDataprocClusterIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterIamBindingConditionOutputReference
 ```

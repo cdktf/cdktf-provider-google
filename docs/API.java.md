@@ -744,6 +744,7 @@ The following submodules are available:
 - [identityPlatformTenantDefaultSupportedIdpConfig](./identityPlatformTenantDefaultSupportedIdpConfig.java.md)
 - [identityPlatformTenantInboundSamlConfig](./identityPlatformTenantInboundSamlConfig.java.md)
 - [identityPlatformTenantOauthIdpConfig](./identityPlatformTenantOauthIdpConfig.java.md)
+- [integrationConnectorsConnection](./integrationConnectorsConnection.java.md)
 - [kmsCryptoKey](./kmsCryptoKey.java.md)
 - [kmsCryptoKeyIamBinding](./kmsCryptoKeyIamBinding.java.md)
 - [kmsCryptoKeyIamMember](./kmsCryptoKeyIamMember.java.md)

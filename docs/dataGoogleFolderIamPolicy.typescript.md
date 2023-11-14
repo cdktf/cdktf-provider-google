@@ -1,6 +1,6 @@
 # `data_google_folder_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_folder_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/folder_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_folder_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/folder_iam_policy).
 
 # `dataGoogleFolderIamPolicy` Submodule <a name="`dataGoogleFolderIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleFolderIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_folder_iam_policy`](htt
 
 ### DataGoogleFolderIamPolicy <a name="DataGoogleFolderIamPolicy" id="@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/folder_iam_policy google_folder_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/folder_iam_policy google_folder_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicy.Initializer"></a>
 
@@ -367,7 +367,7 @@ The construct id used in the generated config for the DataGoogleFolderIamPolicy 
 
 The id of the existing DataGoogleFolderIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/folder_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/folder_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -627,8 +627,8 @@ const dataGoogleFolderIamPolicyConfig: dataGoogleFolderIamPolicy.DataGoogleFolde
 | <code><a href="#@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicyConfig.property.folder">folder</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/folder_iam_policy#folder DataGoogleFolderIamPolicy#folder}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/folder_iam_policy#id DataGoogleFolderIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicyConfig.property.folder">folder</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/folder_iam_policy#folder DataGoogleFolderIamPolicy#folder}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleFolderIamPolicy.DataGoogleFolderIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/folder_iam_policy#id DataGoogleFolderIamPolicy#id}. |
 
 ---
 
@@ -710,7 +710,7 @@ public readonly folder: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/folder_iam_policy#folder DataGoogleFolderIamPolicy#folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/folder_iam_policy#folder DataGoogleFolderIamPolicy#folder}.
 
 ---
 
@@ -722,7 +722,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/data-sources/folder_iam_policy#id DataGoogleFolderIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/folder_iam_policy#id DataGoogleFolderIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
