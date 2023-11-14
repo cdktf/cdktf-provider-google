@@ -522,6 +522,7 @@ export * as identityPlatformTenant from './identity-platform-tenant';
 export * as identityPlatformTenantDefaultSupportedIdpConfig from './identity-platform-tenant-default-supported-idp-config';
 export * as identityPlatformTenantInboundSamlConfig from './identity-platform-tenant-inbound-saml-config';
 export * as identityPlatformTenantOauthIdpConfig from './identity-platform-tenant-oauth-idp-config';
+export * as integrationConnectorsConnection from './integration-connectors-connection';
 export * as kmsCryptoKey from './kms-crypto-key';
 export * as kmsCryptoKeyIamBinding from './kms-crypto-key-iam-binding';
 export * as kmsCryptoKeyIamMember from './kms-crypto-key-iam-member';

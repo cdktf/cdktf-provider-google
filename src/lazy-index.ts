@@ -522,6 +522,7 @@ Object.defineProperty(exports, 'identityPlatformTenant', { get: function () { re
 Object.defineProperty(exports, 'identityPlatformTenantDefaultSupportedIdpConfig', { get: function () { return require('./identity-platform-tenant-default-supported-idp-config'); } });
 Object.defineProperty(exports, 'identityPlatformTenantInboundSamlConfig', { get: function () { return require('./identity-platform-tenant-inbound-saml-config'); } });
 Object.defineProperty(exports, 'identityPlatformTenantOauthIdpConfig', { get: function () { return require('./identity-platform-tenant-oauth-idp-config'); } });
+Object.defineProperty(exports, 'integrationConnectorsConnection', { get: function () { return require('./integration-connectors-connection'); } });
 Object.defineProperty(exports, 'kmsCryptoKey', { get: function () { return require('./kms-crypto-key'); } });
 Object.defineProperty(exports, 'kmsCryptoKeyIamBinding', { get: function () { return require('./kms-crypto-key-iam-binding'); } });
 Object.defineProperty(exports, 'kmsCryptoKeyIamMember', { get: function () { return require('./kms-crypto-key-iam-member'); } });

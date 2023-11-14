@@ -1,6 +1,6 @@
 # `google_iap_web_backend_service_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_iap_web_backend_service_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member).
+Refer to the Terraform Registory for docs: [`google_iap_web_backend_service_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member).
 
 # `iapWebBackendServiceIamMember` Submodule <a name="`iapWebBackendServiceIamMember` Submodule" id="@cdktf/provider-google.iapWebBackendServiceIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_iap_web_backend_service_iam_
 
 ### IapWebBackendServiceIamMember <a name="IapWebBackendServiceIamMember" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member google_iap_web_backend_service_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member google_iap_web_backend_service_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMember.Initializer"></a>
 
@@ -455,7 +455,7 @@ The construct id used in the generated config for the IapWebBackendServiceIamMem
 
 The id of the existing IapWebBackendServiceIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -807,9 +807,9 @@ const iapWebBackendServiceIamMemberCondition: iapWebBackendServiceIamMember.IapW
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#expression IapWebBackendServiceIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#title IapWebBackendServiceIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#description IapWebBackendServiceIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#expression IapWebBackendServiceIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#title IapWebBackendServiceIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#description IapWebBackendServiceIamMember#description}. |
 
 ---
 
@@ -821,7 +821,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#expression IapWebBackendServiceIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#expression IapWebBackendServiceIamMember#expression}.
 
 ---
 
@@ -833,7 +833,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#title IapWebBackendServiceIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#title IapWebBackendServiceIamMember#title}.
 
 ---
 
@@ -845,7 +845,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#description IapWebBackendServiceIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#description IapWebBackendServiceIamMember#description}.
 
 ---
 
@@ -870,12 +870,12 @@ const iapWebBackendServiceIamMemberConfig: iapWebBackendServiceIamMember.IapWebB
 | <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#member IapWebBackendServiceIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#role IapWebBackendServiceIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.webBackendService">webBackendService</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#web_backend_service IapWebBackendServiceIamMember#web_backend_service}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#member IapWebBackendServiceIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#role IapWebBackendServiceIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.webBackendService">webBackendService</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#web_backend_service IapWebBackendServiceIamMember#web_backend_service}. |
 | <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition">IapWebBackendServiceIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#id IapWebBackendServiceIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#project IapWebBackendServiceIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#id IapWebBackendServiceIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#project IapWebBackendServiceIamMember#project}. |
 
 ---
 
@@ -957,7 +957,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#member IapWebBackendServiceIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#member IapWebBackendServiceIamMember#member}.
 
 ---
 
@@ -969,7 +969,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#role IapWebBackendServiceIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#role IapWebBackendServiceIamMember#role}.
 
 ---
 
@@ -981,7 +981,7 @@ public readonly webBackendService: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#web_backend_service IapWebBackendServiceIamMember#web_backend_service}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#web_backend_service IapWebBackendServiceIamMember#web_backend_service}.
 
 ---
 
@@ -995,7 +995,7 @@ public readonly condition: IapWebBackendServiceIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#condition IapWebBackendServiceIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#condition IapWebBackendServiceIamMember#condition}
 
 ---
 
@@ -1007,7 +1007,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#id IapWebBackendServiceIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#id IapWebBackendServiceIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1022,7 +1022,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/iap_web_backend_service_iam_member#project IapWebBackendServiceIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/iap_web_backend_service_iam_member#project IapWebBackendServiceIamMember#project}.
 
 ---
 

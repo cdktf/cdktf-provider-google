@@ -744,6 +744,7 @@ The following submodules are available:
 - [identityPlatformTenantDefaultSupportedIdpConfig](./identityPlatformTenantDefaultSupportedIdpConfig.python.md)
 - [identityPlatformTenantInboundSamlConfig](./identityPlatformTenantInboundSamlConfig.python.md)
 - [identityPlatformTenantOauthIdpConfig](./identityPlatformTenantOauthIdpConfig.python.md)
+- [integrationConnectorsConnection](./integrationConnectorsConnection.python.md)
 - [kmsCryptoKey](./kmsCryptoKey.python.md)
 - [kmsCryptoKeyIamBinding](./kmsCryptoKeyIamBinding.python.md)
 - [kmsCryptoKeyIamMember](./kmsCryptoKeyIamMember.python.md)

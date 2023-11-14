@@ -744,6 +744,7 @@ The following submodules are available:
 - [identityPlatformTenantDefaultSupportedIdpConfig](./identityPlatformTenantDefaultSupportedIdpConfig.typescript.md)
 - [identityPlatformTenantInboundSamlConfig](./identityPlatformTenantInboundSamlConfig.typescript.md)
 - [identityPlatformTenantOauthIdpConfig](./identityPlatformTenantOauthIdpConfig.typescript.md)
+- [integrationConnectorsConnection](./integrationConnectorsConnection.typescript.md)
 - [kmsCryptoKey](./kmsCryptoKey.typescript.md)
 - [kmsCryptoKeyIamBinding](./kmsCryptoKeyIamBinding.typescript.md)
 - [kmsCryptoKeyIamMember](./kmsCryptoKeyIamMember.typescript.md)

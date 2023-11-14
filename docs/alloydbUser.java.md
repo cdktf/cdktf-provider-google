@@ -1,6 +1,6 @@
 # `google_alloydb_user`
 
-Refer to the Terraform Registory for docs: [`google_alloydb_user`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user).
+Refer to the Terraform Registory for docs: [`google_alloydb_user`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user).
 
 # `alloydbUser` Submodule <a name="`alloydbUser` Submodule" id="@cdktf/provider-google.alloydbUser"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_alloydb_user`](https://regis
 
 ### AlloydbUser <a name="AlloydbUser" id="@cdktf/provider-google.alloydbUser.AlloydbUser"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user google_alloydb_user}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user google_alloydb_user}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer"></a>
 
@@ -52,7 +52,7 @@ AlloydbUser.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer.parameter.userId">userId</a></code> | <code>java.lang.String</code> | The database role name of the user. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer.parameter.userType">userType</a></code> | <code>java.lang.String</code> | The type of this user. Possible values: ["ALLOYDB_BUILT_IN", "ALLOYDB_IAM_USER"]. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer.parameter.databaseRoles">databaseRoles</a></code> | <code>java.util.List<java.lang.String></code> | List of database roles this database user has. |
-| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#id AlloydbUser#id}. |
+| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#id AlloydbUser#id}. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer.parameter.password">password</a></code> | <code>java.lang.String</code> | Password for this database user. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUser.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts">AlloydbUserTimeouts</a></code> | timeouts block. |
 
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 Identifies the alloydb cluster. Must be in the format 'projects/{project}/locations/{location}/clusters/{cluster_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#cluster AlloydbUser#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#cluster AlloydbUser#cluster}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The database role name of the user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#user_id AlloydbUser#user_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#user_id AlloydbUser#user_id}
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of this user. Possible values: ["ALLOYDB_BUILT_IN", "ALLOYDB_IAM_USER"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#user_type AlloydbUser#user_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#user_type AlloydbUser#user_type}
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 List of database roles this database user has.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#database_roles AlloydbUser#database_roles}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#database_roles AlloydbUser#database_roles}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#id AlloydbUser#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#id AlloydbUser#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -175,7 +175,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Password for this database user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#password AlloydbUser#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#password AlloydbUser#password}
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#timeouts AlloydbUser#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#timeouts AlloydbUser#timeouts}
 
 ---
 
@@ -603,7 +603,7 @@ The construct id used in the generated config for the AlloydbUser to import.
 
 The id of the existing AlloydbUser that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1007,7 +1007,7 @@ AlloydbUserConfig.builder()
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserConfig.property.userId">userId</a></code> | <code>java.lang.String</code> | The database role name of the user. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserConfig.property.userType">userType</a></code> | <code>java.lang.String</code> | The type of this user. Possible values: ["ALLOYDB_BUILT_IN", "ALLOYDB_IAM_USER"]. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserConfig.property.databaseRoles">databaseRoles</a></code> | <code>java.util.List<java.lang.String></code> | List of database roles this database user has. |
-| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#id AlloydbUser#id}. |
+| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#id AlloydbUser#id}. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserConfig.property.password">password</a></code> | <code>java.lang.String</code> | Password for this database user. |
 | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts">AlloydbUserTimeouts</a></code> | timeouts block. |
 
@@ -1093,7 +1093,7 @@ public java.lang.String getCluster();
 
 Identifies the alloydb cluster. Must be in the format 'projects/{project}/locations/{location}/clusters/{cluster_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#cluster AlloydbUser#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#cluster AlloydbUser#cluster}
 
 ---
 
@@ -1107,7 +1107,7 @@ public java.lang.String getUserId();
 
 The database role name of the user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#user_id AlloydbUser#user_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#user_id AlloydbUser#user_id}
 
 ---
 
@@ -1121,7 +1121,7 @@ public java.lang.String getUserType();
 
 The type of this user. Possible values: ["ALLOYDB_BUILT_IN", "ALLOYDB_IAM_USER"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#user_type AlloydbUser#user_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#user_type AlloydbUser#user_type}
 
 ---
 
@@ -1135,7 +1135,7 @@ public java.util.List<java.lang.String> getDatabaseRoles();
 
 List of database roles this database user has.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#database_roles AlloydbUser#database_roles}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#database_roles AlloydbUser#database_roles}
 
 ---
 
@@ -1147,7 +1147,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#id AlloydbUser#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#id AlloydbUser#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1164,7 +1164,7 @@ public java.lang.String getPassword();
 
 Password for this database user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#password AlloydbUser#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#password AlloydbUser#password}
 
 ---
 
@@ -1178,7 +1178,7 @@ public AlloydbUserTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#timeouts AlloydbUser#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#timeouts AlloydbUser#timeouts}
 
 ---
 
@@ -1200,9 +1200,9 @@ AlloydbUserTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#create AlloydbUser#create}. |
-| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#delete AlloydbUser#delete}. |
-| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#update AlloydbUser#update}. |
+| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#create AlloydbUser#create}. |
+| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#delete AlloydbUser#delete}. |
+| <code><a href="#@cdktf/provider-google.alloydbUser.AlloydbUserTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#update AlloydbUser#update}. |
 
 ---
 
@@ -1214,7 +1214,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#create AlloydbUser#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#create AlloydbUser#create}.
 
 ---
 
@@ -1226,7 +1226,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#delete AlloydbUser#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#delete AlloydbUser#delete}.
 
 ---
 
@@ -1238,7 +1238,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/alloydb_user#update AlloydbUser#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/alloydb_user#update AlloydbUser#update}.
 
 ---
 

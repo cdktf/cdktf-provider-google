@@ -744,6 +744,7 @@ The following submodules are available:
 - [identityPlatformTenantDefaultSupportedIdpConfig](./identityPlatformTenantDefaultSupportedIdpConfig.go.md)
 - [identityPlatformTenantInboundSamlConfig](./identityPlatformTenantInboundSamlConfig.go.md)
 - [identityPlatformTenantOauthIdpConfig](./identityPlatformTenantOauthIdpConfig.go.md)
+- [integrationConnectorsConnection](./integrationConnectorsConnection.go.md)
 - [kmsCryptoKey](./kmsCryptoKey.go.md)
 - [kmsCryptoKeyIamBinding](./kmsCryptoKeyIamBinding.go.md)
 - [kmsCryptoKeyIamMember](./kmsCryptoKeyIamMember.go.md)

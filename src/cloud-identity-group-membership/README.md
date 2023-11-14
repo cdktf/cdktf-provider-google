@@ -1,3 +1,3 @@
 # `google_cloud_identity_group_membership`
 
-Refer to the Terraform Registory for docs: [`google_cloud_identity_group_membership`](https://registry.terraform.io/providers/hashicorp/google/5.5.0/docs/resources/cloud_identity_group_membership).
+Refer to the Terraform Registory for docs: [`google_cloud_identity_group_membership`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/cloud_identity_group_membership).
