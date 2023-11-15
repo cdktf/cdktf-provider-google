@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebRegionBackendServiceIamPolicy.IapWebRegionBackendServiceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebregionbackendserviceiampolicy"
 
 iapwebregionbackendserviceiampolicy.NewIapWebRegionBackendServiceIamPolicy(scope Construct, id *string, config IapWebRegionBackendServiceIamPolicyConfig) IapWebRegionBackendServiceIamPolicy
 ```
@@ -353,7 +353,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapWebRegionBackendServiceIamPolicy.IapWebRegionBackendServiceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebregionbackendserviceiampolicy"
 
 iapwebregionbackendserviceiampolicy.IapWebRegionBackendServiceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapWebRegionBackendServiceIamPolicy.IapWebRegionBackendServiceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebregionbackendserviceiampolicy"
 
 iapwebregionbackendserviceiampolicy.IapWebRegionBackendServiceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ iapwebregionbackendserviceiampolicy.IapWebRegionBackendServiceIamPolicy_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapWebRegionBackendServiceIamPolicy.IapWebRegionBackendServiceIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebregionbackendserviceiampolicy"
 
 iapwebregionbackendserviceiampolicy.IapWebRegionBackendServiceIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -413,7 +413,7 @@ iapwebregionbackendserviceiampolicy.IapWebRegionBackendServiceIamPolicy_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapWebRegionBackendServiceIamPolicy.IapWebRegionBackendServiceIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebregionbackendserviceiampolicy"
 
 iapwebregionbackendserviceiampolicy.IapWebRegionBackendServiceIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -763,7 +763,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebRegionBackendServiceIamPolicy.IapWebRegionBackendServiceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebregionbackendserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebregionbackendserviceiampolicy"
 
 &iapwebregionbackendserviceiampolicy.IapWebRegionBackendServiceIamPolicyConfig {
 	Connection: interface{},

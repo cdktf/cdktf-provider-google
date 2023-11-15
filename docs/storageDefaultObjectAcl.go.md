@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageDefaultObjectAcl.StorageDefaultObjectAcl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagedefaultobjectacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagedefaultobjectacl"
 
 storagedefaultobjectacl.NewStorageDefaultObjectAcl(scope Construct, id *string, config StorageDefaultObjectAclConfig) StorageDefaultObjectAcl
 ```
@@ -346,7 +346,7 @@ func ResetRoleEntity()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageDefaultObjectAcl.StorageDefaultObjectAcl.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagedefaultobjectacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagedefaultobjectacl"
 
 storagedefaultobjectacl.StorageDefaultObjectAcl_IsConstruct(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageDefaultObjectAcl.StorageDefaultObjectAcl.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagedefaultobjectacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagedefaultobjectacl"
 
 storagedefaultobjectacl.StorageDefaultObjectAcl_IsTerraformElement(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ storagedefaultobjectacl.StorageDefaultObjectAcl_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageDefaultObjectAcl.StorageDefaultObjectAcl.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagedefaultobjectacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagedefaultobjectacl"
 
 storagedefaultobjectacl.StorageDefaultObjectAcl_IsTerraformResource(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ storagedefaultobjectacl.StorageDefaultObjectAcl_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.storageDefaultObjectAcl.StorageDefaultObjectAcl.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagedefaultobjectacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagedefaultobjectacl"
 
 storagedefaultobjectacl.StorageDefaultObjectAcl_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -701,7 +701,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageDefaultObjectAcl.StorageDefaultObjectAclConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagedefaultobjectacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagedefaultobjectacl"
 
 &storagedefaultobjectacl.StorageDefaultObjectAclConfig {
 	Connection: interface{},
