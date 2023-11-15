@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfig(scope Construct, id *string, config IdentityPlatformInboundSamlConfigConfig) IdentityPlatformInboundSamlConfig
 ```
@@ -399,7 +399,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfig_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfig_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfig_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -864,7 +864,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 &identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfigConfig {
 	Connection: interface{},
@@ -875,13 +875,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminbound
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	DisplayName: *string,
-	IdpConfig: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigIdpConfig,
+	IdpConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigIdpConfig,
 	Name: *string,
-	SpConfig: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigSpConfig,
+	SpConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigSpConfig,
 	Enabled: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigTimeouts,
 }
 ```
 
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigIdpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 &identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfigIdpConfig {
 	IdpCertificates: interface{},
@@ -1179,7 +1179,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 &identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates {
 	X509Certificate: *string,
@@ -1213,7 +1213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigSpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 &identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfigSpConfig {
 	CallbackUri: *string,
@@ -1263,7 +1263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigSpConfigSpCertificates.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 &identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfigSpConfigSpCertificates {
 
@@ -1276,7 +1276,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminbound
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 &identityplatforminboundsamlconfig.IdentityPlatformInboundSamlConfigTimeouts {
 	Create: *string,
@@ -1338,7 +1338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesList
 ```
@@ -1481,7 +1481,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesOutputReference
 ```
@@ -1777,7 +1777,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigIdpConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfigIdpConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformInboundSamlConfigIdpConfigOutputReference
 ```
@@ -2134,7 +2134,7 @@ func InternalValue() IdentityPlatformInboundSamlConfigIdpConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigSpConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfigSpConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformInboundSamlConfigSpConfigOutputReference
 ```
@@ -2452,7 +2452,7 @@ func InternalValue() IdentityPlatformInboundSamlConfigSpConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigSpConfigSpCertificatesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfigSpConfigSpCertificatesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IdentityPlatformInboundSamlConfigSpConfigSpCertificatesList
 ```
@@ -2584,7 +2584,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigSpConfigSpCertificatesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfigSpConfigSpCertificatesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IdentityPlatformInboundSamlConfigSpConfigSpCertificatesOutputReference
 ```
@@ -2862,7 +2862,7 @@ func InternalValue() IdentityPlatformInboundSamlConfigSpConfigSpCertificates
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformInboundSamlConfig.IdentityPlatformInboundSamlConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/identityplatforminboundsamlconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/identityplatforminboundsamlconfig"
 
 identityplatforminboundsamlconfig.NewIdentityPlatformInboundSamlConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformInboundSamlConfigTimeoutsOutputReference
 ```
