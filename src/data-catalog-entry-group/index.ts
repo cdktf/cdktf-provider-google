@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group
+// https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,57 +15,57 @@ export interface DataCatalogEntryGroupConfig extends cdktf.TerraformMetaArgument
   /**
   * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#description DataCatalogEntryGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#description DataCatalogEntryGroup#description}
   */
   readonly description?: string;
   /**
   * A short name to identify the entry group, for example, "analytics data - jan 2011".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
   */
   readonly displayName?: string;
   /**
   * The id of the entry group to create. The id must begin with a letter or underscore,
   * contain only English letters, numbers and underscores, and be at most 64 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
   */
   readonly entryGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}
   */
   readonly project?: string;
   /**
   * EntryGroup location region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#region DataCatalogEntryGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#region DataCatalogEntryGroup#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
   */
   readonly timeouts?: DataCatalogEntryGroupTimeouts;
 }
 export interface DataCatalogEntryGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}
   */
   readonly update?: string;
 }
@@ -186,7 +186,7 @@ export class DataCatalogEntryGroupTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group google_data_catalog_entry_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group google_data_catalog_entry_group}
 */
 export class DataCatalogEntryGroup extends cdktf.TerraformResource {
 
@@ -202,7 +202,7 @@ export class DataCatalogEntryGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataCatalogEntryGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataCatalogEntryGroup to import
-  * @param importFromId The id of the existing DataCatalogEntryGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataCatalogEntryGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataCatalogEntryGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -214,7 +214,7 @@ export class DataCatalogEntryGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/data_catalog_entry_group google_data_catalog_entry_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group google_data_catalog_entry_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -225,7 +225,7 @@ export class DataCatalogEntryGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_entry_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.6.0',
+        providerVersion: '5.7.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

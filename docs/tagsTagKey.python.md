@@ -1,6 +1,6 @@
 # `google_tags_tag_key`
 
-Refer to the Terraform Registory for docs: [`google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key).
+Refer to the Terraform Registory for docs: [`google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key).
 
 # `tagsTagKey` Submodule <a name="`tagsTagKey` Submodule" id="@cdktf/provider-google.tagsTagKey"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_tags_tag_key`](https://regis
 
 ### TagsTagKey <a name="TagsTagKey" id="@cdktf/provider-google.tagsTagKey.TagsTagKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key google_tags_tag_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key google_tags_tag_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer"></a>
 
@@ -49,7 +49,7 @@ tagsTagKey.TagsTagKey(
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.parent">parent</a></code> | <code>str</code> | Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id} or projects/{project_id_or_number}. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.shortName">short_name</a></code> | <code>str</code> | Input only. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.description">description</a></code> | <code>str</code> | User-assigned description of the TagKey. Must not exceed 256 characters. |
-| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#id TagsTagKey#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#id TagsTagKey#id}. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.purpose">purpose</a></code> | <code>str</code> | Optional. A purpose cannot be changed once set. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.purposeData">purpose_data</a></code> | <code>typing.Mapping[str]</code> | Optional. Purpose data cannot be changed once set. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts">TagsTagKeyTimeouts</a></code> | timeouts block. |
@@ -122,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id} or projects/{project_id_or_number}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#parent TagsTagKey#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#parent TagsTagKey#parent}
 
 ---
 
@@ -136,7 +136,7 @@ The user friendly name for a TagKey. The short name should be unique for TagKeys
 
 The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#short_name TagsTagKey#short_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#short_name TagsTagKey#short_name}
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 User-assigned description of the TagKey. Must not exceed 256 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#description TagsTagKey#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#description TagsTagKey#description}
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#id TagsTagKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#id TagsTagKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -169,7 +169,7 @@ Optional. A purpose cannot be changed once set.
 
 A purpose denotes that this Tag is intended for use in policies of a specific policy engine, and will involve that policy engine in management operations involving this Tag. Possible values: ["GCE_FIREWALL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#purpose TagsTagKey#purpose}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#purpose TagsTagKey#purpose}
 
 ---
 
@@ -181,7 +181,7 @@ Optional. Purpose data cannot be changed once set.
 
 Purpose data corresponds to the policy system that the tag is intended for. For example, the GCE_FIREWALL purpose expects data in the following format: 'network = "<project-name>/<vpc-name>"'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#purpose_data TagsTagKey#purpose_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#purpose_data TagsTagKey#purpose_data}
 
 ---
 
@@ -191,7 +191,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#timeouts TagsTagKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#timeouts TagsTagKey#timeouts}
 
 ---
 
@@ -516,7 +516,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#create TagsTagKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#create TagsTagKey#create}.
 
 ---
 
@@ -524,7 +524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#delete TagsTagKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#delete TagsTagKey#delete}.
 
 ---
 
@@ -532,7 +532,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#update TagsTagKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#update TagsTagKey#update}.
 
 ---
 
@@ -680,7 +680,7 @@ The construct id used in the generated config for the TagsTagKey to import.
 
 The id of the existing TagsTagKey that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1112,7 +1112,7 @@ tagsTagKey.TagsTagKeyConfig(
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.parent">parent</a></code> | <code>str</code> | Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id} or projects/{project_id_or_number}. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.shortName">short_name</a></code> | <code>str</code> | Input only. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.description">description</a></code> | <code>str</code> | User-assigned description of the TagKey. Must not exceed 256 characters. |
-| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#id TagsTagKey#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#id TagsTagKey#id}. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.purpose">purpose</a></code> | <code>str</code> | Optional. A purpose cannot be changed once set. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.purposeData">purpose_data</a></code> | <code>typing.Mapping[str]</code> | Optional. Purpose data cannot be changed once set. |
 | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts">TagsTagKeyTimeouts</a></code> | timeouts block. |
@@ -1199,7 +1199,7 @@ parent: str
 
 Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id} or projects/{project_id_or_number}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#parent TagsTagKey#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#parent TagsTagKey#parent}
 
 ---
 
@@ -1217,7 +1217,7 @@ The user friendly name for a TagKey. The short name should be unique for TagKeys
 
 The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#short_name TagsTagKey#short_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#short_name TagsTagKey#short_name}
 
 ---
 
@@ -1231,7 +1231,7 @@ description: str
 
 User-assigned description of the TagKey. Must not exceed 256 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#description TagsTagKey#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#description TagsTagKey#description}
 
 ---
 
@@ -1243,7 +1243,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#id TagsTagKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#id TagsTagKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1262,7 +1262,7 @@ Optional. A purpose cannot be changed once set.
 
 A purpose denotes that this Tag is intended for use in policies of a specific policy engine, and will involve that policy engine in management operations involving this Tag. Possible values: ["GCE_FIREWALL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#purpose TagsTagKey#purpose}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#purpose TagsTagKey#purpose}
 
 ---
 
@@ -1278,7 +1278,7 @@ Optional. Purpose data cannot be changed once set.
 
 Purpose data corresponds to the policy system that the tag is intended for. For example, the GCE_FIREWALL purpose expects data in the following format: 'network = "<project-name>/<vpc-name>"'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#purpose_data TagsTagKey#purpose_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#purpose_data TagsTagKey#purpose_data}
 
 ---
 
@@ -1292,7 +1292,7 @@ timeouts: TagsTagKeyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#timeouts TagsTagKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#timeouts TagsTagKey#timeouts}
 
 ---
 
@@ -1314,9 +1314,9 @@ tagsTagKey.TagsTagKeyTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#create TagsTagKey#create}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#delete TagsTagKey#delete}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#update TagsTagKey#update}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#create TagsTagKey#create}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#delete TagsTagKey#delete}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#update TagsTagKey#update}. |
 
 ---
 
@@ -1328,7 +1328,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#create TagsTagKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#create TagsTagKey#create}.
 
 ---
 
@@ -1340,7 +1340,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#delete TagsTagKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#delete TagsTagKey#delete}.
 
 ---
 
@@ -1352,7 +1352,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/tags_tag_key#update TagsTagKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key#update TagsTagKey#update}.
 
 ---
 

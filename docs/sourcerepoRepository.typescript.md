@@ -1,6 +1,6 @@
 # `google_sourcerepo_repository`
 
-Refer to the Terraform Registory for docs: [`google_sourcerepo_repository`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository).
+Refer to the Terraform Registory for docs: [`google_sourcerepo_repository`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository).
 
 # `sourcerepoRepository` Submodule <a name="`sourcerepoRepository` Submodule" id="@cdktf/provider-google.sourcerepoRepository"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_sourcerepo_repository`](http
 
 ### SourcerepoRepository <a name="SourcerepoRepository" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository google_sourcerepo_repository}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository google_sourcerepo_repository}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.Initializer"></a>
 
@@ -475,7 +475,7 @@ The construct id used in the generated config for the SourcerepoRepository to im
 
 The id of the existing SourcerepoRepository that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -824,8 +824,8 @@ const sourcerepoRepositoryConfig: sourcerepoRepository.SourcerepoRepositoryConfi
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.name">name</a></code> | <code>string</code> | Resource name of the repository, of the form '{{repo}}'. The repo name may contain slashes. eg, 'name/with/slash'. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}. |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.pubsubConfigs">pubsubConfigs</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs">SourcerepoRepositoryPubsubConfigs</a>[]</code> | pubsub_configs block. |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts">SourcerepoRepositoryTimeouts</a></code> | timeouts block. |
 
@@ -911,7 +911,7 @@ public readonly name: string;
 
 Resource name of the repository, of the form '{{repo}}'. The repo name may contain slashes. eg, 'name/with/slash'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#name SourcerepoRepository#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#name SourcerepoRepository#name}
 
 ---
 
@@ -923,7 +923,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -938,7 +938,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}.
 
 ---
 
@@ -952,7 +952,7 @@ public readonly pubsubConfigs: IResolvable | SourcerepoRepositoryPubsubConfigs[]
 
 pubsub_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
 
 ---
 
@@ -966,7 +966,7 @@ public readonly timeouts: SourcerepoRepositoryTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
 
 ---
 
@@ -985,7 +985,7 @@ const sourcerepoRepositoryPubsubConfigs: sourcerepoRepository.SourcerepoReposito
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.messageFormat">messageFormat</a></code> | <code>string</code> | The format of the Cloud Pub/Sub messages. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.topic">topic</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.topic">topic</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}. |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.serviceAccountEmail">serviceAccountEmail</a></code> | <code>string</code> | Email address of the service account used for publishing Cloud Pub/Sub messages. |
 
 ---
@@ -1003,7 +1003,7 @@ The format of the Cloud Pub/Sub messages.
 PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 - JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#message_format SourcerepoRepository#message_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#message_format SourcerepoRepository#message_format}
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly topic: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}.
 
 ---
 
@@ -1033,7 +1033,7 @@ This service account needs to be in the same project as the PubsubConfig. When a
 the caller needs to have iam.serviceAccounts.actAs permission on this service account.
 If unspecified, it defaults to the compute engine default service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
 
 ---
 
@@ -1051,9 +1051,9 @@ const sourcerepoRepositoryTimeouts: sourcerepoRepository.SourcerepoRepositoryTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}. |
 
 ---
 
@@ -1065,7 +1065,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}.
 
 ---
 
@@ -1077,7 +1077,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}.
 
 ---
 
@@ -1089,7 +1089,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}.
 
 ---
 

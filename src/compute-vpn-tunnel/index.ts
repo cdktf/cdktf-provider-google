@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel
+// https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#description ComputeVpnTunnel#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#description ComputeVpnTunnel#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#id ComputeVpnTunnel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#id ComputeVpnTunnel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,16 +30,25 @@ export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
   * peer VPN gateway.
   * Acceptable IKE versions are 1 or 2. Default version is 2.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#ike_version ComputeVpnTunnel#ike_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#ike_version ComputeVpnTunnel#ike_version}
   */
   readonly ikeVersion?: number;
+  /**
+  * Labels to apply to this VpnTunnel.
+  * 
+  * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  * Please refer to the field 'effective_labels' for all of the labels present on the resource.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#labels ComputeVpnTunnel#labels}
+  */
+  readonly labels?: { [key: string]: string };
   /**
   * Local traffic selector to use when establishing the VPN tunnel with
   * peer VPN gateway. The value should be a CIDR formatted string,
   * for example '192.168.0.0/16'. The ranges should be disjoint.
   * Only IPv4 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#local_traffic_selector ComputeVpnTunnel#local_traffic_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#local_traffic_selector ComputeVpnTunnel#local_traffic_selector}
   */
   readonly localTrafficSelector?: string[];
   /**
@@ -51,19 +60,19 @@ export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
   * be a dash, lowercase letter, or digit,
   * except the last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#name ComputeVpnTunnel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#name ComputeVpnTunnel#name}
   */
   readonly name: string;
   /**
   * URL of the peer side external VPN gateway to which this VPN tunnel is connected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#peer_external_gateway ComputeVpnTunnel#peer_external_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#peer_external_gateway ComputeVpnTunnel#peer_external_gateway}
   */
   readonly peerExternalGateway?: string;
   /**
   * The interface ID of the external VPN gateway to which this VPN tunnel is connected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#peer_external_gateway_interface ComputeVpnTunnel#peer_external_gateway_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#peer_external_gateway_interface ComputeVpnTunnel#peer_external_gateway_interface}
   */
   readonly peerExternalGatewayInterface?: number;
   /**
@@ -72,23 +81,23 @@ export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
   * ID in the peer GCP VPN gateway.
   * This field must reference a 'google_compute_ha_vpn_gateway' resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#peer_gcp_gateway ComputeVpnTunnel#peer_gcp_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#peer_gcp_gateway ComputeVpnTunnel#peer_gcp_gateway}
   */
   readonly peerGcpGateway?: string;
   /**
   * IP address of the peer VPN gateway. Only IPv4 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#peer_ip ComputeVpnTunnel#peer_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#peer_ip ComputeVpnTunnel#peer_ip}
   */
   readonly peerIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#project ComputeVpnTunnel#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#project ComputeVpnTunnel#project}
   */
   readonly project?: string;
   /**
   * The region where the tunnel is located. If unset, is set to the region of 'target_vpn_gateway'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#region ComputeVpnTunnel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#region ComputeVpnTunnel#region}
   */
   readonly region?: string;
   /**
@@ -97,27 +106,27 @@ export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
   * for example '192.168.0.0/16'. The ranges should be disjoint.
   * Only IPv4 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#remote_traffic_selector ComputeVpnTunnel#remote_traffic_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#remote_traffic_selector ComputeVpnTunnel#remote_traffic_selector}
   */
   readonly remoteTrafficSelector?: string[];
   /**
   * URL of router resource to be used for dynamic routing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#router ComputeVpnTunnel#router}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#router ComputeVpnTunnel#router}
   */
   readonly router?: string;
   /**
   * Shared secret used to set the secure session between the Cloud VPN
   * gateway and the peer VPN gateway.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#shared_secret ComputeVpnTunnel#shared_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#shared_secret ComputeVpnTunnel#shared_secret}
   */
   readonly sharedSecret: string;
   /**
   * URL of the Target VPN gateway with which this VPN tunnel is
   * associated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#target_vpn_gateway ComputeVpnTunnel#target_vpn_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#target_vpn_gateway ComputeVpnTunnel#target_vpn_gateway}
   */
   readonly targetVpnGateway?: string;
   /**
@@ -125,31 +134,35 @@ export interface ComputeVpnTunnelConfig extends cdktf.TerraformMetaArguments {
   * This must be used if a High Availability VPN gateway resource is created.
   * This field must reference a 'google_compute_ha_vpn_gateway' resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#vpn_gateway ComputeVpnTunnel#vpn_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#vpn_gateway ComputeVpnTunnel#vpn_gateway}
   */
   readonly vpnGateway?: string;
   /**
   * The interface ID of the VPN gateway with which this VPN tunnel is associated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#vpn_gateway_interface ComputeVpnTunnel#vpn_gateway_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#vpn_gateway_interface ComputeVpnTunnel#vpn_gateway_interface}
   */
   readonly vpnGatewayInterface?: number;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#timeouts ComputeVpnTunnel#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#timeouts ComputeVpnTunnel#timeouts}
   */
   readonly timeouts?: ComputeVpnTunnelTimeouts;
 }
 export interface ComputeVpnTunnelTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#create ComputeVpnTunnel#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#create ComputeVpnTunnel#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#delete ComputeVpnTunnel#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#delete ComputeVpnTunnel#delete}
   */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#update ComputeVpnTunnel#update}
+  */
+  readonly update?: string;
 }
 
 export function computeVpnTunnelTimeoutsToTerraform(struct?: ComputeVpnTunnelTimeouts | cdktf.IResolvable): any {
@@ -160,6 +173,7 @@ export function computeVpnTunnelTimeoutsToTerraform(struct?: ComputeVpnTunnelTim
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -189,6 +203,10 @@ export class ComputeVpnTunnelTimeoutsOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -198,6 +216,7 @@ export class ComputeVpnTunnelTimeoutsOutputReference extends cdktf.ComplexObject
       this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
+      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -208,6 +227,7 @@ export class ComputeVpnTunnelTimeoutsOutputReference extends cdktf.ComplexObject
       this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
+      this._update = value.update;
     }
   }
 
@@ -242,10 +262,26 @@ export class ComputeVpnTunnelTimeoutsOutputReference extends cdktf.ComplexObject
   public get deleteInput() {
     return this._delete;
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel google_compute_vpn_tunnel}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel google_compute_vpn_tunnel}
 */
 export class ComputeVpnTunnel extends cdktf.TerraformResource {
 
@@ -261,7 +297,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeVpnTunnel resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeVpnTunnel to import
-  * @param importFromId The id of the existing ComputeVpnTunnel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeVpnTunnel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeVpnTunnel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -273,7 +309,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_vpn_tunnel google_compute_vpn_tunnel} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_vpn_tunnel google_compute_vpn_tunnel} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -284,7 +320,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_vpn_tunnel',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.6.0',
+        providerVersion: '5.7.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -298,6 +334,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
     this._description = config.description;
     this._id = config.id;
     this._ikeVersion = config.ikeVersion;
+    this._labels = config.labels;
     this._localTrafficSelector = config.localTrafficSelector;
     this._name = config.name;
     this._peerExternalGateway = config.peerExternalGateway;
@@ -345,6 +382,12 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
     return this.getStringAttribute('detailed_status');
   }
 
+  // effective_labels - computed: true, optional: false, required: false
+  private _effectiveLabels = new cdktf.StringMap(this, "effective_labels");
+  public get effectiveLabels() {
+    return this._effectiveLabels;
+  }
+
   // id - computed: true, optional: true, required: false
   private _id?: string; 
   public get id() {
@@ -375,6 +418,22 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ikeVersionInput() {
     return this._ikeVersion;
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string }; 
+  public get labels() {
+    return this.getStringMapAttribute('labels');
+  }
+  public set labels(value: { [key: string]: string }) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels;
   }
 
   // local_traffic_selector - computed: true, optional: true, required: false
@@ -573,6 +632,12 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
     return this._targetVpnGateway;
   }
 
+  // terraform_labels - computed: true, optional: false, required: false
+  private _terraformLabels = new cdktf.StringMap(this, "terraform_labels");
+  public get terraformLabels() {
+    return this._terraformLabels;
+  }
+
   // tunnel_id - computed: true, optional: false, required: false
   public get tunnelId() {
     return this.getStringAttribute('tunnel_id');
@@ -635,6 +700,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       ike_version: cdktf.numberToTerraform(this._ikeVersion),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       local_traffic_selector: cdktf.listMapper(cdktf.stringToTerraform, false)(this._localTrafficSelector),
       name: cdktf.stringToTerraform(this._name),
       peer_external_gateway: cdktf.stringToTerraform(this._peerExternalGateway),

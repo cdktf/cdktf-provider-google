@@ -1,6 +1,6 @@
 # `google_compute_subnetwork_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_compute_subnetwork_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member).
+Refer to the Terraform Registory for docs: [`google_compute_subnetwork_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member).
 
 # `computeSubnetworkIamMember` Submodule <a name="`computeSubnetworkIamMember` Submodule" id="@cdktf/provider-google.computeSubnetworkIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_subnetwork_iam_membe
 
 ### ComputeSubnetworkIamMember <a name="ComputeSubnetworkIamMember" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member google_compute_subnetwork_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member google_compute_subnetwork_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMember.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the ComputeSubnetworkIamMember
 
 The id of the existing ComputeSubnetworkIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -836,9 +836,9 @@ const computeSubnetworkIamMemberCondition: computeSubnetworkIamMember.ComputeSub
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#expression ComputeSubnetworkIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#title ComputeSubnetworkIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#description ComputeSubnetworkIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#expression ComputeSubnetworkIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#title ComputeSubnetworkIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#description ComputeSubnetworkIamMember#description}. |
 
 ---
 
@@ -850,7 +850,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#expression ComputeSubnetworkIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#expression ComputeSubnetworkIamMember#expression}.
 
 ---
 
@@ -862,7 +862,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#title ComputeSubnetworkIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#title ComputeSubnetworkIamMember#title}.
 
 ---
 
@@ -874,7 +874,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#description ComputeSubnetworkIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#description ComputeSubnetworkIamMember#description}.
 
 ---
 
@@ -899,13 +899,13 @@ const computeSubnetworkIamMemberConfig: computeSubnetworkIamMember.ComputeSubnet
 | <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#member ComputeSubnetworkIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#role ComputeSubnetworkIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.subnetwork">subnetwork</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#subnetwork ComputeSubnetworkIamMember#subnetwork}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#member ComputeSubnetworkIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#role ComputeSubnetworkIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.subnetwork">subnetwork</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#subnetwork ComputeSubnetworkIamMember#subnetwork}. |
 | <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition">ComputeSubnetworkIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#id ComputeSubnetworkIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#project ComputeSubnetworkIamMember#project}. |
-| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.region">region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#region ComputeSubnetworkIamMember#region}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#id ComputeSubnetworkIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#project ComputeSubnetworkIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.property.region">region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#region ComputeSubnetworkIamMember#region}. |
 
 ---
 
@@ -987,7 +987,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#member ComputeSubnetworkIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#member ComputeSubnetworkIamMember#member}.
 
 ---
 
@@ -999,7 +999,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#role ComputeSubnetworkIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#role ComputeSubnetworkIamMember#role}.
 
 ---
 
@@ -1011,7 +1011,7 @@ public readonly subnetwork: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#subnetwork ComputeSubnetworkIamMember#subnetwork}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#subnetwork ComputeSubnetworkIamMember#subnetwork}.
 
 ---
 
@@ -1025,7 +1025,7 @@ public readonly condition: ComputeSubnetworkIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#condition ComputeSubnetworkIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#condition ComputeSubnetworkIamMember#condition}
 
 ---
 
@@ -1037,7 +1037,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#id ComputeSubnetworkIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#id ComputeSubnetworkIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1052,7 +1052,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#project ComputeSubnetworkIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#project ComputeSubnetworkIamMember#project}.
 
 ---
 
@@ -1064,7 +1064,7 @@ public readonly region: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_subnetwork_iam_member#region ComputeSubnetworkIamMember#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_member#region ComputeSubnetworkIamMember#region}.
 
 ---
 

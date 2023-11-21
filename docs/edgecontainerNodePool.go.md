@@ -1,6 +1,6 @@
 # `google_edgecontainer_node_pool`
 
-Refer to the Terraform Registory for docs: [`google_edgecontainer_node_pool`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool).
+Refer to the Terraform Registory for docs: [`google_edgecontainer_node_pool`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool).
 
 # `edgecontainerNodePool` Submodule <a name="`edgecontainerNodePool` Submodule" id="@cdktf/provider-google.edgecontainerNodePool"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_edgecontainer_node_pool`](ht
 
 ### EdgecontainerNodePool <a name="EdgecontainerNodePool" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool google_edgecontainer_node_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool google_edgecontainer_node_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePool.Initializer"></a>
 
@@ -509,7 +509,7 @@ The construct id used in the generated config for the EdgecontainerNodePool to i
 
 The id of the existing EdgecontainerNodePool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1069,12 +1069,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/edgecontainernodepo
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.name">Name</a></code> | <code>*string</code> | The resource name of the node pool. |
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.nodeCount">NodeCount</a></code> | <code>*f64</code> | The number of nodes in the pool. |
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.nodeLocation">NodeLocation</a></code> | <code>*string</code> | Name of the Google Distributed Cloud Edge zone where this node pool will be created. For example: 'us-central1-edge-customer-a'. |
-| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#id EdgecontainerNodePool#id}. |
+| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#id EdgecontainerNodePool#id}. |
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels associated with this resource. |
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.localDiskEncryption">LocalDiskEncryption</a></code> | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolLocalDiskEncryption">EdgecontainerNodePoolLocalDiskEncryption</a></code> | local_disk_encryption block. |
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.machineFilter">MachineFilter</a></code> | <code>*string</code> | Only machines matching this filter will be allowed to join the node pool. |
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.nodeConfig">NodeConfig</a></code> | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolNodeConfig">EdgecontainerNodePoolNodeConfig</a></code> | node_config block. |
-| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#project EdgecontainerNodePool#project}. |
+| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#project EdgecontainerNodePool#project}. |
 | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts">EdgecontainerNodePoolTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1159,7 +1159,7 @@ Cluster *string
 
 The name of the target Distributed Cloud Edge Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#cluster EdgecontainerNodePool#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#cluster EdgecontainerNodePool#cluster}
 
 ---
 
@@ -1173,7 +1173,7 @@ Location *string
 
 The location of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#location EdgecontainerNodePool#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#location EdgecontainerNodePool#location}
 
 ---
 
@@ -1187,7 +1187,7 @@ Name *string
 
 The resource name of the node pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#name EdgecontainerNodePool#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#name EdgecontainerNodePool#name}
 
 ---
 
@@ -1201,7 +1201,7 @@ NodeCount *f64
 
 The number of nodes in the pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#node_count EdgecontainerNodePool#node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#node_count EdgecontainerNodePool#node_count}
 
 ---
 
@@ -1215,7 +1215,7 @@ NodeLocation *string
 
 Name of the Google Distributed Cloud Edge zone where this node pool will be created. For example: 'us-central1-edge-customer-a'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#node_location EdgecontainerNodePool#node_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#node_location EdgecontainerNodePool#node_location}
 
 ---
 
@@ -1227,7 +1227,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#id EdgecontainerNodePool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#id EdgecontainerNodePool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1247,7 +1247,7 @@ Labels associated with this resource.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
 
 ---
 
@@ -1261,7 +1261,7 @@ LocalDiskEncryption EdgecontainerNodePoolLocalDiskEncryption
 
 local_disk_encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#local_disk_encryption EdgecontainerNodePool#local_disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#local_disk_encryption EdgecontainerNodePool#local_disk_encryption}
 
 ---
 
@@ -1278,7 +1278,7 @@ Only machines matching this filter will be allowed to join the node pool.
 The filtering language accepts strings like "name=<name>", and is
 documented in more detail in [AIP-160](https://google.aip.dev/160).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#machine_filter EdgecontainerNodePool#machine_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#machine_filter EdgecontainerNodePool#machine_filter}
 
 ---
 
@@ -1292,7 +1292,7 @@ NodeConfig EdgecontainerNodePoolNodeConfig
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#node_config EdgecontainerNodePool#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#node_config EdgecontainerNodePool#node_config}
 
 ---
 
@@ -1304,7 +1304,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#project EdgecontainerNodePool#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#project EdgecontainerNodePool#project}.
 
 ---
 
@@ -1318,7 +1318,7 @@ Timeouts EdgecontainerNodePoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#timeouts EdgecontainerNodePool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#timeouts EdgecontainerNodePool#timeouts}
 
 ---
 
@@ -1352,7 +1352,7 @@ KmsKey *string
 
 The Cloud KMS CryptoKey e.g. projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} to use for protecting node local disks. If not specified, a Google-managed key will be used instead.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#kms_key EdgecontainerNodePool#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#kms_key EdgecontainerNodePool#kms_key}
 
 ---
 
@@ -1386,7 +1386,7 @@ Labels *map[string]*string
 
 "The Kubernetes node labels".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
 
 ---
 
@@ -1408,9 +1408,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/edgecontainernodepo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#create EdgecontainerNodePool#create}. |
-| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#delete EdgecontainerNodePool#delete}. |
-| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#update EdgecontainerNodePool#update}. |
+| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#create EdgecontainerNodePool#create}. |
+| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#delete EdgecontainerNodePool#delete}. |
+| <code><a href="#@cdktf/provider-google.edgecontainerNodePool.EdgecontainerNodePoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#update EdgecontainerNodePool#update}. |
 
 ---
 
@@ -1422,7 +1422,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#create EdgecontainerNodePool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#create EdgecontainerNodePool#create}.
 
 ---
 
@@ -1434,7 +1434,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#delete EdgecontainerNodePool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#delete EdgecontainerNodePool#delete}.
 
 ---
 
@@ -1446,7 +1446,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/edgecontainer_node_pool#update EdgecontainerNodePool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_node_pool#update EdgecontainerNodePool#update}.
 
 ---
 
