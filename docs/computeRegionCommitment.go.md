@@ -1,6 +1,6 @@
 # `google_compute_region_commitment`
 
-Refer to the Terraform Registory for docs: [`google_compute_region_commitment`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment).
+Refer to the Terraform Registory for docs: [`google_compute_region_commitment`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment).
 
 # `computeRegionCommitment` Submodule <a name="`computeRegionCommitment` Submodule" id="@cdktf/provider-google.computeRegionCommitment"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_compute_region_commitment`](
 
 ### ComputeRegionCommitment <a name="ComputeRegionCommitment" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment google_compute_region_commitment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment google_compute_region_commitment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.NewComputeRegionCommitment(scope Construct, id *string, config ComputeRegionCommitmentConfig) ComputeRegionCommitment
 ```
@@ -441,7 +441,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.ComputeRegionCommitment_IsConstruct(x interface{}) *bool
 ```
@@ -473,7 +473,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.ComputeRegionCommitment_IsTerraformElement(x interface{}) *bool
 ```
@@ -487,7 +487,7 @@ computeregioncommitment.ComputeRegionCommitment_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.ComputeRegionCommitment_IsTerraformResource(x interface{}) *bool
 ```
@@ -501,7 +501,7 @@ computeregioncommitment.ComputeRegionCommitment_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.ComputeRegionCommitment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -530,7 +530,7 @@ The construct id used in the generated config for the ComputeRegionCommitment to
 
 The id of the existing ComputeRegionCommitment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1071,7 +1071,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 &computeregioncommitment.ComputeRegionCommitmentConfig {
 	Connection: interface{},
@@ -1087,11 +1087,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommit
 	Category: *string,
 	Description: *string,
 	Id: *string,
-	LicenseResource: github.com/cdktf/cdktf-provider-google-go/google/v12.computeRegionCommitment.ComputeRegionCommitmentLicenseResource,
+	LicenseResource: github.com/cdktf/cdktf-provider-google-go/google.computeRegionCommitment.ComputeRegionCommitmentLicenseResource,
 	Project: *string,
 	Region: *string,
 	Resources: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeRegionCommitment.ComputeRegionCommitmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRegionCommitment.ComputeRegionCommitmentTimeouts,
 	Type: *string,
 }
 ```
@@ -1112,9 +1112,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommit
 | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.autoRenew">AutoRenew</a></code> | <code>interface{}</code> | Specifies whether to enable automatic renewal for the commitment. |
 | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.category">Category</a></code> | <code>*string</code> | The category of the commitment. |
 | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#id ComputeRegionCommitment#id}. |
+| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#id ComputeRegionCommitment#id}. |
 | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.licenseResource">LicenseResource</a></code> | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentLicenseResource">ComputeRegionCommitmentLicenseResource</a></code> | license_resource block. |
-| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#project ComputeRegionCommitment#project}. |
+| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#project ComputeRegionCommitment#project}. |
 | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.region">Region</a></code> | <code>*string</code> | URL of the region where this commitment may be used. |
 | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.resources">Resources</a></code> | <code>interface{}</code> | resources block. |
 | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentTimeouts">ComputeRegionCommitmentTimeouts</a></code> | timeouts block. |
@@ -1208,7 +1208,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#name ComputeRegionCommitment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#name ComputeRegionCommitment#name}
 
 ---
 
@@ -1224,7 +1224,7 @@ The plan for this commitment, which determines duration and discount rate.
 
 The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years). Possible values: ["TWELVE_MONTH", "THIRTY_SIX_MONTH"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#plan ComputeRegionCommitment#plan}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#plan ComputeRegionCommitment#plan}
 
 ---
 
@@ -1242,7 +1242,7 @@ The default value is false if not specified.
 If the field is set to true, the commitment will be automatically renewed for either
 one or three years according to the terms of the existing commitment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#auto_renew ComputeRegionCommitment#auto_renew}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#auto_renew ComputeRegionCommitment#auto_renew}
 
 ---
 
@@ -1261,7 +1261,7 @@ machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE
 specifies commitments composed of software licenses, listed in licenseResources.
 Note that only MACHINE commitments should have a Type specified. Possible values: ["LICENSE", "MACHINE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#category ComputeRegionCommitment#category}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#category ComputeRegionCommitment#category}
 
 ---
 
@@ -1275,7 +1275,7 @@ Description *string
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#description ComputeRegionCommitment#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#description ComputeRegionCommitment#description}
 
 ---
 
@@ -1287,7 +1287,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#id ComputeRegionCommitment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#id ComputeRegionCommitment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1304,7 +1304,7 @@ LicenseResource ComputeRegionCommitmentLicenseResource
 
 license_resource block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#license_resource ComputeRegionCommitment#license_resource}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#license_resource ComputeRegionCommitment#license_resource}
 
 ---
 
@@ -1316,7 +1316,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#project ComputeRegionCommitment#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#project ComputeRegionCommitment#project}.
 
 ---
 
@@ -1330,7 +1330,7 @@ Region *string
 
 URL of the region where this commitment may be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#region ComputeRegionCommitment#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#region ComputeRegionCommitment#region}
 
 ---
 
@@ -1344,7 +1344,7 @@ Resources interface{}
 
 resources block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#resources ComputeRegionCommitment#resources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#resources ComputeRegionCommitment#resources}
 
 ---
 
@@ -1358,7 +1358,7 @@ Timeouts ComputeRegionCommitmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#timeouts ComputeRegionCommitment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#timeouts ComputeRegionCommitment#timeouts}
 
 ---
 
@@ -1377,7 +1377,7 @@ The type could be one of the following value: 'MEMORY_OPTIMIZED', 'ACCELERATOR_O
 'GENERAL_PURPOSE_T2D', 'GENERAL_PURPOSE_C3', 'COMPUTE_OPTIMIZED_C2', 'COMPUTE_OPTIMIZED_C2D' and
 'GRAPHICS_OPTIMIZED_G2'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
 
 ---
 
@@ -1386,7 +1386,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentLicenseResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 &computeregioncommitment.ComputeRegionCommitmentLicenseResource {
 	License: *string,
@@ -1415,7 +1415,7 @@ License *string
 
 Any applicable license URI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#license ComputeRegionCommitment#license}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#license ComputeRegionCommitment#license}
 
 ---
 
@@ -1429,7 +1429,7 @@ Amount *string
 
 The number of licenses purchased.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
 
 ---
 
@@ -1443,7 +1443,7 @@ CoresPerLicense *string
 
 Specifies the core range of the instance for which this license applies.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#cores_per_license ComputeRegionCommitment#cores_per_license}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#cores_per_license ComputeRegionCommitment#cores_per_license}
 
 ---
 
@@ -1452,7 +1452,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 &computeregioncommitment.ComputeRegionCommitmentResources {
 	AcceleratorType: *string,
@@ -1481,7 +1481,7 @@ AcceleratorType *string
 
 Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#accelerator_type ComputeRegionCommitment#accelerator_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#accelerator_type ComputeRegionCommitment#accelerator_type}
 
 ---
 
@@ -1499,7 +1499,7 @@ For vCPUs, this can just be an integer. For memory,
 this must be provided in MB. Memory must be a multiple of 256 MB,
 with up to 6.5GB of memory per every vCPU.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
 
 ---
 
@@ -1513,7 +1513,7 @@ Type *string
 
 Type of resource for which this commitment applies. Possible values are VCPU, MEMORY, LOCAL_SSD, and ACCELERATOR.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
 
 ---
 
@@ -1522,7 +1522,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 &computeregioncommitment.ComputeRegionCommitmentTimeouts {
 	Create: *string,
@@ -1534,8 +1534,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommit
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#create ComputeRegionCommitment#create}. |
-| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#delete ComputeRegionCommitment#delete}. |
+| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#create ComputeRegionCommitment#create}. |
+| <code><a href="#@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#delete ComputeRegionCommitment#delete}. |
 
 ---
 
@@ -1547,7 +1547,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#create ComputeRegionCommitment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#create ComputeRegionCommitment#create}.
 
 ---
 
@@ -1559,7 +1559,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/compute_region_commitment#delete ComputeRegionCommitment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment#delete ComputeRegionCommitment#delete}.
 
 ---
 
@@ -1570,7 +1570,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentLicenseResourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.NewComputeRegionCommitmentLicenseResourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionCommitmentLicenseResourceOutputReference
 ```
@@ -1899,7 +1899,7 @@ func InternalValue() ComputeRegionCommitmentLicenseResource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentResourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.NewComputeRegionCommitmentResourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionCommitmentResourcesList
 ```
@@ -2042,7 +2042,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.NewComputeRegionCommitmentResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionCommitmentResourcesOutputReference
 ```
@@ -2396,7 +2396,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionCommitment.ComputeRegionCommitmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregioncommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregioncommitment"
 
 computeregioncommitment.NewComputeRegionCommitmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionCommitmentTimeoutsOutputReference
 ```

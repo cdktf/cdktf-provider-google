@@ -1,6 +1,6 @@
 # `data_google_kms_key_ring_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_kms_key_ring_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/kms_key_ring_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_kms_key_ring_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/kms_key_ring_iam_policy).
 
 # `dataGoogleKmsKeyRingIamPolicy` Submodule <a name="`dataGoogleKmsKeyRingIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_kms_key_ring_iam_policy
 
 ### DataGoogleKmsKeyRingIamPolicy <a name="DataGoogleKmsKeyRingIamPolicy" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/kms_key_ring_iam_policy google_kms_key_ring_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/kms_key_ring_iam_policy google_kms_key_ring_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyringiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyringiampolicy"
 
 datagooglekmskeyringiampolicy.NewDataGoogleKmsKeyRingIamPolicy(scope Construct, id *string, config DataGoogleKmsKeyRingIamPolicyConfig) DataGoogleKmsKeyRingIamPolicy
 ```
@@ -278,7 +278,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyringiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyringiampolicy"
 
 datagooglekmskeyringiampolicy.DataGoogleKmsKeyRingIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -310,7 +310,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyringiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyringiampolicy"
 
 datagooglekmskeyringiampolicy.DataGoogleKmsKeyRingIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -324,7 +324,7 @@ datagooglekmskeyringiampolicy.DataGoogleKmsKeyRingIamPolicy_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyringiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyringiampolicy"
 
 datagooglekmskeyringiampolicy.DataGoogleKmsKeyRingIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ datagooglekmskeyringiampolicy.DataGoogleKmsKeyRingIamPolicy_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyringiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyringiampolicy"
 
 datagooglekmskeyringiampolicy.DataGoogleKmsKeyRingIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -367,7 +367,7 @@ The construct id used in the generated config for the DataGoogleKmsKeyRingIamPol
 
 The id of the existing DataGoogleKmsKeyRingIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/kms_key_ring_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/kms_key_ring_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -611,7 +611,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyringiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmskeyringiampolicy"
 
 &datagooglekmskeyringiampolicy.DataGoogleKmsKeyRingIamPolicyConfig {
 	Connection: interface{},
@@ -637,8 +637,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglekmskeyrin
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.property.keyRingId">KeyRingId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/kms_key_ring_iam_policy#key_ring_id DataGoogleKmsKeyRingIamPolicy#key_ring_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/kms_key_ring_iam_policy#id DataGoogleKmsKeyRingIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.property.keyRingId">KeyRingId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/kms_key_ring_iam_policy#key_ring_id DataGoogleKmsKeyRingIamPolicy#key_ring_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRingIamPolicy.DataGoogleKmsKeyRingIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/kms_key_ring_iam_policy#id DataGoogleKmsKeyRingIamPolicy#id}. |
 
 ---
 
@@ -720,7 +720,7 @@ KeyRingId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/kms_key_ring_iam_policy#key_ring_id DataGoogleKmsKeyRingIamPolicy#key_ring_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/kms_key_ring_iam_policy#key_ring_id DataGoogleKmsKeyRingIamPolicy#key_ring_id}.
 
 ---
 
@@ -732,7 +732,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/kms_key_ring_iam_policy#id DataGoogleKmsKeyRingIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/kms_key_ring_iam_policy#id DataGoogleKmsKeyRingIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

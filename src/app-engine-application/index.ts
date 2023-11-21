@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application
+// https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,15 +10,15 @@ export interface AppEngineApplicationConfig extends cdktf.TerraformMetaArguments
   /**
   * The domain to authenticate users with when using App Engine's User API.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#auth_domain AppEngineApplication#auth_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#auth_domain AppEngineApplication#auth_domain}
   */
   readonly authDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#database_type AppEngineApplication#database_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#database_type AppEngineApplication#database_type}
   */
   readonly databaseType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#id AppEngineApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#id AppEngineApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,37 +27,37 @@ export interface AppEngineApplicationConfig extends cdktf.TerraformMetaArguments
   /**
   * The location to serve the app from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#location_id AppEngineApplication#location_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#location_id AppEngineApplication#location_id}
   */
   readonly locationId: string;
   /**
   * The project ID to create the application under.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#project AppEngineApplication#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#project AppEngineApplication#project}
   */
   readonly project?: string;
   /**
   * The serving status of the app.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#serving_status AppEngineApplication#serving_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#serving_status AppEngineApplication#serving_status}
   */
   readonly servingStatus?: string;
   /**
   * feature_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#feature_settings AppEngineApplication#feature_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#feature_settings AppEngineApplication#feature_settings}
   */
   readonly featureSettings?: AppEngineApplicationFeatureSettings;
   /**
   * iap block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#iap AppEngineApplication#iap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#iap AppEngineApplication#iap}
   */
   readonly iap?: AppEngineApplicationIap;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#timeouts AppEngineApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#timeouts AppEngineApplication#timeouts}
   */
   readonly timeouts?: AppEngineApplicationTimeouts;
 }
@@ -142,7 +137,7 @@ export class AppEngineApplicationUrlDispatchRuleList extends cdktf.ComplexList {
 }
 export interface AppEngineApplicationFeatureSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#split_health_checks AppEngineApplication#split_health_checks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#split_health_checks AppEngineApplication#split_health_checks}
   */
   readonly splitHealthChecks: boolean | cdktf.IResolvable;
 }
@@ -206,19 +201,19 @@ export interface AppEngineApplicationIap {
   /**
   * Adapted for use with the app
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#enabled AppEngineApplication#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#enabled AppEngineApplication#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * OAuth2 client ID to use for the authentication flow.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#oauth2_client_id AppEngineApplication#oauth2_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#oauth2_client_id AppEngineApplication#oauth2_client_id}
   */
   readonly oauth2ClientId: string;
   /**
   * OAuth2 client secret to use for the authentication flow. The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#oauth2_client_secret AppEngineApplication#oauth2_client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#oauth2_client_secret AppEngineApplication#oauth2_client_secret}
   */
   readonly oauth2ClientSecret: string;
 }
@@ -328,11 +323,11 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
 }
 export interface AppEngineApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#create AppEngineApplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#create AppEngineApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#update AppEngineApplication#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#update AppEngineApplication#update}
   */
   readonly update?: string;
 }
@@ -430,7 +425,7 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application google_app_engine_application}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application google_app_engine_application}
 */
 export class AppEngineApplication extends cdktf.TerraformResource {
 
@@ -446,7 +441,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AppEngineApplication resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AppEngineApplication to import
-  * @param importFromId The id of the existing AppEngineApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AppEngineApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AppEngineApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -458,7 +453,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/app_engine_application google_app_engine_application} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application google_app_engine_application} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -469,7 +464,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_application',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.6.0',
+        providerVersion: '5.7.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `data_google_service_account_jwt`
 
-Refer to the Terraform Registory for docs: [`data_google_service_account_jwt`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt).
+Refer to the Terraform Registory for docs: [`data_google_service_account_jwt`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt).
 
 # `dataGoogleServiceAccountJwt` Submodule <a name="`dataGoogleServiceAccountJwt` Submodule" id="@cdktf/provider-google.dataGoogleServiceAccountJwt"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_service_account_jwt`](h
 
 ### DataGoogleServiceAccountJwt <a name="DataGoogleServiceAccountJwt" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt google_service_account_jwt}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt google_service_account_jwt}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.NewDataGoogleServiceAccountJwt(scope Construct, id *string, config DataGoogleServiceAccountJwtConfig) DataGoogleServiceAccountJwt
 ```
@@ -292,7 +292,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsConstruct(x interface{}) *bool
 ```
@@ -324,7 +324,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformElement(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -381,7 +381,7 @@ The construct id used in the generated config for the DataGoogleServiceAccountJw
 
 The id of the existing DataGoogleServiceAccountJwt that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -680,7 +680,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccountjwt"
 
 &datagoogleserviceaccountjwt.DataGoogleServiceAccountJwtConfig {
 	Connection: interface{},
@@ -710,10 +710,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceac
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.payload">Payload</a></code> | <code>*string</code> | A JSON-encoded JWT claims set that will be included in the signed JWT. |
-| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.targetServiceAccount">TargetServiceAccount</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#target_service_account DataGoogleServiceAccountJwt#target_service_account}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.delegates">Delegates</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#delegates DataGoogleServiceAccountJwt#delegates}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.targetServiceAccount">TargetServiceAccount</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#target_service_account DataGoogleServiceAccountJwt#target_service_account}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.delegates">Delegates</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#delegates DataGoogleServiceAccountJwt#delegates}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.expiresIn">ExpiresIn</a></code> | <code>*f64</code> | Number of seconds until the JWT expires. |
-| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#id DataGoogleServiceAccountJwt#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#id DataGoogleServiceAccountJwt#id}. |
 
 ---
 
@@ -797,7 +797,7 @@ Payload *string
 
 A JSON-encoded JWT claims set that will be included in the signed JWT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#payload DataGoogleServiceAccountJwt#payload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#payload DataGoogleServiceAccountJwt#payload}
 
 ---
 
@@ -809,7 +809,7 @@ TargetServiceAccount *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#target_service_account DataGoogleServiceAccountJwt#target_service_account}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#target_service_account DataGoogleServiceAccountJwt#target_service_account}.
 
 ---
 
@@ -821,7 +821,7 @@ Delegates *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#delegates DataGoogleServiceAccountJwt#delegates}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#delegates DataGoogleServiceAccountJwt#delegates}.
 
 ---
 
@@ -837,7 +837,7 @@ Number of seconds until the JWT expires.
 
 If set and non-zero an `exp` claim will be added to the payload derived from the current timestamp plus expires_in seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#expires_in DataGoogleServiceAccountJwt#expires_in}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#expires_in DataGoogleServiceAccountJwt#expires_in}
 
 ---
 
@@ -849,7 +849,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/service_account_jwt#id DataGoogleServiceAccountJwt#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/service_account_jwt#id DataGoogleServiceAccountJwt#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

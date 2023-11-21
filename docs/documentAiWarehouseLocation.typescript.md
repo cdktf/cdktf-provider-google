@@ -1,6 +1,6 @@
 # `google_document_ai_warehouse_location`
 
-Refer to the Terraform Registory for docs: [`google_document_ai_warehouse_location`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location).
+Refer to the Terraform Registory for docs: [`google_document_ai_warehouse_location`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location).
 
 # `documentAiWarehouseLocation` Submodule <a name="`documentAiWarehouseLocation` Submodule" id="@cdktf/provider-google.documentAiWarehouseLocation"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_document_ai_warehouse_locati
 
 ### DocumentAiWarehouseLocation <a name="DocumentAiWarehouseLocation" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location google_document_ai_warehouse_location}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location google_document_ai_warehouse_location}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocation.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the DocumentAiWarehouseLocatio
 
 The id of the existing DocumentAiWarehouseLocation that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -859,7 +859,7 @@ const documentAiWarehouseLocationConfig: documentAiWarehouseLocation.DocumentAiW
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.location">location</a></code> | <code>string</code> | The location in which the instance is to be provisioned. It takes the form projects/{projectNumber}/locations/{location}. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.projectNumber">projectNumber</a></code> | <code>string</code> | The unique identifier of the project. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.documentCreatorDefaultRole">documentCreatorDefaultRole</a></code> | <code>string</code> | The default role for the person who create a document. Possible values: ["DOCUMENT_ADMIN", "DOCUMENT_EDITOR", "DOCUMENT_VIEWER"]. |
-| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}. |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.kmsKey">kmsKey</a></code> | <code>string</code> | The KMS key used for CMEK encryption. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts">DocumentAiWarehouseLocationTimeouts</a></code> | timeouts block. |
 
@@ -945,7 +945,7 @@ public readonly accessControlMode: string;
 
 The access control mode for accessing the customer data. Possible values: ["ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_GCI", "ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_BYOID", "ACL_MODE_UNIVERSAL_ACCESS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#access_control_mode DocumentAiWarehouseLocation#access_control_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#access_control_mode DocumentAiWarehouseLocation#access_control_mode}
 
 ---
 
@@ -959,7 +959,7 @@ public readonly databaseType: string;
 
 The type of database used to store customer data. Possible values: ["DB_INFRA_SPANNER", "DB_CLOUD_SQL_POSTGRES"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#database_type DocumentAiWarehouseLocation#database_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#database_type DocumentAiWarehouseLocation#database_type}
 
 ---
 
@@ -973,7 +973,7 @@ public readonly location: string;
 
 The location in which the instance is to be provisioned. It takes the form projects/{projectNumber}/locations/{location}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#location DocumentAiWarehouseLocation#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#location DocumentAiWarehouseLocation#location}
 
 ---
 
@@ -987,7 +987,7 @@ public readonly projectNumber: string;
 
 The unique identifier of the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#project_number DocumentAiWarehouseLocation#project_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#project_number DocumentAiWarehouseLocation#project_number}
 
 ---
 
@@ -1001,7 +1001,7 @@ public readonly documentCreatorDefaultRole: string;
 
 The default role for the person who create a document. Possible values: ["DOCUMENT_ADMIN", "DOCUMENT_EDITOR", "DOCUMENT_VIEWER"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#document_creator_default_role DocumentAiWarehouseLocation#document_creator_default_role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#document_creator_default_role DocumentAiWarehouseLocation#document_creator_default_role}
 
 ---
 
@@ -1013,7 +1013,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#id DocumentAiWarehouseLocation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1036,7 +1036,7 @@ same key will be used for all provisioned resources, if
 encryption is available. If the kmsKey is left empty, no
 encryption will be enforced.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#kms_key DocumentAiWarehouseLocation#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#kms_key DocumentAiWarehouseLocation#kms_key}
 
 ---
 
@@ -1050,7 +1050,7 @@ public readonly timeouts: DocumentAiWarehouseLocationTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#timeouts DocumentAiWarehouseLocation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#timeouts DocumentAiWarehouseLocation#timeouts}
 
 ---
 
@@ -1068,8 +1068,8 @@ const documentAiWarehouseLocationTimeouts: documentAiWarehouseLocation.DocumentA
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}. |
-| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}. |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}. |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseLocation.DocumentAiWarehouseLocationTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}. |
 
 ---
 
@@ -1081,7 +1081,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#create DocumentAiWarehouseLocation#create}.
 
 ---
 
@@ -1093,7 +1093,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location#delete DocumentAiWarehouseLocation#delete}.
 
 ---
 

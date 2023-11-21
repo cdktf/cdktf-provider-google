@@ -1,6 +1,6 @@
 # `data_google_compute_resource_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_resource_policy`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy).
+Refer to the Terraform Registory for docs: [`data_google_compute_resource_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy).
 
 # `dataGoogleComputeResourcePolicy` Submodule <a name="`dataGoogleComputeResourcePolicy` Submodule" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_compute_resource_policy
 
 ### DataGoogleComputeResourcePolicy <a name="DataGoogleComputeResourcePolicy" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy google_compute_resource_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy google_compute_resource_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicy(scope Construct, id *string, config DataGoogleComputeResourcePolicyConfig) DataGoogleComputeResourcePolicy
 ```
@@ -292,7 +292,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicy_IsConstruct(x interface{}) *bool
 ```
@@ -324,7 +324,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicy_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicy_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -381,7 +381,7 @@ The construct id used in the generated config for the DataGoogleComputeResourceP
 
 The id of the existing DataGoogleComputeResourcePolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -713,7 +713,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicyConfig {
 	Connection: interface{},
@@ -742,8 +742,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.name">Name</a></code> | <code>*string</code> | The name of the resource, provided by the client when initially creating the resource. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy#id DataGoogleComputeResourcePolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy#project DataGoogleComputeResourcePolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy#id DataGoogleComputeResourcePolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy#project DataGoogleComputeResourcePolicy#project}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyConfig.property.region">Region</a></code> | <code>*string</code> | Region where resource policy resides. |
 
 ---
@@ -835,7 +835,7 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy#name DataGoogleComputeResourcePolicy#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy#name DataGoogleComputeResourcePolicy#name}
 
 ---
 
@@ -847,7 +847,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy#id DataGoogleComputeResourcePolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy#id DataGoogleComputeResourcePolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -862,7 +862,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy#project DataGoogleComputeResourcePolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy#project DataGoogleComputeResourcePolicy#project}.
 
 ---
 
@@ -876,7 +876,7 @@ Region *string
 
 Region where resource policy resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_resource_policy#region DataGoogleComputeResourcePolicy#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_resource_policy#region DataGoogleComputeResourcePolicy#region}
 
 ---
 
@@ -885,7 +885,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicy {
 
@@ -898,7 +898,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyGroupPlacementPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicyGroupPlacementPolicy {
 
@@ -911,7 +911,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicy {
 
@@ -924,7 +924,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule {
 
@@ -937,7 +937,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule {
 
@@ -950,7 +950,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicy {
 
@@ -963,7 +963,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy {
 
@@ -976,7 +976,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedule {
 
@@ -989,7 +989,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
 
@@ -1002,7 +1002,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
 
@@ -1015,7 +1015,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
 
@@ -1028,7 +1028,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks {
 
@@ -1041,7 +1041,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 &datagooglecomputeresourcepolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotProperties {
 
@@ -1056,7 +1056,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyList
 ```
@@ -1188,7 +1188,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyOutputReference
 ```
@@ -1466,7 +1466,7 @@ func InternalValue() DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyGroupPlacementPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyGroupPlacementPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicyGroupPlacementPolicyList
 ```
@@ -1598,7 +1598,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyGroupPlacementPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyGroupPlacementPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicyGroupPlacementPolicyOutputReference
 ```
@@ -1898,7 +1898,7 @@ func InternalValue() DataGoogleComputeResourcePolicyGroupPlacementPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyInstanceSchedulePolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicyInstanceSchedulePolicyList
 ```
@@ -2030,7 +2030,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyInstanceSchedulePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicyInstanceSchedulePolicyOutputReference
 ```
@@ -2352,7 +2352,7 @@ func InternalValue() DataGoogleComputeResourcePolicyInstanceSchedulePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleList
 ```
@@ -2484,7 +2484,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference
 ```
@@ -2762,7 +2762,7 @@ func InternalValue() DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStar
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleList
 ```
@@ -2894,7 +2894,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference
 ```
@@ -3172,7 +3172,7 @@ func InternalValue() DataGoogleComputeResourcePolicyInstanceSchedulePolicyVmStop
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyList
 ```
@@ -3304,7 +3304,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyOutputReference
 ```
@@ -3604,7 +3604,7 @@ func InternalValue() DataGoogleComputeResourcePolicySnapshotSchedulePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyList
 ```
@@ -3736,7 +3736,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference
 ```
@@ -4025,7 +4025,7 @@ func InternalValue() DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetent
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleList
 ```
@@ -4157,7 +4157,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference
 ```
@@ -4446,7 +4446,7 @@ func InternalValue() DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleList
 ```
@@ -4578,7 +4578,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference
 ```
@@ -4867,7 +4867,7 @@ func InternalValue() DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleList
 ```
@@ -4999,7 +4999,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference
 ```
@@ -5299,7 +5299,7 @@ func InternalValue() DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksList
 ```
@@ -5431,7 +5431,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksOutputReference
 ```
@@ -5720,7 +5720,7 @@ func InternalValue() DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleList
 ```
@@ -5852,7 +5852,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference
 ```
@@ -6130,7 +6130,7 @@ func InternalValue() DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesList
 ```
@@ -6262,7 +6262,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeResourcePolicy.DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeresourcepolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeresourcepolicy"
 
 datagooglecomputeresourcepolicy.NewDataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference
 ```

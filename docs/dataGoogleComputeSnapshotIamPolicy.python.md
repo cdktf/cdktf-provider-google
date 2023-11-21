@@ -1,6 +1,6 @@
 # `data_google_compute_snapshot_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_snapshot_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_compute_snapshot_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy).
 
 # `dataGoogleComputeSnapshotIamPolicy` Submodule <a name="`dataGoogleComputeSnapshotIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_snapshot_iam_po
 
 ### DataGoogleComputeSnapshotIamPolicy <a name="DataGoogleComputeSnapshotIamPolicy" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer"></a>
 
@@ -42,9 +42,9 @@ dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}. |
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -131,7 +131,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}.
 
 ---
 
@@ -495,7 +495,7 @@ The construct id used in the generated config for the DataGoogleComputeSnapshotI
 
 The id of the existing DataGoogleComputeSnapshotIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -788,9 +788,9 @@ dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}. |
 
 ---
 
@@ -872,7 +872,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}.
 
 ---
 
@@ -884,7 +884,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -899,7 +899,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.6.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}.
 
 ---
 
