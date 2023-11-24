@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 apigeeenvironmentiammember.NewApigeeEnvironmentIamMember(scope Construct, id *string, config ApigeeEnvironmentIamMemberConfig) ApigeeEnvironmentIamMember
 ```
@@ -359,7 +359,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 apigeeenvironmentiammember.ApigeeEnvironmentIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 apigeeenvironmentiammember.ApigeeEnvironmentIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ apigeeenvironmentiammember.ApigeeEnvironmentIamMember_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 apigeeenvironmentiammember.ApigeeEnvironmentIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ apigeeenvironmentiammember.ApigeeEnvironmentIamMember_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 apigeeenvironmentiammember.ApigeeEnvironmentIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -791,7 +791,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 &apigeeenvironmentiammember.ApigeeEnvironmentIamMemberCondition {
 	Expression: *string,
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 &apigeeenvironmentiammember.ApigeeEnvironmentIamMemberConfig {
 	Connection: interface{},
@@ -865,7 +865,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentia
 	Member: *string,
 	OrgId: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -1044,7 +1044,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentIamMember.ApigeeEnvironmentIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeenvironmentiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiammember"
 
 apigeeenvironmentiammember.NewApigeeEnvironmentIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeEnvironmentIamMemberConditionOutputReference
 ```

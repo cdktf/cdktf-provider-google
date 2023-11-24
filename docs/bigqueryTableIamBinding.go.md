@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 bigquerytableiambinding.NewBigqueryTableIamBinding(scope Construct, id *string, config BigqueryTableIamBindingConfig) BigqueryTableIamBinding
 ```
@@ -366,7 +366,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 bigquerytableiambinding.BigqueryTableIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 bigquerytableiambinding.BigqueryTableIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ bigquerytableiambinding.BigqueryTableIamBinding_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 bigquerytableiambinding.BigqueryTableIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ bigquerytableiambinding.BigqueryTableIamBinding_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 bigquerytableiambinding.BigqueryTableIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -820,7 +820,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 &bigquerytableiambinding.BigqueryTableIamBindingCondition {
 	Expression: *string,
@@ -880,7 +880,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 &bigquerytableiambinding.BigqueryTableIamBindingConfig {
 	Connection: interface{},
@@ -894,7 +894,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambin
 	Members: *[]*string,
 	Role: *string,
 	TableId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryTableIamBinding.BigqueryTableIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTableIamBinding.BigqueryTableIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1087,7 +1087,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTableIamBinding.BigqueryTableIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiambinding"
 
 bigquerytableiambinding.NewBigqueryTableIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableIamBindingConditionOutputReference
 ```
