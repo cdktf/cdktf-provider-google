@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.NewFirestoreBackupSchedule(scope Construct, id *string, config FirestoreBackupScheduleConfig) FirestoreBackupSchedule
 ```
@@ -413,7 +413,7 @@ func ResetWeeklyRecurrence()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupSchedule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.FirestoreBackupSchedule_IsConstruct(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupSchedule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.FirestoreBackupSchedule_IsTerraformElement(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ firestorebackupschedule.FirestoreBackupSchedule_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupSchedule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.FirestoreBackupSchedule_IsTerraformResource(x interface{}) *bool
 ```
@@ -473,7 +473,7 @@ firestorebackupschedule.FirestoreBackupSchedule_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupSchedule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.FirestoreBackupSchedule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -867,7 +867,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupScheduleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 &firestorebackupschedule.FirestoreBackupScheduleConfig {
 	Connection: interface{},
@@ -878,12 +878,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Retention: *string,
-	DailyRecurrence: github.com/cdktf/cdktf-provider-google-go/google.firestoreBackupSchedule.FirestoreBackupScheduleDailyRecurrence,
+	DailyRecurrence: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreBackupSchedule.FirestoreBackupScheduleDailyRecurrence,
 	Database: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.firestoreBackupSchedule.FirestoreBackupScheduleTimeouts,
-	WeeklyRecurrence: github.com/cdktf/cdktf-provider-google-go/google.firestoreBackupSchedule.FirestoreBackupScheduleWeeklyRecurrence,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreBackupSchedule.FirestoreBackupScheduleTimeouts,
+	WeeklyRecurrence: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreBackupSchedule.FirestoreBackupScheduleWeeklyRecurrence,
 }
 ```
 
@@ -1082,7 +1082,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupScheduleDailyRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 &firestorebackupschedule.FirestoreBackupScheduleDailyRecurrence {
 
@@ -1095,7 +1095,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupScheduleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 &firestorebackupschedule.FirestoreBackupScheduleTimeouts {
 	Create: *string,
@@ -1155,7 +1155,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupScheduleWeeklyRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 &firestorebackupschedule.FirestoreBackupScheduleWeeklyRecurrence {
 	Day: *string,
@@ -1191,7 +1191,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupScheduleDailyRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.NewFirestoreBackupScheduleDailyRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreBackupScheduleDailyRecurrenceOutputReference
 ```
@@ -1440,7 +1440,7 @@ func InternalValue() FirestoreBackupScheduleDailyRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupScheduleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.NewFirestoreBackupScheduleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreBackupScheduleTimeoutsOutputReference
 ```
@@ -1776,7 +1776,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreBackupSchedule.FirestoreBackupScheduleWeeklyRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firestorebackupschedule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorebackupschedule"
 
 firestorebackupschedule.NewFirestoreBackupScheduleWeeklyRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreBackupScheduleWeeklyRecurrenceOutputReference
 ```
