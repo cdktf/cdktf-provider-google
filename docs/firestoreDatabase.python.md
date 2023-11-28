@@ -1,7 +1,3 @@
-# `google_firestore_database`
-
-Refer to the Terraform Registory for docs: [`google_firestore_database`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/firestore_database).
-
 # `firestoreDatabase` Submodule <a name="`firestoreDatabase` Submodule" id="@cdktf/provider-google.firestoreDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

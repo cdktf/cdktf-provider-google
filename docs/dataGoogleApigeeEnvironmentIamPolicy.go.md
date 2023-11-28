@@ -1,7 +1,3 @@
-# `data_google_apigee_environment_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_apigee_environment_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/apigee_environment_iam_policy).
-
 # `dataGoogleApigeeEnvironmentIamPolicy` Submodule <a name="`dataGoogleApigeeEnvironmentIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.NewDataGoogleApigeeEnvironmentIamPolicy(scope Construct, id *string, config DataGoogleApigeeEnvironmentIamPolicyConfig) DataGoogleApigeeEnvironmentIamPolicy
 ```
@@ -278,7 +274,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -310,7 +306,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -324,7 +320,7 @@ datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -338,7 +334,7 @@ datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -633,7 +629,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapigeeenvironmentiampolicy"
 
 &datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicyConfig {
 	Connection: interface{},

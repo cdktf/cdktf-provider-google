@@ -1,7 +1,3 @@
-# `google_datastore_index`
-
-Refer to the Terraform Registory for docs: [`google_datastore_index`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/datastore_index).
-
 # `datastoreIndex` Submodule <a name="`datastoreIndex` Submodule" id="@cdktf/provider-google.datastoreIndex"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

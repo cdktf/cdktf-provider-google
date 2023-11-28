@@ -1,7 +1,3 @@
-# `data_google_sourcerepo_repository_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_sourcerepo_repository_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/sourcerepo_repository_iam_policy).
-
 # `dataGoogleSourcerepoRepositoryIamPolicy` Submodule <a name="`dataGoogleSourcerepoRepositoryIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.NewDataGoogleSourcerepoRepositoryIamPolicy(scope Construct, id *string, config DataGoogleSourcerepoRepositoryIamPolicyConfig) DataGoogleSourcerepoRepositoryIamPolicy
 ```
@@ -285,7 +281,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -317,7 +313,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -331,7 +327,7 @@ datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +341,7 @@ datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -640,7 +636,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 &datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig {
 	Connection: interface{},

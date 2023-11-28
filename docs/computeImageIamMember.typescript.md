@@ -1,7 +1,3 @@
-# `google_compute_image_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_compute_image_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_image_iam_member).
-
 # `computeImageIamMember` Submodule <a name="`computeImageIamMember` Submodule" id="@cdktf/provider-google.computeImageIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

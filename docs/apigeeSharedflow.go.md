@@ -1,7 +1,3 @@
-# `google_apigee_sharedflow`
-
-Refer to the Terraform Registory for docs: [`google_apigee_sharedflow`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apigee_sharedflow).
-
 # `apigeeSharedflow` Submodule <a name="`apigeeSharedflow` Submodule" id="@cdktf/provider-google.apigeeSharedflow"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.NewApigeeSharedflow(scope Construct, id *string, config ApigeeSharedflowConfig) ApigeeSharedflow
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflow.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.ApigeeSharedflow_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflow.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.ApigeeSharedflow_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ apigeesharedflow.ApigeeSharedflow_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflow.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.ApigeeSharedflow_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ apigeesharedflow.ApigeeSharedflow_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflow.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.ApigeeSharedflow_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -831,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 &apigeesharedflow.ApigeeSharedflowConfig {
 	Connection: interface{},
@@ -846,7 +842,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
 	OrgId: *string,
 	DetectMd5Hash: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.apigeeSharedflow.ApigeeSharedflowTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeSharedflow.ApigeeSharedflowTimeouts,
 }
 ```
 
@@ -1032,7 +1028,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowMetaData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 &apigeesharedflow.ApigeeSharedflowMetaData {
 
@@ -1045,7 +1041,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 &apigeesharedflow.ApigeeSharedflowTimeouts {
 	Create: *string,
@@ -1107,7 +1103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowMetaDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.NewApigeeSharedflowMetaDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApigeeSharedflowMetaDataList
 ```
@@ -1239,7 +1235,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowMetaDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.NewApigeeSharedflowMetaDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApigeeSharedflowMetaDataOutputReference
 ```
@@ -1539,7 +1535,7 @@ func InternalValue() ApigeeSharedflowMetaData
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeesharedflow"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeesharedflow"
 
 apigeesharedflow.NewApigeeSharedflowTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeSharedflowTimeoutsOutputReference
 ```

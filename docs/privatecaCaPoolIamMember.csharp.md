@@ -1,7 +1,3 @@
-# `google_privateca_ca_pool_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_privateca_ca_pool_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member).
-
 # `privatecaCaPoolIamMember` Submodule <a name="`privatecaCaPoolIamMember` Submodule" id="@cdktf/provider-google.privatecaCaPoolIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

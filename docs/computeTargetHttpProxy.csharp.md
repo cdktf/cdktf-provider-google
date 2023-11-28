@@ -1,7 +1,3 @@
-# `google_compute_target_http_proxy`
-
-Refer to the Terraform Registory for docs: [`google_compute_target_http_proxy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_target_http_proxy).
-
 # `computeTargetHttpProxy` Submodule <a name="`computeTargetHttpProxy` Submodule" id="@cdktf/provider-google.computeTargetHttpProxy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

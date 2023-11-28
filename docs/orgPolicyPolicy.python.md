@@ -1,7 +1,3 @@
-# `google_org_policy_policy`
-
-Refer to the Terraform Registory for docs: [`google_org_policy_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/org_policy_policy).
-
 # `orgPolicyPolicy` Submodule <a name="`orgPolicyPolicy` Submodule" id="@cdktf/provider-google.orgPolicyPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

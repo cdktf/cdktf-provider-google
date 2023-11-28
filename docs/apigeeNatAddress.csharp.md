@@ -1,7 +1,3 @@
-# `google_apigee_nat_address`
-
-Refer to the Terraform Registory for docs: [`google_apigee_nat_address`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apigee_nat_address).
-
 # `apigeeNatAddress` Submodule <a name="`apigeeNatAddress` Submodule" id="@cdktf/provider-google.apigeeNatAddress"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

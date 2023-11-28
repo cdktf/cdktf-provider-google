@@ -1,7 +1,3 @@
-# `google_network_security_url_lists`
-
-Refer to the Terraform Registory for docs: [`google_network_security_url_lists`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/network_security_url_lists).
-
 # `networkSecurityUrlLists` Submodule <a name="`networkSecurityUrlLists` Submodule" id="@cdktf/provider-google.networkSecurityUrlLists"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NewNetworkSecurityUrlLists(scope Construct, id *string, config NetworkSecurityUrlListsConfig) NetworkSecurityUrlLists
 ```
@@ -373,7 +369,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NetworkSecurityUrlLists_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NetworkSecurityUrlLists_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ networksecurityurllists.NetworkSecurityUrlLists_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NetworkSecurityUrlLists_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ networksecurityurllists.NetworkSecurityUrlLists_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlLists.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NetworkSecurityUrlLists_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -838,7 +834,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 &networksecurityurllists.NetworkSecurityUrlListsConfig {
 	Connection: interface{},
@@ -854,7 +850,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurll
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts,
 }
 ```
 
@@ -1053,7 +1049,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 &networksecurityurllists.NetworkSecurityUrlListsTimeouts {
 	Create: *string,
@@ -1115,7 +1111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityUrlLists.NetworkSecurityUrlListsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecurityurllists"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecurityurllists"
 
 networksecurityurllists.NewNetworkSecurityUrlListsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityUrlListsTimeoutsOutputReference
 ```

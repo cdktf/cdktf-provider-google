@@ -1,7 +1,3 @@
-# `google_binary_authorization_attestor`
-
-Refer to the Terraform Registory for docs: [`google_binary_authorization_attestor`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/binary_authorization_attestor).
-
 # `binaryAuthorizationAttestor` Submodule <a name="`binaryAuthorizationAttestor` Submodule" id="@cdktf/provider-google.binaryAuthorizationAttestor"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

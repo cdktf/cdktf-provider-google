@@ -1,7 +1,3 @@
-# `google_data_loss_prevention_job_trigger`
-
-Refer to the Terraform Registory for docs: [`google_data_loss_prevention_job_trigger`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_loss_prevention_job_trigger).
-
 # `dataLossPreventionJobTrigger` Submodule <a name="`dataLossPreventionJobTrigger` Submodule" id="@cdktf/provider-google.dataLossPreventionJobTrigger"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

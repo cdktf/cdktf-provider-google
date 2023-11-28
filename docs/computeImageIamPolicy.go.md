@@ -1,7 +1,3 @@
-# `google_compute_image_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_compute_image_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_image_iam_policy).
-
 # `computeImageIamPolicy` Submodule <a name="`computeImageIamPolicy` Submodule" id="@cdktf/provider-google.computeImageIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiampolicy"
 
 computeimageiampolicy.NewComputeImageIamPolicy(scope Construct, id *string, config ComputeImageIamPolicyConfig) ComputeImageIamPolicy
 ```
@@ -346,7 +342,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiampolicy"
 
 computeimageiampolicy.ComputeImageIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -378,7 +374,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiampolicy"
 
 computeimageiampolicy.ComputeImageIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -392,7 +388,7 @@ computeimageiampolicy.ComputeImageIamPolicy_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiampolicy"
 
 computeimageiampolicy.ComputeImageIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -406,7 +402,7 @@ computeimageiampolicy.ComputeImageIamPolicy_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiampolicy"
 
 computeimageiampolicy.ComputeImageIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -734,7 +730,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiampolicy"
 
 &computeimageiampolicy.ComputeImageIamPolicyConfig {
 	Connection: interface{},

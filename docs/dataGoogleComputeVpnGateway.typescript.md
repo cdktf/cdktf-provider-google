@@ -1,7 +1,3 @@
-# `data_google_compute_vpn_gateway`
-
-Refer to the Terraform Registory for docs: [`data_google_compute_vpn_gateway`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_vpn_gateway).
-
 # `dataGoogleComputeVpnGateway` Submodule <a name="`dataGoogleComputeVpnGateway` Submodule" id="@cdktf/provider-google.dataGoogleComputeVpnGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

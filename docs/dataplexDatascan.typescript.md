@@ -1,7 +1,3 @@
-# `google_dataplex_datascan`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_datascan`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_datascan).
-
 # `dataplexDatascan` Submodule <a name="`dataplexDatascan` Submodule" id="@cdktf/provider-google.dataplexDatascan"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

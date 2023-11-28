@@ -1,7 +1,3 @@
-# `google_folder`
-
-Refer to the Terraform Registory for docs: [`google_folder`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/folder).
-
 # `folder` Submodule <a name="`folder` Submodule" id="@cdktf/provider-google.folder"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folder.Folder.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 folder.NewFolder(scope Construct, id *string, config FolderConfig) Folder
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.folder.Folder.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 folder.Folder_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.folder.Folder.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 folder.Folder_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ folder.Folder_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.folder.Folder.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 folder.Folder_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ folder.Folder_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.folder.Folder.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 folder.Folder_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -780,7 +776,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folder.FolderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 &folder.FolderConfig {
 	Connection: interface{},
@@ -793,7 +789,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
 	DisplayName: *string,
 	Parent: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.folder.FolderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.folder.FolderTimeouts,
 }
 ```
 
@@ -949,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folder.FolderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 &folder.FolderTimeouts {
 	Create: *string,
@@ -1025,7 +1021,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folder.FolderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folder"
+import "github.com/cdktf/cdktf-provider-google-go/google/folder"
 
 folder.NewFolderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderTimeoutsOutputReference
 ```

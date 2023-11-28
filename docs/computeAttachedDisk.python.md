@@ -1,7 +1,3 @@
-# `google_compute_attached_disk`
-
-Refer to the Terraform Registory for docs: [`google_compute_attached_disk`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_attached_disk).
-
 # `computeAttachedDisk` Submodule <a name="`computeAttachedDisk` Submodule" id="@cdktf/provider-google.computeAttachedDisk"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

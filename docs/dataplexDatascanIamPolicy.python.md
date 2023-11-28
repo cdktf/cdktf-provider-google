@@ -1,7 +1,3 @@
-# `google_dataplex_datascan_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_datascan_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_datascan_iam_policy).
-
 # `dataplexDatascanIamPolicy` Submodule <a name="`dataplexDatascanIamPolicy` Submodule" id="@cdktf/provider-google.dataplexDatascanIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

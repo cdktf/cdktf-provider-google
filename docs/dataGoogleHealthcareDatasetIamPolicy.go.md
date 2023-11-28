@@ -1,7 +1,3 @@
-# `data_google_healthcare_dataset_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_healthcare_dataset_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/healthcare_dataset_iam_policy).
-
 # `dataGoogleHealthcareDatasetIamPolicy` Submodule <a name="`dataGoogleHealthcareDatasetIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglehealthcaredatasetiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcaredatasetiampolicy"
 
 datagooglehealthcaredatasetiampolicy.NewDataGoogleHealthcareDatasetIamPolicy(scope Construct, id *string, config DataGoogleHealthcareDatasetIamPolicyConfig) DataGoogleHealthcareDatasetIamPolicy
 ```
@@ -278,7 +274,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglehealthcaredatasetiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcaredatasetiampolicy"
 
 datagooglehealthcaredatasetiampolicy.DataGoogleHealthcareDatasetIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -310,7 +306,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglehealthcaredatasetiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcaredatasetiampolicy"
 
 datagooglehealthcaredatasetiampolicy.DataGoogleHealthcareDatasetIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -324,7 +320,7 @@ datagooglehealthcaredatasetiampolicy.DataGoogleHealthcareDatasetIamPolicy_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglehealthcaredatasetiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcaredatasetiampolicy"
 
 datagooglehealthcaredatasetiampolicy.DataGoogleHealthcareDatasetIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -338,7 +334,7 @@ datagooglehealthcaredatasetiampolicy.DataGoogleHealthcareDatasetIamPolicy_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglehealthcaredatasetiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcaredatasetiampolicy"
 
 datagooglehealthcaredatasetiampolicy.DataGoogleHealthcareDatasetIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -611,7 +607,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleHealthcareDatasetIamPolicy.DataGoogleHealthcareDatasetIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglehealthcaredatasetiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcaredatasetiampolicy"
 
 &datagooglehealthcaredatasetiampolicy.DataGoogleHealthcareDatasetIamPolicyConfig {
 	Connection: interface{},

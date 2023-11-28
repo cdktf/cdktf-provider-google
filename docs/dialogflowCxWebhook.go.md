@@ -1,7 +1,3 @@
-# `google_dialogflow_cx_webhook`
-
-Refer to the Terraform Registory for docs: [`google_dialogflow_cx_webhook`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_webhook).
-
 # `dialogflowCxWebhook` Submodule <a name="`dialogflowCxWebhook` Submodule" id="@cdktf/provider-google.dialogflowCxWebhook"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhook(scope Construct, id *string, config DialogflowCxWebhookConfig) DialogflowCxWebhook
 ```
@@ -441,7 +437,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_IsConstruct(x interface{}) *bool
 ```
@@ -473,7 +469,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformElement(x interface{}) *bool
 ```
@@ -487,7 +483,7 @@ dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformResource(x interface{}) *bool
 ```
@@ -501,7 +497,7 @@ dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -994,7 +990,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookConfig {
 	Connection: interface{},
@@ -1008,13 +1004,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook
 	Disabled: interface{},
 	EnableSpellCorrection: interface{},
 	EnableStackdriverLogging: interface{},
-	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google/v12.dialogflowCxWebhook.DialogflowCxWebhookGenericWebService,
+	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookGenericWebService,
 	Id: *string,
 	Parent: *string,
 	SecuritySettings: *string,
-	ServiceDirectory: github.com/cdktf/cdktf-provider-google-go/google/v12.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectory,
+	ServiceDirectory: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectory,
 	Timeout: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.dialogflowCxWebhook.DialogflowCxWebhookTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts,
 }
 ```
 
@@ -1273,7 +1269,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookGenericWebService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookGenericWebService {
 	Uri: *string,
@@ -1339,10 +1335,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookServiceDirectory {
-	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google/v12.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebService,
+	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebService,
 	Service: *string,
 }
 ```
@@ -1389,7 +1385,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookServiceDirectoryGenericWebService {
 	Uri: *string,
@@ -1455,7 +1451,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookTimeouts {
 	Create: *string,
@@ -1517,7 +1513,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookGenericWebServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookGenericWebServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookGenericWebServiceOutputReference
 ```
@@ -1846,7 +1842,7 @@ func InternalValue() DialogflowCxWebhookGenericWebService
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference
 ```
@@ -2175,7 +2171,7 @@ func InternalValue() DialogflowCxWebhookServiceDirectoryGenericWebService
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookServiceDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookServiceDirectoryOutputReference
 ```
@@ -2481,7 +2477,7 @@ func InternalValue() DialogflowCxWebhookServiceDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookTimeoutsOutputReference
 ```

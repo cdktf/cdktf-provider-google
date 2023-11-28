@@ -1,7 +1,3 @@
-# `google_iap_app_engine_version_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_iap_app_engine_version_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_app_engine_version_iam_member).
-
 # `iapAppEngineVersionIamMember` Submodule <a name="`iapAppEngineVersionIamMember` Submodule" id="@cdktf/provider-google.iapAppEngineVersionIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 iapappengineversioniammember.NewIapAppEngineVersionIamMember(scope Construct, id *string, config IapAppEngineVersionIamMemberConfig) IapAppEngineVersionIamMember
 ```
@@ -366,7 +362,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 iapappengineversioniammember.IapAppEngineVersionIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 iapappengineversioniammember.IapAppEngineVersionIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ iapappengineversioniammember.IapAppEngineVersionIamMember_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 iapappengineversioniammember.IapAppEngineVersionIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ iapappengineversioniammember.IapAppEngineVersionIamMember_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 iapappengineversioniammember.IapAppEngineVersionIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -842,7 +838,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 &iapappengineversioniammember.IapAppEngineVersionIamMemberCondition {
 	Expression: *string,
@@ -902,7 +898,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 &iapappengineversioniammember.IapAppEngineVersionIamMemberConfig {
 	Connection: interface{},
@@ -917,7 +913,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversion
 	Role: *string,
 	Service: *string,
 	VersionId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.iapAppEngineVersionIamMember.IapAppEngineVersionIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1123,7 +1119,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineVersionIamMember.IapAppEngineVersionIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniammember"
 
 iapappengineversioniammember.NewIapAppEngineVersionIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapAppEngineVersionIamMemberConditionOutputReference
 ```

@@ -1,7 +1,3 @@
-# `google_iap_brand`
-
-Refer to the Terraform Registory for docs: [`google_iap_brand`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_brand).
-
 # `iapBrand` Submodule <a name="`iapBrand` Submodule" id="@cdktf/provider-google.iapBrand"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapBrand.IapBrand.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.NewIapBrand(scope Construct, id *string, config IapBrandConfig) IapBrand
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapBrand.IapBrand.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.IapBrand_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapBrand.IapBrand.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.IapBrand_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ iapbrand.IapBrand_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapBrand.IapBrand.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.IapBrand_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ iapbrand.IapBrand_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapBrand.IapBrand.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.IapBrand_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -787,7 +783,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapBrand.IapBrandConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 &iapbrand.IapBrandConfig {
 	Connection: interface{},
@@ -801,7 +797,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
 	SupportEmail: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.iapBrand.IapBrandTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iapBrand.IapBrandTimeouts,
 }
 ```
 
@@ -974,7 +970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapBrand.IapBrandTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 &iapbrand.IapBrandTimeouts {
 	Create: *string,
@@ -1022,7 +1018,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.NewIapBrandTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapBrandTimeoutsOutputReference
 ```

@@ -1,7 +1,3 @@
-# `data_google_storage_bucket_object_content`
-
-Refer to the Terraform Registory for docs: [`data_google_storage_bucket_object_content`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/storage_bucket_object_content).
-
 # `dataGoogleStorageBucketObjectContent` Submodule <a name="`dataGoogleStorageBucketObjectContent` Submodule" id="@cdktf/provider-google.dataGoogleStorageBucketObjectContent"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

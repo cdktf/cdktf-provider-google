@@ -1,7 +1,3 @@
-# `google_apigee_environment_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_apigee_environment_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apigee_environment_iam_member).
-
 # `apigeeEnvironmentIamMember` Submodule <a name="`apigeeEnvironmentIamMember` Submodule" id="@cdktf/provider-google.apigeeEnvironmentIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

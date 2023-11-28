@@ -1,7 +1,3 @@
-# `data_google_dataproc_cluster_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_dataproc_cluster_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/dataproc_cluster_iam_policy).
-
 # `dataGoogleDataprocClusterIamPolicy` Submodule <a name="`dataGoogleDataprocClusterIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataprocclusteriampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogledataprocclusteriampolicy"
 
 datagoogledataprocclusteriampolicy.NewDataGoogleDataprocClusterIamPolicy(scope Construct, id *string, config DataGoogleDataprocClusterIamPolicyConfig) DataGoogleDataprocClusterIamPolicy
 ```
@@ -292,7 +288,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataprocclusteriampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogledataprocclusteriampolicy"
 
 datagoogledataprocclusteriampolicy.DataGoogleDataprocClusterIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -324,7 +320,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataprocclusteriampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogledataprocclusteriampolicy"
 
 datagoogledataprocclusteriampolicy.DataGoogleDataprocClusterIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -338,7 +334,7 @@ datagoogledataprocclusteriampolicy.DataGoogleDataprocClusterIamPolicy_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataprocclusteriampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogledataprocclusteriampolicy"
 
 datagoogledataprocclusteriampolicy.DataGoogleDataprocClusterIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -352,7 +348,7 @@ datagoogledataprocclusteriampolicy.DataGoogleDataprocClusterIamPolicy_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataprocclusteriampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogledataprocclusteriampolicy"
 
 datagoogledataprocclusteriampolicy.DataGoogleDataprocClusterIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -669,7 +665,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDataprocClusterIamPolicy.DataGoogleDataprocClusterIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataprocclusteriampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogledataprocclusteriampolicy"
 
 &datagoogledataprocclusteriampolicy.DataGoogleDataprocClusterIamPolicyConfig {
 	Connection: interface{},

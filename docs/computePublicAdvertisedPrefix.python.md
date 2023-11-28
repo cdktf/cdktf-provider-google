@@ -1,7 +1,3 @@
-# `google_compute_public_advertised_prefix`
-
-Refer to the Terraform Registory for docs: [`google_compute_public_advertised_prefix`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_public_advertised_prefix).
-
 # `computePublicAdvertisedPrefix` Submodule <a name="`computePublicAdvertisedPrefix` Submodule" id="@cdktf/provider-google.computePublicAdvertisedPrefix"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

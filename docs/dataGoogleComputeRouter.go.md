@@ -1,7 +1,3 @@
-# `data_google_compute_router`
-
-Refer to the Terraform Registory for docs: [`data_google_compute_router`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_router).
-
 # `dataGoogleComputeRouter` Submodule <a name="`dataGoogleComputeRouter` Submodule" id="@cdktf/provider-google.dataGoogleComputeRouter"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.NewDataGoogleComputeRouter(scope Construct, id *string, config DataGoogleComputeRouterConfig) DataGoogleComputeRouter
 ```
@@ -292,7 +288,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouter.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.DataGoogleComputeRouter_IsConstruct(x interface{}) *bool
 ```
@@ -324,7 +320,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouter.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.DataGoogleComputeRouter_IsTerraformElement(x interface{}) *bool
 ```
@@ -338,7 +334,7 @@ datagooglecomputerouter.DataGoogleComputeRouter_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouter.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.DataGoogleComputeRouter_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -352,7 +348,7 @@ datagooglecomputerouter.DataGoogleComputeRouter_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouter.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.DataGoogleComputeRouter_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -724,7 +720,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouterBgp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 &datagooglecomputerouter.DataGoogleComputeRouterBgp {
 
@@ -737,7 +733,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouterBgpAdvertisedIpRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 &datagooglecomputerouter.DataGoogleComputeRouterBgpAdvertisedIpRanges {
 
@@ -750,7 +746,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 &datagooglecomputerouter.DataGoogleComputeRouterConfig {
 	Connection: interface{},
@@ -940,7 +936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouterBgpAdvertisedIpRangesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.NewDataGoogleComputeRouterBgpAdvertisedIpRangesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterBgpAdvertisedIpRangesList
 ```
@@ -1072,7 +1068,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouterBgpAdvertisedIpRangesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.NewDataGoogleComputeRouterBgpAdvertisedIpRangesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterBgpAdvertisedIpRangesOutputReference
 ```
@@ -1361,7 +1357,7 @@ func InternalValue() DataGoogleComputeRouterBgpAdvertisedIpRanges
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouterBgpList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.NewDataGoogleComputeRouterBgpList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterBgpList
 ```
@@ -1493,7 +1489,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouter.DataGoogleComputeRouterBgpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouter"
 
 datagooglecomputerouter.NewDataGoogleComputeRouterBgpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterBgpOutputReference
 ```

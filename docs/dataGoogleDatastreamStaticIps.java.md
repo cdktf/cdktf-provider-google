@@ -1,7 +1,3 @@
-# `data_google_datastream_static_ips`
-
-Refer to the Terraform Registory for docs: [`data_google_datastream_static_ips`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/datastream_static_ips).
-
 # `dataGoogleDatastreamStaticIps` Submodule <a name="`dataGoogleDatastreamStaticIps` Submodule" id="@cdktf/provider-google.dataGoogleDatastreamStaticIps"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

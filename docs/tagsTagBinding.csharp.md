@@ -1,7 +1,3 @@
-# `google_tags_tag_binding`
-
-Refer to the Terraform Registory for docs: [`google_tags_tag_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_binding).
-
 # `tagsTagBinding` Submodule <a name="`tagsTagBinding` Submodule" id="@cdktf/provider-google.tagsTagBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

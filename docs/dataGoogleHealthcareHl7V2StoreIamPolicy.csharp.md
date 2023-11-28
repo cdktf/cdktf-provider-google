@@ -1,7 +1,3 @@
-# `data_google_healthcare_hl7_v2_store_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_healthcare_hl7_v2_store_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/healthcare_hl7_v2_store_iam_policy).
-
 # `dataGoogleHealthcareHl7V2StoreIamPolicy` Submodule <a name="`dataGoogleHealthcareHl7V2StoreIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

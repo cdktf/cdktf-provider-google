@@ -1,7 +1,3 @@
-# `google_cloud_run_v2_job`
-
-Refer to the Terraform Registory for docs: [`google_cloud_run_v2_job`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloud_run_v2_job).
-
 # `cloudRunV2Job` Submodule <a name="`cloudRunV2Job` Submodule" id="@cdktf/provider-google.cloudRunV2Job"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

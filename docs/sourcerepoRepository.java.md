@@ -1,7 +1,3 @@
-# `google_sourcerepo_repository`
-
-Refer to the Terraform Registory for docs: [`google_sourcerepo_repository`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sourcerepo_repository).
-
 # `sourcerepoRepository` Submodule <a name="`sourcerepoRepository` Submodule" id="@cdktf/provider-google.sourcerepoRepository"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

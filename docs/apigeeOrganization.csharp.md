@@ -1,7 +1,3 @@
-# `google_apigee_organization`
-
-Refer to the Terraform Registory for docs: [`google_apigee_organization`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apigee_organization).
-
 # `apigeeOrganization` Submodule <a name="`apigeeOrganization` Submodule" id="@cdktf/provider-google.apigeeOrganization"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

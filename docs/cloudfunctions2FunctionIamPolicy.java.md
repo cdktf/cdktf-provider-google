@@ -1,7 +1,3 @@
-# `google_cloudfunctions2_function_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_cloudfunctions2_function_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudfunctions2_function_iam_policy).
-
 # `cloudfunctions2FunctionIamPolicy` Submodule <a name="`cloudfunctions2FunctionIamPolicy` Submodule" id="@cdktf/provider-google.cloudfunctions2FunctionIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

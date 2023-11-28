@@ -1,7 +1,3 @@
-# `google_dialogflow_cx_intent`
-
-Refer to the Terraform Registory for docs: [`google_dialogflow_cx_intent`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_intent).
-
 # `dialogflowCxIntent` Submodule <a name="`dialogflowCxIntent` Submodule" id="@cdktf/provider-google.dialogflowCxIntent"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntent(scope Construct, id *string, config DialogflowCxIntentConfig) DialogflowCxIntent
 ```
@@ -455,7 +451,7 @@ func ResetTrainingPhrases()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.DialogflowCxIntent_IsConstruct(x interface{}) *bool
 ```
@@ -487,7 +483,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.DialogflowCxIntent_IsTerraformElement(x interface{}) *bool
 ```
@@ -501,7 +497,7 @@ dialogflowcxintent.DialogflowCxIntent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.DialogflowCxIntent_IsTerraformResource(x interface{}) *bool
 ```
@@ -515,7 +511,7 @@ dialogflowcxintent.DialogflowCxIntent_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.DialogflowCxIntent_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1063,7 +1059,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 &dialogflowcxintent.DialogflowCxIntentConfig {
 	Connection: interface{},
@@ -1084,7 +1080,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
 	Parameters: interface{},
 	Parent: *string,
 	Priority: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.dialogflowCxIntent.DialogflowCxIntentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxIntent.DialogflowCxIntentTimeouts,
 	TrainingPhrases: interface{},
 }
 ```
@@ -1393,7 +1389,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentParameters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 &dialogflowcxintent.DialogflowCxIntentParameters {
 	EntityType: *string,
@@ -1483,7 +1479,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 &dialogflowcxintent.DialogflowCxIntentTimeouts {
 	Create: *string,
@@ -1543,7 +1539,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTrainingPhrases.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 &dialogflowcxintent.DialogflowCxIntentTrainingPhrases {
 	Parts: interface{},
@@ -1593,7 +1589,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTrainingPhrasesParts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 &dialogflowcxintent.DialogflowCxIntentTrainingPhrasesParts {
 	Text: *string,
@@ -1647,7 +1643,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentParametersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntentParametersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxIntentParametersList
 ```
@@ -1790,7 +1786,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentParametersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntentParametersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxIntentParametersOutputReference
 ```
@@ -2159,7 +2155,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxIntentTimeoutsOutputReference
 ```
@@ -2495,7 +2491,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTrainingPhrasesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntentTrainingPhrasesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxIntentTrainingPhrasesList
 ```
@@ -2638,7 +2634,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTrainingPhrasesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntentTrainingPhrasesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxIntentTrainingPhrasesOutputReference
 ```
@@ -2980,7 +2976,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTrainingPhrasesPartsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntentTrainingPhrasesPartsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxIntentTrainingPhrasesPartsList
 ```
@@ -3123,7 +3119,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTrainingPhrasesPartsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dialogflowcxintent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxintent"
 
 dialogflowcxintent.NewDialogflowCxIntentTrainingPhrasesPartsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxIntentTrainingPhrasesPartsOutputReference
 ```

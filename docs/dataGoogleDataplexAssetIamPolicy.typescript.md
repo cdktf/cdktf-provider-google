@@ -1,7 +1,3 @@
-# `data_google_dataplex_asset_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_dataplex_asset_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/dataplex_asset_iam_policy).
-
 # `dataGoogleDataplexAssetIamPolicy` Submodule <a name="`dataGoogleDataplexAssetIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleDataplexAssetIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

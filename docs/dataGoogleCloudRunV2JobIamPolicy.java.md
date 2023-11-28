@@ -1,7 +1,3 @@
-# `data_google_cloud_run_v2_job_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_cloud_run_v2_job_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/cloud_run_v2_job_iam_policy).
-
 # `dataGoogleCloudRunV2JobIamPolicy` Submodule <a name="`dataGoogleCloudRunV2JobIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleCloudRunV2JobIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

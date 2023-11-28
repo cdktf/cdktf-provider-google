@@ -1,7 +1,3 @@
-# `google_app_engine_firewall_rule`
-
-Refer to the Terraform Registory for docs: [`google_app_engine_firewall_rule`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_firewall_rule).
-
 # `appEngineFirewallRule` Submodule <a name="`appEngineFirewallRule` Submodule" id="@cdktf/provider-google.appEngineFirewallRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

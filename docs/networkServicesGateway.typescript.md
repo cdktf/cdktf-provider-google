@@ -1,7 +1,3 @@
-# `google_network_services_gateway`
-
-Refer to the Terraform Registory for docs: [`google_network_services_gateway`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/network_services_gateway).
-
 # `networkServicesGateway` Submodule <a name="`networkServicesGateway` Submodule" id="@cdktf/provider-google.networkServicesGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

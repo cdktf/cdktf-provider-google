@@ -1,7 +1,3 @@
-# `google_compute_project_metadata_item`
-
-Refer to the Terraform Registory for docs: [`google_compute_project_metadata_item`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_project_metadata_item).
-
 # `computeProjectMetadataItem` Submodule <a name="`computeProjectMetadataItem` Submodule" id="@cdktf/provider-google.computeProjectMetadataItem"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

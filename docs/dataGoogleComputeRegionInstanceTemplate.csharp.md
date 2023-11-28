@@ -1,7 +1,3 @@
-# `data_google_compute_region_instance_template`
-
-Refer to the Terraform Registory for docs: [`data_google_compute_region_instance_template`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_region_instance_template).
-
 # `dataGoogleComputeRegionInstanceTemplate` Submodule <a name="`dataGoogleComputeRegionInstanceTemplate` Submodule" id="@cdktf/provider-google.dataGoogleComputeRegionInstanceTemplate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

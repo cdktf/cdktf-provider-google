@@ -1,7 +1,3 @@
-# `google_bigquery_analytics_hub_data_exchange_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_bigquery_analytics_hub_data_exchange_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_analytics_hub_data_exchange_iam_binding).
-
 # `bigqueryAnalyticsHubDataExchangeIamBinding` Submodule <a name="`bigqueryAnalyticsHubDataExchangeIamBinding` Submodule" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

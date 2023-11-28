@@ -1,7 +1,3 @@
-# `google_folder`
-
-Refer to the Terraform Registory for docs: [`google_folder`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/folder).
-
 # `folder` Submodule <a name="`folder` Submodule" id="@cdktf/provider-google.folder"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

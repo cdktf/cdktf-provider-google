@@ -1,7 +1,3 @@
-# `google_cloud_identity_group_membership`
-
-Refer to the Terraform Registory for docs: [`google_cloud_identity_group_membership`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloud_identity_group_membership).
-
 # `cloudIdentityGroupMembership` Submodule <a name="`cloudIdentityGroupMembership` Submodule" id="@cdktf/provider-google.cloudIdentityGroupMembership"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

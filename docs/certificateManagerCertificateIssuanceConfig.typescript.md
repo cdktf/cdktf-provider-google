@@ -1,7 +1,3 @@
-# `google_certificate_manager_certificate_issuance_config`
-
-Refer to the Terraform Registory for docs: [`google_certificate_manager_certificate_issuance_config`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/certificate_manager_certificate_issuance_config).
-
 # `certificateManagerCertificateIssuanceConfig` Submodule <a name="`certificateManagerCertificateIssuanceConfig` Submodule" id="@cdktf/provider-google.certificateManagerCertificateIssuanceConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

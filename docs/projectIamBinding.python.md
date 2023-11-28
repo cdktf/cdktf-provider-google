@@ -1,7 +1,3 @@
-# `google_project_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_project_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/project_iam_binding).
-
 # `projectIamBinding` Submodule <a name="`projectIamBinding` Submodule" id="@cdktf/provider-google.projectIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

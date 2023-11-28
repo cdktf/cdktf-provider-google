@@ -1,7 +1,3 @@
-# `google_kms_crypto_key_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_kms_crypto_key_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/kms_crypto_key_iam_member).
-
 # `kmsCryptoKeyIamMember` Submodule <a name="`kmsCryptoKeyIamMember` Submodule" id="@cdktf/provider-google.kmsCryptoKeyIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

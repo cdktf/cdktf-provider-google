@@ -1,7 +1,3 @@
-# `google_looker_instance`
-
-Refer to the Terraform Registory for docs: [`google_looker_instance`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/looker_instance).
-
 # `lookerInstance` Submodule <a name="`lookerInstance` Submodule" id="@cdktf/provider-google.lookerInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

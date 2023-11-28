@@ -1,7 +1,3 @@
-# `google_dataproc_autoscaling_policy_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_dataproc_autoscaling_policy_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataproc_autoscaling_policy_iam_policy).
-
 # `dataprocAutoscalingPolicyIamPolicy` Submodule <a name="`dataprocAutoscalingPolicyIamPolicy` Submodule" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamPolicy.DataprocAutoscalingPolicyIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocautoscalingpolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocautoscalingpolicyiampolicy"
 
 dataprocautoscalingpolicyiampolicy.NewDataprocAutoscalingPolicyIamPolicy(scope Construct, id *string, config DataprocAutoscalingPolicyIamPolicyConfig) DataprocAutoscalingPolicyIamPolicy
 ```
@@ -353,7 +349,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamPolicy.DataprocAutoscalingPolicyIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocautoscalingpolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocautoscalingpolicyiampolicy"
 
 dataprocautoscalingpolicyiampolicy.DataprocAutoscalingPolicyIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +381,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamPolicy.DataprocAutoscalingPolicyIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocautoscalingpolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocautoscalingpolicyiampolicy"
 
 dataprocautoscalingpolicyiampolicy.DataprocAutoscalingPolicyIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +395,7 @@ dataprocautoscalingpolicyiampolicy.DataprocAutoscalingPolicyIamPolicy_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamPolicy.DataprocAutoscalingPolicyIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocautoscalingpolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocautoscalingpolicyiampolicy"
 
 dataprocautoscalingpolicyiampolicy.DataprocAutoscalingPolicyIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -413,7 +409,7 @@ dataprocautoscalingpolicyiampolicy.DataprocAutoscalingPolicyIamPolicy_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamPolicy.DataprocAutoscalingPolicyIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocautoscalingpolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocautoscalingpolicyiampolicy"
 
 dataprocautoscalingpolicyiampolicy.DataprocAutoscalingPolicyIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -763,7 +759,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamPolicy.DataprocAutoscalingPolicyIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataprocautoscalingpolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocautoscalingpolicyiampolicy"
 
 &dataprocautoscalingpolicyiampolicy.DataprocAutoscalingPolicyIamPolicyConfig {
 	Connection: interface{},

@@ -1,7 +1,3 @@
-# `google_pubsub_schema`
-
-Refer to the Terraform Registory for docs: [`google_pubsub_schema`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/pubsub_schema).
-
 # `pubsubSchema` Submodule <a name="`pubsubSchema` Submodule" id="@cdktf/provider-google.pubsubSchema"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

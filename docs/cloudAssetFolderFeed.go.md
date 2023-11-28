@@ -1,7 +1,3 @@
-# `google_cloud_asset_folder_feed`
-
-Refer to the Terraform Registory for docs: [`google_cloud_asset_folder_feed`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloud_asset_folder_feed).
-
 # `cloudAssetFolderFeed` Submodule <a name="`cloudAssetFolderFeed` Submodule" id="@cdktf/provider-google.cloudAssetFolderFeed"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeed.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.NewCloudAssetFolderFeed(scope Construct, id *string, config CloudAssetFolderFeedConfig) CloudAssetFolderFeed
 ```
@@ -413,7 +409,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeed.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.CloudAssetFolderFeed_IsConstruct(x interface{}) *bool
 ```
@@ -445,7 +441,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeed.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.CloudAssetFolderFeed_IsTerraformElement(x interface{}) *bool
 ```
@@ -459,7 +455,7 @@ cloudassetfolderfeed.CloudAssetFolderFeed_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeed.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.CloudAssetFolderFeed_IsTerraformResource(x interface{}) *bool
 ```
@@ -473,7 +469,7 @@ cloudassetfolderfeed.CloudAssetFolderFeed_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeed.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.CloudAssetFolderFeed_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -944,7 +940,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 &cloudassetfolderfeed.CloudAssetFolderFeedCondition {
 	Expression: *string,
@@ -1029,7 +1025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 &cloudassetfolderfeed.CloudAssetFolderFeedConfig {
 	Connection: interface{},
@@ -1041,14 +1037,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfee
 	Provisioners: *[]interface{},
 	BillingProject: *string,
 	FeedId: *string,
-	FeedOutputConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfig,
+	FeedOutputConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfig,
 	Folder: *string,
 	AssetNames: *[]*string,
 	AssetTypes: *[]*string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudAssetFolderFeed.CloudAssetFolderFeedCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetFolderFeed.CloudAssetFolderFeedCondition,
 	ContentType: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts,
 }
 ```
 
@@ -1308,10 +1304,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 &cloudassetfolderfeed.CloudAssetFolderFeedFeedOutputConfig {
-	PubsubDestination: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfigPubsubDestination,
+	PubsubDestination: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfigPubsubDestination,
 }
 ```
 
@@ -1342,7 +1338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfigPubsubDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 &cloudassetfolderfeed.CloudAssetFolderFeedFeedOutputConfigPubsubDestination {
 	Topic: *string,
@@ -1376,7 +1372,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 &cloudassetfolderfeed.CloudAssetFolderFeedTimeouts {
 	Create: *string,
@@ -1438,7 +1434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.NewCloudAssetFolderFeedConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetFolderFeedConditionOutputReference
 ```
@@ -1796,7 +1792,7 @@ func InternalValue() CloudAssetFolderFeedCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.NewCloudAssetFolderFeedFeedOutputConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetFolderFeedFeedOutputConfigOutputReference
 ```
@@ -2080,7 +2076,7 @@ func InternalValue() CloudAssetFolderFeedFeedOutputConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.NewCloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference
 ```
@@ -2351,7 +2347,7 @@ func InternalValue() CloudAssetFolderFeedFeedOutputConfigPubsubDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetFolderFeed.CloudAssetFolderFeedTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudassetfolderfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetfolderfeed"
 
 cloudassetfolderfeed.NewCloudAssetFolderFeedTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetFolderFeedTimeoutsOutputReference
 ```

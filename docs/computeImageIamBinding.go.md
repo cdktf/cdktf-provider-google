@@ -1,7 +1,3 @@
-# `google_compute_image_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_compute_image_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_image_iam_binding).
-
 # `computeImageIamBinding` Submodule <a name="`computeImageIamBinding` Submodule" id="@cdktf/provider-google.computeImageIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 computeimageiambinding.NewComputeImageIamBinding(scope Construct, id *string, config ComputeImageIamBindingConfig) ComputeImageIamBinding
 ```
@@ -366,7 +362,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 computeimageiambinding.ComputeImageIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 computeimageiambinding.ComputeImageIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ computeimageiambinding.ComputeImageIamBinding_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 computeimageiambinding.ComputeImageIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ computeimageiambinding.ComputeImageIamBinding_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 computeimageiambinding.ComputeImageIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -798,7 +794,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 &computeimageiambinding.ComputeImageIamBindingCondition {
 	Expression: *string,
@@ -858,7 +854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 &computeimageiambinding.ComputeImageIamBindingConfig {
 	Connection: interface{},
@@ -871,7 +867,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambind
 	Image: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.computeImageIamBinding.ComputeImageIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeImageIamBinding.ComputeImageIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1051,7 +1047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeImageIamBinding.ComputeImageIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiambinding"
 
 computeimageiambinding.NewComputeImageIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeImageIamBindingConditionOutputReference
 ```

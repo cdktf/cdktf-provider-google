@@ -1,7 +1,3 @@
-# `data_google_bigquery_default_service_account`
-
-Refer to the Terraform Registory for docs: [`data_google_bigquery_default_service_account`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/bigquery_default_service_account).
-
 # `dataGoogleBigqueryDefaultServiceAccount` Submodule <a name="`dataGoogleBigqueryDefaultServiceAccount` Submodule" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.NewDataGoogleBigqueryDefaultServiceAccount(scope Construct, id *string, config DataGoogleBigqueryDefaultServiceAccountConfig) DataGoogleBigqueryDefaultServiceAccount
 ```
@@ -285,7 +281,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_IsConstruct(x interface{}) *bool
 ```
@@ -317,7 +313,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -331,7 +327,7 @@ datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +341,7 @@ datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -618,7 +614,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerydefaultserviceaccount"
 
 &datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccountConfig {
 	Connection: interface{},

@@ -1,7 +1,3 @@
-# `data_google_cloud_run_v2_service`
-
-Refer to the Terraform Registory for docs: [`data_google_cloud_run_v2_service`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/cloud_run_v2_service).
-
 # `dataGoogleCloudRunV2Service` Submodule <a name="`dataGoogleCloudRunV2Service` Submodule" id="@cdktf/provider-google.dataGoogleCloudRunV2Service"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

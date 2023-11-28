@@ -1,7 +1,3 @@
-# `google_dataplex_task`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_task`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_task).
-
 # `dataplexTask` Submodule <a name="`dataplexTask` Submodule" id="@cdktf/provider-google.dataplexTask"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTask.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTask(scope Construct, id *string, config DataplexTaskConfig) DataplexTask
 ```
@@ -474,7 +470,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexTask.DataplexTask.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_IsConstruct(x interface{}) *bool
 ```
@@ -506,7 +502,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexTask.DataplexTask.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_IsTerraformElement(x interface{}) *bool
 ```
@@ -520,7 +516,7 @@ dataplextask.DataplexTask_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexTask.DataplexTask.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_IsTerraformResource(x interface{}) *bool
 ```
@@ -534,7 +530,7 @@ dataplextask.DataplexTask_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexTask.DataplexTask.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1137,7 +1133,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskConfig {
 	Connection: interface{},
@@ -1147,19 +1143,19 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	ExecutionSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskExecutionSpec,
-	TriggerSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskTriggerSpec,
+	ExecutionSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskExecutionSpec,
+	TriggerSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskTriggerSpec,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Lake: *string,
 	Location: *string,
-	Notebook: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebook,
+	Notebook: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebook,
 	Project: *string,
-	Spark: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSpark,
+	Spark: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSpark,
 	TaskId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskTimeouts,
 }
 ```
 
@@ -1449,7 +1445,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskExecutionSpec {
 	ServiceAccount: *string,
@@ -1555,7 +1551,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskExecutionStatus {
 
@@ -1568,7 +1564,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusLatestJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskExecutionStatusLatestJob {
 
@@ -1581,13 +1577,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebook {
 	Notebook: *string,
 	ArchiveUris: *[]*string,
 	FileUris: *[]*string,
-	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpec,
+	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpec,
 }
 ```
 
@@ -1667,12 +1663,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpec {
-	Batch: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatch,
-	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImage,
-	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetwork,
+	Batch: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatch,
+	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImage,
+	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetwork,
 }
 ```
 
@@ -1733,7 +1729,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpecBatch {
 	ExecutorsCount: *f64,
@@ -1785,7 +1781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpecContainerImage {
 	Image: *string,
@@ -1873,7 +1869,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpecVpcNetwork {
 	Network: *string,
@@ -1941,12 +1937,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSpark.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSpark {
 	ArchiveUris: *[]*string,
 	FileUris: *[]*string,
-	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpec,
+	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpec,
 	MainClass: *string,
 	MainJarFileUri: *string,
 	PythonScriptFile: *string,
@@ -2097,12 +2093,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpec {
-	Batch: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpecBatch,
-	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImage,
-	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetwork,
+	Batch: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpecBatch,
+	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImage,
+	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetwork,
 }
 ```
 
@@ -2163,7 +2159,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpecBatch {
 	ExecutorsCount: *f64,
@@ -2215,7 +2211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpecContainerImage {
 	Image: *string,
@@ -2303,7 +2299,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpecVpcNetwork {
 	Network: *string,
@@ -2371,7 +2367,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskTimeouts {
 	Create: *string,
@@ -2431,7 +2427,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskTriggerSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskTriggerSpec {
 	Type: *string,
@@ -2535,7 +2531,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskExecutionSpecOutputReference
 ```
@@ -2922,7 +2918,7 @@ func InternalValue() DataplexTaskExecutionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusLatestJobList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusLatestJobList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexTaskExecutionStatusLatestJobList
 ```
@@ -3054,7 +3050,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusLatestJobOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusLatestJobOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexTaskExecutionStatusLatestJobOutputReference
 ```
@@ -3420,7 +3416,7 @@ func InternalValue() DataplexTaskExecutionStatusLatestJob
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexTaskExecutionStatusList
 ```
@@ -3552,7 +3548,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexTaskExecutionStatusOutputReference
 ```
@@ -3841,7 +3837,7 @@ func InternalValue() DataplexTaskExecutionStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecBatchOutputReference
 ```
@@ -4148,7 +4144,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpecBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecContainerImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecContainerImageOutputReference
 ```
@@ -4513,7 +4509,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpecContainerImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecOutputReference
 ```
@@ -4888,7 +4884,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecVpcNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecVpcNetworkOutputReference
 ```
@@ -5224,7 +5220,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpecVpcNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookOutputReference
 ```
@@ -5595,7 +5591,7 @@ func InternalValue() DataplexTaskNotebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecBatchOutputReference
 ```
@@ -5902,7 +5898,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpecBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecContainerImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecContainerImageOutputReference
 ```
@@ -6267,7 +6263,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpecContainerImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecOutputReference
 ```
@@ -6642,7 +6638,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecVpcNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecVpcNetworkOutputReference
 ```
@@ -6978,7 +6974,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpecVpcNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkOutputReference
 ```
@@ -7472,7 +7468,7 @@ func InternalValue() DataplexTaskSpark
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskTimeoutsOutputReference
 ```
@@ -7808,7 +7804,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskTriggerSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskTriggerSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskTriggerSpecOutputReference
 ```

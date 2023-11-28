@@ -1,7 +1,3 @@
-# `google_scc_mute_config`
-
-Refer to the Terraform Registory for docs: [`google_scc_mute_config`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/scc_mute_config).
-
 # `sccMuteConfig` Submodule <a name="`sccMuteConfig` Submodule" id="@cdktf/provider-google.sccMuteConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 sccmuteconfig.NewSccMuteConfig(scope Construct, id *string, config SccMuteConfigConfig) SccMuteConfig
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 sccmuteconfig.SccMuteConfig_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 sccmuteconfig.SccMuteConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ sccmuteconfig.SccMuteConfig_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 sccmuteconfig.SccMuteConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ sccmuteconfig.SccMuteConfig_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 sccmuteconfig.SccMuteConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -831,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 &sccmuteconfig.SccMuteConfigConfig {
 	Connection: interface{},
@@ -846,7 +842,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
 	Parent: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.sccMuteConfig.SccMuteConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.sccMuteConfig.SccMuteConfigTimeouts,
 }
 ```
 
@@ -1035,7 +1031,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 &sccmuteconfig.SccMuteConfigTimeouts {
 	Create: *string,
@@ -1097,7 +1093,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccMuteConfig.SccMuteConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccmuteconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccmuteconfig"
 
 sccmuteconfig.NewSccMuteConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccMuteConfigTimeoutsOutputReference
 ```

@@ -1,7 +1,3 @@
-# `google_network_security_gateway_security_policy_rule`
-
-Refer to the Terraform Registory for docs: [`google_network_security_gateway_security_policy_rule`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/network_security_gateway_security_policy_rule).
-
 # `networkSecurityGatewaySecurityPolicyRule` Submodule <a name="`networkSecurityGatewaySecurityPolicyRule` Submodule" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 networksecuritygatewaysecuritypolicyrule.NewNetworkSecurityGatewaySecurityPolicyRule(scope Construct, id *string, config NetworkSecurityGatewaySecurityPolicyRuleConfig) NetworkSecurityGatewaySecurityPolicyRule
 ```
@@ -387,7 +383,7 @@ func ResetTlsInspectionEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRule_IsConstruct(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRul
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -447,7 +443,7 @@ networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRul
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -995,7 +991,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 &networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRuleConfig {
 	Connection: interface{},
@@ -1016,7 +1012,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygate
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRuleTimeouts,
 	TlsInspectionEnabled: interface{},
 }
 ```
@@ -1306,7 +1302,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 &networksecuritygatewaysecuritypolicyrule.NetworkSecurityGatewaySecurityPolicyRuleTimeouts {
 	Create: *string,
@@ -1368,7 +1364,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityGatewaySecurityPolicyRule.NetworkSecurityGatewaySecurityPolicyRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networksecuritygatewaysecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/networksecuritygatewaysecuritypolicyrule"
 
 networksecuritygatewaysecuritypolicyrule.NewNetworkSecurityGatewaySecurityPolicyRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityGatewaySecurityPolicyRuleTimeoutsOutputReference
 ```

@@ -1,7 +1,3 @@
-# `google_data_catalog_tag_template_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_data_catalog_tag_template_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_tag_template_iam_binding).
-
 # `dataCatalogTagTemplateIamBinding` Submodule <a name="`dataCatalogTagTemplateIamBinding` Submodule" id="@cdktf/provider-google.dataCatalogTagTemplateIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

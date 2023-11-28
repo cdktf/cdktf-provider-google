@@ -1,7 +1,3 @@
-# `google_assured_workloads_workload`
-
-Refer to the Terraform Registory for docs: [`google_assured_workloads_workload`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/assured_workloads_workload).
-
 # `assuredWorkloadsWorkload` Submodule <a name="`assuredWorkloadsWorkload` Submodule" id="@cdktf/provider-google.assuredWorkloadsWorkload"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

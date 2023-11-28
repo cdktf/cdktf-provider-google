@@ -1,7 +1,3 @@
-# `data_google_client_config`
-
-Refer to the Terraform Registory for docs: [`data_google_client_config`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/client_config).
-
 # `dataGoogleClientConfig` Submodule <a name="`dataGoogleClientConfig` Submodule" id="@cdktf/provider-google.dataGoogleClientConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

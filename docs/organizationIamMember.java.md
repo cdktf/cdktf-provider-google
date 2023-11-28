@@ -1,7 +1,3 @@
-# `google_organization_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_organization_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/organization_iam_member).
-
 # `organizationIamMember` Submodule <a name="`organizationIamMember` Submodule" id="@cdktf/provider-google.organizationIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

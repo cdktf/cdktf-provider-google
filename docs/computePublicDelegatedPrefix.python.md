@@ -1,7 +1,3 @@
-# `google_compute_public_delegated_prefix`
-
-Refer to the Terraform Registory for docs: [`google_compute_public_delegated_prefix`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_public_delegated_prefix).
-
 # `computePublicDelegatedPrefix` Submodule <a name="`computePublicDelegatedPrefix` Submodule" id="@cdktf/provider-google.computePublicDelegatedPrefix"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

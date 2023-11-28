@@ -1,7 +1,3 @@
-# `google_assured_workloads_workload`
-
-Refer to the Terraform Registory for docs: [`google_assured_workloads_workload`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/assured_workloads_workload).
-
 # `assuredWorkloadsWorkload` Submodule <a name="`assuredWorkloadsWorkload` Submodule" id="@cdktf/provider-google.assuredWorkloadsWorkload"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkload(scope Construct, id *string, config AssuredWorkloadsWorkloadConfig) AssuredWorkloadsWorkload
 ```
@@ -461,7 +457,7 @@ func ResetViolationNotificationsEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_IsConstruct(x interface{}) *bool
 ```
@@ -493,7 +489,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformElement(x interface{}) *bool
 ```
@@ -507,7 +503,7 @@ assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformResource(x interface{}) *bool
 ```
@@ -521,7 +517,7 @@ assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1190,7 +1186,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadComplianceStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadComplianceStatus {
 
@@ -1203,7 +1199,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadConfig {
 	Connection: interface{},
@@ -1220,13 +1216,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadswor
 	BillingAccount: *string,
 	EnableSovereignControls: interface{},
 	Id: *string,
-	KmsSettings: github.com/cdktf/cdktf-provider-google-go/google/v12.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettings,
+	KmsSettings: github.com/cdktf/cdktf-provider-google-go/google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettings,
 	Labels: *map[string]*string,
 	Partner: *string,
-	PartnerPermissions: github.com/cdktf/cdktf-provider-google-go/google/v12.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissions,
+	PartnerPermissions: github.com/cdktf/cdktf-provider-google-go/google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissions,
 	ProvisionedResourcesParent: *string,
 	ResourceSettings: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts,
 	ViolationNotificationsEnabled: interface{},
 }
 ```
@@ -1559,7 +1555,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadEkmProvisioningResponse.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadEkmProvisioningResponse {
 
@@ -1572,7 +1568,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadKmsSettings {
 	NextRotationTime: *string,
@@ -1626,7 +1622,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadPartnerPermissions {
 	AssuredWorkloadsMonitoring: interface{},
@@ -1692,7 +1688,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadResources {
 
@@ -1705,7 +1701,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourceSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadResourceSettings {
 	DisplayName: *string,
@@ -1775,7 +1771,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadSaaEnrollmentResponse.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadSaaEnrollmentResponse {
 
@@ -1788,7 +1784,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadTimeouts {
 	Create: *string,
@@ -1850,7 +1846,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadComplianceStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadComplianceStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadComplianceStatusList
 ```
@@ -1982,7 +1978,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadComplianceStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadComplianceStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadComplianceStatusOutputReference
 ```
@@ -2271,7 +2267,7 @@ func InternalValue() AssuredWorkloadsWorkloadComplianceStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadEkmProvisioningResponseList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadEkmProvisioningResponseList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadEkmProvisioningResponseList
 ```
@@ -2403,7 +2399,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference
 ```
@@ -2703,7 +2699,7 @@ func InternalValue() AssuredWorkloadsWorkloadEkmProvisioningResponse
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadKmsSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AssuredWorkloadsWorkloadKmsSettingsOutputReference
 ```
@@ -2996,7 +2992,7 @@ func InternalValue() AssuredWorkloadsWorkloadKmsSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadPartnerPermissionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AssuredWorkloadsWorkloadPartnerPermissionsOutputReference
 ```
@@ -3332,7 +3328,7 @@ func InternalValue() AssuredWorkloadsWorkloadPartnerPermissions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourceSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourceSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadResourceSettingsList
 ```
@@ -3475,7 +3471,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourceSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourceSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadResourceSettingsOutputReference
 ```
@@ -3829,7 +3825,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadResourcesList
 ```
@@ -3961,7 +3957,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadResourcesOutputReference
 ```
@@ -4250,7 +4246,7 @@ func InternalValue() AssuredWorkloadsWorkloadResources
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadSaaEnrollmentResponseList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadSaaEnrollmentResponseList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadSaaEnrollmentResponseList
 ```
@@ -4382,7 +4378,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference
 ```
@@ -4671,7 +4667,7 @@ func InternalValue() AssuredWorkloadsWorkloadSaaEnrollmentResponse
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AssuredWorkloadsWorkloadTimeoutsOutputReference
 ```

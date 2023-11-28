@@ -1,7 +1,3 @@
-# `google_notebooks_instance_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_notebooks_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_instance_iam_policy).
-
 # `notebooksInstanceIamPolicy` Submodule <a name="`notebooksInstanceIamPolicy` Submodule" id="@cdktf/provider-google.notebooksInstanceIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_bigquery_job`
-
-Refer to the Terraform Registory for docs: [`google_bigquery_job`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_job).
-
 # `bigqueryJob` Submodule <a name="`bigqueryJob` Submodule" id="@cdktf/provider-google.bigqueryJob"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

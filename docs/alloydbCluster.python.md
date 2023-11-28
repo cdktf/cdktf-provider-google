@@ -1,7 +1,3 @@
-# `google_alloydb_cluster`
-
-Refer to the Terraform Registory for docs: [`google_alloydb_cluster`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/alloydb_cluster).
-
 # `alloydbCluster` Submodule <a name="`alloydbCluster` Submodule" id="@cdktf/provider-google.alloydbCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

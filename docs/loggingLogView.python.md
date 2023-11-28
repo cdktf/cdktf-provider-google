@@ -1,7 +1,3 @@
-# `google_logging_log_view`
-
-Refer to the Terraform Registory for docs: [`google_logging_log_view`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/logging_log_view).
-
 # `loggingLogView` Submodule <a name="`loggingLogView` Submodule" id="@cdktf/provider-google.loggingLogView"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

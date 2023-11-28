@@ -1,7 +1,3 @@
-# `google_gke_hub_scope`
-
-Refer to the Terraform Registory for docs: [`google_gke_hub_scope`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/gke_hub_scope).
-
 # `gkeHubScope` Submodule <a name="`gkeHubScope` Submodule" id="@cdktf/provider-google.gkeHubScope"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubScope.GkeHubScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.NewGkeHubScope(scope Construct, id *string, config GkeHubScopeConfig) GkeHubScope
 ```
@@ -373,7 +369,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeHubScope.GkeHubScope.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.GkeHubScope_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeHubScope.GkeHubScope.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.GkeHubScope_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ gkehubscope.GkeHubScope_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeHubScope.GkeHubScope.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.GkeHubScope_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ gkehubscope.GkeHubScope_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeHubScope.GkeHubScope.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.GkeHubScope_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -860,7 +856,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubScope.GkeHubScopeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 &gkehubscope.GkeHubScopeConfig {
 	Connection: interface{},
@@ -874,7 +870,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeHubScope.GkeHubScopeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gkeHubScope.GkeHubScopeTimeouts,
 }
 ```
 
@@ -1044,7 +1040,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubScope.GkeHubScopeState.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 &gkehubscope.GkeHubScopeState {
 
@@ -1057,7 +1053,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubScope.GkeHubScopeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 &gkehubscope.GkeHubScopeTimeouts {
 	Create: *string,
@@ -1119,7 +1115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubScope.GkeHubScopeStateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.NewGkeHubScopeStateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeHubScopeStateList
 ```
@@ -1251,7 +1247,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubScope.GkeHubScopeStateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.NewGkeHubScopeStateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeHubScopeStateOutputReference
 ```
@@ -1529,7 +1525,7 @@ func InternalValue() GkeHubScopeState
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubScope.GkeHubScopeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubscope"
 
 gkehubscope.NewGkeHubScopeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubScopeTimeoutsOutputReference
 ```

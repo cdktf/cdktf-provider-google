@@ -1,7 +1,3 @@
-# `google_cloudbuildv2_connection_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_cloudbuildv2_connection_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_policy).
-
 # `cloudbuildv2ConnectionIamPolicy` Submodule <a name="`cloudbuildv2ConnectionIamPolicy` Submodule" id="@cdktf/provider-google.cloudbuildv2ConnectionIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

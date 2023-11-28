@@ -1,7 +1,3 @@
-# `data_google_bigtable_instance_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_bigtable_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/bigtable_instance_iam_policy).
-
 # `dataGoogleBigtableInstanceIamPolicy` Submodule <a name="`dataGoogleBigtableInstanceIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleBigtableInstanceIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

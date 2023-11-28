@@ -1,7 +1,3 @@
-# `google_compute_region_health_check`
-
-Refer to the Terraform Registory for docs: [`google_compute_region_health_check`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_health_check).
-
 # `computeRegionHealthCheck` Submodule <a name="`computeRegionHealthCheck` Submodule" id="@cdktf/provider-google.computeRegionHealthCheck"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_document_ai_processor_default_version`
-
-Refer to the Terraform Registory for docs: [`google_document_ai_processor_default_version`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_processor_default_version).
-
 # `documentAiProcessorDefaultVersion` Submodule <a name="`documentAiProcessorDefaultVersion` Submodule" id="@cdktf/provider-google.documentAiProcessorDefaultVersion"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

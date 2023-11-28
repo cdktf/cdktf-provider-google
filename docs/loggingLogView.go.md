@@ -1,7 +1,3 @@
-# `google_logging_log_view`
-
-Refer to the Terraform Registory for docs: [`google_logging_log_view`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/logging_log_view).
-
 # `loggingLogView` Submodule <a name="`loggingLogView` Submodule" id="@cdktf/provider-google.loggingLogView"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 logginglogview.NewLoggingLogView(scope Construct, id *string, config LoggingLogViewConfig) LoggingLogView
 ```
@@ -387,7 +383,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingLogView.LoggingLogView.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 logginglogview.LoggingLogView_IsConstruct(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingLogView.LoggingLogView.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 logginglogview.LoggingLogView_IsTerraformElement(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ logginglogview.LoggingLogView_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingLogView.LoggingLogView.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 logginglogview.LoggingLogView_IsTerraformResource(x interface{}) *bool
 ```
@@ -447,7 +443,7 @@ logginglogview.LoggingLogView_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingLogView.LoggingLogView.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 logginglogview.LoggingLogView_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -874,7 +870,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 &logginglogview.LoggingLogViewConfig {
 	Connection: interface{},
@@ -891,7 +887,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
 	Id: *string,
 	Location: *string,
 	Parent: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.loggingLogView.LoggingLogViewTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.loggingLogView.LoggingLogViewTimeouts,
 }
 ```
 
@@ -1107,7 +1103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 &logginglogview.LoggingLogViewTimeouts {
 	Create: *string,
@@ -1169,7 +1165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogView.LoggingLogViewTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/logginglogview"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogview"
 
 logginglogview.NewLoggingLogViewTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingLogViewTimeoutsOutputReference
 ```

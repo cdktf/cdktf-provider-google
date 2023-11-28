@@ -1,7 +1,3 @@
-# `google_compute_subnetwork_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_compute_subnetwork_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_subnetwork_iam_binding).
-
 # `computeSubnetworkIamBinding` Submodule <a name="`computeSubnetworkIamBinding` Submodule" id="@cdktf/provider-google.computeSubnetworkIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

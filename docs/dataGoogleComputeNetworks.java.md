@@ -1,7 +1,3 @@
-# `data_google_compute_networks`
-
-Refer to the Terraform Registory for docs: [`data_google_compute_networks`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_networks).
-
 # `dataGoogleComputeNetworks` Submodule <a name="`dataGoogleComputeNetworks` Submodule" id="@cdktf/provider-google.dataGoogleComputeNetworks"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

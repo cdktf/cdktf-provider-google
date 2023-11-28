@@ -1,7 +1,3 @@
-# `google_notebooks_runtime`
-
-Refer to the Terraform Registory for docs: [`google_notebooks_runtime`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_runtime).
-
 # `notebooksRuntime` Submodule <a name="`notebooksRuntime` Submodule" id="@cdktf/provider-google.notebooksRuntime"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntime(scope Construct, id *string, config NotebooksRuntimeConfig) NotebooksRuntime
 ```
@@ -426,7 +422,7 @@ func ResetVirtualMachine()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NotebooksRuntime_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +454,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NotebooksRuntime_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +468,7 @@ notebooksruntime.NotebooksRuntime_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NotebooksRuntime_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +482,7 @@ notebooksruntime.NotebooksRuntime_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NotebooksRuntime_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -924,7 +920,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeAccessConfig {
 	AccessType: *string,
@@ -974,7 +970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeConfig {
 	Connection: interface{},
@@ -986,12 +982,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	AccessConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeAccessConfig,
+	AccessConfig: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeAccessConfig,
 	Id: *string,
 	Project: *string,
-	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeSoftwareConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeTimeouts,
-	VirtualMachine: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeVirtualMachine,
+	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeSoftwareConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeTimeouts,
+	VirtualMachine: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeVirtualMachine,
 }
 ```
 
@@ -1203,7 +1199,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeMetrics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeMetrics {
 
@@ -1216,7 +1212,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeSoftwareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeSoftwareConfig {
 	CustomGpuDriverPath: *string,
@@ -1383,7 +1379,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeSoftwareConfigKernels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeSoftwareConfigKernels {
 	Repository: *string,
@@ -1433,7 +1429,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeTimeouts {
 	Create: *string,
@@ -1493,10 +1489,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachine {
-	VirtualMachineConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfig,
+	VirtualMachineConfig: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfig,
 }
 ```
 
@@ -1527,21 +1523,21 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachineVirtualMachineConfig {
-	DataDisk: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk,
+	DataDisk: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk,
 	MachineType: *string,
-	AcceleratorConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig,
+	AcceleratorConfig: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig,
 	ContainerImages: interface{},
-	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfig,
+	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfig,
 	InternalIpOnly: interface{},
 	Labels: *map[string]*string,
 	Metadata: *map[string]*string,
 	Network: *string,
 	NicType: *string,
 	ReservedIpRange: *string,
-	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig,
+	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig,
 	Subnet: *string,
 	Tags: *[]*string,
 }
@@ -1808,7 +1804,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
 	CoreCount: *f64,
@@ -1858,7 +1854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages {
 	Repository: *string,
@@ -1908,10 +1904,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk {
-	InitializeParams: github.com/cdktf/cdktf-provider-google-go/google/v12.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams,
+	InitializeParams: github.com/cdktf/cdktf-provider-google-go/google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams,
 	Interface: *string,
 	Mode: *string,
 	Source: *string,
@@ -2015,7 +2011,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams {
 	Description: *string,
@@ -2127,7 +2123,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
 	KmsKey: *string,
@@ -2165,7 +2161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 &notebooksruntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig {
 	EnableIntegrityMonitoring: interface{},
@@ -2239,7 +2235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeAccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeAccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeAccessConfigOutputReference
 ```
@@ -2557,7 +2553,7 @@ func InternalValue() NotebooksRuntimeAccessConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeMetricsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeMetricsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NotebooksRuntimeMetricsList
 ```
@@ -2689,7 +2685,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeMetricsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeMetricsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NotebooksRuntimeMetricsOutputReference
 ```
@@ -2967,7 +2963,7 @@ func InternalValue() NotebooksRuntimeMetrics
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeSoftwareConfigKernelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeSoftwareConfigKernelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NotebooksRuntimeSoftwareConfigKernelsList
 ```
@@ -3110,7 +3106,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeSoftwareConfigKernelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeSoftwareConfigKernelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NotebooksRuntimeSoftwareConfigKernelsOutputReference
 ```
@@ -3428,7 +3424,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeSoftwareConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeSoftwareConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeSoftwareConfigOutputReference
 ```
@@ -3962,7 +3958,7 @@ func InternalValue() NotebooksRuntimeSoftwareConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeTimeoutsOutputReference
 ```
@@ -4298,7 +4294,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeVirtualMachineOutputReference
 ```
@@ -4611,7 +4607,7 @@ func InternalValue() NotebooksRuntimeVirtualMachine
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigOutputReference
 ```
@@ -4918,7 +4914,7 @@ func InternalValue() NotebooksRuntimeVirtualMachineVirtualMachineConfigAccelerat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesList
 ```
@@ -5061,7 +5057,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesOutputReference
 ```
@@ -5379,7 +5375,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsOutputReference
 ```
@@ -5773,7 +5769,7 @@ func InternalValue() NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskI
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskOutputReference
 ```
@@ -6257,7 +6253,7 @@ func InternalValue() NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigOutputReference
 ```
@@ -6535,7 +6531,7 @@ func InternalValue() NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference
 ```
@@ -7263,7 +7259,7 @@ func InternalValue() NotebooksRuntimeVirtualMachineVirtualMachineConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/notebooksruntime"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksruntime"
 
 notebooksruntime.NewNotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigOutputReference
 ```

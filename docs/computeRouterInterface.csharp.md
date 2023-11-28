@@ -1,7 +1,3 @@
-# `google_compute_router_interface`
-
-Refer to the Terraform Registory for docs: [`google_compute_router_interface`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_router_interface).
-
 # `computeRouterInterface` Submodule <a name="`computeRouterInterface` Submodule" id="@cdktf/provider-google.computeRouterInterface"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

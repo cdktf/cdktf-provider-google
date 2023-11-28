@@ -1,7 +1,3 @@
-# `google_bigtable_app_profile`
-
-Refer to the Terraform Registory for docs: [`google_bigtable_app_profile`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigtable_app_profile).
-
 # `bigtableAppProfile` Submodule <a name="`bigtableAppProfile` Submodule" id="@cdktf/provider-google.bigtableAppProfile"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

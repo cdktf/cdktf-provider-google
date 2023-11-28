@@ -1,7 +1,3 @@
-# `google_memcache_instance`
-
-Refer to the Terraform Registory for docs: [`google_memcache_instance`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/memcache_instance).
-
 # `memcacheInstance` Submodule <a name="`memcacheInstance` Submodule" id="@cdktf/provider-google.memcacheInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

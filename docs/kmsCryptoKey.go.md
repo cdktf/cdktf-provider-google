@@ -1,7 +1,3 @@
-# `google_kms_crypto_key`
-
-Refer to the Terraform Registory for docs: [`google_kms_crypto_key`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/kms_crypto_key).
-
 # `kmsCryptoKey` Submodule <a name="`kmsCryptoKey` Submodule" id="@cdktf/provider-google.kmsCryptoKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 kmscryptokey.NewKmsCryptoKey(scope Construct, id *string, config KmsCryptoKeyConfig) KmsCryptoKey
 ```
@@ -421,7 +417,7 @@ func ResetVersionTemplate()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 kmscryptokey.KmsCryptoKey_IsConstruct(x interface{}) *bool
 ```
@@ -453,7 +449,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 kmscryptokey.KmsCryptoKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -467,7 +463,7 @@ kmscryptokey.KmsCryptoKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 kmscryptokey.KmsCryptoKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -481,7 +477,7 @@ kmscryptokey.KmsCryptoKey_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 kmscryptokey.KmsCryptoKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -974,7 +970,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 &kmscryptokey.KmsCryptoKeyConfig {
 	Connection: interface{},
@@ -993,8 +989,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
 	Purpose: *string,
 	RotationPeriod: *string,
 	SkipInitialVersionCreation: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.kmsCryptoKey.KmsCryptoKeyTimeouts,
-	VersionTemplate: github.com/cdktf/cdktf-provider-google-go/google/v12.kmsCryptoKey.KmsCryptoKeyVersionTemplate,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.kmsCryptoKey.KmsCryptoKeyTimeouts,
+	VersionTemplate: github.com/cdktf/cdktf-provider-google-go/google.kmsCryptoKey.KmsCryptoKeyVersionTemplate,
 }
 ```
 
@@ -1264,7 +1260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 &kmscryptokey.KmsCryptoKeyTimeouts {
 	Create: *string,
@@ -1324,7 +1320,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKeyVersionTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 &kmscryptokey.KmsCryptoKeyVersionTemplate {
 	Algorithm: *string,
@@ -1378,7 +1374,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 kmscryptokey.NewKmsCryptoKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsCryptoKeyTimeoutsOutputReference
 ```
@@ -1714,7 +1710,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsCryptoKey.KmsCryptoKeyVersionTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmscryptokey"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokey"
 
 kmscryptokey.NewKmsCryptoKeyVersionTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsCryptoKeyVersionTemplateOutputReference
 ```

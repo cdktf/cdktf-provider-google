@@ -1,7 +1,3 @@
-# `google_tags_tag_key`
-
-Refer to the Terraform Registory for docs: [`google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key).
-
 # `tagsTagKey` Submodule <a name="`tagsTagKey` Submodule" id="@cdktf/provider-google.tagsTagKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagKey.TagsTagKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 tagstagkey.NewTagsTagKey(scope Construct, id *string, config TagsTagKeyConfig) TagsTagKey
 ```
@@ -380,7 +376,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.tagsTagKey.TagsTagKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 tagstagkey.TagsTagKey_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.tagsTagKey.TagsTagKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 tagstagkey.TagsTagKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ tagstagkey.TagsTagKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.tagsTagKey.TagsTagKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 tagstagkey.TagsTagKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -440,7 +436,7 @@ tagstagkey.TagsTagKey_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.tagsTagKey.TagsTagKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 tagstagkey.TagsTagKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -867,7 +863,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tagsTagKey.TagsTagKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 &tagstagkey.TagsTagKeyConfig {
 	Connection: interface{},
@@ -883,7 +879,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
 	Id: *string,
 	Purpose: *string,
 	PurposeData: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.tagsTagKey.TagsTagKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.tagsTagKey.TagsTagKeyTimeouts,
 }
 ```
 
@@ -1090,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 &tagstagkey.TagsTagKeyTimeouts {
 	Create: *string,
@@ -1152,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagKey.TagsTagKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/tagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagkey"
 
 tagstagkey.NewTagsTagKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TagsTagKeyTimeoutsOutputReference
 ```

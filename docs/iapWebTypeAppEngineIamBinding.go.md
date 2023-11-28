@@ -1,7 +1,3 @@
-# `google_iap_web_type_app_engine_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_iap_web_type_app_engine_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_web_type_app_engine_iam_binding).
-
 # `iapWebTypeAppEngineIamBinding` Submodule <a name="`iapWebTypeAppEngineIamBinding` Submodule" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 iapwebtypeappengineiambinding.NewIapWebTypeAppEngineIamBinding(scope Construct, id *string, config IapWebTypeAppEngineIamBindingConfig) IapWebTypeAppEngineIamBinding
 ```
@@ -366,7 +362,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBinding_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBinding_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -798,7 +794,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 &iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBindingCondition {
 	Expression: *string,
@@ -858,7 +854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 &iapwebtypeappengineiambinding.IapWebTypeAppEngineIamBindingConfig {
 	Connection: interface{},
@@ -871,7 +867,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengine
 	AppId: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1051,7 +1047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebTypeAppEngineIamBinding.IapWebTypeAppEngineIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapwebtypeappengineiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiambinding"
 
 iapwebtypeappengineiambinding.NewIapWebTypeAppEngineIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapWebTypeAppEngineIamBindingConditionOutputReference
 ```

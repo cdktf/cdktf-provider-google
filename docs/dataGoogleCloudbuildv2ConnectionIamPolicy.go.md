@@ -1,7 +1,3 @@
-# `data_google_cloudbuildv2_connection_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_cloudbuildv2_connection_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/cloudbuildv2_connection_iam_policy).
-
 # `dataGoogleCloudbuildv2ConnectionIamPolicy` Submodule <a name="`dataGoogleCloudbuildv2ConnectionIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.NewDataGoogleCloudbuildv2ConnectionIamPolicy(scope Construct, id *string, config DataGoogleCloudbuildv2ConnectionIamPolicyConfig) DataGoogleCloudbuildv2ConnectionIamPolicy
 ```
@@ -292,7 +288,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -324,7 +320,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -338,7 +334,7 @@ datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPol
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -352,7 +348,7 @@ datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPol
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -669,7 +665,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
 
 &datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig {
 	Connection: interface{},

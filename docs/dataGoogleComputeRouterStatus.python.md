@@ -1,7 +1,3 @@
-# `data_google_compute_router_status`
-
-Refer to the Terraform Registory for docs: [`data_google_compute_router_status`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_router_status).
-
 # `dataGoogleComputeRouterStatus` Submodule <a name="`dataGoogleComputeRouterStatus` Submodule" id="@cdktf/provider-google.dataGoogleComputeRouterStatus"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_compute_instance_group_manager`
-
-Refer to the Terraform Registory for docs: [`google_compute_instance_group_manager`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_instance_group_manager).
-
 # `computeInstanceGroupManager` Submodule <a name="`computeInstanceGroupManager` Submodule" id="@cdktf/provider-google.computeInstanceGroupManager"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_network_connectivity_policy_based_route`
-
-Refer to the Terraform Registory for docs: [`google_network_connectivity_policy_based_route`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/network_connectivity_policy_based_route).
-
 # `networkConnectivityPolicyBasedRoute` Submodule <a name="`networkConnectivityPolicyBasedRoute` Submodule" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRoute.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NewNetworkConnectivityPolicyBasedRoute(scope Construct, id *string, config NetworkConnectivityPolicyBasedRouteConfig) NetworkConnectivityPolicyBasedRoute
 ```
@@ -454,7 +450,7 @@ func ResetVirtualMachine()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRoute.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRoute_IsConstruct(x interface{}) *bool
 ```
@@ -486,7 +482,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRoute.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRoute_IsTerraformElement(x interface{}) *bool
 ```
@@ -500,7 +496,7 @@ networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRoute_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRoute.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRoute_IsTerraformResource(x interface{}) *bool
 ```
@@ -514,7 +510,7 @@ networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRoute_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRoute.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRoute_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1095,7 +1091,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 &networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRouteConfig {
 	Connection: interface{},
@@ -1105,19 +1101,19 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivity
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Filter: github.com/cdktf/cdktf-provider-google-go/google/v12.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteFilter,
+	Filter: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteFilter,
 	Name: *string,
 	Network: *string,
 	Description: *string,
 	Id: *string,
-	InterconnectAttachment: github.com/cdktf/cdktf-provider-google-go/google/v12.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteInterconnectAttachment,
+	InterconnectAttachment: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteInterconnectAttachment,
 	Labels: *map[string]*string,
 	NextHopIlbIp: *string,
 	NextHopOtherRoutes: *string,
 	Priority: *f64,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteTimeouts,
-	VirtualMachine: github.com/cdktf/cdktf-provider-google-go/google/v12.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteVirtualMachine,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteTimeouts,
+	VirtualMachine: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteVirtualMachine,
 }
 ```
 
@@ -1409,7 +1405,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 &networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRouteFilter {
 	ProtocolVersion: *string,
@@ -1495,7 +1491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteInterconnectAttachment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 &networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRouteInterconnectAttachment {
 	Region: *string,
@@ -1531,7 +1527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 &networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRouteTimeouts {
 	Create: *string,
@@ -1577,7 +1573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 &networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRouteVirtualMachine {
 	Tags: *[]*string,
@@ -1613,7 +1609,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteWarnings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 &networkconnectivitypolicybasedroute.NetworkConnectivityPolicyBasedRouteWarnings {
 
@@ -1628,7 +1624,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivity
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NewNetworkConnectivityPolicyBasedRouteFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivityPolicyBasedRouteFilterOutputReference
 ```
@@ -1986,7 +1982,7 @@ func InternalValue() NetworkConnectivityPolicyBasedRouteFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteInterconnectAttachmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NewNetworkConnectivityPolicyBasedRouteInterconnectAttachmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivityPolicyBasedRouteInterconnectAttachmentOutputReference
 ```
@@ -2257,7 +2253,7 @@ func InternalValue() NetworkConnectivityPolicyBasedRouteInterconnectAttachment
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NewNetworkConnectivityPolicyBasedRouteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivityPolicyBasedRouteTimeoutsOutputReference
 ```
@@ -2564,7 +2560,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteVirtualMachineOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NewNetworkConnectivityPolicyBasedRouteVirtualMachineOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivityPolicyBasedRouteVirtualMachineOutputReference
 ```
@@ -2835,7 +2831,7 @@ func InternalValue() NetworkConnectivityPolicyBasedRouteVirtualMachine
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteWarningsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NewNetworkConnectivityPolicyBasedRouteWarningsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectivityPolicyBasedRouteWarningsList
 ```
@@ -2967,7 +2963,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityPolicyBasedRoute.NetworkConnectivityPolicyBasedRouteWarningsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivitypolicybasedroute"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivitypolicybasedroute"
 
 networkconnectivitypolicybasedroute.NewNetworkConnectivityPolicyBasedRouteWarningsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectivityPolicyBasedRouteWarningsOutputReference
 ```

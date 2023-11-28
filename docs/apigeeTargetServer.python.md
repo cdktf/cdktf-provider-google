@@ -1,7 +1,3 @@
-# `google_apigee_target_server`
-
-Refer to the Terraform Registory for docs: [`google_apigee_target_server`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apigee_target_server).
-
 # `apigeeTargetServer` Submodule <a name="`apigeeTargetServer` Submodule" id="@cdktf/provider-google.apigeeTargetServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

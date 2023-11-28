@@ -1,7 +1,3 @@
-# `google_cloudbuildv2_connection`
-
-Refer to the Terraform Registory for docs: [`google_cloudbuildv2_connection`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection).
-
 # `cloudbuildv2Connection` Submodule <a name="`cloudbuildv2Connection` Submodule" id="@cdktf/provider-google.cloudbuildv2Connection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
