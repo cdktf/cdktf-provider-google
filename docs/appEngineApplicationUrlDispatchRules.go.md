@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.NewAppEngineApplicationUrlDispatchRules(scope Construct, id *string, config AppEngineApplicationUrlDispatchRulesConfig) AppEngineApplicationUrlDispatchRules
 ```
@@ -375,7 +375,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRules.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRules_IsConstruct(x interface{}) *bool
 ```
@@ -407,7 +407,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRules.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRules_IsTerraformElement(x interface{}) *bool
 ```
@@ -421,7 +421,7 @@ appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRules_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRules.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRules_IsTerraformResource(x interface{}) *bool
 ```
@@ -435,7 +435,7 @@ appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRules_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRules.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRules_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -752,7 +752,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 &appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRulesConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurl
 	DispatchRules: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesTimeouts,
 }
 ```
 
@@ -917,7 +917,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesDispatchRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 &appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRulesDispatchRules {
 	Path: *string,
@@ -992,7 +992,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 &appengineapplicationurldispatchrules.AppEngineApplicationUrlDispatchRulesTimeouts {
 	Create: *string,
@@ -1054,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesDispatchRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.NewAppEngineApplicationUrlDispatchRulesDispatchRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppEngineApplicationUrlDispatchRulesDispatchRulesList
 ```
@@ -1197,7 +1197,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesDispatchRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.NewAppEngineApplicationUrlDispatchRulesDispatchRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppEngineApplicationUrlDispatchRulesDispatchRulesOutputReference
 ```
@@ -1537,7 +1537,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules.AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/appengineapplicationurldispatchrules"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/appengineapplicationurldispatchrules"
 
 appengineapplicationurldispatchrules.NewAppEngineApplicationUrlDispatchRulesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference
 ```

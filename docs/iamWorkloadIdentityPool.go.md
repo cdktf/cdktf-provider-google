@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 iamworkloadidentitypool.NewIamWorkloadIdentityPool(scope Construct, id *string, config IamWorkloadIdentityPoolConfig) IamWorkloadIdentityPool
 ```
@@ -383,7 +383,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 iamworkloadidentitypool.IamWorkloadIdentityPool_IsConstruct(x interface{}) *bool
 ```
@@ -415,7 +415,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 iamworkloadidentitypool.IamWorkloadIdentityPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -429,7 +429,7 @@ iamworkloadidentitypool.IamWorkloadIdentityPool_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 iamworkloadidentitypool.IamWorkloadIdentityPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -443,7 +443,7 @@ iamworkloadidentitypool.IamWorkloadIdentityPool_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 iamworkloadidentitypool.IamWorkloadIdentityPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -848,7 +848,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 &iamworkloadidentitypool.IamWorkloadIdentityPoolConfig {
 	Connection: interface{},
@@ -864,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool
 	DisplayName: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iamWorkloadIdentityPool.IamWorkloadIdentityPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.iamWorkloadIdentityPool.IamWorkloadIdentityPoolTimeouts,
 }
 ```
 
@@ -1069,7 +1069,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 &iamworkloadidentitypool.IamWorkloadIdentityPoolTimeouts {
 	Create: *string,
@@ -1131,7 +1131,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkloadIdentityPool.IamWorkloadIdentityPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamworkloadidentitypool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/iamworkloadidentitypool"
 
 iamworkloadidentitypool.NewIamWorkloadIdentityPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkloadIdentityPoolTimeoutsOutputReference
 ```

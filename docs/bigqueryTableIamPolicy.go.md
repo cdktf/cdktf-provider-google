@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTableIamPolicy.BigqueryTableIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiampolicy"
 
 bigquerytableiampolicy.NewBigqueryTableIamPolicy(scope Construct, id *string, config BigqueryTableIamPolicyConfig) BigqueryTableIamPolicy
 ```
@@ -342,7 +342,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryTableIamPolicy.BigqueryTableIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiampolicy"
 
 bigquerytableiampolicy.BigqueryTableIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryTableIamPolicy.BigqueryTableIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiampolicy"
 
 bigquerytableiampolicy.BigqueryTableIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -388,7 +388,7 @@ bigquerytableiampolicy.BigqueryTableIamPolicy_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryTableIamPolicy.BigqueryTableIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiampolicy"
 
 bigquerytableiampolicy.BigqueryTableIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -402,7 +402,7 @@ bigquerytableiampolicy.BigqueryTableIamPolicy_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigqueryTableIamPolicy.BigqueryTableIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiampolicy"
 
 bigquerytableiampolicy.BigqueryTableIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -752,7 +752,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTableIamPolicy.BigqueryTableIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigquerytableiampolicy"
 
 &bigquerytableiampolicy.BigqueryTableIamPolicyConfig {
 	Connection: interface{},

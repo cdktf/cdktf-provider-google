@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstance(scope Construct, id *string, config SqlDatabaseInstanceConfig) SqlDatabaseInstance
 ```
@@ -498,7 +498,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.SqlDatabaseInstance_IsConstruct(x interface{}) *bool
 ```
@@ -530,7 +530,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.SqlDatabaseInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -544,7 +544,7 @@ sqldatabaseinstance.SqlDatabaseInstance_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.SqlDatabaseInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -558,7 +558,7 @@ sqldatabaseinstance.SqlDatabaseInstance_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.SqlDatabaseInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1260,7 +1260,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceClone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceClone {
 	SourceInstanceName: *string,
@@ -1364,7 +1364,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceConfig {
 	Connection: interface{},
@@ -1375,7 +1375,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	DatabaseVersion: *string,
-	Clone: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceClone,
+	Clone: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceClone,
 	DeletionProtection: interface{},
 	EncryptionKeyName: *string,
 	Id: *string,
@@ -1385,11 +1385,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
 	Name: *string,
 	Project: *string,
 	Region: *string,
-	ReplicaConfiguration: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceReplicaConfiguration,
-	RestoreBackupContext: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceRestoreBackupContext,
+	ReplicaConfiguration: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceReplicaConfiguration,
+	RestoreBackupContext: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceRestoreBackupContext,
 	RootPassword: *string,
-	Settings: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettings,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceTimeouts,
+	Settings: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettings,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceTimeouts,
 }
 ```
 
@@ -1731,7 +1731,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceIpAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceIpAddress {
 
@@ -1744,7 +1744,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceReplicaConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceReplicaConfiguration {
 	CaCertificate: *string,
@@ -1940,7 +1940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceRestoreBackupContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceRestoreBackupContext {
 	BackupRunId: *f64,
@@ -2006,7 +2006,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceServerCaCert.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceServerCaCert {
 
@@ -2019,33 +2019,33 @@ import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettings {
 	Tier: *string,
 	ActivationPolicy: *string,
-	ActiveDirectoryConfig: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsActiveDirectoryConfig,
-	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsAdvancedMachineFeatures,
+	ActiveDirectoryConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsActiveDirectoryConfig,
+	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsAdvancedMachineFeatures,
 	AvailabilityType: *string,
-	BackupConfiguration: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfiguration,
+	BackupConfiguration: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfiguration,
 	Collation: *string,
 	ConnectorEnforcement: *string,
 	DatabaseFlags: interface{},
-	DataCacheConfig: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDataCacheConfig,
+	DataCacheConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDataCacheConfig,
 	DeletionProtectionEnabled: interface{},
-	DenyMaintenancePeriod: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDenyMaintenancePeriod,
+	DenyMaintenancePeriod: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDenyMaintenancePeriod,
 	DiskAutoresize: interface{},
 	DiskAutoresizeLimit: *f64,
 	DiskSize: *f64,
 	DiskType: *string,
 	Edition: *string,
-	InsightsConfig: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsInsightsConfig,
-	IpConfiguration: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfiguration,
-	LocationPreference: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsLocationPreference,
-	MaintenanceWindow: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsMaintenanceWindow,
-	PasswordValidationPolicy: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsPasswordValidationPolicy,
+	InsightsConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsInsightsConfig,
+	IpConfiguration: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfiguration,
+	LocationPreference: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsLocationPreference,
+	MaintenanceWindow: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsMaintenanceWindow,
+	PasswordValidationPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsPasswordValidationPolicy,
 	PricingPlan: *string,
-	SqlServerAuditConfig: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsSqlServerAuditConfig,
+	SqlServerAuditConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsSqlServerAuditConfig,
 	TimeZone: *string,
 	UserLabels: *map[string]*string,
 }
@@ -2465,7 +2465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsActiveDirectoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsActiveDirectoryConfig {
 	Domain: *string,
@@ -2499,7 +2499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsAdvancedMachineFeatures {
 	ThreadsPerCore: *f64,
@@ -2533,10 +2533,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsBackupConfiguration {
-	BackupRetentionSettings: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings,
+	BackupRetentionSettings: github.com/cdktf/cdktf-provider-google-go/google/v12.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings,
 	BinaryLogEnabled: interface{},
 	Enabled: interface{},
 	Location: *string,
@@ -2667,7 +2667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
 	RetainedBackups: *f64,
@@ -2717,7 +2717,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDatabaseFlags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsDatabaseFlags {
 	Name: *string,
@@ -2767,7 +2767,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDataCacheConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsDataCacheConfig {
 	DataCacheEnabled: interface{},
@@ -2801,7 +2801,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDenyMaintenancePeriod.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsDenyMaintenancePeriod {
 	EndDate: *string,
@@ -2873,7 +2873,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsInsightsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsInsightsConfig {
 	QueryInsightsEnabled: interface{},
@@ -2973,7 +2973,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsIpConfiguration {
 	AllocatedIpRange: *string,
@@ -3131,7 +3131,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
 	Value: *string,
@@ -3191,7 +3191,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfigurationPscConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsIpConfigurationPscConfig {
 	AllowedConsumerProjects: *[]*string,
@@ -3243,7 +3243,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsLocationPreference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsLocationPreference {
 	FollowGaeApplication: *string,
@@ -3309,7 +3309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsMaintenanceWindow {
 	Day: *f64,
@@ -3375,7 +3375,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsPasswordValidationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsPasswordValidationPolicy {
 	EnablePasswordPolicy: interface{},
@@ -3489,7 +3489,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsSqlServerAuditConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceSettingsSqlServerAuditConfig {
 	Bucket: *string,
@@ -3559,7 +3559,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 &sqldatabaseinstance.SqlDatabaseInstanceTimeouts {
 	Create: *string,
@@ -3621,7 +3621,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceCloneOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceCloneOutputReference
 ```
@@ -4008,7 +4008,7 @@ func InternalValue() SqlDatabaseInstanceClone
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceIpAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceIpAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlDatabaseInstanceIpAddressList
 ```
@@ -4140,7 +4140,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceIpAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceIpAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlDatabaseInstanceIpAddressOutputReference
 ```
@@ -4440,7 +4440,7 @@ func InternalValue() SqlDatabaseInstanceIpAddress
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceReplicaConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceReplicaConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceReplicaConfigurationOutputReference
 ```
@@ -5008,7 +5008,7 @@ func InternalValue() SqlDatabaseInstanceReplicaConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceRestoreBackupContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceRestoreBackupContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceRestoreBackupContextOutputReference
 ```
@@ -5337,7 +5337,7 @@ func InternalValue() SqlDatabaseInstanceRestoreBackupContext
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceServerCaCertList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceServerCaCertList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlDatabaseInstanceServerCaCertList
 ```
@@ -5469,7 +5469,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceServerCaCertOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceServerCaCertOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlDatabaseInstanceServerCaCertOutputReference
 ```
@@ -5791,7 +5791,7 @@ func InternalValue() SqlDatabaseInstanceServerCaCert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference
 ```
@@ -6062,7 +6062,7 @@ func InternalValue() SqlDatabaseInstanceSettingsActiveDirectoryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsAdvancedMachineFeaturesOutputReference
 ```
@@ -6340,7 +6340,7 @@ func InternalValue() SqlDatabaseInstanceSettingsAdvancedMachineFeatures
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference
 ```
@@ -6640,7 +6640,7 @@ func InternalValue() SqlDatabaseInstanceSettingsBackupConfigurationBackupRetenti
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsBackupConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsBackupConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsBackupConfigurationOutputReference
 ```
@@ -7105,7 +7105,7 @@ func InternalValue() SqlDatabaseInstanceSettingsBackupConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDatabaseFlagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsDatabaseFlagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlDatabaseInstanceSettingsDatabaseFlagsList
 ```
@@ -7248,7 +7248,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDatabaseFlagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlDatabaseInstanceSettingsDatabaseFlagsOutputReference
 ```
@@ -7559,7 +7559,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDataCacheConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsDataCacheConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsDataCacheConfigOutputReference
 ```
@@ -7837,7 +7837,7 @@ func InternalValue() SqlDatabaseInstanceSettingsDataCacheConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference
 ```
@@ -8152,7 +8152,7 @@ func InternalValue() SqlDatabaseInstanceSettingsDenyMaintenancePeriod
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsInsightsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsInsightsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsInsightsConfigOutputReference
 ```
@@ -8546,7 +8546,7 @@ func InternalValue() SqlDatabaseInstanceSettingsInsightsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList
 ```
@@ -8689,7 +8689,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference
 ```
@@ -9036,7 +9036,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsIpConfigurationOutputReference
 ```
@@ -9543,7 +9543,7 @@ func InternalValue() SqlDatabaseInstanceSettingsIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfigurationPscConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsIpConfigurationPscConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlDatabaseInstanceSettingsIpConfigurationPscConfigList
 ```
@@ -9686,7 +9686,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference
 ```
@@ -10011,7 +10011,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsLocationPreferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsLocationPreferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsLocationPreferenceOutputReference
 ```
@@ -10347,7 +10347,7 @@ func InternalValue() SqlDatabaseInstanceSettingsLocationPreference
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference
 ```
@@ -10683,7 +10683,7 @@ func InternalValue() SqlDatabaseInstanceSettingsMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsOutputReference
 ```
@@ -11846,7 +11846,7 @@ func InternalValue() SqlDatabaseInstanceSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference
 ```
@@ -12262,7 +12262,7 @@ func InternalValue() SqlDatabaseInstanceSettingsPasswordValidationPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference
 ```
@@ -12598,7 +12598,7 @@ func InternalValue() SqlDatabaseInstanceSettingsSqlServerAuditConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/sqldatabaseinstance"
 
 sqldatabaseinstance.NewSqlDatabaseInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseInstanceTimeoutsOutputReference
 ```

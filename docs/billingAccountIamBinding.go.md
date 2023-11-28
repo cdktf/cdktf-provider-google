@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 billingaccountiambinding.NewBillingAccountIamBinding(scope Construct, id *string, config BillingAccountIamBindingConfig) BillingAccountIamBinding
 ```
@@ -355,7 +355,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 billingaccountiambinding.BillingAccountIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 billingaccountiambinding.BillingAccountIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ billingaccountiambinding.BillingAccountIamBinding_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 billingaccountiambinding.BillingAccountIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -415,7 +415,7 @@ billingaccountiambinding.BillingAccountIamBinding_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 billingaccountiambinding.BillingAccountIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -765,7 +765,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 &billingaccountiambinding.BillingAccountIamBindingCondition {
 	Expression: *string,
@@ -825,7 +825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 &billingaccountiambinding.BillingAccountIamBindingConfig {
 	Connection: interface{},
@@ -838,7 +838,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambindin
 	BillingAccountId: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.billingAccountIamBinding.BillingAccountIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.billingAccountIamBinding.BillingAccountIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -1004,7 +1004,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingAccountIamBinding.BillingAccountIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingaccountiambinding"
 
 billingaccountiambinding.NewBillingAccountIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BillingAccountIamBindingConditionOutputReference
 ```
