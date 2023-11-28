@@ -1,7 +1,3 @@
-# `google_dataproc_job`
-
-Refer to the Terraform Registory for docs: [`google_dataproc_job`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataproc_job).
-
 # `dataprocJob` Submodule <a name="`dataprocJob` Submodule" id="@cdktf/provider-google.dataprocJob"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

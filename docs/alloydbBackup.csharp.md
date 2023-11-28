@@ -1,7 +1,3 @@
-# `google_alloydb_backup`
-
-Refer to the Terraform Registory for docs: [`google_alloydb_backup`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/alloydb_backup).
-
 # `alloydbBackup` Submodule <a name="`alloydbBackup` Submodule" id="@cdktf/provider-google.alloydbBackup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

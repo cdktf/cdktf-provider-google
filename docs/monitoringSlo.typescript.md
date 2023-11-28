@@ -1,7 +1,3 @@
-# `google_monitoring_slo`
-
-Refer to the Terraform Registory for docs: [`google_monitoring_slo`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/monitoring_slo).
-
 # `monitoringSlo` Submodule <a name="`monitoringSlo` Submodule" id="@cdktf/provider-google.monitoringSlo"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

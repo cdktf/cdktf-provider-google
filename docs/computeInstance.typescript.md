@@ -1,7 +1,3 @@
-# `google_compute_instance`
-
-Refer to the Terraform Registory for docs: [`google_compute_instance`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_instance).
-
 # `computeInstance` Submodule <a name="`computeInstance` Submodule" id="@cdktf/provider-google.computeInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

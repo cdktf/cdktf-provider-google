@@ -1,7 +1,3 @@
-# `google_pubsub_schema_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_pubsub_schema_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/pubsub_schema_iam_binding).
-
 # `pubsubSchemaIamBinding` Submodule <a name="`pubsubSchemaIamBinding` Submodule" id="@cdktf/provider-google.pubsubSchemaIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

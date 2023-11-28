@@ -1,7 +1,3 @@
-# `google_dataproc_metastore_service_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_dataproc_metastore_service_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataproc_metastore_service_iam_binding).
-
 # `dataprocMetastoreServiceIamBinding` Submodule <a name="`dataprocMetastoreServiceIamBinding` Submodule" id="@cdktf/provider-google.dataprocMetastoreServiceIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

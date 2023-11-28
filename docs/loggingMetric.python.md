@@ -1,7 +1,3 @@
-# `google_logging_metric`
-
-Refer to the Terraform Registory for docs: [`google_logging_metric`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/logging_metric).
-
 # `loggingMetric` Submodule <a name="`loggingMetric` Submodule" id="@cdktf/provider-google.loggingMetric"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

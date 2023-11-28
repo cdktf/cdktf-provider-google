@@ -1,7 +1,3 @@
-# `google_container_azure_client`
-
-Refer to the Terraform Registory for docs: [`google_container_azure_client`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_azure_client).
-
 # `containerAzureClient` Submodule <a name="`containerAzureClient` Submodule" id="@cdktf/provider-google.containerAzureClient"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

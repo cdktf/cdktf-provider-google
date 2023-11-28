@@ -1,7 +1,3 @@
-# `google_container_analysis_note_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_container_analysis_note_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note_iam_member).
-
 # `containerAnalysisNoteIamMember` Submodule <a name="`containerAnalysisNoteIamMember` Submodule" id="@cdktf/provider-google.containerAnalysisNoteIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_firestore_index`
-
-Refer to the Terraform Registory for docs: [`google_firestore_index`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/firestore_index).
-
 # `firestoreIndex` Submodule <a name="`firestoreIndex` Submodule" id="@cdktf/provider-google.firestoreIndex"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

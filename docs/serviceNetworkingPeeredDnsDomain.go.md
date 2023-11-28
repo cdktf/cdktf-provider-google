@@ -1,7 +1,3 @@
-# `google_service_networking_peered_dns_domain`
-
-Refer to the Terraform Registory for docs: [`google_service_networking_peered_dns_domain`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/service_networking_peered_dns_domain).
-
 # `serviceNetworkingPeeredDnsDomain` Submodule <a name="`serviceNetworkingPeeredDnsDomain` Submodule" id="@cdktf/provider-google.serviceNetworkingPeeredDnsDomain"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

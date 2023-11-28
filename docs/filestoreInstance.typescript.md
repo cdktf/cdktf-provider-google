@@ -1,7 +1,3 @@
-# `google_filestore_instance`
-
-Refer to the Terraform Registory for docs: [`google_filestore_instance`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/filestore_instance).
-
 # `filestoreInstance` Submodule <a name="`filestoreInstance` Submodule" id="@cdktf/provider-google.filestoreInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

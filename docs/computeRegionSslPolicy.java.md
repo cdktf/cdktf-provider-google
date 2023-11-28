@@ -1,7 +1,3 @@
-# `google_compute_region_ssl_policy`
-
-Refer to the Terraform Registory for docs: [`google_compute_region_ssl_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_ssl_policy).
-
 # `computeRegionSslPolicy` Submodule <a name="`computeRegionSslPolicy` Submodule" id="@cdktf/provider-google.computeRegionSslPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

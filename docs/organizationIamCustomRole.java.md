@@ -1,7 +1,3 @@
-# `google_organization_iam_custom_role`
-
-Refer to the Terraform Registory for docs: [`google_organization_iam_custom_role`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/organization_iam_custom_role).
-
 # `organizationIamCustomRole` Submodule <a name="`organizationIamCustomRole` Submodule" id="@cdktf/provider-google.organizationIamCustomRole"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

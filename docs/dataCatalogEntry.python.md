@@ -1,7 +1,3 @@
-# `google_data_catalog_entry`
-
-Refer to the Terraform Registory for docs: [`google_data_catalog_entry`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry).
-
 # `dataCatalogEntry` Submodule <a name="`dataCatalogEntry` Submodule" id="@cdktf/provider-google.dataCatalogEntry"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

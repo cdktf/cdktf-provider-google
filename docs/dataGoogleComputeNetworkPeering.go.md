@@ -1,7 +1,3 @@
-# `data_google_compute_network_peering`
-
-Refer to the Terraform Registory for docs: [`data_google_compute_network_peering`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_network_peering).
-
 # `dataGoogleComputeNetworkPeering` Submodule <a name="`dataGoogleComputeNetworkPeering` Submodule" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

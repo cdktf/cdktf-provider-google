@@ -1,7 +1,3 @@
-# `google_recaptcha_enterprise_key`
-
-Refer to the Terraform Registory for docs: [`google_recaptcha_enterprise_key`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/recaptcha_enterprise_key).
-
 # `recaptchaEnterpriseKey` Submodule <a name="`recaptchaEnterpriseKey` Submodule" id="@cdktf/provider-google.recaptchaEnterpriseKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

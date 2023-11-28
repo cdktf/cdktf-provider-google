@@ -1,7 +1,3 @@
-# `google_notebooks_instance_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_notebooks_instance_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_instance_iam_member).
-
 # `notebooksInstanceIamMember` Submodule <a name="`notebooksInstanceIamMember` Submodule" id="@cdktf/provider-google.notebooksInstanceIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

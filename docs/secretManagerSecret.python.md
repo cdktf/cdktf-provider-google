@@ -1,7 +1,3 @@
-# `google_secret_manager_secret`
-
-Refer to the Terraform Registory for docs: [`google_secret_manager_secret`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/secret_manager_secret).
-
 # `secretManagerSecret` Submodule <a name="`secretManagerSecret` Submodule" id="@cdktf/provider-google.secretManagerSecret"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

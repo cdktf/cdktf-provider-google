@@ -1,7 +1,3 @@
-# `data_google_sql_ca_certs`
-
-Refer to the Terraform Registory for docs: [`data_google_sql_ca_certs`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/sql_ca_certs).
-
 # `dataGoogleSqlCaCerts` Submodule <a name="`dataGoogleSqlCaCerts` Submodule" id="@cdktf/provider-google.dataGoogleSqlCaCerts"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_google_project`
-
-Refer to the Terraform Registory for docs: [`data_google_project`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/project).
-
 # `dataGoogleProject` Submodule <a name="`dataGoogleProject` Submodule" id="@cdktf/provider-google.dataGoogleProject"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

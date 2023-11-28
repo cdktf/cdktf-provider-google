@@ -1,7 +1,3 @@
-# `google_monitoring_custom_service`
-
-Refer to the Terraform Registory for docs: [`google_monitoring_custom_service`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/monitoring_custom_service).
-
 # `monitoringCustomService` Submodule <a name="`monitoringCustomService` Submodule" id="@cdktf/provider-google.monitoringCustomService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

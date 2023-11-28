@@ -1,7 +1,3 @@
-# `google_apigee_sync_authorization`
-
-Refer to the Terraform Registory for docs: [`google_apigee_sync_authorization`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apigee_sync_authorization).
-
 # `apigeeSyncAuthorization` Submodule <a name="`apigeeSyncAuthorization` Submodule" id="@cdktf/provider-google.apigeeSyncAuthorization"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

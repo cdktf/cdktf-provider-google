@@ -1,7 +1,3 @@
-# `google_bigquery_connection_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_bigquery_connection_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding).
-
 # `bigqueryConnectionIamBinding` Submodule <a name="`bigqueryConnectionIamBinding` Submodule" id="@cdktf/provider-google.bigqueryConnectionIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

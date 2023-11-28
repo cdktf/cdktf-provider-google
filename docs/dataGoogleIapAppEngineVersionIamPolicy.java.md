@@ -1,7 +1,3 @@
-# `data_google_iap_app_engine_version_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_iap_app_engine_version_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/iap_app_engine_version_iam_policy).
-
 # `dataGoogleIapAppEngineVersionIamPolicy` Submodule <a name="`dataGoogleIapAppEngineVersionIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleIapAppEngineVersionIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

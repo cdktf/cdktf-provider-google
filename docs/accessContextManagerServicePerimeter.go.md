@@ -1,7 +1,3 @@
-# `google_access_context_manager_service_perimeter`
-
-Refer to the Terraform Registory for docs: [`google_access_context_manager_service_perimeter`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/access_context_manager_service_perimeter).
-
 # `accessContextManagerServicePerimeter` Submodule <a name="`accessContextManagerServicePerimeter` Submodule" id="@cdktf/provider-google.accessContextManagerServicePerimeter"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

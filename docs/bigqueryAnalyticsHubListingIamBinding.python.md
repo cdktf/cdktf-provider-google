@@ -1,7 +1,3 @@
-# `google_bigquery_analytics_hub_listing_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_bigquery_analytics_hub_listing_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_analytics_hub_listing_iam_binding).
-
 # `bigqueryAnalyticsHubListingIamBinding` Submodule <a name="`bigqueryAnalyticsHubListingIamBinding` Submodule" id="@cdktf/provider-google.bigqueryAnalyticsHubListingIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_binary_authorization_policy`
-
-Refer to the Terraform Registory for docs: [`google_binary_authorization_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/binary_authorization_policy).
-
 # `binaryAuthorizationPolicy` Submodule <a name="`binaryAuthorizationPolicy` Submodule" id="@cdktf/provider-google.binaryAuthorizationPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

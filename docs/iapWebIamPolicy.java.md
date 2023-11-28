@@ -1,7 +1,3 @@
-# `google_iap_web_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_iap_web_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_web_iam_policy).
-
 # `iapWebIamPolicy` Submodule <a name="`iapWebIamPolicy` Submodule" id="@cdktf/provider-google.iapWebIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

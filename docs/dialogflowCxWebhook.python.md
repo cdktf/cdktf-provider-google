@@ -1,7 +1,3 @@
-# `google_dialogflow_cx_webhook`
-
-Refer to the Terraform Registory for docs: [`google_dialogflow_cx_webhook`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_webhook).
-
 # `dialogflowCxWebhook` Submodule <a name="`dialogflowCxWebhook` Submodule" id="@cdktf/provider-google.dialogflowCxWebhook"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

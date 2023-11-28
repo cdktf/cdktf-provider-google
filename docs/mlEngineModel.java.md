@@ -1,7 +1,3 @@
-# `google_ml_engine_model`
-
-Refer to the Terraform Registory for docs: [`google_ml_engine_model`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/ml_engine_model).
-
 # `mlEngineModel` Submodule <a name="`mlEngineModel` Submodule" id="@cdktf/provider-google.mlEngineModel"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

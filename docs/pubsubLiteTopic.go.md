@@ -1,7 +1,3 @@
-# `google_pubsub_lite_topic`
-
-Refer to the Terraform Registory for docs: [`google_pubsub_lite_topic`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/pubsub_lite_topic).
-
 # `pubsubLiteTopic` Submodule <a name="`pubsubLiteTopic` Submodule" id="@cdktf/provider-google.pubsubLiteTopic"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_spanner_database`
-
-Refer to the Terraform Registory for docs: [`google_spanner_database`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/spanner_database).
-
 # `spannerDatabase` Submodule <a name="`spannerDatabase` Submodule" id="@cdktf/provider-google.spannerDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

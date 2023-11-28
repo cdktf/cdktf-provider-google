@@ -1,7 +1,3 @@
-# `google_iap_app_engine_version_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_iap_app_engine_version_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_app_engine_version_iam_member).
-
 # `iapAppEngineVersionIamMember` Submodule <a name="`iapAppEngineVersionIamMember` Submodule" id="@cdktf/provider-google.iapAppEngineVersionIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

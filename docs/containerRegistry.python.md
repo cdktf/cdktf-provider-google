@@ -1,7 +1,3 @@
-# `google_container_registry`
-
-Refer to the Terraform Registory for docs: [`google_container_registry`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_registry).
-
 # `containerRegistry` Submodule <a name="`containerRegistry` Submodule" id="@cdktf/provider-google.containerRegistry"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

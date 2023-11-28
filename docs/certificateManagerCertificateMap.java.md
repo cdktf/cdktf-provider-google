@@ -1,7 +1,3 @@
-# `google_certificate_manager_certificate_map`
-
-Refer to the Terraform Registory for docs: [`google_certificate_manager_certificate_map`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/certificate_manager_certificate_map).
-
 # `certificateManagerCertificateMap` Submodule <a name="`certificateManagerCertificateMap` Submodule" id="@cdktf/provider-google.certificateManagerCertificateMap"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

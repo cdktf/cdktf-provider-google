@@ -1,7 +1,3 @@
-# `google_compute_region_ssl_certificate`
-
-Refer to the Terraform Registory for docs: [`google_compute_region_ssl_certificate`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_ssl_certificate).
-
 # `computeRegionSslCertificate` Submodule <a name="`computeRegionSslCertificate` Submodule" id="@cdktf/provider-google.computeRegionSslCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

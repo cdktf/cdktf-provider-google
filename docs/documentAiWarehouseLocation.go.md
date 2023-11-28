@@ -1,7 +1,3 @@
-# `google_document_ai_warehouse_location`
-
-Refer to the Terraform Registory for docs: [`google_document_ai_warehouse_location`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_warehouse_location).
-
 # `documentAiWarehouseLocation` Submodule <a name="`documentAiWarehouseLocation` Submodule" id="@cdktf/provider-google.documentAiWarehouseLocation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

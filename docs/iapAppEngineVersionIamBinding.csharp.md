@@ -1,7 +1,3 @@
-# `google_iap_app_engine_version_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_iap_app_engine_version_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_app_engine_version_iam_binding).
-
 # `iapAppEngineVersionIamBinding` Submodule <a name="`iapAppEngineVersionIamBinding` Submodule" id="@cdktf/provider-google.iapAppEngineVersionIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

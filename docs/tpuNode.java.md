@@ -1,7 +1,3 @@
-# `google_tpu_node`
-
-Refer to the Terraform Registory for docs: [`google_tpu_node`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tpu_node).
-
 # `tpuNode` Submodule <a name="`tpuNode` Submodule" id="@cdktf/provider-google.tpuNode"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

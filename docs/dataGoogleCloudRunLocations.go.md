@@ -1,7 +1,3 @@
-# `data_google_cloud_run_locations`
-
-Refer to the Terraform Registory for docs: [`data_google_cloud_run_locations`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/cloud_run_locations).
-
 # `dataGoogleCloudRunLocations` Submodule <a name="`dataGoogleCloudRunLocations` Submodule" id="@cdktf/provider-google.dataGoogleCloudRunLocations"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

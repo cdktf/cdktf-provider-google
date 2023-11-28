@@ -1,7 +1,3 @@
-# `google_edgecontainer_vpn_connection`
-
-Refer to the Terraform Registory for docs: [`google_edgecontainer_vpn_connection`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/edgecontainer_vpn_connection).
-
 # `edgecontainerVpnConnection` Submodule <a name="`edgecontainerVpnConnection` Submodule" id="@cdktf/provider-google.edgecontainerVpnConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

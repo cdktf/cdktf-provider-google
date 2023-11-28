@@ -1,7 +1,3 @@
-# `google_tags_tag_key`
-
-Refer to the Terraform Registory for docs: [`google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/tags_tag_key).
-
 # `tagsTagKey` Submodule <a name="`tagsTagKey` Submodule" id="@cdktf/provider-google.tagsTagKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

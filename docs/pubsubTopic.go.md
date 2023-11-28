@@ -1,7 +1,3 @@
-# `google_pubsub_topic`
-
-Refer to the Terraform Registory for docs: [`google_pubsub_topic`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/pubsub_topic).
-
 # `pubsubTopic` Submodule <a name="`pubsubTopic` Submodule" id="@cdktf/provider-google.pubsubTopic"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_access_context_manager_access_policy_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_access_context_manager_access_policy_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/access_context_manager_access_policy_iam_binding).
-
 # `accessContextManagerAccessPolicyIamBinding` Submodule <a name="`accessContextManagerAccessPolicyIamBinding` Submodule" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_google_sql_tiers`
-
-Refer to the Terraform Registory for docs: [`data_google_sql_tiers`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/sql_tiers).
-
 # `dataGoogleSqlTiers` Submodule <a name="`dataGoogleSqlTiers` Submodule" id="@cdktf/provider-google.dataGoogleSqlTiers"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

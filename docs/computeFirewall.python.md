@@ -1,7 +1,3 @@
-# `google_compute_firewall`
-
-Refer to the Terraform Registory for docs: [`google_compute_firewall`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_firewall).
-
 # `computeFirewall` Submodule <a name="`computeFirewall` Submodule" id="@cdktf/provider-google.computeFirewall"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

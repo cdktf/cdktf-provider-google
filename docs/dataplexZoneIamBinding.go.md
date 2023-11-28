@@ -1,7 +1,3 @@
-# `google_dataplex_zone_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_zone_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_zone_iam_binding).
-
 # `dataplexZoneIamBinding` Submodule <a name="`dataplexZoneIamBinding` Submodule" id="@cdktf/provider-google.dataplexZoneIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

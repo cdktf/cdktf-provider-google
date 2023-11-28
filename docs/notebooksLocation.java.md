@@ -1,7 +1,3 @@
-# `google_notebooks_location`
-
-Refer to the Terraform Registory for docs: [`google_notebooks_location`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_location).
-
 # `notebooksLocation` Submodule <a name="`notebooksLocation` Submodule" id="@cdktf/provider-google.notebooksLocation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

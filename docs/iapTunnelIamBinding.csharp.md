@@ -1,7 +1,3 @@
-# `google_iap_tunnel_iam_binding`
-
-Refer to the Terraform Registory for docs: [`google_iap_tunnel_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_tunnel_iam_binding).
-
 # `iapTunnelIamBinding` Submodule <a name="`iapTunnelIamBinding` Submodule" id="@cdktf/provider-google.iapTunnelIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

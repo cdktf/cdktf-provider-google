@@ -1,7 +1,3 @@
-# `google_pubsub_schema_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_pubsub_schema_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/pubsub_schema_iam_member).
-
 # `pubsubSchemaIamMember` Submodule <a name="`pubsubSchemaIamMember` Submodule" id="@cdktf/provider-google.pubsubSchemaIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_container_aws_node_pool`
-
-Refer to the Terraform Registory for docs: [`google_container_aws_node_pool`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_aws_node_pool).
-
 # `containerAwsNodePool` Submodule <a name="`containerAwsNodePool` Submodule" id="@cdktf/provider-google.containerAwsNodePool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

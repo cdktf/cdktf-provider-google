@@ -1,7 +1,3 @@
-# `google_compute_image_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_compute_image_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_image_iam_policy).
-
 # `computeImageIamPolicy` Submodule <a name="`computeImageIamPolicy` Submodule" id="@cdktf/provider-google.computeImageIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

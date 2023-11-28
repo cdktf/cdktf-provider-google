@@ -1,7 +1,3 @@
-# `google_resource_manager_lien`
-
-Refer to the Terraform Registory for docs: [`google_resource_manager_lien`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/resource_manager_lien).
-
 # `resourceManagerLien` Submodule <a name="`resourceManagerLien` Submodule" id="@cdktf/provider-google.resourceManagerLien"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_biglake_table`
-
-Refer to the Terraform Registory for docs: [`google_biglake_table`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/biglake_table).
-
 # `biglakeTable` Submodule <a name="`biglakeTable` Submodule" id="@cdktf/provider-google.biglakeTable"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

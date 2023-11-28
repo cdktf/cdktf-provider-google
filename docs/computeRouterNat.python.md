@@ -1,7 +1,3 @@
-# `google_compute_router_nat`
-
-Refer to the Terraform Registory for docs: [`google_compute_router_nat`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_router_nat).
-
 # `computeRouterNat` Submodule <a name="`computeRouterNat` Submodule" id="@cdktf/provider-google.computeRouterNat"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

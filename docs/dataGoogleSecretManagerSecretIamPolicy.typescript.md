@@ -1,7 +1,3 @@
-# `data_google_secret_manager_secret_iam_policy`
-
-Refer to the Terraform Registory for docs: [`data_google_secret_manager_secret_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/secret_manager_secret_iam_policy).
-
 # `dataGoogleSecretManagerSecretIamPolicy` Submodule <a name="`dataGoogleSecretManagerSecretIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleSecretManagerSecretIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_billing_project_info`
-
-Refer to the Terraform Registory for docs: [`google_billing_project_info`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/billing_project_info).
-
 # `billingProjectInfo` Submodule <a name="`billingProjectInfo` Submodule" id="@cdktf/provider-google.billingProjectInfo"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_dataplex_datascan_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_datascan_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_datascan_iam_member).
-
 # `dataplexDatascanIamMember` Submodule <a name="`dataplexDatascanIamMember` Submodule" id="@cdktf/provider-google.dataplexDatascanIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

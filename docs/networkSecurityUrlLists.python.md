@@ -1,7 +1,3 @@
-# `google_network_security_url_lists`
-
-Refer to the Terraform Registory for docs: [`google_network_security_url_lists`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/network_security_url_lists).
-
 # `networkSecurityUrlLists` Submodule <a name="`networkSecurityUrlLists` Submodule" id="@cdktf/provider-google.networkSecurityUrlLists"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_google_composer_environment`
-
-Refer to the Terraform Registory for docs: [`data_google_composer_environment`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/composer_environment).
-
 # `dataGoogleComposerEnvironment` Submodule <a name="`dataGoogleComposerEnvironment` Submodule" id="@cdktf/provider-google.dataGoogleComposerEnvironment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

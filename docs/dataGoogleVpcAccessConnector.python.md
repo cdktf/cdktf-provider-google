@@ -1,7 +1,3 @@
-# `data_google_vpc_access_connector`
-
-Refer to the Terraform Registory for docs: [`data_google_vpc_access_connector`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/vpc_access_connector).
-
 # `dataGoogleVpcAccessConnector` Submodule <a name="`dataGoogleVpcAccessConnector` Submodule" id="@cdktf/provider-google.dataGoogleVpcAccessConnector"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

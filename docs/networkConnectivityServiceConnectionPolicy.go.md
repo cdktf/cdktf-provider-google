@@ -1,7 +1,3 @@
-# `google_network_connectivity_service_connection_policy`
-
-Refer to the Terraform Registory for docs: [`google_network_connectivity_service_connection_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/network_connectivity_service_connection_policy).
-
 # `networkConnectivityServiceConnectionPolicy` Submodule <a name="`networkConnectivityServiceConnectionPolicy` Submodule" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

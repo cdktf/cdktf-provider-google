@@ -1,7 +1,3 @@
-# `google_scc_source`
-
-Refer to the Terraform Registory for docs: [`google_scc_source`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/scc_source).
-
 # `sccSource` Submodule <a name="`sccSource` Submodule" id="@cdktf/provider-google.sccSource"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

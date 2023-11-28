@@ -1,7 +1,3 @@
-# `google_bigtable_instance_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigtable_instance_iam_member).
-
 # `bigtableInstanceIamMember` Submodule <a name="`bigtableInstanceIamMember` Submodule" id="@cdktf/provider-google.bigtableInstanceIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_network_connectivity_spoke`
-
-Refer to the Terraform Registory for docs: [`google_network_connectivity_spoke`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/network_connectivity_spoke).
-
 # `networkConnectivitySpoke` Submodule <a name="`networkConnectivitySpoke` Submodule" id="@cdktf/provider-google.networkConnectivitySpoke"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

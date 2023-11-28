@@ -1,7 +1,3 @@
-# `google_privateca_certificate`
-
-Refer to the Terraform Registory for docs: [`google_privateca_certificate`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_certificate).
-
 # `privatecaCertificate` Submodule <a name="`privatecaCertificate` Submodule" id="@cdktf/provider-google.privatecaCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

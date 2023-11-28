@@ -1,7 +1,3 @@
-# `google_data_catalog_entry_group_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_data_catalog_entry_group_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_entry_group_iam_member).
-
 # `dataCatalogEntryGroupIamMember` Submodule <a name="`dataCatalogEntryGroupIamMember` Submodule" id="@cdktf/provider-google.dataCatalogEntryGroupIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

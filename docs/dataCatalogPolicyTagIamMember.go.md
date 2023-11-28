@@ -1,7 +1,3 @@
-# `google_data_catalog_policy_tag_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_data_catalog_policy_tag_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_catalog_policy_tag_iam_member).
-
 # `dataCatalogPolicyTagIamMember` Submodule <a name="`dataCatalogPolicyTagIamMember` Submodule" id="@cdktf/provider-google.dataCatalogPolicyTagIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_google_logging_sink`
-
-Refer to the Terraform Registory for docs: [`data_google_logging_sink`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/logging_sink).
-
 # `dataGoogleLoggingSink` Submodule <a name="`dataGoogleLoggingSink` Submodule" id="@cdktf/provider-google.dataGoogleLoggingSink"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

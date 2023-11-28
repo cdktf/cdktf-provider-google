@@ -1,7 +1,3 @@
-# `google_bigquery_capacity_commitment`
-
-Refer to the Terraform Registory for docs: [`google_bigquery_capacity_commitment`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_capacity_commitment).
-
 # `bigqueryCapacityCommitment` Submodule <a name="`bigqueryCapacityCommitment` Submodule" id="@cdktf/provider-google.bigqueryCapacityCommitment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

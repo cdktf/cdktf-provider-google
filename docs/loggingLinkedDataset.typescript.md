@@ -1,7 +1,3 @@
-# `google_logging_linked_dataset`
-
-Refer to the Terraform Registory for docs: [`google_logging_linked_dataset`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/logging_linked_dataset).
-
 # `loggingLinkedDataset` Submodule <a name="`loggingLinkedDataset` Submodule" id="@cdktf/provider-google.loggingLinkedDataset"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

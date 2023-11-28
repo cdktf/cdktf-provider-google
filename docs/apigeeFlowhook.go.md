@@ -1,7 +1,3 @@
-# `google_apigee_flowhook`
-
-Refer to the Terraform Registory for docs: [`google_apigee_flowhook`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apigee_flowhook).
-
 # `apigeeFlowhook` Submodule <a name="`apigeeFlowhook` Submodule" id="@cdktf/provider-google.apigeeFlowhook"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

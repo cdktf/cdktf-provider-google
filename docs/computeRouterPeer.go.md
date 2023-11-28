@@ -1,7 +1,3 @@
-# `google_compute_router_peer`
-
-Refer to the Terraform Registory for docs: [`google_compute_router_peer`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_router_peer).
-
 # `computeRouterPeer` Submodule <a name="`computeRouterPeer` Submodule" id="@cdktf/provider-google.computeRouterPeer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

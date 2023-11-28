@@ -1,7 +1,3 @@
-# `google_app_engine_application_url_dispatch_rules`
-
-Refer to the Terraform Registory for docs: [`google_app_engine_application_url_dispatch_rules`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/app_engine_application_url_dispatch_rules).
-
 # `appEngineApplicationUrlDispatchRules` Submodule <a name="`appEngineApplicationUrlDispatchRules` Submodule" id="@cdktf/provider-google.appEngineApplicationUrlDispatchRules"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

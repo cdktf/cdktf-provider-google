@@ -1,7 +1,3 @@
-# `google_compute_region_disk`
-
-Refer to the Terraform Registory for docs: [`google_compute_region_disk`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_disk).
-
 # `computeRegionDisk` Submodule <a name="`computeRegionDisk` Submodule" id="@cdktf/provider-google.computeRegionDisk"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

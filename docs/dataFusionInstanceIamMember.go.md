@@ -1,7 +1,3 @@
-# `google_data_fusion_instance_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_data_fusion_instance_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member).
-
 # `dataFusionInstanceIamMember` Submodule <a name="`dataFusionInstanceIamMember` Submodule" id="@cdktf/provider-google.dataFusionInstanceIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

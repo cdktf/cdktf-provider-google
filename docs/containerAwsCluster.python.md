@@ -1,7 +1,3 @@
-# `google_container_aws_cluster`
-
-Refer to the Terraform Registory for docs: [`google_container_aws_cluster`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_aws_cluster).
-
 # `containerAwsCluster` Submodule <a name="`containerAwsCluster` Submodule" id="@cdktf/provider-google.containerAwsCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_dataplex_task`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_task`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_task).
-
 # `dataplexTask` Submodule <a name="`dataplexTask` Submodule" id="@cdktf/provider-google.dataplexTask"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

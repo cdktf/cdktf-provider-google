@@ -1,7 +1,3 @@
-# `google_eventarc_channel`
-
-Refer to the Terraform Registory for docs: [`google_eventarc_channel`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/eventarc_channel).
-
 # `eventarcChannel` Submodule <a name="`eventarcChannel` Submodule" id="@cdktf/provider-google.eventarcChannel"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

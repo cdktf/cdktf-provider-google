@@ -1,7 +1,3 @@
-# `google_dialogflow_cx_agent`
-
-Refer to the Terraform Registory for docs: [`google_dialogflow_cx_agent`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_agent).
-
 # `dialogflowCxAgent` Submodule <a name="`dialogflowCxAgent` Submodule" id="@cdktf/provider-google.dialogflowCxAgent"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

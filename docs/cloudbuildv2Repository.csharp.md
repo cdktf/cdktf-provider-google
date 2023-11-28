@@ -1,7 +1,3 @@
-# `google_cloudbuildv2_repository`
-
-Refer to the Terraform Registory for docs: [`google_cloudbuildv2_repository`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_repository).
-
 # `cloudbuildv2Repository` Submodule <a name="`cloudbuildv2Repository` Submodule" id="@cdktf/provider-google.cloudbuildv2Repository"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

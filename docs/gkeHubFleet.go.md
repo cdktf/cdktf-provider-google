@@ -1,7 +1,3 @@
-# `google_gke_hub_fleet`
-
-Refer to the Terraform Registory for docs: [`google_gke_hub_fleet`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/gke_hub_fleet).
-
 # `gkeHubFleet` Submodule <a name="`gkeHubFleet` Submodule" id="@cdktf/provider-google.gkeHubFleet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

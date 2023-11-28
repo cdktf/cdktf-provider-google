@@ -1,7 +1,3 @@
-# `google_monitoring_service`
-
-Refer to the Terraform Registory for docs: [`google_monitoring_service`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/monitoring_service).
-
 # `monitoringService` Submodule <a name="`monitoringService` Submodule" id="@cdktf/provider-google.monitoringService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

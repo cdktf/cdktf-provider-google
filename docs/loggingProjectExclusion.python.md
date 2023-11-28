@@ -1,7 +1,3 @@
-# `google_logging_project_exclusion`
-
-Refer to the Terraform Registory for docs: [`google_logging_project_exclusion`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/logging_project_exclusion).
-
 # `loggingProjectExclusion` Submodule <a name="`loggingProjectExclusion` Submodule" id="@cdktf/provider-google.loggingProjectExclusion"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

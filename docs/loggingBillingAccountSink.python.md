@@ -1,7 +1,3 @@
-# `google_logging_billing_account_sink`
-
-Refer to the Terraform Registory for docs: [`google_logging_billing_account_sink`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/logging_billing_account_sink).
-
 # `loggingBillingAccountSink` Submodule <a name="`loggingBillingAccountSink` Submodule" id="@cdktf/provider-google.loggingBillingAccountSink"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

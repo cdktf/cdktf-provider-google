@@ -1,7 +1,3 @@
-# `google_dataplex_asset_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_asset_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_asset_iam_member).
-
 # `dataplexAssetIamMember` Submodule <a name="`dataplexAssetIamMember` Submodule" id="@cdktf/provider-google.dataplexAssetIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

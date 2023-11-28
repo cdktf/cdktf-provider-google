@@ -1,7 +1,3 @@
-# `data_google_organization`
-
-Refer to the Terraform Registory for docs: [`data_google_organization`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/organization).
-
 # `dataGoogleOrganization` Submodule <a name="`dataGoogleOrganization` Submodule" id="@cdktf/provider-google.dataGoogleOrganization"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

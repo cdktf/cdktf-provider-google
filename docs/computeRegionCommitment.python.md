@@ -1,7 +1,3 @@
-# `google_compute_region_commitment`
-
-Refer to the Terraform Registory for docs: [`google_compute_region_commitment`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_region_commitment).
-
 # `computeRegionCommitment` Submodule <a name="`computeRegionCommitment` Submodule" id="@cdktf/provider-google.computeRegionCommitment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

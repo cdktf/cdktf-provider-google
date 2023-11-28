@@ -1,7 +1,3 @@
-# `data_google_compute_global_forwarding_rule`
-
-Refer to the Terraform Registory for docs: [`data_google_compute_global_forwarding_rule`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/compute_global_forwarding_rule).
-
 # `dataGoogleComputeGlobalForwardingRule` Submodule <a name="`dataGoogleComputeGlobalForwardingRule` Submodule" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_dns_managed_zone`
-
-Refer to the Terraform Registory for docs: [`google_dns_managed_zone`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dns_managed_zone).
-
 # `dnsManagedZone` Submodule <a name="`dnsManagedZone` Submodule" id="@cdktf/provider-google.dnsManagedZone"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

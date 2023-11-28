@@ -1,7 +1,3 @@
-# `google_gke_hub_membership_binding`
-
-Refer to the Terraform Registory for docs: [`google_gke_hub_membership_binding`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/gke_hub_membership_binding).
-
 # `gkeHubMembershipBinding` Submodule <a name="`gkeHubMembershipBinding` Submodule" id="@cdktf/provider-google.gkeHubMembershipBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

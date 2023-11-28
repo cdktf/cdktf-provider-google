@@ -1,7 +1,3 @@
-# `google_bigquery_analytics_hub_listing_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_bigquery_analytics_hub_listing_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_analytics_hub_listing_iam_member).
-
 # `bigqueryAnalyticsHubListingIamMember` Submodule <a name="`bigqueryAnalyticsHubListingIamMember` Submodule" id="@cdktf/provider-google.bigqueryAnalyticsHubListingIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

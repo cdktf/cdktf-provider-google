@@ -1,7 +1,3 @@
-# `google_beyondcorp_app_gateway`
-
-Refer to the Terraform Registory for docs: [`google_beyondcorp_app_gateway`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/beyondcorp_app_gateway).
-
 # `beyondcorpAppGateway` Submodule <a name="`beyondcorpAppGateway` Submodule" id="@cdktf/provider-google.beyondcorpAppGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

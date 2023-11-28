@@ -1,7 +1,3 @@
-# `google_identity_platform_default_supported_idp_config`
-
-Refer to the Terraform Registory for docs: [`google_identity_platform_default_supported_idp_config`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/identity_platform_default_supported_idp_config).
-
 # `identityPlatformDefaultSupportedIdpConfig` Submodule <a name="`identityPlatformDefaultSupportedIdpConfig` Submodule" id="@cdktf/provider-google.identityPlatformDefaultSupportedIdpConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

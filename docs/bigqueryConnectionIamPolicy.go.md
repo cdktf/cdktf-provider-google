@@ -1,7 +1,3 @@
-# `google_bigquery_connection_iam_policy`
-
-Refer to the Terraform Registory for docs: [`google_bigquery_connection_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_policy).
-
 # `bigqueryConnectionIamPolicy` Submodule <a name="`bigqueryConnectionIamPolicy` Submodule" id="@cdktf/provider-google.bigqueryConnectionIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_firebaserules_ruleset`
-
-Refer to the Terraform Registory for docs: [`google_firebaserules_ruleset`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/firebaserules_ruleset).
-
 # `firebaserulesRuleset` Submodule <a name="`firebaserulesRuleset` Submodule" id="@cdktf/provider-google.firebaserulesRuleset"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

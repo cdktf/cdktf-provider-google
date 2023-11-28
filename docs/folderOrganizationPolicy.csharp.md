@@ -1,7 +1,3 @@
-# `google_folder_organization_policy`
-
-Refer to the Terraform Registory for docs: [`google_folder_organization_policy`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/folder_organization_policy).
-
 # `folderOrganizationPolicy` Submodule <a name="`folderOrganizationPolicy` Submodule" id="@cdktf/provider-google.folderOrganizationPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `google_container_attached_cluster`
-
-Refer to the Terraform Registory for docs: [`google_container_attached_cluster`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_attached_cluster).
-
 # `containerAttachedCluster` Submodule <a name="`containerAttachedCluster` Submodule" id="@cdktf/provider-google.containerAttachedCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

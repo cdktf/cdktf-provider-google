@@ -1,7 +1,3 @@
-# `google_project_access_approval_settings`
-
-Refer to the Terraform Registory for docs: [`google_project_access_approval_settings`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/project_access_approval_settings).
-
 # `projectAccessApprovalSettings` Submodule <a name="`projectAccessApprovalSettings` Submodule" id="@cdktf/provider-google.projectAccessApprovalSettings"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

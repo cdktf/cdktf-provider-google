@@ -1,7 +1,3 @@
-# `google_dataplex_zone_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_dataplex_zone_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dataplex_zone_iam_member).
-
 # `dataplexZoneIamMember` Submodule <a name="`dataplexZoneIamMember` Submodule" id="@cdktf/provider-google.dataplexZoneIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

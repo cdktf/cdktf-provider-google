@@ -1,7 +1,3 @@
-# `google_document_ai_processor`
-
-Refer to the Terraform Registory for docs: [`google_document_ai_processor`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/document_ai_processor).
-
 # `documentAiProcessor` Submodule <a name="`documentAiProcessor` Submodule" id="@cdktf/provider-google.documentAiProcessor"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

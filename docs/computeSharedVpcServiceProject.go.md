@@ -1,7 +1,3 @@
-# `google_compute_shared_vpc_service_project`
-
-Refer to the Terraform Registory for docs: [`google_compute_shared_vpc_service_project`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_shared_vpc_service_project).
-
 # `computeSharedVpcServiceProject` Submodule <a name="`computeSharedVpcServiceProject` Submodule" id="@cdktf/provider-google.computeSharedVpcServiceProject"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

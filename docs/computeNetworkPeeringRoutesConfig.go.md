@@ -1,7 +1,3 @@
-# `google_compute_network_peering_routes_config`
-
-Refer to the Terraform Registory for docs: [`google_compute_network_peering_routes_config`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_network_peering_routes_config).
-
 # `computeNetworkPeeringRoutesConfig` Submodule <a name="`computeNetworkPeeringRoutesConfig` Submodule" id="@cdktf/provider-google.computeNetworkPeeringRoutesConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

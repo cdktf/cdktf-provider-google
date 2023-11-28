@@ -1,7 +1,3 @@
-# `google_apikeys_key`
-
-Refer to the Terraform Registory for docs: [`google_apikeys_key`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/apikeys_key).
-
 # `apikeysKey` Submodule <a name="`apikeysKey` Submodule" id="@cdktf/provider-google.apikeysKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

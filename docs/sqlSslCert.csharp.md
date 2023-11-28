@@ -1,7 +1,3 @@
-# `google_sql_ssl_cert`
-
-Refer to the Terraform Registory for docs: [`google_sql_ssl_cert`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/sql_ssl_cert).
-
 # `sqlSslCert` Submodule <a name="`sqlSslCert` Submodule" id="@cdktf/provider-google.sqlSslCert"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

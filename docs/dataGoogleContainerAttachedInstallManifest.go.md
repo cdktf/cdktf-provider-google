@@ -1,7 +1,3 @@
-# `data_google_container_attached_install_manifest`
-
-Refer to the Terraform Registory for docs: [`data_google_container_attached_install_manifest`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/container_attached_install_manifest).
-
 # `dataGoogleContainerAttachedInstallManifest` Submodule <a name="`dataGoogleContainerAttachedInstallManifest` Submodule" id="@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

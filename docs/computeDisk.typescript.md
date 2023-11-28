@@ -1,7 +1,3 @@
-# `google_compute_disk`
-
-Refer to the Terraform Registory for docs: [`google_compute_disk`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/compute_disk).
-
 # `computeDisk` Submodule <a name="`computeDisk` Submodule" id="@cdktf/provider-google.computeDisk"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

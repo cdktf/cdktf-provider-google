@@ -1,7 +1,3 @@
-# `google_service_account_key`
-
-Refer to the Terraform Registory for docs: [`google_service_account_key`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/service_account_key).
-
 # `serviceAccountKey` Submodule <a name="`serviceAccountKey` Submodule" id="@cdktf/provider-google.serviceAccountKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

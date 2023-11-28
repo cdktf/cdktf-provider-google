@@ -1,7 +1,3 @@
-# `google_iap_web_type_compute_iam_member`
-
-Refer to the Terraform Registory for docs: [`google_iap_web_type_compute_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_web_type_compute_iam_member).
-
 # `iapWebTypeComputeIamMember` Submodule <a name="`iapWebTypeComputeIamMember` Submodule" id="@cdktf/provider-google.iapWebTypeComputeIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

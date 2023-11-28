@@ -1,7 +1,3 @@
-# `google_iap_brand`
-
-Refer to the Terraform Registory for docs: [`google_iap_brand`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/iap_brand).
-
 # `iapBrand` Submodule <a name="`iapBrand` Submodule" id="@cdktf/provider-google.iapBrand"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
