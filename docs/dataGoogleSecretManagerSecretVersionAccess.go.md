@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSecretManagerSecretVersionAccess.DataGoogleSecretManagerSecretVersionAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecretmanagersecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagersecretversionaccess"
 
 datagooglesecretmanagersecretversionaccess.NewDataGoogleSecretManagerSecretVersionAccess(scope Construct, id *string, config DataGoogleSecretManagerSecretVersionAccessConfig) DataGoogleSecretManagerSecretVersionAccess
 ```
@@ -288,7 +288,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSecretManagerSecretVersionAccess.DataGoogleSecretManagerSecretVersionAccess.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecretmanagersecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagersecretversionaccess"
 
 datagooglesecretmanagersecretversionaccess.DataGoogleSecretManagerSecretVersionAccess_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSecretManagerSecretVersionAccess.DataGoogleSecretManagerSecretVersionAccess.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecretmanagersecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagersecretversionaccess"
 
 datagooglesecretmanagersecretversionaccess.DataGoogleSecretManagerSecretVersionAccess_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagooglesecretmanagersecretversionaccess.DataGoogleSecretManagerSecretVersionA
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSecretManagerSecretVersionAccess.DataGoogleSecretManagerSecretVersionAccess.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecretmanagersecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagersecretversionaccess"
 
 datagooglesecretmanagersecretversionaccess.DataGoogleSecretManagerSecretVersionAccess_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +348,7 @@ datagooglesecretmanagersecretversionaccess.DataGoogleSecretManagerSecretVersionA
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSecretManagerSecretVersionAccess.DataGoogleSecretManagerSecretVersionAccess.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecretmanagersecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagersecretversionaccess"
 
 datagooglesecretmanagersecretversionaccess.DataGoogleSecretManagerSecretVersionAccess_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -665,7 +665,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSecretManagerSecretVersionAccess.DataGoogleSecretManagerSecretVersionAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecretmanagersecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagersecretversionaccess"
 
 &datagooglesecretmanagersecretversionaccess.DataGoogleSecretManagerSecretVersionAccessConfig {
 	Connection: interface{},
