@@ -66,9 +66,12 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.hasResourceMove">HasResourceMove</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.putCondition">PutCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.resetCondition">ResetCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.resetId">ResetId</a></code> | *No description.* |
@@ -265,6 +268,12 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.hasResourceMove"></a>
+
+```go
+func HasResourceMove() interface{}
+```
+
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.importFrom"></a>
 
 ```go
@@ -295,6 +304,24 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 
 ---
 
+##### `MoveFromId` <a name="MoveFromId" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveFromId"></a>
+
+```go
+func MoveFromId(id *string)
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveFromId.parameter.id"></a>
+
+- *Type:* *string
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveTo"></a>
 
 ```go
@@ -316,6 +343,22 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 - *Type:* interface{}
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `MoveToId` <a name="MoveToId" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveToId"></a>
+
+```go
+func MoveToId(id *string)
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.moveToId.parameter.id"></a>
+
+- *Type:* *string
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
