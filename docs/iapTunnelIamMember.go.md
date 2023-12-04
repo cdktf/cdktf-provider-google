@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 iaptunneliammember.NewIapTunnelIamMember(scope Construct, id *string, config IapTunnelIamMemberConfig) IapTunnelIamMember
 ```
@@ -405,7 +405,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 iaptunneliammember.IapTunnelIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 iaptunneliammember.IapTunnelIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ iaptunneliammember.IapTunnelIamMember_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 iaptunneliammember.IapTunnelIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ iaptunneliammember.IapTunnelIamMember_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 iaptunneliammember.IapTunnelIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -815,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 &iaptunneliammember.IapTunnelIamMemberCondition {
 	Expression: *string,
@@ -875,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 &iaptunneliammember.IapTunnelIamMemberConfig {
 	Connection: interface{},
@@ -887,7 +887,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
 	Provisioners: *[]interface{},
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.iapTunnelIamMember.IapTunnelIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapTunnelIamMember.IapTunnelIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1054,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunneliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliammember"
 
 iaptunneliammember.NewIapTunnelIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapTunnelIamMemberConditionOutputReference
 ```
