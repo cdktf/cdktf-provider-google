@@ -4,12 +4,12 @@
 
 ### DataGooglePrivatecaCaPoolIamPolicy <a name="DataGooglePrivatecaCaPoolIamPolicy" id="@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy google_privateca_ca_pool_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy google_privateca_ca_pool_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprivatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprivatecacapooliampolicy"
 
 datagoogleprivatecacapooliampolicy.NewDataGooglePrivatecaCaPoolIamPolicy(scope Construct, id *string, config DataGooglePrivatecaCaPoolIamPolicyConfig) DataGooglePrivatecaCaPoolIamPolicy
 ```
@@ -288,7 +288,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprivatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprivatecacapooliampolicy"
 
 datagoogleprivatecacapooliampolicy.DataGooglePrivatecaCaPoolIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprivatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprivatecacapooliampolicy"
 
 datagoogleprivatecacapooliampolicy.DataGooglePrivatecaCaPoolIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagoogleprivatecacapooliampolicy.DataGooglePrivatecaCaPoolIamPolicy_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprivatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprivatecacapooliampolicy"
 
 datagoogleprivatecacapooliampolicy.DataGooglePrivatecaCaPoolIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +348,7 @@ datagoogleprivatecacapooliampolicy.DataGooglePrivatecaCaPoolIamPolicy_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprivatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprivatecacapooliampolicy"
 
 datagoogleprivatecacapooliampolicy.DataGooglePrivatecaCaPoolIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -377,7 +377,7 @@ The construct id used in the generated config for the DataGooglePrivatecaCaPoolI
 
 The id of the existing DataGooglePrivatecaCaPoolIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -665,7 +665,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprivatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprivatecacapooliampolicy"
 
 &datagoogleprivatecacapooliampolicy.DataGooglePrivatecaCaPoolIamPolicyConfig {
 	Connection: interface{},
@@ -693,10 +693,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprivateca
 | <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.caPool">CaPool</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#ca_pool DataGooglePrivatecaCaPoolIamPolicy#ca_pool}. |
-| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#id DataGooglePrivatecaCaPoolIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#location DataGooglePrivatecaCaPoolIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#project DataGooglePrivatecaCaPoolIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.caPool">CaPool</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#ca_pool DataGooglePrivatecaCaPoolIamPolicy#ca_pool}. |
+| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#id DataGooglePrivatecaCaPoolIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#location DataGooglePrivatecaCaPoolIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGooglePrivatecaCaPoolIamPolicy.DataGooglePrivatecaCaPoolIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#project DataGooglePrivatecaCaPoolIamPolicy#project}. |
 
 ---
 
@@ -778,7 +778,7 @@ CaPool *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#ca_pool DataGooglePrivatecaCaPoolIamPolicy#ca_pool}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#ca_pool DataGooglePrivatecaCaPoolIamPolicy#ca_pool}.
 
 ---
 
@@ -790,7 +790,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#id DataGooglePrivatecaCaPoolIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#id DataGooglePrivatecaCaPoolIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -805,7 +805,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#location DataGooglePrivatecaCaPoolIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#location DataGooglePrivatecaCaPoolIamPolicy#location}.
 
 ---
 
@@ -817,7 +817,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/privateca_ca_pool_iam_policy#project DataGooglePrivatecaCaPoolIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/privateca_ca_pool_iam_policy#project DataGooglePrivatecaCaPoolIamPolicy#project}.
 
 ---
 

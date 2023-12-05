@@ -4,12 +4,12 @@
 
 ### Cloudbuildv2ConnectionIamMember <a name="Cloudbuildv2ConnectionIamMember" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member google_cloudbuildv2_connection_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member google_cloudbuildv2_connection_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 cloudbuildv2connectioniammember.NewCloudbuildv2ConnectionIamMember(scope Construct, id *string, config Cloudbuildv2ConnectionIamMemberConfig) Cloudbuildv2ConnectionIamMember
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMember_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMember_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the Cloudbuildv2ConnectionIamM
 
 The id of the existing Cloudbuildv2ConnectionIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 &cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMemberCondition {
 	Expression: *string,
@@ -879,9 +879,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connect
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#expression Cloudbuildv2ConnectionIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#title Cloudbuildv2ConnectionIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#description Cloudbuildv2ConnectionIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#expression Cloudbuildv2ConnectionIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#title Cloudbuildv2ConnectionIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#description Cloudbuildv2ConnectionIamMember#description}. |
 
 ---
 
@@ -893,7 +893,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#expression Cloudbuildv2ConnectionIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#expression Cloudbuildv2ConnectionIamMember#expression}.
 
 ---
 
@@ -905,7 +905,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#title Cloudbuildv2ConnectionIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#title Cloudbuildv2ConnectionIamMember#title}.
 
 ---
 
@@ -917,7 +917,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#description Cloudbuildv2ConnectionIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#description Cloudbuildv2ConnectionIamMember#description}.
 
 ---
 
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 &cloudbuildv2connectioniammember.Cloudbuildv2ConnectionIamMemberConfig {
 	Connection: interface{},
@@ -939,7 +939,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connect
 	Member: *string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -957,13 +957,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connect
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#member Cloudbuildv2ConnectionIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#name Cloudbuildv2ConnectionIamMember#name}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#role Cloudbuildv2ConnectionIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#member Cloudbuildv2ConnectionIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#name Cloudbuildv2ConnectionIamMember#name}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#role Cloudbuildv2ConnectionIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberCondition">Cloudbuildv2ConnectionIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#id Cloudbuildv2ConnectionIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#location Cloudbuildv2ConnectionIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#project Cloudbuildv2ConnectionIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#id Cloudbuildv2ConnectionIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#location Cloudbuildv2ConnectionIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#project Cloudbuildv2ConnectionIamMember#project}. |
 
 ---
 
@@ -1045,7 +1045,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#member Cloudbuildv2ConnectionIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#member Cloudbuildv2ConnectionIamMember#member}.
 
 ---
 
@@ -1057,7 +1057,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#name Cloudbuildv2ConnectionIamMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#name Cloudbuildv2ConnectionIamMember#name}.
 
 ---
 
@@ -1069,7 +1069,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#role Cloudbuildv2ConnectionIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#role Cloudbuildv2ConnectionIamMember#role}.
 
 ---
 
@@ -1083,7 +1083,7 @@ Condition Cloudbuildv2ConnectionIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#condition Cloudbuildv2ConnectionIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#condition Cloudbuildv2ConnectionIamMember#condition}
 
 ---
 
@@ -1095,7 +1095,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#id Cloudbuildv2ConnectionIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#id Cloudbuildv2ConnectionIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1110,7 +1110,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#location Cloudbuildv2ConnectionIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#location Cloudbuildv2ConnectionIamMember#location}.
 
 ---
 
@@ -1122,7 +1122,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuildv2_connection_iam_member#project Cloudbuildv2ConnectionIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuildv2_connection_iam_member#project Cloudbuildv2ConnectionIamMember#project}.
 
 ---
 
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2ConnectionIamMember.Cloudbuildv2ConnectionIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildv2connectioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connectioniammember"
 
 cloudbuildv2connectioniammember.NewCloudbuildv2ConnectionIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionIamMemberConditionOutputReference
 ```

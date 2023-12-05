@@ -4,12 +4,12 @@
 
 ### PrivatecaCaPoolIamMember <a name="PrivatecaCaPoolIamMember" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member google_privateca_ca_pool_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member google_privateca_ca_pool_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 privatecacapooliammember.NewPrivatecaCaPoolIamMember(scope Construct, id *string, config PrivatecaCaPoolIamMemberConfig) PrivatecaCaPoolIamMember
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 privatecacapooliammember.PrivatecaCaPoolIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 privatecacapooliammember.PrivatecaCaPoolIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ privatecacapooliammember.PrivatecaCaPoolIamMember_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 privatecacapooliammember.PrivatecaCaPoolIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ privatecacapooliammember.PrivatecaCaPoolIamMember_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 privatecacapooliammember.PrivatecaCaPoolIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the PrivatecaCaPoolIamMember t
 
 The id of the existing PrivatecaCaPoolIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 &privatecacapooliammember.PrivatecaCaPoolIamMemberCondition {
 	Expression: *string,
@@ -879,9 +879,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliamm
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#expression PrivatecaCaPoolIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#title PrivatecaCaPoolIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#description PrivatecaCaPoolIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#expression PrivatecaCaPoolIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#title PrivatecaCaPoolIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#description PrivatecaCaPoolIamMember#description}. |
 
 ---
 
@@ -893,7 +893,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#expression PrivatecaCaPoolIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#expression PrivatecaCaPoolIamMember#expression}.
 
 ---
 
@@ -905,7 +905,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#title PrivatecaCaPoolIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#title PrivatecaCaPoolIamMember#title}.
 
 ---
 
@@ -917,7 +917,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#description PrivatecaCaPoolIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#description PrivatecaCaPoolIamMember#description}.
 
 ---
 
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 &privatecacapooliammember.PrivatecaCaPoolIamMemberConfig {
 	Connection: interface{},
@@ -939,7 +939,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliamm
 	CaPool: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -957,13 +957,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliamm
 | <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.caPool">CaPool</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#ca_pool PrivatecaCaPoolIamMember#ca_pool}. |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#member PrivatecaCaPoolIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#role PrivatecaCaPoolIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.caPool">CaPool</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#ca_pool PrivatecaCaPoolIamMember#ca_pool}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#member PrivatecaCaPoolIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#role PrivatecaCaPoolIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberCondition">PrivatecaCaPoolIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#id PrivatecaCaPoolIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#location PrivatecaCaPoolIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#project PrivatecaCaPoolIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#id PrivatecaCaPoolIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#location PrivatecaCaPoolIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#project PrivatecaCaPoolIamMember#project}. |
 
 ---
 
@@ -1045,7 +1045,7 @@ CaPool *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#ca_pool PrivatecaCaPoolIamMember#ca_pool}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#ca_pool PrivatecaCaPoolIamMember#ca_pool}.
 
 ---
 
@@ -1057,7 +1057,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#member PrivatecaCaPoolIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#member PrivatecaCaPoolIamMember#member}.
 
 ---
 
@@ -1069,7 +1069,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#role PrivatecaCaPoolIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#role PrivatecaCaPoolIamMember#role}.
 
 ---
 
@@ -1083,7 +1083,7 @@ Condition PrivatecaCaPoolIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#condition PrivatecaCaPoolIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#condition PrivatecaCaPoolIamMember#condition}
 
 ---
 
@@ -1095,7 +1095,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#id PrivatecaCaPoolIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#id PrivatecaCaPoolIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1110,7 +1110,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#location PrivatecaCaPoolIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#location PrivatecaCaPoolIamMember#location}.
 
 ---
 
@@ -1122,7 +1122,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/privateca_ca_pool_iam_member#project PrivatecaCaPoolIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/privateca_ca_pool_iam_member#project PrivatecaCaPoolIamMember#project}.
 
 ---
 
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privatecaCaPoolIamMember.PrivatecaCaPoolIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/privatecacapooliammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliammember"
 
 privatecacapooliammember.NewPrivatecaCaPoolIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivatecaCaPoolIamMemberConditionOutputReference
 ```

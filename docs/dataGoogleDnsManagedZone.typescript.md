@@ -4,7 +4,7 @@
 
 ### DataGoogleDnsManagedZone <a name="DataGoogleDnsManagedZone" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.Initializer"></a>
 
@@ -363,7 +363,7 @@ The construct id used in the generated config for the DataGoogleDnsManagedZone t
 
 The id of the existing DataGoogleDnsManagedZone that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/dns_managed_zone#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/dns_managed_zone#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -752,7 +752,7 @@ public readonly name: string;
 
 A unique name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
 
 ---
 
@@ -766,7 +766,7 @@ public readonly project: string;
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
 
 ---
 

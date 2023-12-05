@@ -4,7 +4,7 @@
 
 ### DialogflowCxPage <a name="DialogflowCxPage" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page google_dialogflow_cx_page}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page google_dialogflow_cx_page}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer"></a>
 
@@ -608,7 +608,7 @@ The construct id used in the generated config for the DialogflowCxPage to import
 
 The id of the existing DialogflowCxPage that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1084,7 +1084,7 @@ public readonly dtmfSettings: DialogflowCxPageAdvancedSettingsDtmfSettings;
 
 dtmf_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
 
 ---
 
@@ -1120,7 +1120,7 @@ If true, incoming audio is processed for DTMF (dual tone multi frequency) events
 
 For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
 
 ---
 
@@ -1134,7 +1134,7 @@ public readonly finishDigit: string;
 
 The digit that terminates a DTMF digit sequence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
 
 ---
 
@@ -1148,7 +1148,7 @@ public readonly maxDigits: number;
 
 Max length of DTMF digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
 
 ---
 
@@ -1178,7 +1178,7 @@ const dialogflowCxPageConfig: dialogflowCxPage.DialogflowCxPageConfig = { ... }
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.entryFulfillment">entryFulfillment</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment">DialogflowCxPageEntryFulfillment</a></code> | entry_fulfillment block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.eventHandlers">eventHandlers</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers">DialogflowCxPageEventHandlers</a>[]</code> | event_handlers block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.form">form</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm">DialogflowCxPageForm</a></code> | form block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.languageCode">languageCode</a></code> | <code>string</code> | The language of the following fields in page:. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.parent">parent</a></code> | <code>string</code> | The flow to create a page for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts">DialogflowCxPageTimeouts</a></code> | timeouts block. |
@@ -1267,7 +1267,7 @@ public readonly displayName: string;
 
 The human-readable name of the page, unique within the agent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
 
 ---
 
@@ -1281,7 +1281,7 @@ public readonly advancedSettings: DialogflowCxPageAdvancedSettings;
 
 advanced_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
 
 ---
 
@@ -1295,7 +1295,7 @@ public readonly entryFulfillment: DialogflowCxPageEntryFulfillment;
 
 entry_fulfillment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#entry_fulfillment DialogflowCxPage#entry_fulfillment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#entry_fulfillment DialogflowCxPage#entry_fulfillment}
 
 ---
 
@@ -1309,7 +1309,7 @@ public readonly eventHandlers: IResolvable | DialogflowCxPageEventHandlers[];
 
 event_handlers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#event_handlers DialogflowCxPage#event_handlers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#event_handlers DialogflowCxPage#event_handlers}
 
 ---
 
@@ -1323,7 +1323,7 @@ public readonly form: DialogflowCxPageForm;
 
 form block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#form DialogflowCxPage#form}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#form DialogflowCxPage#form}
 
 ---
 
@@ -1335,7 +1335,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1364,7 +1364,7 @@ Page.transition_routes.trigger_fulfillment.messages
 Page.transition_routes.trigger_fulfillment.conditional_cases
 If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#language_code DialogflowCxPage#language_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#language_code DialogflowCxPage#language_code}
 
 ---
 
@@ -1378,7 +1378,7 @@ public readonly parent: string;
 
 The flow to create a page for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#parent DialogflowCxPage#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#parent DialogflowCxPage#parent}
 
 ---
 
@@ -1392,7 +1392,7 @@ public readonly timeouts: DialogflowCxPageTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#timeouts DialogflowCxPage#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#timeouts DialogflowCxPage#timeouts}
 
 ---
 
@@ -1411,7 +1411,7 @@ If multiple transition routes within a page scope refer to the same intent, then
 If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence.
 Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#transition_route_groups DialogflowCxPage#transition_route_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#transition_route_groups DialogflowCxPage#transition_route_groups}
 
 ---
 
@@ -1425,7 +1425,7 @@ public readonly transitionRoutes: IResolvable | DialogflowCxPageTransitionRoutes
 
 transition_routes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#transition_routes DialogflowCxPage#transition_routes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#transition_routes DialogflowCxPage#transition_routes}
 
 ---
 
@@ -1462,7 +1462,7 @@ public readonly conditionalCases: IResolvable | DialogflowCxPageEntryFulfillment
 
 conditional_cases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
 
 ---
 
@@ -1476,7 +1476,7 @@ public readonly messages: IResolvable | DialogflowCxPageEntryFulfillmentMessages
 
 messages block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
 
 ---
 
@@ -1492,7 +1492,7 @@ Whether Dialogflow should return currently queued fulfillment response messages 
 
 If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
 
 ---
 
@@ -1506,7 +1506,7 @@ public readonly setParameterActions: IResolvable | DialogflowCxPageEntryFulfillm
 
 set_parameter_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
 
 ---
 
@@ -1522,7 +1522,7 @@ The tag used by the webhook to identify which fulfillment is being called.
 
 This field is required if webhook is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
 
 ---
 
@@ -1536,7 +1536,7 @@ public readonly webhook: string;
 
 The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
 
 ---
 
@@ -1571,7 +1571,7 @@ A JSON encoded list of cascading if-else conditions.
 Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
 See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
 
 ---
 
@@ -1612,7 +1612,7 @@ The channel which the response is associated with.
 
 Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
 
 ---
 
@@ -1626,7 +1626,7 @@ public readonly conversationSuccess: DialogflowCxPageEntryFulfillmentMessagesCon
 
 conversation_success block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
 
 ---
 
@@ -1640,7 +1640,7 @@ public readonly liveAgentHandoff: DialogflowCxPageEntryFulfillmentMessagesLiveAg
 
 live_agent_handoff block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
 
 ---
 
@@ -1654,7 +1654,7 @@ public readonly outputAudioText: DialogflowCxPageEntryFulfillmentMessagesOutputA
 
 output_audio_text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
 
 ---
 
@@ -1668,7 +1668,7 @@ public readonly payload: string;
 
 A custom, platform-specific payload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
 
 ---
 
@@ -1682,7 +1682,7 @@ public readonly playAudio: DialogflowCxPageEntryFulfillmentMessagesPlayAudio;
 
 play_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
 
 ---
 
@@ -1696,7 +1696,7 @@ public readonly telephonyTransferCall: DialogflowCxPageEntryFulfillmentMessagesT
 
 telephony_transfer_call block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
 
 ---
 
@@ -1710,7 +1710,7 @@ public readonly text: DialogflowCxPageEntryFulfillmentMessagesText;
 
 text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -1742,7 +1742,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -1774,7 +1774,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -1807,7 +1807,7 @@ public readonly ssml: string;
 
 The SSML text to be synthesized. For more information, see SSML.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
 
 ---
 
@@ -1821,7 +1821,7 @@ public readonly text: string;
 
 The raw text to be synthesized.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -1855,7 +1855,7 @@ URI of the audio clip.
 
 Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
 
 ---
 
@@ -1887,7 +1887,7 @@ public readonly phoneNumber: string;
 
 Transfer the call to a phone number in E.164 format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
 
 ---
 
@@ -1919,7 +1919,7 @@ public readonly text: string[];
 
 A collection of text responses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -1952,7 +1952,7 @@ public readonly parameter: string;
 
 Display name of the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
 
 ---
 
@@ -1966,7 +1966,7 @@ public readonly value: string;
 
 The new JSON-encoded value of the parameter. A null value clears the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
 
 ---
 
@@ -2001,7 +2001,7 @@ public readonly event: string;
 
 The name of the event to handle.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
 
 ---
 
@@ -2015,7 +2015,7 @@ public readonly targetFlow: string;
 
 The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
 
 ---
 
@@ -2029,7 +2029,7 @@ public readonly targetPage: string;
 
 The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
 
 ---
 
@@ -2043,7 +2043,7 @@ public readonly triggerFulfillment: DialogflowCxPageEventHandlersTriggerFulfillm
 
 trigger_fulfillment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
 
 ---
 
@@ -2080,7 +2080,7 @@ public readonly conditionalCases: IResolvable | DialogflowCxPageEventHandlersTri
 
 conditional_cases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
 
 ---
 
@@ -2094,7 +2094,7 @@ public readonly messages: IResolvable | DialogflowCxPageEventHandlersTriggerFulf
 
 messages block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
 
 ---
 
@@ -2110,7 +2110,7 @@ Whether Dialogflow should return currently queued fulfillment response messages 
 
 If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
 
 ---
 
@@ -2124,7 +2124,7 @@ public readonly setParameterActions: IResolvable | DialogflowCxPageEventHandlers
 
 set_parameter_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
 
 ---
 
@@ -2140,7 +2140,7 @@ The tag used by the webhook to identify which fulfillment is being called.
 
 This field is required if webhook is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
 
 ---
 
@@ -2154,7 +2154,7 @@ public readonly webhook: string;
 
 The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
 
 ---
 
@@ -2189,7 +2189,7 @@ A JSON encoded list of cascading if-else conditions.
 Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
 See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
 
 ---
 
@@ -2230,7 +2230,7 @@ The channel which the response is associated with.
 
 Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
 
 ---
 
@@ -2244,7 +2244,7 @@ public readonly conversationSuccess: DialogflowCxPageEventHandlersTriggerFulfill
 
 conversation_success block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
 
 ---
 
@@ -2258,7 +2258,7 @@ public readonly liveAgentHandoff: DialogflowCxPageEventHandlersTriggerFulfillmen
 
 live_agent_handoff block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
 
 ---
 
@@ -2272,7 +2272,7 @@ public readonly outputAudioText: DialogflowCxPageEventHandlersTriggerFulfillment
 
 output_audio_text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
 
 ---
 
@@ -2286,7 +2286,7 @@ public readonly payload: string;
 
 A custom, platform-specific payload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
 
 ---
 
@@ -2300,7 +2300,7 @@ public readonly playAudio: DialogflowCxPageEventHandlersTriggerFulfillmentMessag
 
 play_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
 
 ---
 
@@ -2314,7 +2314,7 @@ public readonly telephonyTransferCall: DialogflowCxPageEventHandlersTriggerFulfi
 
 telephony_transfer_call block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
 
 ---
 
@@ -2328,7 +2328,7 @@ public readonly text: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTex
 
 text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -2360,7 +2360,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -2392,7 +2392,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -2425,7 +2425,7 @@ public readonly ssml: string;
 
 The SSML text to be synthesized. For more information, see SSML.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
 
 ---
 
@@ -2439,7 +2439,7 @@ public readonly text: string;
 
 The raw text to be synthesized.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -2473,7 +2473,7 @@ URI of the audio clip.
 
 Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
 
 ---
 
@@ -2505,7 +2505,7 @@ public readonly phoneNumber: string;
 
 Transfer the call to a phone number in E.164 format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
 
 ---
 
@@ -2537,7 +2537,7 @@ public readonly text: string[];
 
 A collection of text responses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -2570,7 +2570,7 @@ public readonly parameter: string;
 
 Display name of the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
 
 ---
 
@@ -2584,7 +2584,7 @@ public readonly value: string;
 
 The new JSON-encoded value of the parameter. A null value clears the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
 
 ---
 
@@ -2616,7 +2616,7 @@ public readonly parameters: IResolvable | DialogflowCxPageFormParameters[];
 
 parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#parameters DialogflowCxPage#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#parameters DialogflowCxPage#parameters}
 
 ---
 
@@ -2655,7 +2655,7 @@ public readonly advancedSettings: DialogflowCxPageFormParametersAdvancedSettings
 
 advanced_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
 
 ---
 
@@ -2669,7 +2669,7 @@ public readonly defaultValue: string;
 
 The default value of an optional parameter. If the parameter is required, the default value will be ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#default_value DialogflowCxPage#default_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#default_value DialogflowCxPage#default_value}
 
 ---
 
@@ -2683,7 +2683,7 @@ public readonly displayName: string;
 
 The human-readable name of the parameter, unique within the form.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
 
 ---
 
@@ -2699,7 +2699,7 @@ The entity type of the parameter.
 
 Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#entity_type DialogflowCxPage#entity_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#entity_type DialogflowCxPage#entity_type}
 
 ---
 
@@ -2713,7 +2713,7 @@ public readonly fillBehavior: DialogflowCxPageFormParametersFillBehavior;
 
 fill_behavior block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#fill_behavior DialogflowCxPage#fill_behavior}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#fill_behavior DialogflowCxPage#fill_behavior}
 
 ---
 
@@ -2727,7 +2727,7 @@ public readonly isList: boolean | IResolvable;
 
 Indicates whether the parameter represents a list of values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#is_list DialogflowCxPage#is_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#is_list DialogflowCxPage#is_list}
 
 ---
 
@@ -2743,7 +2743,7 @@ Indicates whether the parameter content should be redacted in log.
 
 If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#redact DialogflowCxPage#redact}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#redact DialogflowCxPage#redact}
 
 ---
 
@@ -2760,7 +2760,7 @@ Indicates whether the parameter is required.
 Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
 Required parameters must be filled before form filling concludes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#required DialogflowCxPage#required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#required DialogflowCxPage#required}
 
 ---
 
@@ -2792,7 +2792,7 @@ public readonly dtmfSettings: DialogflowCxPageFormParametersAdvancedSettingsDtmf
 
 dtmf_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
 
 ---
 
@@ -2828,7 +2828,7 @@ If true, incoming audio is processed for DTMF (dual tone multi frequency) events
 
 For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
 
 ---
 
@@ -2842,7 +2842,7 @@ public readonly finishDigit: string;
 
 The digit that terminates a DTMF digit sequence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
 
 ---
 
@@ -2856,7 +2856,7 @@ public readonly maxDigits: number;
 
 Max length of DTMF digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
 
 ---
 
@@ -2889,7 +2889,7 @@ public readonly initialPromptFulfillment: DialogflowCxPageFormParametersFillBeha
 
 initial_prompt_fulfillment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#initial_prompt_fulfillment DialogflowCxPage#initial_prompt_fulfillment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#initial_prompt_fulfillment DialogflowCxPage#initial_prompt_fulfillment}
 
 ---
 
@@ -2903,7 +2903,7 @@ public readonly repromptEventHandlers: IResolvable | DialogflowCxPageFormParamet
 
 reprompt_event_handlers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#reprompt_event_handlers DialogflowCxPage#reprompt_event_handlers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#reprompt_event_handlers DialogflowCxPage#reprompt_event_handlers}
 
 ---
 
@@ -2940,7 +2940,7 @@ public readonly conditionalCases: IResolvable | DialogflowCxPageFormParametersFi
 
 conditional_cases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
 
 ---
 
@@ -2954,7 +2954,7 @@ public readonly messages: IResolvable | DialogflowCxPageFormParametersFillBehavi
 
 messages block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
 
 ---
 
@@ -2970,7 +2970,7 @@ Whether Dialogflow should return currently queued fulfillment response messages 
 
 If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
 
 ---
 
@@ -2984,7 +2984,7 @@ public readonly setParameterActions: IResolvable | DialogflowCxPageFormParameter
 
 set_parameter_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
 
 ---
 
@@ -3000,7 +3000,7 @@ The tag used by the webhook to identify which fulfillment is being called.
 
 This field is required if webhook is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
 
 ---
 
@@ -3014,7 +3014,7 @@ public readonly webhook: string;
 
 The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
 
 ---
 
@@ -3049,7 +3049,7 @@ A JSON encoded list of cascading if-else conditions.
 Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
 See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
 
 ---
 
@@ -3090,7 +3090,7 @@ The channel which the response is associated with.
 
 Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
 
 ---
 
@@ -3104,7 +3104,7 @@ public readonly conversationSuccess: DialogflowCxPageFormParametersFillBehaviorI
 
 conversation_success block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
 
 ---
 
@@ -3118,7 +3118,7 @@ public readonly liveAgentHandoff: DialogflowCxPageFormParametersFillBehaviorInit
 
 live_agent_handoff block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
 
 ---
 
@@ -3132,7 +3132,7 @@ public readonly outputAudioText: DialogflowCxPageFormParametersFillBehaviorIniti
 
 output_audio_text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
 
 ---
 
@@ -3146,7 +3146,7 @@ public readonly payload: string;
 
 A custom, platform-specific payload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
 
 ---
 
@@ -3160,7 +3160,7 @@ public readonly playAudio: DialogflowCxPageFormParametersFillBehaviorInitialProm
 
 play_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
 
 ---
 
@@ -3174,7 +3174,7 @@ public readonly telephonyTransferCall: DialogflowCxPageFormParametersFillBehavio
 
 telephony_transfer_call block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
 
 ---
 
@@ -3188,7 +3188,7 @@ public readonly text: DialogflowCxPageFormParametersFillBehaviorInitialPromptFul
 
 text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -3220,7 +3220,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -3252,7 +3252,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -3285,7 +3285,7 @@ public readonly ssml: string;
 
 The SSML text to be synthesized. For more information, see SSML.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
 
 ---
 
@@ -3299,7 +3299,7 @@ public readonly text: string;
 
 The raw text to be synthesized.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -3333,7 +3333,7 @@ URI of the audio clip.
 
 Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
 
 ---
 
@@ -3365,7 +3365,7 @@ public readonly phoneNumber: string;
 
 Transfer the call to a phone number in E.164 format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
 
 ---
 
@@ -3397,7 +3397,7 @@ public readonly text: string[];
 
 A collection of text responses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -3430,7 +3430,7 @@ public readonly parameter: string;
 
 Display name of the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
 
 ---
 
@@ -3444,7 +3444,7 @@ public readonly value: string;
 
 The new JSON-encoded value of the parameter. A null value clears the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
 
 ---
 
@@ -3479,7 +3479,7 @@ public readonly event: string;
 
 The name of the event to handle.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
 
 ---
 
@@ -3493,7 +3493,7 @@ public readonly targetFlow: string;
 
 The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
 
 ---
 
@@ -3507,7 +3507,7 @@ public readonly targetPage: string;
 
 The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
 
 ---
 
@@ -3521,7 +3521,7 @@ public readonly triggerFulfillment: DialogflowCxPageFormParametersFillBehaviorRe
 
 trigger_fulfillment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
 
 ---
 
@@ -3558,7 +3558,7 @@ public readonly conditionalCases: IResolvable | DialogflowCxPageFormParametersFi
 
 conditional_cases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
 
 ---
 
@@ -3572,7 +3572,7 @@ public readonly messages: IResolvable | DialogflowCxPageFormParametersFillBehavi
 
 messages block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
 
 ---
 
@@ -3588,7 +3588,7 @@ Whether Dialogflow should return currently queued fulfillment response messages 
 
 If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
 
 ---
 
@@ -3602,7 +3602,7 @@ public readonly setParameterActions: IResolvable | DialogflowCxPageFormParameter
 
 set_parameter_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
 
 ---
 
@@ -3618,7 +3618,7 @@ The tag used by the webhook to identify which fulfillment is being called.
 
 This field is required if webhook is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
 
 ---
 
@@ -3632,7 +3632,7 @@ public readonly webhook: string;
 
 The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
 
 ---
 
@@ -3667,7 +3667,7 @@ A JSON encoded list of cascading if-else conditions.
 Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
 See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
 
 ---
 
@@ -3708,7 +3708,7 @@ The channel which the response is associated with.
 
 Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
 
 ---
 
@@ -3722,7 +3722,7 @@ public readonly conversationSuccess: DialogflowCxPageFormParametersFillBehaviorR
 
 conversation_success block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
 
 ---
 
@@ -3736,7 +3736,7 @@ public readonly liveAgentHandoff: DialogflowCxPageFormParametersFillBehaviorRepr
 
 live_agent_handoff block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
 
 ---
 
@@ -3750,7 +3750,7 @@ public readonly outputAudioText: DialogflowCxPageFormParametersFillBehaviorRepro
 
 output_audio_text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
 
 ---
 
@@ -3764,7 +3764,7 @@ public readonly payload: string;
 
 A custom, platform-specific payload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
 
 ---
 
@@ -3778,7 +3778,7 @@ public readonly playAudio: DialogflowCxPageFormParametersFillBehaviorRepromptEve
 
 play_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
 
 ---
 
@@ -3792,7 +3792,7 @@ public readonly telephonyTransferCall: DialogflowCxPageFormParametersFillBehavio
 
 telephony_transfer_call block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
 
 ---
 
@@ -3806,7 +3806,7 @@ public readonly text: DialogflowCxPageFormParametersFillBehaviorRepromptEventHan
 
 text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -3838,7 +3838,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -3870,7 +3870,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -3903,7 +3903,7 @@ public readonly ssml: string;
 
 The SSML text to be synthesized. For more information, see SSML.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
 
 ---
 
@@ -3917,7 +3917,7 @@ public readonly text: string;
 
 The raw text to be synthesized.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -3951,7 +3951,7 @@ URI of the audio clip.
 
 Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
 
 ---
 
@@ -3983,7 +3983,7 @@ public readonly phoneNumber: string;
 
 Transfer the call to a phone number in E.164 format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
 
 ---
 
@@ -4015,7 +4015,7 @@ public readonly text: string[];
 
 A collection of text responses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -4048,7 +4048,7 @@ public readonly parameter: string;
 
 Display name of the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
 
 ---
 
@@ -4062,7 +4062,7 @@ public readonly value: string;
 
 The new JSON-encoded value of the parameter. A null value clears the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
 
 ---
 
@@ -4080,9 +4080,9 @@ const dialogflowCxPageTimeouts: dialogflowCxPage.DialogflowCxPageTimeouts = { ..
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#create DialogflowCxPage#create}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#delete DialogflowCxPage#delete}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#update DialogflowCxPage#update}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#create DialogflowCxPage#create}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#delete DialogflowCxPage#delete}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#update DialogflowCxPage#update}. |
 
 ---
 
@@ -4094,7 +4094,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#create DialogflowCxPage#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#create DialogflowCxPage#create}.
 
 ---
 
@@ -4106,7 +4106,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#delete DialogflowCxPage#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#delete DialogflowCxPage#delete}.
 
 ---
 
@@ -4118,7 +4118,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#update DialogflowCxPage#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#update DialogflowCxPage#update}.
 
 ---
 
@@ -4156,7 +4156,7 @@ The condition to evaluate against form parameters or session parameters.
 
 At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#condition DialogflowCxPage#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#condition DialogflowCxPage#condition}
 
 ---
 
@@ -4172,7 +4172,7 @@ The unique identifier of an Intent.
 
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#intent DialogflowCxPage#intent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#intent DialogflowCxPage#intent}
 
 ---
 
@@ -4186,7 +4186,7 @@ public readonly targetFlow: string;
 
 The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
 
 ---
 
@@ -4200,7 +4200,7 @@ public readonly targetPage: string;
 
 The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
 
 ---
 
@@ -4214,7 +4214,7 @@ public readonly triggerFulfillment: DialogflowCxPageTransitionRoutesTriggerFulfi
 
 trigger_fulfillment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
 
 ---
 
@@ -4251,7 +4251,7 @@ public readonly conditionalCases: IResolvable | DialogflowCxPageTransitionRoutes
 
 conditional_cases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
 
 ---
 
@@ -4265,7 +4265,7 @@ public readonly messages: IResolvable | DialogflowCxPageTransitionRoutesTriggerF
 
 messages block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
 
 ---
 
@@ -4281,7 +4281,7 @@ Whether Dialogflow should return currently queued fulfillment response messages 
 
 If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
 
 ---
 
@@ -4295,7 +4295,7 @@ public readonly setParameterActions: IResolvable | DialogflowCxPageTransitionRou
 
 set_parameter_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
 
 ---
 
@@ -4311,7 +4311,7 @@ The tag used by the webhook to identify which fulfillment is being called.
 
 This field is required if webhook is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
 
 ---
 
@@ -4325,7 +4325,7 @@ public readonly webhook: string;
 
 The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
 
 ---
 
@@ -4360,7 +4360,7 @@ A JSON encoded list of cascading if-else conditions.
 Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
 See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
 
 ---
 
@@ -4401,7 +4401,7 @@ The channel which the response is associated with.
 
 Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
 
 ---
 
@@ -4415,7 +4415,7 @@ public readonly conversationSuccess: DialogflowCxPageTransitionRoutesTriggerFulf
 
 conversation_success block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
 
 ---
 
@@ -4429,7 +4429,7 @@ public readonly liveAgentHandoff: DialogflowCxPageTransitionRoutesTriggerFulfill
 
 live_agent_handoff block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
 
 ---
 
@@ -4443,7 +4443,7 @@ public readonly outputAudioText: DialogflowCxPageTransitionRoutesTriggerFulfillm
 
 output_audio_text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
 
 ---
 
@@ -4457,7 +4457,7 @@ public readonly payload: string;
 
 A custom, platform-specific payload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
 
 ---
 
@@ -4471,7 +4471,7 @@ public readonly playAudio: DialogflowCxPageTransitionRoutesTriggerFulfillmentMes
 
 play_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
 
 ---
 
@@ -4485,7 +4485,7 @@ public readonly telephonyTransferCall: DialogflowCxPageTransitionRoutesTriggerFu
 
 telephony_transfer_call block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
 
 ---
 
@@ -4499,7 +4499,7 @@ public readonly text: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages
 
 text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -4531,7 +4531,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -4563,7 +4563,7 @@ public readonly metadata: string;
 
 Custom metadata. Dialogflow doesn't impose any structure on this.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
 
 ---
 
@@ -4596,7 +4596,7 @@ public readonly ssml: string;
 
 The SSML text to be synthesized. For more information, see SSML.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
 
 ---
 
@@ -4610,7 +4610,7 @@ public readonly text: string;
 
 The raw text to be synthesized.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -4644,7 +4644,7 @@ URI of the audio clip.
 
 Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
 
 ---
 
@@ -4676,7 +4676,7 @@ public readonly phoneNumber: string;
 
 Transfer the call to a phone number in E.164 format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
 
 ---
 
@@ -4708,7 +4708,7 @@ public readonly text: string[];
 
 A collection of text responses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
 
 ---
 
@@ -4741,7 +4741,7 @@ public readonly parameter: string;
 
 Display name of the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
 
 ---
 
@@ -4755,7 +4755,7 @@ public readonly value: string;
 
 The new JSON-encoded value of the parameter. A null value clears the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
 
 ---
 

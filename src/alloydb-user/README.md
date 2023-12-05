@@ -1,3 +1,3 @@
 # `google_alloydb_user`
 
-Refer to the Terraform Registory for docs: [`google_alloydb_user`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/alloydb_user).
+Refer to the Terraform Registory for docs: [`google_alloydb_user`](https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/alloydb_user).

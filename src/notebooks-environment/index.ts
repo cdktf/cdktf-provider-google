@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment
+// https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface NotebooksEnvironmentConfig extends cdktf.TerraformMetaArguments
   /**
   * A brief description of this environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#description NotebooksEnvironment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#description NotebooksEnvironment#description}
   */
   readonly description?: string;
   /**
   * Display name of this environment for the UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#display_name NotebooksEnvironment#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#display_name NotebooksEnvironment#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#id NotebooksEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#id NotebooksEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,43 +29,43 @@ export interface NotebooksEnvironmentConfig extends cdktf.TerraformMetaArguments
   /**
   * A reference to the zone where the machine resides.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#location NotebooksEnvironment#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#location NotebooksEnvironment#location}
   */
   readonly location: string;
   /**
   * The name specified for the Environment instance.
   * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#name NotebooksEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#name NotebooksEnvironment#name}
   */
   readonly name: string;
   /**
   * Path to a Bash script that automatically runs after a notebook instance fully boots up.
   * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#post_startup_script NotebooksEnvironment#post_startup_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#post_startup_script NotebooksEnvironment#post_startup_script}
   */
   readonly postStartupScript?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
   */
   readonly project?: string;
   /**
   * container_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#container_image NotebooksEnvironment#container_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#container_image NotebooksEnvironment#container_image}
   */
   readonly containerImage?: NotebooksEnvironmentContainerImage;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#timeouts NotebooksEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#timeouts NotebooksEnvironment#timeouts}
   */
   readonly timeouts?: NotebooksEnvironmentTimeouts;
   /**
   * vm_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#vm_image NotebooksEnvironment#vm_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#vm_image NotebooksEnvironment#vm_image}
   */
   readonly vmImage?: NotebooksEnvironmentVmImage;
 }
@@ -79,13 +74,13 @@ export interface NotebooksEnvironmentContainerImage {
   * The path to the container image repository.
   * For example: gcr.io/{project_id}/{imageName}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#repository NotebooksEnvironment#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#repository NotebooksEnvironment#repository}
   */
   readonly repository: string;
   /**
   * The tag of the container image. If not specified, this defaults to the latest tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#tag NotebooksEnvironment#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#tag NotebooksEnvironment#tag}
   */
   readonly tag?: string;
 }
@@ -170,15 +165,15 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
 }
 export interface NotebooksEnvironmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#create NotebooksEnvironment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#create NotebooksEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#delete NotebooksEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#delete NotebooksEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#update NotebooksEnvironment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#update NotebooksEnvironment#update}
   */
   readonly update?: string;
 }
@@ -301,20 +296,20 @@ export interface NotebooksEnvironmentVmImage {
   /**
   * Use this VM image family to find the image; the newest image in this family will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#image_family NotebooksEnvironment#image_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#image_family NotebooksEnvironment#image_family}
   */
   readonly imageFamily?: string;
   /**
   * Use VM image name to find the image.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#image_name NotebooksEnvironment#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#image_name NotebooksEnvironment#image_name}
   */
   readonly imageName?: string;
   /**
   * The name of the Google Cloud project that this VM image belongs to.
   * Format: projects/{project_id}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
   */
   readonly project: string;
 }
@@ -422,7 +417,7 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment google_notebooks_environment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment google_notebooks_environment}
 */
 export class NotebooksEnvironment extends cdktf.TerraformResource {
 
@@ -438,7 +433,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NotebooksEnvironment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NotebooksEnvironment to import
-  * @param importFromId The id of the existing NotebooksEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NotebooksEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NotebooksEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -450,7 +445,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/notebooks_environment google_notebooks_environment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/notebooks_environment google_notebooks_environment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -461,7 +456,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.7.0',
+        providerVersion: '5.8.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

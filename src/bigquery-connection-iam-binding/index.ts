@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface BigqueryConnectionIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#connection_id BigqueryConnectionIamBinding#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#connection_id BigqueryConnectionIamBinding#connection_id}
   */
   readonly connectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#id BigqueryConnectionIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#id BigqueryConnectionIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#location BigqueryConnectionIamBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#location BigqueryConnectionIamBinding#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#members BigqueryConnectionIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#members BigqueryConnectionIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#project BigqueryConnectionIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#project BigqueryConnectionIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#role BigqueryConnectionIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#role BigqueryConnectionIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#condition BigqueryConnectionIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#condition BigqueryConnectionIamBinding#condition}
   */
   readonly condition?: BigqueryConnectionIamBindingCondition;
 }
 export interface BigqueryConnectionIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#description BigqueryConnectionIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#description BigqueryConnectionIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#expression BigqueryConnectionIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#expression BigqueryConnectionIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#title BigqueryConnectionIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#title BigqueryConnectionIamBinding#title}
   */
   readonly title: string;
 }
@@ -161,7 +156,7 @@ export class BigqueryConnectionIamBindingConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding google_bigquery_connection_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding google_bigquery_connection_iam_binding}
 */
 export class BigqueryConnectionIamBinding extends cdktf.TerraformResource {
 
@@ -177,7 +172,7 @@ export class BigqueryConnectionIamBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigqueryConnectionIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigqueryConnectionIamBinding to import
-  * @param importFromId The id of the existing BigqueryConnectionIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigqueryConnectionIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigqueryConnectionIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -189,7 +184,7 @@ export class BigqueryConnectionIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/bigquery_connection_iam_binding google_bigquery_connection_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/bigquery_connection_iam_binding google_bigquery_connection_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -200,7 +195,7 @@ export class BigqueryConnectionIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_connection_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.7.0',
+        providerVersion: '5.8.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
