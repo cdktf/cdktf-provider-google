@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingprojectexclusion"
 
 loggingprojectexclusion.NewLoggingProjectExclusion(scope Construct, id *string, config LoggingProjectExclusionConfig) LoggingProjectExclusion
 ```
@@ -399,7 +399,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingprojectexclusion"
 
 loggingprojectexclusion.LoggingProjectExclusion_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingprojectexclusion"
 
 loggingprojectexclusion.LoggingProjectExclusion_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ loggingprojectexclusion.LoggingProjectExclusion_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingprojectexclusion"
 
 loggingprojectexclusion.LoggingProjectExclusion_IsTerraformResource(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ loggingprojectexclusion.LoggingProjectExclusion_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingprojectexclusion"
 
 loggingprojectexclusion.LoggingProjectExclusion_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -820,7 +820,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/loggingprojectexclusion"
 
 &loggingprojectexclusion.LoggingProjectExclusionConfig {
 	Connection: interface{},
