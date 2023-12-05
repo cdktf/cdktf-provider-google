@@ -551,6 +551,7 @@ export * as loggingProjectExclusion from './logging-project-exclusion';
 export * as loggingProjectSink from './logging-project-sink';
 export * as lookerInstance from './looker-instance';
 export * as memcacheInstance from './memcache-instance';
+export * as migrationCenterGroup from './migration-center-group';
 export * as mlEngineModel from './ml-engine-model';
 export * as monitoringAlertPolicy from './monitoring-alert-policy';
 export * as monitoringCustomService from './monitoring-custom-service';
@@ -562,6 +563,7 @@ export * as monitoringNotificationChannel from './monitoring-notification-channe
 export * as monitoringService from './monitoring-service';
 export * as monitoringSlo from './monitoring-slo';
 export * as monitoringUptimeCheckConfig from './monitoring-uptime-check-config';
+export * as netappStoragePool from './netapp-storage-pool';
 export * as networkConnectivityHub from './network-connectivity-hub';
 export * as networkConnectivityPolicyBasedRoute from './network-connectivity-policy-based-route';
 export * as networkConnectivityServiceConnectionPolicy from './network-connectivity-service-connection-policy';
@@ -711,6 +713,9 @@ export * as vertexAiFeaturestoreEntitytypeFeature from './vertex-ai-featurestore
 export * as vertexAiIndex from './vertex-ai-index';
 export * as vertexAiIndexEndpoint from './vertex-ai-index-endpoint';
 export * as vertexAiTensorboard from './vertex-ai-tensorboard';
+export * as vmwareengineNetwork from './vmwareengine-network';
+export * as vmwareengineNetworkPeering from './vmwareengine-network-peering';
+export * as vmwareenginePrivateCloud from './vmwareengine-private-cloud';
 export * as vpcAccessConnector from './vpc-access-connector';
 export * as workflowsWorkflow from './workflows-workflow';
 export * as dataGoogleAccessApprovalFolderServiceAccount from './data-google-access-approval-folder-service-account';
@@ -937,6 +942,9 @@ export * as dataGoogleTagsTagValue from './data-google-tags-tag-value';
 export * as dataGoogleTagsTagValueIamPolicy from './data-google-tags-tag-value-iam-policy';
 export * as dataGoogleTpuTensorflowVersions from './data-google-tpu-tensorflow-versions';
 export * as dataGoogleVertexAiIndex from './data-google-vertex-ai-index';
+export * as dataGoogleVmwareengineNetwork from './data-google-vmwareengine-network';
+export * as dataGoogleVmwareengineNetworkPeering from './data-google-vmwareengine-network-peering';
+export * as dataGoogleVmwareenginePrivateCloud from './data-google-vmwareengine-private-cloud';
 export * as dataGoogleVpcAccessConnector from './data-google-vpc-access-connector';
 export * as provider from './provider';
 

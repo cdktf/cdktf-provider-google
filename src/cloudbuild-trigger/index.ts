@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger
+// https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,13 +15,13 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Human-readable description of the trigger.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#description CloudbuildTrigger#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#description CloudbuildTrigger#description}
   */
   readonly description?: string;
   /**
   * Whether the trigger is disabled or not. If true, the trigger will never result in a build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#disabled CloudbuildTrigger#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#disabled CloudbuildTrigger#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
@@ -29,17 +29,17 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   * Either a filename or build template must be provided. Set this only when using trigger_template or github.
   * When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#filename CloudbuildTrigger#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#filename CloudbuildTrigger#filename}
   */
   readonly filename?: string;
   /**
   * A Common Expression Language string. Used only with Pub/Sub and Webhook.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#filter CloudbuildTrigger#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#filter CloudbuildTrigger#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#id CloudbuildTrigger#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#id CloudbuildTrigger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -56,7 +56,7 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   * of the ignored_file globs. If the change has no files that are outside
   * of the ignoredFiles globs, then we do not trigger a build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#ignored_files CloudbuildTrigger#ignored_files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#ignored_files CloudbuildTrigger#ignored_files}
   */
   readonly ignoredFiles?: string[];
   /**
@@ -64,7 +64,7 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   * result.  Values can be INCLUDE_BUILD_LOGS_UNSPECIFIED or
   * INCLUDE_BUILD_LOGS_WITH_STATUS Possible values: ["INCLUDE_BUILD_LOGS_UNSPECIFIED", "INCLUDE_BUILD_LOGS_WITH_STATUS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#include_build_logs CloudbuildTrigger#include_build_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#include_build_logs CloudbuildTrigger#include_build_logs}
   */
   readonly includeBuildLogs?: string;
   /**
@@ -80,24 +80,24 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   * those files matches a includedFiles glob. If not, then we do not trigger
   * a build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#included_files CloudbuildTrigger#included_files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#included_files CloudbuildTrigger#included_files}
   */
   readonly includedFiles?: string[];
   /**
   * The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger.
   * If not specified, "global" is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#location CloudbuildTrigger#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#location CloudbuildTrigger#location}
   */
   readonly location?: string;
   /**
   * Name of the trigger. Must be unique within the project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#project CloudbuildTrigger#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#project CloudbuildTrigger#project}
   */
   readonly project?: string;
   /**
@@ -109,85 +109,85 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   * 
   * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#service_account CloudbuildTrigger#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#service_account CloudbuildTrigger#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Substitutions data for Build resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
   */
   readonly substitutions?: { [key: string]: string };
   /**
   * Tags for annotation of a BuildTrigger
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#tags CloudbuildTrigger#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#tags CloudbuildTrigger#tags}
   */
   readonly tags?: string[];
   /**
   * approval_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#approval_config CloudbuildTrigger#approval_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#approval_config CloudbuildTrigger#approval_config}
   */
   readonly approvalConfig?: CloudbuildTriggerApprovalConfig;
   /**
   * bitbucket_server_trigger_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#bitbucket_server_trigger_config CloudbuildTrigger#bitbucket_server_trigger_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#bitbucket_server_trigger_config CloudbuildTrigger#bitbucket_server_trigger_config}
   */
   readonly bitbucketServerTriggerConfig?: CloudbuildTriggerBitbucketServerTriggerConfig;
   /**
   * build block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#build CloudbuildTrigger#build}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#build CloudbuildTrigger#build}
   */
   readonly buildAttribute?: CloudbuildTriggerBuild;
   /**
   * git_file_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#git_file_source CloudbuildTrigger#git_file_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#git_file_source CloudbuildTrigger#git_file_source}
   */
   readonly gitFileSource?: CloudbuildTriggerGitFileSource;
   /**
   * github block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#github CloudbuildTrigger#github}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#github CloudbuildTrigger#github}
   */
   readonly github?: CloudbuildTriggerGithub;
   /**
   * pubsub_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#pubsub_config CloudbuildTrigger#pubsub_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#pubsub_config CloudbuildTrigger#pubsub_config}
   */
   readonly pubsubConfig?: CloudbuildTriggerPubsubConfig;
   /**
   * repository_event_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repository_event_config CloudbuildTrigger#repository_event_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repository_event_config CloudbuildTrigger#repository_event_config}
   */
   readonly repositoryEventConfig?: CloudbuildTriggerRepositoryEventConfig;
   /**
   * source_to_build block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#source_to_build CloudbuildTrigger#source_to_build}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#source_to_build CloudbuildTrigger#source_to_build}
   */
   readonly sourceToBuild?: CloudbuildTriggerSourceToBuild;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#timeouts CloudbuildTrigger#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#timeouts CloudbuildTrigger#timeouts}
   */
   readonly timeouts?: CloudbuildTriggerTimeouts;
   /**
   * trigger_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#trigger_template CloudbuildTrigger#trigger_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#trigger_template CloudbuildTrigger#trigger_template}
   */
   readonly triggerTemplate?: CloudbuildTriggerTriggerTemplate;
   /**
   * webhook_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#webhook_config CloudbuildTrigger#webhook_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#webhook_config CloudbuildTrigger#webhook_config}
   */
   readonly webhookConfig?: CloudbuildTriggerWebhookConfig;
 }
@@ -196,7 +196,7 @@ export interface CloudbuildTriggerApprovalConfig {
   * Whether or not approval is needed. If this is set on a build, it will become pending when run,
   * and will need to be explicitly approved to start.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#approval_required CloudbuildTrigger#approval_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#approval_required CloudbuildTrigger#approval_required}
   */
   readonly approvalRequired?: boolean | cdktf.IResolvable;
 }
@@ -264,19 +264,19 @@ export interface CloudbuildTriggerBitbucketServerTriggerConfigPullRequest {
   * Regex of branches to match.
   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
   */
   readonly branch: string;
   /**
   * Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values: ["COMMENTS_DISABLED", "COMMENTS_ENABLED", "COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#comment_control CloudbuildTrigger#comment_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#comment_control CloudbuildTrigger#comment_control}
   */
   readonly commentControl?: string;
   /**
   * If true, branches that do NOT match the git_ref will trigger a build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
 }
@@ -386,19 +386,19 @@ export interface CloudbuildTriggerBitbucketServerTriggerConfigPush {
   /**
   * Regex of branches to match.  Specify only one of branch or tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
   */
   readonly branch?: string;
   /**
   * When true, only trigger a build if the revision regex does NOT match the gitRef regex.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * Regex of tags to match.  Specify only one of branch or tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#tag CloudbuildTrigger#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#tag CloudbuildTrigger#tag}
   */
   readonly tag?: string;
 }
@@ -511,32 +511,32 @@ export interface CloudbuildTriggerBitbucketServerTriggerConfig {
   /**
   * The Bitbucket server config resource that this trigger config maps to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#bitbucket_server_config_resource CloudbuildTrigger#bitbucket_server_config_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#bitbucket_server_config_resource CloudbuildTrigger#bitbucket_server_config_resource}
   */
   readonly bitbucketServerConfigResource: string;
   /**
   * Key of the project that the repo is in. For example: The key for https://mybitbucket.server/projects/TEST/repos/test-repo is "TEST".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#project_key CloudbuildTrigger#project_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#project_key CloudbuildTrigger#project_key}
   */
   readonly projectKey: string;
   /**
   * Slug of the repository. A repository slug is a URL-friendly version of a repository name, automatically generated by Bitbucket for use in the URL.
   * For example, if the repository name is 'test repo', in the URL it would become 'test-repo' as in https://mybitbucket.server/projects/TEST/repos/test-repo.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repo_slug CloudbuildTrigger#repo_slug}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repo_slug CloudbuildTrigger#repo_slug}
   */
   readonly repoSlug: string;
   /**
   * pull_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#pull_request CloudbuildTrigger#pull_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#pull_request CloudbuildTrigger#pull_request}
   */
   readonly pullRequest?: CloudbuildTriggerBitbucketServerTriggerConfigPullRequest;
   /**
   * push block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#push CloudbuildTrigger#push}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#push CloudbuildTrigger#push}
   */
   readonly push?: CloudbuildTriggerBitbucketServerTriggerConfigPush;
 }
@@ -682,6 +682,353 @@ export class CloudbuildTriggerBitbucketServerTriggerConfigOutputReference extend
     return this._push.internalValue;
   }
 }
+export interface CloudbuildTriggerBuildArtifactsMavenArtifacts {
+  /**
+  * Maven artifactId value used when uploading the artifact to Artifact Registry.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#artifact_id CloudbuildTrigger#artifact_id}
+  */
+  readonly artifactId?: string;
+  /**
+  * Maven groupId value used when uploading the artifact to Artifact Registry.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#group_id CloudbuildTrigger#group_id}
+  */
+  readonly groupId?: string;
+  /**
+  * Path to an artifact in the build's workspace to be uploaded to Artifact Registry. This can be either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a relative path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#path CloudbuildTrigger#path}
+  */
+  readonly path?: string;
+  /**
+  * Artifact Registry repository, in the form "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+  * 
+  * Artifact in the workspace specified by path will be uploaded to Artifact Registry with this location as a prefix.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
+  */
+  readonly repository?: string;
+  /**
+  * Maven version value used when uploading the artifact to Artifact Registry.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#version CloudbuildTrigger#version}
+  */
+  readonly version?: string;
+}
+
+export function cloudbuildTriggerBuildArtifactsMavenArtifactsToTerraform(struct?: CloudbuildTriggerBuildArtifactsMavenArtifacts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    artifact_id: cdktf.stringToTerraform(struct!.artifactId),
+    group_id: cdktf.stringToTerraform(struct!.groupId),
+    path: cdktf.stringToTerraform(struct!.path),
+    repository: cdktf.stringToTerraform(struct!.repository),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsMavenArtifactsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildArtifactsMavenArtifacts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._artifactId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.artifactId = this._artifactId;
+    }
+    if (this._groupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupId = this._groupId;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._repository !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildArtifactsMavenArtifacts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._artifactId = undefined;
+      this._groupId = undefined;
+      this._path = undefined;
+      this._repository = undefined;
+      this._version = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._artifactId = value.artifactId;
+      this._groupId = value.groupId;
+      this._path = value.path;
+      this._repository = value.repository;
+      this._version = value.version;
+    }
+  }
+
+  // artifact_id - computed: false, optional: true, required: false
+  private _artifactId?: string; 
+  public get artifactId() {
+    return this.getStringAttribute('artifact_id');
+  }
+  public set artifactId(value: string) {
+    this._artifactId = value;
+  }
+  public resetArtifactId() {
+    this._artifactId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get artifactIdInput() {
+    return this._artifactId;
+  }
+
+  // group_id - computed: false, optional: true, required: false
+  private _groupId?: string; 
+  public get groupId() {
+    return this.getStringAttribute('group_id');
+  }
+  public set groupId(value: string) {
+    this._groupId = value;
+  }
+  public resetGroupId() {
+    this._groupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIdInput() {
+    return this._groupId;
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // repository - computed: false, optional: true, required: false
+  private _repository?: string; 
+  public get repository() {
+    return this.getStringAttribute('repository');
+  }
+  public set repository(value: string) {
+    this._repository = value;
+  }
+  public resetRepository() {
+    this._repository = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsMavenArtifactsList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildArtifactsMavenArtifacts[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildArtifactsMavenArtifactsOutputReference {
+    return new CloudbuildTriggerBuildArtifactsMavenArtifactsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudbuildTriggerBuildArtifactsNpmPackages {
+  /**
+  * Path to the package.json. e.g. workspace/path/to/package
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#package_path CloudbuildTrigger#package_path}
+  */
+  readonly packagePath?: string;
+  /**
+  * Artifact Registry repository, in the form "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+  * 
+  * Npm package in the workspace specified by path will be zipped and uploaded to Artifact Registry with this location as a prefix.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
+  */
+  readonly repository?: string;
+}
+
+export function cloudbuildTriggerBuildArtifactsNpmPackagesToTerraform(struct?: CloudbuildTriggerBuildArtifactsNpmPackages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    package_path: cdktf.stringToTerraform(struct!.packagePath),
+    repository: cdktf.stringToTerraform(struct!.repository),
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsNpmPackagesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildArtifactsNpmPackages | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._packagePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.packagePath = this._packagePath;
+    }
+    if (this._repository !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildArtifactsNpmPackages | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._packagePath = undefined;
+      this._repository = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._packagePath = value.packagePath;
+      this._repository = value.repository;
+    }
+  }
+
+  // package_path - computed: false, optional: true, required: false
+  private _packagePath?: string; 
+  public get packagePath() {
+    return this.getStringAttribute('package_path');
+  }
+  public set packagePath(value: string) {
+    this._packagePath = value;
+  }
+  public resetPackagePath() {
+    this._packagePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packagePathInput() {
+    return this._packagePath;
+  }
+
+  // repository - computed: false, optional: true, required: false
+  private _repository?: string; 
+  public get repository() {
+    return this.getStringAttribute('repository');
+  }
+  public set repository(value: string) {
+    this._repository = value;
+  }
+  public resetRepository() {
+    this._repository = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository;
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsNpmPackagesList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildArtifactsNpmPackages[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildArtifactsNpmPackagesOutputReference {
+    return new CloudbuildTriggerBuildArtifactsNpmPackagesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudbuildTriggerBuildArtifactsObjectsTiming {
 }
 
@@ -758,13 +1105,13 @@ export interface CloudbuildTriggerBuildArtifactsObjects {
   * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
   * this location as a prefix.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#location CloudbuildTrigger#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#location CloudbuildTrigger#location}
   */
   readonly location?: string;
   /**
   * Path globs used to match files in the build's workspace.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#paths CloudbuildTrigger#paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#paths CloudbuildTrigger#paths}
   */
   readonly paths?: string[];
 }
@@ -856,6 +1203,136 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
     return this._timing;
   }
 }
+export interface CloudbuildTriggerBuildArtifactsPythonPackages {
+  /**
+  * Path globs used to match files in the build's workspace. For Python/ Twine, this is usually dist/*, and sometimes additionally an .asc file.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#paths CloudbuildTrigger#paths}
+  */
+  readonly paths?: string[];
+  /**
+  * Artifact Registry repository, in the form "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+  * 
+  * Files in the workspace matching any path pattern will be uploaded to Artifact Registry with this location as a prefix.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
+  */
+  readonly repository?: string;
+}
+
+export function cloudbuildTriggerBuildArtifactsPythonPackagesToTerraform(struct?: CloudbuildTriggerBuildArtifactsPythonPackages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
+    repository: cdktf.stringToTerraform(struct!.repository),
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsPythonPackagesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildArtifactsPythonPackages | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._paths !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.paths = this._paths;
+    }
+    if (this._repository !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildArtifactsPythonPackages | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._paths = undefined;
+      this._repository = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._paths = value.paths;
+      this._repository = value.repository;
+    }
+  }
+
+  // paths - computed: false, optional: true, required: false
+  private _paths?: string[]; 
+  public get paths() {
+    return this.getListAttribute('paths');
+  }
+  public set paths(value: string[]) {
+    this._paths = value;
+  }
+  public resetPaths() {
+    this._paths = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathsInput() {
+    return this._paths;
+  }
+
+  // repository - computed: false, optional: true, required: false
+  private _repository?: string; 
+  public get repository() {
+    return this.getStringAttribute('repository');
+  }
+  public set repository(value: string) {
+    this._repository = value;
+  }
+  public resetRepository() {
+    this._repository = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository;
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsPythonPackagesList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildArtifactsPythonPackages[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildArtifactsPythonPackagesOutputReference {
+    return new CloudbuildTriggerBuildArtifactsPythonPackagesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudbuildTriggerBuildArtifacts {
   /**
   * A list of images to be pushed upon the successful completion of all build steps.
@@ -866,15 +1343,33 @@ export interface CloudbuildTriggerBuildArtifacts {
   * 
   * If any of the images fail to be pushed, the build is marked FAILURE.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#images CloudbuildTrigger#images}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#images CloudbuildTrigger#images}
   */
   readonly images?: string[];
   /**
+  * maven_artifacts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#maven_artifacts CloudbuildTrigger#maven_artifacts}
+  */
+  readonly mavenArtifacts?: CloudbuildTriggerBuildArtifactsMavenArtifacts[] | cdktf.IResolvable;
+  /**
+  * npm_packages block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#npm_packages CloudbuildTrigger#npm_packages}
+  */
+  readonly npmPackages?: CloudbuildTriggerBuildArtifactsNpmPackages[] | cdktf.IResolvable;
+  /**
   * objects block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#objects CloudbuildTrigger#objects}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#objects CloudbuildTrigger#objects}
   */
   readonly objects?: CloudbuildTriggerBuildArtifactsObjects;
+  /**
+  * python_packages block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#python_packages CloudbuildTrigger#python_packages}
+  */
+  readonly pythonPackages?: CloudbuildTriggerBuildArtifactsPythonPackages[] | cdktf.IResolvable;
 }
 
 export function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTriggerBuildArtifactsOutputReference | CloudbuildTriggerBuildArtifacts): any {
@@ -884,7 +1379,10 @@ export function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTr
   }
   return {
     images: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.images),
+    maven_artifacts: cdktf.listMapper(cloudbuildTriggerBuildArtifactsMavenArtifactsToTerraform, true)(struct!.mavenArtifacts),
+    npm_packages: cdktf.listMapper(cloudbuildTriggerBuildArtifactsNpmPackagesToTerraform, true)(struct!.npmPackages),
     objects: cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct!.objects),
+    python_packages: cdktf.listMapper(cloudbuildTriggerBuildArtifactsPythonPackagesToTerraform, true)(struct!.pythonPackages),
   }
 }
 
@@ -906,9 +1404,21 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.images = this._images;
     }
+    if (this._mavenArtifacts?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mavenArtifacts = this._mavenArtifacts?.internalValue;
+    }
+    if (this._npmPackages?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.npmPackages = this._npmPackages?.internalValue;
+    }
     if (this._objects?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.objects = this._objects?.internalValue;
+    }
+    if (this._pythonPackages?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pythonPackages = this._pythonPackages?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -917,12 +1427,18 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
     if (value === undefined) {
       this.isEmptyObject = false;
       this._images = undefined;
+      this._mavenArtifacts.internalValue = undefined;
+      this._npmPackages.internalValue = undefined;
       this._objects.internalValue = undefined;
+      this._pythonPackages.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._images = value.images;
+      this._mavenArtifacts.internalValue = value.mavenArtifacts;
+      this._npmPackages.internalValue = value.npmPackages;
       this._objects.internalValue = value.objects;
+      this._pythonPackages.internalValue = value.pythonPackages;
     }
   }
 
@@ -942,6 +1458,38 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
     return this._images;
   }
 
+  // maven_artifacts - computed: false, optional: true, required: false
+  private _mavenArtifacts = new CloudbuildTriggerBuildArtifactsMavenArtifactsList(this, "maven_artifacts", false);
+  public get mavenArtifacts() {
+    return this._mavenArtifacts;
+  }
+  public putMavenArtifacts(value: CloudbuildTriggerBuildArtifactsMavenArtifacts[] | cdktf.IResolvable) {
+    this._mavenArtifacts.internalValue = value;
+  }
+  public resetMavenArtifacts() {
+    this._mavenArtifacts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mavenArtifactsInput() {
+    return this._mavenArtifacts.internalValue;
+  }
+
+  // npm_packages - computed: false, optional: true, required: false
+  private _npmPackages = new CloudbuildTriggerBuildArtifactsNpmPackagesList(this, "npm_packages", false);
+  public get npmPackages() {
+    return this._npmPackages;
+  }
+  public putNpmPackages(value: CloudbuildTriggerBuildArtifactsNpmPackages[] | cdktf.IResolvable) {
+    this._npmPackages.internalValue = value;
+  }
+  public resetNpmPackages() {
+    this._npmPackages.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get npmPackagesInput() {
+    return this._npmPackages.internalValue;
+  }
+
   // objects - computed: false, optional: true, required: false
   private _objects = new CloudbuildTriggerBuildArtifactsObjectsOutputReference(this, "objects");
   public get objects() {
@@ -957,6 +1505,22 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   public get objectsInput() {
     return this._objects.internalValue;
   }
+
+  // python_packages - computed: false, optional: true, required: false
+  private _pythonPackages = new CloudbuildTriggerBuildArtifactsPythonPackagesList(this, "python_packages", false);
+  public get pythonPackages() {
+    return this._pythonPackages;
+  }
+  public putPythonPackages(value: CloudbuildTriggerBuildArtifactsPythonPackages[] | cdktf.IResolvable) {
+    this._pythonPackages.internalValue = value;
+  }
+  public resetPythonPackages() {
+    this._pythonPackages.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pythonPackagesInput() {
+    return this._pythonPackages.internalValue;
+  }
 }
 export interface CloudbuildTriggerBuildAvailableSecretsSecretManager {
   /**
@@ -964,13 +1528,13 @@ export interface CloudbuildTriggerBuildAvailableSecretsSecretManager {
   * variables must be unique across all of a build's secrets, and must be used
   * by at least one build step.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#env CloudbuildTrigger#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#env CloudbuildTrigger#env}
   */
   readonly env: string;
   /**
   * Resource name of the SecretVersion. In format: projects/* /secrets/* /versions/*
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#version_name CloudbuildTrigger#version_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#version_name CloudbuildTrigger#version_name}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1088,7 +1652,7 @@ export interface CloudbuildTriggerBuildAvailableSecrets {
   /**
   * secret_manager block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#secret_manager CloudbuildTrigger#secret_manager}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#secret_manager CloudbuildTrigger#secret_manager}
   */
   readonly secretManager: CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable;
 }
@@ -1155,7 +1719,7 @@ export interface CloudbuildTriggerBuildOptionsVolumes {
   * Volume names must be unique per build step and must be valid names for Docker volumes.
   * Each named volume must be used by at least two build steps.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
   */
   readonly name?: string;
   /**
@@ -1164,7 +1728,7 @@ export interface CloudbuildTriggerBuildOptionsVolumes {
   * Paths must be absolute and cannot conflict with other volume paths on the same
   * build step or with certain reserved volume paths.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#path CloudbuildTrigger#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#path CloudbuildTrigger#path}
   */
   readonly path?: string;
 }
@@ -1290,7 +1854,7 @@ export interface CloudbuildTriggerBuildOptions {
   * the build may run with a larger disk than requested. At present, the maximum disk size
   * is 1000GB; builds that request more than the maximum are rejected with an error.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#disk_size_gb CloudbuildTrigger#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#disk_size_gb CloudbuildTrigger#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
@@ -1298,7 +1862,7 @@ export interface CloudbuildTriggerBuildOptions {
   * 
   * NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#dynamic_substitutions CloudbuildTrigger#dynamic_substitutions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#dynamic_substitutions CloudbuildTrigger#dynamic_substitutions}
   */
   readonly dynamicSubstitutions?: boolean | cdktf.IResolvable;
   /**
@@ -1308,31 +1872,31 @@ export interface CloudbuildTriggerBuildOptions {
   * 
   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#env CloudbuildTrigger#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#env CloudbuildTrigger#env}
   */
   readonly env?: string[];
   /**
   * Option to define build log streaming behavior to Google Cloud Storage. Possible values: ["STREAM_DEFAULT", "STREAM_ON", "STREAM_OFF"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#log_streaming_option CloudbuildTrigger#log_streaming_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#log_streaming_option CloudbuildTrigger#log_streaming_option}
   */
   readonly logStreamingOption?: string;
   /**
   * Option to specify the logging mode, which determines if and where build logs are stored. Possible values: ["LOGGING_UNSPECIFIED", "LEGACY", "GCS_ONLY", "STACKDRIVER_ONLY", "CLOUD_LOGGING_ONLY", "NONE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#logging CloudbuildTrigger#logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#logging CloudbuildTrigger#logging}
   */
   readonly logging?: string;
   /**
   * Compute Engine machine type on which to run the build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#machine_type CloudbuildTrigger#machine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#machine_type CloudbuildTrigger#machine_type}
   */
   readonly machineType?: string;
   /**
   * Requested verifiability options. Possible values: ["NOT_VERIFIED", "VERIFIED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#requested_verify_option CloudbuildTrigger#requested_verify_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#requested_verify_option CloudbuildTrigger#requested_verify_option}
   */
   readonly requestedVerifyOption?: string;
   /**
@@ -1340,13 +1904,13 @@ export interface CloudbuildTriggerBuildOptions {
   * Service crypto key. These values must be specified in the build's Secret. These variables
   * will be available to all build steps in this build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#secret_env CloudbuildTrigger#secret_env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#secret_env CloudbuildTrigger#secret_env}
   */
   readonly secretEnv?: string[];
   /**
   * Requested hash for SourceProvenance. Possible values: ["NONE", "SHA256", "MD5"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#source_provenance_hash CloudbuildTrigger#source_provenance_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#source_provenance_hash CloudbuildTrigger#source_provenance_hash}
   */
   readonly sourceProvenanceHash?: string[];
   /**
@@ -1355,7 +1919,7 @@ export interface CloudbuildTriggerBuildOptions {
   * NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
   * in the build configuration file. Possible values: ["MUST_MATCH", "ALLOW_LOOSE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#substitution_option CloudbuildTrigger#substitution_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#substitution_option CloudbuildTrigger#substitution_option}
   */
   readonly substitutionOption?: string;
   /**
@@ -1363,13 +1927,13 @@ export interface CloudbuildTriggerBuildOptions {
   * 
   * This field is experimental.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#worker_pool CloudbuildTrigger#worker_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#worker_pool CloudbuildTrigger#worker_pool}
   */
   readonly workerPool?: string;
   /**
   * volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#volumes CloudbuildTrigger#volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#volumes CloudbuildTrigger#volumes}
   */
   readonly volumes?: CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable;
 }
@@ -1689,7 +2253,7 @@ export interface CloudbuildTriggerBuildSecret {
   /**
   * Cloud KMS key name to use to decrypt these envs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#kms_key_name CloudbuildTrigger#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#kms_key_name CloudbuildTrigger#kms_key_name}
   */
   readonly kmsKeyName: string;
   /**
@@ -1698,7 +2262,7 @@ export interface CloudbuildTriggerBuildSecret {
   * and must be used by at least one build step. Values can be at most 64 KB in size.
   * There can be at most 100 secret values across all of a build's secrets.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#secret_env CloudbuildTrigger#secret_env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#secret_env CloudbuildTrigger#secret_env}
   */
   readonly secretEnv?: { [key: string]: string };
 }
@@ -1819,13 +2383,13 @@ export interface CloudbuildTriggerBuildSourceRepoSource {
   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
   * described at https://github.com/google/re2/wiki/Syntax
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch_name CloudbuildTrigger#branch_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch_name CloudbuildTrigger#branch_name}
   */
   readonly branchName?: string;
   /**
   * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#commit_sha CloudbuildTrigger#commit_sha}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#commit_sha CloudbuildTrigger#commit_sha}
   */
   readonly commitSha?: string;
   /**
@@ -1833,32 +2397,32 @@ export interface CloudbuildTriggerBuildSourceRepoSource {
   * This must be a relative path. If a step's dir is specified and is an absolute path,
   * this value is ignored for that step's execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#dir CloudbuildTrigger#dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#dir CloudbuildTrigger#dir}
   */
   readonly dir?: string;
   /**
   * Only trigger a build if the revision regex does NOT match the revision regex.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * ID of the project that owns the Cloud Source Repository.
   * If omitted, the project ID requesting the build is assumed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#project_id CloudbuildTrigger#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#project_id CloudbuildTrigger#project_id}
   */
   readonly projectId?: string;
   /**
   * Name of the Cloud Source Repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repo_name CloudbuildTrigger#repo_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repo_name CloudbuildTrigger#repo_name}
   */
   readonly repoName: string;
   /**
   * Substitutions to use in a triggered build. Should only be used with triggers.run
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
   */
   readonly substitutions?: { [key: string]: string };
   /**
@@ -1866,7 +2430,7 @@ export interface CloudbuildTriggerBuildSourceRepoSource {
   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
   * described at https://github.com/google/re2/wiki/Syntax
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#tag_name CloudbuildTrigger#tag_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#tag_name CloudbuildTrigger#tag_name}
   */
   readonly tagName?: string;
 }
@@ -2091,21 +2655,21 @@ export interface CloudbuildTriggerBuildSourceStorageSource {
   /**
   * Google Cloud Storage bucket containing the source.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#bucket CloudbuildTrigger#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#bucket CloudbuildTrigger#bucket}
   */
   readonly bucket: string;
   /**
   * Google Cloud Storage generation for the object.
   * If the generation is omitted, the latest generation will be used
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#generation CloudbuildTrigger#generation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#generation CloudbuildTrigger#generation}
   */
   readonly generation?: string;
   /**
   * Google Cloud Storage object containing the source.
   * This object must be a gzipped archive file (.tar.gz) containing source to build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#object CloudbuildTrigger#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#object CloudbuildTrigger#object}
   */
   readonly object: string;
 }
@@ -2212,13 +2776,13 @@ export interface CloudbuildTriggerBuildSource {
   /**
   * repo_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repo_source CloudbuildTrigger#repo_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repo_source CloudbuildTrigger#repo_source}
   */
   readonly repoSource?: CloudbuildTriggerBuildSourceRepoSource;
   /**
   * storage_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#storage_source CloudbuildTrigger#storage_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#storage_source CloudbuildTrigger#storage_source}
   */
   readonly storageSource?: CloudbuildTriggerBuildSourceStorageSource;
 }
@@ -2311,7 +2875,7 @@ export interface CloudbuildTriggerBuildStepVolumes {
   * Volume names must be unique per build step and must be valid names for
   * Docker volumes. Each named volume must be used by at least two build steps.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
   */
   readonly name: string;
   /**
@@ -2320,7 +2884,7 @@ export interface CloudbuildTriggerBuildStepVolumes {
   * Paths must be absolute and cannot conflict with other volume paths on
   * the same build step or with certain reserved volume paths.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#path CloudbuildTrigger#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#path CloudbuildTrigger#path}
   */
   readonly path: string;
 }
@@ -2439,7 +3003,7 @@ export interface CloudbuildTriggerBuildStep {
   * 
   * If 'allowFailure' is also specified, this field will take precedence.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#allow_exit_codes CloudbuildTrigger#allow_exit_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#allow_exit_codes CloudbuildTrigger#allow_exit_codes}
   */
   readonly allowExitCodes?: number[];
   /**
@@ -2450,7 +3014,7 @@ export interface CloudbuildTriggerBuildStep {
   * 
   * 'allowExitCodes' takes precedence over this field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#allow_failure CloudbuildTrigger#allow_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#allow_failure CloudbuildTrigger#allow_failure}
   */
   readonly allowFailure?: boolean | cdktf.IResolvable;
   /**
@@ -2461,7 +3025,7 @@ export interface CloudbuildTriggerBuildStep {
   * entrypoint, the first element in args is used as the entrypoint, and the
   * remainder will be used as arguments.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#args CloudbuildTrigger#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#args CloudbuildTrigger#args}
   */
   readonly args?: string[];
   /**
@@ -2477,7 +3041,7 @@ export interface CloudbuildTriggerBuildStep {
   * which specifies an absolute path, the 'RepoSource' 'dir' is ignored
   * for the step's execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#dir CloudbuildTrigger#dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#dir CloudbuildTrigger#dir}
   */
   readonly dir?: string;
   /**
@@ -2485,7 +3049,7 @@ export interface CloudbuildTriggerBuildStep {
   * default entrypoint.
   * If unset, the image's default entrypoint is used
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#entrypoint CloudbuildTrigger#entrypoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#entrypoint CloudbuildTrigger#entrypoint}
   */
   readonly entrypoint?: string;
   /**
@@ -2495,14 +3059,14 @@ export interface CloudbuildTriggerBuildStep {
   * The elements are of the form "KEY=VALUE" for the environment variable
   * "KEY" being given the value "VALUE".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#env CloudbuildTrigger#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#env CloudbuildTrigger#env}
   */
   readonly env?: string[];
   /**
   * Unique identifier for this build step, used in 'wait_for' to
   * reference this build step as a dependency.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#id CloudbuildTrigger#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#id CloudbuildTrigger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2526,14 +3090,14 @@ export interface CloudbuildTriggerBuildStep {
   * host's Docker daemon's cache and is available to use as the name for a
   * later build step.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
   */
   readonly name: string;
   /**
   * A shell script to be executed in the step.
   * When script is provided, the user cannot specify the entrypoint or args.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#script CloudbuildTrigger#script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#script CloudbuildTrigger#script}
   */
   readonly script?: string;
   /**
@@ -2542,7 +3106,7 @@ export interface CloudbuildTriggerBuildStep {
   * Management Service crypto key. These values must be specified in
   * the build's 'Secret'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#secret_env CloudbuildTrigger#secret_env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#secret_env CloudbuildTrigger#secret_env}
   */
   readonly secretEnv?: string[];
   /**
@@ -2551,14 +3115,14 @@ export interface CloudbuildTriggerBuildStep {
   * time limit and will be allowed to continue to run until either it
   * completes or the build itself times out.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#timeout CloudbuildTrigger#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#timeout CloudbuildTrigger#timeout}
   */
   readonly timeout?: string;
   /**
   * Output only. Stores timing information for executing this
   * build step.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#timing CloudbuildTrigger#timing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#timing CloudbuildTrigger#timing}
   */
   readonly timing?: string;
   /**
@@ -2569,13 +3133,13 @@ export interface CloudbuildTriggerBuildStep {
   * will start when all previous build steps in the 'Build.Steps' list
   * have completed successfully.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#wait_for CloudbuildTrigger#wait_for}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#wait_for CloudbuildTrigger#wait_for}
   */
   readonly waitFor?: string[];
   /**
   * volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#volumes CloudbuildTrigger#volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#volumes CloudbuildTrigger#volumes}
   */
   readonly volumes?: CloudbuildTriggerBuildStepVolumes[] | cdktf.IResolvable;
 }
@@ -2973,14 +3537,14 @@ export interface CloudbuildTriggerBuild {
   * The digests of the pushed images will be stored in the Build resource's results field.
   * If any of the images fail to be pushed, the build status is marked FAILURE.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#images CloudbuildTrigger#images}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#images CloudbuildTrigger#images}
   */
   readonly images?: string[];
   /**
   * Google Cloud Storage bucket where logs should be written.
   * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#logs_bucket CloudbuildTrigger#logs_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#logs_bucket CloudbuildTrigger#logs_bucket}
   */
   readonly logsBucket?: string;
   /**
@@ -2989,19 +3553,19 @@ export interface CloudbuildTriggerBuild {
   * The TTL starts ticking from createTime.
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#queue_ttl CloudbuildTrigger#queue_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#queue_ttl CloudbuildTrigger#queue_ttl}
   */
   readonly queueTtl?: string;
   /**
   * Substitutions data for Build resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
   */
   readonly substitutions?: { [key: string]: string };
   /**
   * Tags for annotation of a Build. These are not docker tags.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#tags CloudbuildTrigger#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#tags CloudbuildTrigger#tags}
   */
   readonly tags?: string[];
   /**
@@ -3011,43 +3575,43 @@ export interface CloudbuildTriggerBuild {
   * The expected format is the number of seconds followed by s.
   * Default time is ten minutes (600s).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#timeout CloudbuildTrigger#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#timeout CloudbuildTrigger#timeout}
   */
   readonly timeout?: string;
   /**
   * artifacts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#artifacts CloudbuildTrigger#artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#artifacts CloudbuildTrigger#artifacts}
   */
   readonly artifacts?: CloudbuildTriggerBuildArtifacts;
   /**
   * available_secrets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#available_secrets CloudbuildTrigger#available_secrets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#available_secrets CloudbuildTrigger#available_secrets}
   */
   readonly availableSecrets?: CloudbuildTriggerBuildAvailableSecrets;
   /**
   * options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#options CloudbuildTrigger#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#options CloudbuildTrigger#options}
   */
   readonly options?: CloudbuildTriggerBuildOptions;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#secret CloudbuildTrigger#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#secret CloudbuildTrigger#secret}
   */
   readonly secret?: CloudbuildTriggerBuildSecret[] | cdktf.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#source CloudbuildTrigger#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#source CloudbuildTrigger#source}
   */
   readonly source?: CloudbuildTriggerBuildSource;
   /**
   * step block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#step CloudbuildTrigger#step}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#step CloudbuildTrigger#step}
   */
   readonly step: CloudbuildTriggerBuildStep[] | cdktf.IResolvable;
 }
@@ -3365,34 +3929,34 @@ export interface CloudbuildTriggerGitFileSource {
   * The full resource name of the bitbucket server config.
   * Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#bitbucket_server_config CloudbuildTrigger#bitbucket_server_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#bitbucket_server_config CloudbuildTrigger#bitbucket_server_config}
   */
   readonly bitbucketServerConfig?: string;
   /**
   * The full resource name of the github enterprise config.
   * Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#github_enterprise_config CloudbuildTrigger#github_enterprise_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#github_enterprise_config CloudbuildTrigger#github_enterprise_config}
   */
   readonly githubEnterpriseConfig?: string;
   /**
   * The path of the file, with the repo root as the root of the path.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#path CloudbuildTrigger#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#path CloudbuildTrigger#path}
   */
   readonly path: string;
   /**
   * The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
   * Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: ["UNKNOWN", "CLOUD_SOURCE_REPOSITORIES", "GITHUB", "BITBUCKET_SERVER"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repo_type CloudbuildTrigger#repo_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repo_type CloudbuildTrigger#repo_type}
   */
   readonly repoType: string;
   /**
   * The fully qualified resource name of the Repo API repository. The fully qualified resource name of the Repo API repository.
   * If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
   */
   readonly repository?: string;
   /**
@@ -3400,14 +3964,14 @@ export interface CloudbuildTriggerGitFileSource {
   * filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions
   * If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#revision CloudbuildTrigger#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#revision CloudbuildTrigger#revision}
   */
   readonly revision?: string;
   /**
   * The URI of the repo (optional). If unspecified, the repo from which the trigger
   * invocation originated is assumed to be the repo from which to read the specified path.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#uri CloudbuildTrigger#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#uri CloudbuildTrigger#uri}
   */
   readonly uri?: string;
 }
@@ -3606,19 +4170,19 @@ export interface CloudbuildTriggerGithubPullRequest {
   /**
   * Regex of branches to match.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
   */
   readonly branch: string;
   /**
   * Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator. Possible values: ["COMMENTS_DISABLED", "COMMENTS_ENABLED", "COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#comment_control CloudbuildTrigger#comment_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#comment_control CloudbuildTrigger#comment_control}
   */
   readonly commentControl?: string;
   /**
   * If true, branches that do NOT match the git_ref will trigger a build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
 }
@@ -3728,19 +4292,19 @@ export interface CloudbuildTriggerGithubPush {
   /**
   * Regex of branches to match.  Specify only one of branch or tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
   */
   readonly branch?: string;
   /**
   * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * Regex of tags to match.  Specify only one of branch or tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#tag CloudbuildTrigger#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#tag CloudbuildTrigger#tag}
   */
   readonly tag?: string;
 }
@@ -3854,33 +4418,33 @@ export interface CloudbuildTriggerGithub {
   * The resource name of the github enterprise config that should be applied to this installation.
   * For example: "projects/{$projectId}/locations/{$locationId}/githubEnterpriseConfigs/{$configId}"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#enterprise_config_resource_name CloudbuildTrigger#enterprise_config_resource_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#enterprise_config_resource_name CloudbuildTrigger#enterprise_config_resource_name}
   */
   readonly enterpriseConfigResourceName?: string;
   /**
   * Name of the repository. For example: The name for
   * https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#name CloudbuildTrigger#name}
   */
   readonly name?: string;
   /**
   * Owner of the repository. For example: The owner for
   * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#owner CloudbuildTrigger#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#owner CloudbuildTrigger#owner}
   */
   readonly owner?: string;
   /**
   * pull_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#pull_request CloudbuildTrigger#pull_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#pull_request CloudbuildTrigger#pull_request}
   */
   readonly pullRequest?: CloudbuildTriggerGithubPullRequest;
   /**
   * push block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#push CloudbuildTrigger#push}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#push CloudbuildTrigger#push}
   */
   readonly push?: CloudbuildTriggerGithubPush;
 }
@@ -4039,13 +4603,13 @@ export interface CloudbuildTriggerPubsubConfig {
   /**
   * Service account that will make the push request.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#service_account_email CloudbuildTrigger#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#service_account_email CloudbuildTrigger#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
   * The name of the topic from which this subscription is receiving messages.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#topic CloudbuildTrigger#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#topic CloudbuildTrigger#topic}
   */
   readonly topic: string;
 }
@@ -4145,19 +4709,19 @@ export interface CloudbuildTriggerRepositoryEventConfigPullRequest {
   * The syntax of the regular expressions accepted is the syntax accepted by
   * RE2 and described at https://github.com/google/re2/wiki/Syntax
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
   */
   readonly branch?: string;
   /**
   * Configure builds to run whether a repository owner or collaborator need to comment '/gcbrun'. Possible values: ["COMMENTS_DISABLED", "COMMENTS_ENABLED", "COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#comment_control CloudbuildTrigger#comment_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#comment_control CloudbuildTrigger#comment_control}
   */
   readonly commentControl?: string;
   /**
   * If true, branches that do NOT match the git_ref will trigger a build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
 }
@@ -4273,13 +4837,13 @@ export interface CloudbuildTriggerRepositoryEventConfigPush {
   * The syntax of the regular expressions accepted is the syntax accepted by
   * RE2 and described at https://github.com/google/re2/wiki/Syntax
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch CloudbuildTrigger#branch}
   */
   readonly branch?: string;
   /**
   * If true, only trigger a build if the revision regex does NOT match the git_ref regex.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
@@ -4288,7 +4852,7 @@ export interface CloudbuildTriggerRepositoryEventConfigPush {
   * The syntax of the regular expressions accepted is the syntax accepted by
   * RE2 and described at https://github.com/google/re2/wiki/Syntax
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#tag CloudbuildTrigger#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#tag CloudbuildTrigger#tag}
   */
   readonly tag?: string;
 }
@@ -4401,19 +4965,19 @@ export interface CloudbuildTriggerRepositoryEventConfig {
   /**
   * The resource name of the Repo API resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
   */
   readonly repository?: string;
   /**
   * pull_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#pull_request CloudbuildTrigger#pull_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#pull_request CloudbuildTrigger#pull_request}
   */
   readonly pullRequest?: CloudbuildTriggerRepositoryEventConfigPullRequest;
   /**
   * push block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#push CloudbuildTrigger#push}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#push CloudbuildTrigger#push}
   */
   readonly push?: CloudbuildTriggerRepositoryEventConfigPush;
 }
@@ -4527,40 +5091,40 @@ export interface CloudbuildTriggerSourceToBuild {
   * The full resource name of the bitbucket server config.
   * Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#bitbucket_server_config CloudbuildTrigger#bitbucket_server_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#bitbucket_server_config CloudbuildTrigger#bitbucket_server_config}
   */
   readonly bitbucketServerConfig?: string;
   /**
   * The full resource name of the github enterprise config.
   * Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#github_enterprise_config CloudbuildTrigger#github_enterprise_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#github_enterprise_config CloudbuildTrigger#github_enterprise_config}
   */
   readonly githubEnterpriseConfig?: string;
   /**
   * The branch or tag to use. Must start with "refs/" (required).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#ref CloudbuildTrigger#ref}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#ref CloudbuildTrigger#ref}
   */
   readonly ref: string;
   /**
   * The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
   * Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: ["UNKNOWN", "CLOUD_SOURCE_REPOSITORIES", "GITHUB", "BITBUCKET_SERVER"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repo_type CloudbuildTrigger#repo_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repo_type CloudbuildTrigger#repo_type}
   */
   readonly repoType: string;
   /**
   * The qualified resource name of the Repo API repository.
   * Either uri or repository can be specified and is required.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repository CloudbuildTrigger#repository}
   */
   readonly repository?: string;
   /**
   * The URI of the repo.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#uri CloudbuildTrigger#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#uri CloudbuildTrigger#uri}
   */
   readonly uri?: string;
 }
@@ -4734,15 +5298,15 @@ export class CloudbuildTriggerSourceToBuildOutputReference extends cdktf.Complex
 }
 export interface CloudbuildTriggerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#create CloudbuildTrigger#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#create CloudbuildTrigger#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#delete CloudbuildTrigger#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#delete CloudbuildTrigger#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#update CloudbuildTrigger#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#update CloudbuildTrigger#update}
   */
   readonly update?: string;
 }
@@ -4866,13 +5430,13 @@ export interface CloudbuildTriggerTriggerTemplate {
   * Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
   * This field is a regular expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#branch_name CloudbuildTrigger#branch_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#branch_name CloudbuildTrigger#branch_name}
   */
   readonly branchName?: string;
   /**
   * Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#commit_sha CloudbuildTrigger#commit_sha}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#commit_sha CloudbuildTrigger#commit_sha}
   */
   readonly commitSha?: string;
   /**
@@ -4882,33 +5446,33 @@ export interface CloudbuildTriggerTriggerTemplate {
   * is an absolute path, this value is ignored for that step's
   * execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#dir CloudbuildTrigger#dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#dir CloudbuildTrigger#dir}
   */
   readonly dir?: string;
   /**
   * Only trigger a build if the revision regex does NOT match the revision regex.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#invert_regex CloudbuildTrigger#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * ID of the project that owns the Cloud Source Repository. If
   * omitted, the project ID requesting the build is assumed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#project_id CloudbuildTrigger#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#project_id CloudbuildTrigger#project_id}
   */
   readonly projectId?: string;
   /**
   * Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#repo_name CloudbuildTrigger#repo_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#repo_name CloudbuildTrigger#repo_name}
   */
   readonly repoName?: string;
   /**
   * Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
   * This field is a regular expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#tag_name CloudbuildTrigger#tag_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#tag_name CloudbuildTrigger#tag_name}
   */
   readonly tagName?: string;
 }
@@ -5113,7 +5677,7 @@ export interface CloudbuildTriggerWebhookConfig {
   /**
   * Resource name for the secret required as a URL parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#secret CloudbuildTrigger#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#secret CloudbuildTrigger#secret}
   */
   readonly secret: string;
 }
@@ -5180,7 +5744,7 @@ export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger google_cloudbuild_trigger}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger google_cloudbuild_trigger}
 */
 export class CloudbuildTrigger extends cdktf.TerraformResource {
 
@@ -5196,7 +5760,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudbuildTrigger resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudbuildTrigger to import
-  * @param importFromId The id of the existing CloudbuildTrigger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudbuildTrigger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudbuildTrigger to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -5208,7 +5772,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/cloudbuild_trigger google_cloudbuild_trigger} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloudbuild_trigger google_cloudbuild_trigger} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -5219,7 +5783,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.7.0',
+        providerVersion: '5.8.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

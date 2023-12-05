@@ -4,7 +4,7 @@
 
 ### DataFusionInstanceIamMember <a name="DataFusionInstanceIamMember" id="@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member google_data_fusion_instance_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member google_data_fusion_instance_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMember.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the DataFusionInstanceIamMembe
 
 The id of the existing DataFusionInstanceIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -875,9 +875,9 @@ const dataFusionInstanceIamMemberCondition: dataFusionInstanceIamMember.DataFusi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#expression DataFusionInstanceIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#title DataFusionInstanceIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#description DataFusionInstanceIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#expression DataFusionInstanceIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#title DataFusionInstanceIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#description DataFusionInstanceIamMember#description}. |
 
 ---
 
@@ -889,7 +889,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#expression DataFusionInstanceIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#expression DataFusionInstanceIamMember#expression}.
 
 ---
 
@@ -901,7 +901,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#title DataFusionInstanceIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#title DataFusionInstanceIamMember#title}.
 
 ---
 
@@ -913,7 +913,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#description DataFusionInstanceIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#description DataFusionInstanceIamMember#description}.
 
 ---
 
@@ -938,13 +938,13 @@ const dataFusionInstanceIamMemberConfig: dataFusionInstanceIamMember.DataFusionI
 | <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#member DataFusionInstanceIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#name DataFusionInstanceIamMember#name}. |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#role DataFusionInstanceIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#member DataFusionInstanceIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#name DataFusionInstanceIamMember#name}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#role DataFusionInstanceIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberCondition">DataFusionInstanceIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#id DataFusionInstanceIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#project DataFusionInstanceIamMember#project}. |
-| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.region">region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#region DataFusionInstanceIamMember#region}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#id DataFusionInstanceIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#project DataFusionInstanceIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataFusionInstanceIamMember.DataFusionInstanceIamMemberConfig.property.region">region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#region DataFusionInstanceIamMember#region}. |
 
 ---
 
@@ -1026,7 +1026,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#member DataFusionInstanceIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#member DataFusionInstanceIamMember#member}.
 
 ---
 
@@ -1038,7 +1038,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#name DataFusionInstanceIamMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#name DataFusionInstanceIamMember#name}.
 
 ---
 
@@ -1050,7 +1050,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#role DataFusionInstanceIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#role DataFusionInstanceIamMember#role}.
 
 ---
 
@@ -1064,7 +1064,7 @@ public readonly condition: DataFusionInstanceIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#condition DataFusionInstanceIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#condition DataFusionInstanceIamMember#condition}
 
 ---
 
@@ -1076,7 +1076,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#id DataFusionInstanceIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#id DataFusionInstanceIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1091,7 +1091,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#project DataFusionInstanceIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#project DataFusionInstanceIamMember#project}.
 
 ---
 
@@ -1103,7 +1103,7 @@ public readonly region: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/data_fusion_instance_iam_member#region DataFusionInstanceIamMember#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_fusion_instance_iam_member#region DataFusionInstanceIamMember#region}.
 
 ---
 

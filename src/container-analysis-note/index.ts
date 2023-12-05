@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note
+// https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArgument
   /**
   * Time of expiration for this note. Leave empty if note does not expire.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#expiration_time ContainerAnalysisNote#expiration_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#expiration_time ContainerAnalysisNote#expiration_time}
   */
   readonly expirationTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#id ContainerAnalysisNote#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#id ContainerAnalysisNote#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,47 +28,47 @@ export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArgument
   /**
   * A detailed description of the note
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#long_description ContainerAnalysisNote#long_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#long_description ContainerAnalysisNote#long_description}
   */
   readonly longDescription?: string;
   /**
   * The name of the note.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#name ContainerAnalysisNote#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#name ContainerAnalysisNote#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#project ContainerAnalysisNote#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#project ContainerAnalysisNote#project}
   */
   readonly project?: string;
   /**
   * Names of other notes related to this note.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#related_note_names ContainerAnalysisNote#related_note_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#related_note_names ContainerAnalysisNote#related_note_names}
   */
   readonly relatedNoteNames?: string[];
   /**
   * A one sentence description of the note.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#short_description ContainerAnalysisNote#short_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#short_description ContainerAnalysisNote#short_description}
   */
   readonly shortDescription?: string;
   /**
   * attestation_authority block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#attestation_authority ContainerAnalysisNote#attestation_authority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#attestation_authority ContainerAnalysisNote#attestation_authority}
   */
   readonly attestationAuthority: ContainerAnalysisNoteAttestationAuthority;
   /**
   * related_url block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#related_url ContainerAnalysisNote#related_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#related_url ContainerAnalysisNote#related_url}
   */
   readonly relatedUrl?: ContainerAnalysisNoteRelatedUrl[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#timeouts ContainerAnalysisNote#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#timeouts ContainerAnalysisNote#timeouts}
   */
   readonly timeouts?: ContainerAnalysisNoteTimeouts;
 }
@@ -77,7 +77,7 @@ export interface ContainerAnalysisNoteAttestationAuthorityHint {
   * The human readable name of this Attestation Authority, for
   * example "qa".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#human_readable_name ContainerAnalysisNote#human_readable_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#human_readable_name ContainerAnalysisNote#human_readable_name}
   */
   readonly humanReadableName: string;
 }
@@ -141,7 +141,7 @@ export interface ContainerAnalysisNoteAttestationAuthority {
   /**
   * hint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#hint ContainerAnalysisNote#hint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#hint ContainerAnalysisNote#hint}
   */
   readonly hint: ContainerAnalysisNoteAttestationAuthorityHint;
 }
@@ -205,13 +205,13 @@ export interface ContainerAnalysisNoteRelatedUrl {
   /**
   * Label to describe usage of the URL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#label ContainerAnalysisNote#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#label ContainerAnalysisNote#label}
   */
   readonly label?: string;
   /**
   * Specific URL associated with the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#url ContainerAnalysisNote#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#url ContainerAnalysisNote#url}
   */
   readonly url: string;
 }
@@ -328,15 +328,15 @@ export class ContainerAnalysisNoteRelatedUrlList extends cdktf.ComplexList {
 }
 export interface ContainerAnalysisNoteTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#create ContainerAnalysisNote#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#create ContainerAnalysisNote#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#delete ContainerAnalysisNote#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#delete ContainerAnalysisNote#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#update ContainerAnalysisNote#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#update ContainerAnalysisNote#update}
   */
   readonly update?: string;
 }
@@ -457,7 +457,7 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note google_container_analysis_note}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note google_container_analysis_note}
 */
 export class ContainerAnalysisNote extends cdktf.TerraformResource {
 
@@ -473,7 +473,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerAnalysisNote resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerAnalysisNote to import
-  * @param importFromId The id of the existing ContainerAnalysisNote that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerAnalysisNote that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerAnalysisNote to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -485,7 +485,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/container_analysis_note google_container_analysis_note} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/container_analysis_note google_container_analysis_note} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -496,7 +496,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_analysis_note',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.7.0',
+        providerVersion: '5.8.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

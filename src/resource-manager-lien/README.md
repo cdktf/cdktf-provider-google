@@ -1,3 +1,3 @@
 # `google_resource_manager_lien`
 
-Refer to the Terraform Registory for docs: [`google_resource_manager_lien`](https://registry.terraform.io/providers/hashicorp/google/5.7.0/docs/resources/resource_manager_lien).
+Refer to the Terraform Registory for docs: [`google_resource_manager_lien`](https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/resource_manager_lien).
