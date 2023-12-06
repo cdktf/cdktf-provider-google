@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.NewPubsubSubscriptionIamMember(scope Construct, id *string, config PubsubSubscriptionIamMemberConfig) PubsubSubscriptionIamMember
 ```
@@ -405,7 +405,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -837,7 +837,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 &pubsubsubscriptioniammember.PubsubSubscriptionIamMemberCondition {
 	Expression: *string,
@@ -897,7 +897,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 &pubsubsubscriptioniammember.PubsubSubscriptionIamMemberConfig {
 	Connection: interface{},
@@ -910,7 +910,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioni
 	Member: *string,
 	Role: *string,
 	Subscription: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.NewPubsubSubscriptionIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionIamMemberConditionOutputReference
 ```

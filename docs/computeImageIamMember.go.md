@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 computeimageiammember.NewComputeImageIamMember(scope Construct, id *string, config ComputeImageIamMemberConfig) ComputeImageIamMember
 ```
@@ -405,7 +405,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 computeimageiammember.ComputeImageIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 computeimageiammember.ComputeImageIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ computeimageiammember.ComputeImageIamMember_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 computeimageiammember.ComputeImageIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ computeimageiammember.ComputeImageIamMember_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 computeimageiammember.ComputeImageIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -837,7 +837,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 &computeimageiammember.ComputeImageIamMemberCondition {
 	Expression: *string,
@@ -897,7 +897,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 &computeimageiammember.ComputeImageIamMemberConfig {
 	Connection: interface{},
@@ -910,7 +910,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammemb
 	Image: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.computeImageIamMember.ComputeImageIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeImageIamMember.ComputeImageIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeImageIamMember.ComputeImageIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeimageiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeimageiammember"
 
 computeimageiammember.NewComputeImageIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeImageIamMemberConditionOutputReference
 ```
