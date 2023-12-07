@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.NewEndpointsServiceIamPolicy(scope Construct, id *string, config EndpointsServiceIamPolicyConfig) EndpointsServiceIamPolicy
 ```
@@ -378,7 +378,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -410,7 +410,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -424,7 +424,7 @@ endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -438,7 +438,7 @@ endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -744,7 +744,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiampolicy"
 
 &endpointsserviceiampolicy.EndpointsServiceIamPolicyConfig {
 	Connection: interface{},
