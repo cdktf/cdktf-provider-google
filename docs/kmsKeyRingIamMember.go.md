@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 kmskeyringiammember.NewKmsKeyRingIamMember(scope Construct, id *string, config KmsKeyRingIamMemberConfig) KmsKeyRingIamMember
 ```
@@ -398,7 +398,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 kmskeyringiammember.KmsKeyRingIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 kmskeyringiammember.KmsKeyRingIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ kmskeyringiammember.KmsKeyRingIamMember_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 kmskeyringiammember.KmsKeyRingIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ kmskeyringiammember.KmsKeyRingIamMember_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 kmskeyringiammember.KmsKeyRingIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -808,7 +808,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 &kmskeyringiammember.KmsKeyRingIamMemberCondition {
 	Expression: *string,
@@ -868,7 +868,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 &kmskeyringiammember.KmsKeyRingIamMemberConfig {
 	Connection: interface{},
@@ -881,7 +881,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember
 	KeyRingId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.kmsKeyRingIamMember.KmsKeyRingIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.kmsKeyRingIamMember.KmsKeyRingIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -1047,7 +1047,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsKeyRingIamMember.KmsKeyRingIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/kmskeyringiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyringiammember"
 
 kmskeyringiammember.NewKmsKeyRingIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsKeyRingIamMemberConditionOutputReference
 ```
