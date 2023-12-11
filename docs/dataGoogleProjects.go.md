@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 datagoogleprojects.NewDataGoogleProjects(scope Construct, id *string, config DataGoogleProjectsConfig) DataGoogleProjects
 ```
@@ -274,7 +274,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 datagoogleprojects.DataGoogleProjects_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +306,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 datagoogleprojects.DataGoogleProjects_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ datagoogleprojects.DataGoogleProjects_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 datagoogleprojects.DataGoogleProjects_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagoogleprojects.DataGoogleProjects_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjects.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 datagoogleprojects.DataGoogleProjects_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -596,7 +596,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 &datagoogleprojects.DataGoogleProjectsConfig {
 	Connection: interface{},
@@ -729,7 +729,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsProjects.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 &datagoogleprojects.DataGoogleProjectsProjects {
 
@@ -744,7 +744,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsProjectsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 datagoogleprojects.NewDataGoogleProjectsProjectsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleProjectsProjectsList
 ```
@@ -876,7 +876,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjects.DataGoogleProjectsProjectsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojects"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojects"
 
 datagoogleprojects.NewDataGoogleProjectsProjectsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleProjectsProjectsOutputReference
 ```

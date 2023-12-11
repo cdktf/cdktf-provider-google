@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 apigeeendpointattachment.NewApigeeEndpointAttachment(scope Construct, id *string, config ApigeeEndpointAttachmentConfig) ApigeeEndpointAttachment
 ```
@@ -398,7 +398,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 apigeeendpointattachment.ApigeeEndpointAttachment_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 apigeeendpointattachment.ApigeeEndpointAttachment_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ apigeeendpointattachment.ApigeeEndpointAttachment_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 apigeeendpointattachment.ApigeeEndpointAttachment_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ apigeeendpointattachment.ApigeeEndpointAttachment_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 apigeeendpointattachment.ApigeeEndpointAttachment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -852,7 +852,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 &apigeeendpointattachment.ApigeeEndpointAttachmentConfig {
 	Connection: interface{},
@@ -867,7 +867,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachmen
 	OrgId: *string,
 	ServiceAttachment: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts,
 }
 ```
 
@@ -1053,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 &apigeeendpointattachment.ApigeeEndpointAttachmentTimeouts {
 	Create: *string,
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeendpointattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeendpointattachment"
 
 apigeeendpointattachment.NewApigeeEndpointAttachmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeEndpointAttachmentTimeoutsOutputReference
 ```
