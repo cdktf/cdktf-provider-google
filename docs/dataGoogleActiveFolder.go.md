@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleactivefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleactivefolder"
 
 datagoogleactivefolder.NewDataGoogleActiveFolder(scope Construct, id *string, config DataGoogleActiveFolderConfig) DataGoogleActiveFolder
 ```
@@ -274,7 +274,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleactivefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleactivefolder"
 
 datagoogleactivefolder.DataGoogleActiveFolder_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +306,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleactivefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleactivefolder"
 
 datagoogleactivefolder.DataGoogleActiveFolder_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ datagoogleactivefolder.DataGoogleActiveFolder_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleactivefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleactivefolder"
 
 datagoogleactivefolder.DataGoogleActiveFolder_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagoogleactivefolder.DataGoogleActiveFolder_IsTerraformDataSource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleactivefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleactivefolder"
 
 datagoogleactivefolder.DataGoogleActiveFolder_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -618,7 +618,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleactivefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleactivefolder"
 
 &datagoogleactivefolder.DataGoogleActiveFolderConfig {
 	Connection: interface{},

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManager.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManager(scope Construct, id *string, config ComputeInstanceGroupManagerConfig) ComputeInstanceGroupManager
 ```
@@ -607,7 +607,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManager.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.ComputeInstanceGroupManager_IsConstruct(x interface{}) *bool
 ```
@@ -639,7 +639,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManager.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.ComputeInstanceGroupManager_IsTerraformElement(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ computeinstancegroupmanager.ComputeInstanceGroupManager_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManager.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.ComputeInstanceGroupManager_IsTerraformResource(x interface{}) *bool
 ```
@@ -667,7 +667,7 @@ computeinstancegroupmanager.ComputeInstanceGroupManager_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManager.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.ComputeInstanceGroupManager_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1391,7 +1391,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerAutoHealingPolicies.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerAutoHealingPolicies {
 	HealthCheck: *string,
@@ -1443,7 +1443,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerConfig {
 	Connection: interface{},
@@ -1456,10 +1456,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupman
 	BaseInstanceName: *string,
 	Name: *string,
 	Version: interface{},
-	AutoHealingPolicies: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceGroupManager.ComputeInstanceGroupManagerAutoHealingPolicies,
+	AutoHealingPolicies: github.com/cdktf/cdktf-provider-google-go/google/v12.computeInstanceGroupManager.ComputeInstanceGroupManagerAutoHealingPolicies,
 	Description: *string,
 	Id: *string,
-	InstanceLifecyclePolicy: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceGroupManager.ComputeInstanceGroupManagerInstanceLifecyclePolicy,
+	InstanceLifecyclePolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeInstanceGroupManager.ComputeInstanceGroupManagerInstanceLifecyclePolicy,
 	ListManagedInstancesResults: *string,
 	NamedPort: interface{},
 	Project: *string,
@@ -1468,8 +1468,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupman
 	StatefulInternalIp: interface{},
 	TargetPools: *[]*string,
 	TargetSize: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceGroupManager.ComputeInstanceGroupManagerTimeouts,
-	UpdatePolicy: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceGroupManager.ComputeInstanceGroupManagerUpdatePolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeInstanceGroupManager.ComputeInstanceGroupManagerTimeouts,
+	UpdatePolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeInstanceGroupManager.ComputeInstanceGroupManagerUpdatePolicy,
 	WaitForInstances: interface{},
 	WaitForInstancesStatus: *string,
 	Zone: *string,
@@ -1882,7 +1882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerInstanceLifecyclePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerInstanceLifecyclePolicy {
 	ForceUpdateOnRepair: *string,
@@ -1918,7 +1918,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerNamedPort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerNamedPort {
 	Name: *string,
@@ -1968,7 +1968,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerStatefulDisk {
 	DeviceName: *string,
@@ -2020,7 +2020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulExternalIp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerStatefulExternalIp {
 	DeleteRule: *string,
@@ -2072,7 +2072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulInternalIp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerStatefulInternalIp {
 	DeleteRule: *string,
@@ -2124,7 +2124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerStatus {
 
@@ -2137,7 +2137,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupman
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusStateful.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerStatusStateful {
 
@@ -2150,7 +2150,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupman
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs {
 
@@ -2163,7 +2163,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupman
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusVersionTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerStatusVersionTarget {
 
@@ -2176,7 +2176,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupman
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerTimeouts {
 	Create: *string,
@@ -2236,7 +2236,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerUpdatePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerUpdatePolicy {
 	MinimalAction: *string,
@@ -2396,12 +2396,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerVersion {
 	InstanceTemplate: *string,
 	Name: *string,
-	TargetSize: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceGroupManager.ComputeInstanceGroupManagerVersionTargetSize,
+	TargetSize: github.com/cdktf/cdktf-provider-google-go/google/v12.computeInstanceGroupManager.ComputeInstanceGroupManagerVersionTargetSize,
 }
 ```
 
@@ -2462,7 +2462,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerVersionTargetSize.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 &computeinstancegroupmanager.ComputeInstanceGroupManagerVersionTargetSize {
 	Fixed: *f64,
@@ -2516,7 +2516,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerAutoHealingPoliciesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference
 ```
@@ -2809,7 +2809,7 @@ func InternalValue() ComputeInstanceGroupManagerAutoHealingPolicies
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerInstanceLifecyclePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerInstanceLifecyclePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceGroupManagerInstanceLifecyclePolicyOutputReference
 ```
@@ -3087,7 +3087,7 @@ func InternalValue() ComputeInstanceGroupManagerInstanceLifecyclePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerNamedPortList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerNamedPortList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerNamedPortList
 ```
@@ -3230,7 +3230,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerNamedPortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerNamedPortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerNamedPortOutputReference
 ```
@@ -3541,7 +3541,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatefulDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerStatefulDiskList
 ```
@@ -3684,7 +3684,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatefulDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerStatefulDiskOutputReference
 ```
@@ -4002,7 +4002,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulExternalIpList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatefulExternalIpList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerStatefulExternalIpList
 ```
@@ -4145,7 +4145,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulExternalIpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatefulExternalIpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerStatefulExternalIpOutputReference
 ```
@@ -4470,7 +4470,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulInternalIpList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatefulInternalIpList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerStatefulInternalIpList
 ```
@@ -4613,7 +4613,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatefulInternalIpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatefulInternalIpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerStatefulInternalIpOutputReference
 ```
@@ -4938,7 +4938,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerStatusList
 ```
@@ -5070,7 +5070,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerStatusOutputReference
 ```
@@ -5370,7 +5370,7 @@ func InternalValue() ComputeInstanceGroupManagerStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusStatefulList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusStatefulList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerStatusStatefulList
 ```
@@ -5502,7 +5502,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusStatefulOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusStatefulOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerStatusStatefulOutputReference
 ```
@@ -5791,7 +5791,7 @@ func InternalValue() ComputeInstanceGroupManagerStatusStateful
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsList
 ```
@@ -5923,7 +5923,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsOutputReference
 ```
@@ -6201,7 +6201,7 @@ func InternalValue() ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusVersionTargetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusVersionTargetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerStatusVersionTargetList
 ```
@@ -6333,7 +6333,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerStatusVersionTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerStatusVersionTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerStatusVersionTargetOutputReference
 ```
@@ -6611,7 +6611,7 @@ func InternalValue() ComputeInstanceGroupManagerStatusVersionTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceGroupManagerTimeoutsOutputReference
 ```
@@ -6947,7 +6947,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerUpdatePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerUpdatePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceGroupManagerUpdatePolicyOutputReference
 ```
@@ -7414,7 +7414,7 @@ func InternalValue() ComputeInstanceGroupManagerUpdatePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerVersionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerVersionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupManagerVersionList
 ```
@@ -7557,7 +7557,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerVersionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerVersionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupManagerVersionOutputReference
 ```
@@ -7917,7 +7917,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroupManager.ComputeInstanceGroupManagerVersionTargetSizeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroupmanager"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeinstancegroupmanager"
 
 computeinstancegroupmanager.NewComputeInstanceGroupManagerVersionTargetSizeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceGroupManagerVersionTargetSizeOutputReference
 ```
