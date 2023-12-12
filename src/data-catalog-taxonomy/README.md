@@ -1,3 +1,3 @@
 # `google_data_catalog_taxonomy`
 
-Refer to the Terraform Registory for docs: [`google_data_catalog_taxonomy`](https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/data_catalog_taxonomy).
+Refer to the Terraform Registory for docs: [`google_data_catalog_taxonomy`](https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/data_catalog_taxonomy).

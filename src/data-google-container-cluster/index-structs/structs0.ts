@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 import * as cdktf from 'cdktf';
 export interface DataGoogleContainerClusterAddonsConfigCloudrunConfig {
 }
@@ -1568,6 +1563,11 @@ export class DataGoogleContainerClusterClusterAutoscalingOutputReference extends
   private _autoProvisioningDefaults = new DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefaultsList(this, "auto_provisioning_defaults", false);
   public get autoProvisioningDefaults() {
     return this._autoProvisioningDefaults;
+  }
+
+  // autoscaling_profile - computed: true, optional: false, required: false
+  public get autoscalingProfile() {
+    return this.getStringAttribute('autoscaling_profile');
   }
 
   // enabled - computed: true, optional: false, required: false

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership
+// https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaA
   /**
   * The name of the Group to create this membership in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#group CloudIdentityGroupMembership#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#group CloudIdentityGroupMembership#group}
   */
   readonly group: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,19 +23,19 @@ export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaA
   /**
   * preferred_member_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#preferred_member_key CloudIdentityGroupMembership#preferred_member_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#preferred_member_key CloudIdentityGroupMembership#preferred_member_key}
   */
   readonly preferredMemberKey?: CloudIdentityGroupMembershipPreferredMemberKey;
   /**
   * roles block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#roles CloudIdentityGroupMembership#roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#roles CloudIdentityGroupMembership#roles}
   */
   readonly roles: CloudIdentityGroupMembershipRoles[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#timeouts CloudIdentityGroupMembership#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#timeouts CloudIdentityGroupMembership#timeouts}
   */
   readonly timeouts?: CloudIdentityGroupMembershipTimeouts;
 }
@@ -56,7 +51,7 @@ export interface CloudIdentityGroupMembershipPreferredMemberKey {
   * 
   * Must be unique within a namespace.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -72,7 +67,7 @@ export interface CloudIdentityGroupMembershipPreferredMemberKey {
   * The namespace must correspond to an identity source created in Admin Console
   * and must be in the form of 'identitysources/{identity_source_id}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#namespace CloudIdentityGroupMembership#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#namespace CloudIdentityGroupMembership#namespace}
   */
   readonly namespace?: string;
 }
@@ -155,13 +150,88 @@ export class CloudIdentityGroupMembershipPreferredMemberKeyOutputReference exten
     return this._namespace;
   }
 }
+export interface CloudIdentityGroupMembershipRolesExpiryDetail {
+  /**
+  * The time at which the MembershipRole will expire.
+  * 
+  * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+  * resolution and up to nine fractional digits.
+  * 
+  * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#expire_time CloudIdentityGroupMembership#expire_time}
+  */
+  readonly expireTime: string;
+}
+
+export function cloudIdentityGroupMembershipRolesExpiryDetailToTerraform(struct?: CloudIdentityGroupMembershipRolesExpiryDetailOutputReference | CloudIdentityGroupMembershipRolesExpiryDetail): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    expire_time: cdktf.stringToTerraform(struct!.expireTime),
+  }
+}
+
+export class CloudIdentityGroupMembershipRolesExpiryDetailOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudIdentityGroupMembershipRolesExpiryDetail | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._expireTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expireTime = this._expireTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudIdentityGroupMembershipRolesExpiryDetail | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._expireTime = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._expireTime = value.expireTime;
+    }
+  }
+
+  // expire_time - computed: false, optional: false, required: true
+  private _expireTime?: string; 
+  public get expireTime() {
+    return this.getStringAttribute('expire_time');
+  }
+  public set expireTime(value: string) {
+    this._expireTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expireTimeInput() {
+    return this._expireTime;
+  }
+}
 export interface CloudIdentityGroupMembershipRoles {
   /**
   * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: ["OWNER", "MANAGER", "MEMBER"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#name CloudIdentityGroupMembership#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#name CloudIdentityGroupMembership#name}
   */
   readonly name: string;
+  /**
+  * expiry_detail block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#expiry_detail CloudIdentityGroupMembership#expiry_detail}
+  */
+  readonly expiryDetail?: CloudIdentityGroupMembershipRolesExpiryDetail;
 }
 
 export function cloudIdentityGroupMembershipRolesToTerraform(struct?: CloudIdentityGroupMembershipRoles | cdktf.IResolvable): any {
@@ -171,6 +241,7 @@ export function cloudIdentityGroupMembershipRolesToTerraform(struct?: CloudIdent
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
+    expiry_detail: cloudIdentityGroupMembershipRolesExpiryDetailToTerraform(struct!.expiryDetail),
   }
 }
 
@@ -198,6 +269,10 @@ export class CloudIdentityGroupMembershipRolesOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._expiryDetail?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expiryDetail = this._expiryDetail?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -206,6 +281,7 @@ export class CloudIdentityGroupMembershipRolesOutputReference extends cdktf.Comp
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._name = undefined;
+      this._expiryDetail.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -215,6 +291,7 @@ export class CloudIdentityGroupMembershipRolesOutputReference extends cdktf.Comp
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._name = value.name;
+      this._expiryDetail.internalValue = value.expiryDetail;
     }
   }
 
@@ -229,6 +306,22 @@ export class CloudIdentityGroupMembershipRolesOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // expiry_detail - computed: false, optional: true, required: false
+  private _expiryDetail = new CloudIdentityGroupMembershipRolesExpiryDetailOutputReference(this, "expiry_detail");
+  public get expiryDetail() {
+    return this._expiryDetail;
+  }
+  public putExpiryDetail(value: CloudIdentityGroupMembershipRolesExpiryDetail) {
+    this._expiryDetail.internalValue = value;
+  }
+  public resetExpiryDetail() {
+    this._expiryDetail.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expiryDetailInput() {
+    return this._expiryDetail.internalValue;
   }
 }
 
@@ -253,15 +346,15 @@ export class CloudIdentityGroupMembershipRolesList extends cdktf.ComplexList {
 }
 export interface CloudIdentityGroupMembershipTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#create CloudIdentityGroupMembership#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#create CloudIdentityGroupMembership#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#delete CloudIdentityGroupMembership#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#delete CloudIdentityGroupMembership#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#update CloudIdentityGroupMembership#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#update CloudIdentityGroupMembership#update}
   */
   readonly update?: string;
 }
@@ -382,7 +475,7 @@ export class CloudIdentityGroupMembershipTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership google_cloud_identity_group_membership}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership google_cloud_identity_group_membership}
 */
 export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
 
@@ -398,7 +491,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudIdentityGroupMembership resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudIdentityGroupMembership to import
-  * @param importFromId The id of the existing CloudIdentityGroupMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudIdentityGroupMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudIdentityGroupMembership to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -410,7 +503,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.8.0/docs/resources/cloud_identity_group_membership google_cloud_identity_group_membership} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_identity_group_membership google_cloud_identity_group_membership} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -421,7 +514,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_identity_group_membership',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.8.0',
+        providerVersion: '5.9.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -1,0 +1,775 @@
+# `dataGoogleLoggingFolderSettings` Submodule <a name="`dataGoogleLoggingFolderSettings` Submodule" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings"></a>
+
+## Constructs <a name="Constructs" id="Constructs"></a>
+
+### DataGoogleLoggingFolderSettings <a name="DataGoogleLoggingFolderSettings" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings"></a>
+
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/logging_folder_settings google_logging_folder_settings}.
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer"></a>
+
+```typescript
+import { dataGoogleLoggingFolderSettings } from '@cdktf/provider-google'
+
+new dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings(scope: Construct, id: string, config: DataGoogleLoggingFolderSettingsConfig)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.id">id</a></code> | <code>string</code> | The scoped construct ID. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig">DataGoogleLoggingFolderSettingsConfig</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+---
+
+##### `config`<sup>Required</sup> <a name="config" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.config"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig">DataGoogleLoggingFolderSettingsConfig</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.resetId">resetId</a></code> | *No description.* |
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `addOverride` <a name="addOverride" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.addOverride"></a>
+
+```typescript
+public addOverride(path: string, value: any): void
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.addOverride.parameter.value"></a>
+
+- *Type:* any
+
+---
+
+##### `overrideLogicalId` <a name="overrideLogicalId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.overrideLogicalId"></a>
+
+```typescript
+public overrideLogicalId(newLogicalId: string): void
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.resetOverrideLogicalId"></a>
+
+```typescript
+public resetOverrideLogicalId(): void
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toMetadata` <a name="toMetadata" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.toMetadata"></a>
+
+```typescript
+public toMetadata(): any
+```
+
+##### `toTerraform` <a name="toTerraform" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.toTerraform"></a>
+
+```typescript
+public toTerraform(): any
+```
+
+Adds this resource to the terraform JSON output.
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `resetId` <a name="resetId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.resetId"></a>
+
+```typescript
+public resetId(): void
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a DataGoogleLoggingFolderSettings resource upon running "cdktf plan <stack-name>". |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isConstruct"></a>
+
+```typescript
+import { dataGoogleLoggingFolderSettings } from '@cdktf/provider-google'
+
+dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformElement"></a>
+
+```typescript
+import { dataGoogleLoggingFolderSettings } from '@cdktf/provider-google'
+
+dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `isTerraformDataSource` <a name="isTerraformDataSource" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformDataSource"></a>
+
+```typescript
+import { dataGoogleLoggingFolderSettings } from '@cdktf/provider-google'
+
+dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformDataSource(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformDataSource.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport"></a>
+
+```typescript
+import { dataGoogleLoggingFolderSettings } from '@cdktf/provider-google'
+
+dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
+```
+
+Generates CDKTF code for importing a DataGoogleLoggingFolderSettings resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* string
+
+The construct id used in the generated config for the DataGoogleLoggingFolderSettings to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* string
+
+The id of the existing DataGoogleLoggingFolderSettings that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/logging_folder_settings#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataGoogleLoggingFolderSettings to import is found.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.disableDefaultSink">disableDefaultSink</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.kmsKeyName">kmsKeyName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.kmsServiceAccountId">kmsServiceAccountId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.loggingServiceAccountId">loggingServiceAccountId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.storageLocation">storageLocation</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.folderInput">folderInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.folder">folder</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.cdktfStack"></a>
+
+```typescript
+public readonly cdktfStack: TerraformStack;
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.friendlyUniqueId"></a>
+
+```typescript
+public readonly friendlyUniqueId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.terraformMetaArguments"></a>
+
+```typescript
+public readonly terraformMetaArguments: {[ key: string ]: any};
+```
+
+- *Type:* {[ key: string ]: any}
+
+---
+
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.terraformResourceType"></a>
+
+```typescript
+public readonly terraformResourceType: string;
+```
+
+- *Type:* string
+
+---
+
+##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.terraformGeneratorMetadata"></a>
+
+```typescript
+public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
+```
+
+- *Type:* cdktf.TerraformProviderGeneratorMetadata
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.count"></a>
+
+```typescript
+public readonly count: number | TerraformCount;
+```
+
+- *Type:* number | cdktf.TerraformCount
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.lifecycle"></a>
+
+```typescript
+public readonly lifecycle: TerraformResourceLifecycle;
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.provider"></a>
+
+```typescript
+public readonly provider: TerraformProvider;
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `disableDefaultSink`<sup>Required</sup> <a name="disableDefaultSink" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.disableDefaultSink"></a>
+
+```typescript
+public readonly disableDefaultSink: IResolvable;
+```
+
+- *Type:* cdktf.IResolvable
+
+---
+
+##### `kmsKeyName`<sup>Required</sup> <a name="kmsKeyName" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.kmsKeyName"></a>
+
+```typescript
+public readonly kmsKeyName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsServiceAccountId`<sup>Required</sup> <a name="kmsServiceAccountId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.kmsServiceAccountId"></a>
+
+```typescript
+public readonly kmsServiceAccountId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loggingServiceAccountId`<sup>Required</sup> <a name="loggingServiceAccountId" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.loggingServiceAccountId"></a>
+
+```typescript
+public readonly loggingServiceAccountId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `storageLocation`<sup>Required</sup> <a name="storageLocation" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.storageLocation"></a>
+
+```typescript
+public readonly storageLocation: string;
+```
+
+- *Type:* string
+
+---
+
+##### `folderInput`<sup>Optional</sup> <a name="folderInput" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.folderInput"></a>
+
+```typescript
+public readonly folderInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `folder`<sup>Required</sup> <a name="folder" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.folder"></a>
+
+```typescript
+public readonly folder: string;
+```
+
+- *Type:* string
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* string
+
+---
+
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.tfResourceType">tfResourceType</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.property.tfResourceType"></a>
+
+```typescript
+public readonly tfResourceType: string;
+```
+
+- *Type:* string
+
+---
+
+## Structs <a name="Structs" id="Structs"></a>
+
+### DataGoogleLoggingFolderSettingsConfig <a name="DataGoogleLoggingFolderSettingsConfig" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.Initializer"></a>
+
+```typescript
+import { dataGoogleLoggingFolderSettings } from '@cdktf/provider-google'
+
+const dataGoogleLoggingFolderSettingsConfig: dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.folder">folder</a></code> | <code>string</code> | The folder for which to retrieve settings. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}. |
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.connection"></a>
+
+```typescript
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.count"></a>
+
+```typescript
+public readonly count: number | TerraformCount;
+```
+
+- *Type:* number | cdktf.TerraformCount
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: ITerraformDependable[];
+```
+
+- *Type:* cdktf.ITerraformDependable[]
+
+---
+
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.lifecycle"></a>
+
+```typescript
+public readonly lifecycle: TerraformResourceLifecycle;
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provider"></a>
+
+```typescript
+public readonly provider: TerraformProvider;
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner[];
+```
+
+- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+
+---
+
+##### `folder`<sup>Required</sup> <a name="folder" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.folder"></a>
+
+```typescript
+public readonly folder: string;
+```
+
+- *Type:* string
+
+The folder for which to retrieve settings.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/logging_folder_settings#folder DataGoogleLoggingFolderSettings#folder}
+
+---
+
+##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+
+
