@@ -1570,6 +1570,11 @@ export class DataGoogleContainerClusterClusterAutoscalingOutputReference extends
     return this._autoProvisioningDefaults;
   }
 
+  // autoscaling_profile - computed: true, optional: false, required: false
+  public get autoscalingProfile() {
+    return this.getStringAttribute('autoscaling_profile');
+  }
+
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
