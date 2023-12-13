@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstance(scope Construct, id *string, config DataGoogleSqlDatabaseInstanceConfig) DataGoogleSqlDatabaseInstance
 ```
@@ -281,7 +281,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstance_IsConstruct(x interface{}) *bool
 ```
@@ -313,7 +313,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -327,7 +327,7 @@ datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstance_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstance.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstance_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -341,7 +341,7 @@ datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstance_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -867,7 +867,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceClone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceClone {
 
@@ -880,7 +880,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceConfig {
 	Connection: interface{},
@@ -1035,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceIpAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceIpAddress {
 
@@ -1048,7 +1048,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceReplicaConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceReplicaConfiguration {
 
@@ -1061,7 +1061,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceRestoreBackupContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceRestoreBackupContext {
 
@@ -1074,7 +1074,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceServerCaCert.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceServerCaCert {
 
@@ -1087,7 +1087,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettings {
 
@@ -1100,7 +1100,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfig {
 
@@ -1113,7 +1113,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeatures {
 
@@ -1126,7 +1126,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration {
 
@@ -1139,7 +1139,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
 
@@ -1152,7 +1152,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags {
 
@@ -1165,7 +1165,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDataCacheConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsDataCacheConfig {
 
@@ -1178,7 +1178,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriod.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriod {
 
@@ -1191,7 +1191,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsInsightsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsInsightsConfig {
 
@@ -1204,7 +1204,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsIpConfiguration {
 
@@ -1217,7 +1217,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
 
@@ -1230,7 +1230,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfig {
 
@@ -1243,7 +1243,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsLocationPreference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsLocationPreference {
 
@@ -1256,7 +1256,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow {
 
@@ -1269,7 +1269,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicy {
 
@@ -1282,7 +1282,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 &datagooglesqldatabaseinstance.DataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfig {
 
@@ -1297,7 +1297,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldataba
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceCloneList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceCloneList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceCloneList
 ```
@@ -1429,7 +1429,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceCloneOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceCloneOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceCloneOutputReference
 ```
@@ -1751,7 +1751,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceClone
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceIpAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceIpAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceIpAddressList
 ```
@@ -1883,7 +1883,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceIpAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceIpAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceIpAddressOutputReference
 ```
@@ -2183,7 +2183,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceIpAddress
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceReplicaConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceReplicaConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceReplicaConfigurationList
 ```
@@ -2315,7 +2315,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceReplicaConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceReplicaConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceReplicaConfigurationOutputReference
 ```
@@ -2703,7 +2703,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceReplicaConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceRestoreBackupContextList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceRestoreBackupContextList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceRestoreBackupContextList
 ```
@@ -2835,7 +2835,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceRestoreBackupContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceRestoreBackupContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceRestoreBackupContextOutputReference
 ```
@@ -3135,7 +3135,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceRestoreBackupContext
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceServerCaCertList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceServerCaCertList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceServerCaCertList
 ```
@@ -3267,7 +3267,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceServerCaCertOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceServerCaCertOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceServerCaCertOutputReference
 ```
@@ -3589,7 +3589,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceServerCaCert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigList
 ```
@@ -3721,7 +3721,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference
 ```
@@ -3999,7 +3999,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeaturesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeaturesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeaturesList
 ```
@@ -4131,7 +4131,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeaturesOutputReference
 ```
@@ -4409,7 +4409,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsAdvancedMachineFeature
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsList
 ```
@@ -4541,7 +4541,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference
 ```
@@ -4830,7 +4830,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBac
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsBackupConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationList
 ```
@@ -4962,7 +4962,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsBackupConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationOutputReference
 ```
@@ -5306,7 +5306,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsList
 ```
@@ -5438,7 +5438,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference
 ```
@@ -5727,7 +5727,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDataCacheConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsDataCacheConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsDataCacheConfigList
 ```
@@ -5859,7 +5859,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDataCacheConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsDataCacheConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsDataCacheConfigOutputReference
 ```
@@ -6137,7 +6137,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsDataCacheConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodList
 ```
@@ -6269,7 +6269,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference
 ```
@@ -6569,7 +6569,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriod
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsInsightsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsInsightsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsInsightsConfigList
 ```
@@ -6701,7 +6701,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsInsightsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsInsightsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsInsightsConfigOutputReference
 ```
@@ -7023,7 +7023,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsInsightsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList
 ```
@@ -7155,7 +7155,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference
 ```
@@ -7455,7 +7455,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthori
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsIpConfigurationList
 ```
@@ -7587,7 +7587,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference
 ```
@@ -7942,7 +7942,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigList
 ```
@@ -8074,7 +8074,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConfigOutputReference
 ```
@@ -8363,7 +8363,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsIpConfigurationPscConf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsList
 ```
@@ -8495,7 +8495,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsLocationPreferenceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceList
 ```
@@ -8627,7 +8627,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsLocationPreferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceOutputReference
 ```
@@ -8927,7 +8927,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsLocationPreference
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowList
 ```
@@ -9059,7 +9059,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference
 ```
@@ -9359,7 +9359,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsOutputReference
 ```
@@ -9923,7 +9923,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyList
 ```
@@ -10055,7 +10055,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference
 ```
@@ -10388,7 +10388,7 @@ func InternalValue() DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPoli
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfigList
 ```
@@ -10520,7 +10520,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabaseInstance.DataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesqldatabaseinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabaseinstance"
 
 datagooglesqldatabaseinstance.NewDataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference
 ```
