@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSecureSourceManagerInstanceIamPolicy.DataGoogleSecureSourceManagerInstanceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecuresourcemanagerinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecuresourcemanagerinstanceiampolicy"
 
 datagooglesecuresourcemanagerinstanceiampolicy.NewDataGoogleSecureSourceManagerInstanceIamPolicy(scope Construct, id *string, config DataGoogleSecureSourceManagerInstanceIamPolicyConfig) DataGoogleSecureSourceManagerInstanceIamPolicy
 ```
@@ -288,7 +288,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSecureSourceManagerInstanceIamPolicy.DataGoogleSecureSourceManagerInstanceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecuresourcemanagerinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecuresourcemanagerinstanceiampolicy"
 
 datagooglesecuresourcemanagerinstanceiampolicy.DataGoogleSecureSourceManagerInstanceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSecureSourceManagerInstanceIamPolicy.DataGoogleSecureSourceManagerInstanceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecuresourcemanagerinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecuresourcemanagerinstanceiampolicy"
 
 datagooglesecuresourcemanagerinstanceiampolicy.DataGoogleSecureSourceManagerInstanceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagooglesecuresourcemanagerinstanceiampolicy.DataGoogleSecureSourceManagerInst
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSecureSourceManagerInstanceIamPolicy.DataGoogleSecureSourceManagerInstanceIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecuresourcemanagerinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecuresourcemanagerinstanceiampolicy"
 
 datagooglesecuresourcemanagerinstanceiampolicy.DataGoogleSecureSourceManagerInstanceIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +348,7 @@ datagooglesecuresourcemanagerinstanceiampolicy.DataGoogleSecureSourceManagerInst
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSecureSourceManagerInstanceIamPolicy.DataGoogleSecureSourceManagerInstanceIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecuresourcemanagerinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecuresourcemanagerinstanceiampolicy"
 
 datagooglesecuresourcemanagerinstanceiampolicy.DataGoogleSecureSourceManagerInstanceIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -665,7 +665,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSecureSourceManagerInstanceIamPolicy.DataGoogleSecureSourceManagerInstanceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglesecuresourcemanagerinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecuresourcemanagerinstanceiampolicy"
 
 &datagooglesecuresourcemanagerinstanceiampolicy.DataGoogleSecureSourceManagerInstanceIamPolicyConfig {
 	Connection: interface{},

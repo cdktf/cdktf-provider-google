@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.NewDataGoogleIamRole(scope Construct, id *string, config DataGoogleIamRoleConfig) DataGoogleIamRole
 ```
@@ -274,7 +274,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.DataGoogleIamRole_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +306,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.DataGoogleIamRole_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ datagoogleiamrole.DataGoogleIamRole_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.DataGoogleIamRole_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagoogleiamrole.DataGoogleIamRole_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.DataGoogleIamRole_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -618,7 +618,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 &datagoogleiamrole.DataGoogleIamRoleConfig {
 	Connection: interface{},
