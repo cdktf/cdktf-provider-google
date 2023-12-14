@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnection(scope Construct, id *string, config BigqueryConnectionConfig) BigqueryConnection
 ```
@@ -553,7 +553,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.BigqueryConnection_IsConstruct(x interface{}) *bool
 ```
@@ -585,7 +585,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.BigqueryConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -599,7 +599,7 @@ bigqueryconnection.BigqueryConnection_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.BigqueryConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -613,7 +613,7 @@ bigqueryconnection.BigqueryConnection_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.BigqueryConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1150,10 +1150,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionAws.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionAws {
-	AccessRole: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionAwsAccessRole,
+	AccessRole: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionAwsAccessRole,
 }
 ```
 
@@ -1184,7 +1184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionAwsAccessRole.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionAwsAccessRole {
 	IamRoleId: *string,
@@ -1218,7 +1218,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionAzure.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionAzure {
 	CustomerTenantId: *string,
@@ -1268,7 +1268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionCloudResource {
 
@@ -1281,7 +1281,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudSpanner.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionCloudSpanner {
 	Database: *string,
@@ -1403,10 +1403,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudSql.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionCloudSql {
-	Credential: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionCloudSqlCredential,
+	Credential: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionCloudSqlCredential,
 	Database: *string,
 	InstanceId: *string,
 	Type: *string,
@@ -1485,7 +1485,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudSqlCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionCloudSqlCredential {
 	Password: *string,
@@ -1535,7 +1535,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionConfig {
 	Connection: interface{},
@@ -1545,19 +1545,19 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Aws: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionAws,
-	Azure: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionAzure,
-	CloudResource: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionCloudResource,
-	CloudSpanner: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionCloudSpanner,
-	CloudSql: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionCloudSql,
+	Aws: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionAws,
+	Azure: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionAzure,
+	CloudResource: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionCloudResource,
+	CloudSpanner: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionCloudSpanner,
+	CloudSql: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionCloudSql,
 	ConnectionId: *string,
 	Description: *string,
 	FriendlyName: *string,
 	Id: *string,
 	Location: *string,
 	Project: *string,
-	Spark: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionSpark,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionTimeouts,
+	Spark: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionSpark,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionTimeouts,
 }
 ```
 
@@ -1851,11 +1851,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionSpark.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionSpark {
-	MetastoreServiceConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionSparkMetastoreServiceConfig,
-	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryConnection.BigqueryConnectionSparkSparkHistoryServerConfig,
+	MetastoreServiceConfig: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionSparkMetastoreServiceConfig,
+	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnection.BigqueryConnectionSparkSparkHistoryServerConfig,
 }
 ```
 
@@ -1901,7 +1901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionSparkMetastoreServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionSparkMetastoreServiceConfig {
 	MetastoreService: *string,
@@ -1935,7 +1935,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionSparkSparkHistoryServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionSparkSparkHistoryServerConfig {
 	DataprocCluster: *string,
@@ -1969,7 +1969,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 &bigqueryconnection.BigqueryConnectionTimeouts {
 	Create: *string,
@@ -2031,7 +2031,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionAwsAccessRoleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionAwsAccessRoleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionAwsAccessRoleOutputReference
 ```
@@ -2313,7 +2313,7 @@ func InternalValue() BigqueryConnectionAwsAccessRole
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionAwsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionAwsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionAwsOutputReference
 ```
@@ -2597,7 +2597,7 @@ func InternalValue() BigqueryConnectionAws
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionAzureOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionAzureOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionAzureOutputReference
 ```
@@ -2952,7 +2952,7 @@ func InternalValue() BigqueryConnectionAzure
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudResourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionCloudResourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionCloudResourceOutputReference
 ```
@@ -3212,7 +3212,7 @@ func InternalValue() BigqueryConnectionCloudResource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudSpannerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionCloudSpannerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionCloudSpannerOutputReference
 ```
@@ -3628,7 +3628,7 @@ func InternalValue() BigqueryConnectionCloudSpanner
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudSqlCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionCloudSqlCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionCloudSqlCredentialOutputReference
 ```
@@ -3921,7 +3921,7 @@ func InternalValue() BigqueryConnectionCloudSqlCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionCloudSqlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionCloudSqlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionCloudSqlOutputReference
 ```
@@ -4282,7 +4282,7 @@ func InternalValue() BigqueryConnectionCloudSql
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionSparkMetastoreServiceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionSparkMetastoreServiceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionSparkMetastoreServiceConfigOutputReference
 ```
@@ -4560,7 +4560,7 @@ func InternalValue() BigqueryConnectionSparkMetastoreServiceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionSparkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionSparkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionSparkOutputReference
 ```
@@ -4904,7 +4904,7 @@ func InternalValue() BigqueryConnectionSpark
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionSparkSparkHistoryServerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionSparkSparkHistoryServerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionSparkSparkHistoryServerConfigOutputReference
 ```
@@ -5182,7 +5182,7 @@ func InternalValue() BigqueryConnectionSparkSparkHistoryServerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnection.BigqueryConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnection"
 
 bigqueryconnection.NewBigqueryConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionTimeoutsOutputReference
 ```
