@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 cloudrunv2serviceiambinding.NewCloudRunV2ServiceIamBinding(scope Construct, id *string, config CloudRunV2ServiceIamBindingConfig) CloudRunV2ServiceIamBinding
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 cloudrunv2serviceiambinding.CloudRunV2ServiceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 cloudrunv2serviceiambinding.CloudRunV2ServiceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ cloudrunv2serviceiambinding.CloudRunV2ServiceIamBinding_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 cloudrunv2serviceiambinding.CloudRunV2ServiceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ cloudrunv2serviceiambinding.CloudRunV2ServiceIamBinding_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 cloudrunv2serviceiambinding.CloudRunV2ServiceIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 &cloudrunv2serviceiambinding.CloudRunV2ServiceIamBindingCondition {
 	Expression: *string,
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 &cloudrunv2serviceiambinding.CloudRunV2ServiceIamBindingConfig {
 	Connection: interface{},
@@ -939,7 +939,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambin
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunV2ServiceIamBinding.CloudRunV2ServiceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2serviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrunv2serviceiambinding"
 
 cloudrunv2serviceiambinding.NewCloudRunV2ServiceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunV2ServiceIamBindingConditionOutputReference
 ```
