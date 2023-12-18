@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicyIamPolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleaccesscontextmanageraccesspolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccesscontextmanageraccesspolicyiampolicy"
 
 datagoogleaccesscontextmanageraccesspolicyiampolicy.NewDataGoogleAccessContextManagerAccessPolicyIamPolicy(scope Construct, id *string, config DataGoogleAccessContextManagerAccessPolicyIamPolicyConfig) DataGoogleAccessContextManagerAccessPolicyIamPolicy
 ```
@@ -274,7 +274,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicyIamPolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleaccesscontextmanageraccesspolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccesscontextmanageraccesspolicyiampolicy"
 
 datagoogleaccesscontextmanageraccesspolicyiampolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +306,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicyIamPolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleaccesscontextmanageraccesspolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccesscontextmanageraccesspolicyiampolicy"
 
 datagoogleaccesscontextmanageraccesspolicyiampolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ datagoogleaccesscontextmanageraccesspolicyiampolicy.DataGoogleAccessContextManag
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicyIamPolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleaccesscontextmanageraccesspolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccesscontextmanageraccesspolicyiampolicy"
 
 datagoogleaccesscontextmanageraccesspolicyiampolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagoogleaccesscontextmanageraccesspolicyiampolicy.DataGoogleAccessContextManag
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicyIamPolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleaccesscontextmanageraccesspolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccesscontextmanageraccesspolicyiampolicy"
 
 datagoogleaccesscontextmanageraccesspolicyiampolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -607,7 +607,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicyIamPolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleaccesscontextmanageraccesspolicyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccesscontextmanageraccesspolicyiampolicy"
 
 &datagoogleaccesscontextmanageraccesspolicyiampolicy.DataGoogleAccessContextManagerAccessPolicyIamPolicyConfig {
 	Connection: interface{},

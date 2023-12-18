@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.NewDataGoogleMonitoringAppEngineService(scope Construct, id *string, config DataGoogleMonitoringAppEngineServiceConfig) DataGoogleMonitoringAppEngineService
 ```
@@ -281,7 +281,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsConstruct(x interface{}) *bool
 ```
@@ -313,7 +313,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsTerraformElement(x interface{}) *bool
 ```
@@ -327,7 +327,7 @@ datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -341,7 +341,7 @@ datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -669,7 +669,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 &datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineServiceConfig {
 	Connection: interface{},
@@ -821,7 +821,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceTelemetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 &datagooglemonitoringappengineservice.DataGoogleMonitoringAppEngineServiceTelemetry {
 
@@ -836,7 +836,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitorin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceTelemetryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.NewDataGoogleMonitoringAppEngineServiceTelemetryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleMonitoringAppEngineServiceTelemetryList
 ```
@@ -968,7 +968,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringAppEngineService.DataGoogleMonitoringAppEngineServiceTelemetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglemonitoringappengineservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringappengineservice"
 
 datagooglemonitoringappengineservice.NewDataGoogleMonitoringAppEngineServiceTelemetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleMonitoringAppEngineServiceTelemetryOutputReference
 ```
