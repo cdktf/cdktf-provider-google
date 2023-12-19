@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance
+// https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface SecureSourceManagerInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#id SecureSourceManagerInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#id SecureSourceManagerInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,9 +17,17 @@ export interface SecureSourceManagerInstanceConfig extends cdktf.TerraformMetaAr
   /**
   * The name for the Instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#instance_id SecureSourceManagerInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#instance_id SecureSourceManagerInstance#instance_id}
   */
   readonly instanceId: string;
+  /**
+  * Customer-managed encryption key name, in the format projects/* /locations/* /keyRings/* /cryptoKeys/*.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#kms_key SecureSourceManagerInstance#kms_key}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly kmsKey?: string;
   /**
   * Labels as key value pairs.
   * 
@@ -32,33 +35,218 @@ export interface SecureSourceManagerInstanceConfig extends cdktf.TerraformMetaAr
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#labels SecureSourceManagerInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#labels SecureSourceManagerInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the Instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#location SecureSourceManagerInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#location SecureSourceManagerInstance#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#project SecureSourceManagerInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#project SecureSourceManagerInstance#project}
   */
   readonly project?: string;
   /**
+  * private_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#private_config SecureSourceManagerInstance#private_config}
+  */
+  readonly privateConfig?: SecureSourceManagerInstancePrivateConfig;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#timeouts SecureSourceManagerInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#timeouts SecureSourceManagerInstance#timeouts}
   */
   readonly timeouts?: SecureSourceManagerInstanceTimeouts;
 }
+export interface SecureSourceManagerInstanceHostConfig {
+}
+
+export function secureSourceManagerInstanceHostConfigToTerraform(struct?: SecureSourceManagerInstanceHostConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class SecureSourceManagerInstanceHostConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SecureSourceManagerInstanceHostConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecureSourceManagerInstanceHostConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // api - computed: true, optional: false, required: false
+  public get api() {
+    return this.getStringAttribute('api');
+  }
+
+  // git_http - computed: true, optional: false, required: false
+  public get gitHttp() {
+    return this.getStringAttribute('git_http');
+  }
+
+  // git_ssh - computed: true, optional: false, required: false
+  public get gitSsh() {
+    return this.getStringAttribute('git_ssh');
+  }
+
+  // html - computed: true, optional: false, required: false
+  public get html() {
+    return this.getStringAttribute('html');
+  }
+}
+
+export class SecureSourceManagerInstanceHostConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SecureSourceManagerInstanceHostConfigOutputReference {
+    return new SecureSourceManagerInstanceHostConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SecureSourceManagerInstancePrivateConfig {
+  /**
+  * CA pool resource, resource must in the format of 'projects/{project}/locations/{location}/caPools/{ca_pool}'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#ca_pool SecureSourceManagerInstance#ca_pool}
+  */
+  readonly caPool: string;
+  /**
+  * 'Indicate if it's private instance.'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#is_private SecureSourceManagerInstance#is_private}
+  */
+  readonly isPrivate: boolean | cdktf.IResolvable;
+}
+
+export function secureSourceManagerInstancePrivateConfigToTerraform(struct?: SecureSourceManagerInstancePrivateConfigOutputReference | SecureSourceManagerInstancePrivateConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ca_pool: cdktf.stringToTerraform(struct!.caPool),
+    is_private: cdktf.booleanToTerraform(struct!.isPrivate),
+  }
+}
+
+export class SecureSourceManagerInstancePrivateConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SecureSourceManagerInstancePrivateConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._caPool !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.caPool = this._caPool;
+    }
+    if (this._isPrivate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isPrivate = this._isPrivate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecureSourceManagerInstancePrivateConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._caPool = undefined;
+      this._isPrivate = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._caPool = value.caPool;
+      this._isPrivate = value.isPrivate;
+    }
+  }
+
+  // ca_pool - computed: false, optional: false, required: true
+  private _caPool?: string; 
+  public get caPool() {
+    return this.getStringAttribute('ca_pool');
+  }
+  public set caPool(value: string) {
+    this._caPool = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get caPoolInput() {
+    return this._caPool;
+  }
+
+  // http_service_attachment - computed: true, optional: false, required: false
+  public get httpServiceAttachment() {
+    return this.getStringAttribute('http_service_attachment');
+  }
+
+  // is_private - computed: false, optional: false, required: true
+  private _isPrivate?: boolean | cdktf.IResolvable; 
+  public get isPrivate() {
+    return this.getBooleanAttribute('is_private');
+  }
+  public set isPrivate(value: boolean | cdktf.IResolvable) {
+    this._isPrivate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isPrivateInput() {
+    return this._isPrivate;
+  }
+
+  // ssh_service_attachment - computed: true, optional: false, required: false
+  public get sshServiceAttachment() {
+    return this.getStringAttribute('ssh_service_attachment');
+  }
+}
 export interface SecureSourceManagerInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#create SecureSourceManagerInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#create SecureSourceManagerInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#delete SecureSourceManagerInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#delete SecureSourceManagerInstance#delete}
   */
   readonly delete?: string;
 }
@@ -156,7 +344,7 @@ export class SecureSourceManagerInstanceTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance google_secure_source_manager_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance google_secure_source_manager_instance}
 */
 export class SecureSourceManagerInstance extends cdktf.TerraformResource {
 
@@ -172,7 +360,7 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SecureSourceManagerInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SecureSourceManagerInstance to import
-  * @param importFromId The id of the existing SecureSourceManagerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SecureSourceManagerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SecureSourceManagerInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -184,7 +372,7 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance google_secure_source_manager_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance google_secure_source_manager_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -195,7 +383,7 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_secure_source_manager_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.9.0',
+        providerVersion: '5.10.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -208,9 +396,11 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._instanceId = config.instanceId;
+    this._kmsKey = config.kmsKey;
     this._labels = config.labels;
     this._location = config.location;
     this._project = config.project;
+    this._privateConfig.internalValue = config.privateConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -227,6 +417,12 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
   private _effectiveLabels = new cdktf.StringMap(this, "effective_labels");
   public get effectiveLabels() {
     return this._effectiveLabels;
+  }
+
+  // host_config - computed: true, optional: false, required: false
+  private _hostConfig = new SecureSourceManagerInstanceHostConfigList(this, "host_config", false);
+  public get hostConfig() {
+    return this._hostConfig;
   }
 
   // id - computed: true, optional: true, required: false
@@ -256,6 +452,22 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get instanceIdInput() {
     return this._instanceId;
+  }
+
+  // kms_key - computed: false, optional: true, required: false
+  private _kmsKey?: string; 
+  public get kmsKey() {
+    return this.getStringAttribute('kms_key');
+  }
+  public set kmsKey(value: string) {
+    this._kmsKey = value;
+  }
+  public resetKmsKey() {
+    this._kmsKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyInput() {
+    return this._kmsKey;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -313,6 +525,11 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
     return this.getStringAttribute('state');
   }
 
+  // state_note - computed: true, optional: false, required: false
+  public get stateNote() {
+    return this.getStringAttribute('state_note');
+  }
+
   // terraform_labels - computed: true, optional: false, required: false
   private _terraformLabels = new cdktf.StringMap(this, "terraform_labels");
   public get terraformLabels() {
@@ -322,6 +539,22 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
   // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
+  }
+
+  // private_config - computed: false, optional: true, required: false
+  private _privateConfig = new SecureSourceManagerInstancePrivateConfigOutputReference(this, "private_config");
+  public get privateConfig() {
+    return this._privateConfig;
+  }
+  public putPrivateConfig(value: SecureSourceManagerInstancePrivateConfig) {
+    this._privateConfig.internalValue = value;
+  }
+  public resetPrivateConfig() {
+    this._privateConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateConfigInput() {
+    return this._privateConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -348,9 +581,11 @@ export class SecureSourceManagerInstance extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       instance_id: cdktf.stringToTerraform(this._instanceId),
+      kms_key: cdktf.stringToTerraform(this._kmsKey),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
+      private_config: secureSourceManagerInstancePrivateConfigToTerraform(this._privateConfig.internalValue),
       timeouts: secureSourceManagerInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -4,12 +4,12 @@
 
 ### BillingProjectInfo <a name="BillingProjectInfo" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfo"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info google_billing_project_info}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info google_billing_project_info}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 billingprojectinfo.NewBillingProjectInfo(scope Construct, id *string, config BillingProjectInfoConfig) BillingProjectInfo
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfo.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 billingprojectinfo.BillingProjectInfo_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfo.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 billingprojectinfo.BillingProjectInfo_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ billingprojectinfo.BillingProjectInfo_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfo.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 billingprojectinfo.BillingProjectInfo_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ billingprojectinfo.BillingProjectInfo_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfo.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 billingprojectinfo.BillingProjectInfo_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the BillingProjectInfo to impo
 
 The id of the existing BillingProjectInfo that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -782,7 +782,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 &billingprojectinfo.BillingProjectInfoConfig {
 	Connection: interface{},
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
 	BillingAccount: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.billingProjectInfo.BillingProjectInfoTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.billingProjectInfo.BillingProjectInfoTimeouts,
 }
 ```
 
@@ -811,8 +811,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
 | <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.billingAccount">BillingAccount</a></code> | <code>*string</code> | The ID of the billing account associated with the project, if any. |
-| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#id BillingProjectInfo#id}. |
-| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#project BillingProjectInfo#project}. |
+| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#id BillingProjectInfo#id}. |
+| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#project BillingProjectInfo#project}. |
 | <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts">BillingProjectInfoTimeouts</a></code> | timeouts block. |
 
 ---
@@ -900,7 +900,7 @@ The ID of the billing account associated with the project, if any.
 Set to empty string to disable billing for the project.
 For example, '"012345-567890-ABCDEF"' or '""'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#billing_account BillingProjectInfo#billing_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#billing_account BillingProjectInfo#billing_account}
 
 ---
 
@@ -912,7 +912,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#id BillingProjectInfo#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#id BillingProjectInfo#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -927,7 +927,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#project BillingProjectInfo#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#project BillingProjectInfo#project}.
 
 ---
 
@@ -941,7 +941,7 @@ Timeouts BillingProjectInfoTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#timeouts BillingProjectInfo#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#timeouts BillingProjectInfo#timeouts}
 
 ---
 
@@ -950,7 +950,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 &billingprojectinfo.BillingProjectInfoTimeouts {
 	Create: *string,
@@ -963,9 +963,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#create BillingProjectInfo#create}. |
-| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#delete BillingProjectInfo#delete}. |
-| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#update BillingProjectInfo#update}. |
+| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#create BillingProjectInfo#create}. |
+| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#delete BillingProjectInfo#delete}. |
+| <code><a href="#@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#update BillingProjectInfo#update}. |
 
 ---
 
@@ -977,7 +977,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#create BillingProjectInfo#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#create BillingProjectInfo#create}.
 
 ---
 
@@ -989,7 +989,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#delete BillingProjectInfo#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#delete BillingProjectInfo#delete}.
 
 ---
 
@@ -1001,7 +1001,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/billing_project_info#update BillingProjectInfo#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/billing_project_info#update BillingProjectInfo#update}.
 
 ---
 
@@ -1012,7 +1012,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingProjectInfo.BillingProjectInfoTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/billingprojectinfo"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingprojectinfo"
 
 billingprojectinfo.NewBillingProjectInfoTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BillingProjectInfoTimeoutsOutputReference
 ```

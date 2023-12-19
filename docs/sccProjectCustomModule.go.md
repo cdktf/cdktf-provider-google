@@ -4,12 +4,12 @@
 
 ### SccProjectCustomModule <a name="SccProjectCustomModule" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module google_scc_project_custom_module}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module google_scc_project_custom_module}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModule(scope Construct, id *string, config SccProjectCustomModuleConfig) SccProjectCustomModule
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.SccProjectCustomModule_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.SccProjectCustomModule_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ sccprojectcustommodule.SccProjectCustomModule_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.SccProjectCustomModule_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ sccprojectcustommodule.SccProjectCustomModule_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.SccProjectCustomModule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -507,7 +507,7 @@ The construct id used in the generated config for the SccProjectCustomModule to 
 
 The id of the existing SccProjectCustomModule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -883,7 +883,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleConfig {
 	Connection: interface{},
@@ -893,12 +893,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommod
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	CustomConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.sccProjectCustomModule.SccProjectCustomModuleCustomConfig,
+	CustomConfig: github.com/cdktf/cdktf-provider-google-go/google.sccProjectCustomModule.SccProjectCustomModuleCustomConfig,
 	DisplayName: *string,
 	EnablementState: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.sccProjectCustomModule.SccProjectCustomModuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.sccProjectCustomModule.SccProjectCustomModuleTimeouts,
 }
 ```
 
@@ -916,8 +916,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommod
 | <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.customConfig">CustomConfig</a></code> | <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfig">SccProjectCustomModuleCustomConfig</a></code> | custom_config block. |
 | <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | The display name of the Security Health Analytics custom module. |
 | <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.enablementState">EnablementState</a></code> | <code>*string</code> | The enablement state of the custom module. Possible values: ["ENABLED", "DISABLED"]. |
-| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#id SccProjectCustomModule#id}. |
-| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#project SccProjectCustomModule#project}. |
+| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#id SccProjectCustomModule#id}. |
+| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#project SccProjectCustomModule#project}. |
 | <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts">SccProjectCustomModuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1002,7 +1002,7 @@ CustomConfig SccProjectCustomModuleCustomConfig
 
 custom_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#custom_config SccProjectCustomModule#custom_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#custom_config SccProjectCustomModule#custom_config}
 
 ---
 
@@ -1022,7 +1022,7 @@ returned by this custom module. The display name must be between 1 and
 128 characters, start with a lowercase letter, and contain alphanumeric
 characters or underscores only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#display_name SccProjectCustomModule#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#display_name SccProjectCustomModule#display_name}
 
 ---
 
@@ -1036,7 +1036,7 @@ EnablementState *string
 
 The enablement state of the custom module. Possible values: ["ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#enablement_state SccProjectCustomModule#enablement_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#enablement_state SccProjectCustomModule#enablement_state}
 
 ---
 
@@ -1048,7 +1048,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#id SccProjectCustomModule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#id SccProjectCustomModule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1063,7 +1063,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#project SccProjectCustomModule#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#project SccProjectCustomModule#project}.
 
 ---
 
@@ -1077,7 +1077,7 @@ Timeouts SccProjectCustomModuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#timeouts SccProjectCustomModule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#timeouts SccProjectCustomModule#timeouts}
 
 ---
 
@@ -1086,14 +1086,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleCustomConfig {
-	Predicate: github.com/cdktf/cdktf-provider-google-go/google/v12.sccProjectCustomModule.SccProjectCustomModuleCustomConfigPredicate,
+	Predicate: github.com/cdktf/cdktf-provider-google-go/google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigPredicate,
 	Recommendation: *string,
-	ResourceSelector: github.com/cdktf/cdktf-provider-google-go/google/v12.sccProjectCustomModule.SccProjectCustomModuleCustomConfigResourceSelector,
+	ResourceSelector: github.com/cdktf/cdktf-provider-google-go/google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigResourceSelector,
 	Severity: *string,
-	CustomOutput: github.com/cdktf/cdktf-provider-google-go/google/v12.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutput,
+	CustomOutput: github.com/cdktf/cdktf-provider-google-go/google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutput,
 	Description: *string,
 }
 ```
@@ -1121,7 +1121,7 @@ Predicate SccProjectCustomModuleCustomConfigPredicate
 
 predicate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#predicate SccProjectCustomModule#predicate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#predicate SccProjectCustomModule#predicate}
 
 ---
 
@@ -1138,7 +1138,7 @@ An explanation of the recommended steps that security teams can take to resolve 
 This explanation is returned with each finding generated by
 this module in the nextSteps property of the finding JSON.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#recommendation SccProjectCustomModule#recommendation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#recommendation SccProjectCustomModule#recommendation}
 
 ---
 
@@ -1152,7 +1152,7 @@ ResourceSelector SccProjectCustomModuleCustomConfigResourceSelector
 
 resource_selector block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#resource_selector SccProjectCustomModule#resource_selector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#resource_selector SccProjectCustomModule#resource_selector}
 
 ---
 
@@ -1166,7 +1166,7 @@ Severity *string
 
 The severity to assign to findings generated by the module. Possible values: ["CRITICAL", "HIGH", "MEDIUM", "LOW"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#severity SccProjectCustomModule#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#severity SccProjectCustomModule#severity}
 
 ---
 
@@ -1180,7 +1180,7 @@ CustomOutput SccProjectCustomModuleCustomConfigCustomOutput
 
 custom_output block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#custom_output SccProjectCustomModule#custom_output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#custom_output SccProjectCustomModule#custom_output}
 
 ---
 
@@ -1197,7 +1197,7 @@ Text that describes the vulnerability or misconfiguration that the custom module
 This explanation is returned with each finding instance to
 help investigators understand the detected issue. The text must be enclosed in quotation marks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#description SccProjectCustomModule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#description SccProjectCustomModule#description}
 
 ---
 
@@ -1206,7 +1206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutput.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleCustomConfigCustomOutput {
 	Properties: interface{},
@@ -1231,7 +1231,7 @@ Properties interface{}
 
 properties block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#properties SccProjectCustomModule#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#properties SccProjectCustomModule#properties}
 
 ---
 
@@ -1240,11 +1240,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleCustomConfigCustomOutputProperties {
 	Name: *string,
-	ValueExpression: github.com/cdktf/cdktf-provider-google-go/google/v12.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExpression,
+	ValueExpression: github.com/cdktf/cdktf-provider-google-go/google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExpression,
 }
 ```
 
@@ -1267,7 +1267,7 @@ Name *string
 
 Name of the property for the custom output.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#name SccProjectCustomModule#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#name SccProjectCustomModule#name}
 
 ---
 
@@ -1281,7 +1281,7 @@ ValueExpression SccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExp
 
 value_expression block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#value_expression SccProjectCustomModule#value_expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#value_expression SccProjectCustomModule#value_expression}
 
 ---
 
@@ -1290,7 +1290,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExpression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExpression {
 	Expression: *string,
@@ -1321,7 +1321,7 @@ Expression *string
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#expression SccProjectCustomModule#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#expression SccProjectCustomModule#expression}
 
 ---
 
@@ -1338,7 +1338,7 @@ Description of the expression.
 This is a longer text which describes the
 expression, e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#description SccProjectCustomModule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#description SccProjectCustomModule#description}
 
 ---
 
@@ -1352,7 +1352,7 @@ Location *string
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#location SccProjectCustomModule#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#location SccProjectCustomModule#location}
 
 ---
 
@@ -1366,7 +1366,7 @@ Title *string
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#title SccProjectCustomModule#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#title SccProjectCustomModule#title}
 
 ---
 
@@ -1375,7 +1375,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigPredicate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleCustomConfigPredicate {
 	Expression: *string,
@@ -1406,7 +1406,7 @@ Expression *string
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#expression SccProjectCustomModule#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#expression SccProjectCustomModule#expression}
 
 ---
 
@@ -1423,7 +1423,7 @@ Description of the expression.
 This is a longer text which describes the
 expression, e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#description SccProjectCustomModule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#description SccProjectCustomModule#description}
 
 ---
 
@@ -1437,7 +1437,7 @@ Location *string
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#location SccProjectCustomModule#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#location SccProjectCustomModule#location}
 
 ---
 
@@ -1451,7 +1451,7 @@ Title *string
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#title SccProjectCustomModule#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#title SccProjectCustomModule#title}
 
 ---
 
@@ -1460,7 +1460,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigResourceSelector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleCustomConfigResourceSelector {
 	ResourceTypes: *[]*string,
@@ -1485,7 +1485,7 @@ ResourceTypes *[]*string
 
 The resource types to run the detector on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#resource_types SccProjectCustomModule#resource_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#resource_types SccProjectCustomModule#resource_types}
 
 ---
 
@@ -1494,7 +1494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 &sccprojectcustommodule.SccProjectCustomModuleTimeouts {
 	Create: *string,
@@ -1507,9 +1507,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommod
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#create SccProjectCustomModule#create}. |
-| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#delete SccProjectCustomModule#delete}. |
-| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#update SccProjectCustomModule#update}. |
+| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#create SccProjectCustomModule#create}. |
+| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#delete SccProjectCustomModule#delete}. |
+| <code><a href="#@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#update SccProjectCustomModule#update}. |
 
 ---
 
@@ -1521,7 +1521,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#create SccProjectCustomModule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#create SccProjectCustomModule#create}.
 
 ---
 
@@ -1533,7 +1533,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#delete SccProjectCustomModule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#delete SccProjectCustomModule#delete}.
 
 ---
 
@@ -1545,7 +1545,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_project_custom_module#update SccProjectCustomModule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_project_custom_module#update SccProjectCustomModule#update}.
 
 ---
 
@@ -1556,7 +1556,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleCustomConfigCustomOutputOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccProjectCustomModuleCustomConfigCustomOutputOutputReference
 ```
@@ -1847,7 +1847,7 @@ func InternalValue() SccProjectCustomModuleCustomConfigCustomOutput
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleCustomConfigCustomOutputPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SccProjectCustomModuleCustomConfigCustomOutputPropertiesList
 ```
@@ -1990,7 +1990,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleCustomConfigCustomOutputPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SccProjectCustomModuleCustomConfigCustomOutputPropertiesOutputReference
 ```
@@ -2328,7 +2328,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExpressionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExpressionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccProjectCustomModuleCustomConfigCustomOutputPropertiesValueExpressionOutputReference
 ```
@@ -2686,7 +2686,7 @@ func InternalValue() SccProjectCustomModuleCustomConfigCustomOutputPropertiesVal
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleCustomConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccProjectCustomModuleCustomConfigOutputReference
 ```
@@ -3120,7 +3120,7 @@ func InternalValue() SccProjectCustomModuleCustomConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigPredicateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleCustomConfigPredicateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccProjectCustomModuleCustomConfigPredicateOutputReference
 ```
@@ -3478,7 +3478,7 @@ func InternalValue() SccProjectCustomModuleCustomConfigPredicate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleCustomConfigResourceSelectorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleCustomConfigResourceSelectorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccProjectCustomModuleCustomConfigResourceSelectorOutputReference
 ```
@@ -3749,7 +3749,7 @@ func InternalValue() SccProjectCustomModuleCustomConfigResourceSelector
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccProjectCustomModule.SccProjectCustomModuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccprojectcustommodule"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccprojectcustommodule"
 
 sccprojectcustommodule.NewSccProjectCustomModuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccProjectCustomModuleTimeoutsOutputReference
 ```

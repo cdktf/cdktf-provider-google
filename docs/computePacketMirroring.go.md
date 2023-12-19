@@ -4,12 +4,12 @@
 
 ### ComputePacketMirroring <a name="ComputePacketMirroring" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroring"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring google_compute_packet_mirroring}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring google_compute_packet_mirroring}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroring.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroring(scope Construct, id *string, config ComputePacketMirroringConfig) ComputePacketMirroring
 ```
@@ -485,7 +485,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroring.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.ComputePacketMirroring_IsConstruct(x interface{}) *bool
 ```
@@ -517,7 +517,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroring.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.ComputePacketMirroring_IsTerraformElement(x interface{}) *bool
 ```
@@ -531,7 +531,7 @@ computepacketmirroring.ComputePacketMirroring_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroring.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.ComputePacketMirroring_IsTerraformResource(x interface{}) *bool
 ```
@@ -545,7 +545,7 @@ computepacketmirroring.ComputePacketMirroring_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroring.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.ComputePacketMirroring_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -574,7 +574,7 @@ The construct id used in the generated config for the ComputePacketMirroring to 
 
 The id of the existing ComputePacketMirroring that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1016,7 +1016,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringCollectorIlb.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringCollectorIlb {
 	Url: *string,
@@ -1041,7 +1041,7 @@ Url *string
 
 The URL of the forwarding rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
 
 ---
 
@@ -1050,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringConfig {
 	Connection: interface{},
@@ -1060,17 +1060,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirror
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	CollectorIlb: github.com/cdktf/cdktf-provider-google-go/google/v12.computePacketMirroring.ComputePacketMirroringCollectorIlb,
-	MirroredResources: github.com/cdktf/cdktf-provider-google-go/google/v12.computePacketMirroring.ComputePacketMirroringMirroredResources,
+	CollectorIlb: github.com/cdktf/cdktf-provider-google-go/google.computePacketMirroring.ComputePacketMirroringCollectorIlb,
+	MirroredResources: github.com/cdktf/cdktf-provider-google-go/google.computePacketMirroring.ComputePacketMirroringMirroredResources,
 	Name: *string,
-	Network: github.com/cdktf/cdktf-provider-google-go/google/v12.computePacketMirroring.ComputePacketMirroringNetwork,
+	Network: github.com/cdktf/cdktf-provider-google-go/google.computePacketMirroring.ComputePacketMirroringNetwork,
 	Description: *string,
-	Filter: github.com/cdktf/cdktf-provider-google-go/google/v12.computePacketMirroring.ComputePacketMirroringFilter,
+	Filter: github.com/cdktf/cdktf-provider-google-go/google.computePacketMirroring.ComputePacketMirroringFilter,
 	Id: *string,
 	Priority: *f64,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computePacketMirroring.ComputePacketMirroringTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computePacketMirroring.ComputePacketMirroringTimeouts,
 }
 ```
 
@@ -1091,9 +1091,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirror
 | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.network">Network</a></code> | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringNetwork">ComputePacketMirroringNetwork</a></code> | network block. |
 | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.description">Description</a></code> | <code>*string</code> | A human-readable description of the rule. |
 | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.filter">Filter</a></code> | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringFilter">ComputePacketMirroringFilter</a></code> | filter block. |
-| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#id ComputePacketMirroring#id}. |
+| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#id ComputePacketMirroring#id}. |
 | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.priority">Priority</a></code> | <code>*f64</code> | Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the same instances. |
-| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#project ComputePacketMirroring#project}. |
+| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#project ComputePacketMirroring#project}. |
 | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.region">Region</a></code> | <code>*string</code> | The Region in which the created address should reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts">ComputePacketMirroringTimeouts</a></code> | timeouts block. |
 
@@ -1179,7 +1179,7 @@ CollectorIlb ComputePacketMirroringCollectorIlb
 
 collector_ilb block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#collector_ilb ComputePacketMirroring#collector_ilb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#collector_ilb ComputePacketMirroring#collector_ilb}
 
 ---
 
@@ -1193,7 +1193,7 @@ MirroredResources ComputePacketMirroringMirroredResources
 
 mirrored_resources block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#mirrored_resources ComputePacketMirroring#mirrored_resources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#mirrored_resources ComputePacketMirroring#mirrored_resources}
 
 ---
 
@@ -1207,7 +1207,7 @@ Name *string
 
 The name of the packet mirroring rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#name ComputePacketMirroring#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#name ComputePacketMirroring#name}
 
 ---
 
@@ -1221,7 +1221,7 @@ Network ComputePacketMirroringNetwork
 
 network block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#network ComputePacketMirroring#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#network ComputePacketMirroring#network}
 
 ---
 
@@ -1235,7 +1235,7 @@ Description *string
 
 A human-readable description of the rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#description ComputePacketMirroring#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#description ComputePacketMirroring#description}
 
 ---
 
@@ -1249,7 +1249,7 @@ Filter ComputePacketMirroringFilter
 
 filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#filter ComputePacketMirroring#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#filter ComputePacketMirroring#filter}
 
 ---
 
@@ -1261,7 +1261,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#id ComputePacketMirroring#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#id ComputePacketMirroring#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1278,7 +1278,7 @@ Priority *f64
 
 Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the same instances.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#priority ComputePacketMirroring#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#priority ComputePacketMirroring#priority}
 
 ---
 
@@ -1290,7 +1290,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#project ComputePacketMirroring#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#project ComputePacketMirroring#project}.
 
 ---
 
@@ -1304,7 +1304,7 @@ Region *string
 
 The Region in which the created address should reside. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#region ComputePacketMirroring#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#region ComputePacketMirroring#region}
 
 ---
 
@@ -1318,7 +1318,7 @@ Timeouts ComputePacketMirroringTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#timeouts ComputePacketMirroring#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#timeouts ComputePacketMirroring#timeouts}
 
 ---
 
@@ -1327,7 +1327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringFilter {
 	CidrRanges: *[]*string,
@@ -1358,7 +1358,7 @@ IP CIDR ranges that apply as a filter on the source (ingress) or destination (eg
 
 Only IPv4 is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#cidr_ranges ComputePacketMirroring#cidr_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#cidr_ranges ComputePacketMirroring#cidr_ranges}
 
 ---
 
@@ -1372,7 +1372,7 @@ Direction *string
 
 Direction of traffic to mirror. Default value: "BOTH" Possible values: ["INGRESS", "EGRESS", "BOTH"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#direction ComputePacketMirroring#direction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#direction ComputePacketMirroring#direction}
 
 ---
 
@@ -1386,7 +1386,7 @@ IpProtocols *[]*string
 
 Possible IP protocols including tcp, udp, icmp and esp.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#ip_protocols ComputePacketMirroring#ip_protocols}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#ip_protocols ComputePacketMirroring#ip_protocols}
 
 ---
 
@@ -1395,7 +1395,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringMirroredResources {
 	Instances: interface{},
@@ -1424,7 +1424,7 @@ Instances interface{}
 
 instances block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#instances ComputePacketMirroring#instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#instances ComputePacketMirroring#instances}
 
 ---
 
@@ -1438,7 +1438,7 @@ Subnetworks interface{}
 
 subnetworks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#subnetworks ComputePacketMirroring#subnetworks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#subnetworks ComputePacketMirroring#subnetworks}
 
 ---
 
@@ -1452,7 +1452,7 @@ Tags *[]*string
 
 All instances with these tags will be mirrored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#tags ComputePacketMirroring#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#tags ComputePacketMirroring#tags}
 
 ---
 
@@ -1461,7 +1461,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResourcesInstances.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringMirroredResourcesInstances {
 	Url: *string,
@@ -1486,7 +1486,7 @@ Url *string
 
 The URL of the instances where this rule should be active.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
 
 ---
 
@@ -1495,7 +1495,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResourcesSubnetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringMirroredResourcesSubnetworks {
 	Url: *string,
@@ -1520,7 +1520,7 @@ Url *string
 
 The URL of the subnetwork where this rule should be active.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
 
 ---
 
@@ -1529,7 +1529,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringNetwork {
 	Url: *string,
@@ -1554,7 +1554,7 @@ Url *string
 
 The full self_link URL of the network where this rule is active.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
 
 ---
 
@@ -1563,7 +1563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 &computepacketmirroring.ComputePacketMirroringTimeouts {
 	Create: *string,
@@ -1576,9 +1576,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirror
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#create ComputePacketMirroring#create}. |
-| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#delete ComputePacketMirroring#delete}. |
-| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#update ComputePacketMirroring#update}. |
+| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#create ComputePacketMirroring#create}. |
+| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#delete ComputePacketMirroring#delete}. |
+| <code><a href="#@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#update ComputePacketMirroring#update}. |
 
 ---
 
@@ -1590,7 +1590,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#create ComputePacketMirroring#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#create ComputePacketMirroring#create}.
 
 ---
 
@@ -1602,7 +1602,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#delete ComputePacketMirroring#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#delete ComputePacketMirroring#delete}.
 
 ---
 
@@ -1614,7 +1614,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/compute_packet_mirroring#update ComputePacketMirroring#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_packet_mirroring#update ComputePacketMirroring#update}.
 
 ---
 
@@ -1625,7 +1625,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringCollectorIlbOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringCollectorIlbOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputePacketMirroringCollectorIlbOutputReference
 ```
@@ -1896,7 +1896,7 @@ func InternalValue() ComputePacketMirroringCollectorIlb
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputePacketMirroringFilterOutputReference
 ```
@@ -2232,7 +2232,7 @@ func InternalValue() ComputePacketMirroringFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResourcesInstancesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringMirroredResourcesInstancesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputePacketMirroringMirroredResourcesInstancesList
 ```
@@ -2375,7 +2375,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResourcesInstancesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringMirroredResourcesInstancesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputePacketMirroringMirroredResourcesInstancesOutputReference
 ```
@@ -2664,7 +2664,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringMirroredResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputePacketMirroringMirroredResourcesOutputReference
 ```
@@ -3026,7 +3026,7 @@ func InternalValue() ComputePacketMirroringMirroredResources
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResourcesSubnetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringMirroredResourcesSubnetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputePacketMirroringMirroredResourcesSubnetworksList
 ```
@@ -3169,7 +3169,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringMirroredResourcesSubnetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringMirroredResourcesSubnetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputePacketMirroringMirroredResourcesSubnetworksOutputReference
 ```
@@ -3458,7 +3458,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputePacketMirroringNetworkOutputReference
 ```
@@ -3729,7 +3729,7 @@ func InternalValue() ComputePacketMirroringNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePacketMirroring.ComputePacketMirroringTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computepacketmirroring"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepacketmirroring"
 
 computepacketmirroring.NewComputePacketMirroringTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputePacketMirroringTimeoutsOutputReference
 ```

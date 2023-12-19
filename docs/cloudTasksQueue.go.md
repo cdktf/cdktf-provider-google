@@ -4,12 +4,12 @@
 
 ### CloudTasksQueue <a name="CloudTasksQueue" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue google_cloud_tasks_queue}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue google_cloud_tasks_queue}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueue(scope Construct, id *string, config CloudTasksQueueConfig) CloudTasksQueue
 ```
@@ -492,7 +492,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_IsConstruct(x interface{}) *bool
 ```
@@ -524,7 +524,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_IsTerraformElement(x interface{}) *bool
 ```
@@ -538,7 +538,7 @@ cloudtasksqueue.CloudTasksQueue_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_IsTerraformResource(x interface{}) *bool
 ```
@@ -552,7 +552,7 @@ cloudtasksqueue.CloudTasksQueue_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -581,7 +581,7 @@ The construct id used in the generated config for the CloudTasksQueue to import.
 
 The id of the existing CloudTasksQueue that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -979,7 +979,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverride.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueAppEngineRoutingOverride {
 	Instance: *string,
@@ -1010,7 +1010,7 @@ App instance.
 
 By default, the task is sent to an instance which is available when the task is attempted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#instance CloudTasksQueue#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#instance CloudTasksQueue#instance}
 
 ---
 
@@ -1026,7 +1026,7 @@ App service.
 
 By default, the task is sent to the service which is the default service when the task is attempted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#service CloudTasksQueue#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#service CloudTasksQueue#service}
 
 ---
 
@@ -1042,7 +1042,7 @@ App version.
 
 By default, the task is sent to the version which is the default version when the task is attempted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#version CloudTasksQueue#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#version CloudTasksQueue#version}
 
 ---
 
@@ -1051,7 +1051,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueConfig {
 	Connection: interface{},
@@ -1062,14 +1062,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Location: *string,
-	AppEngineRoutingOverride: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverride,
+	AppEngineRoutingOverride: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverride,
 	Id: *string,
 	Name: *string,
 	Project: *string,
-	RateLimits: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudTasksQueue.CloudTasksQueueRateLimits,
-	RetryConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudTasksQueue.CloudTasksQueueRetryConfig,
-	StackdriverLoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudTasksQueue.CloudTasksQueueTimeouts,
+	RateLimits: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueRateLimits,
+	RetryConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueRetryConfig,
+	StackdriverLoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueTimeouts,
 }
 ```
 
@@ -1086,9 +1086,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
 | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.location">Location</a></code> | <code>*string</code> | The location of the queue. |
 | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.appEngineRoutingOverride">AppEngineRoutingOverride</a></code> | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverride">CloudTasksQueueAppEngineRoutingOverride</a></code> | app_engine_routing_override block. |
-| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}. |
+| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}. |
 | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.name">Name</a></code> | <code>*string</code> | The queue name. |
-| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}. |
+| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}. |
 | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.rateLimits">RateLimits</a></code> | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRateLimits">CloudTasksQueueRateLimits</a></code> | rate_limits block. |
 | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.retryConfig">RetryConfig</a></code> | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRetryConfig">CloudTasksQueueRetryConfig</a></code> | retry_config block. |
 | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.property.stackdriverLoggingConfig">StackdriverLoggingConfig</a></code> | <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfig">CloudTasksQueueStackdriverLoggingConfig</a></code> | stackdriver_logging_config block. |
@@ -1176,7 +1176,7 @@ Location *string
 
 The location of the queue.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#location CloudTasksQueue#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#location CloudTasksQueue#location}
 
 ---
 
@@ -1190,7 +1190,7 @@ AppEngineRoutingOverride CloudTasksQueueAppEngineRoutingOverride
 
 app_engine_routing_override block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#app_engine_routing_override CloudTasksQueue#app_engine_routing_override}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#app_engine_routing_override CloudTasksQueue#app_engine_routing_override}
 
 ---
 
@@ -1202,7 +1202,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1219,7 +1219,7 @@ Name *string
 
 The queue name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#name CloudTasksQueue#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#name CloudTasksQueue#name}
 
 ---
 
@@ -1231,7 +1231,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}.
 
 ---
 
@@ -1245,7 +1245,7 @@ RateLimits CloudTasksQueueRateLimits
 
 rate_limits block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#rate_limits CloudTasksQueue#rate_limits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#rate_limits CloudTasksQueue#rate_limits}
 
 ---
 
@@ -1259,7 +1259,7 @@ RetryConfig CloudTasksQueueRetryConfig
 
 retry_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#retry_config CloudTasksQueue#retry_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#retry_config CloudTasksQueue#retry_config}
 
 ---
 
@@ -1273,7 +1273,7 @@ StackdriverLoggingConfig CloudTasksQueueStackdriverLoggingConfig
 
 stackdriver_logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#stackdriver_logging_config CloudTasksQueue#stackdriver_logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#stackdriver_logging_config CloudTasksQueue#stackdriver_logging_config}
 
 ---
 
@@ -1287,7 +1287,7 @@ Timeouts CloudTasksQueueTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#timeouts CloudTasksQueue#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#timeouts CloudTasksQueue#timeouts}
 
 ---
 
@@ -1296,7 +1296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRateLimits.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueRateLimits {
 	MaxConcurrentDispatches: *f64,
@@ -1327,7 +1327,7 @@ After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#max_concurrent_dispatches CloudTasksQueue#max_concurrent_dispatches}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#max_concurrent_dispatches CloudTasksQueue#max_concurrent_dispatches}
 
 ---
 
@@ -1343,7 +1343,7 @@ The maximum rate at which tasks are dispatched from this queue.
 
 If unspecified when the queue is created, Cloud Tasks will pick the default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#max_dispatches_per_second CloudTasksQueue#max_dispatches_per_second}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#max_dispatches_per_second CloudTasksQueue#max_dispatches_per_second}
 
 ---
 
@@ -1352,7 +1352,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRetryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueRetryConfig {
 	MaxAttempts: *f64,
@@ -1394,7 +1394,7 @@ the default.
 
 -1 indicates unlimited attempts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#max_attempts CloudTasksQueue#max_attempts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#max_attempts CloudTasksQueue#max_attempts}
 
 ---
 
@@ -1408,7 +1408,7 @@ MaxBackoff *string
 
 A task will be scheduled for retry between minBackoff and maxBackoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#max_backoff CloudTasksQueue#max_backoff}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#max_backoff CloudTasksQueue#max_backoff}
 
 ---
 
@@ -1426,7 +1426,7 @@ A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#max_doublings CloudTasksQueue#max_doublings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#max_doublings CloudTasksQueue#max_doublings}
 
 ---
 
@@ -1446,7 +1446,7 @@ made and the task will be deleted.
 
 If zero, then the task age is unlimited.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#max_retry_duration CloudTasksQueue#max_retry_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#max_retry_duration CloudTasksQueue#max_retry_duration}
 
 ---
 
@@ -1460,7 +1460,7 @@ MinBackoff *string
 
 A task will be scheduled for retry between minBackoff and maxBackoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#min_backoff CloudTasksQueue#min_backoff}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#min_backoff CloudTasksQueue#min_backoff}
 
 ---
 
@@ -1469,7 +1469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueStackdriverLoggingConfig {
 	SamplingRatio: *f64,
@@ -1497,7 +1497,7 @@ Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
 default and means that no operations are logged.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#sampling_ratio CloudTasksQueue#sampling_ratio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#sampling_ratio CloudTasksQueue#sampling_ratio}
 
 ---
 
@@ -1506,7 +1506,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueTimeouts {
 	Create: *string,
@@ -1519,9 +1519,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}. |
-| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}. |
+| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}. |
+| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}. |
 
 ---
 
@@ -1533,7 +1533,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}.
 
 ---
 
@@ -1545,7 +1545,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}.
 
 ---
 
@@ -1557,7 +1557,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}.
 
 ---
 
@@ -1568,7 +1568,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverrideOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueAppEngineRoutingOverrideOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueAppEngineRoutingOverrideOutputReference
 ```
@@ -1915,7 +1915,7 @@ func InternalValue() CloudTasksQueueAppEngineRoutingOverride
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRateLimitsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueRateLimitsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueRateLimitsOutputReference
 ```
@@ -2233,7 +2233,7 @@ func InternalValue() CloudTasksQueueRateLimits
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRetryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueRetryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueRetryConfigOutputReference
 ```
@@ -2627,7 +2627,7 @@ func InternalValue() CloudTasksQueueRetryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueStackdriverLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueStackdriverLoggingConfigOutputReference
 ```
@@ -2898,7 +2898,7 @@ func InternalValue() CloudTasksQueueStackdriverLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueTimeoutsOutputReference
 ```

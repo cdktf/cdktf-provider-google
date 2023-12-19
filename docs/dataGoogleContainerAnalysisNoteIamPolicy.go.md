@@ -4,12 +4,12 @@
 
 ### DataGoogleContainerAnalysisNoteIamPolicy <a name="DataGoogleContainerAnalysisNoteIamPolicy" id="@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy google_container_analysis_note_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy google_container_analysis_note_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontaineranalysisnoteiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontaineranalysisnoteiampolicy"
 
 datagooglecontaineranalysisnoteiampolicy.NewDataGoogleContainerAnalysisNoteIamPolicy(scope Construct, id *string, config DataGoogleContainerAnalysisNoteIamPolicyConfig) DataGoogleContainerAnalysisNoteIamPolicy
 ```
@@ -281,7 +281,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontaineranalysisnoteiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontaineranalysisnoteiampolicy"
 
 datagooglecontaineranalysisnoteiampolicy.DataGoogleContainerAnalysisNoteIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -313,7 +313,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontaineranalysisnoteiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontaineranalysisnoteiampolicy"
 
 datagooglecontaineranalysisnoteiampolicy.DataGoogleContainerAnalysisNoteIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -327,7 +327,7 @@ datagooglecontaineranalysisnoteiampolicy.DataGoogleContainerAnalysisNoteIamPolic
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontaineranalysisnoteiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontaineranalysisnoteiampolicy"
 
 datagooglecontaineranalysisnoteiampolicy.DataGoogleContainerAnalysisNoteIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -341,7 +341,7 @@ datagooglecontaineranalysisnoteiampolicy.DataGoogleContainerAnalysisNoteIamPolic
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontaineranalysisnoteiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontaineranalysisnoteiampolicy"
 
 datagooglecontaineranalysisnoteiampolicy.DataGoogleContainerAnalysisNoteIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -370,7 +370,7 @@ The construct id used in the generated config for the DataGoogleContainerAnalysi
 
 The id of the existing DataGoogleContainerAnalysisNoteIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -636,7 +636,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontaineranalysisnoteiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontaineranalysisnoteiampolicy"
 
 &datagooglecontaineranalysisnoteiampolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig {
 	Connection: interface{},
@@ -663,9 +663,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecontainer
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.note">Note</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy#note DataGoogleContainerAnalysisNoteIamPolicy#note}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy#id DataGoogleContainerAnalysisNoteIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy#project DataGoogleContainerAnalysisNoteIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.note">Note</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy#note DataGoogleContainerAnalysisNoteIamPolicy#note}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy#id DataGoogleContainerAnalysisNoteIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAnalysisNoteIamPolicy.DataGoogleContainerAnalysisNoteIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy#project DataGoogleContainerAnalysisNoteIamPolicy#project}. |
 
 ---
 
@@ -747,7 +747,7 @@ Note *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy#note DataGoogleContainerAnalysisNoteIamPolicy#note}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy#note DataGoogleContainerAnalysisNoteIamPolicy#note}.
 
 ---
 
@@ -759,7 +759,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy#id DataGoogleContainerAnalysisNoteIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy#id DataGoogleContainerAnalysisNoteIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -774,7 +774,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/container_analysis_note_iam_policy#project DataGoogleContainerAnalysisNoteIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/container_analysis_note_iam_policy#project DataGoogleContainerAnalysisNoteIamPolicy#project}.
 
 ---
 

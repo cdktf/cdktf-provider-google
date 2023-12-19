@@ -1,9 +1,150 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 import * as cdktf from 'cdktf';
+import { DataGoogleContainerClusterNodePoolAutoscalingList,
+DataGoogleContainerClusterNodePoolManagementList,
+DataGoogleContainerClusterNodePoolNetworkConfigList,
+DataGoogleContainerClusterNodePoolNodeConfigList,
+DataGoogleContainerClusterNodePoolPlacementPolicyList,
+DataGoogleContainerClusterNodePoolUpgradeSettingsList } from './structs0'
+export interface DataGoogleContainerClusterNodePool {
+}
+
+export function dataGoogleContainerClusterNodePoolToTerraform(struct?: DataGoogleContainerClusterNodePool): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodePool | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodePool | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // autoscaling - computed: true, optional: false, required: false
+  private _autoscaling = new DataGoogleContainerClusterNodePoolAutoscalingList(this, "autoscaling", false);
+  public get autoscaling() {
+    return this._autoscaling;
+  }
+
+  // initial_node_count - computed: true, optional: false, required: false
+  public get initialNodeCount() {
+    return this.getNumberAttribute('initial_node_count');
+  }
+
+  // instance_group_urls - computed: true, optional: false, required: false
+  public get instanceGroupUrls() {
+    return this.getListAttribute('instance_group_urls');
+  }
+
+  // managed_instance_group_urls - computed: true, optional: false, required: false
+  public get managedInstanceGroupUrls() {
+    return this.getListAttribute('managed_instance_group_urls');
+  }
+
+  // management - computed: true, optional: false, required: false
+  private _management = new DataGoogleContainerClusterNodePoolManagementList(this, "management", false);
+  public get management() {
+    return this._management;
+  }
+
+  // max_pods_per_node - computed: true, optional: false, required: false
+  public get maxPodsPerNode() {
+    return this.getNumberAttribute('max_pods_per_node');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // name_prefix - computed: true, optional: false, required: false
+  public get namePrefix() {
+    return this.getStringAttribute('name_prefix');
+  }
+
+  // network_config - computed: true, optional: false, required: false
+  private _networkConfig = new DataGoogleContainerClusterNodePoolNetworkConfigList(this, "network_config", false);
+  public get networkConfig() {
+    return this._networkConfig;
+  }
+
+  // node_config - computed: true, optional: false, required: false
+  private _nodeConfig = new DataGoogleContainerClusterNodePoolNodeConfigList(this, "node_config", false);
+  public get nodeConfig() {
+    return this._nodeConfig;
+  }
+
+  // node_count - computed: true, optional: false, required: false
+  public get nodeCount() {
+    return this.getNumberAttribute('node_count');
+  }
+
+  // node_locations - computed: true, optional: false, required: false
+  public get nodeLocations() {
+    return cdktf.Fn.tolist(this.getListAttribute('node_locations'));
+  }
+
+  // placement_policy - computed: true, optional: false, required: false
+  private _placementPolicy = new DataGoogleContainerClusterNodePoolPlacementPolicyList(this, "placement_policy", false);
+  public get placementPolicy() {
+    return this._placementPolicy;
+  }
+
+  // upgrade_settings - computed: true, optional: false, required: false
+  private _upgradeSettings = new DataGoogleContainerClusterNodePoolUpgradeSettingsList(this, "upgrade_settings", false);
+  public get upgradeSettings() {
+    return this._upgradeSettings;
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodePoolOutputReference {
+    return new DataGoogleContainerClusterNodePoolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterNodePoolAutoConfigNetworkTags {
 }
 

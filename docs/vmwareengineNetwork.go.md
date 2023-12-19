@@ -4,12 +4,12 @@
 
 ### VmwareengineNetwork <a name="VmwareengineNetwork" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network google_vmwareengine_network}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network google_vmwareengine_network}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.NewVmwareengineNetwork(scope Construct, id *string, config VmwareengineNetworkConfig) VmwareengineNetwork
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.VmwareengineNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.VmwareengineNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ vmwareenginenetwork.VmwareengineNetwork_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetwork.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.VmwareengineNetwork_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ vmwareenginenetwork.VmwareengineNetwork_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.VmwareengineNetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the VmwareengineNetwork to imp
 
 The id of the existing VmwareengineNetwork that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -888,7 +888,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 &vmwareenginenetwork.VmwareengineNetworkConfig {
 	Connection: interface{},
@@ -904,7 +904,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareengineNetwork.VmwareengineNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineNetwork.VmwareengineNetworkTimeouts,
 }
 ```
 
@@ -923,8 +923,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork
 | <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.name">Name</a></code> | <code>*string</code> | The ID of the VMwareEngineNetwork. |
 | <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.type">Type</a></code> | <code>*string</code> | VMware Engine network type. Possible values: ["LEGACY", "STANDARD"]. |
 | <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.description">Description</a></code> | <code>*string</code> | User-provided description for this VMware Engine network. |
-| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#id VmwareengineNetwork#id}. |
-| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#project VmwareengineNetwork#project}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#id VmwareengineNetwork#id}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#project VmwareengineNetwork#project}. |
 | <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts">VmwareengineNetworkTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1009,7 +1009,7 @@ Location *string
 
 The location where the VMwareEngineNetwork should reside.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#location VmwareengineNetwork#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#location VmwareengineNetwork#location}
 
 ---
 
@@ -1023,7 +1023,7 @@ Name *string
 
 The ID of the VMwareEngineNetwork.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#name VmwareengineNetwork#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#name VmwareengineNetwork#name}
 
 ---
 
@@ -1037,7 +1037,7 @@ Type *string
 
 VMware Engine network type. Possible values: ["LEGACY", "STANDARD"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#type VmwareengineNetwork#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#type VmwareengineNetwork#type}
 
 ---
 
@@ -1051,7 +1051,7 @@ Description *string
 
 User-provided description for this VMware Engine network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#description VmwareengineNetwork#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#description VmwareengineNetwork#description}
 
 ---
 
@@ -1063,7 +1063,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#id VmwareengineNetwork#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#id VmwareengineNetwork#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1078,7 +1078,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#project VmwareengineNetwork#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#project VmwareengineNetwork#project}.
 
 ---
 
@@ -1092,7 +1092,7 @@ Timeouts VmwareengineNetworkTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#timeouts VmwareengineNetwork#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#timeouts VmwareengineNetwork#timeouts}
 
 ---
 
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 &vmwareenginenetwork.VmwareengineNetworkTimeouts {
 	Create: *string,
@@ -1114,9 +1114,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#create VmwareengineNetwork#create}. |
-| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#delete VmwareengineNetwork#delete}. |
-| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#update VmwareengineNetwork#update}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#create VmwareengineNetwork#create}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#delete VmwareengineNetwork#delete}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#update VmwareengineNetwork#update}. |
 
 ---
 
@@ -1128,7 +1128,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#create VmwareengineNetwork#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#create VmwareengineNetwork#create}.
 
 ---
 
@@ -1140,7 +1140,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#delete VmwareengineNetwork#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#delete VmwareengineNetwork#delete}.
 
 ---
 
@@ -1152,7 +1152,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/vmwareengine_network#update VmwareengineNetwork#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/vmwareengine_network#update VmwareengineNetwork#update}.
 
 ---
 
@@ -1161,7 +1161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkVpcNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 &vmwareenginenetwork.VmwareengineNetworkVpcNetworks {
 
@@ -1176,7 +1176,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.NewVmwareengineNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineNetworkTimeoutsOutputReference
 ```
@@ -1512,7 +1512,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkVpcNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.NewVmwareengineNetworkVpcNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareengineNetworkVpcNetworksList
 ```
@@ -1644,7 +1644,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineNetwork.VmwareengineNetworkVpcNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginenetwork"
 
 vmwareenginenetwork.NewVmwareengineNetworkVpcNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareengineNetworkVpcNetworksOutputReference
 ```

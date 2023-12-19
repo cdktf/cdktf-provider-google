@@ -4,7 +4,7 @@
 
 ### SecureSourceManagerInstanceIamPolicy <a name="SecureSourceManagerInstanceIamPolicy" id="@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy google_secure_source_manager_instance_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy google_secure_source_manager_instance_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicy.Initializer"></a>
 
@@ -481,7 +481,7 @@ The construct id used in the generated config for the SecureSourceManagerInstanc
 
 The id of the existing SecureSourceManagerInstanceIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -818,11 +818,11 @@ const secureSourceManagerInstanceIamPolicyConfig: secureSourceManagerInstanceIam
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.instanceId">instanceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#instance_id SecureSourceManagerInstanceIamPolicy#instance_id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#policy_data SecureSourceManagerInstanceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#id SecureSourceManagerInstanceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#location SecureSourceManagerInstanceIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#project SecureSourceManagerInstanceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.instanceId">instanceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#instance_id SecureSourceManagerInstanceIamPolicy#instance_id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#policy_data SecureSourceManagerInstanceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#id SecureSourceManagerInstanceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#location SecureSourceManagerInstanceIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerInstanceIamPolicy.SecureSourceManagerInstanceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#project SecureSourceManagerInstanceIamPolicy#project}. |
 
 ---
 
@@ -904,7 +904,7 @@ public readonly instanceId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#instance_id SecureSourceManagerInstanceIamPolicy#instance_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#instance_id SecureSourceManagerInstanceIamPolicy#instance_id}.
 
 ---
 
@@ -916,7 +916,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#policy_data SecureSourceManagerInstanceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#policy_data SecureSourceManagerInstanceIamPolicy#policy_data}.
 
 ---
 
@@ -928,7 +928,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#id SecureSourceManagerInstanceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#id SecureSourceManagerInstanceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -943,7 +943,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#location SecureSourceManagerInstanceIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#location SecureSourceManagerInstanceIamPolicy#location}.
 
 ---
 
@@ -955,7 +955,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/secure_source_manager_instance_iam_policy#project SecureSourceManagerInstanceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/secure_source_manager_instance_iam_policy#project SecureSourceManagerInstanceIamPolicy#project}.
 
 ---
 
