@@ -718,11 +718,18 @@ Object.defineProperty(exports, 'vertexAiFeaturestoreEntitytypeFeature', { get: f
 Object.defineProperty(exports, 'vertexAiIndex', { get: function () { return require('./vertex-ai-index'); } });
 Object.defineProperty(exports, 'vertexAiIndexEndpoint', { get: function () { return require('./vertex-ai-index-endpoint'); } });
 Object.defineProperty(exports, 'vertexAiTensorboard', { get: function () { return require('./vertex-ai-tensorboard'); } });
+Object.defineProperty(exports, 'vmwareengineCluster', { get: function () { return require('./vmwareengine-cluster'); } });
+Object.defineProperty(exports, 'vmwareengineExternalAddress', { get: function () { return require('./vmwareengine-external-address'); } });
 Object.defineProperty(exports, 'vmwareengineNetwork', { get: function () { return require('./vmwareengine-network'); } });
 Object.defineProperty(exports, 'vmwareengineNetworkPeering', { get: function () { return require('./vmwareengine-network-peering'); } });
 Object.defineProperty(exports, 'vmwareengineNetworkPolicy', { get: function () { return require('./vmwareengine-network-policy'); } });
 Object.defineProperty(exports, 'vmwareenginePrivateCloud', { get: function () { return require('./vmwareengine-private-cloud'); } });
+Object.defineProperty(exports, 'vmwareengineSubnet', { get: function () { return require('./vmwareengine-subnet'); } });
 Object.defineProperty(exports, 'vpcAccessConnector', { get: function () { return require('./vpc-access-connector'); } });
+Object.defineProperty(exports, 'workbenchInstance', { get: function () { return require('./workbench-instance'); } });
+Object.defineProperty(exports, 'workbenchInstanceIamBinding', { get: function () { return require('./workbench-instance-iam-binding'); } });
+Object.defineProperty(exports, 'workbenchInstanceIamMember', { get: function () { return require('./workbench-instance-iam-member'); } });
+Object.defineProperty(exports, 'workbenchInstanceIamPolicy', { get: function () { return require('./workbench-instance-iam-policy'); } });
 Object.defineProperty(exports, 'workflowsWorkflow', { get: function () { return require('./workflows-workflow'); } });
 Object.defineProperty(exports, 'dataGoogleAccessApprovalFolderServiceAccount', { get: function () { return require('./data-google-access-approval-folder-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleAccessApprovalOrganizationServiceAccount', { get: function () { return require('./data-google-access-approval-organization-service-account'); } });
@@ -799,6 +806,7 @@ Object.defineProperty(exports, 'dataGoogleComputeNetworkEndpointGroup', { get: f
 Object.defineProperty(exports, 'dataGoogleComputeNetworkPeering', { get: function () { return require('./data-google-compute-network-peering'); } });
 Object.defineProperty(exports, 'dataGoogleComputeNetworks', { get: function () { return require('./data-google-compute-networks'); } });
 Object.defineProperty(exports, 'dataGoogleComputeNodeTypes', { get: function () { return require('./data-google-compute-node-types'); } });
+Object.defineProperty(exports, 'dataGoogleComputeRegionDisk', { get: function () { return require('./data-google-compute-region-disk'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegionDiskIamPolicy', { get: function () { return require('./data-google-compute-region-disk-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegionInstanceGroup', { get: function () { return require('./data-google-compute-region-instance-group'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRegionInstanceTemplate', { get: function () { return require('./data-google-compute-region-instance-template'); } });
@@ -952,11 +960,16 @@ Object.defineProperty(exports, 'dataGoogleTagsTagValue', { get: function () { re
 Object.defineProperty(exports, 'dataGoogleTagsTagValueIamPolicy', { get: function () { return require('./data-google-tags-tag-value-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleTpuTensorflowVersions', { get: function () { return require('./data-google-tpu-tensorflow-versions'); } });
 Object.defineProperty(exports, 'dataGoogleVertexAiIndex', { get: function () { return require('./data-google-vertex-ai-index'); } });
+Object.defineProperty(exports, 'dataGoogleVmwareengineCluster', { get: function () { return require('./data-google-vmwareengine-cluster'); } });
+Object.defineProperty(exports, 'dataGoogleVmwareengineExternalAddress', { get: function () { return require('./data-google-vmwareengine-external-address'); } });
 Object.defineProperty(exports, 'dataGoogleVmwareengineNetwork', { get: function () { return require('./data-google-vmwareengine-network'); } });
 Object.defineProperty(exports, 'dataGoogleVmwareengineNetworkPeering', { get: function () { return require('./data-google-vmwareengine-network-peering'); } });
 Object.defineProperty(exports, 'dataGoogleVmwareengineNetworkPolicy', { get: function () { return require('./data-google-vmwareengine-network-policy'); } });
 Object.defineProperty(exports, 'dataGoogleVmwareengineNsxCredentials', { get: function () { return require('./data-google-vmwareengine-nsx-credentials'); } });
 Object.defineProperty(exports, 'dataGoogleVmwareenginePrivateCloud', { get: function () { return require('./data-google-vmwareengine-private-cloud'); } });
+Object.defineProperty(exports, 'dataGoogleVmwareengineSubnet', { get: function () { return require('./data-google-vmwareengine-subnet'); } });
+Object.defineProperty(exports, 'dataGoogleVmwareengineVcenterCredentials', { get: function () { return require('./data-google-vmwareengine-vcenter-credentials'); } });
 Object.defineProperty(exports, 'dataGoogleVpcAccessConnector', { get: function () { return require('./data-google-vpc-access-connector'); } });
+Object.defineProperty(exports, 'dataGoogleWorkbenchInstanceIamPolicy', { get: function () { return require('./data-google-workbench-instance-iam-policy'); } });
 Object.defineProperty(exports, 'provider', { get: function () { return require('./provider'); } });
 

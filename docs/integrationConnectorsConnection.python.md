@@ -4,7 +4,7 @@
 
 ### IntegrationConnectorsConnection <a name="IntegrationConnectorsConnection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection google_integration_connectors_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection google_integration_connectors_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer"></a>
 
@@ -63,12 +63,12 @@ integrationConnectorsConnection.IntegrationConnectorsConnection(
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.destinationConfig">destination_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]</code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.eventingConfig">eventing_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | eventing_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.eventingEnablementType">eventing_enablement_type</a></code> | <code>str</code> | Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Resource labels to represent user provided metadata. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.lockConfig">lock_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig">IntegrationConnectorsConnectionLockConfig</a></code> | lock_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.logConfig">log_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig">IntegrationConnectorsConnectionLogConfig</a></code> | log_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.nodeConfig">node_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionNodeConfig">IntegrationConnectorsConnectionNodeConfig</a></code> | node_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.serviceAccount">service_account</a></code> | <code>str</code> | Service account needed for runtime plane to access Google Cloud resources. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.sslConfig">ssl_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | ssl_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer.parameter.suspended">suspended</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Suspended indicates if a user has suspended a connection or not. |
@@ -142,7 +142,7 @@ Must be unique amongst siblings in the same scope
 
 connectorVersion of the Connector.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#connector_version IntegrationConnectorsConnection#connector_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#connector_version IntegrationConnectorsConnection#connector_version}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Location in which Connection needs to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#location IntegrationConnectorsConnection#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#location IntegrationConnectorsConnection#location}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Name of Connection needs to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#name IntegrationConnectorsConnection#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#name IntegrationConnectorsConnection#name}
 
 ---
 
@@ -172,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 auth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 config_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#config_variable IntegrationConnectorsConnection#config_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#config_variable IntegrationConnectorsConnection#config_variable}
 
 ---
 
@@ -192,7 +192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An arbitrary description for the Conection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#description IntegrationConnectorsConnection#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#description IntegrationConnectorsConnection#description}
 
 ---
 
@@ -202,7 +202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#destination_config IntegrationConnectorsConnection#destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#destination_config IntegrationConnectorsConnection#destination_config}
 
 ---
 
@@ -212,7 +212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 eventing_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#eventing_config IntegrationConnectorsConnection#eventing_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#eventing_config IntegrationConnectorsConnection#eventing_config}
 
 ---
 
@@ -222,7 +222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#eventing_enablement_type IntegrationConnectorsConnection#eventing_enablement_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#eventing_enablement_type IntegrationConnectorsConnection#eventing_enablement_type}
 
 ---
 
@@ -230,7 +230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -246,7 +246,7 @@ Resource labels to represent user provided metadata.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#labels IntegrationConnectorsConnection#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#labels IntegrationConnectorsConnection#labels}
 
 ---
 
@@ -256,7 +256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 lock_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#lock_config IntegrationConnectorsConnection#lock_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#lock_config IntegrationConnectorsConnection#lock_config}
 
 ---
 
@@ -266,7 +266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 log_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#log_config IntegrationConnectorsConnection#log_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#log_config IntegrationConnectorsConnection#log_config}
 
 ---
 
@@ -276,7 +276,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#node_config IntegrationConnectorsConnection#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#node_config IntegrationConnectorsConnection#node_config}
 
 ---
 
@@ -284,7 +284,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}.
 
 ---
 
@@ -294,7 +294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Service account needed for runtime plane to access Google Cloud resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#service_account IntegrationConnectorsConnection#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#service_account IntegrationConnectorsConnection#service_account}
 
 ---
 
@@ -304,7 +304,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ssl_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssl_config IntegrationConnectorsConnection#ssl_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssl_config IntegrationConnectorsConnection#ssl_config}
 
 ---
 
@@ -314,7 +314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Suspended indicates if a user has suspended a connection or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#suspended IntegrationConnectorsConnection#suspended}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#suspended IntegrationConnectorsConnection#suspended}
 
 ---
 
@@ -324,7 +324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#timeouts IntegrationConnectorsConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#timeouts IntegrationConnectorsConnection#timeouts}
 
 ---
 
@@ -722,7 +722,7 @@ def put_auth_config(
 
 authType of the Connection Possible values: ["USER_PASSWORD", "OAUTH2_JWT_BEARER", "OAUTH2_CLIENT_CREDENTIALS", "SSH_PUBLIC_KEY", "OAUTH2_AUTH_CODE_FLOW"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
 
 ---
 
@@ -732,7 +732,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -742,7 +742,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of authentication configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
 
 ---
 
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 oauth2_auth_code_flow block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#oauth2_auth_code_flow IntegrationConnectorsConnection#oauth2_auth_code_flow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#oauth2_auth_code_flow IntegrationConnectorsConnection#oauth2_auth_code_flow}
 
 ---
 
@@ -762,7 +762,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 oauth2_client_credentials block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#oauth2_client_credentials IntegrationConnectorsConnection#oauth2_client_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#oauth2_client_credentials IntegrationConnectorsConnection#oauth2_client_credentials}
 
 ---
 
@@ -772,7 +772,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 oauth2_jwt_bearer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#oauth2_jwt_bearer IntegrationConnectorsConnection#oauth2_jwt_bearer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#oauth2_jwt_bearer IntegrationConnectorsConnection#oauth2_jwt_bearer}
 
 ---
 
@@ -782,7 +782,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ssh_public_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssh_public_key IntegrationConnectorsConnection#ssh_public_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssh_public_key IntegrationConnectorsConnection#ssh_public_key}
 
 ---
 
@@ -792,7 +792,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 user_password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
 
 ---
 
@@ -841,7 +841,7 @@ def put_eventing_config(
 
 registration_destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#registration_destination_config IntegrationConnectorsConnection#registration_destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#registration_destination_config IntegrationConnectorsConnection#registration_destination_config}
 
 ---
 
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 auth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
 
 ---
 
@@ -871,7 +871,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Enrichment Enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#enrichment_enabled IntegrationConnectorsConnection#enrichment_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#enrichment_enabled IntegrationConnectorsConnection#enrichment_enabled}
 
 ---
 
@@ -890,7 +890,7 @@ def put_lock_config(
 
 Indicates whether or not the connection is locked.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#locked IntegrationConnectorsConnection#locked}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#locked IntegrationConnectorsConnection#locked}
 
 ---
 
@@ -900,7 +900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Describes why a connection is locked.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#reason IntegrationConnectorsConnection#reason}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#reason IntegrationConnectorsConnection#reason}
 
 ---
 
@@ -918,7 +918,7 @@ def put_log_config(
 
 Enabled represents whether logging is enabled or not for a connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#enabled IntegrationConnectorsConnection#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#enabled IntegrationConnectorsConnection#enabled}
 
 ---
 
@@ -937,7 +937,7 @@ def put_node_config(
 
 Minimum number of nodes in the runtime nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#max_node_count IntegrationConnectorsConnection#max_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#max_node_count IntegrationConnectorsConnection#max_node_count}
 
 ---
 
@@ -947,7 +947,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Minimum number of nodes in the runtime nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#min_node_count IntegrationConnectorsConnection#min_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#min_node_count IntegrationConnectorsConnection#min_node_count}
 
 ---
 
@@ -974,7 +974,7 @@ def put_ssl_config(
 
 Enum for controlling the SSL Type (TLS/MTLS) Possible values: ["TLS", "MTLS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -994,7 +994,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 client_certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_certificate IntegrationConnectorsConnection#client_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_certificate IntegrationConnectorsConnection#client_certificate}
 
 ---
 
@@ -1004,7 +1004,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Type of Client Cert (PEM/JKS/.. etc.) Possible values: ["PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_cert_type IntegrationConnectorsConnection#client_cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_cert_type IntegrationConnectorsConnection#client_cert_type}
 
 ---
 
@@ -1014,7 +1014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 client_private_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_private_key IntegrationConnectorsConnection#client_private_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_private_key IntegrationConnectorsConnection#client_private_key}
 
 ---
 
@@ -1024,7 +1024,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 client_private_key_pass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_private_key_pass IntegrationConnectorsConnection#client_private_key_pass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_private_key_pass IntegrationConnectorsConnection#client_private_key_pass}
 
 ---
 
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 private_server_certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#private_server_certificate IntegrationConnectorsConnection#private_server_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#private_server_certificate IntegrationConnectorsConnection#private_server_certificate}
 
 ---
 
@@ -1044,7 +1044,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Type of Server Cert (PEM/JKS/.. etc.) Possible values: ["PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#server_cert_type IntegrationConnectorsConnection#server_cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#server_cert_type IntegrationConnectorsConnection#server_cert_type}
 
 ---
 
@@ -1054,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Enum for Trust Model Possible values: ["PUBLIC", "PRIVATE", "INSECURE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#trust_model IntegrationConnectorsConnection#trust_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#trust_model IntegrationConnectorsConnection#trust_model}
 
 ---
 
@@ -1064,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Bool for enabling SSL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#use_ssl IntegrationConnectorsConnection#use_ssl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#use_ssl IntegrationConnectorsConnection#use_ssl}
 
 ---
 
@@ -1082,7 +1082,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}.
 
 ---
 
@@ -1098,7 +1098,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}.
 
 ---
 
@@ -1312,7 +1312,7 @@ The construct id used in the generated config for the IntegrationConnectorsConne
 
 The id of the existing IntegrationConnectorsConnection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -2090,7 +2090,7 @@ auth_type: str
 
 authType of the Connection Possible values: ["USER_PASSWORD", "OAUTH2_JWT_BEARER", "OAUTH2_CLIENT_CREDENTIALS", "SSH_PUBLIC_KEY", "OAUTH2_AUTH_CODE_FLOW"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
 
 ---
 
@@ -2104,7 +2104,7 @@ additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectors
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -2118,7 +2118,7 @@ auth_key: str
 
 The type of authentication configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
 
 ---
 
@@ -2132,7 +2132,7 @@ oauth2_auth_code_flow: IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFl
 
 oauth2_auth_code_flow block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#oauth2_auth_code_flow IntegrationConnectorsConnection#oauth2_auth_code_flow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#oauth2_auth_code_flow IntegrationConnectorsConnection#oauth2_auth_code_flow}
 
 ---
 
@@ -2146,7 +2146,7 @@ oauth2_client_credentials: IntegrationConnectorsConnectionAuthConfigOauth2Client
 
 oauth2_client_credentials block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#oauth2_client_credentials IntegrationConnectorsConnection#oauth2_client_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#oauth2_client_credentials IntegrationConnectorsConnection#oauth2_client_credentials}
 
 ---
 
@@ -2160,7 +2160,7 @@ oauth2_jwt_bearer: IntegrationConnectorsConnectionAuthConfigOauth2JwtBearer
 
 oauth2_jwt_bearer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#oauth2_jwt_bearer IntegrationConnectorsConnection#oauth2_jwt_bearer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#oauth2_jwt_bearer IntegrationConnectorsConnection#oauth2_jwt_bearer}
 
 ---
 
@@ -2174,7 +2174,7 @@ ssh_public_key: IntegrationConnectorsConnectionAuthConfigSshPublicKey
 
 ssh_public_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssh_public_key IntegrationConnectorsConnection#ssh_public_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssh_public_key IntegrationConnectorsConnection#ssh_public_key}
 
 ---
 
@@ -2188,7 +2188,7 @@ user_password: IntegrationConnectorsConnectionAuthConfigUserPassword
 
 user_password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
 
 ---
 
@@ -2232,7 +2232,7 @@ key: str
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -2246,7 +2246,7 @@ boolean_value: typing.Union[bool, IResolvable]
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -2260,7 +2260,7 @@ encryption_key_value: IntegrationConnectorsConnectionAuthConfigAdditionalVariabl
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -2274,7 +2274,7 @@ integer_value: typing.Union[int, float]
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -2288,7 +2288,7 @@ secret_value: IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretV
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -2302,7 +2302,7 @@ string_value: str
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -2338,7 +2338,7 @@ type: str
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -2356,7 +2356,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2392,7 +2392,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -2434,7 +2434,7 @@ auth_uri: str
 
 Auth URL for Authorization Code Flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_uri IntegrationConnectorsConnection#auth_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_uri IntegrationConnectorsConnection#auth_uri}
 
 ---
 
@@ -2448,7 +2448,7 @@ client_id: str
 
 Client ID for user-provided OAuth app.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
 
 ---
 
@@ -2462,7 +2462,7 @@ client_secret: IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClient
 
 client_secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
 
 ---
 
@@ -2476,7 +2476,7 @@ enable_pkce: typing.Union[bool, IResolvable]
 
 Whether to enable PKCE when the user performs the auth code flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#enable_pkce IntegrationConnectorsConnection#enable_pkce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#enable_pkce IntegrationConnectorsConnection#enable_pkce}
 
 ---
 
@@ -2490,7 +2490,7 @@ scopes: typing.List[str]
 
 Scopes the connection will request when the user performs the auth code flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#scopes IntegrationConnectorsConnection#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#scopes IntegrationConnectorsConnection#scopes}
 
 ---
 
@@ -2524,7 +2524,7 @@ secret_version: str
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2562,7 +2562,7 @@ client_id: str
 
 Secret version of Password for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
 
 ---
 
@@ -2576,7 +2576,7 @@ client_secret: IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsC
 
 client_secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
 
 ---
 
@@ -2610,7 +2610,7 @@ secret_version: str
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2648,7 +2648,7 @@ client_key: IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKey
 
 client_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_key IntegrationConnectorsConnection#client_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_key IntegrationConnectorsConnection#client_key}
 
 ---
 
@@ -2662,7 +2662,7 @@ jwt_claims: IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaims
 
 jwt_claims block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#jwt_claims IntegrationConnectorsConnection#jwt_claims}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#jwt_claims IntegrationConnectorsConnection#jwt_claims}
 
 ---
 
@@ -2696,7 +2696,7 @@ secret_version: str
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2736,7 +2736,7 @@ audience: str
 
 Value for the "aud" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#audience IntegrationConnectorsConnection#audience}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#audience IntegrationConnectorsConnection#audience}
 
 ---
 
@@ -2750,7 +2750,7 @@ issuer: str
 
 Value for the "iss" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#issuer IntegrationConnectorsConnection#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#issuer IntegrationConnectorsConnection#issuer}
 
 ---
 
@@ -2764,7 +2764,7 @@ subject: str
 
 Value for the "sub" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#subject IntegrationConnectorsConnection#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#subject IntegrationConnectorsConnection#subject}
 
 ---
 
@@ -2804,7 +2804,7 @@ username: str
 
 The user account used to authenticate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -2818,7 +2818,7 @@ cert_type: str
 
 Format of SSH Client cert.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#cert_type IntegrationConnectorsConnection#cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#cert_type IntegrationConnectorsConnection#cert_type}
 
 ---
 
@@ -2832,7 +2832,7 @@ ssh_client_cert: IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientC
 
 ssh_client_cert block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssh_client_cert IntegrationConnectorsConnection#ssh_client_cert}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssh_client_cert IntegrationConnectorsConnection#ssh_client_cert}
 
 ---
 
@@ -2846,7 +2846,7 @@ ssh_client_cert_pass: IntegrationConnectorsConnectionAuthConfigSshPublicKeySshCl
 
 ssh_client_cert_pass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssh_client_cert_pass IntegrationConnectorsConnection#ssh_client_cert_pass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssh_client_cert_pass IntegrationConnectorsConnection#ssh_client_cert_pass}
 
 ---
 
@@ -2880,7 +2880,7 @@ secret_version: str
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2916,7 +2916,7 @@ secret_version: str
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2954,7 +2954,7 @@ username: str
 
 Username for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -2968,7 +2968,7 @@ password: IntegrationConnectorsConnectionAuthConfigUserPasswordPassword
 
 password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
 
 ---
 
@@ -3002,7 +3002,7 @@ secret_version: str
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3065,12 +3065,12 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionConfig(
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig">destination_config</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig">IntegrationConnectorsConnectionDestinationConfig</a>]]</code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingConfig">eventing_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | eventing_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingEnablementType">eventing_enablement_type</a></code> | <code>str</code> | Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Resource labels to represent user provided metadata. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.lockConfig">lock_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig">IntegrationConnectorsConnectionLockConfig</a></code> | lock_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.logConfig">log_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig">IntegrationConnectorsConnectionLogConfig</a></code> | log_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.nodeConfig">node_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionNodeConfig">IntegrationConnectorsConnectionNodeConfig</a></code> | node_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.serviceAccount">service_account</a></code> | <code>str</code> | Service account needed for runtime plane to access Google Cloud resources. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.sslConfig">ssl_config</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | ssl_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended">suspended</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Suspended indicates if a user has suspended a connection or not. |
@@ -3158,7 +3158,7 @@ connector_version: str
 
 connectorVersion of the Connector.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#connector_version IntegrationConnectorsConnection#connector_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#connector_version IntegrationConnectorsConnection#connector_version}
 
 ---
 
@@ -3172,7 +3172,7 @@ location: str
 
 Location in which Connection needs to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#location IntegrationConnectorsConnection#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#location IntegrationConnectorsConnection#location}
 
 ---
 
@@ -3186,7 +3186,7 @@ name: str
 
 Name of Connection needs to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#name IntegrationConnectorsConnection#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#name IntegrationConnectorsConnection#name}
 
 ---
 
@@ -3200,7 +3200,7 @@ auth_config: IntegrationConnectorsConnectionAuthConfig
 
 auth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
 
 ---
 
@@ -3214,7 +3214,7 @@ config_variable: typing.Union[IResolvable, typing.List[IntegrationConnectorsConn
 
 config_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#config_variable IntegrationConnectorsConnection#config_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#config_variable IntegrationConnectorsConnection#config_variable}
 
 ---
 
@@ -3228,7 +3228,7 @@ description: str
 
 An arbitrary description for the Conection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#description IntegrationConnectorsConnection#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#description IntegrationConnectorsConnection#description}
 
 ---
 
@@ -3242,7 +3242,7 @@ destination_config: typing.Union[IResolvable, typing.List[IntegrationConnectorsC
 
 destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#destination_config IntegrationConnectorsConnection#destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#destination_config IntegrationConnectorsConnection#destination_config}
 
 ---
 
@@ -3256,7 +3256,7 @@ eventing_config: IntegrationConnectorsConnectionEventingConfig
 
 eventing_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#eventing_config IntegrationConnectorsConnection#eventing_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#eventing_config IntegrationConnectorsConnection#eventing_config}
 
 ---
 
@@ -3270,7 +3270,7 @@ eventing_enablement_type: str
 
 Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#eventing_enablement_type IntegrationConnectorsConnection#eventing_enablement_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#eventing_enablement_type IntegrationConnectorsConnection#eventing_enablement_type}
 
 ---
 
@@ -3282,7 +3282,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -3302,7 +3302,7 @@ Resource labels to represent user provided metadata.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#labels IntegrationConnectorsConnection#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#labels IntegrationConnectorsConnection#labels}
 
 ---
 
@@ -3316,7 +3316,7 @@ lock_config: IntegrationConnectorsConnectionLockConfig
 
 lock_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#lock_config IntegrationConnectorsConnection#lock_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#lock_config IntegrationConnectorsConnection#lock_config}
 
 ---
 
@@ -3330,7 +3330,7 @@ log_config: IntegrationConnectorsConnectionLogConfig
 
 log_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#log_config IntegrationConnectorsConnection#log_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#log_config IntegrationConnectorsConnection#log_config}
 
 ---
 
@@ -3344,7 +3344,7 @@ node_config: IntegrationConnectorsConnectionNodeConfig
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#node_config IntegrationConnectorsConnection#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#node_config IntegrationConnectorsConnection#node_config}
 
 ---
 
@@ -3356,7 +3356,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}.
 
 ---
 
@@ -3370,7 +3370,7 @@ service_account: str
 
 Service account needed for runtime plane to access Google Cloud resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#service_account IntegrationConnectorsConnection#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#service_account IntegrationConnectorsConnection#service_account}
 
 ---
 
@@ -3384,7 +3384,7 @@ ssl_config: IntegrationConnectorsConnectionSslConfig
 
 ssl_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssl_config IntegrationConnectorsConnection#ssl_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssl_config IntegrationConnectorsConnection#ssl_config}
 
 ---
 
@@ -3398,7 +3398,7 @@ suspended: typing.Union[bool, IResolvable]
 
 Suspended indicates if a user has suspended a connection or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#suspended IntegrationConnectorsConnection#suspended}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#suspended IntegrationConnectorsConnection#suspended}
 
 ---
 
@@ -3412,7 +3412,7 @@ timeouts: IntegrationConnectorsConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#timeouts IntegrationConnectorsConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#timeouts IntegrationConnectorsConnection#timeouts}
 
 ---
 
@@ -3456,7 +3456,7 @@ key: str
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -3470,7 +3470,7 @@ boolean_value: typing.Union[bool, IResolvable]
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -3484,7 +3484,7 @@ encryption_key_value: IntegrationConnectorsConnectionConfigVariableEncryptionKey
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -3498,7 +3498,7 @@ integer_value: typing.Union[int, float]
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -3512,7 +3512,7 @@ secret_value: IntegrationConnectorsConnectionConfigVariableSecretValue
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -3526,7 +3526,7 @@ string_value: str
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -3562,7 +3562,7 @@ type: str
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -3580,7 +3580,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3616,7 +3616,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -3663,7 +3663,7 @@ key: str
 
 The key is the destination identifier that is supported by the Connector.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -3677,7 +3677,7 @@ destination: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnecti
 
 destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
 
 ---
 
@@ -3715,7 +3715,7 @@ host: str
 
 For publicly routable host.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
 
 ---
 
@@ -3729,7 +3729,7 @@ port: typing.Union[int, float]
 
 The port is the target port number that is accepted by the destination.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
 
 ---
 
@@ -3743,7 +3743,7 @@ service_attachment: str
 
 PSC service attachments. Format: projects/* /regions/* /serviceAttachments/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3785,7 +3785,7 @@ registration_destination_config: IntegrationConnectorsConnectionEventingConfigRe
 
 registration_destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#registration_destination_config IntegrationConnectorsConnection#registration_destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#registration_destination_config IntegrationConnectorsConnection#registration_destination_config}
 
 ---
 
@@ -3799,7 +3799,7 @@ additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectors
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -3813,7 +3813,7 @@ auth_config: IntegrationConnectorsConnectionEventingConfigAuthConfig
 
 auth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
 
 ---
 
@@ -3827,7 +3827,7 @@ enrichment_enabled: typing.Union[bool, IResolvable]
 
 Enrichment Enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#enrichment_enabled IntegrationConnectorsConnection#enrichment_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#enrichment_enabled IntegrationConnectorsConnection#enrichment_enabled}
 
 ---
 
@@ -3871,7 +3871,7 @@ key: str
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -3885,7 +3885,7 @@ boolean_value: typing.Union[bool, IResolvable]
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -3899,7 +3899,7 @@ encryption_key_value: IntegrationConnectorsConnectionEventingConfigAdditionalVar
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -3913,7 +3913,7 @@ integer_value: typing.Union[int, float]
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -3927,7 +3927,7 @@ secret_value: IntegrationConnectorsConnectionEventingConfigAdditionalVariableSec
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -3941,7 +3941,7 @@ string_value: str
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -3981,7 +3981,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3997,7 +3997,7 @@ type: str
 
 Type of Encryption Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -4031,7 +4031,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -4071,7 +4071,7 @@ auth_type: str
 
 authType of the Connection Possible values: ["USER_PASSWORD"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
 
 ---
 
@@ -4085,7 +4085,7 @@ user_password: IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswo
 
 user_password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
 
 ---
 
@@ -4099,7 +4099,7 @@ additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectors
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -4113,7 +4113,7 @@ auth_key: str
 
 The type of authentication configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
 
 ---
 
@@ -4157,7 +4157,7 @@ key: str
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -4171,7 +4171,7 @@ boolean_value: typing.Union[bool, IResolvable]
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -4185,7 +4185,7 @@ encryption_key_value: IntegrationConnectorsConnectionEventingConfigAuthConfigAdd
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -4199,7 +4199,7 @@ integer_value: typing.Union[int, float]
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -4213,7 +4213,7 @@ secret_value: IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalV
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -4227,7 +4227,7 @@ string_value: str
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -4267,7 +4267,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -4283,7 +4283,7 @@ type: str
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -4317,7 +4317,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -4353,7 +4353,7 @@ password: IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPas
 
 password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
 
 ---
 
@@ -4367,7 +4367,7 @@ username: str
 
 Username for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -4401,7 +4401,7 @@ secret_version: str
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -4439,7 +4439,7 @@ destination: typing.Union[IResolvable, typing.List[IntegrationConnectorsConnecti
 
 destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
 
 ---
 
@@ -4453,7 +4453,7 @@ key: str
 
 Key for the connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -4491,7 +4491,7 @@ host: str
 
 Host.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
 
 ---
 
@@ -4505,7 +4505,7 @@ port: typing.Union[int, float]
 
 port number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
 
 ---
 
@@ -4519,7 +4519,7 @@ service_attachment: str
 
 Service Attachment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
 
 ---
 
@@ -4577,7 +4577,7 @@ locked: typing.Union[bool, IResolvable]
 
 Indicates whether or not the connection is locked.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#locked IntegrationConnectorsConnection#locked}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#locked IntegrationConnectorsConnection#locked}
 
 ---
 
@@ -4591,7 +4591,7 @@ reason: str
 
 Describes why a connection is locked.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#reason IntegrationConnectorsConnection#reason}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#reason IntegrationConnectorsConnection#reason}
 
 ---
 
@@ -4625,7 +4625,7 @@ enabled: typing.Union[bool, IResolvable]
 
 Enabled represents whether logging is enabled or not for a connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#enabled IntegrationConnectorsConnection#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#enabled IntegrationConnectorsConnection#enabled}
 
 ---
 
@@ -4661,7 +4661,7 @@ max_node_count: typing.Union[int, float]
 
 Minimum number of nodes in the runtime nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#max_node_count IntegrationConnectorsConnection#max_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#max_node_count IntegrationConnectorsConnection#max_node_count}
 
 ---
 
@@ -4675,7 +4675,7 @@ min_node_count: typing.Union[int, float]
 
 Minimum number of nodes in the runtime nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#min_node_count IntegrationConnectorsConnection#min_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#min_node_count IntegrationConnectorsConnection#min_node_count}
 
 ---
 
@@ -4727,7 +4727,7 @@ type: str
 
 Enum for controlling the SSL Type (TLS/MTLS) Possible values: ["TLS", "MTLS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -4741,7 +4741,7 @@ additional_variable: typing.Union[IResolvable, typing.List[IntegrationConnectors
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -4755,7 +4755,7 @@ client_certificate: IntegrationConnectorsConnectionSslConfigClientCertificate
 
 client_certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_certificate IntegrationConnectorsConnection#client_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_certificate IntegrationConnectorsConnection#client_certificate}
 
 ---
 
@@ -4769,7 +4769,7 @@ client_cert_type: str
 
 Type of Client Cert (PEM/JKS/.. etc.) Possible values: ["PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_cert_type IntegrationConnectorsConnection#client_cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_cert_type IntegrationConnectorsConnection#client_cert_type}
 
 ---
 
@@ -4783,7 +4783,7 @@ client_private_key: IntegrationConnectorsConnectionSslConfigClientPrivateKey
 
 client_private_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_private_key IntegrationConnectorsConnection#client_private_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_private_key IntegrationConnectorsConnection#client_private_key}
 
 ---
 
@@ -4797,7 +4797,7 @@ client_private_key_pass: IntegrationConnectorsConnectionSslConfigClientPrivateKe
 
 client_private_key_pass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_private_key_pass IntegrationConnectorsConnection#client_private_key_pass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_private_key_pass IntegrationConnectorsConnection#client_private_key_pass}
 
 ---
 
@@ -4811,7 +4811,7 @@ private_server_certificate: IntegrationConnectorsConnectionSslConfigPrivateServe
 
 private_server_certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#private_server_certificate IntegrationConnectorsConnection#private_server_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#private_server_certificate IntegrationConnectorsConnection#private_server_certificate}
 
 ---
 
@@ -4825,7 +4825,7 @@ server_cert_type: str
 
 Type of Server Cert (PEM/JKS/.. etc.) Possible values: ["PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#server_cert_type IntegrationConnectorsConnection#server_cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#server_cert_type IntegrationConnectorsConnection#server_cert_type}
 
 ---
 
@@ -4839,7 +4839,7 @@ trust_model: str
 
 Enum for Trust Model Possible values: ["PUBLIC", "PRIVATE", "INSECURE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#trust_model IntegrationConnectorsConnection#trust_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#trust_model IntegrationConnectorsConnection#trust_model}
 
 ---
 
@@ -4853,7 +4853,7 @@ use_ssl: typing.Union[bool, IResolvable]
 
 Bool for enabling SSL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#use_ssl IntegrationConnectorsConnection#use_ssl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#use_ssl IntegrationConnectorsConnection#use_ssl}
 
 ---
 
@@ -4897,7 +4897,7 @@ key: str
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -4911,7 +4911,7 @@ boolean_value: typing.Union[bool, IResolvable]
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -4925,7 +4925,7 @@ encryption_key_value: IntegrationConnectorsConnectionSslConfigAdditionalVariable
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -4939,7 +4939,7 @@ integer_value: typing.Union[int, float]
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -4953,7 +4953,7 @@ secret_value: IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretVa
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -4967,7 +4967,7 @@ string_value: str
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -5007,7 +5007,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -5023,7 +5023,7 @@ type: str
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -5057,7 +5057,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -5091,7 +5091,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -5125,7 +5125,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -5159,7 +5159,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -5193,7 +5193,7 @@ secret_version: str
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -5226,9 +5226,9 @@ integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}. |
 
 ---
 
@@ -5240,7 +5240,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}.
 
 ---
 
@@ -5252,7 +5252,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}.
 
 ---
 
@@ -5264,7 +5264,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}.
 
 ---
 
@@ -6016,7 +6016,7 @@ def put_encryption_key_value(
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -6030,7 +6030,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -6050,7 +6050,7 @@ def put_secret_value(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -7102,7 +7102,7 @@ def put_client_secret(
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -7834,7 +7834,7 @@ def put_client_secret(
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -8839,7 +8839,7 @@ def put_client_key(
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -8861,7 +8861,7 @@ def put_jwt_claims(
 
 Value for the "aud" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#audience IntegrationConnectorsConnection#audience}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#audience IntegrationConnectorsConnection#audience}
 
 ---
 
@@ -8871,7 +8871,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Value for the "iss" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#issuer IntegrationConnectorsConnection#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#issuer IntegrationConnectorsConnection#issuer}
 
 ---
 
@@ -8881,7 +8881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Value for the "sub" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#subject IntegrationConnectorsConnection#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#subject IntegrationConnectorsConnection#subject}
 
 ---
 
@@ -9260,7 +9260,7 @@ def put_oauth2_auth_code_flow(
 
 Auth URL for Authorization Code Flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_uri IntegrationConnectorsConnection#auth_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_uri IntegrationConnectorsConnection#auth_uri}
 
 ---
 
@@ -9270,7 +9270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Client ID for user-provided OAuth app.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
 
 ---
 
@@ -9280,7 +9280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 client_secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
 
 ---
 
@@ -9290,7 +9290,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether to enable PKCE when the user performs the auth code flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#enable_pkce IntegrationConnectorsConnection#enable_pkce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#enable_pkce IntegrationConnectorsConnection#enable_pkce}
 
 ---
 
@@ -9300,7 +9300,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Scopes the connection will request when the user performs the auth code flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#scopes IntegrationConnectorsConnection#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#scopes IntegrationConnectorsConnection#scopes}
 
 ---
 
@@ -9319,7 +9319,7 @@ def put_oauth2_client_credentials(
 
 Secret version of Password for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
 
 ---
 
@@ -9329,7 +9329,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 client_secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
 
 ---
 
@@ -9348,7 +9348,7 @@ def put_oauth2_jwt_bearer(
 
 client_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#client_key IntegrationConnectorsConnection#client_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#client_key IntegrationConnectorsConnection#client_key}
 
 ---
 
@@ -9358,7 +9358,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 jwt_claims block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#jwt_claims IntegrationConnectorsConnection#jwt_claims}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#jwt_claims IntegrationConnectorsConnection#jwt_claims}
 
 ---
 
@@ -9379,7 +9379,7 @@ def put_ssh_public_key(
 
 The user account used to authenticate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -9389,7 +9389,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Format of SSH Client cert.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#cert_type IntegrationConnectorsConnection#cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#cert_type IntegrationConnectorsConnection#cert_type}
 
 ---
 
@@ -9399,7 +9399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ssh_client_cert block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssh_client_cert IntegrationConnectorsConnection#ssh_client_cert}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssh_client_cert IntegrationConnectorsConnection#ssh_client_cert}
 
 ---
 
@@ -9409,7 +9409,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ssh_client_cert_pass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#ssh_client_cert_pass IntegrationConnectorsConnection#ssh_client_cert_pass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#ssh_client_cert_pass IntegrationConnectorsConnection#ssh_client_cert_pass}
 
 ---
 
@@ -9428,7 +9428,7 @@ def put_user_password(
 
 Username for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -9438,7 +9438,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
 
 ---
 
@@ -9953,7 +9953,7 @@ def put_ssh_client_cert(
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -9973,7 +9973,7 @@ def put_ssh_client_cert_pass(
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -10967,7 +10967,7 @@ def put_password(
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -12111,7 +12111,7 @@ def put_encryption_key_value(
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -12125,7 +12125,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -12145,7 +12145,7 @@ def put_secret_value(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -14898,7 +14898,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -14910,7 +14910,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 
 Type of Encryption Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -14928,7 +14928,7 @@ def put_secret_value(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -16193,7 +16193,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -16205,7 +16205,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -16223,7 +16223,7 @@ def put_secret_value(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -16992,7 +16992,7 @@ def put_user_password(
 
 password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
 
 ---
 
@@ -17002,7 +17002,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Username for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -17397,7 +17397,7 @@ def put_password(
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -18066,7 +18066,7 @@ def put_auth_config(
 
 authType of the Connection Possible values: ["USER_PASSWORD"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
 
 ---
 
@@ -18076,7 +18076,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 user_password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
 
 ---
 
@@ -18086,7 +18086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -18096,7 +18096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of authentication configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
 
 ---
 
@@ -18115,7 +18115,7 @@ def put_registration_destination_config(
 
 destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
 
 ---
 
@@ -18125,7 +18125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Key for the connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -21782,7 +21782,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -21794,7 +21794,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -21812,7 +21812,7 @@ def put_secret_value(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -23478,7 +23478,7 @@ def put_client_certificate(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -23496,7 +23496,7 @@ def put_client_private_key(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -23514,7 +23514,7 @@ def put_client_private_key_pass(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -23532,7 +23532,7 @@ def put_private_server_certificate(
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 

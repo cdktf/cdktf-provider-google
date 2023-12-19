@@ -1,3 +1,3 @@
 # `data_google_logging_folder_settings`
 
-Refer to the Terraform Registory for docs: [`data_google_logging_folder_settings`](https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/data-sources/logging_folder_settings).
+Refer to the Terraform Registory for docs: [`data_google_logging_folder_settings`](https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/logging_folder_settings).

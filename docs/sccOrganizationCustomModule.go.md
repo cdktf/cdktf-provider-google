@@ -4,7 +4,7 @@
 
 ### SccOrganizationCustomModule <a name="SccOrganizationCustomModule" id="@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module google_scc_organization_custom_module}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module google_scc_organization_custom_module}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModule.Initializer"></a>
 
@@ -500,7 +500,7 @@ The construct id used in the generated config for the SccOrganizationCustomModul
 
 The id of the existing SccOrganizationCustomModule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -910,7 +910,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccorganizationcust
 | <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | The display name of the Security Health Analytics custom module. |
 | <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleConfig.property.enablementState">EnablementState</a></code> | <code>*string</code> | The enablement state of the custom module. Possible values: ["ENABLED", "DISABLED"]. |
 | <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleConfig.property.organization">Organization</a></code> | <code>*string</code> | Numerical ID of the parent organization. |
-| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#id SccOrganizationCustomModule#id}. |
+| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#id SccOrganizationCustomModule#id}. |
 | <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleTimeouts">SccOrganizationCustomModuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -995,7 +995,7 @@ CustomConfig SccOrganizationCustomModuleCustomConfig
 
 custom_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#custom_config SccOrganizationCustomModule#custom_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#custom_config SccOrganizationCustomModule#custom_config}
 
 ---
 
@@ -1015,7 +1015,7 @@ returned by this custom module. The display name must be between 1 and
 128 characters, start with a lowercase letter, and contain alphanumeric
 characters or underscores only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#display_name SccOrganizationCustomModule#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#display_name SccOrganizationCustomModule#display_name}
 
 ---
 
@@ -1029,7 +1029,7 @@ EnablementState *string
 
 The enablement state of the custom module. Possible values: ["ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#enablement_state SccOrganizationCustomModule#enablement_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#enablement_state SccOrganizationCustomModule#enablement_state}
 
 ---
 
@@ -1043,7 +1043,7 @@ Organization *string
 
 Numerical ID of the parent organization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#organization SccOrganizationCustomModule#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#organization SccOrganizationCustomModule#organization}
 
 ---
 
@@ -1055,7 +1055,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#id SccOrganizationCustomModule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#id SccOrganizationCustomModule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1072,7 +1072,7 @@ Timeouts SccOrganizationCustomModuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#timeouts SccOrganizationCustomModule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#timeouts SccOrganizationCustomModule#timeouts}
 
 ---
 
@@ -1116,7 +1116,7 @@ Predicate SccOrganizationCustomModuleCustomConfigPredicate
 
 predicate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#predicate SccOrganizationCustomModule#predicate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#predicate SccOrganizationCustomModule#predicate}
 
 ---
 
@@ -1133,7 +1133,7 @@ An explanation of the recommended steps that security teams can take to resolve 
 This explanation is returned with each finding generated by
 this module in the nextSteps property of the finding JSON.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#recommendation SccOrganizationCustomModule#recommendation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#recommendation SccOrganizationCustomModule#recommendation}
 
 ---
 
@@ -1147,7 +1147,7 @@ ResourceSelector SccOrganizationCustomModuleCustomConfigResourceSelector
 
 resource_selector block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#resource_selector SccOrganizationCustomModule#resource_selector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#resource_selector SccOrganizationCustomModule#resource_selector}
 
 ---
 
@@ -1161,7 +1161,7 @@ Severity *string
 
 The severity to assign to findings generated by the module. Possible values: ["CRITICAL", "HIGH", "MEDIUM", "LOW"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#severity SccOrganizationCustomModule#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#severity SccOrganizationCustomModule#severity}
 
 ---
 
@@ -1175,7 +1175,7 @@ CustomOutput SccOrganizationCustomModuleCustomConfigCustomOutput
 
 custom_output block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#custom_output SccOrganizationCustomModule#custom_output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#custom_output SccOrganizationCustomModule#custom_output}
 
 ---
 
@@ -1192,7 +1192,7 @@ Text that describes the vulnerability or misconfiguration that the custom module
 This explanation is returned with each finding instance to
 help investigators understand the detected issue. The text must be enclosed in quotation marks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
 
 ---
 
@@ -1226,7 +1226,7 @@ Properties interface{}
 
 properties block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#properties SccOrganizationCustomModule#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#properties SccOrganizationCustomModule#properties}
 
 ---
 
@@ -1262,7 +1262,7 @@ Name *string
 
 Name of the property for the custom output.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#name SccOrganizationCustomModule#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#name SccOrganizationCustomModule#name}
 
 ---
 
@@ -1276,7 +1276,7 @@ ValueExpression SccOrganizationCustomModuleCustomConfigCustomOutputPropertiesVal
 
 value_expression block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#value_expression SccOrganizationCustomModule#value_expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#value_expression SccOrganizationCustomModule#value_expression}
 
 ---
 
@@ -1316,7 +1316,7 @@ Expression *string
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
 
 ---
 
@@ -1333,7 +1333,7 @@ Description of the expression.
 This is a longer text which describes the
 expression, e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
 
 ---
 
@@ -1347,7 +1347,7 @@ Location *string
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
 
 ---
 
@@ -1361,7 +1361,7 @@ Title *string
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
 
 ---
 
@@ -1401,7 +1401,7 @@ Expression *string
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
 
 ---
 
@@ -1418,7 +1418,7 @@ Description of the expression.
 This is a longer text which describes the
 expression, e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
 
 ---
 
@@ -1432,7 +1432,7 @@ Location *string
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
 
 ---
 
@@ -1446,7 +1446,7 @@ Title *string
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
 
 ---
 
@@ -1480,7 +1480,7 @@ ResourceTypes *[]*string
 
 The resource types to run the detector on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#resource_types SccOrganizationCustomModule#resource_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#resource_types SccOrganizationCustomModule#resource_types}
 
 ---
 
@@ -1502,9 +1502,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccorganizationcust
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#create SccOrganizationCustomModule#create}. |
-| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#delete SccOrganizationCustomModule#delete}. |
-| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#update SccOrganizationCustomModule#update}. |
+| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#create SccOrganizationCustomModule#create}. |
+| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#delete SccOrganizationCustomModule#delete}. |
+| <code><a href="#@cdktf/provider-google.sccOrganizationCustomModule.SccOrganizationCustomModuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#update SccOrganizationCustomModule#update}. |
 
 ---
 
@@ -1516,7 +1516,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#create SccOrganizationCustomModule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#create SccOrganizationCustomModule#create}.
 
 ---
 
@@ -1528,7 +1528,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#delete SccOrganizationCustomModule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#delete SccOrganizationCustomModule#delete}.
 
 ---
 
@@ -1540,7 +1540,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/scc_organization_custom_module#update SccOrganizationCustomModule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/scc_organization_custom_module#update SccOrganizationCustomModule#update}.
 
 ---
 

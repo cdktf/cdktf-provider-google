@@ -4,7 +4,7 @@
 
 ### ProjectDefaultServiceAccounts <a name="ProjectDefaultServiceAccounts" id="@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccounts"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts google_project_default_service_accounts}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts google_project_default_service_accounts}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccounts.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the ProjectDefaultServiceAccou
 
 The id of the existing ProjectDefaultServiceAccounts that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -846,7 +846,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectdefaultservi
 | <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsConfig.property.action">Action</a></code> | <code>*string</code> | The action to be performed in the default service accounts. |
 | <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsConfig.property.project">Project</a></code> | <code>*string</code> | The project ID where service accounts are created. |
-| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#id ProjectDefaultServiceAccounts#id}. |
+| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#id ProjectDefaultServiceAccounts#id}. |
 | <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsConfig.property.restorePolicy">RestorePolicy</a></code> | <code>*string</code> | The action to be performed in the default service accounts on the resource destroy. |
 | <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsTimeouts">ProjectDefaultServiceAccountsTimeouts</a></code> | timeouts block. |
 
@@ -935,7 +935,7 @@ The action to be performed in the default service accounts.
 Valid values are: DEPRIVILEGE, DELETE, DISABLE.
 Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#action ProjectDefaultServiceAccounts#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#action ProjectDefaultServiceAccounts#action}
 
 ---
 
@@ -949,7 +949,7 @@ Project *string
 
 The project ID where service accounts are created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#project ProjectDefaultServiceAccounts#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#project ProjectDefaultServiceAccounts#project}
 
 ---
 
@@ -961,7 +961,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#id ProjectDefaultServiceAccounts#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#id ProjectDefaultServiceAccounts#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -980,7 +980,7 @@ The action to be performed in the default service accounts on the resource destr
 
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#restore_policy ProjectDefaultServiceAccounts#restore_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#restore_policy ProjectDefaultServiceAccounts#restore_policy}
 
 ---
 
@@ -994,7 +994,7 @@ Timeouts ProjectDefaultServiceAccountsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#timeouts ProjectDefaultServiceAccounts#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#timeouts ProjectDefaultServiceAccounts#timeouts}
 
 ---
 
@@ -1016,9 +1016,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectdefaultservi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#create ProjectDefaultServiceAccounts#create}. |
-| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#delete ProjectDefaultServiceAccounts#delete}. |
-| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#read ProjectDefaultServiceAccounts#read}. |
+| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#create ProjectDefaultServiceAccounts#create}. |
+| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#delete ProjectDefaultServiceAccounts#delete}. |
+| <code><a href="#@cdktf/provider-google.projectDefaultServiceAccounts.ProjectDefaultServiceAccountsTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#read ProjectDefaultServiceAccounts#read}. |
 
 ---
 
@@ -1030,7 +1030,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#create ProjectDefaultServiceAccounts#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#create ProjectDefaultServiceAccounts#create}.
 
 ---
 
@@ -1042,7 +1042,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#delete ProjectDefaultServiceAccounts#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#delete ProjectDefaultServiceAccounts#delete}.
 
 ---
 
@@ -1054,7 +1054,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/project_default_service_accounts#read ProjectDefaultServiceAccounts#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/project_default_service_accounts#read ProjectDefaultServiceAccounts#read}.
 
 ---
 

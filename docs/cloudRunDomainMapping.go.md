@@ -4,7 +4,7 @@
 
 ### CloudRunDomainMapping <a name="CloudRunDomainMapping" id="@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMapping"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping google_cloud_run_domain_mapping}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping google_cloud_run_domain_mapping}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMapping.Initializer"></a>
 
@@ -527,7 +527,7 @@ The construct id used in the generated config for the CloudRunDomainMapping to i
 
 The id of the existing CloudRunDomainMapping that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -926,9 +926,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrundomainmappi
 | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.location">Location</a></code> | <code>*string</code> | The location of the cloud run instance. eg us-central1. |
 | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.name">Name</a></code> | <code>*string</code> | Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain. |
 | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.spec">Spec</a></code> | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingSpec">CloudRunDomainMappingSpec</a></code> | spec block. |
-| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#id CloudRunDomainMapping#id}. |
+| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#id CloudRunDomainMapping#id}. |
 | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.metadata">Metadata</a></code> | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingMetadata">CloudRunDomainMappingMetadata</a></code> | metadata block. |
-| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#project CloudRunDomainMapping#project}. |
+| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#project CloudRunDomainMapping#project}. |
 | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingTimeouts">CloudRunDomainMappingTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1013,7 +1013,7 @@ Location *string
 
 The location of the cloud run instance. eg us-central1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#location CloudRunDomainMapping#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#location CloudRunDomainMapping#location}
 
 ---
 
@@ -1027,7 +1027,7 @@ Name *string
 
 Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#name CloudRunDomainMapping#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#name CloudRunDomainMapping#name}
 
 ---
 
@@ -1041,7 +1041,7 @@ Spec CloudRunDomainMappingSpec
 
 spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#spec CloudRunDomainMapping#spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#spec CloudRunDomainMapping#spec}
 
 ---
 
@@ -1053,7 +1053,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#id CloudRunDomainMapping#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#id CloudRunDomainMapping#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1070,7 +1070,7 @@ Metadata CloudRunDomainMappingMetadata
 
 metadata block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#metadata CloudRunDomainMapping#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#metadata CloudRunDomainMapping#metadata}
 
 ---
 
@@ -1082,7 +1082,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#project CloudRunDomainMapping#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#project CloudRunDomainMapping#project}.
 
 ---
 
@@ -1096,7 +1096,7 @@ Timeouts CloudRunDomainMappingTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#timeouts CloudRunDomainMapping#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#timeouts CloudRunDomainMapping#timeouts}
 
 ---
 
@@ -1134,7 +1134,7 @@ Namespace *string
 
 In Cloud Run the namespace must be equal to either the project ID or project number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#namespace CloudRunDomainMapping#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#namespace CloudRunDomainMapping#namespace}
 
 ---
 
@@ -1158,7 +1158,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#annotations CloudRunDomainMapping#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#annotations CloudRunDomainMapping#annotations}
 
 ---
 
@@ -1179,7 +1179,7 @@ More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/lab
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#labels CloudRunDomainMapping#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#labels CloudRunDomainMapping#labels}
 
 ---
 
@@ -1217,7 +1217,7 @@ RouteName *string
 
 The name of the Cloud Run Service that this DomainMapping applies to. The route must exist.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#route_name CloudRunDomainMapping#route_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#route_name CloudRunDomainMapping#route_name}
 
 ---
 
@@ -1231,7 +1231,7 @@ CertificateMode *string
 
 The mode of the certificate. Default value: "AUTOMATIC" Possible values: ["NONE", "AUTOMATIC"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#certificate_mode CloudRunDomainMapping#certificate_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#certificate_mode CloudRunDomainMapping#certificate_mode}
 
 ---
 
@@ -1249,7 +1249,7 @@ It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#force_override CloudRunDomainMapping#force_override}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#force_override CloudRunDomainMapping#force_override}
 
 ---
 
@@ -1309,8 +1309,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudrundomainmappi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#create CloudRunDomainMapping#create}. |
-| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#delete CloudRunDomainMapping#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#create CloudRunDomainMapping#create}. |
+| <code><a href="#@cdktf/provider-google.cloudRunDomainMapping.CloudRunDomainMappingTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#delete CloudRunDomainMapping#delete}. |
 
 ---
 
@@ -1322,7 +1322,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#create CloudRunDomainMapping#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#create CloudRunDomainMapping#create}.
 
 ---
 
@@ -1334,7 +1334,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.9.0/docs/resources/cloud_run_domain_mapping#delete CloudRunDomainMapping#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/cloud_run_domain_mapping#delete CloudRunDomainMapping#delete}.
 
 ---
 
