@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 datacatalogentrygroupiambinding.NewDataCatalogEntryGroupIamBinding(scope Construct, id *string, config DataCatalogEntryGroupIamBindingConfig) DataCatalogEntryGroupIamBinding
 ```
@@ -412,7 +412,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBinding_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBinding_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 &datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBindingCondition {
 	Expression: *string,
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 &datacatalogentrygroupiambinding.DataCatalogEntryGroupIamBindingConfig {
 	Connection: interface{},
@@ -939,7 +939,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupia
 	EntryGroup: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntryGroupIamBinding.DataCatalogEntryGroupIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogentrygroupiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/datacatalogentrygroupiambinding"
 
 datacatalogentrygroupiambinding.NewDataCatalogEntryGroupIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogEntryGroupIamBindingConditionOutputReference
 ```
