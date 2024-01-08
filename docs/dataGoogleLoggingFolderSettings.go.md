@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleloggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingfoldersettings"
 
 datagoogleloggingfoldersettings.NewDataGoogleLoggingFolderSettings(scope Construct, id *string, config DataGoogleLoggingFolderSettingsConfig) DataGoogleLoggingFolderSettings
 ```
@@ -274,7 +274,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleloggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingfoldersettings"
 
 datagoogleloggingfoldersettings.DataGoogleLoggingFolderSettings_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +306,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleloggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingfoldersettings"
 
 datagoogleloggingfoldersettings.DataGoogleLoggingFolderSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +320,7 @@ datagoogleloggingfoldersettings.DataGoogleLoggingFolderSettings_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleloggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingfoldersettings"
 
 datagoogleloggingfoldersettings.DataGoogleLoggingFolderSettings_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ datagoogleloggingfoldersettings.DataGoogleLoggingFolderSettings_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleloggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingfoldersettings"
 
 datagoogleloggingfoldersettings.DataGoogleLoggingFolderSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -651,7 +651,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleloggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingfoldersettings"
 
 &datagoogleloggingfoldersettings.DataGoogleLoggingFolderSettingsConfig {
 	Connection: interface{},
