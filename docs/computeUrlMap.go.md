@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMap(scope Construct, id *string, config ComputeUrlMapConfig) ComputeUrlMap
 ```
@@ -539,7 +539,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.ComputeUrlMap_IsConstruct(x interface{}) *bool
 ```
@@ -571,7 +571,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.ComputeUrlMap_IsTerraformElement(x interface{}) *bool
 ```
@@ -585,7 +585,7 @@ computeurlmap.ComputeUrlMap_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.ComputeUrlMap_IsTerraformResource(x interface{}) *bool
 ```
@@ -599,7 +599,7 @@ computeurlmap.ComputeUrlMap_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.ComputeUrlMap_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1136,7 +1136,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapConfig {
 	Connection: interface{},
@@ -1147,17 +1147,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	DefaultRouteAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteAction,
+	DefaultRouteAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteAction,
 	DefaultService: *string,
-	DefaultUrlRedirect: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultUrlRedirect,
+	DefaultUrlRedirect: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultUrlRedirect,
 	Description: *string,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapHeaderAction,
 	HostRule: interface{},
 	Id: *string,
 	PathMatcher: interface{},
 	Project: *string,
 	Test: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapTimeouts,
 }
 ```
 
@@ -1436,15 +1436,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteAction {
-	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionCorsPolicy,
-	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicy,
-	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicy,
-	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicy,
-	Timeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionTimeout,
-	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionUrlRewrite,
+	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionCorsPolicy,
+	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicy,
+	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicy,
+	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicy,
+	Timeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionTimeout,
+	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionUrlRewrite,
 	WeightedBackendServices: interface{},
 }
 ```
@@ -1566,7 +1566,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionCorsPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionCorsPolicy {
 	AllowCredentials: interface{},
@@ -1722,11 +1722,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicy {
-	Abort: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort,
-	Delay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay,
+	Abort: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort,
+	Delay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay,
 }
 ```
 
@@ -1772,7 +1772,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort {
 	HttpStatus: *f64,
@@ -1824,10 +1824,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay {
-	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay,
+	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay,
 	Percentage: *f64,
 }
 ```
@@ -1876,7 +1876,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
 	Nanos: *f64,
@@ -1932,7 +1932,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicy {
 	BackendService: *string,
@@ -1966,11 +1966,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionRetryPolicy {
 	NumRetries: *f64,
-	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout,
+	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout,
 	RetryConditions: *[]*string,
 }
 ```
@@ -2047,7 +2047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout {
 	Nanos: *f64,
@@ -2103,7 +2103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionTimeout {
 	Nanos: *f64,
@@ -2159,7 +2159,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionUrlRewrite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionUrlRewrite {
 	HostRewrite: *string,
@@ -2213,11 +2213,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServices.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionWeightedBackendServices {
 	BackendService: *string,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction,
 	Weight: *f64,
 }
 ```
@@ -2289,7 +2289,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction {
 	RequestHeadersToAdd: interface{},
@@ -2371,7 +2371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
 	HeaderName: *string,
@@ -2439,7 +2439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
 	HeaderName: *string,
@@ -2507,7 +2507,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultUrlRedirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapDefaultUrlRedirect {
 	StripQuery: interface{},
@@ -2649,7 +2649,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapHeaderAction {
 	RequestHeadersToAdd: interface{},
@@ -2731,7 +2731,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapHeaderActionRequestHeadersToAdd {
 	HeaderName: *string,
@@ -2800,7 +2800,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapHeaderActionResponseHeadersToAdd {
 	HeaderName: *string,
@@ -2869,7 +2869,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapHostRule {
 	Hosts: *[]*string,
@@ -2939,15 +2939,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcher {
 	Name: *string,
-	DefaultRouteAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction,
+	DefaultRouteAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction,
 	DefaultService: *string,
-	DefaultUrlRedirect: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultUrlRedirect,
+	DefaultUrlRedirect: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultUrlRedirect,
 	Description: *string,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherHeaderAction,
 	PathRule: interface{},
 	RouteRules: interface{},
 }
@@ -3085,15 +3085,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteAction {
-	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy,
-	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy,
-	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy,
-	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy,
-	Timeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionTimeout,
-	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite,
+	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy,
+	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy,
+	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy,
+	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy,
+	Timeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionTimeout,
+	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite,
 	WeightedBackendServices: interface{},
 }
 ```
@@ -3215,7 +3215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy {
 	AllowCredentials: interface{},
@@ -3371,11 +3371,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
-	Abort: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort,
-	Delay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay,
+	Abort: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort,
+	Delay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay,
 }
 ```
 
@@ -3421,7 +3421,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort {
 	HttpStatus: *f64,
@@ -3473,10 +3473,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay {
-	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay,
+	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay,
 	Percentage: *f64,
 }
 ```
@@ -3525,7 +3525,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
 	Nanos: *f64,
@@ -3581,7 +3581,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy {
 	BackendService: *string,
@@ -3615,11 +3615,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy {
 	NumRetries: *f64,
-	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout,
+	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout,
 	RetryConditions: *[]*string,
 }
 ```
@@ -3696,7 +3696,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout {
 	Nanos: *f64,
@@ -3752,7 +3752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionTimeout {
 	Nanos: *f64,
@@ -3808,7 +3808,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite {
 	HostRewrite: *string,
@@ -3862,11 +3862,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices {
 	BackendService: *string,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction,
 	Weight: *f64,
 }
 ```
@@ -3938,7 +3938,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction {
 	RequestHeadersToAdd: interface{},
@@ -4020,7 +4020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
 	HeaderName: *string,
@@ -4088,7 +4088,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
 	HeaderName: *string,
@@ -4156,7 +4156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultUrlRedirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherDefaultUrlRedirect {
 	StripQuery: interface{},
@@ -4298,7 +4298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherHeaderAction {
 	RequestHeadersToAdd: interface{},
@@ -4380,7 +4380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd {
 	HeaderName: *string,
@@ -4449,7 +4449,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd {
 	HeaderName: *string,
@@ -4518,13 +4518,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRule {
 	Paths: *[]*string,
-	RouteAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction,
+	RouteAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction,
 	Service: *string,
-	UrlRedirect: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleUrlRedirect,
+	UrlRedirect: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleUrlRedirect,
 }
 ```
 
@@ -4605,15 +4605,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteAction {
-	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy,
-	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy,
-	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy,
-	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy,
-	Timeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeout,
-	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite,
+	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy,
+	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy,
+	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy,
+	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy,
+	Timeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeout,
+	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite,
 	WeightedBackendServices: interface{},
 }
 ```
@@ -4735,7 +4735,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
 	Disabled: interface{},
@@ -4894,11 +4894,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
-	Abort: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort,
-	Delay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay,
+	Abort: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort,
+	Delay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay,
 }
 ```
 
@@ -4944,7 +4944,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
 	HttpStatus: *f64,
@@ -4997,10 +4997,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
-	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay,
+	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay,
 	Percentage: *f64,
 }
 ```
@@ -5050,7 +5050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay {
 	Seconds: *string,
@@ -5104,7 +5104,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
 	BackendService: *string,
@@ -5138,11 +5138,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
 	NumRetries: *f64,
-	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout,
+	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout,
 	RetryConditions: *[]*string,
 }
 ```
@@ -5225,7 +5225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout {
 	Seconds: *string,
@@ -5279,7 +5279,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeout {
 	Seconds: *string,
@@ -5333,7 +5333,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
 	HostRewrite: *string,
@@ -5389,12 +5389,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices {
 	BackendService: *string,
 	Weight: *f64,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction,
 }
 ```
 
@@ -5465,7 +5465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction {
 	RequestHeadersToAdd: interface{},
@@ -5547,7 +5547,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
 	HeaderName: *string,
@@ -5616,7 +5616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
 	HeaderName: *string,
@@ -5685,7 +5685,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleUrlRedirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherPathRuleUrlRedirect {
 	StripQuery: interface{},
@@ -5829,15 +5829,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRules {
 	Priority: *f64,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderAction,
 	MatchRules: interface{},
-	RouteAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction,
+	RouteAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction,
 	Service: *string,
-	UrlRedirect: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesUrlRedirect,
+	UrlRedirect: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesUrlRedirect,
 }
 ```
 
@@ -5965,7 +5965,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesHeaderAction {
 	RequestHeadersToAdd: interface{},
@@ -6047,7 +6047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd {
 	HeaderName: *string,
@@ -6116,7 +6116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd {
 	HeaderName: *string,
@@ -6185,7 +6185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesMatchRules {
 	FullPathMatch: *string,
@@ -6348,7 +6348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches {
 	HeaderName: *string,
@@ -6356,7 +6356,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
 	InvertMatch: interface{},
 	PrefixMatch: *string,
 	PresentMatch: interface{},
-	RangeMatch: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch,
+	RangeMatch: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch,
 	RegexMatch: *string,
 	SuffixMatch: *string,
 }
@@ -6523,7 +6523,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch {
 	RangeEnd: *f64,
@@ -6573,7 +6573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters {
 	FilterLabels: interface{},
@@ -6630,7 +6630,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels {
 	Name: *string,
@@ -6683,7 +6683,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches {
 	Name: *string,
@@ -6778,15 +6778,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteAction {
-	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy,
-	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy,
-	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy,
-	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy,
-	Timeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout,
-	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite,
+	CorsPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy,
+	FaultInjectionPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy,
+	RequestMirrorPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy,
+	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy,
+	Timeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout,
+	UrlRewrite: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite,
 	WeightedBackendServices: interface{},
 }
 ```
@@ -6908,7 +6908,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy {
 	AllowCredentials: interface{},
@@ -7067,11 +7067,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy {
-	Abort: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort,
-	Delay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay,
+	Abort: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort,
+	Delay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay,
 }
 ```
 
@@ -7117,7 +7117,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort {
 	HttpStatus: *f64,
@@ -7170,10 +7170,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay {
-	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay,
+	FixedDelay: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay,
 	Percentage: *f64,
 }
 ```
@@ -7223,7 +7223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay {
 	Seconds: *string,
@@ -7277,7 +7277,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy {
 	BackendService: *string,
@@ -7311,11 +7311,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
 	NumRetries: *f64,
-	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout,
+	PerTryTimeout: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout,
 	RetryConditions: *[]*string,
 }
 ```
@@ -7398,7 +7398,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout {
 	Seconds: *string,
@@ -7452,7 +7452,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout {
 	Seconds: *string,
@@ -7506,7 +7506,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite {
 	HostRewrite: *string,
@@ -7588,12 +7588,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices {
 	BackendService: *string,
 	Weight: *f64,
-	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google/v12.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction,
+	HeaderAction: github.com/cdktf/cdktf-provider-google-go/google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction,
 }
 ```
 
@@ -7664,7 +7664,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction {
 	RequestHeadersToAdd: interface{},
@@ -7746,7 +7746,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
 	HeaderName: *string,
@@ -7815,7 +7815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
 	HeaderName: *string,
@@ -7884,7 +7884,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesUrlRedirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapPathMatcherRouteRulesUrlRedirect {
 	HostRedirect: *string,
@@ -8017,7 +8017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapTest {
 	Host: *string,
@@ -8099,7 +8099,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 &computeurlmap.ComputeUrlMapTimeouts {
 	Create: *string,
@@ -8161,7 +8161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionCorsPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference
 ```
@@ -8642,7 +8642,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionCorsPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference
 ```
@@ -8949,7 +8949,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference
 ```
@@ -9256,7 +9256,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFix
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference
 ```
@@ -9576,7 +9576,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference
 ```
@@ -9909,7 +9909,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionFaultInjectionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionOutputReference
 ```
@@ -10452,7 +10452,7 @@ func InternalValue() ComputeUrlMapDefaultRouteAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference
 ```
@@ -10723,7 +10723,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionRequestMirrorPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference
 ```
@@ -11072,7 +11072,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionRetryPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference
 ```
@@ -11379,7 +11379,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionTimeoutOutputReference
 ```
@@ -11686,7 +11686,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionTimeout
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionUrlRewriteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference
 ```
@@ -11993,7 +11993,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionUrlRewrite
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference
 ```
@@ -12384,7 +12384,7 @@ func InternalValue() ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeade
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList
 ```
@@ -12527,7 +12527,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference
 ```
@@ -12881,7 +12881,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList
 ```
@@ -13024,7 +13024,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference
 ```
@@ -13378,7 +13378,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionWeightedBackendServicesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapDefaultRouteActionWeightedBackendServicesList
 ```
@@ -13521,7 +13521,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference
 ```
@@ -13888,7 +13888,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultUrlRedirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapDefaultUrlRedirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapDefaultUrlRedirectOutputReference
 ```
@@ -14304,7 +14304,7 @@ func InternalValue() ComputeUrlMapDefaultUrlRedirect
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapHeaderActionOutputReference
 ```
@@ -14695,7 +14695,7 @@ func InternalValue() ComputeUrlMapHeaderAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapHeaderActionRequestHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapHeaderActionRequestHeadersToAddList
 ```
@@ -14838,7 +14838,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapHeaderActionRequestHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference
 ```
@@ -15171,7 +15171,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapHeaderActionResponseHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapHeaderActionResponseHeadersToAddList
 ```
@@ -15314,7 +15314,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapHeaderActionResponseHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference
 ```
@@ -15647,7 +15647,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapHostRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapHostRuleList
 ```
@@ -15790,7 +15790,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapHostRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapHostRuleOutputReference
 ```
@@ -16130,7 +16130,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
 ```
@@ -16611,7 +16611,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference
 ```
@@ -16918,7 +16918,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPol
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference
 ```
@@ -17225,7 +17225,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPol
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference
 ```
@@ -17545,7 +17545,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPol
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference
 ```
@@ -17878,7 +17878,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPol
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionOutputReference
 ```
@@ -18421,7 +18421,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference
 ```
@@ -18692,7 +18692,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPoli
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference
 ```
@@ -19041,7 +19041,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference
 ```
@@ -19348,7 +19348,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTry
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference
 ```
@@ -19655,7 +19655,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionTimeout
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference
 ```
@@ -19962,7 +19962,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference
 ```
@@ -20353,7 +20353,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendSe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList
 ```
@@ -20496,7 +20496,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference
 ```
@@ -20850,7 +20850,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList
 ```
@@ -20993,7 +20993,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference
 ```
@@ -21347,7 +21347,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesList
 ```
@@ -21490,7 +21490,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference
 ```
@@ -21857,7 +21857,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference
 ```
@@ -22273,7 +22273,7 @@ func InternalValue() ComputeUrlMapPathMatcherDefaultUrlRedirect
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherHeaderActionOutputReference
 ```
@@ -22664,7 +22664,7 @@ func InternalValue() ComputeUrlMapPathMatcherHeaderAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddList
 ```
@@ -22807,7 +22807,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference
 ```
@@ -23140,7 +23140,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddList
 ```
@@ -23283,7 +23283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference
 ```
@@ -23616,7 +23616,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherList
 ```
@@ -23759,7 +23759,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherOutputReference
 ```
@@ -24316,7 +24316,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherPathRuleList
 ```
@@ -24459,7 +24459,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherPathRuleOutputReference
 ```
@@ -24861,7 +24861,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference
 ```
@@ -25335,7 +25335,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference
 ```
@@ -25628,7 +25628,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference
 ```
@@ -25928,7 +25928,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference
 ```
@@ -26234,7 +26234,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference
 ```
@@ -26567,7 +26567,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference
 ```
@@ -27110,7 +27110,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference
 ```
@@ -27381,7 +27381,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPol
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference
 ```
@@ -27730,7 +27730,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference
 ```
@@ -28030,7 +28030,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference
 ```
@@ -28330,7 +28330,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionTimeout
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference
 ```
@@ -28637,7 +28637,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference
 ```
@@ -29028,7 +29028,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendS
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList
 ```
@@ -29171,7 +29171,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference
 ```
@@ -29504,7 +29504,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList
 ```
@@ -29647,7 +29647,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference
 ```
@@ -29980,7 +29980,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesList
 ```
@@ -30123,7 +30123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference
 ```
@@ -30476,7 +30476,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference
 ```
@@ -30892,7 +30892,7 @@ func InternalValue() ComputeUrlMapPathMatcherPathRuleUrlRedirect
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference
 ```
@@ -31283,7 +31283,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesHeaderAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddList
 ```
@@ -31426,7 +31426,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference
 ```
@@ -31759,7 +31759,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddList
 ```
@@ -31902,7 +31902,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference
 ```
@@ -32235,7 +32235,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesList
 ```
@@ -32378,7 +32378,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesList
 ```
@@ -32521,7 +32521,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference
 ```
@@ -33026,7 +33026,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference
 ```
@@ -33319,7 +33319,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRa
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesList
 ```
@@ -33462,7 +33462,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsList
 ```
@@ -33605,7 +33605,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference
 ```
@@ -33916,7 +33916,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersList
 ```
@@ -34059,7 +34059,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference
 ```
@@ -34383,7 +34383,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference
 ```
@@ -34921,7 +34921,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesList
 ```
@@ -35064,7 +35064,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference
 ```
@@ -35440,7 +35440,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesOutputReference
 ```
@@ -35926,7 +35926,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference
 ```
@@ -36407,7 +36407,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference
 ```
@@ -36714,7 +36714,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjection
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference
 ```
@@ -37014,7 +37014,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjection
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference
 ```
@@ -37334,7 +37334,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjection
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference
 ```
@@ -37667,7 +37667,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjection
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference
 ```
@@ -38210,7 +38210,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference
 ```
@@ -38481,7 +38481,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorP
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference
 ```
@@ -38823,7 +38823,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference
 ```
@@ -39123,7 +39123,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPer
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference
 ```
@@ -39423,7 +39423,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference
 ```
@@ -39759,7 +39759,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference
 ```
@@ -40150,7 +40150,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBacken
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList
 ```
@@ -40293,7 +40293,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference
 ```
@@ -40626,7 +40626,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList
 ```
@@ -40769,7 +40769,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference
 ```
@@ -41102,7 +41102,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesList
 ```
@@ -41245,7 +41245,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference
 ```
@@ -41598,7 +41598,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference
 ```
@@ -42021,7 +42021,7 @@ func InternalValue() ComputeUrlMapPathMatcherRouteRulesUrlRedirect
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapTestList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeUrlMapTestList
 ```
@@ -42164,7 +42164,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapTestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeUrlMapTestOutputReference
 ```
@@ -42526,7 +42526,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeurlmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeurlmap"
 
 computeurlmap.NewComputeUrlMapTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeUrlMapTimeoutsOutputReference
 ```

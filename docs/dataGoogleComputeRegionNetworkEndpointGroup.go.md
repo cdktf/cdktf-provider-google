@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.NewDataGoogleComputeRegionNetworkEndpointGroup(scope Construct, id *string, config DataGoogleComputeRegionNetworkEndpointGroupConfig) DataGoogleComputeRegionNetworkEndpointGroup
 ```
@@ -302,7 +302,7 @@ func ResetSelfLink()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroup_IsConstruct(x interface{}) *bool
 ```
@@ -334,7 +334,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -348,7 +348,7 @@ datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpoi
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -362,7 +362,7 @@ datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpoi
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -767,7 +767,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupAppEngine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 &datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroupAppEngine {
 
@@ -780,7 +780,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupCloudFunction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 &datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroupCloudFunction {
 
@@ -793,7 +793,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupCloudRun.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 &datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroupCloudRun {
 
@@ -806,7 +806,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputere
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 &datagooglecomputeregionnetworkendpointgroup.DataGoogleComputeRegionNetworkEndpointGroupConfig {
 	Connection: interface{},
@@ -995,7 +995,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupAppEngineList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.NewDataGoogleComputeRegionNetworkEndpointGroupAppEngineList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRegionNetworkEndpointGroupAppEngineList
 ```
@@ -1127,7 +1127,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupAppEngineOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.NewDataGoogleComputeRegionNetworkEndpointGroupAppEngineOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRegionNetworkEndpointGroupAppEngineOutputReference
 ```
@@ -1427,7 +1427,7 @@ func InternalValue() DataGoogleComputeRegionNetworkEndpointGroupAppEngine
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupCloudFunctionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.NewDataGoogleComputeRegionNetworkEndpointGroupCloudFunctionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRegionNetworkEndpointGroupCloudFunctionList
 ```
@@ -1559,7 +1559,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupCloudFunctionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.NewDataGoogleComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRegionNetworkEndpointGroupCloudFunctionOutputReference
 ```
@@ -1848,7 +1848,7 @@ func InternalValue() DataGoogleComputeRegionNetworkEndpointGroupCloudFunction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupCloudRunList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.NewDataGoogleComputeRegionNetworkEndpointGroupCloudRunList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRegionNetworkEndpointGroupCloudRunList
 ```
@@ -1980,7 +1980,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegionNetworkEndpointGroup.DataGoogleComputeRegionNetworkEndpointGroupCloudRunOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputeregionnetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregionnetworkendpointgroup"
 
 datagooglecomputeregionnetworkendpointgroup.NewDataGoogleComputeRegionNetworkEndpointGroupCloudRunOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRegionNetworkEndpointGroupCloudRunOutputReference
 ```

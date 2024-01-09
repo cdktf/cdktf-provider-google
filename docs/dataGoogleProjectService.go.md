@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectservice"
 
 datagoogleprojectservice.NewDataGoogleProjectService(scope Construct, id *string, config DataGoogleProjectServiceConfig) DataGoogleProjectService
 ```
@@ -281,7 +281,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectservice"
 
 datagoogleprojectservice.DataGoogleProjectService_IsConstruct(x interface{}) *bool
 ```
@@ -313,7 +313,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectservice"
 
 datagoogleprojectservice.DataGoogleProjectService_IsTerraformElement(x interface{}) *bool
 ```
@@ -327,7 +327,7 @@ datagoogleprojectservice.DataGoogleProjectService_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectservice"
 
 datagoogleprojectservice.DataGoogleProjectService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -341,7 +341,7 @@ datagoogleprojectservice.DataGoogleProjectService_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectservice"
 
 datagoogleprojectservice.DataGoogleProjectService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -636,7 +636,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectservice"
 
 &datagoogleprojectservice.DataGoogleProjectServiceConfig {
 	Connection: interface{},

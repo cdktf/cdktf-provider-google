@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnet(scope Construct, id *string, config VmwareengineSubnetConfig) VmwareengineSubnet
 ```
@@ -398,7 +398,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ vmwareenginesubnet.VmwareengineSubnet_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ vmwareenginesubnet.VmwareengineSubnet_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -907,7 +907,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 &vmwareenginesubnet.VmwareengineSubnetConfig {
 	Connection: interface{},
@@ -921,7 +921,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
 	Name: *string,
 	Parent: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareengineSubnet.VmwareengineSubnetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineSubnet.VmwareengineSubnetTimeouts,
 }
 ```
 
@@ -1096,7 +1096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetDhcpAddressRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 &vmwareenginesubnet.VmwareengineSubnetDhcpAddressRanges {
 
@@ -1109,7 +1109,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 &vmwareenginesubnet.VmwareengineSubnetTimeouts {
 	Create: *string,
@@ -1171,7 +1171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetDhcpAddressRangesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnetDhcpAddressRangesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareengineSubnetDhcpAddressRangesList
 ```
@@ -1303,7 +1303,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetDhcpAddressRangesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnetDhcpAddressRangesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareengineSubnetDhcpAddressRangesOutputReference
 ```
@@ -1592,7 +1592,7 @@ func InternalValue() VmwareengineSubnetDhcpAddressRanges
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineSubnetTimeoutsOutputReference
 ```
