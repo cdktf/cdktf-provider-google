@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloud(scope Construct, id *string, config VmwareenginePrivateCloudConfig) VmwareenginePrivateCloud
 ```
@@ -445,7 +445,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -987,7 +987,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudConfig {
 	Connection: interface{},
@@ -998,13 +998,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivateclou
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Location: *string,
-	ManagementCluster: github.com/cdktf/cdktf-provider-google-go/google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementCluster,
+	ManagementCluster: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementCluster,
 	Name: *string,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfig,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfig,
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeouts,
 	Type: *string,
 }
 ```
@@ -1232,7 +1232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcx.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudHcx {
 
@@ -1245,7 +1245,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivateclou
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudManagementCluster {
 	ClusterId: *string,
@@ -1303,7 +1303,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigs {
 	NodeCount: *f64,
@@ -1371,7 +1371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudNetworkConfig {
 	ManagementCidr: *string,
@@ -1424,7 +1424,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsx.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudNsx {
 
@@ -1437,7 +1437,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivateclou
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudTimeouts {
 	Create: *string,
@@ -1497,7 +1497,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudVcenter {
 
@@ -1512,7 +1512,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivateclou
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudHcxList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudHcxList
 ```
@@ -1644,7 +1644,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudHcxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudHcxOutputReference
 ```
@@ -1955,7 +1955,7 @@ func InternalValue() VmwareenginePrivateCloudHcx
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudManagementClusterNodeTypeConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList
 ```
@@ -2098,7 +2098,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudManagementClusterNodeTypeConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudManagementClusterNodeTypeConfigsOutputReference
 ```
@@ -2438,7 +2438,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudManagementClusterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareenginePrivateCloudManagementClusterOutputReference
 ```
@@ -2751,7 +2751,7 @@ func InternalValue() VmwareenginePrivateCloudManagementCluster
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareenginePrivateCloudNetworkConfigOutputReference
 ```
@@ -3084,7 +3084,7 @@ func InternalValue() VmwareenginePrivateCloudNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudNsxList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudNsxList
 ```
@@ -3216,7 +3216,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudNsxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudNsxOutputReference
 ```
@@ -3527,7 +3527,7 @@ func InternalValue() VmwareenginePrivateCloudNsx
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareenginePrivateCloudTimeoutsOutputReference
 ```
@@ -3863,7 +3863,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudVcenterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudVcenterList
 ```
@@ -3995,7 +3995,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudVcenterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudVcenterOutputReference
 ```
