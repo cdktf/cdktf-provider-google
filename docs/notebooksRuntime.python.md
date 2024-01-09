@@ -4,7 +4,7 @@
 
 ### NotebooksRuntime <a name="NotebooksRuntime" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntime"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime google_notebooks_runtime}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime google_notebooks_runtime}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer"></a>
 
@@ -47,9 +47,9 @@ notebooksRuntime.NotebooksRuntime(
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.location">location</a></code> | <code>str</code> | A reference to the zone where the machine resides. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.name">name</a></code> | <code>str</code> | The name specified for the Notebook runtime. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.accessConfig">access_config</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeAccessConfig">NotebooksRuntimeAccessConfig</a></code> | access_config block. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The labels to associate with this runtime. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.softwareConfig">software_config</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeSoftwareConfig">NotebooksRuntimeSoftwareConfig</a></code> | software_config block. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts">NotebooksRuntimeTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntime.Initializer.parameter.virtualMachine">virtual_machine</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachine">NotebooksRuntimeVirtualMachine</a></code> | virtual_machine block. |
@@ -122,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 A reference to the zone where the machine resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#location NotebooksRuntime#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#location NotebooksRuntime#location}
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name specified for the Notebook runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#name NotebooksRuntime#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#name NotebooksRuntime#name}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#access_config NotebooksRuntime#access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#access_config NotebooksRuntime#access_config}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ more than 32 labels can be associated with a cluster.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
 
 ---
 
@@ -181,7 +181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}.
 
 ---
 
@@ -191,7 +191,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 software_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#software_config NotebooksRuntime#software_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#software_config NotebooksRuntime#software_config}
 
 ---
 
@@ -201,7 +201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#timeouts NotebooksRuntime#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#timeouts NotebooksRuntime#timeouts}
 
 ---
 
@@ -211,7 +211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 virtual_machine block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#virtual_machine NotebooksRuntime#virtual_machine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#virtual_machine NotebooksRuntime#virtual_machine}
 
 ---
 
@@ -589,7 +589,7 @@ def put_access_config(
 
 The type of access mode this instance. For valid values, see 'https://cloud.google.com/vertex-ai/docs/workbench/reference/ rest/v1/projects.locations.runtimes#RuntimeAccessType'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#access_type NotebooksRuntime#access_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#access_type NotebooksRuntime#access_type}
 
 ---
 
@@ -599,7 +599,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The owner of this runtime after creation. Format: 'alias@example.com'. Currently supports one owner only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#runtime_owner NotebooksRuntime#runtime_owner}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#runtime_owner NotebooksRuntime#runtime_owner}
 
 ---
 
@@ -627,7 +627,7 @@ Specify a custom Cloud Storage path where the GPU driver is stored.
 
 If not specified, we'll automatically choose from official GPU drivers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#custom_gpu_driver_path NotebooksRuntime#custom_gpu_driver_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#custom_gpu_driver_path NotebooksRuntime#custom_gpu_driver_path}
 
 ---
 
@@ -637,7 +637,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Verifies core internal services are running. Default: True.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_health_monitoring NotebooksRuntime#enable_health_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_health_monitoring NotebooksRuntime#enable_health_monitoring}
 
 ---
 
@@ -647,7 +647,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Runtime will automatically shutdown after idle_shutdown_time. Default: True.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#idle_shutdown NotebooksRuntime#idle_shutdown}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#idle_shutdown NotebooksRuntime#idle_shutdown}
 
 ---
 
@@ -657,7 +657,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Time in minutes to wait before shuting down runtime. Default: 180 minutes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#idle_shutdown_timeout NotebooksRuntime#idle_shutdown_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#idle_shutdown_timeout NotebooksRuntime#idle_shutdown_timeout}
 
 ---
 
@@ -667,7 +667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Install Nvidia Driver automatically.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#install_gpu_driver NotebooksRuntime#install_gpu_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#install_gpu_driver NotebooksRuntime#install_gpu_driver}
 
 ---
 
@@ -677,7 +677,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 kernels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#kernels NotebooksRuntime#kernels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#kernels NotebooksRuntime#kernels}
 
 ---
 
@@ -687,7 +687,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Cron expression in UTC timezone for schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#notebook_upgrade_schedule NotebooksRuntime#notebook_upgrade_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#notebook_upgrade_schedule NotebooksRuntime#notebook_upgrade_schedule}
 
 ---
 
@@ -700,7 +700,7 @@ Path to a Bash script that automatically runs after a notebook instance fully bo
 The path must be a URL or
 Cloud Storage path (gs://path-to-file/file-name).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
 
 ---
 
@@ -710,7 +710,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Behavior for the post startup script. Possible values: ["POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED", "RUN_EVERY_START", "DOWNLOAD_AND_RUN_EVERY_START"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#post_startup_script_behavior NotebooksRuntime#post_startup_script_behavior}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#post_startup_script_behavior NotebooksRuntime#post_startup_script_behavior}
 
 ---
 
@@ -728,7 +728,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}.
 
 ---
 
@@ -736,7 +736,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}.
 
 ---
 
@@ -744,7 +744,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}.
 
 ---
 
@@ -762,7 +762,7 @@ def put_virtual_machine(
 
 virtual_machine_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#virtual_machine_config NotebooksRuntime#virtual_machine_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#virtual_machine_config NotebooksRuntime#virtual_machine_config}
 
 ---
 
@@ -922,7 +922,7 @@ The construct id used in the generated config for the NotebooksRuntime to import
 
 The id of the existing NotebooksRuntime that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1402,7 +1402,7 @@ access_type: str
 
 The type of access mode this instance. For valid values, see 'https://cloud.google.com/vertex-ai/docs/workbench/reference/ rest/v1/projects.locations.runtimes#RuntimeAccessType'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#access_type NotebooksRuntime#access_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#access_type NotebooksRuntime#access_type}
 
 ---
 
@@ -1416,7 +1416,7 @@ runtime_owner: str
 
 The owner of this runtime after creation. Format: 'alias@example.com'. Currently supports one owner only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#runtime_owner NotebooksRuntime#runtime_owner}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#runtime_owner NotebooksRuntime#runtime_owner}
 
 ---
 
@@ -1461,9 +1461,9 @@ notebooksRuntime.NotebooksRuntimeConfig(
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.location">location</a></code> | <code>str</code> | A reference to the zone where the machine resides. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.name">name</a></code> | <code>str</code> | The name specified for the Notebook runtime. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.accessConfig">access_config</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeAccessConfig">NotebooksRuntimeAccessConfig</a></code> | access_config block. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The labels to associate with this runtime. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.softwareConfig">software_config</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeSoftwareConfig">NotebooksRuntimeSoftwareConfig</a></code> | software_config block. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts">NotebooksRuntimeTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeConfig.property.virtualMachine">virtual_machine</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeVirtualMachine">NotebooksRuntimeVirtualMachine</a></code> | virtual_machine block. |
@@ -1550,7 +1550,7 @@ location: str
 
 A reference to the zone where the machine resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#location NotebooksRuntime#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#location NotebooksRuntime#location}
 
 ---
 
@@ -1564,7 +1564,7 @@ name: str
 
 The name specified for the Notebook runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#name NotebooksRuntime#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#name NotebooksRuntime#name}
 
 ---
 
@@ -1578,7 +1578,7 @@ access_config: NotebooksRuntimeAccessConfig
 
 access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#access_config NotebooksRuntime#access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#access_config NotebooksRuntime#access_config}
 
 ---
 
@@ -1590,7 +1590,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1617,7 +1617,7 @@ more than 32 labels can be associated with a cluster.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
 
 ---
 
@@ -1629,7 +1629,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}.
 
 ---
 
@@ -1643,7 +1643,7 @@ software_config: NotebooksRuntimeSoftwareConfig
 
 software_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#software_config NotebooksRuntime#software_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#software_config NotebooksRuntime#software_config}
 
 ---
 
@@ -1657,7 +1657,7 @@ timeouts: NotebooksRuntimeTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#timeouts NotebooksRuntime#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#timeouts NotebooksRuntime#timeouts}
 
 ---
 
@@ -1671,7 +1671,7 @@ virtual_machine: NotebooksRuntimeVirtualMachine
 
 virtual_machine block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#virtual_machine NotebooksRuntime#virtual_machine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#virtual_machine NotebooksRuntime#virtual_machine}
 
 ---
 
@@ -1734,7 +1734,7 @@ Specify a custom Cloud Storage path where the GPU driver is stored.
 
 If not specified, we'll automatically choose from official GPU drivers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#custom_gpu_driver_path NotebooksRuntime#custom_gpu_driver_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#custom_gpu_driver_path NotebooksRuntime#custom_gpu_driver_path}
 
 ---
 
@@ -1748,7 +1748,7 @@ enable_health_monitoring: typing.Union[bool, IResolvable]
 
 Verifies core internal services are running. Default: True.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_health_monitoring NotebooksRuntime#enable_health_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_health_monitoring NotebooksRuntime#enable_health_monitoring}
 
 ---
 
@@ -1762,7 +1762,7 @@ idle_shutdown: typing.Union[bool, IResolvable]
 
 Runtime will automatically shutdown after idle_shutdown_time. Default: True.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#idle_shutdown NotebooksRuntime#idle_shutdown}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#idle_shutdown NotebooksRuntime#idle_shutdown}
 
 ---
 
@@ -1776,7 +1776,7 @@ idle_shutdown_timeout: typing.Union[int, float]
 
 Time in minutes to wait before shuting down runtime. Default: 180 minutes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#idle_shutdown_timeout NotebooksRuntime#idle_shutdown_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#idle_shutdown_timeout NotebooksRuntime#idle_shutdown_timeout}
 
 ---
 
@@ -1790,7 +1790,7 @@ install_gpu_driver: typing.Union[bool, IResolvable]
 
 Install Nvidia Driver automatically.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#install_gpu_driver NotebooksRuntime#install_gpu_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#install_gpu_driver NotebooksRuntime#install_gpu_driver}
 
 ---
 
@@ -1804,7 +1804,7 @@ kernels: typing.Union[IResolvable, typing.List[NotebooksRuntimeSoftwareConfigKer
 
 kernels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#kernels NotebooksRuntime#kernels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#kernels NotebooksRuntime#kernels}
 
 ---
 
@@ -1818,7 +1818,7 @@ notebook_upgrade_schedule: str
 
 Cron expression in UTC timezone for schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#notebook_upgrade_schedule NotebooksRuntime#notebook_upgrade_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#notebook_upgrade_schedule NotebooksRuntime#notebook_upgrade_schedule}
 
 ---
 
@@ -1835,7 +1835,7 @@ Path to a Bash script that automatically runs after a notebook instance fully bo
 The path must be a URL or
 Cloud Storage path (gs://path-to-file/file-name).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
 
 ---
 
@@ -1849,7 +1849,7 @@ post_startup_script_behavior: str
 
 Behavior for the post startup script. Possible values: ["POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED", "RUN_EVERY_START", "DOWNLOAD_AND_RUN_EVERY_START"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#post_startup_script_behavior NotebooksRuntime#post_startup_script_behavior}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#post_startup_script_behavior NotebooksRuntime#post_startup_script_behavior}
 
 ---
 
@@ -1885,7 +1885,7 @@ repository: str
 
 The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
 
 ---
 
@@ -1899,7 +1899,7 @@ tag: str
 
 The tag of the container image. If not specified, this defaults to the latest tag.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
 
 ---
 
@@ -1921,9 +1921,9 @@ notebooksRuntime.NotebooksRuntimeTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntime.NotebooksRuntimeTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}. |
 
 ---
 
@@ -1935,7 +1935,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}.
 
 ---
 
@@ -1947,7 +1947,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}.
 
 ---
 
@@ -1959,7 +1959,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}.
 
 ---
 
@@ -1993,7 +1993,7 @@ virtual_machine_config: NotebooksRuntimeVirtualMachineVirtualMachineConfig
 
 virtual_machine_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#virtual_machine_config NotebooksRuntime#virtual_machine_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#virtual_machine_config NotebooksRuntime#virtual_machine_config}
 
 ---
 
@@ -2053,7 +2053,7 @@ data_disk: NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk
 
 data_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#data_disk NotebooksRuntime#data_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#data_disk NotebooksRuntime#data_disk}
 
 ---
 
@@ -2067,7 +2067,7 @@ machine_type: str
 
 The Compute Engine machine type used for runtimes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#machine_type NotebooksRuntime#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#machine_type NotebooksRuntime#machine_type}
 
 ---
 
@@ -2081,7 +2081,7 @@ accelerator_config: NotebooksRuntimeVirtualMachineVirtualMachineConfigAccelerato
 
 accelerator_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#accelerator_config NotebooksRuntime#accelerator_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#accelerator_config NotebooksRuntime#accelerator_config}
 
 ---
 
@@ -2095,7 +2095,7 @@ container_images: typing.Union[IResolvable, typing.List[NotebooksRuntimeVirtualM
 
 container_images block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#container_images NotebooksRuntime#container_images}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#container_images NotebooksRuntime#container_images}
 
 ---
 
@@ -2109,7 +2109,7 @@ encryption_config: NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionC
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#encryption_config NotebooksRuntime#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#encryption_config NotebooksRuntime#encryption_config}
 
 ---
 
@@ -2130,7 +2130,7 @@ have ephemeral external IP addresses assigned to each vm. This
 enabled networks, and all dependencies must be configured to be
 accessible without external IP addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#internal_ip_only NotebooksRuntime#internal_ip_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#internal_ip_only NotebooksRuntime#internal_ip_only}
 
 ---
 
@@ -2151,7 +2151,7 @@ empty, but, if present, must contain 1 to 63 characters, and must
 conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No
 more than 32 labels can be associated with a cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
 
 ---
 
@@ -2165,7 +2165,7 @@ metadata: typing.Mapping[str]
 
 The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com /compute/docs/storing-retrieving-metadata#project_and_instance _metadata)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#metadata NotebooksRuntime#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#metadata NotebooksRuntime#metadata}
 
 ---
 
@@ -2194,7 +2194,7 @@ used, if it exists. A full URL or partial URI. Examples:
 * Shared VPC (network & subnet are required). Requires
   configuring Private Service Access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
 
 ---
 
@@ -2211,7 +2211,7 @@ The type of vNIC to be used on this interface.
 This may be gVNIC
 or VirtioNet. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#nic_type NotebooksRuntime#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#nic_type NotebooksRuntime#nic_type}
 
 ---
 
@@ -2225,7 +2225,7 @@ reserved_ip_range: str
 
 Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it's assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
 
 ---
 
@@ -2239,7 +2239,7 @@ shielded_instance_config: NotebooksRuntimeVirtualMachineVirtualMachineConfigShie
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#shielded_instance_config NotebooksRuntime#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#shielded_instance_config NotebooksRuntime#shielded_instance_config}
 
 ---
 
@@ -2260,7 +2260,7 @@ partial URI are valid. Examples:
   regions/us-east1/subnetworks/sub0'
 * 'projects/[project_id]/regions/us-east1/subnetworks/sub0'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
 
 ---
 
@@ -2274,7 +2274,7 @@ tags: typing.List[str]
 
 The Compute Engine tags to add to runtime (see [Tagging instances] (https://cloud.google.com/compute/docs/ label-or-tag-resources#tags)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#tags NotebooksRuntime#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#tags NotebooksRuntime#tags}
 
 ---
 
@@ -2310,7 +2310,7 @@ core_count: typing.Union[int, float]
 
 Count of cores of this accelerator.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#core_count NotebooksRuntime#core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#core_count NotebooksRuntime#core_count}
 
 ---
 
@@ -2324,7 +2324,7 @@ type: str
 
 Accelerator model. For valid values, see 'https://cloud.google.com/vertex-ai/docs/workbench/reference/ rest/v1/projects.locations.runtimes#AcceleratorType'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
 
 ---
 
@@ -2360,7 +2360,7 @@ repository: str
 
 The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
 
 ---
 
@@ -2374,7 +2374,7 @@ tag: str
 
 The tag of the container image. If not specified, this defaults to the latest tag.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
 
 ---
 
@@ -2416,7 +2416,7 @@ initialize_params: NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskIni
 
 initialize_params block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#initialize_params NotebooksRuntime#initialize_params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#initialize_params NotebooksRuntime#initialize_params}
 
 ---
 
@@ -2436,7 +2436,7 @@ to attach a persistent disk in any other format than SCSI. Local SSDs
 can use either NVME or SCSI. For performance characteristics of SCSI
 over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#interface NotebooksRuntime#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#interface NotebooksRuntime#interface}
 
 ---
 
@@ -2453,7 +2453,7 @@ The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
 If not specified, the default is to attach
 the disk in READ_WRITE mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#mode NotebooksRuntime#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#mode NotebooksRuntime#mode}
 
 ---
 
@@ -2467,7 +2467,7 @@ source: str
 
 Specifies a valid partial or full URL to an existing Persistent Disk resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#source NotebooksRuntime#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#source NotebooksRuntime#source}
 
 ---
 
@@ -2481,7 +2481,7 @@ type: str
 
 Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
 
 ---
 
@@ -2523,7 +2523,7 @@ description: str
 
 Provide this property when creating the disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#description NotebooksRuntime#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#description NotebooksRuntime#description}
 
 ---
 
@@ -2542,7 +2542,7 @@ to use the name of the instance. If the disk with the
 instance name exists already in the given zone/region, a
 new name will be automatically generated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#disk_name NotebooksRuntime#disk_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#disk_name NotebooksRuntime#disk_name}
 
 ---
 
@@ -2561,7 +2561,7 @@ specified, the disk will be the same size as the image
 (usually 10GB). If specified, the size must be equal to
 or larger than 10GB. Default 100 GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#disk_size_gb NotebooksRuntime#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#disk_size_gb NotebooksRuntime#disk_size_gb}
 
 ---
 
@@ -2575,7 +2575,7 @@ disk_type: str
 
 The type of the boot disk attached to this runtime, defaults to standard persistent disk. For valid values, see 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#disktype'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#disk_type NotebooksRuntime#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#disk_type NotebooksRuntime#disk_type}
 
 ---
 
@@ -2593,7 +2593,7 @@ These can be later modified
 by the disks.setLabels method. This field is only
 applicable for persistent disks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
 
 ---
 
@@ -2631,7 +2631,7 @@ It has the following format:
 'projects/{PROJECT_ID}/locations/{REGION}/keyRings/
 {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#kms_key NotebooksRuntime#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#kms_key NotebooksRuntime#kms_key}
 
 ---
 
@@ -2675,7 +2675,7 @@ integrity policy baseline. This baseline is initially derived
 from the implicitly trusted boot image when the instance is
 created. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_integrity_monitoring NotebooksRuntime#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_integrity_monitoring NotebooksRuntime#enable_integrity_monitoring}
 
 ---
 
@@ -2689,7 +2689,7 @@ enable_secure_boot: typing.Union[bool, IResolvable]
 
 Defines whether the instance has Secure Boot enabled.Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_secure_boot NotebooksRuntime#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_secure_boot NotebooksRuntime#enable_secure_boot}
 
 ---
 
@@ -2703,7 +2703,7 @@ enable_vtpm: typing.Union[bool, IResolvable]
 
 Defines whether the instance has the vTPM enabled. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_vtpm NotebooksRuntime#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_vtpm NotebooksRuntime#enable_vtpm}
 
 ---
 
@@ -5172,7 +5172,7 @@ def put_virtual_machine_config(
 
 data_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#data_disk NotebooksRuntime#data_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#data_disk NotebooksRuntime#data_disk}
 
 ---
 
@@ -5182,7 +5182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Compute Engine machine type used for runtimes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#machine_type NotebooksRuntime#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#machine_type NotebooksRuntime#machine_type}
 
 ---
 
@@ -5192,7 +5192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 accelerator_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#accelerator_config NotebooksRuntime#accelerator_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#accelerator_config NotebooksRuntime#accelerator_config}
 
 ---
 
@@ -5202,7 +5202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 container_images block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#container_images NotebooksRuntime#container_images}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#container_images NotebooksRuntime#container_images}
 
 ---
 
@@ -5212,7 +5212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#encryption_config NotebooksRuntime#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#encryption_config NotebooksRuntime#encryption_config}
 
 ---
 
@@ -5229,7 +5229,7 @@ have ephemeral external IP addresses assigned to each vm. This
 enabled networks, and all dependencies must be configured to be
 accessible without external IP addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#internal_ip_only NotebooksRuntime#internal_ip_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#internal_ip_only NotebooksRuntime#internal_ip_only}
 
 ---
 
@@ -5246,7 +5246,7 @@ empty, but, if present, must contain 1 to 63 characters, and must
 conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No
 more than 32 labels can be associated with a cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
 
 ---
 
@@ -5256,7 +5256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com /compute/docs/storing-retrieving-metadata#project_and_instance _metadata)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#metadata NotebooksRuntime#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#metadata NotebooksRuntime#metadata}
 
 ---
 
@@ -5281,7 +5281,7 @@ used, if it exists. A full URL or partial URI. Examples:
 * Shared VPC (network & subnet are required). Requires
   configuring Private Service Access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
 
 ---
 
@@ -5294,7 +5294,7 @@ The type of vNIC to be used on this interface.
 This may be gVNIC
 or VirtioNet. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#nic_type NotebooksRuntime#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#nic_type NotebooksRuntime#nic_type}
 
 ---
 
@@ -5304,7 +5304,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it's assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
 
 ---
 
@@ -5314,7 +5314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#shielded_instance_config NotebooksRuntime#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#shielded_instance_config NotebooksRuntime#shielded_instance_config}
 
 ---
 
@@ -5331,7 +5331,7 @@ partial URI are valid. Examples:
   regions/us-east1/subnetworks/sub0'
 * 'projects/[project_id]/regions/us-east1/subnetworks/sub0'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
 
 ---
 
@@ -5341,7 +5341,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Compute Engine tags to add to runtime (see [Tagging instances] (https://cloud.google.com/compute/docs/ label-or-tag-resources#tags)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#tags NotebooksRuntime#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#tags NotebooksRuntime#tags}
 
 ---
 
@@ -6940,7 +6940,7 @@ def put_initialize_params(
 
 Provide this property when creating the disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#description NotebooksRuntime#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#description NotebooksRuntime#description}
 
 ---
 
@@ -6955,7 +6955,7 @@ to use the name of the instance. If the disk with the
 instance name exists already in the given zone/region, a
 new name will be automatically generated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#disk_name NotebooksRuntime#disk_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#disk_name NotebooksRuntime#disk_name}
 
 ---
 
@@ -6970,7 +6970,7 @@ specified, the disk will be the same size as the image
 (usually 10GB). If specified, the size must be equal to
 or larger than 10GB. Default 100 GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#disk_size_gb NotebooksRuntime#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#disk_size_gb NotebooksRuntime#disk_size_gb}
 
 ---
 
@@ -6980,7 +6980,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of the boot disk attached to this runtime, defaults to standard persistent disk. For valid values, see 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#disktype'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#disk_type NotebooksRuntime#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#disk_type NotebooksRuntime#disk_type}
 
 ---
 
@@ -6994,7 +6994,7 @@ These can be later modified
 by the disks.setLabels method. This field is only
 applicable for persistent disks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
 
 ---
 
@@ -7824,7 +7824,7 @@ def put_accelerator_config(
 
 Count of cores of this accelerator.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#core_count NotebooksRuntime#core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#core_count NotebooksRuntime#core_count}
 
 ---
 
@@ -7834,7 +7834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Accelerator model. For valid values, see 'https://cloud.google.com/vertex-ai/docs/workbench/reference/ rest/v1/projects.locations.runtimes#AcceleratorType'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
 
 ---
 
@@ -7870,7 +7870,7 @@ def put_data_disk(
 
 initialize_params block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#initialize_params NotebooksRuntime#initialize_params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#initialize_params NotebooksRuntime#initialize_params}
 
 ---
 
@@ -7886,7 +7886,7 @@ to attach a persistent disk in any other format than SCSI. Local SSDs
 can use either NVME or SCSI. For performance characteristics of SCSI
 over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#interface NotebooksRuntime#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#interface NotebooksRuntime#interface}
 
 ---
 
@@ -7899,7 +7899,7 @@ The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
 If not specified, the default is to attach
 the disk in READ_WRITE mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#mode NotebooksRuntime#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#mode NotebooksRuntime#mode}
 
 ---
 
@@ -7909,7 +7909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specifies a valid partial or full URL to an existing Persistent Disk resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#source NotebooksRuntime#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#source NotebooksRuntime#source}
 
 ---
 
@@ -7919,7 +7919,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
 
 ---
 
@@ -7941,7 +7941,7 @@ It has the following format:
 'projects/{PROJECT_ID}/locations/{REGION}/keyRings/
 {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#kms_key NotebooksRuntime#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#kms_key NotebooksRuntime#kms_key}
 
 ---
 
@@ -7967,7 +7967,7 @@ integrity policy baseline. This baseline is initially derived
 from the implicitly trusted boot image when the instance is
 created. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_integrity_monitoring NotebooksRuntime#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_integrity_monitoring NotebooksRuntime#enable_integrity_monitoring}
 
 ---
 
@@ -7977,7 +7977,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Defines whether the instance has Secure Boot enabled.Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_secure_boot NotebooksRuntime#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_secure_boot NotebooksRuntime#enable_secure_boot}
 
 ---
 
@@ -7987,7 +7987,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Defines whether the instance has the vTPM enabled. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/notebooks_runtime#enable_vtpm NotebooksRuntime#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime#enable_vtpm NotebooksRuntime#enable_vtpm}
 
 ---
 

@@ -1,3 +1,3 @@
 # `data_google_logging_project_settings`
 
-Refer to the Terraform Registory for docs: [`data_google_logging_project_settings`](https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/data-sources/logging_project_settings).
+Refer to the Terraform Registory for docs: [`data_google_logging_project_settings`](https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/logging_project_settings).

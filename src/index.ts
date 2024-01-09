@@ -523,6 +523,7 @@ export * as identityPlatformTenantDefaultSupportedIdpConfig from './identity-pla
 export * as identityPlatformTenantInboundSamlConfig from './identity-platform-tenant-inbound-saml-config';
 export * as identityPlatformTenantOauthIdpConfig from './identity-platform-tenant-oauth-idp-config';
 export * as integrationConnectorsConnection from './integration-connectors-connection';
+export * as integrationConnectorsEndpointAttachment from './integration-connectors-endpoint-attachment';
 export * as kmsCryptoKey from './kms-crypto-key';
 export * as kmsCryptoKeyIamBinding from './kms-crypto-key-iam-binding';
 export * as kmsCryptoKeyIamMember from './kms-crypto-key-iam-member';
@@ -539,12 +540,14 @@ export * as loggingBillingAccountExclusion from './logging-billing-account-exclu
 export * as loggingBillingAccountSink from './logging-billing-account-sink';
 export * as loggingFolderBucketConfig from './logging-folder-bucket-config';
 export * as loggingFolderExclusion from './logging-folder-exclusion';
+export * as loggingFolderSettings from './logging-folder-settings';
 export * as loggingFolderSink from './logging-folder-sink';
 export * as loggingLinkedDataset from './logging-linked-dataset';
 export * as loggingLogView from './logging-log-view';
 export * as loggingMetric from './logging-metric';
 export * as loggingOrganizationBucketConfig from './logging-organization-bucket-config';
 export * as loggingOrganizationExclusion from './logging-organization-exclusion';
+export * as loggingOrganizationSettings from './logging-organization-settings';
 export * as loggingOrganizationSink from './logging-organization-sink';
 export * as loggingProjectBucketConfig from './logging-project-bucket-config';
 export * as loggingProjectExclusion from './logging-project-exclusion';
@@ -563,6 +566,8 @@ export * as monitoringNotificationChannel from './monitoring-notification-channe
 export * as monitoringService from './monitoring-service';
 export * as monitoringSlo from './monitoring-slo';
 export * as monitoringUptimeCheckConfig from './monitoring-uptime-check-config';
+export * as netappActiveDirectory from './netapp-active-directory';
+export * as netappBackupVault from './netapp-backup-vault';
 export * as netappStoragePool from './netapp-storage-pool';
 export * as networkConnectivityHub from './network-connectivity-hub';
 export * as networkConnectivityPolicyBasedRoute from './network-connectivity-policy-based-route';
@@ -712,6 +717,8 @@ export * as tagsTagValueIamPolicy from './tags-tag-value-iam-policy';
 export * as tpuNode from './tpu-node';
 export * as vertexAiDataset from './vertex-ai-dataset';
 export * as vertexAiEndpoint from './vertex-ai-endpoint';
+export * as vertexAiFeatureGroup from './vertex-ai-feature-group';
+export * as vertexAiFeatureOnlineStore from './vertex-ai-feature-online-store';
 export * as vertexAiFeaturestore from './vertex-ai-featurestore';
 export * as vertexAiFeaturestoreEntitytype from './vertex-ai-featurestore-entitytype';
 export * as vertexAiFeaturestoreEntitytypeFeature from './vertex-ai-featurestore-entitytype-feature';
@@ -813,6 +820,7 @@ export * as dataGoogleComputeRegionInstanceTemplate from './data-google-compute-
 export * as dataGoogleComputeRegionNetworkEndpointGroup from './data-google-compute-region-network-endpoint-group';
 export * as dataGoogleComputeRegionSslCertificate from './data-google-compute-region-ssl-certificate';
 export * as dataGoogleComputeRegions from './data-google-compute-regions';
+export * as dataGoogleComputeReservation from './data-google-compute-reservation';
 export * as dataGoogleComputeResourcePolicy from './data-google-compute-resource-policy';
 export * as dataGoogleComputeRouter from './data-google-compute-router';
 export * as dataGoogleComputeRouterNat from './data-google-compute-router-nat';

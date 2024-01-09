@@ -4,7 +4,7 @@
 
 ### TagsTagKeyIamBinding <a name="TagsTagKeyIamBinding" id="@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding google_tags_tag_key_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding google_tags_tag_key_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBinding.Initializer"></a>
 
@@ -487,7 +487,7 @@ The construct id used in the generated config for the TagsTagKeyIamBinding to im
 
 The id of the existing TagsTagKeyIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -821,9 +821,9 @@ new TagsTagKeyIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#expression TagsTagKeyIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#title TagsTagKeyIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#description TagsTagKeyIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#expression TagsTagKeyIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#title TagsTagKeyIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#description TagsTagKeyIamBinding#description}. |
 
 ---
 
@@ -835,7 +835,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#expression TagsTagKeyIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#expression TagsTagKeyIamBinding#expression}.
 
 ---
 
@@ -847,7 +847,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#title TagsTagKeyIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#title TagsTagKeyIamBinding#title}.
 
 ---
 
@@ -859,7 +859,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#description TagsTagKeyIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#description TagsTagKeyIamBinding#description}.
 
 ---
 
@@ -897,11 +897,11 @@ new TagsTagKeyIamBindingConfig {
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#members TagsTagKeyIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#role TagsTagKeyIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.tagKey">TagKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#tag_key TagsTagKeyIamBinding#tag_key}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#members TagsTagKeyIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#role TagsTagKeyIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.tagKey">TagKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#tag_key TagsTagKeyIamBinding#tag_key}. |
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingCondition">TagsTagKeyIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#id TagsTagKeyIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamBinding.TagsTagKeyIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#id TagsTagKeyIamBinding#id}. |
 
 ---
 
@@ -983,7 +983,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#members TagsTagKeyIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#members TagsTagKeyIamBinding#members}.
 
 ---
 
@@ -995,7 +995,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#role TagsTagKeyIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#role TagsTagKeyIamBinding#role}.
 
 ---
 
@@ -1007,7 +1007,7 @@ public string TagKey { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#tag_key TagsTagKeyIamBinding#tag_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#tag_key TagsTagKeyIamBinding#tag_key}.
 
 ---
 
@@ -1021,7 +1021,7 @@ public TagsTagKeyIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#condition TagsTagKeyIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#condition TagsTagKeyIamBinding#condition}
 
 ---
 
@@ -1033,7 +1033,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/tags_tag_key_iam_binding#id TagsTagKeyIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/tags_tag_key_iam_binding#id TagsTagKeyIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

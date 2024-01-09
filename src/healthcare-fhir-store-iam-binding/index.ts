@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareFhirStoreIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#fhir_store_id HealthcareFhirStoreIamBinding#fhir_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#fhir_store_id HealthcareFhirStoreIamBinding#fhir_store_id}
   */
   readonly fhirStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#id HealthcareFhirStoreIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#id HealthcareFhirStoreIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#members HealthcareFhirStoreIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#members HealthcareFhirStoreIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#role HealthcareFhirStoreIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#role HealthcareFhirStoreIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#condition HealthcareFhirStoreIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#condition HealthcareFhirStoreIamBinding#condition}
   */
   readonly condition?: HealthcareFhirStoreIamBindingCondition;
 }
 export interface HealthcareFhirStoreIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#description HealthcareFhirStoreIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#description HealthcareFhirStoreIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#expression HealthcareFhirStoreIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#expression HealthcareFhirStoreIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#title HealthcareFhirStoreIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#title HealthcareFhirStoreIamBinding#title}
   */
   readonly title: string;
 }
@@ -153,7 +153,7 @@ export class HealthcareFhirStoreIamBindingConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding google_healthcare_fhir_store_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding google_healthcare_fhir_store_iam_binding}
 */
 export class HealthcareFhirStoreIamBinding extends cdktf.TerraformResource {
 
@@ -169,7 +169,7 @@ export class HealthcareFhirStoreIamBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HealthcareFhirStoreIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HealthcareFhirStoreIamBinding to import
-  * @param importFromId The id of the existing HealthcareFhirStoreIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HealthcareFhirStoreIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HealthcareFhirStoreIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -181,7 +181,7 @@ export class HealthcareFhirStoreIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/healthcare_fhir_store_iam_binding google_healthcare_fhir_store_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/healthcare_fhir_store_iam_binding google_healthcare_fhir_store_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -192,7 +192,7 @@ export class HealthcareFhirStoreIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_fhir_store_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.10.0',
+        providerVersion: '5.11.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

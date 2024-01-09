@@ -4,7 +4,7 @@
 
 ### FolderIamBinding <a name="FolderIamBinding" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding google_folder_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding google_folder_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer"></a>
 
@@ -487,7 +487,7 @@ The construct id used in the generated config for the FolderIamBinding to import
 
 The id of the existing FolderIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -821,9 +821,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}. |
 
 ---
 
@@ -835,7 +835,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}.
 
 ---
 
@@ -847,7 +847,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}.
 
 ---
 
@@ -859,7 +859,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}.
 
 ---
 
@@ -897,11 +897,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.folder">Folder</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.folder">Folder</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition">FolderIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}. |
 
 ---
 
@@ -983,7 +983,7 @@ Folder *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}.
 
 ---
 
@@ -995,7 +995,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}.
 
 ---
 
@@ -1007,7 +1007,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}.
 
 ---
 
@@ -1021,7 +1021,7 @@ Condition FolderIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
 
 ---
 
@@ -1033,7 +1033,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
