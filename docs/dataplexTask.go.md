@@ -4,12 +4,12 @@
 
 ### DataplexTask <a name="DataplexTask" id="@cdktf/provider-google.dataplexTask.DataplexTask"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task google_dataplex_task}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task google_dataplex_task}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTask.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTask(scope Construct, id *string, config DataplexTaskConfig) DataplexTask
 ```
@@ -513,7 +513,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexTask.DataplexTask.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_IsConstruct(x interface{}) *bool
 ```
@@ -545,7 +545,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexTask.DataplexTask.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_IsTerraformElement(x interface{}) *bool
 ```
@@ -559,7 +559,7 @@ dataplextask.DataplexTask_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexTask.DataplexTask.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_IsTerraformResource(x interface{}) *bool
 ```
@@ -573,7 +573,7 @@ dataplextask.DataplexTask_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexTask.DataplexTask.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.DataplexTask_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -602,7 +602,7 @@ The construct id used in the generated config for the DataplexTask to import.
 
 The id of the existing DataplexTask that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1176,7 +1176,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskConfig {
 	Connection: interface{},
@@ -1186,19 +1186,19 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	ExecutionSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskExecutionSpec,
-	TriggerSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskTriggerSpec,
+	ExecutionSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskExecutionSpec,
+	TriggerSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskTriggerSpec,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Lake: *string,
 	Location: *string,
-	Notebook: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebook,
+	Notebook: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebook,
 	Project: *string,
-	Spark: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSpark,
+	Spark: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSpark,
 	TaskId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskTimeouts,
 }
 ```
 
@@ -1217,12 +1217,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.triggerSpec">TriggerSpec</a></code> | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTriggerSpec">DataplexTaskTriggerSpec</a></code> | trigger_spec block. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.description">Description</a></code> | <code>*string</code> | User-provided description of the task. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | User friendly display name. |
-| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#id DataplexTask#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#id DataplexTask#id}. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-defined labels for the task. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.lake">Lake</a></code> | <code>*string</code> | The lake in which the task will be created in. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.location">Location</a></code> | <code>*string</code> | The location in which the task will be created in. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.notebook">Notebook</a></code> | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskNotebook">DataplexTaskNotebook</a></code> | notebook block. |
-| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#project DataplexTask#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#project DataplexTask#project}. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.spark">Spark</a></code> | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskSpark">DataplexTaskSpark</a></code> | spark block. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.taskId">TaskId</a></code> | <code>*string</code> | The task Id of the task. |
 | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts">DataplexTaskTimeouts</a></code> | timeouts block. |
@@ -1309,7 +1309,7 @@ ExecutionSpec DataplexTaskExecutionSpec
 
 execution_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#execution_spec DataplexTask#execution_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#execution_spec DataplexTask#execution_spec}
 
 ---
 
@@ -1323,7 +1323,7 @@ TriggerSpec DataplexTaskTriggerSpec
 
 trigger_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#trigger_spec DataplexTask#trigger_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#trigger_spec DataplexTask#trigger_spec}
 
 ---
 
@@ -1337,7 +1337,7 @@ Description *string
 
 User-provided description of the task.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#description DataplexTask#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#description DataplexTask#description}
 
 ---
 
@@ -1351,7 +1351,7 @@ DisplayName *string
 
 User friendly display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#display_name DataplexTask#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#display_name DataplexTask#display_name}
 
 ---
 
@@ -1363,7 +1363,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#id DataplexTask#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#id DataplexTask#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1383,7 +1383,7 @@ User-defined labels for the task.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#labels DataplexTask#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#labels DataplexTask#labels}
 
 ---
 
@@ -1397,7 +1397,7 @@ Lake *string
 
 The lake in which the task will be created in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#lake DataplexTask#lake}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#lake DataplexTask#lake}
 
 ---
 
@@ -1411,7 +1411,7 @@ Location *string
 
 The location in which the task will be created in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#location DataplexTask#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#location DataplexTask#location}
 
 ---
 
@@ -1425,7 +1425,7 @@ Notebook DataplexTaskNotebook
 
 notebook block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#notebook DataplexTask#notebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#notebook DataplexTask#notebook}
 
 ---
 
@@ -1437,7 +1437,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#project DataplexTask#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#project DataplexTask#project}.
 
 ---
 
@@ -1451,7 +1451,7 @@ Spark DataplexTaskSpark
 
 spark block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#spark DataplexTask#spark}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#spark DataplexTask#spark}
 
 ---
 
@@ -1465,7 +1465,7 @@ TaskId *string
 
 The task Id of the task.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#task_id DataplexTask#task_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#task_id DataplexTask#task_id}
 
 ---
 
@@ -1479,7 +1479,7 @@ Timeouts DataplexTaskTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#timeouts DataplexTask#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#timeouts DataplexTask#timeouts}
 
 ---
 
@@ -1488,7 +1488,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskExecutionSpec {
 	ServiceAccount: *string,
@@ -1523,7 +1523,7 @@ Service account to use to execute a task.
 
 If not provided, the default Compute service account for the project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#service_account DataplexTask#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#service_account DataplexTask#service_account}
 
 ---
 
@@ -1539,7 +1539,7 @@ The arguments to pass to the task.
 
 The args can use placeholders of the format ${placeholder} as part of key/value string. These will be interpolated before passing the args to the driver. Currently supported placeholders: - ${taskId} - ${job_time} To pass positional args, set the key as TASK_ARGS. The value should be a comma-separated string of all the positional arguments. To use a delimiter other than comma, refer to https://cloud.google.com/sdk/gcloud/reference/topic/escaping. In case of other keys being present in the args, then TASK_ARGS will be passed as the last argument. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#args DataplexTask#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#args DataplexTask#args}
 
 ---
 
@@ -1553,7 +1553,7 @@ KmsKey *string
 
 The Cloud KMS key to use for encryption, of the form: projects/{project_number}/locations/{locationId}/keyRings/{key-ring-name}/cryptoKeys/{key-name}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#kms_key DataplexTask#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#kms_key DataplexTask#kms_key}
 
 ---
 
@@ -1569,7 +1569,7 @@ The maximum duration after which the job execution is expired.
 
 A duration in seconds with up to nine fractional digits, ending with 's'. Example: '3.5s'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#max_job_execution_lifetime DataplexTask#max_job_execution_lifetime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#max_job_execution_lifetime DataplexTask#max_job_execution_lifetime}
 
 ---
 
@@ -1585,7 +1585,7 @@ The project in which jobs are run.
 
 By default, the project containing the Lake is used. If a project is provided, the ExecutionSpec.service_account must belong to this project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#project DataplexTask#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#project DataplexTask#project}
 
 ---
 
@@ -1594,7 +1594,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskExecutionStatus {
 
@@ -1607,7 +1607,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusLatestJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskExecutionStatusLatestJob {
 
@@ -1620,13 +1620,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebook {
 	Notebook: *string,
 	ArchiveUris: *[]*string,
 	FileUris: *[]*string,
-	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpec,
+	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpec,
 }
 ```
 
@@ -1653,7 +1653,7 @@ Path to input notebook.
 
 This can be the Cloud Storage URI of the notebook file or the path to a Notebook Content. The execution args are accessible as environment variables (TASK_key=value).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#notebook DataplexTask#notebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#notebook DataplexTask#notebook}
 
 ---
 
@@ -1669,7 +1669,7 @@ Cloud Storage URIs of archives to be extracted into the working directory of eac
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
 
 ---
 
@@ -1683,7 +1683,7 @@ FileUris *[]*string
 
 Cloud Storage URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
 
 ---
 
@@ -1697,7 +1697,7 @@ InfrastructureSpec DataplexTaskNotebookInfrastructureSpec
 
 infrastructure_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
 
 ---
 
@@ -1706,12 +1706,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpec {
-	Batch: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatch,
-	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImage,
-	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetwork,
+	Batch: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatch,
+	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImage,
+	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetwork,
 }
 ```
 
@@ -1735,7 +1735,7 @@ Batch DataplexTaskNotebookInfrastructureSpecBatch
 
 batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#batch DataplexTask#batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#batch DataplexTask#batch}
 
 ---
 
@@ -1749,7 +1749,7 @@ ContainerImage DataplexTaskNotebookInfrastructureSpecContainerImage
 
 container_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#container_image DataplexTask#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#container_image DataplexTask#container_image}
 
 ---
 
@@ -1763,7 +1763,7 @@ VpcNetwork DataplexTaskNotebookInfrastructureSpecVpcNetwork
 
 vpc_network block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
 
 ---
 
@@ -1772,7 +1772,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpecBatch {
 	ExecutorsCount: *f64,
@@ -1799,7 +1799,7 @@ ExecutorsCount *f64
 
 Total number of job executors. Executor Count should be between 2 and 100. [Default=2].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
 
 ---
 
@@ -1815,7 +1815,7 @@ Max configurable executors.
 
 If maxExecutorsCount > executorsCount, then auto-scaling is enabled. Max Executor Count should be between 2 and 1000. [Default=1000]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
 
 ---
 
@@ -1824,7 +1824,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpecContainerImage {
 	Image: *string,
@@ -1855,7 +1855,7 @@ Image *string
 
 Container image to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#image DataplexTask#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#image DataplexTask#image}
 
 ---
 
@@ -1871,7 +1871,7 @@ A list of Java JARS to add to the classpath.
 
 Valid input includes Cloud Storage URIs to Jar binaries. For example, gs://bucket-name/my/path/to/file.jar
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
 
 ---
 
@@ -1887,7 +1887,7 @@ Override to common configuration of open source components installed on the Data
 
 The properties to set on daemon config files. Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. For more information, see Cluster properties.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#properties DataplexTask#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#properties DataplexTask#properties}
 
 ---
 
@@ -1903,7 +1903,7 @@ A list of python packages to be installed.
 
 Valid formats include Cloud Storage URI to a PIP installable library. For example, gs://bucket-name/my/path/to/lib.tar.gz
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
 
 ---
 
@@ -1912,7 +1912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskNotebookInfrastructureSpecVpcNetwork {
 	Network: *string,
@@ -1943,7 +1943,7 @@ The Cloud VPC network in which the job is run.
 
 By default, the Cloud VPC network named Default within the project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#network DataplexTask#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#network DataplexTask#network}
 
 ---
 
@@ -1957,7 +1957,7 @@ NetworkTags *[]*string
 
 List of network tags to apply to the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
 
 ---
 
@@ -1971,7 +1971,7 @@ SubNetwork *string
 
 The Cloud VPC sub-network in which the job is run.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
 
 ---
 
@@ -1980,12 +1980,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSpark.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSpark {
 	ArchiveUris: *[]*string,
 	FileUris: *[]*string,
-	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpec,
+	InfrastructureSpec: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpec,
 	MainClass: *string,
 	MainJarFileUri: *string,
 	PythonScriptFile: *string,
@@ -2021,7 +2021,7 @@ Cloud Storage URIs of archives to be extracted into the working directory of eac
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
 
 ---
 
@@ -2035,7 +2035,7 @@ FileUris *[]*string
 
 Cloud Storage URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
 
 ---
 
@@ -2049,7 +2049,7 @@ InfrastructureSpec DataplexTaskSparkInfrastructureSpec
 
 infrastructure_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
 
 ---
 
@@ -2065,7 +2065,7 @@ The name of the driver's main class.
 
 The jar file that contains the class must be in the default CLASSPATH or specified in jar_file_uris. The execution args are passed in as a sequence of named process arguments (--key=value).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#main_class DataplexTask#main_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#main_class DataplexTask#main_class}
 
 ---
 
@@ -2081,7 +2081,7 @@ The Cloud Storage URI of the jar file that contains the main class.
 
 The execution args are passed in as a sequence of named process arguments (--key=value).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#main_jar_file_uri DataplexTask#main_jar_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#main_jar_file_uri DataplexTask#main_jar_file_uri}
 
 ---
 
@@ -2097,7 +2097,7 @@ The Gcloud Storage URI of the main Python file to use as the driver.
 
 Must be a .py file. The execution args are passed in as a sequence of named process arguments (--key=value).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#python_script_file DataplexTask#python_script_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#python_script_file DataplexTask#python_script_file}
 
 ---
 
@@ -2111,7 +2111,7 @@ SqlScript *string
 
 The query text. The execution args are used to declare a set of script variables (set key='value';).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#sql_script DataplexTask#sql_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#sql_script DataplexTask#sql_script}
 
 ---
 
@@ -2127,7 +2127,7 @@ A reference to a query file.
 
 This can be the Cloud Storage URI of the query file or it can the path to a SqlScript Content. The execution args are used to declare a set of script variables (set key='value';).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#sql_script_file DataplexTask#sql_script_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#sql_script_file DataplexTask#sql_script_file}
 
 ---
 
@@ -2136,12 +2136,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpec {
-	Batch: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpecBatch,
-	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImage,
-	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google/v12.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetwork,
+	Batch: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpecBatch,
+	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImage,
+	VpcNetwork: github.com/cdktf/cdktf-provider-google-go/google.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetwork,
 }
 ```
 
@@ -2165,7 +2165,7 @@ Batch DataplexTaskSparkInfrastructureSpecBatch
 
 batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#batch DataplexTask#batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#batch DataplexTask#batch}
 
 ---
 
@@ -2179,7 +2179,7 @@ ContainerImage DataplexTaskSparkInfrastructureSpecContainerImage
 
 container_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#container_image DataplexTask#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#container_image DataplexTask#container_image}
 
 ---
 
@@ -2193,7 +2193,7 @@ VpcNetwork DataplexTaskSparkInfrastructureSpecVpcNetwork
 
 vpc_network block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
 
 ---
 
@@ -2202,7 +2202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpecBatch {
 	ExecutorsCount: *f64,
@@ -2229,7 +2229,7 @@ ExecutorsCount *f64
 
 Total number of job executors. Executor Count should be between 2 and 100. [Default=2].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
 
 ---
 
@@ -2245,7 +2245,7 @@ Max configurable executors.
 
 If maxExecutorsCount > executorsCount, then auto-scaling is enabled. Max Executor Count should be between 2 and 1000. [Default=1000]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
 
 ---
 
@@ -2254,7 +2254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpecContainerImage {
 	Image: *string,
@@ -2285,7 +2285,7 @@ Image *string
 
 Container image to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#image DataplexTask#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#image DataplexTask#image}
 
 ---
 
@@ -2301,7 +2301,7 @@ A list of Java JARS to add to the classpath.
 
 Valid input includes Cloud Storage URIs to Jar binaries. For example, gs://bucket-name/my/path/to/file.jar
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
 
 ---
 
@@ -2317,7 +2317,7 @@ Override to common configuration of open source components installed on the Data
 
 The properties to set on daemon config files. Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. For more information, see Cluster properties.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#properties DataplexTask#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#properties DataplexTask#properties}
 
 ---
 
@@ -2333,7 +2333,7 @@ A list of python packages to be installed.
 
 Valid formats include Cloud Storage URI to a PIP installable library. For example, gs://bucket-name/my/path/to/lib.tar.gz
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
 
 ---
 
@@ -2342,7 +2342,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskSparkInfrastructureSpecVpcNetwork {
 	Network: *string,
@@ -2373,7 +2373,7 @@ The Cloud VPC network in which the job is run.
 
 By default, the Cloud VPC network named Default within the project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#network DataplexTask#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#network DataplexTask#network}
 
 ---
 
@@ -2387,7 +2387,7 @@ NetworkTags *[]*string
 
 List of network tags to apply to the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
 
 ---
 
@@ -2401,7 +2401,7 @@ SubNetwork *string
 
 The Cloud VPC sub-network in which the job is run.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
 
 ---
 
@@ -2410,7 +2410,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskTimeouts {
 	Create: *string,
@@ -2423,9 +2423,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#create DataplexTask#create}. |
-| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#delete DataplexTask#delete}. |
-| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#update DataplexTask#update}. |
+| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#create DataplexTask#create}. |
+| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#delete DataplexTask#delete}. |
+| <code><a href="#@cdktf/provider-google.dataplexTask.DataplexTaskTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#update DataplexTask#update}. |
 
 ---
 
@@ -2437,7 +2437,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#create DataplexTask#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#create DataplexTask#create}.
 
 ---
 
@@ -2449,7 +2449,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#delete DataplexTask#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#delete DataplexTask#delete}.
 
 ---
 
@@ -2461,7 +2461,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#update DataplexTask#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#update DataplexTask#update}.
 
 ---
 
@@ -2470,7 +2470,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexTask.DataplexTaskTriggerSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 &dataplextask.DataplexTaskTriggerSpec {
 	Type: *string,
@@ -2503,7 +2503,7 @@ Type *string
 
 Trigger type of the user-specified Task Possible values: ["ON_DEMAND", "RECURRING"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#type DataplexTask#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#type DataplexTask#type}
 
 ---
 
@@ -2519,7 +2519,7 @@ Prevent the task from executing.
 
 This does not cancel already running tasks. It is intended to temporarily disable RECURRING tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#disabled DataplexTask#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#disabled DataplexTask#disabled}
 
 ---
 
@@ -2533,7 +2533,7 @@ MaxRetries *f64
 
 Number of retry attempts before aborting. Set to zero to never attempt to retry a failed task.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#max_retries DataplexTask#max_retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#max_retries DataplexTask#max_retries}
 
 ---
 
@@ -2547,7 +2547,7 @@ Schedule *string
 
 Cron schedule (https://en.wikipedia.org/wiki/Cron) for running tasks periodically. To explicitly set a timezone to the cron tab, apply a prefix in the cron tab: 'CRON_TZ=${IANA_TIME_ZONE}' or 'TZ=${IANA_TIME_ZONE}'. The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example, CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *. This field is required for RECURRING tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#schedule DataplexTask#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#schedule DataplexTask#schedule}
 
 ---
 
@@ -2563,7 +2563,7 @@ The first run of the task will be after this time.
 
 If not specified, the task will run shortly after being submitted if ON_DEMAND and based on the schedule if RECURRING.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/dataplex_task#start_time DataplexTask#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dataplex_task#start_time DataplexTask#start_time}
 
 ---
 
@@ -2574,7 +2574,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskExecutionSpecOutputReference
 ```
@@ -2961,7 +2961,7 @@ func InternalValue() DataplexTaskExecutionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusLatestJobList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusLatestJobList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexTaskExecutionStatusLatestJobList
 ```
@@ -3093,7 +3093,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusLatestJobOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusLatestJobOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexTaskExecutionStatusLatestJobOutputReference
 ```
@@ -3459,7 +3459,7 @@ func InternalValue() DataplexTaskExecutionStatusLatestJob
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexTaskExecutionStatusList
 ```
@@ -3591,7 +3591,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskExecutionStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskExecutionStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexTaskExecutionStatusOutputReference
 ```
@@ -3880,7 +3880,7 @@ func InternalValue() DataplexTaskExecutionStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecBatchOutputReference
 ```
@@ -4187,7 +4187,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpecBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecContainerImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecContainerImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecContainerImageOutputReference
 ```
@@ -4552,7 +4552,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpecContainerImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecOutputReference
 ```
@@ -4927,7 +4927,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookInfrastructureSpecVpcNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookInfrastructureSpecVpcNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookInfrastructureSpecVpcNetworkOutputReference
 ```
@@ -5263,7 +5263,7 @@ func InternalValue() DataplexTaskNotebookInfrastructureSpecVpcNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskNotebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskNotebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskNotebookOutputReference
 ```
@@ -5634,7 +5634,7 @@ func InternalValue() DataplexTaskNotebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecBatchOutputReference
 ```
@@ -5941,7 +5941,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpecBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecContainerImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecContainerImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecContainerImageOutputReference
 ```
@@ -6306,7 +6306,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpecContainerImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecOutputReference
 ```
@@ -6681,7 +6681,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkInfrastructureSpecVpcNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkInfrastructureSpecVpcNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkInfrastructureSpecVpcNetworkOutputReference
 ```
@@ -7017,7 +7017,7 @@ func InternalValue() DataplexTaskSparkInfrastructureSpecVpcNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskSparkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskSparkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskSparkOutputReference
 ```
@@ -7511,7 +7511,7 @@ func InternalValue() DataplexTaskSpark
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskTimeoutsOutputReference
 ```
@@ -7847,7 +7847,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexTask.DataplexTaskTriggerSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataplextask"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplextask"
 
 dataplextask.NewDataplexTaskTriggerSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexTaskTriggerSpecOutputReference
 ```

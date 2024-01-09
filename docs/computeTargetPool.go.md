@@ -4,12 +4,12 @@
 
 ### ComputeTargetPool <a name="ComputeTargetPool" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool google_compute_target_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool google_compute_target_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 computetargetpool.NewComputeTargetPool(scope Construct, id *string, config ComputeTargetPoolConfig) ComputeTargetPool
 ```
@@ -454,7 +454,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 computetargetpool.ComputeTargetPool_IsConstruct(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 computetargetpool.ComputeTargetPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ computetargetpool.ComputeTargetPool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 computetargetpool.ComputeTargetPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -514,7 +514,7 @@ computetargetpool.ComputeTargetPool_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 computetargetpool.ComputeTargetPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -543,7 +543,7 @@ The construct id used in the generated config for the ComputeTargetPool to impor
 
 The id of the existing ComputeTargetPool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -996,7 +996,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 &computetargetpool.ComputeTargetPoolConfig {
 	Connection: interface{},
@@ -1016,7 +1016,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
 	Project: *string,
 	Region: *string,
 	SessionAffinity: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeTargetPool.ComputeTargetPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeTargetPool.ComputeTargetPoolTimeouts,
 }
 ```
 
@@ -1036,7 +1036,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.description">Description</a></code> | <code>*string</code> | Textual description field. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.failoverRatio">FailoverRatio</a></code> | <code>*f64</code> | Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set). |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.healthChecks">HealthChecks</a></code> | <code>*[]*string</code> | List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported. |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.instances">Instances</a></code> | <code>*[]*string</code> | List of instances in the pool. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.project">Project</a></code> | <code>*string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.region">Region</a></code> | <code>*string</code> | Where the target pool resides. Defaults to project region. |
@@ -1125,7 +1125,7 @@ Name *string
 
 A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#name ComputeTargetPool#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#name ComputeTargetPool#name}
 
 ---
 
@@ -1139,7 +1139,7 @@ BackupPool *string
 
 URL to the backup target pool. Must also set failover_ratio.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
 
 ---
 
@@ -1153,7 +1153,7 @@ Description *string
 
 Textual description field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#description ComputeTargetPool#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#description ComputeTargetPool#description}
 
 ---
 
@@ -1167,7 +1167,7 @@ FailoverRatio *f64
 
 Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
 
 ---
 
@@ -1181,7 +1181,7 @@ HealthChecks *[]*string
 
 List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#health_checks ComputeTargetPool#health_checks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#health_checks ComputeTargetPool#health_checks}
 
 ---
 
@@ -1193,7 +1193,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1212,7 +1212,7 @@ List of instances in the pool.
 
 They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#instances ComputeTargetPool#instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#instances ComputeTargetPool#instances}
 
 ---
 
@@ -1228,7 +1228,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#project ComputeTargetPool#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#project ComputeTargetPool#project}
 
 ---
 
@@ -1242,7 +1242,7 @@ Region *string
 
 Where the target pool resides. Defaults to project region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#region ComputeTargetPool#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#region ComputeTargetPool#region}
 
 ---
 
@@ -1258,7 +1258,7 @@ How to distribute load.
 
 Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE").
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
 
 ---
 
@@ -1272,7 +1272,7 @@ Timeouts ComputeTargetPoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#timeouts ComputeTargetPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#timeouts ComputeTargetPool#timeouts}
 
 ---
 
@@ -1281,7 +1281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 &computetargetpool.ComputeTargetPoolTimeouts {
 	Create: *string,
@@ -1294,9 +1294,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}. |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}. |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}. |
 
 ---
 
@@ -1308,7 +1308,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}.
 
 ---
 
@@ -1320,7 +1320,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}.
 
 ---
 
@@ -1332,7 +1332,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.10.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}.
 
 ---
 
@@ -1343,7 +1343,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/computetargetpool"
 
 computetargetpool.NewComputeTargetPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeTargetPoolTimeoutsOutputReference
 ```
