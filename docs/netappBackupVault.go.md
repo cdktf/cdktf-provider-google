@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 netappbackupvault.NewNetappBackupVault(scope Construct, id *string, config NetappBackupVaultConfig) NetappBackupVault
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 netappbackupvault.NetappBackupVault_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 netappbackupvault.NetappBackupVault_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ netappbackupvault.NetappBackupVault_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 netappbackupvault.NetappBackupVault_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ netappbackupvault.NetappBackupVault_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.netappBackupVault.NetappBackupVault.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 netappbackupvault.NetappBackupVault_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -906,7 +906,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 &netappbackupvault.NetappBackupVaultConfig {
 	Connection: interface{},
@@ -922,7 +922,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.netappBackupVault.NetappBackupVaultTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.netappBackupVault.NetappBackupVaultTimeouts,
 }
 ```
 
@@ -1122,7 +1122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 &netappbackupvault.NetappBackupVaultTimeouts {
 	Create: *string,
@@ -1184,7 +1184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappBackupVault.NetappBackupVaultTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/netappbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/netappbackupvault"
 
 netappbackupvault.NewNetappBackupVaultTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappBackupVaultTimeoutsOutputReference
 ```

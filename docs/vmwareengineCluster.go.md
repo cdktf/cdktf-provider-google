@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineCluster(scope Construct, id *string, config VmwareengineClusterConfig) VmwareengineCluster
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ vmwareenginecluster.VmwareengineCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ vmwareenginecluster.VmwareengineCluster_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -850,7 +850,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterConfig {
 	Connection: interface{},
@@ -864,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 	Parent: *string,
 	Id: *string,
 	NodeTypeConfigs: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineCluster.VmwareengineClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareengineCluster.VmwareengineClusterTimeouts,
 }
 ```
 
@@ -1036,7 +1036,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterNodeTypeConfigs {
 	NodeCount: *f64,
@@ -1104,7 +1104,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterTimeouts {
 	Create: *string,
@@ -1166,7 +1166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterNodeTypeConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareengineClusterNodeTypeConfigsList
 ```
@@ -1309,7 +1309,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterNodeTypeConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareengineClusterNodeTypeConfigsOutputReference
 ```
@@ -1649,7 +1649,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineClusterTimeoutsOutputReference
 ```
