@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutine(scope Construct, id *string, config BigqueryRoutineConfig) BigqueryRoutine
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -136,6 +137,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.toMetadata"></a>
 
@@ -467,7 +474,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.BigqueryRoutine_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +506,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.BigqueryRoutine_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +520,7 @@ bigqueryroutine.BigqueryRoutine_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.BigqueryRoutine_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,7 +534,7 @@ bigqueryroutine.BigqueryRoutine_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutine.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.BigqueryRoutine_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1086,7 +1093,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArguments.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 &bigqueryroutine.BigqueryRoutineArguments {
 	ArgumentKind: *string,
@@ -1176,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 &bigqueryroutine.BigqueryRoutineConfig {
 	Connection: interface{},
@@ -1199,7 +1206,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
 	Project: *string,
 	ReturnTableType: *string,
 	ReturnType: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.bigqueryRoutine.BigqueryRoutineTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.bigqueryRoutine.BigqueryRoutineTimeouts,
 }
 ```
 
@@ -1520,7 +1527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 &bigqueryroutine.BigqueryRoutineTimeouts {
 	Create: *string,
@@ -1582,7 +1589,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutineArgumentsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BigqueryRoutineArgumentsList
 ```
@@ -1623,10 +1630,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1725,7 +1749,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineArgumentsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutineArgumentsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BigqueryRoutineArgumentsOutputReference
 ```
@@ -2108,7 +2132,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryRoutine.BigqueryRoutineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/bigqueryroutine"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigqueryroutine"
 
 bigqueryroutine.NewBigqueryRoutineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryRoutineTimeoutsOutputReference
 ```

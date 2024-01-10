@@ -101,6 +101,25 @@ export function iamWorkforcePoolAccessRestrictionsAllowedServicesToTerraform(str
   }
 }
 
+
+export function iamWorkforcePoolAccessRestrictionsAllowedServicesToHclTerraform(struct?: IamWorkforcePoolAccessRestrictionsAllowedServices | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    domain: {
+      value: cdktf.stringToHclTerraform(struct!.domain),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IamWorkforcePoolAccessRestrictionsAllowedServicesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -208,6 +227,31 @@ export function iamWorkforcePoolAccessRestrictionsToTerraform(struct?: IamWorkfo
   }
 }
 
+
+export function iamWorkforcePoolAccessRestrictionsToHclTerraform(struct?: IamWorkforcePoolAccessRestrictionsOutputReference | IamWorkforcePoolAccessRestrictions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disable_programmatic_signin: {
+      value: cdktf.booleanToHclTerraform(struct!.disableProgrammaticSignin),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    allowed_services: {
+      value: cdktf.listMapperHcl(iamWorkforcePoolAccessRestrictionsAllowedServicesToHclTerraform, true)(struct!.allowedServices),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IamWorkforcePoolAccessRestrictionsAllowedServicesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IamWorkforcePoolAccessRestrictionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -303,6 +347,37 @@ export function iamWorkforcePoolTimeoutsToTerraform(struct?: IamWorkforcePoolTim
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function iamWorkforcePoolTimeoutsToHclTerraform(struct?: IamWorkforcePoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IamWorkforcePoolTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -653,5 +728,73 @@ export class IamWorkforcePool extends cdktf.TerraformResource {
       access_restrictions: iamWorkforcePoolAccessRestrictionsToTerraform(this._accessRestrictions.internalValue),
       timeouts: iamWorkforcePoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent: {
+        value: cdktf.stringToHclTerraform(this._parent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      session_duration: {
+        value: cdktf.stringToHclTerraform(this._sessionDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workforce_pool_id: {
+        value: cdktf.stringToHclTerraform(this._workforcePoolId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      access_restrictions: {
+        value: iamWorkforcePoolAccessRestrictionsToHclTerraform(this._accessRestrictions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IamWorkforcePoolAccessRestrictionsList",
+      },
+      timeouts: {
+        value: iamWorkforcePoolTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "IamWorkforcePoolTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

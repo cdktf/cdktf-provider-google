@@ -111,6 +111,31 @@ export function computeNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeN
   }
 }
 
+
+export function computeNetworkEndpointGroupTimeoutsToHclTerraform(struct?: ComputeNetworkEndpointGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeNetworkEndpointGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -440,5 +465,73 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
       zone: cdktf.stringToTerraform(this._zone),
       timeouts: computeNetworkEndpointGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      default_port: {
+        value: cdktf.numberToHclTerraform(this._defaultPort),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_endpoint_type: {
+        value: cdktf.stringToHclTerraform(this._networkEndpointType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subnetwork: {
+        value: cdktf.stringToHclTerraform(this._subnetwork),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: computeNetworkEndpointGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeNetworkEndpointGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

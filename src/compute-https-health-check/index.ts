@@ -127,6 +127,37 @@ export function computeHttpsHealthCheckTimeoutsToTerraform(struct?: ComputeHttps
   }
 }
 
+
+export function computeHttpsHealthCheckTimeoutsToHclTerraform(struct?: ComputeHttpsHealthCheckTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeHttpsHealthCheckTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -517,5 +548,85 @@ export class ComputeHttpsHealthCheck extends cdktf.TerraformResource {
       unhealthy_threshold: cdktf.numberToTerraform(this._unhealthyThreshold),
       timeouts: computeHttpsHealthCheckTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      check_interval_sec: {
+        value: cdktf.numberToHclTerraform(this._checkIntervalSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      healthy_threshold: {
+        value: cdktf.numberToHclTerraform(this._healthyThreshold),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      host: {
+        value: cdktf.stringToHclTerraform(this._host),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      port: {
+        value: cdktf.numberToHclTerraform(this._port),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      request_path: {
+        value: cdktf.stringToHclTerraform(this._requestPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeout_sec: {
+        value: cdktf.numberToHclTerraform(this._timeoutSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      unhealthy_threshold: {
+        value: cdktf.numberToHclTerraform(this._unhealthyThreshold),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      timeouts: {
+        value: computeHttpsHealthCheckTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeHttpsHealthCheckTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

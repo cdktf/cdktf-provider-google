@@ -196,4 +196,42 @@ export class DataGoogleDataplexTaskIamPolicy extends cdktf.TerraformDataSource {
       task_id: cdktf.stringToTerraform(this._taskId),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lake: {
+        value: cdktf.stringToHclTerraform(this._lake),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      task_id: {
+        value: cdktf.stringToHclTerraform(this._taskId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

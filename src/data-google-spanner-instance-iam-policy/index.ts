@@ -155,4 +155,30 @@ export class DataGoogleSpannerInstanceIamPolicy extends cdktf.TerraformDataSourc
       project: cdktf.stringToTerraform(this._project),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance: {
+        value: cdktf.stringToHclTerraform(this._instance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

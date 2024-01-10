@@ -166,4 +166,36 @@ export class ApigeeEnvironmentIamPolicy extends cdktf.TerraformResource {
       policy_data: cdktf.stringToTerraform(this._policyData),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      env_id: {
+        value: cdktf.stringToHclTerraform(this._envId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_id: {
+        value: cdktf.stringToHclTerraform(this._orgId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_data: {
+        value: cdktf.stringToHclTerraform(this._policyData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

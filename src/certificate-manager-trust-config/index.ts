@@ -90,6 +90,37 @@ export function certificateManagerTrustConfigTimeoutsToTerraform(struct?: Certif
   }
 }
 
+
+export function certificateManagerTrustConfigTimeoutsToHclTerraform(struct?: CertificateManagerTrustConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CertificateManagerTrustConfigTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -212,6 +243,25 @@ export function certificateManagerTrustConfigTrustStoresIntermediateCasToTerrafo
   }
 }
 
+
+export function certificateManagerTrustConfigTrustStoresIntermediateCasToHclTerraform(struct?: CertificateManagerTrustConfigTrustStoresIntermediateCas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pem_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.pemCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CertificateManagerTrustConfigTrustStoresIntermediateCasOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -310,6 +360,25 @@ export function certificateManagerTrustConfigTrustStoresTrustAnchorsToTerraform(
   return {
     pem_certificate: cdktf.stringToTerraform(struct!.pemCertificate),
   }
+}
+
+
+export function certificateManagerTrustConfigTrustStoresTrustAnchorsToHclTerraform(struct?: CertificateManagerTrustConfigTrustStoresTrustAnchors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pem_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.pemCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CertificateManagerTrustConfigTrustStoresTrustAnchorsOutputReference extends cdktf.ComplexObject {
@@ -416,6 +485,31 @@ export function certificateManagerTrustConfigTrustStoresToTerraform(struct?: Cer
     intermediate_cas: cdktf.listMapper(certificateManagerTrustConfigTrustStoresIntermediateCasToTerraform, true)(struct!.intermediateCas),
     trust_anchors: cdktf.listMapper(certificateManagerTrustConfigTrustStoresTrustAnchorsToTerraform, true)(struct!.trustAnchors),
   }
+}
+
+
+export function certificateManagerTrustConfigTrustStoresToHclTerraform(struct?: CertificateManagerTrustConfigTrustStores | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    intermediate_cas: {
+      value: cdktf.listMapperHcl(certificateManagerTrustConfigTrustStoresIntermediateCasToHclTerraform, true)(struct!.intermediateCas),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CertificateManagerTrustConfigTrustStoresIntermediateCasList",
+    },
+    trust_anchors: {
+      value: cdktf.listMapperHcl(certificateManagerTrustConfigTrustStoresTrustAnchorsToHclTerraform, true)(struct!.trustAnchors),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CertificateManagerTrustConfigTrustStoresTrustAnchorsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CertificateManagerTrustConfigTrustStoresOutputReference extends cdktf.ComplexObject {
@@ -745,5 +839,61 @@ export class CertificateManagerTrustConfig extends cdktf.TerraformResource {
       timeouts: certificateManagerTrustConfigTimeoutsToTerraform(this._timeouts.internalValue),
       trust_stores: cdktf.listMapper(certificateManagerTrustConfigTrustStoresToTerraform, true)(this._trustStores.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: certificateManagerTrustConfigTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CertificateManagerTrustConfigTimeouts",
+      },
+      trust_stores: {
+        value: cdktf.listMapperHcl(certificateManagerTrustConfigTrustStoresToHclTerraform, true)(this._trustStores.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CertificateManagerTrustConfigTrustStoresList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

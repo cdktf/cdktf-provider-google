@@ -195,6 +195,43 @@ export function appEngineStandardAppVersionAutomaticScalingStandardSchedulerSett
   }
 }
 
+
+export function appEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsToHclTerraform(struct?: AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsOutputReference | AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_instances: {
+      value: cdktf.numberToHclTerraform(struct!.maxInstances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_instances: {
+      value: cdktf.numberToHclTerraform(struct!.minInstances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    target_cpu_utilization: {
+      value: cdktf.numberToHclTerraform(struct!.targetCpuUtilization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    target_throughput_utilization: {
+      value: cdktf.numberToHclTerraform(struct!.targetThroughputUtilization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -365,6 +402,55 @@ export function appEngineStandardAppVersionAutomaticScalingToTerraform(struct?: 
     min_pending_latency: cdktf.stringToTerraform(struct!.minPendingLatency),
     standard_scheduler_settings: appEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsToTerraform(struct!.standardSchedulerSettings),
   }
+}
+
+
+export function appEngineStandardAppVersionAutomaticScalingToHclTerraform(struct?: AppEngineStandardAppVersionAutomaticScalingOutputReference | AppEngineStandardAppVersionAutomaticScaling): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_concurrent_requests: {
+      value: cdktf.numberToHclTerraform(struct!.maxConcurrentRequests),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_idle_instances: {
+      value: cdktf.numberToHclTerraform(struct!.maxIdleInstances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_pending_latency: {
+      value: cdktf.stringToHclTerraform(struct!.maxPendingLatency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    min_idle_instances: {
+      value: cdktf.numberToHclTerraform(struct!.minIdleInstances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_pending_latency: {
+      value: cdktf.stringToHclTerraform(struct!.minPendingLatency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    standard_scheduler_settings: {
+      value: appEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsToHclTerraform(struct!.standardSchedulerSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends cdktf.ComplexObject {
@@ -552,6 +638,31 @@ export function appEngineStandardAppVersionBasicScalingToTerraform(struct?: AppE
   }
 }
 
+
+export function appEngineStandardAppVersionBasicScalingToHclTerraform(struct?: AppEngineStandardAppVersionBasicScalingOutputReference | AppEngineStandardAppVersionBasicScaling): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    idle_timeout: {
+      value: cdktf.stringToHclTerraform(struct!.idleTimeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_instances: {
+      value: cdktf.numberToHclTerraform(struct!.maxInstances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionBasicScalingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -648,6 +759,37 @@ export function appEngineStandardAppVersionDeploymentFilesToTerraform(struct?: A
     sha1_sum: cdktf.stringToTerraform(struct!.sha1Sum),
     source_url: cdktf.stringToTerraform(struct!.sourceUrl),
   }
+}
+
+
+export function appEngineStandardAppVersionDeploymentFilesToHclTerraform(struct?: AppEngineStandardAppVersionDeploymentFiles | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sha1_sum: {
+      value: cdktf.stringToHclTerraform(struct!.sha1Sum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_url: {
+      value: cdktf.stringToHclTerraform(struct!.sourceUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineStandardAppVersionDeploymentFilesOutputReference extends cdktf.ComplexObject {
@@ -794,6 +936,31 @@ export function appEngineStandardAppVersionDeploymentZipToTerraform(struct?: App
   }
 }
 
+
+export function appEngineStandardAppVersionDeploymentZipToHclTerraform(struct?: AppEngineStandardAppVersionDeploymentZipOutputReference | AppEngineStandardAppVersionDeploymentZip): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    files_count: {
+      value: cdktf.numberToHclTerraform(struct!.filesCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    source_url: {
+      value: cdktf.stringToHclTerraform(struct!.sourceUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionDeploymentZipOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -887,6 +1054,31 @@ export function appEngineStandardAppVersionDeploymentToTerraform(struct?: AppEng
   }
 }
 
+
+export function appEngineStandardAppVersionDeploymentToHclTerraform(struct?: AppEngineStandardAppVersionDeploymentOutputReference | AppEngineStandardAppVersionDeployment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    files: {
+      value: cdktf.listMapperHcl(appEngineStandardAppVersionDeploymentFilesToHclTerraform, true)(struct!.files),
+      isBlock: true,
+      type: "set",
+      storageClassType: "AppEngineStandardAppVersionDeploymentFilesList",
+    },
+    zip: {
+      value: appEngineStandardAppVersionDeploymentZipToHclTerraform(struct!.zip),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AppEngineStandardAppVersionDeploymentZipList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionDeploymentOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -976,6 +1168,25 @@ export function appEngineStandardAppVersionEntrypointToTerraform(struct?: AppEng
   }
 }
 
+
+export function appEngineStandardAppVersionEntrypointToHclTerraform(struct?: AppEngineStandardAppVersionEntrypointOutputReference | AppEngineStandardAppVersionEntrypoint): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    shell: {
+      value: cdktf.stringToHclTerraform(struct!.shell),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionEntrypointOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1038,6 +1249,25 @@ export function appEngineStandardAppVersionHandlersScriptToTerraform(struct?: Ap
   return {
     script_path: cdktf.stringToTerraform(struct!.scriptPath),
   }
+}
+
+
+export function appEngineStandardAppVersionHandlersScriptToHclTerraform(struct?: AppEngineStandardAppVersionHandlersScriptOutputReference | AppEngineStandardAppVersionHandlersScript): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    script_path: {
+      value: cdktf.stringToHclTerraform(struct!.scriptPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineStandardAppVersionHandlersScriptOutputReference extends cdktf.ComplexObject {
@@ -1149,6 +1379,61 @@ export function appEngineStandardAppVersionHandlersStaticFilesToTerraform(struct
     require_matching_file: cdktf.booleanToTerraform(struct!.requireMatchingFile),
     upload_path_regex: cdktf.stringToTerraform(struct!.uploadPathRegex),
   }
+}
+
+
+export function appEngineStandardAppVersionHandlersStaticFilesToHclTerraform(struct?: AppEngineStandardAppVersionHandlersStaticFilesOutputReference | AppEngineStandardAppVersionHandlersStaticFiles): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    application_readable: {
+      value: cdktf.booleanToHclTerraform(struct!.applicationReadable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    expiration: {
+      value: cdktf.stringToHclTerraform(struct!.expiration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    http_headers: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.httpHeaders),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    mime_type: {
+      value: cdktf.stringToHclTerraform(struct!.mimeType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    require_matching_file: {
+      value: cdktf.booleanToHclTerraform(struct!.requireMatchingFile),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    upload_path_regex: {
+      value: cdktf.stringToHclTerraform(struct!.uploadPathRegex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineStandardAppVersionHandlersStaticFilesOutputReference extends cdktf.ComplexObject {
@@ -1393,6 +1678,61 @@ export function appEngineStandardAppVersionHandlersToTerraform(struct?: AppEngin
   }
 }
 
+
+export function appEngineStandardAppVersionHandlersToHclTerraform(struct?: AppEngineStandardAppVersionHandlers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    auth_fail_action: {
+      value: cdktf.stringToHclTerraform(struct!.authFailAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    login: {
+      value: cdktf.stringToHclTerraform(struct!.login),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    redirect_http_response_code: {
+      value: cdktf.stringToHclTerraform(struct!.redirectHttpResponseCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    security_level: {
+      value: cdktf.stringToHclTerraform(struct!.securityLevel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url_regex: {
+      value: cdktf.stringToHclTerraform(struct!.urlRegex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    script: {
+      value: appEngineStandardAppVersionHandlersScriptToHclTerraform(struct!.script),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AppEngineStandardAppVersionHandlersScriptList",
+    },
+    static_files: {
+      value: appEngineStandardAppVersionHandlersStaticFilesToHclTerraform(struct!.staticFiles),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AppEngineStandardAppVersionHandlersStaticFilesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionHandlersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1631,6 +1971,31 @@ export function appEngineStandardAppVersionLibrariesToTerraform(struct?: AppEngi
   }
 }
 
+
+export function appEngineStandardAppVersionLibrariesToHclTerraform(struct?: AppEngineStandardAppVersionLibraries | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionLibrariesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1755,6 +2120,25 @@ export function appEngineStandardAppVersionManualScalingToTerraform(struct?: App
   }
 }
 
+
+export function appEngineStandardAppVersionManualScalingToHclTerraform(struct?: AppEngineStandardAppVersionManualScalingOutputReference | AppEngineStandardAppVersionManualScaling): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    instances: {
+      value: cdktf.numberToHclTerraform(struct!.instances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineStandardAppVersionManualScalingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1825,6 +2209,37 @@ export function appEngineStandardAppVersionTimeoutsToTerraform(struct?: AppEngin
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function appEngineStandardAppVersionTimeoutsToHclTerraform(struct?: AppEngineStandardAppVersionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineStandardAppVersionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1953,6 +2368,31 @@ export function appEngineStandardAppVersionVpcAccessConnectorToTerraform(struct?
     egress_setting: cdktf.stringToTerraform(struct!.egressSetting),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function appEngineStandardAppVersionVpcAccessConnectorToHclTerraform(struct?: AppEngineStandardAppVersionVpcAccessConnectorOutputReference | AppEngineStandardAppVersionVpcAccessConnector): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    egress_setting: {
+      value: cdktf.stringToHclTerraform(struct!.egressSetting),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineStandardAppVersionVpcAccessConnectorOutputReference extends cdktf.ComplexObject {
@@ -2494,5 +2934,151 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       timeouts: appEngineStandardAppVersionTimeoutsToTerraform(this._timeouts.internalValue),
       vpc_access_connector: appEngineStandardAppVersionVpcAccessConnectorToTerraform(this._vpcAccessConnector.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app_engine_apis: {
+        value: cdktf.booleanToHclTerraform(this._appEngineApis),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      delete_service_on_destroy: {
+        value: cdktf.booleanToHclTerraform(this._deleteServiceOnDestroy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      env_variables: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._envVariables),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      inbound_services: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._inboundServices),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      instance_class: {
+        value: cdktf.stringToHclTerraform(this._instanceClass),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      noop_on_destroy: {
+        value: cdktf.booleanToHclTerraform(this._noopOnDestroy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      runtime: {
+        value: cdktf.stringToHclTerraform(this._runtime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      runtime_api_version: {
+        value: cdktf.stringToHclTerraform(this._runtimeApiVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service: {
+        value: cdktf.stringToHclTerraform(this._service),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_account: {
+        value: cdktf.stringToHclTerraform(this._serviceAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      threadsafe: {
+        value: cdktf.booleanToHclTerraform(this._threadsafe),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      version_id: {
+        value: cdktf.stringToHclTerraform(this._versionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      automatic_scaling: {
+        value: appEngineStandardAppVersionAutomaticScalingToHclTerraform(this._automaticScaling.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionAutomaticScalingList",
+      },
+      basic_scaling: {
+        value: appEngineStandardAppVersionBasicScalingToHclTerraform(this._basicScaling.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionBasicScalingList",
+      },
+      deployment: {
+        value: appEngineStandardAppVersionDeploymentToHclTerraform(this._deployment.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionDeploymentList",
+      },
+      entrypoint: {
+        value: appEngineStandardAppVersionEntrypointToHclTerraform(this._entrypoint.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionEntrypointList",
+      },
+      handlers: {
+        value: cdktf.listMapperHcl(appEngineStandardAppVersionHandlersToHclTerraform, true)(this._handlers.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionHandlersList",
+      },
+      libraries: {
+        value: cdktf.listMapperHcl(appEngineStandardAppVersionLibrariesToHclTerraform, true)(this._libraries.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionLibrariesList",
+      },
+      manual_scaling: {
+        value: appEngineStandardAppVersionManualScalingToHclTerraform(this._manualScaling.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionManualScalingList",
+      },
+      timeouts: {
+        value: appEngineStandardAppVersionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppEngineStandardAppVersionTimeouts",
+      },
+      vpc_access_connector: {
+        value: appEngineStandardAppVersionVpcAccessConnectorToHclTerraform(this._vpcAccessConnector.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineStandardAppVersionVpcAccessConnectorList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

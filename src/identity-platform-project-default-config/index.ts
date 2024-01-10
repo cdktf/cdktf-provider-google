@@ -48,6 +48,17 @@ export function identityPlatformProjectDefaultConfigSignInHashConfigToTerraform(
   }
 }
 
+
+export function identityPlatformProjectDefaultConfigSignInHashConfigToHclTerraform(struct?: IdentityPlatformProjectDefaultConfigSignInHashConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class IdentityPlatformProjectDefaultConfigSignInHashConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -139,6 +150,25 @@ export function identityPlatformProjectDefaultConfigSignInAnonymousToTerraform(s
   }
 }
 
+
+export function identityPlatformProjectDefaultConfigSignInAnonymousToHclTerraform(struct?: IdentityPlatformProjectDefaultConfigSignInAnonymousOutputReference | IdentityPlatformProjectDefaultConfigSignInAnonymous): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IdentityPlatformProjectDefaultConfigSignInAnonymousOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -210,6 +240,31 @@ export function identityPlatformProjectDefaultConfigSignInEmailToTerraform(struc
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     password_required: cdktf.booleanToTerraform(struct!.passwordRequired),
   }
+}
+
+
+export function identityPlatformProjectDefaultConfigSignInEmailToHclTerraform(struct?: IdentityPlatformProjectDefaultConfigSignInEmailOutputReference | IdentityPlatformProjectDefaultConfigSignInEmail): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    password_required: {
+      value: cdktf.booleanToHclTerraform(struct!.passwordRequired),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IdentityPlatformProjectDefaultConfigSignInEmailOutputReference extends cdktf.ComplexObject {
@@ -306,6 +361,31 @@ export function identityPlatformProjectDefaultConfigSignInPhoneNumberToTerraform
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     test_phone_numbers: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.testPhoneNumbers),
   }
+}
+
+
+export function identityPlatformProjectDefaultConfigSignInPhoneNumberToHclTerraform(struct?: IdentityPlatformProjectDefaultConfigSignInPhoneNumberOutputReference | IdentityPlatformProjectDefaultConfigSignInPhoneNumber): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    test_phone_numbers: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.testPhoneNumbers),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IdentityPlatformProjectDefaultConfigSignInPhoneNumberOutputReference extends cdktf.ComplexObject {
@@ -416,6 +496,43 @@ export function identityPlatformProjectDefaultConfigSignInToTerraform(struct?: I
     email: identityPlatformProjectDefaultConfigSignInEmailToTerraform(struct!.email),
     phone_number: identityPlatformProjectDefaultConfigSignInPhoneNumberToTerraform(struct!.phoneNumber),
   }
+}
+
+
+export function identityPlatformProjectDefaultConfigSignInToHclTerraform(struct?: IdentityPlatformProjectDefaultConfigSignInOutputReference | IdentityPlatformProjectDefaultConfigSignIn): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allow_duplicate_emails: {
+      value: cdktf.booleanToHclTerraform(struct!.allowDuplicateEmails),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    anonymous: {
+      value: identityPlatformProjectDefaultConfigSignInAnonymousToHclTerraform(struct!.anonymous),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IdentityPlatformProjectDefaultConfigSignInAnonymousList",
+    },
+    email: {
+      value: identityPlatformProjectDefaultConfigSignInEmailToHclTerraform(struct!.email),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IdentityPlatformProjectDefaultConfigSignInEmailList",
+    },
+    phone_number: {
+      value: identityPlatformProjectDefaultConfigSignInPhoneNumberToHclTerraform(struct!.phoneNumber),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IdentityPlatformProjectDefaultConfigSignInPhoneNumberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IdentityPlatformProjectDefaultConfigSignInOutputReference extends cdktf.ComplexObject {
@@ -563,6 +680,37 @@ export function identityPlatformProjectDefaultConfigTimeoutsToTerraform(struct?:
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function identityPlatformProjectDefaultConfigTimeoutsToHclTerraform(struct?: IdentityPlatformProjectDefaultConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IdentityPlatformProjectDefaultConfigTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -809,5 +957,37 @@ export class IdentityPlatformProjectDefaultConfig extends cdktf.TerraformResourc
       sign_in: identityPlatformProjectDefaultConfigSignInToTerraform(this._signIn.internalValue),
       timeouts: identityPlatformProjectDefaultConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sign_in: {
+        value: identityPlatformProjectDefaultConfigSignInToHclTerraform(this._signIn.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IdentityPlatformProjectDefaultConfigSignInList",
+      },
+      timeouts: {
+        value: identityPlatformProjectDefaultConfigTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "IdentityPlatformProjectDefaultConfigTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

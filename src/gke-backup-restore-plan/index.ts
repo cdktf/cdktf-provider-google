@@ -108,6 +108,31 @@ export function gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExcl
   }
 }
 
+
+export function gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExcludedGroupKindsToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExcludedGroupKinds | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    resource_group: {
+      value: cdktf.stringToHclTerraform(struct!.resourceGroup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_kind: {
+      value: cdktf.stringToHclTerraform(struct!.resourceKind),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExcludedGroupKindsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -237,6 +262,31 @@ export function gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSele
     resource_group: cdktf.stringToTerraform(struct!.resourceGroup),
     resource_kind: cdktf.stringToTerraform(struct!.resourceKind),
   }
+}
+
+
+export function gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSelectedGroupKindsToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSelectedGroupKinds | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    resource_group: {
+      value: cdktf.stringToHclTerraform(struct!.resourceGroup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_kind: {
+      value: cdktf.stringToHclTerraform(struct!.resourceKind),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSelectedGroupKindsOutputReference extends cdktf.ComplexObject {
@@ -383,6 +433,43 @@ export function gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeToTe
   }
 }
 
+
+export function gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeOutputReference | GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScope): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    all_group_kinds: {
+      value: cdktf.booleanToHclTerraform(struct!.allGroupKinds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    no_group_kinds: {
+      value: cdktf.booleanToHclTerraform(struct!.noGroupKinds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    excluded_group_kinds: {
+      value: cdktf.listMapperHcl(gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExcludedGroupKindsToHclTerraform, true)(struct!.excludedGroupKinds),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeExcludedGroupKindsList",
+    },
+    selected_group_kinds: {
+      value: cdktf.listMapperHcl(gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSelectedGroupKindsToHclTerraform, true)(struct!.selectedGroupKinds),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeSelectedGroupKindsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -516,6 +603,25 @@ export function gkeBackupRestorePlanRestoreConfigExcludedNamespacesToTerraform(s
   }
 }
 
+
+export function gkeBackupRestorePlanRestoreConfigExcludedNamespacesToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigExcludedNamespacesOutputReference | GkeBackupRestorePlanRestoreConfigExcludedNamespaces): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    namespaces: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.namespaces),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GkeBackupRestorePlanRestoreConfigExcludedNamespacesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -585,6 +691,31 @@ export function gkeBackupRestorePlanRestoreConfigSelectedApplicationsNamespacedN
     name: cdktf.stringToTerraform(struct!.name),
     namespace: cdktf.stringToTerraform(struct!.namespace),
   }
+}
+
+
+export function gkeBackupRestorePlanRestoreConfigSelectedApplicationsNamespacedNamesToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigSelectedApplicationsNamespacedNames | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    namespace: {
+      value: cdktf.stringToHclTerraform(struct!.namespace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeBackupRestorePlanRestoreConfigSelectedApplicationsNamespacedNamesOutputReference extends cdktf.ComplexObject {
@@ -702,6 +833,25 @@ export function gkeBackupRestorePlanRestoreConfigSelectedApplicationsToTerraform
   }
 }
 
+
+export function gkeBackupRestorePlanRestoreConfigSelectedApplicationsToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigSelectedApplicationsOutputReference | GkeBackupRestorePlanRestoreConfigSelectedApplications): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    namespaced_names: {
+      value: cdktf.listMapperHcl(gkeBackupRestorePlanRestoreConfigSelectedApplicationsNamespacedNamesToHclTerraform, true)(struct!.namespacedNames),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigSelectedApplicationsNamespacedNamesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GkeBackupRestorePlanRestoreConfigSelectedApplicationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -764,6 +914,25 @@ export function gkeBackupRestorePlanRestoreConfigSelectedNamespacesToTerraform(s
   return {
     namespaces: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.namespaces),
   }
+}
+
+
+export function gkeBackupRestorePlanRestoreConfigSelectedNamespacesToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigSelectedNamespacesOutputReference | GkeBackupRestorePlanRestoreConfigSelectedNamespaces): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    namespaces: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.namespaces),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeBackupRestorePlanRestoreConfigSelectedNamespacesOutputReference extends cdktf.ComplexObject {
@@ -852,6 +1021,43 @@ export function gkeBackupRestorePlanRestoreConfigTransformationRulesFieldActions
     path: cdktf.stringToTerraform(struct!.path),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function gkeBackupRestorePlanRestoreConfigTransformationRulesFieldActionsToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigTransformationRulesFieldActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    from_path: {
+      value: cdktf.stringToHclTerraform(struct!.fromPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    op: {
+      value: cdktf.stringToHclTerraform(struct!.op),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeBackupRestorePlanRestoreConfigTransformationRulesFieldActionsOutputReference extends cdktf.ComplexObject {
@@ -1026,6 +1232,31 @@ export function gkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilt
   }
 }
 
+
+export function gkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterGroupKindsToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterGroupKinds | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    resource_group: {
+      value: cdktf.stringToHclTerraform(struct!.resourceGroup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_kind: {
+      value: cdktf.stringToHclTerraform(struct!.resourceKind),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterGroupKindsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1170,6 +1401,37 @@ export function gkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilt
   }
 }
 
+
+export function gkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterOutputReference | GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    json_path: {
+      value: cdktf.stringToHclTerraform(struct!.jsonPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    namespaces: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.namespaces),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    group_kinds: {
+      value: cdktf.listMapperHcl(gkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterGroupKindsToHclTerraform, true)(struct!.groupKinds),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterGroupKindsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1294,6 +1556,37 @@ export function gkeBackupRestorePlanRestoreConfigTransformationRulesToTerraform(
     field_actions: cdktf.listMapper(gkeBackupRestorePlanRestoreConfigTransformationRulesFieldActionsToTerraform, true)(struct!.fieldActions),
     resource_filter: gkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterToTerraform(struct!.resourceFilter),
   }
+}
+
+
+export function gkeBackupRestorePlanRestoreConfigTransformationRulesToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigTransformationRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    field_actions: {
+      value: cdktf.listMapperHcl(gkeBackupRestorePlanRestoreConfigTransformationRulesFieldActionsToHclTerraform, true)(struct!.fieldActions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigTransformationRulesFieldActionsList",
+    },
+    resource_filter: {
+      value: gkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterToHclTerraform(struct!.resourceFilter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigTransformationRulesResourceFilterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeBackupRestorePlanRestoreConfigTransformationRulesOutputReference extends cdktf.ComplexObject {
@@ -1514,6 +1807,79 @@ export function gkeBackupRestorePlanRestoreConfigToTerraform(struct?: GkeBackupR
     selected_namespaces: gkeBackupRestorePlanRestoreConfigSelectedNamespacesToTerraform(struct!.selectedNamespaces),
     transformation_rules: cdktf.listMapper(gkeBackupRestorePlanRestoreConfigTransformationRulesToTerraform, true)(struct!.transformationRules),
   }
+}
+
+
+export function gkeBackupRestorePlanRestoreConfigToHclTerraform(struct?: GkeBackupRestorePlanRestoreConfigOutputReference | GkeBackupRestorePlanRestoreConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    all_namespaces: {
+      value: cdktf.booleanToHclTerraform(struct!.allNamespaces),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    cluster_resource_conflict_policy: {
+      value: cdktf.stringToHclTerraform(struct!.clusterResourceConflictPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    namespaced_resource_restore_mode: {
+      value: cdktf.stringToHclTerraform(struct!.namespacedResourceRestoreMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    no_namespaces: {
+      value: cdktf.booleanToHclTerraform(struct!.noNamespaces),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    volume_data_restore_policy: {
+      value: cdktf.stringToHclTerraform(struct!.volumeDataRestorePolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cluster_resource_restore_scope: {
+      value: gkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeToHclTerraform(struct!.clusterResourceRestoreScope),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigClusterResourceRestoreScopeList",
+    },
+    excluded_namespaces: {
+      value: gkeBackupRestorePlanRestoreConfigExcludedNamespacesToHclTerraform(struct!.excludedNamespaces),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigExcludedNamespacesList",
+    },
+    selected_applications: {
+      value: gkeBackupRestorePlanRestoreConfigSelectedApplicationsToHclTerraform(struct!.selectedApplications),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigSelectedApplicationsList",
+    },
+    selected_namespaces: {
+      value: gkeBackupRestorePlanRestoreConfigSelectedNamespacesToHclTerraform(struct!.selectedNamespaces),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigSelectedNamespacesList",
+    },
+    transformation_rules: {
+      value: cdktf.listMapperHcl(gkeBackupRestorePlanRestoreConfigTransformationRulesToHclTerraform, true)(struct!.transformationRules),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupRestorePlanRestoreConfigTransformationRulesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeBackupRestorePlanRestoreConfigOutputReference extends cdktf.ComplexObject {
@@ -1787,6 +2153,37 @@ export function gkeBackupRestorePlanTimeoutsToTerraform(struct?: GkeBackupRestor
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function gkeBackupRestorePlanTimeoutsToHclTerraform(struct?: GkeBackupRestorePlanTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeBackupRestorePlanTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2148,5 +2545,73 @@ export class GkeBackupRestorePlan extends cdktf.TerraformResource {
       restore_config: gkeBackupRestorePlanRestoreConfigToTerraform(this._restoreConfig.internalValue),
       timeouts: gkeBackupRestorePlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      backup_plan: {
+        value: cdktf.stringToHclTerraform(this._backupPlan),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cluster: {
+        value: cdktf.stringToHclTerraform(this._cluster),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restore_config: {
+        value: gkeBackupRestorePlanRestoreConfigToHclTerraform(this._restoreConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "GkeBackupRestorePlanRestoreConfigList",
+      },
+      timeouts: {
+        value: gkeBackupRestorePlanTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "GkeBackupRestorePlanTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

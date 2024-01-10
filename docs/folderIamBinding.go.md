@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 folderiambinding.NewFolderIamBinding(scope Construct, id *string, config FolderIamBindingConfig) FolderIamBinding
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.folderIamBinding.FolderIamBinding.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 folderiambinding.FolderIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 folderiambinding.FolderIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ folderiambinding.FolderIamBinding_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 folderiambinding.FolderIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ folderiambinding.FolderIamBinding_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 folderiambinding.FolderIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -808,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 &folderiambinding.FolderIamBindingCondition {
 	Expression: *string,
@@ -868,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 &folderiambinding.FolderIamBindingConfig {
 	Connection: interface{},
@@ -881,7 +888,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
 	Folder: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.folderIamBinding.FolderIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.folderIamBinding.FolderIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -1047,7 +1054,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamBinding.FolderIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiambinding"
 
 folderiambinding.NewFolderIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderIamBindingConditionOutputReference
 ```

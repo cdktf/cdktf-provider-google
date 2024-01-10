@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.NewArtifactRegistryRepositoryIamMember(scope Construct, id *string, config ArtifactRegistryRepositoryIamMemberConfig) ArtifactRegistryRepositoryIamMember
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -866,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 &artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMemberCondition {
 	Expression: *string,
@@ -926,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 &artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMemberConfig {
 	Connection: interface{},
@@ -939,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrep
 	Member: *string,
 	Repository: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1133,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.NewArtifactRegistryRepositoryIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArtifactRegistryRepositoryIamMemberConditionOutputReference
 ```

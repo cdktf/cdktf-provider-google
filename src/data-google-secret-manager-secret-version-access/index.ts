@@ -177,4 +177,36 @@ export class DataGoogleSecretManagerSecretVersionAccess extends cdktf.TerraformD
       version: cdktf.stringToTerraform(this._version),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secret: {
+        value: cdktf.stringToHclTerraform(this._secret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

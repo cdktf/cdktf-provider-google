@@ -104,6 +104,25 @@ export function computeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToTerraf
   }
 }
 
+
+export function computeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToHclTerraform(struct?: ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    header_name: {
+      value: cdktf.stringToHclTerraform(struct!.headerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -213,6 +232,31 @@ export function computeBackendBucketCdnPolicyCacheKeyPolicyToTerraform(struct?: 
   }
 }
 
+
+export function computeBackendBucketCdnPolicyCacheKeyPolicyToHclTerraform(struct?: ComputeBackendBucketCdnPolicyCacheKeyPolicyOutputReference | ComputeBackendBucketCdnPolicyCacheKeyPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    include_http_headers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includeHttpHeaders),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    query_string_whitelist: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.queryStringWhitelist),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeBackendBucketCdnPolicyCacheKeyPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -309,6 +353,31 @@ export function computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform(st
     code: cdktf.numberToTerraform(struct!.code),
     ttl: cdktf.numberToTerraform(struct!.ttl),
   }
+}
+
+
+export function computeBackendBucketCdnPolicyNegativeCachingPolicyToHclTerraform(struct?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    code: {
+      value: cdktf.numberToHclTerraform(struct!.code),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ttl: {
+      value: cdktf.numberToHclTerraform(struct!.ttl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeBackendBucketCdnPolicyNegativeCachingPolicyOutputReference extends cdktf.ComplexObject {
@@ -509,6 +578,85 @@ export function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackend
     cache_key_policy: computeBackendBucketCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
     negative_caching_policy: cdktf.listMapper(computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform, true)(struct!.negativeCachingPolicy),
   }
+}
+
+
+export function computeBackendBucketCdnPolicyToHclTerraform(struct?: ComputeBackendBucketCdnPolicyOutputReference | ComputeBackendBucketCdnPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cache_mode: {
+      value: cdktf.stringToHclTerraform(struct!.cacheMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_ttl: {
+      value: cdktf.numberToHclTerraform(struct!.clientTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    default_ttl: {
+      value: cdktf.numberToHclTerraform(struct!.defaultTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_ttl: {
+      value: cdktf.numberToHclTerraform(struct!.maxTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    negative_caching: {
+      value: cdktf.booleanToHclTerraform(struct!.negativeCaching),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    request_coalescing: {
+      value: cdktf.booleanToHclTerraform(struct!.requestCoalescing),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    serve_while_stale: {
+      value: cdktf.numberToHclTerraform(struct!.serveWhileStale),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    signed_url_cache_max_age_sec: {
+      value: cdktf.numberToHclTerraform(struct!.signedUrlCacheMaxAgeSec),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    bypass_cache_on_request_headers: {
+      value: cdktf.listMapperHcl(computeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToHclTerraform, true)(struct!.bypassCacheOnRequestHeaders),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersList",
+    },
+    cache_key_policy: {
+      value: computeBackendBucketCdnPolicyCacheKeyPolicyToHclTerraform(struct!.cacheKeyPolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeBackendBucketCdnPolicyCacheKeyPolicyList",
+    },
+    negative_caching_policy: {
+      value: cdktf.listMapperHcl(computeBackendBucketCdnPolicyNegativeCachingPolicyToHclTerraform, true)(struct!.negativeCachingPolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeBackendBucketCdnPolicyNegativeCachingPolicyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexObject {
@@ -804,6 +952,37 @@ export function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendB
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeBackendBucketTimeoutsToHclTerraform(struct?: ComputeBackendBucketTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeBackendBucketTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1175,5 +1354,79 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       cdn_policy: computeBackendBucketCdnPolicyToTerraform(this._cdnPolicy.internalValue),
       timeouts: computeBackendBucketTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket_name: {
+        value: cdktf.stringToHclTerraform(this._bucketName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compression_mode: {
+        value: cdktf.stringToHclTerraform(this._compressionMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_response_headers: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._customResponseHeaders),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      edge_security_policy: {
+        value: cdktf.stringToHclTerraform(this._edgeSecurityPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_cdn: {
+        value: cdktf.booleanToHclTerraform(this._enableCdn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cdn_policy: {
+        value: computeBackendBucketCdnPolicyToHclTerraform(this._cdnPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeBackendBucketCdnPolicyList",
+      },
+      timeouts: {
+        value: computeBackendBucketTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeBackendBucketTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

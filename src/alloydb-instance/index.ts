@@ -141,6 +141,25 @@ export function alloydbInstanceClientConnectionConfigSslConfigToTerraform(struct
   }
 }
 
+
+export function alloydbInstanceClientConnectionConfigSslConfigToHclTerraform(struct?: AlloydbInstanceClientConnectionConfigSslConfigOutputReference | AlloydbInstanceClientConnectionConfigSslConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ssl_mode: {
+      value: cdktf.stringToHclTerraform(struct!.sslMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbInstanceClientConnectionConfigSslConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -213,6 +232,31 @@ export function alloydbInstanceClientConnectionConfigToTerraform(struct?: Alloyd
     require_connectors: cdktf.booleanToTerraform(struct!.requireConnectors),
     ssl_config: alloydbInstanceClientConnectionConfigSslConfigToTerraform(struct!.sslConfig),
   }
+}
+
+
+export function alloydbInstanceClientConnectionConfigToHclTerraform(struct?: AlloydbInstanceClientConnectionConfigOutputReference | AlloydbInstanceClientConnectionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    require_connectors: {
+      value: cdktf.booleanToHclTerraform(struct!.requireConnectors),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_config: {
+      value: alloydbInstanceClientConnectionConfigSslConfigToHclTerraform(struct!.sslConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbInstanceClientConnectionConfigSslConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbInstanceClientConnectionConfigOutputReference extends cdktf.ComplexObject {
@@ -304,6 +348,25 @@ export function alloydbInstanceMachineConfigToTerraform(struct?: AlloydbInstance
   }
 }
 
+
+export function alloydbInstanceMachineConfigToHclTerraform(struct?: AlloydbInstanceMachineConfigOutputReference | AlloydbInstanceMachineConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cpu_count: {
+      value: cdktf.numberToHclTerraform(struct!.cpuCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbInstanceMachineConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -390,6 +453,43 @@ export function alloydbInstanceQueryInsightsConfigToTerraform(struct?: AlloydbIn
     record_application_tags: cdktf.booleanToTerraform(struct!.recordApplicationTags),
     record_client_address: cdktf.booleanToTerraform(struct!.recordClientAddress),
   }
+}
+
+
+export function alloydbInstanceQueryInsightsConfigToHclTerraform(struct?: AlloydbInstanceQueryInsightsConfigOutputReference | AlloydbInstanceQueryInsightsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    query_plans_per_minute: {
+      value: cdktf.numberToHclTerraform(struct!.queryPlansPerMinute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    query_string_length: {
+      value: cdktf.numberToHclTerraform(struct!.queryStringLength),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    record_application_tags: {
+      value: cdktf.booleanToHclTerraform(struct!.recordApplicationTags),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    record_client_address: {
+      value: cdktf.booleanToHclTerraform(struct!.recordClientAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbInstanceQueryInsightsConfigOutputReference extends cdktf.ComplexObject {
@@ -525,6 +625,25 @@ export function alloydbInstanceReadPoolConfigToTerraform(struct?: AlloydbInstanc
   }
 }
 
+
+export function alloydbInstanceReadPoolConfigToHclTerraform(struct?: AlloydbInstanceReadPoolConfigOutputReference | AlloydbInstanceReadPoolConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    node_count: {
+      value: cdktf.numberToHclTerraform(struct!.nodeCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbInstanceReadPoolConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -598,6 +717,37 @@ export function alloydbInstanceTimeoutsToTerraform(struct?: AlloydbInstanceTimeo
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function alloydbInstanceTimeoutsToHclTerraform(struct?: AlloydbInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1081,5 +1231,103 @@ export class AlloydbInstance extends cdktf.TerraformResource {
       read_pool_config: alloydbInstanceReadPoolConfigToTerraform(this._readPoolConfig.internalValue),
       timeouts: alloydbInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      annotations: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._annotations),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      availability_type: {
+        value: cdktf.stringToHclTerraform(this._availabilityType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cluster: {
+        value: cdktf.stringToHclTerraform(this._cluster),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      database_flags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._databaseFlags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gce_zone: {
+        value: cdktf.stringToHclTerraform(this._gceZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_id: {
+        value: cdktf.stringToHclTerraform(this._instanceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_type: {
+        value: cdktf.stringToHclTerraform(this._instanceType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      client_connection_config: {
+        value: alloydbInstanceClientConnectionConfigToHclTerraform(this._clientConnectionConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbInstanceClientConnectionConfigList",
+      },
+      machine_config: {
+        value: alloydbInstanceMachineConfigToHclTerraform(this._machineConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbInstanceMachineConfigList",
+      },
+      query_insights_config: {
+        value: alloydbInstanceQueryInsightsConfigToHclTerraform(this._queryInsightsConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbInstanceQueryInsightsConfigList",
+      },
+      read_pool_config: {
+        value: alloydbInstanceReadPoolConfigToHclTerraform(this._readPoolConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbInstanceReadPoolConfigList",
+      },
+      timeouts: {
+        value: alloydbInstanceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AlloydbInstanceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

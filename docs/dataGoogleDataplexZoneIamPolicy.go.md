@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataplexzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogledataplexzoneiampolicy"
 
 datagoogledataplexzoneiampolicy.NewDataGoogleDataplexZoneIamPolicy(scope Construct, id *string, config DataGoogleDataplexZoneIamPolicyConfig) DataGoogleDataplexZoneIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -121,6 +122,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.toMetadata"></a>
 
@@ -288,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataplexzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogledataplexzoneiampolicy"
 
 datagoogledataplexzoneiampolicy.DataGoogleDataplexZoneIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataplexzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogledataplexzoneiampolicy"
 
 datagoogledataplexzoneiampolicy.DataGoogleDataplexZoneIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagoogledataplexzoneiampolicy.DataGoogleDataplexZoneIamPolicy_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataplexzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogledataplexzoneiampolicy"
 
 datagoogledataplexzoneiampolicy.DataGoogleDataplexZoneIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +357,7 @@ datagoogledataplexzoneiampolicy.DataGoogleDataplexZoneIamPolicy_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataplexzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogledataplexzoneiampolicy"
 
 datagoogledataplexzoneiampolicy.DataGoogleDataplexZoneIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -687,7 +696,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDataplexZoneIamPolicy.DataGoogleDataplexZoneIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogledataplexzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogledataplexzoneiampolicy"
 
 &datagoogledataplexzoneiampolicy.DataGoogleDataplexZoneIamPolicyConfig {
 	Connection: interface{},

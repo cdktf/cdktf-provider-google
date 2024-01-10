@@ -6,18 +6,23 @@
 import * as cdktf from 'cdktf';
 import { DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations,
 dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsToTerraform,
+dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsToHclTerraform,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsList,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsCondition,
 dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionToTerraform,
+dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionToHclTerraform,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionOutputReference,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFields,
 dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsToTerraform,
+dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsToHclTerraform,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsList,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformations,
 dataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsToTerraform,
+dataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsToHclTerraform,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsOutputReference,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations,
 dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsToTerraform,
+dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsToHclTerraform,
 DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference } from './structs0'
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations {
   /**
@@ -36,6 +41,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     transformations: cdktf.listMapper(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsToTerraform, true)(struct!.transformations),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    transformations: {
+      value: cdktf.listMapperHcl(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsToHclTerraform, true)(struct!.transformations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsOutputReference extends cdktf.ComplexObject {
@@ -114,6 +138,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     month: cdktf.numberToTerraform(struct!.month),
     year: cdktf.numberToTerraform(struct!.year),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueOutputReference extends cdktf.ComplexObject {
@@ -246,6 +301,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueOutputReference extends cdktf.ComplexObject {
@@ -428,6 +520,67 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     date_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueToTerraform(struct!.dateValue),
     time_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueToTerraform(struct!.timeValue),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktf.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    day_of_week_value: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeekValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    float_value: {
+      value: cdktf.numberToHclTerraform(struct!.floatValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    integer_value: {
+      value: cdktf.stringToHclTerraform(struct!.integerValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    string_value: {
+      value: cdktf.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timestamp_value: {
+      value: cdktf.stringToHclTerraform(struct!.timestampValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    date_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueToHclTerraform(struct!.dateValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueList",
+    },
+    time_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueToHclTerraform(struct!.timeValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxOutputReference extends cdktf.ComplexObject {
@@ -665,6 +818,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -795,6 +979,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueOutputReference extends cdktf.ComplexObject {
@@ -977,6 +1198,67 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     date_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueToTerraform(struct!.dateValue),
     time_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueToTerraform(struct!.timeValue),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktf.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    day_of_week_value: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeekValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    float_value: {
+      value: cdktf.numberToHclTerraform(struct!.floatValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    integer_value: {
+      value: cdktf.stringToHclTerraform(struct!.integerValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    string_value: {
+      value: cdktf.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timestamp_value: {
+      value: cdktf.stringToHclTerraform(struct!.timestampValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    date_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueToHclTerraform(struct!.dateValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueList",
+    },
+    time_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueToHclTerraform(struct!.timeValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinOutputReference extends cdktf.ComplexObject {
@@ -1214,6 +1496,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1344,6 +1657,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueOutputReference extends cdktf.ComplexObject {
@@ -1526,6 +1876,67 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     date_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueToTerraform(struct!.dateValue),
     time_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueToTerraform(struct!.timeValue),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktf.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    day_of_week_value: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeekValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    float_value: {
+      value: cdktf.numberToHclTerraform(struct!.floatValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    integer_value: {
+      value: cdktf.stringToHclTerraform(struct!.integerValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    string_value: {
+      value: cdktf.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timestamp_value: {
+      value: cdktf.stringToHclTerraform(struct!.timestampValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    date_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueToHclTerraform(struct!.dateValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueList",
+    },
+    time_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueToHclTerraform(struct!.timeValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueOutputReference extends cdktf.ComplexObject {
@@ -1763,6 +2174,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxToHclTerraform(struct!.max),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxList",
+    },
+    min: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinToHclTerraform(struct!.min),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinList",
+    },
+    replacement_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueToHclTerraform(struct!.replacementValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1903,6 +2345,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    buckets: {
+      value: cdktf.listMapperHcl(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsToHclTerraform, true)(struct!.buckets),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1975,6 +2436,31 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     characters_to_skip: cdktf.stringToTerraform(struct!.charactersToSkip),
     common_characters_to_ignore: cdktf.stringToTerraform(struct!.commonCharactersToIgnore),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    characters_to_skip: {
+      value: cdktf.stringToHclTerraform(struct!.charactersToSkip),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    common_characters_to_ignore: {
+      value: cdktf.stringToHclTerraform(struct!.commonCharactersToIgnore),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreOutputReference extends cdktf.ComplexObject {
@@ -2130,6 +2616,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    masking_character: {
+      value: cdktf.stringToHclTerraform(struct!.maskingCharacter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    number_to_mask: {
+      value: cdktf.numberToHclTerraform(struct!.numberToMask),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    reverse_order: {
+      value: cdktf.booleanToHclTerraform(struct!.reverseOrder),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    characters_to_ignore: {
+      value: cdktf.listMapperHcl(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreToHclTerraform, true)(struct!.charactersToIgnore),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2263,6 +2786,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2337,6 +2879,31 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     crypto_key_name: cdktf.stringToTerraform(struct!.cryptoKeyName),
     wrapped_key: cdktf.stringToTerraform(struct!.wrappedKey),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    crypto_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.cryptoKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    wrapped_key: {
+      value: cdktf.stringToHclTerraform(struct!.wrappedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference extends cdktf.ComplexObject {
@@ -2422,6 +2989,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2486,6 +3072,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     key: cdktf.stringToTerraform(struct!.key),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference extends cdktf.ComplexObject {
@@ -2564,6 +3169,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     transient: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientToTerraform(struct!.transient),
     unwrapped: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedToTerraform(struct!.unwrapped),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_wrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedToHclTerraform(struct!.kmsWrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedList",
+    },
+    transient: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientToHclTerraform(struct!.transient),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientList",
+    },
+    unwrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedToHclTerraform(struct!.unwrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference extends cdktf.ComplexObject {
@@ -2677,6 +3313,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScoreToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScoreOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    score: {
+      value: cdktf.stringToHclTerraform(struct!.score),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScoreOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2753,6 +3408,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     version: cdktf.stringToTerraform(struct!.version),
     sensitivity_score: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScoreToTerraform(struct!.sensitivityScore),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sensitivity_score: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScoreToHclTerraform(struct!.sensitivityScore),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScoreList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference extends cdktf.ComplexObject {
@@ -2880,6 +3566,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    context: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextToHclTerraform(struct!.context),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextList",
+    },
+    crypto_key: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyToHclTerraform(struct!.cryptoKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyList",
+    },
+    surrogate_info_type: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeToHclTerraform(struct!.surrogateInfoType),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3000,6 +3717,31 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    crypto_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.cryptoKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    wrapped_key: {
+      value: cdktf.stringToHclTerraform(struct!.wrappedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3083,6 +3825,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3147,6 +3908,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     key: cdktf.stringToTerraform(struct!.key),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedOutputReference extends cdktf.ComplexObject {
@@ -3225,6 +4005,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     transient: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientToTerraform(struct!.transient),
     unwrapped: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedToTerraform(struct!.unwrapped),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_wrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedToHclTerraform(struct!.kmsWrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedList",
+    },
+    transient: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientToHclTerraform(struct!.transient),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientList",
+    },
+    unwrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedToHclTerraform(struct!.unwrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyOutputReference extends cdktf.ComplexObject {
@@ -3338,6 +4149,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    crypto_key: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyToHclTerraform(struct!.cryptoKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3403,6 +4233,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference extends cdktf.ComplexObject {
@@ -3479,6 +4328,31 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     crypto_key_name: cdktf.stringToTerraform(struct!.cryptoKeyName),
     wrapped_key: cdktf.stringToTerraform(struct!.wrappedKey),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    crypto_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.cryptoKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    wrapped_key: {
+      value: cdktf.stringToHclTerraform(struct!.wrappedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference extends cdktf.ComplexObject {
@@ -3564,6 +4438,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3628,6 +4521,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     key: cdktf.stringToTerraform(struct!.key),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference extends cdktf.ComplexObject {
@@ -3706,6 +4618,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     transient: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientToTerraform(struct!.transient),
     unwrapped: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedToTerraform(struct!.unwrapped),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_wrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedToHclTerraform(struct!.kmsWrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedList",
+    },
+    transient: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientToHclTerraform(struct!.transient),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientList",
+    },
+    unwrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedToHclTerraform(struct!.unwrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference extends cdktf.ComplexObject {
@@ -3819,6 +4762,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScoreToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScoreOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    score: {
+      value: cdktf.stringToHclTerraform(struct!.score),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScoreOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3895,6 +4857,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     version: cdktf.stringToTerraform(struct!.version),
     sensitivity_score: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScoreToTerraform(struct!.sensitivityScore),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sensitivity_score: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScoreToHclTerraform(struct!.sensitivityScore),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScoreList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference extends cdktf.ComplexObject {
@@ -4043,6 +5036,55 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     crypto_key: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyToTerraform(struct!.cryptoKey),
     surrogate_info_type: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeToTerraform(struct!.surrogateInfoType),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    common_alphabet: {
+      value: cdktf.stringToHclTerraform(struct!.commonAlphabet),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    custom_alphabet: {
+      value: cdktf.stringToHclTerraform(struct!.customAlphabet),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    radix: {
+      value: cdktf.numberToHclTerraform(struct!.radix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    context: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextToHclTerraform(struct!.context),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextList",
+    },
+    crypto_key: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyToHclTerraform(struct!.cryptoKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyList",
+    },
+    surrogate_info_type: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeToHclTerraform(struct!.surrogateInfoType),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference extends cdktf.ComplexObject {
@@ -4222,6 +5264,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -4296,6 +5357,31 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     crypto_key_name: cdktf.stringToTerraform(struct!.cryptoKeyName),
     wrapped_key: cdktf.stringToTerraform(struct!.wrappedKey),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    crypto_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.cryptoKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    wrapped_key: {
+      value: cdktf.stringToHclTerraform(struct!.wrappedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedOutputReference extends cdktf.ComplexObject {
@@ -4381,6 +5467,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -4445,6 +5550,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     key: cdktf.stringToTerraform(struct!.key),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedOutputReference extends cdktf.ComplexObject {
@@ -4523,6 +5647,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     transient: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientToTerraform(struct!.transient),
     unwrapped: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedToTerraform(struct!.unwrapped),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_wrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedToHclTerraform(struct!.kmsWrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedList",
+    },
+    transient: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientToHclTerraform(struct!.transient),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientList",
+    },
+    unwrapped: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedToHclTerraform(struct!.unwrapped),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyOutputReference extends cdktf.ComplexObject {
@@ -4657,6 +5812,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     context: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextToTerraform(struct!.context),
     crypto_key: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyToTerraform(struct!.cryptoKey),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    lower_bound_days: {
+      value: cdktf.numberToHclTerraform(struct!.lowerBoundDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    upper_bound_days: {
+      value: cdktf.numberToHclTerraform(struct!.upperBoundDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    context: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextToHclTerraform(struct!.context),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextList",
+    },
+    crypto_key: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyToHclTerraform(struct!.cryptoKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigOutputReference extends cdktf.ComplexObject {
@@ -4800,6 +5992,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -4930,6 +6153,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueOutputReference extends cdktf.ComplexObject {
@@ -5112,6 +6372,67 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     date_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueToTerraform(struct!.dateValue),
     time_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueToTerraform(struct!.timeValue),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktf.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    day_of_week_value: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeekValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    float_value: {
+      value: cdktf.numberToHclTerraform(struct!.floatValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    integer_value: {
+      value: cdktf.stringToHclTerraform(struct!.integerValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    string_value: {
+      value: cdktf.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timestamp_value: {
+      value: cdktf.stringToHclTerraform(struct!.timestampValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    date_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueToHclTerraform(struct!.dateValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueList",
+    },
+    time_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueToHclTerraform(struct!.timeValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundOutputReference extends cdktf.ComplexObject {
@@ -5349,6 +6670,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -5479,6 +6831,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueOutputReference extends cdktf.ComplexObject {
@@ -5661,6 +7050,67 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     date_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueToTerraform(struct!.dateValue),
     time_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueToTerraform(struct!.timeValue),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktf.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    day_of_week_value: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeekValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    float_value: {
+      value: cdktf.numberToHclTerraform(struct!.floatValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    integer_value: {
+      value: cdktf.stringToHclTerraform(struct!.integerValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    string_value: {
+      value: cdktf.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timestamp_value: {
+      value: cdktf.stringToHclTerraform(struct!.timestampValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    date_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueToHclTerraform(struct!.dateValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueList",
+    },
+    time_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueToHclTerraform(struct!.timeValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundOutputReference extends cdktf.ComplexObject {
@@ -5900,6 +7350,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bucket_size: {
+      value: cdktf.numberToHclTerraform(struct!.bucketSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    lower_bound: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundToHclTerraform(struct!.lowerBound),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundList",
+    },
+    upper_bound: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundToHclTerraform(struct!.upperBound),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -5995,6 +7476,17 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -6052,6 +7544,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     month: cdktf.numberToTerraform(struct!.month),
     year: cdktf.numberToTerraform(struct!.year),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference extends cdktf.ComplexObject {
@@ -6184,6 +7707,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference extends cdktf.ComplexObject {
@@ -6366,6 +7926,67 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     date_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueToTerraform(struct!.dateValue),
     time_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueToTerraform(struct!.timeValue),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktf.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    day_of_week_value: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeekValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    float_value: {
+      value: cdktf.numberToHclTerraform(struct!.floatValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    integer_value: {
+      value: cdktf.stringToHclTerraform(struct!.integerValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    string_value: {
+      value: cdktf.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timestamp_value: {
+      value: cdktf.stringToHclTerraform(struct!.timestampValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    date_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueToHclTerraform(struct!.dateValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueList",
+    },
+    time_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueToHclTerraform(struct!.timeValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference extends cdktf.ComplexObject {
@@ -6589,6 +8210,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    new_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueToHclTerraform(struct!.newValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -6653,6 +8293,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListStructToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListStructOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListStruct): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    words: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.words),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -6715,6 +8374,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     word_list: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListStructToTerraform(struct!.wordList),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    word_list: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListStructToHclTerraform(struct!.wordList),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListStructList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference extends cdktf.ComplexObject {
@@ -6782,6 +8460,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     part_to_extract: cdktf.stringToTerraform(struct!.partToExtract),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    part_to_extract: {
+      value: cdktf.stringToHclTerraform(struct!.partToExtract),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigOutputReference extends cdktf.ComplexObject {
@@ -6919,6 +8616,85 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     replace_dictionary_config: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigToTerraform(struct!.replaceDictionaryConfig),
     time_part_config: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigToTerraform(struct!.timePartConfig),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bucketing_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigToHclTerraform(struct!.bucketingConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigList",
+    },
+    character_mask_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigToHclTerraform(struct!.characterMaskConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigList",
+    },
+    crypto_deterministic_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigToHclTerraform(struct!.cryptoDeterministicConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigList",
+    },
+    crypto_hash_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigToHclTerraform(struct!.cryptoHashConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigList",
+    },
+    crypto_replace_ffx_fpe_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigToHclTerraform(struct!.cryptoReplaceFfxFpeConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigList",
+    },
+    date_shift_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigToHclTerraform(struct!.dateShiftConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigList",
+    },
+    fixed_size_bucketing_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigToHclTerraform(struct!.fixedSizeBucketingConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigList",
+    },
+    redact_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigToHclTerraform(struct!.redactConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigList",
+    },
+    replace_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigToHclTerraform(struct!.replaceConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigList",
+    },
+    replace_dictionary_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigToHclTerraform(struct!.replaceDictionaryConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigList",
+    },
+    time_part_config: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigToHclTerraform(struct!.timePartConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationOutputReference extends cdktf.ComplexObject {
@@ -7229,6 +9005,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    condition: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionToHclTerraform(struct!.condition),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionList",
+    },
+    fields: {
+      value: cdktf.listMapperHcl(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsToHclTerraform, true)(struct!.fields),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsList",
+    },
+    info_type_transformations: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsToHclTerraform(struct!.infoTypeTransformations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsList",
+    },
+    primitive_transformation: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationToHclTerraform(struct!.primitiveTransformation),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -7391,6 +9204,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -7470,6 +9302,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     month: cdktf.numberToTerraform(struct!.month),
     year: cdktf.numberToTerraform(struct!.year),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueOutputReference extends cdktf.ComplexObject {
@@ -7602,6 +9465,43 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueOutputReference extends cdktf.ComplexObject {
@@ -7784,6 +9684,67 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     date_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueToTerraform(struct!.dateValue),
     time_value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueToTerraform(struct!.timeValue),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktf.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    day_of_week_value: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeekValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    float_value: {
+      value: cdktf.numberToHclTerraform(struct!.floatValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    integer_value: {
+      value: cdktf.stringToHclTerraform(struct!.integerValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    string_value: {
+      value: cdktf.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timestamp_value: {
+      value: cdktf.stringToHclTerraform(struct!.timestampValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    date_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueToHclTerraform(struct!.dateValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueList",
+    },
+    time_value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueToHclTerraform(struct!.timeValue),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueOutputReference extends cdktf.ComplexObject {
@@ -8021,6 +9982,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    field: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldToHclTerraform(struct!.field),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldList",
+    },
+    value: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueToHclTerraform(struct!.value),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -8158,6 +10150,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    conditions: {
+      value: cdktf.listMapperHcl(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsToHclTerraform, true)(struct!.conditions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -8230,6 +10241,31 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
     logical_operator: cdktf.stringToTerraform(struct!.logicalOperator),
     conditions: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsToTerraform(struct!.conditions),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    logical_operator: {
+      value: cdktf.stringToHclTerraform(struct!.logicalOperator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conditions: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsToHclTerraform(struct!.conditions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsOutputReference extends cdktf.ComplexObject {
@@ -8321,6 +10357,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expressions: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsToHclTerraform(struct!.expressions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -8386,6 +10441,25 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   return {
     condition: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionToTerraform(struct!.condition),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    condition: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionToHclTerraform(struct!.condition),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsOutputReference extends cdktf.ComplexObject {
@@ -8494,6 +10568,31 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
   }
 }
 
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformations): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    field_transformations: {
+      value: cdktf.listMapperHcl(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsToHclTerraform, true)(struct!.fieldTransformations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsList",
+    },
+    record_suppressions: {
+      value: cdktf.listMapperHcl(dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsToHclTerraform, true)(struct!.recordSuppressions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -8595,6 +10694,37 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(
     info_type_transformations: dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsToTerraform(struct!.infoTypeTransformations),
     record_transformations: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsToTerraform(struct!.recordTransformations),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    image_transformations: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsToHclTerraform(struct!.imageTransformations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsList",
+    },
+    info_type_transformations: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsToHclTerraform(struct!.infoTypeTransformations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsList",
+    },
+    record_transformations: {
+      value: dataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsToHclTerraform(struct!.recordTransformations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference extends cdktf.ComplexObject {
@@ -8714,6 +10844,37 @@ export function dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(struct?:
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataLossPreventionDeidentifyTemplateTimeoutsToHclTerraform(struct?: DataLossPreventionDeidentifyTemplateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends cdktf.ComplexObject {

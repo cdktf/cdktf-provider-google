@@ -78,6 +78,17 @@ export function vmwareenginePrivateCloudHcxToTerraform(struct?: VmwareenginePriv
   }
 }
 
+
+export function vmwareenginePrivateCloudHcxToHclTerraform(struct?: VmwareenginePrivateCloudHcx): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class VmwareenginePrivateCloudHcxOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -157,6 +168,17 @@ export function vmwareenginePrivateCloudNsxToTerraform(struct?: VmwareenginePriv
   }
 }
 
+
+export function vmwareenginePrivateCloudNsxToHclTerraform(struct?: VmwareenginePrivateCloudNsx): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class VmwareenginePrivateCloudNsxOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -234,6 +256,17 @@ export function vmwareenginePrivateCloudVcenterToTerraform(struct?: Vmwareengine
   }
   return {
   }
+}
+
+
+export function vmwareenginePrivateCloudVcenterToHclTerraform(struct?: VmwareenginePrivateCloudVcenter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class VmwareenginePrivateCloudVcenterOutputReference extends cdktf.ComplexObject {
@@ -335,6 +368,37 @@ export function vmwareenginePrivateCloudManagementClusterNodeTypeConfigsToTerraf
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
     node_type_id: cdktf.stringToTerraform(struct!.nodeTypeId),
   }
+}
+
+
+export function vmwareenginePrivateCloudManagementClusterNodeTypeConfigsToHclTerraform(struct?: VmwareenginePrivateCloudManagementClusterNodeTypeConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_core_count: {
+      value: cdktf.numberToHclTerraform(struct!.customCoreCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    node_count: {
+      value: cdktf.numberToHclTerraform(struct!.nodeCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    node_type_id: {
+      value: cdktf.stringToHclTerraform(struct!.nodeTypeId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VmwareenginePrivateCloudManagementClusterNodeTypeConfigsOutputReference extends cdktf.ComplexObject {
@@ -486,6 +550,31 @@ export function vmwareenginePrivateCloudManagementClusterToTerraform(struct?: Vm
   }
 }
 
+
+export function vmwareenginePrivateCloudManagementClusterToHclTerraform(struct?: VmwareenginePrivateCloudManagementClusterOutputReference | VmwareenginePrivateCloudManagementCluster): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster_id: {
+      value: cdktf.stringToHclTerraform(struct!.clusterId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    node_type_configs: {
+      value: cdktf.listMapperHcl(vmwareenginePrivateCloudManagementClusterNodeTypeConfigsToHclTerraform, true)(struct!.nodeTypeConfigs),
+      isBlock: true,
+      type: "set",
+      storageClassType: "VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VmwareenginePrivateCloudManagementClusterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -579,6 +668,31 @@ export function vmwareenginePrivateCloudNetworkConfigToTerraform(struct?: Vmware
     management_cidr: cdktf.stringToTerraform(struct!.managementCidr),
     vmware_engine_network: cdktf.stringToTerraform(struct!.vmwareEngineNetwork),
   }
+}
+
+
+export function vmwareenginePrivateCloudNetworkConfigToHclTerraform(struct?: VmwareenginePrivateCloudNetworkConfigOutputReference | VmwareenginePrivateCloudNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    management_cidr: {
+      value: cdktf.stringToHclTerraform(struct!.managementCidr),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vmware_engine_network: {
+      value: cdktf.stringToHclTerraform(struct!.vmwareEngineNetwork),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VmwareenginePrivateCloudNetworkConfigOutputReference extends cdktf.ComplexObject {
@@ -688,6 +802,37 @@ export function vmwareenginePrivateCloudTimeoutsToTerraform(struct?: Vmwareengin
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function vmwareenginePrivateCloudTimeoutsToHclTerraform(struct?: VmwareenginePrivateCloudTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VmwareenginePrivateCloudTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1035,5 +1180,67 @@ export class VmwareenginePrivateCloud extends cdktf.TerraformResource {
       network_config: vmwareenginePrivateCloudNetworkConfigToTerraform(this._networkConfig.internalValue),
       timeouts: vmwareenginePrivateCloudTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      management_cluster: {
+        value: vmwareenginePrivateCloudManagementClusterToHclTerraform(this._managementCluster.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VmwareenginePrivateCloudManagementClusterList",
+      },
+      network_config: {
+        value: vmwareenginePrivateCloudNetworkConfigToHclTerraform(this._networkConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VmwareenginePrivateCloudNetworkConfigList",
+      },
+      timeouts: {
+        value: vmwareenginePrivateCloudTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VmwareenginePrivateCloudTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

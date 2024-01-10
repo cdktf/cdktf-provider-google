@@ -207,4 +207,48 @@ export class IapAppEngineVersionIamPolicy extends cdktf.TerraformResource {
       version_id: cdktf.stringToTerraform(this._versionId),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app_id: {
+        value: cdktf.stringToHclTerraform(this._appId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_data: {
+        value: cdktf.stringToHclTerraform(this._policyData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service: {
+        value: cdktf.stringToHclTerraform(this._service),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_id: {
+        value: cdktf.stringToHclTerraform(this._versionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

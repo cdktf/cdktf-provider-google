@@ -73,6 +73,37 @@ export function iapWebRegionBackendServiceIamMemberConditionToTerraform(struct?:
   }
 }
 
+
+export function iapWebRegionBackendServiceIamMemberConditionToHclTerraform(struct?: IapWebRegionBackendServiceIamMemberConditionOutputReference | IapWebRegionBackendServiceIamMemberCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expression: {
+      value: cdktf.stringToHclTerraform(struct!.expression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IapWebRegionBackendServiceIamMemberConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -346,5 +377,55 @@ export class IapWebRegionBackendServiceIamMember extends cdktf.TerraformResource
       web_region_backend_service: cdktf.stringToTerraform(this._webRegionBackendService),
       condition: iapWebRegionBackendServiceIamMemberConditionToTerraform(this._condition.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      member: {
+        value: cdktf.stringToHclTerraform(this._member),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktf.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      web_region_backend_service: {
+        value: cdktf.stringToHclTerraform(this._webRegionBackendService),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      condition: {
+        value: iapWebRegionBackendServiceIamMemberConditionToHclTerraform(this._condition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IapWebRegionBackendServiceIamMemberConditionList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -69,6 +69,37 @@ export function storageHmacKeyTimeoutsToTerraform(struct?: StorageHmacKeyTimeout
   }
 }
 
+
+export function storageHmacKeyTimeoutsToHclTerraform(struct?: StorageHmacKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StorageHmacKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -343,5 +374,43 @@ export class StorageHmacKey extends cdktf.TerraformResource {
       state: cdktf.stringToTerraform(this._state),
       timeouts: storageHmacKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_account_email: {
+        value: cdktf.stringToHclTerraform(this._serviceAccountEmail),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      state: {
+        value: cdktf.stringToHclTerraform(this._state),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: storageHmacKeyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StorageHmacKeyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

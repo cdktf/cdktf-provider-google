@@ -93,6 +93,37 @@ export function identityPlatformOauthIdpConfigTimeoutsToTerraform(struct?: Ident
   }
 }
 
+
+export function identityPlatformOauthIdpConfigTimeoutsToHclTerraform(struct?: IdentityPlatformOauthIdpConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IdentityPlatformOauthIdpConfigTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -413,5 +444,67 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       timeouts: identityPlatformOauthIdpConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      client_id: {
+        value: cdktf.stringToHclTerraform(this._clientId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_secret: {
+        value: cdktf.stringToHclTerraform(this._clientSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      issuer: {
+        value: cdktf.stringToHclTerraform(this._issuer),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: identityPlatformOauthIdpConfigTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "IdentityPlatformOauthIdpConfigTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

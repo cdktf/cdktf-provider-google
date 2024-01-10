@@ -138,6 +138,31 @@ export function bigqueryDatasetAccessDatasetDatasetAToTerraform(struct?: Bigquer
   }
 }
 
+
+export function bigqueryDatasetAccessDatasetDatasetAToHclTerraform(struct?: BigqueryDatasetAccessDatasetDatasetAOutputReference | BigqueryDatasetAccessDatasetDatasetA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataset_id: {
+      value: cdktf.stringToHclTerraform(struct!.datasetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_id: {
+      value: cdktf.stringToHclTerraform(struct!.projectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigqueryDatasetAccessDatasetDatasetAOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -227,6 +252,31 @@ export function bigqueryDatasetAccessDatasetAToTerraform(struct?: BigqueryDatase
     target_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.targetTypes),
     dataset: bigqueryDatasetAccessDatasetDatasetAToTerraform(struct!.dataset),
   }
+}
+
+
+export function bigqueryDatasetAccessDatasetAToHclTerraform(struct?: BigqueryDatasetAccessDatasetAOutputReference | BigqueryDatasetAccessDatasetA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    target_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.targetTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    dataset: {
+      value: bigqueryDatasetAccessDatasetDatasetAToHclTerraform(struct!.dataset),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryDatasetAccessDatasetDatasetAList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryDatasetAccessDatasetAOutputReference extends cdktf.ComplexObject {
@@ -326,6 +376,37 @@ export function bigqueryDatasetAccessRoutineAToTerraform(struct?: BigqueryDatase
     project_id: cdktf.stringToTerraform(struct!.projectId),
     routine_id: cdktf.stringToTerraform(struct!.routineId),
   }
+}
+
+
+export function bigqueryDatasetAccessRoutineAToHclTerraform(struct?: BigqueryDatasetAccessRoutineAOutputReference | BigqueryDatasetAccessRoutineA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataset_id: {
+      value: cdktf.stringToHclTerraform(struct!.datasetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_id: {
+      value: cdktf.stringToHclTerraform(struct!.projectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    routine_id: {
+      value: cdktf.stringToHclTerraform(struct!.routineId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryDatasetAccessRoutineAOutputReference extends cdktf.ComplexObject {
@@ -431,6 +512,31 @@ export function bigqueryDatasetAccessTimeoutsToTerraform(struct?: BigqueryDatase
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function bigqueryDatasetAccessTimeoutsToHclTerraform(struct?: BigqueryDatasetAccessTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryDatasetAccessTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -546,6 +652,37 @@ export function bigqueryDatasetAccessViewAToTerraform(struct?: BigqueryDatasetAc
     project_id: cdktf.stringToTerraform(struct!.projectId),
     table_id: cdktf.stringToTerraform(struct!.tableId),
   }
+}
+
+
+export function bigqueryDatasetAccessViewAToHclTerraform(struct?: BigqueryDatasetAccessViewAOutputReference | BigqueryDatasetAccessViewA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataset_id: {
+      value: cdktf.stringToHclTerraform(struct!.datasetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_id: {
+      value: cdktf.stringToHclTerraform(struct!.projectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    table_id: {
+      value: cdktf.stringToHclTerraform(struct!.tableId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObject {
@@ -932,5 +1069,91 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
       timeouts: bigqueryDatasetAccessTimeoutsToTerraform(this._timeouts.internalValue),
       view: bigqueryDatasetAccessViewAToTerraform(this._view.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dataset_id: {
+        value: cdktf.stringToHclTerraform(this._datasetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain: {
+        value: cdktf.stringToHclTerraform(this._domain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      group_by_email: {
+        value: cdktf.stringToHclTerraform(this._groupByEmail),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      iam_member: {
+        value: cdktf.stringToHclTerraform(this._iamMember),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktf.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      special_group: {
+        value: cdktf.stringToHclTerraform(this._specialGroup),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_by_email: {
+        value: cdktf.stringToHclTerraform(this._userByEmail),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dataset: {
+        value: bigqueryDatasetAccessDatasetAToHclTerraform(this._dataset.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryDatasetAccessDatasetAList",
+      },
+      routine: {
+        value: bigqueryDatasetAccessRoutineAToHclTerraform(this._routine.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryDatasetAccessRoutineAList",
+      },
+      timeouts: {
+        value: bigqueryDatasetAccessTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BigqueryDatasetAccessTimeouts",
+      },
+      view: {
+        value: bigqueryDatasetAccessViewAToHclTerraform(this._view.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryDatasetAccessViewAList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

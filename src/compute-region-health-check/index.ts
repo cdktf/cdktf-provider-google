@@ -189,6 +189,43 @@ export function computeRegionHealthCheckGrpcHealthCheckToTerraform(struct?: Comp
   }
 }
 
+
+export function computeRegionHealthCheckGrpcHealthCheckToHclTerraform(struct?: ComputeRegionHealthCheckGrpcHealthCheckOutputReference | ComputeRegionHealthCheckGrpcHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    grpc_service_name: {
+      value: cdktf.stringToHclTerraform(struct!.grpcServiceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port_name: {
+      value: cdktf.stringToHclTerraform(struct!.portName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port_specification: {
+      value: cdktf.stringToHclTerraform(struct!.portSpecification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionHealthCheckGrpcHealthCheckOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -383,6 +420,61 @@ export function computeRegionHealthCheckHttp2HealthCheckToTerraform(struct?: Com
     request_path: cdktf.stringToTerraform(struct!.requestPath),
     response: cdktf.stringToTerraform(struct!.response),
   }
+}
+
+
+export function computeRegionHealthCheckHttp2HealthCheckToHclTerraform(struct?: ComputeRegionHealthCheckHttp2HealthCheckOutputReference | ComputeRegionHealthCheckHttp2HealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port_name: {
+      value: cdktf.stringToHclTerraform(struct!.portName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port_specification: {
+      value: cdktf.stringToHclTerraform(struct!.portSpecification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    proxy_header: {
+      value: cdktf.stringToHclTerraform(struct!.proxyHeader),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request_path: {
+      value: cdktf.stringToHclTerraform(struct!.requestPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    response: {
+      value: cdktf.stringToHclTerraform(struct!.response),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionHealthCheckHttp2HealthCheckOutputReference extends cdktf.ComplexObject {
@@ -647,6 +739,61 @@ export function computeRegionHealthCheckHttpHealthCheckToTerraform(struct?: Comp
   }
 }
 
+
+export function computeRegionHealthCheckHttpHealthCheckToHclTerraform(struct?: ComputeRegionHealthCheckHttpHealthCheckOutputReference | ComputeRegionHealthCheckHttpHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port_name: {
+      value: cdktf.stringToHclTerraform(struct!.portName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port_specification: {
+      value: cdktf.stringToHclTerraform(struct!.portSpecification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    proxy_header: {
+      value: cdktf.stringToHclTerraform(struct!.proxyHeader),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request_path: {
+      value: cdktf.stringToHclTerraform(struct!.requestPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    response: {
+      value: cdktf.stringToHclTerraform(struct!.response),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionHealthCheckHttpHealthCheckOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -909,6 +1056,61 @@ export function computeRegionHealthCheckHttpsHealthCheckToTerraform(struct?: Com
   }
 }
 
+
+export function computeRegionHealthCheckHttpsHealthCheckToHclTerraform(struct?: ComputeRegionHealthCheckHttpsHealthCheckOutputReference | ComputeRegionHealthCheckHttpsHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port_name: {
+      value: cdktf.stringToHclTerraform(struct!.portName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port_specification: {
+      value: cdktf.stringToHclTerraform(struct!.portSpecification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    proxy_header: {
+      value: cdktf.stringToHclTerraform(struct!.proxyHeader),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request_path: {
+      value: cdktf.stringToHclTerraform(struct!.requestPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    response: {
+      value: cdktf.stringToHclTerraform(struct!.response),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionHealthCheckHttpsHealthCheckOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1109,6 +1311,25 @@ export function computeRegionHealthCheckLogConfigToTerraform(struct?: ComputeReg
   }
 }
 
+
+export function computeRegionHealthCheckLogConfigToHclTerraform(struct?: ComputeRegionHealthCheckLogConfigOutputReference | ComputeRegionHealthCheckLogConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable: {
+      value: cdktf.booleanToHclTerraform(struct!.enable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionHealthCheckLogConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1230,6 +1451,55 @@ export function computeRegionHealthCheckSslHealthCheckToTerraform(struct?: Compu
     request: cdktf.stringToTerraform(struct!.request),
     response: cdktf.stringToTerraform(struct!.response),
   }
+}
+
+
+export function computeRegionHealthCheckSslHealthCheckToHclTerraform(struct?: ComputeRegionHealthCheckSslHealthCheckOutputReference | ComputeRegionHealthCheckSslHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port_name: {
+      value: cdktf.stringToHclTerraform(struct!.portName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port_specification: {
+      value: cdktf.stringToHclTerraform(struct!.portSpecification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    proxy_header: {
+      value: cdktf.stringToHclTerraform(struct!.proxyHeader),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request: {
+      value: cdktf.stringToHclTerraform(struct!.request),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    response: {
+      value: cdktf.stringToHclTerraform(struct!.response),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionHealthCheckSslHealthCheckOutputReference extends cdktf.ComplexObject {
@@ -1465,6 +1735,55 @@ export function computeRegionHealthCheckTcpHealthCheckToTerraform(struct?: Compu
   }
 }
 
+
+export function computeRegionHealthCheckTcpHealthCheckToHclTerraform(struct?: ComputeRegionHealthCheckTcpHealthCheckOutputReference | ComputeRegionHealthCheckTcpHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port_name: {
+      value: cdktf.stringToHclTerraform(struct!.portName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port_specification: {
+      value: cdktf.stringToHclTerraform(struct!.portSpecification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    proxy_header: {
+      value: cdktf.stringToHclTerraform(struct!.proxyHeader),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request: {
+      value: cdktf.stringToHclTerraform(struct!.request),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    response: {
+      value: cdktf.stringToHclTerraform(struct!.response),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionHealthCheckTcpHealthCheckOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1648,6 +1967,37 @@ export function computeRegionHealthCheckTimeoutsToTerraform(struct?: ComputeRegi
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeRegionHealthCheckTimeoutsToHclTerraform(struct?: ComputeRegionHealthCheckTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionHealthCheckTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2135,5 +2485,115 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
       tcp_health_check: computeRegionHealthCheckTcpHealthCheckToTerraform(this._tcpHealthCheck.internalValue),
       timeouts: computeRegionHealthCheckTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      check_interval_sec: {
+        value: cdktf.numberToHclTerraform(this._checkIntervalSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      healthy_threshold: {
+        value: cdktf.numberToHclTerraform(this._healthyThreshold),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeout_sec: {
+        value: cdktf.numberToHclTerraform(this._timeoutSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      unhealthy_threshold: {
+        value: cdktf.numberToHclTerraform(this._unhealthyThreshold),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      grpc_health_check: {
+        value: computeRegionHealthCheckGrpcHealthCheckToHclTerraform(this._grpcHealthCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionHealthCheckGrpcHealthCheckList",
+      },
+      http2_health_check: {
+        value: computeRegionHealthCheckHttp2HealthCheckToHclTerraform(this._http2HealthCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionHealthCheckHttp2HealthCheckList",
+      },
+      http_health_check: {
+        value: computeRegionHealthCheckHttpHealthCheckToHclTerraform(this._httpHealthCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionHealthCheckHttpHealthCheckList",
+      },
+      https_health_check: {
+        value: computeRegionHealthCheckHttpsHealthCheckToHclTerraform(this._httpsHealthCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionHealthCheckHttpsHealthCheckList",
+      },
+      log_config: {
+        value: computeRegionHealthCheckLogConfigToHclTerraform(this._logConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionHealthCheckLogConfigList",
+      },
+      ssl_health_check: {
+        value: computeRegionHealthCheckSslHealthCheckToHclTerraform(this._sslHealthCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionHealthCheckSslHealthCheckList",
+      },
+      tcp_health_check: {
+        value: computeRegionHealthCheckTcpHealthCheckToHclTerraform(this._tcpHealthCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionHealthCheckTcpHealthCheckList",
+      },
+      timeouts: {
+        value: computeRegionHealthCheckTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeRegionHealthCheckTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

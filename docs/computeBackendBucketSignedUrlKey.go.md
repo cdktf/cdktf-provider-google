@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 computebackendbucketsignedurlkey.NewComputeBackendBucketSignedUrlKey(scope Construct, id *string, config ComputeBackendBucketSignedUrlKeyConfig) ComputeBackendBucketSignedUrlKey
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKey_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKey_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKey_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -826,7 +833,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 &computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKeyConfig {
 	Connection: interface{},
@@ -841,7 +848,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucke
 	Name: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKeyTimeouts,
 }
 ```
 
@@ -1026,7 +1033,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 &computebackendbucketsignedurlkey.ComputeBackendBucketSignedUrlKeyTimeouts {
 	Create: *string,
@@ -1074,7 +1081,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey.ComputeBackendBucketSignedUrlKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computebackendbucketsignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computebackendbucketsignedurlkey"
 
 computebackendbucketsignedurlkey.NewComputeBackendBucketSignedUrlKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendBucketSignedUrlKeyTimeoutsOutputReference
 ```

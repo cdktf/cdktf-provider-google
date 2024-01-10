@@ -22,6 +22,17 @@ export function dataGoogleContainerClusterNodePoolToTerraform(struct?: DataGoogl
   }
 }
 
+
+export function dataGoogleContainerClusterNodePoolToHclTerraform(struct?: DataGoogleContainerClusterNodePool): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterNodePoolOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -162,6 +173,17 @@ export function dataGoogleContainerClusterNodePoolAutoConfigNetworkTagsToTerrafo
   }
 }
 
+
+export function dataGoogleContainerClusterNodePoolAutoConfigNetworkTagsToHclTerraform(struct?: DataGoogleContainerClusterNodePoolAutoConfigNetworkTags): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -224,6 +246,17 @@ export function dataGoogleContainerClusterNodePoolAutoConfigToTerraform(struct?:
   }
   return {
   }
+}
+
+
+export function dataGoogleContainerClusterNodePoolAutoConfigToHclTerraform(struct?: DataGoogleContainerClusterNodePoolAutoConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleContainerClusterNodePoolAutoConfigOutputReference extends cdktf.ComplexObject {
@@ -291,6 +324,17 @@ export function dataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsToTe
   }
 }
 
+
+export function dataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsToHclTerraform(struct?: DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaults): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterNodePoolDefaultsNodeConfigDefaultsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -353,6 +397,17 @@ export function dataGoogleContainerClusterNodePoolDefaultsToTerraform(struct?: D
   }
   return {
   }
+}
+
+
+export function dataGoogleContainerClusterNodePoolDefaultsToHclTerraform(struct?: DataGoogleContainerClusterNodePoolDefaults): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleContainerClusterNodePoolDefaultsOutputReference extends cdktf.ComplexObject {
@@ -420,6 +475,17 @@ export function dataGoogleContainerClusterNotificationConfigPubsubFilterToTerraf
   }
 }
 
+
+export function dataGoogleContainerClusterNotificationConfigPubsubFilterToHclTerraform(struct?: DataGoogleContainerClusterNotificationConfigPubsubFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterNotificationConfigPubsubFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -482,6 +548,17 @@ export function dataGoogleContainerClusterNotificationConfigPubsubToTerraform(st
   }
   return {
   }
+}
+
+
+export function dataGoogleContainerClusterNotificationConfigPubsubToHclTerraform(struct?: DataGoogleContainerClusterNotificationConfigPubsub): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleContainerClusterNotificationConfigPubsubOutputReference extends cdktf.ComplexObject {
@@ -559,6 +636,17 @@ export function dataGoogleContainerClusterNotificationConfigToTerraform(struct?:
   }
 }
 
+
+export function dataGoogleContainerClusterNotificationConfigToHclTerraform(struct?: DataGoogleContainerClusterNotificationConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterNotificationConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -624,6 +712,17 @@ export function dataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccess
   }
 }
 
+
+export function dataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigToHclTerraform(struct?: DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -686,6 +785,17 @@ export function dataGoogleContainerClusterPrivateClusterConfigToTerraform(struct
   }
   return {
   }
+}
+
+
+export function dataGoogleContainerClusterPrivateClusterConfigToHclTerraform(struct?: DataGoogleContainerClusterPrivateClusterConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleContainerClusterPrivateClusterConfigOutputReference extends cdktf.ComplexObject {
@@ -788,6 +898,17 @@ export function dataGoogleContainerClusterReleaseChannelToTerraform(struct?: Dat
   }
 }
 
+
+export function dataGoogleContainerClusterReleaseChannelToHclTerraform(struct?: DataGoogleContainerClusterReleaseChannel): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterReleaseChannelOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -852,6 +973,17 @@ export function dataGoogleContainerClusterResourceUsageExportConfigBigqueryDesti
   }
 }
 
+
+export function dataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationToHclTerraform(struct?: DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestination): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterResourceUsageExportConfigBigqueryDestinationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -914,6 +1046,17 @@ export function dataGoogleContainerClusterResourceUsageExportConfigToTerraform(s
   }
   return {
   }
+}
+
+
+export function dataGoogleContainerClusterResourceUsageExportConfigToHclTerraform(struct?: DataGoogleContainerClusterResourceUsageExportConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleContainerClusterResourceUsageExportConfigOutputReference extends cdktf.ComplexObject {
@@ -991,6 +1134,17 @@ export function dataGoogleContainerClusterSecurityPostureConfigToTerraform(struc
   }
 }
 
+
+export function dataGoogleContainerClusterSecurityPostureConfigToHclTerraform(struct?: DataGoogleContainerClusterSecurityPostureConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterSecurityPostureConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1060,6 +1214,17 @@ export function dataGoogleContainerClusterServiceExternalIpsConfigToTerraform(st
   }
 }
 
+
+export function dataGoogleContainerClusterServiceExternalIpsConfigToHclTerraform(struct?: DataGoogleContainerClusterServiceExternalIpsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterServiceExternalIpsConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1124,6 +1289,17 @@ export function dataGoogleContainerClusterVerticalPodAutoscalingToTerraform(stru
   }
 }
 
+
+export function dataGoogleContainerClusterVerticalPodAutoscalingToHclTerraform(struct?: DataGoogleContainerClusterVerticalPodAutoscaling): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleContainerClusterVerticalPodAutoscalingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1186,6 +1362,17 @@ export function dataGoogleContainerClusterWorkloadIdentityConfigToTerraform(stru
   }
   return {
   }
+}
+
+
+export function dataGoogleContainerClusterWorkloadIdentityConfigToHclTerraform(struct?: DataGoogleContainerClusterWorkloadIdentityConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleContainerClusterWorkloadIdentityConfigOutputReference extends cdktf.ComplexObject {

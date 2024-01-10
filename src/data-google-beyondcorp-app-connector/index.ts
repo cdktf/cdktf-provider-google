@@ -48,6 +48,17 @@ export function dataGoogleBeyondcorpAppConnectorPrincipalInfoServiceAccountToTer
   }
 }
 
+
+export function dataGoogleBeyondcorpAppConnectorPrincipalInfoServiceAccountToHclTerraform(struct?: DataGoogleBeyondcorpAppConnectorPrincipalInfoServiceAccount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleBeyondcorpAppConnectorPrincipalInfoServiceAccountOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -110,6 +121,17 @@ export function dataGoogleBeyondcorpAppConnectorPrincipalInfoToTerraform(struct?
   }
   return {
   }
+}
+
+
+export function dataGoogleBeyondcorpAppConnectorPrincipalInfoToHclTerraform(struct?: DataGoogleBeyondcorpAppConnectorPrincipalInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleBeyondcorpAppConnectorPrincipalInfoOutputReference extends cdktf.ComplexObject {
@@ -333,5 +355,37 @@ export class DataGoogleBeyondcorpAppConnector extends cdktf.TerraformDataSource 
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

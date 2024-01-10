@@ -74,6 +74,31 @@ export function appEngineServiceSplitTrafficSplitToTerraform(struct?: AppEngineS
   }
 }
 
+
+export function appEngineServiceSplitTrafficSplitToHclTerraform(struct?: AppEngineServiceSplitTrafficSplitOutputReference | AppEngineServiceSplitTrafficSplit): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allocations: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.allocations),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    shard_by: {
+      value: cdktf.stringToHclTerraform(struct!.shardBy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppEngineServiceSplitTrafficSplitOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -166,6 +191,37 @@ export function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngi
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function appEngineServiceSplitTrafficTimeoutsToHclTerraform(struct?: AppEngineServiceSplitTrafficTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineServiceSplitTrafficTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -437,5 +493,49 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
       split: appEngineServiceSplitTrafficSplitToTerraform(this._split.internalValue),
       timeouts: appEngineServiceSplitTrafficTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      migrate_traffic: {
+        value: cdktf.booleanToHclTerraform(this._migrateTraffic),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service: {
+        value: cdktf.stringToHclTerraform(this._service),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      split: {
+        value: appEngineServiceSplitTrafficSplitToHclTerraform(this._split.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineServiceSplitTrafficSplitList",
+      },
+      timeouts: {
+        value: appEngineServiceSplitTrafficTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppEngineServiceSplitTrafficTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

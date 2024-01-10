@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.NewEndpointsServiceIamPolicy(scope Construct, id *string, config EndpointsServiceIamPolicyConfig) EndpointsServiceIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -125,6 +126,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.toMetadata"></a>
 
@@ -378,7 +385,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -410,7 +417,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -424,7 +431,7 @@ endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -438,7 +445,7 @@ endpointsserviceiampolicy.EndpointsServiceIamPolicy_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/endpointsserviceiampolicy"
 
 endpointsserviceiampolicy.EndpointsServiceIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -744,7 +751,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/endpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/endpointsserviceiampolicy"
 
 &endpointsserviceiampolicy.EndpointsServiceIamPolicyConfig {
 	Connection: interface{},

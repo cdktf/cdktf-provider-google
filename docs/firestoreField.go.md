@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.NewFirestoreField(scope Construct, id *string, config FirestoreFieldConfig) FirestoreField
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreField.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreField.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreField.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreField.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreField.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreField.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreField.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.firestoreField.FirestoreField.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.firestoreField.FirestoreField.toMetadata"></a>
 
@@ -452,7 +459,7 @@ func ResetTtlConfig()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firestoreField.FirestoreField.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.FirestoreField_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +491,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firestoreField.FirestoreField.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.FirestoreField_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +505,7 @@ firestorefield.FirestoreField_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firestoreField.FirestoreField.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.FirestoreField_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +519,7 @@ firestorefield.FirestoreField_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.firestoreField.FirestoreField.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.FirestoreField_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -928,7 +935,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 &firestorefield.FirestoreFieldConfig {
 	Connection: interface{},
@@ -942,10 +949,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
 	Field: *string,
 	Database: *string,
 	Id: *string,
-	IndexConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreField.FirestoreFieldIndexConfig,
+	IndexConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.firestoreField.FirestoreFieldIndexConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreField.FirestoreFieldTimeouts,
-	TtlConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.firestoreField.FirestoreFieldTtlConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.firestoreField.FirestoreFieldTimeouts,
+	TtlConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.firestoreField.FirestoreFieldTtlConfig,
 }
 ```
 
@@ -1157,7 +1164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 &firestorefield.FirestoreFieldIndexConfig {
 	Indexes: interface{},
@@ -1191,7 +1198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 &firestorefield.FirestoreFieldIndexConfigIndexes {
 	ArrayConfig: *string,
@@ -1261,7 +1268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 &firestorefield.FirestoreFieldTimeouts {
 	Create: *string,
@@ -1321,7 +1328,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreField.FirestoreFieldTtlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 &firestorefield.FirestoreFieldTtlConfig {
 
@@ -1336,7 +1343,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.NewFirestoreFieldIndexConfigIndexesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirestoreFieldIndexConfigIndexesList
 ```
@@ -1377,10 +1384,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1479,7 +1503,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigIndexesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.NewFirestoreFieldIndexConfigIndexesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirestoreFieldIndexConfigIndexesOutputReference
 ```
@@ -1833,7 +1857,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldIndexConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.NewFirestoreFieldIndexConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreFieldIndexConfigOutputReference
 ```
@@ -2124,7 +2148,7 @@ func InternalValue() FirestoreFieldIndexConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.NewFirestoreFieldTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreFieldTimeoutsOutputReference
 ```
@@ -2460,7 +2484,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreField.FirestoreFieldTtlConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/firestorefield"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/firestorefield"
 
 firestorefield.NewFirestoreFieldTtlConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreFieldTtlConfigOutputReference
 ```

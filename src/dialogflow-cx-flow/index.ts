@@ -118,6 +118,25 @@ export function dialogflowCxFlowAdvancedSettingsAudioExportGcsDestinationToTerra
   }
 }
 
+
+export function dialogflowCxFlowAdvancedSettingsAudioExportGcsDestinationToHclTerraform(struct?: DialogflowCxFlowAdvancedSettingsAudioExportGcsDestinationOutputReference | DialogflowCxFlowAdvancedSettingsAudioExportGcsDestination): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowAdvancedSettingsAudioExportGcsDestinationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -197,6 +216,37 @@ export function dialogflowCxFlowAdvancedSettingsDtmfSettingsToTerraform(struct?:
     finish_digit: cdktf.stringToTerraform(struct!.finishDigit),
     max_digits: cdktf.numberToTerraform(struct!.maxDigits),
   }
+}
+
+
+export function dialogflowCxFlowAdvancedSettingsDtmfSettingsToHclTerraform(struct?: DialogflowCxFlowAdvancedSettingsDtmfSettingsOutputReference | DialogflowCxFlowAdvancedSettingsDtmfSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    finish_digit: {
+      value: cdktf.stringToHclTerraform(struct!.finishDigit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_digits: {
+      value: cdktf.numberToHclTerraform(struct!.maxDigits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowAdvancedSettingsDtmfSettingsOutputReference extends cdktf.ComplexObject {
@@ -317,6 +367,31 @@ export function dialogflowCxFlowAdvancedSettingsToTerraform(struct?: DialogflowC
   }
 }
 
+
+export function dialogflowCxFlowAdvancedSettingsToHclTerraform(struct?: DialogflowCxFlowAdvancedSettingsOutputReference | DialogflowCxFlowAdvancedSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audio_export_gcs_destination: {
+      value: dialogflowCxFlowAdvancedSettingsAudioExportGcsDestinationToHclTerraform(struct!.audioExportGcsDestination),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowAdvancedSettingsAudioExportGcsDestinationList",
+    },
+    dtmf_settings: {
+      value: dialogflowCxFlowAdvancedSettingsDtmfSettingsToHclTerraform(struct!.dtmfSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowAdvancedSettingsDtmfSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowAdvancedSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -405,6 +480,25 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentConditionalCasesT
   return {
     cases: cdktf.stringToTerraform(struct!.cases),
   }
+}
+
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentConditionalCasesToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentConditionalCases | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cases: {
+      value: cdktf.stringToHclTerraform(struct!.cases),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentConditionalCasesOutputReference extends cdktf.ComplexObject {
@@ -506,6 +600,25 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesConversat
   }
 }
 
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesConversationSuccessToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesConversationSuccessOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesConversationSuccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesConversationSuccessOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -571,6 +684,25 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesLiveAgent
   return {
     metadata: cdktf.stringToTerraform(struct!.metadata),
   }
+}
+
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesLiveAgentHandoffToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesLiveAgentHandoffOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesLiveAgentHandoffOutputReference extends cdktf.ComplexObject {
@@ -645,6 +777,31 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputAud
     ssml: cdktf.stringToTerraform(struct!.ssml),
     text: cdktf.stringToTerraform(struct!.text),
   }
+}
+
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputAudioTextToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputAudioTextOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputAudioText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ssml: {
+      value: cdktf.stringToHclTerraform(struct!.ssml),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    text: {
+      value: cdktf.stringToHclTerraform(struct!.text),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputAudioTextOutputReference extends cdktf.ComplexObject {
@@ -741,6 +898,25 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesPlayAudio
   }
 }
 
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesPlayAudioToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesPlayAudioOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesPlayAudio): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audio_uri: {
+      value: cdktf.stringToHclTerraform(struct!.audioUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesPlayAudioOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -810,6 +986,25 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephony
   }
 }
 
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephonyTransferCallToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephonyTransferCallOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    phone_number: {
+      value: cdktf.stringToHclTerraform(struct!.phoneNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephonyTransferCallOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -872,6 +1067,25 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToTer
   return {
     text: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.text),
   }
+}
+
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    text: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.text),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
@@ -993,6 +1207,67 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToTerrafo
     telephony_transfer_call: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephonyTransferCallToTerraform(struct!.telephonyTransferCall),
     text: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToTerraform(struct!.text),
   }
+}
+
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentMessages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    channel: {
+      value: cdktf.stringToHclTerraform(struct!.channel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    payload: {
+      value: cdktf.stringToHclTerraform(struct!.payload),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conversation_success: {
+      value: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesConversationSuccessToHclTerraform(struct!.conversationSuccess),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesConversationSuccessList",
+    },
+    live_agent_handoff: {
+      value: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesLiveAgentHandoffToHclTerraform(struct!.liveAgentHandoff),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesLiveAgentHandoffList",
+    },
+    output_audio_text: {
+      value: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputAudioTextToHclTerraform(struct!.outputAudioText),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputAudioTextList",
+    },
+    play_audio: {
+      value: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesPlayAudioToHclTerraform(struct!.playAudio),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesPlayAudioList",
+    },
+    telephony_transfer_call: {
+      value: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephonyTransferCallToHclTerraform(struct!.telephonyTransferCall),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTelephonyTransferCallList",
+    },
+    text: {
+      value: dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToHclTerraform(struct!.text),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesOutputReference extends cdktf.ComplexObject {
@@ -1255,6 +1530,31 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentSetParameterActio
   }
 }
 
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentSetParameterActionsToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentSetParameterActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    parameter: {
+      value: cdktf.stringToHclTerraform(struct!.parameter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentSetParameterActionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1409,6 +1709,55 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentToTerraform(struc
     messages: cdktf.listMapper(dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToTerraform, true)(struct!.messages),
     set_parameter_actions: cdktf.listMapper(dialogflowCxFlowEventHandlersTriggerFulfillmentSetParameterActionsToTerraform, true)(struct!.setParameterActions),
   }
+}
+
+
+export function dialogflowCxFlowEventHandlersTriggerFulfillmentToHclTerraform(struct?: DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference | DialogflowCxFlowEventHandlersTriggerFulfillment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    return_partial_responses: {
+      value: cdktf.booleanToHclTerraform(struct!.returnPartialResponses),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook: {
+      value: cdktf.stringToHclTerraform(struct!.webhook),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conditional_cases: {
+      value: cdktf.listMapperHcl(dialogflowCxFlowEventHandlersTriggerFulfillmentConditionalCasesToHclTerraform, true)(struct!.conditionalCases),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentConditionalCasesList",
+    },
+    messages: {
+      value: cdktf.listMapperHcl(dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToHclTerraform, true)(struct!.messages),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesList",
+    },
+    set_parameter_actions: {
+      value: cdktf.listMapperHcl(dialogflowCxFlowEventHandlersTriggerFulfillmentSetParameterActionsToHclTerraform, true)(struct!.setParameterActions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentSetParameterActionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference extends cdktf.ComplexObject {
@@ -1611,6 +1960,43 @@ export function dialogflowCxFlowEventHandlersToTerraform(struct?: DialogflowCxFl
   }
 }
 
+
+export function dialogflowCxFlowEventHandlersToHclTerraform(struct?: DialogflowCxFlowEventHandlers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    event: {
+      value: cdktf.stringToHclTerraform(struct!.event),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_flow: {
+      value: cdktf.stringToHclTerraform(struct!.targetFlow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_page: {
+      value: cdktf.stringToHclTerraform(struct!.targetPage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    trigger_fulfillment: {
+      value: dialogflowCxFlowEventHandlersTriggerFulfillmentToHclTerraform(struct!.triggerFulfillment),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowEventHandlersTriggerFulfillmentList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowEventHandlersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1800,6 +2186,37 @@ export function dialogflowCxFlowNluSettingsToTerraform(struct?: DialogflowCxFlow
   }
 }
 
+
+export function dialogflowCxFlowNluSettingsToHclTerraform(struct?: DialogflowCxFlowNluSettingsOutputReference | DialogflowCxFlowNluSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classification_threshold: {
+      value: cdktf.numberToHclTerraform(struct!.classificationThreshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    model_training_mode: {
+      value: cdktf.stringToHclTerraform(struct!.modelTrainingMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    model_type: {
+      value: cdktf.stringToHclTerraform(struct!.modelType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1917,6 +2334,37 @@ export function dialogflowCxFlowTimeoutsToTerraform(struct?: DialogflowCxFlowTim
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dialogflowCxFlowTimeoutsToHclTerraform(struct?: DialogflowCxFlowTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2041,6 +2489,25 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentConditionalCas
   }
 }
 
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentConditionalCasesToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentConditionalCases | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cases: {
+      value: cdktf.stringToHclTerraform(struct!.cases),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentConditionalCasesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2140,6 +2607,25 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesConver
   }
 }
 
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesConversationSuccessToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesConversationSuccessOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesConversationSuccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesConversationSuccessOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2205,6 +2691,25 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesLiveAg
   return {
     metadata: cdktf.stringToTerraform(struct!.metadata),
   }
+}
+
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoffToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoffOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoffOutputReference extends cdktf.ComplexObject {
@@ -2279,6 +2784,31 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutput
     ssml: cdktf.stringToTerraform(struct!.ssml),
     text: cdktf.stringToTerraform(struct!.text),
   }
+}
+
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutputAudioTextToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutputAudioTextOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutputAudioText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ssml: {
+      value: cdktf.stringToHclTerraform(struct!.ssml),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    text: {
+      value: cdktf.stringToHclTerraform(struct!.text),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutputAudioTextOutputReference extends cdktf.ComplexObject {
@@ -2375,6 +2905,25 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesPlayAu
   }
 }
 
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesPlayAudioToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesPlayAudioOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesPlayAudio): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audio_uri: {
+      value: cdktf.stringToHclTerraform(struct!.audioUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesPlayAudioOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2444,6 +2993,25 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTeleph
   }
 }
 
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCallToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCallOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    phone_number: {
+      value: cdktf.stringToHclTerraform(struct!.phoneNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCallOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2506,6 +3074,25 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextTo
   return {
     text: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.text),
   }
+}
+
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    text: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.text),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
@@ -2627,6 +3214,67 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToTerr
     telephony_transfer_call: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCallToTerraform(struct!.telephonyTransferCall),
     text: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextToTerraform(struct!.text),
   }
+}
+
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    channel: {
+      value: cdktf.stringToHclTerraform(struct!.channel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    payload: {
+      value: cdktf.stringToHclTerraform(struct!.payload),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conversation_success: {
+      value: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesConversationSuccessToHclTerraform(struct!.conversationSuccess),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesConversationSuccessList",
+    },
+    live_agent_handoff: {
+      value: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoffToHclTerraform(struct!.liveAgentHandoff),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoffList",
+    },
+    output_audio_text: {
+      value: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutputAudioTextToHclTerraform(struct!.outputAudioText),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutputAudioTextList",
+    },
+    play_audio: {
+      value: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesPlayAudioToHclTerraform(struct!.playAudio),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesPlayAudioList",
+    },
+    telephony_transfer_call: {
+      value: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCallToHclTerraform(struct!.telephonyTransferCall),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCallList",
+    },
+    text: {
+      value: dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextToHclTerraform(struct!.text),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesOutputReference extends cdktf.ComplexObject {
@@ -2889,6 +3537,31 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentSetParameterAc
   }
 }
 
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentSetParameterActionsToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentSetParameterActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    parameter: {
+      value: cdktf.stringToHclTerraform(struct!.parameter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentSetParameterActionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -3043,6 +3716,55 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentToTerraform(st
     messages: cdktf.listMapper(dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToTerraform, true)(struct!.messages),
     set_parameter_actions: cdktf.listMapper(dialogflowCxFlowTransitionRoutesTriggerFulfillmentSetParameterActionsToTerraform, true)(struct!.setParameterActions),
   }
+}
+
+
+export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentToHclTerraform(struct?: DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference | DialogflowCxFlowTransitionRoutesTriggerFulfillment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    return_partial_responses: {
+      value: cdktf.booleanToHclTerraform(struct!.returnPartialResponses),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook: {
+      value: cdktf.stringToHclTerraform(struct!.webhook),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conditional_cases: {
+      value: cdktf.listMapperHcl(dialogflowCxFlowTransitionRoutesTriggerFulfillmentConditionalCasesToHclTerraform, true)(struct!.conditionalCases),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentConditionalCasesList",
+    },
+    messages: {
+      value: cdktf.listMapperHcl(dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToHclTerraform, true)(struct!.messages),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesList",
+    },
+    set_parameter_actions: {
+      value: cdktf.listMapperHcl(dialogflowCxFlowTransitionRoutesTriggerFulfillmentSetParameterActionsToHclTerraform, true)(struct!.setParameterActions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentSetParameterActionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference extends cdktf.ComplexObject {
@@ -3252,6 +3974,49 @@ export function dialogflowCxFlowTransitionRoutesToTerraform(struct?: DialogflowC
     target_page: cdktf.stringToTerraform(struct!.targetPage),
     trigger_fulfillment: dialogflowCxFlowTransitionRoutesTriggerFulfillmentToTerraform(struct!.triggerFulfillment),
   }
+}
+
+
+export function dialogflowCxFlowTransitionRoutesToHclTerraform(struct?: DialogflowCxFlowTransitionRoutes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    condition: {
+      value: cdktf.stringToHclTerraform(struct!.condition),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    intent: {
+      value: cdktf.stringToHclTerraform(struct!.intent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_flow: {
+      value: cdktf.stringToHclTerraform(struct!.targetFlow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_page: {
+      value: cdktf.stringToHclTerraform(struct!.targetPage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    trigger_fulfillment: {
+      value: dialogflowCxFlowTransitionRoutesTriggerFulfillmentToHclTerraform(struct!.triggerFulfillment),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxFlowTransitionRoutesTriggerFulfillmentList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxFlowTransitionRoutesOutputReference extends cdktf.ComplexObject {
@@ -3710,5 +4475,85 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
       timeouts: dialogflowCxFlowTimeoutsToTerraform(this._timeouts.internalValue),
       transition_routes: cdktf.listMapper(dialogflowCxFlowTransitionRoutesToTerraform, true)(this._transitionRoutes.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_default_start_flow: {
+        value: cdktf.booleanToHclTerraform(this._isDefaultStartFlow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      language_code: {
+        value: cdktf.stringToHclTerraform(this._languageCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent: {
+        value: cdktf.stringToHclTerraform(this._parent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      transition_route_groups: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._transitionRouteGroups),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      advanced_settings: {
+        value: dialogflowCxFlowAdvancedSettingsToHclTerraform(this._advancedSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxFlowAdvancedSettingsList",
+      },
+      event_handlers: {
+        value: cdktf.listMapperHcl(dialogflowCxFlowEventHandlersToHclTerraform, true)(this._eventHandlers.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxFlowEventHandlersList",
+      },
+      nlu_settings: {
+        value: dialogflowCxFlowNluSettingsToHclTerraform(this._nluSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxFlowNluSettingsList",
+      },
+      timeouts: {
+        value: dialogflowCxFlowTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DialogflowCxFlowTimeouts",
+      },
+      transition_routes: {
+        value: cdktf.listMapperHcl(dialogflowCxFlowTransitionRoutesToHclTerraform, true)(this._transitionRoutes.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxFlowTransitionRoutesList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglegkebackuprestoreplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglegkebackuprestoreplaniampolicy"
 
 datagooglegkebackuprestoreplaniampolicy.NewDataGoogleGkeBackupRestorePlanIamPolicy(scope Construct, id *string, config DataGoogleGkeBackupRestorePlanIamPolicyConfig) DataGoogleGkeBackupRestorePlanIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -121,6 +122,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.toMetadata"></a>
 
@@ -288,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglegkebackuprestoreplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglegkebackuprestoreplaniampolicy"
 
 datagooglegkebackuprestoreplaniampolicy.DataGoogleGkeBackupRestorePlanIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglegkebackuprestoreplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglegkebackuprestoreplaniampolicy"
 
 datagooglegkebackuprestoreplaniampolicy.DataGoogleGkeBackupRestorePlanIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagooglegkebackuprestoreplaniampolicy.DataGoogleGkeBackupRestorePlanIamPolicy_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglegkebackuprestoreplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglegkebackuprestoreplaniampolicy"
 
 datagooglegkebackuprestoreplaniampolicy.DataGoogleGkeBackupRestorePlanIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +357,7 @@ datagooglegkebackuprestoreplaniampolicy.DataGoogleGkeBackupRestorePlanIamPolicy_
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglegkebackuprestoreplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglegkebackuprestoreplaniampolicy"
 
 datagooglegkebackuprestoreplaniampolicy.DataGoogleGkeBackupRestorePlanIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -665,7 +674,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleGkeBackupRestorePlanIamPolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglegkebackuprestoreplaniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglegkebackuprestoreplaniampolicy"
 
 &datagooglegkebackuprestoreplaniampolicy.DataGoogleGkeBackupRestorePlanIamPolicyConfig {
 	Connection: interface{},

@@ -64,6 +64,31 @@ export function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: Org
   }
 }
 
+
+export function organizationIamAuditConfigAuditLogConfigToHclTerraform(struct?: OrganizationIamAuditConfigAuditLogConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    exempted_members: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.exemptedMembers),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    log_type: {
+      value: cdktf.stringToHclTerraform(struct!.logType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OrganizationIamAuditConfigAuditLogConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -296,5 +321,37 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
       service: cdktf.stringToTerraform(this._service),
       audit_log_config: cdktf.listMapper(organizationIamAuditConfigAuditLogConfigToTerraform, true)(this._auditLogConfig.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_id: {
+        value: cdktf.stringToHclTerraform(this._orgId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service: {
+        value: cdktf.stringToHclTerraform(this._service),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      audit_log_config: {
+        value: cdktf.listMapperHcl(organizationIamAuditConfigAuditLogConfigToHclTerraform, true)(this._auditLogConfig.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "OrganizationIamAuditConfigAuditLogConfigList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

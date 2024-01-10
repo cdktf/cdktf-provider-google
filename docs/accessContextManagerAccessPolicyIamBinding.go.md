@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 accesscontextmanageraccesspolicyiambinding.NewAccessContextManagerAccessPolicyIamBinding(scope Construct, id *string, config AccessContextManagerAccessPolicyIamBindingConfig) AccessContextManagerAccessPolicyIamBinding
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBi
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBi
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -808,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 &accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBindingCondition {
 	Expression: *string,
@@ -868,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 &accesscontextmanageraccesspolicyiambinding.AccessContextManagerAccessPolicyIamBindingConfig {
 	Connection: interface{},
@@ -881,7 +888,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanage
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -1047,7 +1054,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamBinding.AccessContextManagerAccessPolicyIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/accesscontextmanageraccesspolicyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/accesscontextmanageraccesspolicyiambinding"
 
 accesscontextmanageraccesspolicyiambinding.NewAccessContextManagerAccessPolicyIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessPolicyIamBindingConditionOutputReference
 ```

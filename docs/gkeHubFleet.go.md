@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleet(scope Construct, id *string, config GkeHubFleetConfig) GkeHubFleet
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleet.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleet.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleet.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleet.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleet.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleet.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleet.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleet.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleet.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.GkeHubFleet_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.GkeHubFleet_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ gkehubfleet.GkeHubFleet_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.GkeHubFleet_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ gkehubfleet.GkeHubFleet_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.GkeHubFleet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -886,7 +893,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 &gkehubfleet.GkeHubFleetConfig {
 	Connection: interface{},
@@ -896,11 +903,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	DefaultClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeHubFleet.GkeHubFleetDefaultClusterConfig,
+	DefaultClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeHubFleet.GkeHubFleetDefaultClusterConfig,
 	DisplayName: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeHubFleet.GkeHubFleetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeHubFleet.GkeHubFleetTimeouts,
 }
 ```
 
@@ -1070,11 +1077,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 &gkehubfleet.GkeHubFleetDefaultClusterConfig {
-	BinaryAuthorizationConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfig,
-	SecurityPostureConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeHubFleet.GkeHubFleetDefaultClusterConfigSecurityPostureConfig,
+	BinaryAuthorizationConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfig,
+	SecurityPostureConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeHubFleet.GkeHubFleetDefaultClusterConfigSecurityPostureConfig,
 }
 ```
 
@@ -1120,7 +1127,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 &gkehubfleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfig {
 	EvaluationMode: *string,
@@ -1170,7 +1177,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 &gkehubfleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindings {
 	Name: *string,
@@ -1204,7 +1211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigSecurityPostureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 &gkehubfleet.GkeHubFleetDefaultClusterConfigSecurityPostureConfig {
 	Mode: *string,
@@ -1254,7 +1261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetState.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 &gkehubfleet.GkeHubFleetState {
 
@@ -1267,7 +1274,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 &gkehubfleet.GkeHubFleetTimeouts {
 	Create: *string,
@@ -1329,7 +1336,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigOutputReference
 ```
@@ -1649,7 +1656,7 @@ func InternalValue() GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList
 ```
@@ -1690,10 +1697,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1792,7 +1816,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeHubFleetDefaultClusterConfigBinaryAuthorizationConfigPolicyBindingsOutputReference
 ```
@@ -2088,7 +2112,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetDefaultClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubFleetDefaultClusterConfigOutputReference
 ```
@@ -2421,7 +2445,7 @@ func InternalValue() GkeHubFleetDefaultClusterConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetDefaultClusterConfigSecurityPostureConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetDefaultClusterConfigSecurityPostureConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubFleetDefaultClusterConfigSecurityPostureConfigOutputReference
 ```
@@ -2728,7 +2752,7 @@ func InternalValue() GkeHubFleetDefaultClusterConfigSecurityPostureConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetStateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeHubFleetStateList
 ```
@@ -2769,10 +2793,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2860,7 +2901,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetStateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetStateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeHubFleetStateOutputReference
 ```
@@ -3138,7 +3179,7 @@ func InternalValue() GkeHubFleetState
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubFleet.GkeHubFleetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubfleet"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubfleet"
 
 gkehubfleet.NewGkeHubFleetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubFleetTimeoutsOutputReference
 ```

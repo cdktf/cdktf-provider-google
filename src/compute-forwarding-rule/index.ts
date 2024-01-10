@@ -400,6 +400,31 @@ export function computeForwardingRuleServiceDirectoryRegistrationsToTerraform(st
   }
 }
 
+
+export function computeForwardingRuleServiceDirectoryRegistrationsToHclTerraform(struct?: ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference | ComputeForwardingRuleServiceDirectoryRegistrations): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    namespace: {
+      value: cdktf.stringToHclTerraform(struct!.namespace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -495,6 +520,37 @@ export function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForward
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeForwardingRuleTimeoutsToHclTerraform(struct?: ComputeForwardingRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1194,5 +1250,175 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       service_directory_registrations: computeForwardingRuleServiceDirectoryRegistrationsToTerraform(this._serviceDirectoryRegistrations.internalValue),
       timeouts: computeForwardingRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      all_ports: {
+        value: cdktf.booleanToHclTerraform(this._allPorts),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      allow_global_access: {
+        value: cdktf.booleanToHclTerraform(this._allowGlobalAccess),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      allow_psc_global_access: {
+        value: cdktf.booleanToHclTerraform(this._allowPscGlobalAccess),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      backend_service: {
+        value: cdktf.stringToHclTerraform(this._backendService),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_address: {
+        value: cdktf.stringToHclTerraform(this._ipAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_protocol: {
+        value: cdktf.stringToHclTerraform(this._ipProtocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_version: {
+        value: cdktf.stringToHclTerraform(this._ipVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_mirroring_collector: {
+        value: cdktf.booleanToHclTerraform(this._isMirroringCollector),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      load_balancing_scheme: {
+        value: cdktf.stringToHclTerraform(this._loadBalancingScheme),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_tier: {
+        value: cdktf.stringToHclTerraform(this._networkTier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      no_automate_dns_zone: {
+        value: cdktf.booleanToHclTerraform(this._noAutomateDnsZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      port_range: {
+        value: cdktf.stringToHclTerraform(this._portRange),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ports: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._ports),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recreate_closed_psc: {
+        value: cdktf.booleanToHclTerraform(this._recreateClosedPsc),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_label: {
+        value: cdktf.stringToHclTerraform(this._serviceLabel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_ip_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._sourceIpRanges),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      subnetwork: {
+        value: cdktf.stringToHclTerraform(this._subnetwork),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target: {
+        value: cdktf.stringToHclTerraform(this._target),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_directory_registrations: {
+        value: computeForwardingRuleServiceDirectoryRegistrationsToHclTerraform(this._serviceDirectoryRegistrations.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeForwardingRuleServiceDirectoryRegistrationsList",
+      },
+      timeouts: {
+        value: computeForwardingRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeForwardingRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

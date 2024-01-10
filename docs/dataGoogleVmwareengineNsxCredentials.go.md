@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.NewDataGoogleVmwareengineNsxCredentials(scope Construct, id *string, config DataGoogleVmwareengineNsxCredentialsConfig) DataGoogleVmwareengineNsxCredentials
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -119,6 +120,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.toMetadata"></a>
 
@@ -274,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -607,7 +616,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentialsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglevmwareenginensxcredentials"
 
 &datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentialsConfig {
 	Connection: interface{},

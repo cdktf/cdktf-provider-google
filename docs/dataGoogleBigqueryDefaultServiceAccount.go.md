@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.NewDataGoogleBigqueryDefaultServiceAccount(scope Construct, id *string, config DataGoogleBigqueryDefaultServiceAccountConfig) DataGoogleBigqueryDefaultServiceAccount
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -120,6 +121,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.toMetadata"></a>
 
@@ -281,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_IsConstruct(x interface{}) *bool
 ```
@@ -313,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -327,7 +336,7 @@ datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -341,7 +350,7 @@ datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebigquerydefaultserviceaccount"
 
 datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -614,7 +623,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebigquerydefaultserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebigquerydefaultserviceaccount"
 
 &datagooglebigquerydefaultserviceaccount.DataGoogleBigqueryDefaultServiceAccountConfig {
 	Connection: interface{},

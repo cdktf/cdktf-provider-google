@@ -103,6 +103,25 @@ export function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(stru
   }
 }
 
+
+export function osConfigPatchDeploymentInstanceFilterGroupLabelsToHclTerraform(struct?: OsConfigPatchDeploymentInstanceFilterGroupLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentInstanceFilterGroupLabelsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -228,6 +247,49 @@ export function osConfigPatchDeploymentInstanceFilterToTerraform(struct?: OsConf
     zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
     group_labels: cdktf.listMapper(osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform, true)(struct!.groupLabels),
   }
+}
+
+
+export function osConfigPatchDeploymentInstanceFilterToHclTerraform(struct?: OsConfigPatchDeploymentInstanceFilterOutputReference | OsConfigPatchDeploymentInstanceFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    all: {
+      value: cdktf.booleanToHclTerraform(struct!.all),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    instance_name_prefixes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.instanceNamePrefixes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    instances: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.instances),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    zones: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.zones),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    group_labels: {
+      value: cdktf.listMapperHcl(osConfigPatchDeploymentInstanceFilterGroupLabelsToHclTerraform, true)(struct!.groupLabels),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentInstanceFilterGroupLabelsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.ComplexObject {
@@ -386,6 +448,25 @@ export function osConfigPatchDeploymentOneTimeScheduleToTerraform(struct?: OsCon
   }
 }
 
+
+export function osConfigPatchDeploymentOneTimeScheduleToHclTerraform(struct?: OsConfigPatchDeploymentOneTimeScheduleOutputReference | OsConfigPatchDeploymentOneTimeSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    execute_time: {
+      value: cdktf.stringToHclTerraform(struct!.executeTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -464,6 +545,37 @@ export function osConfigPatchDeploymentPatchConfigAptToTerraform(struct?: OsConf
     exclusive_packages: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exclusivePackages),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigAptToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigAptOutputReference | OsConfigPatchDeploymentPatchConfigApt): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    excludes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclusive_packages: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.exclusivePackages),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.ComplexObject {
@@ -577,6 +689,25 @@ export function osConfigPatchDeploymentPatchConfigGooToTerraform(struct?: OsConf
   }
 }
 
+
+export function osConfigPatchDeploymentPatchConfigGooToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigGooOutputReference | OsConfigPatchDeploymentPatchConfigGoo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -653,6 +784,37 @@ export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcs
     generation_number: cdktf.stringToTerraform(struct!.generationNumber),
     object: cdktf.stringToTerraform(struct!.object),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktf.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    generation_number: {
+      value: cdktf.stringToHclTerraform(struct!.generationNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object: {
+      value: cdktf.stringToHclTerraform(struct!.object),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
@@ -777,6 +939,43 @@ export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToT
     local_path: cdktf.stringToTerraform(struct!.localPath),
     gcs_object: osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToTerraform(struct!.gcsObject),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_success_codes: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.allowedSuccessCodes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    interpreter: {
+      value: cdktf.stringToHclTerraform(struct!.interpreter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_path: {
+      value: cdktf.stringToHclTerraform(struct!.localPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    gcs_object: {
+      value: osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToHclTerraform(struct!.gcsObject),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference extends cdktf.ComplexObject {
@@ -926,6 +1125,37 @@ export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigG
   }
 }
 
+
+export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktf.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    generation_number: {
+      value: cdktf.stringToHclTerraform(struct!.generationNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object: {
+      value: cdktf.stringToHclTerraform(struct!.object),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1048,6 +1278,43 @@ export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigT
     local_path: cdktf.stringToTerraform(struct!.localPath),
     gcs_object: osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToTerraform(struct!.gcsObject),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_success_codes: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.allowedSuccessCodes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    interpreter: {
+      value: cdktf.stringToHclTerraform(struct!.interpreter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_path: {
+      value: cdktf.stringToHclTerraform(struct!.localPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    gcs_object: {
+      value: osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToHclTerraform(struct!.gcsObject),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference extends cdktf.ComplexObject {
@@ -1190,6 +1457,31 @@ export function osConfigPatchDeploymentPatchConfigPostStepToTerraform(struct?: O
   }
 }
 
+
+export function osConfigPatchDeploymentPatchConfigPostStepToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepOutputReference | OsConfigPatchDeploymentPatchConfigPostStep): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    linux_exec_step_config: {
+      value: osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToHclTerraform(struct!.linuxExecStepConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigList",
+    },
+    windows_exec_step_config: {
+      value: osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigToHclTerraform(struct!.windowsExecStepConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1291,6 +1583,37 @@ export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsO
     generation_number: cdktf.stringToTerraform(struct!.generationNumber),
     object: cdktf.stringToTerraform(struct!.object),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktf.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    generation_number: {
+      value: cdktf.stringToHclTerraform(struct!.generationNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object: {
+      value: cdktf.stringToHclTerraform(struct!.object),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
@@ -1415,6 +1738,43 @@ export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToTe
     local_path: cdktf.stringToTerraform(struct!.localPath),
     gcs_object: osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToTerraform(struct!.gcsObject),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_success_codes: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.allowedSuccessCodes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    interpreter: {
+      value: cdktf.stringToHclTerraform(struct!.interpreter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_path: {
+      value: cdktf.stringToHclTerraform(struct!.localPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    gcs_object: {
+      value: osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToHclTerraform(struct!.gcsObject),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference extends cdktf.ComplexObject {
@@ -1564,6 +1924,37 @@ export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGc
   }
 }
 
+
+export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktf.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    generation_number: {
+      value: cdktf.stringToHclTerraform(struct!.generationNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object: {
+      value: cdktf.stringToHclTerraform(struct!.object),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1686,6 +2077,43 @@ export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigTo
     local_path: cdktf.stringToTerraform(struct!.localPath),
     gcs_object: osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToTerraform(struct!.gcsObject),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_success_codes: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.allowedSuccessCodes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    interpreter: {
+      value: cdktf.stringToHclTerraform(struct!.interpreter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_path: {
+      value: cdktf.stringToHclTerraform(struct!.localPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    gcs_object: {
+      value: osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToHclTerraform(struct!.gcsObject),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference extends cdktf.ComplexObject {
@@ -1828,6 +2256,31 @@ export function osConfigPatchDeploymentPatchConfigPreStepToTerraform(struct?: Os
   }
 }
 
+
+export function osConfigPatchDeploymentPatchConfigPreStepToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepOutputReference | OsConfigPatchDeploymentPatchConfigPreStep): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    linux_exec_step_config: {
+      value: osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToHclTerraform(struct!.linuxExecStepConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigList",
+    },
+    windows_exec_step_config: {
+      value: osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigToHclTerraform(struct!.windowsExecStepConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1930,6 +2383,37 @@ export function osConfigPatchDeploymentPatchConfigWindowsUpdateToTerraform(struc
     excludes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludes),
     exclusive_patches: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exclusivePatches),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigWindowsUpdateToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference | OsConfigPatchDeploymentPatchConfigWindowsUpdate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classifications: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.classifications),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    excludes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclusive_patches: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.exclusivePatches),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference extends cdktf.ComplexObject {
@@ -2064,6 +2548,43 @@ export function osConfigPatchDeploymentPatchConfigYumToTerraform(struct?: OsConf
     minimal: cdktf.booleanToTerraform(struct!.minimal),
     security: cdktf.booleanToTerraform(struct!.security),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigYumToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigYumOutputReference | OsConfigPatchDeploymentPatchConfigYum): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    excludes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclusive_packages: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.exclusivePackages),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    minimal: {
+      value: cdktf.booleanToHclTerraform(struct!.minimal),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    security: {
+      value: cdktf.booleanToHclTerraform(struct!.security),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.ComplexObject {
@@ -2233,6 +2754,55 @@ export function osConfigPatchDeploymentPatchConfigZypperToTerraform(struct?: OsC
     with_optional: cdktf.booleanToTerraform(struct!.withOptional),
     with_update: cdktf.booleanToTerraform(struct!.withUpdate),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigZypperToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigZypperOutputReference | OsConfigPatchDeploymentPatchConfigZypper): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    categories: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.categories),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    excludes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclusive_patches: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.exclusivePatches),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    severities: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.severities),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    with_optional: {
+      value: cdktf.booleanToHclTerraform(struct!.withOptional),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    with_update: {
+      value: cdktf.booleanToHclTerraform(struct!.withUpdate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdktf.ComplexObject {
@@ -2466,6 +3036,73 @@ export function osConfigPatchDeploymentPatchConfigToTerraform(struct?: OsConfigP
     yum: osConfigPatchDeploymentPatchConfigYumToTerraform(struct!.yum),
     zypper: osConfigPatchDeploymentPatchConfigZypperToTerraform(struct!.zypper),
   }
+}
+
+
+export function osConfigPatchDeploymentPatchConfigToHclTerraform(struct?: OsConfigPatchDeploymentPatchConfigOutputReference | OsConfigPatchDeploymentPatchConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mig_instances_allowed: {
+      value: cdktf.booleanToHclTerraform(struct!.migInstancesAllowed),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    reboot_config: {
+      value: cdktf.stringToHclTerraform(struct!.rebootConfig),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    apt: {
+      value: osConfigPatchDeploymentPatchConfigAptToHclTerraform(struct!.apt),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigAptList",
+    },
+    goo: {
+      value: osConfigPatchDeploymentPatchConfigGooToHclTerraform(struct!.goo),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigGooList",
+    },
+    post_step: {
+      value: osConfigPatchDeploymentPatchConfigPostStepToHclTerraform(struct!.postStep),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPostStepList",
+    },
+    pre_step: {
+      value: osConfigPatchDeploymentPatchConfigPreStepToHclTerraform(struct!.preStep),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigPreStepList",
+    },
+    windows_update: {
+      value: osConfigPatchDeploymentPatchConfigWindowsUpdateToHclTerraform(struct!.windowsUpdate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigWindowsUpdateList",
+    },
+    yum: {
+      value: osConfigPatchDeploymentPatchConfigYumToHclTerraform(struct!.yum),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigYumList",
+    },
+    zypper: {
+      value: osConfigPatchDeploymentPatchConfigZypperToHclTerraform(struct!.zypper),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentPatchConfigZypperList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.ComplexObject {
@@ -2725,6 +3362,37 @@ export function osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToT
   }
 }
 
+
+export function osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToHclTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    day_offset: {
+      value: cdktf.numberToHclTerraform(struct!.dayOffset),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    week_ordinal: {
+      value: cdktf.numberToHclTerraform(struct!.weekOrdinal),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2839,6 +3507,31 @@ export function osConfigPatchDeploymentRecurringScheduleMonthlyToTerraform(struc
   }
 }
 
+
+export function osConfigPatchDeploymentRecurringScheduleMonthlyToHclTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthly): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    month_day: {
+      value: cdktf.numberToHclTerraform(struct!.monthDay),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    week_day_of_month: {
+      value: osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToHclTerraform(struct!.weekDayOfMonth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2948,6 +3641,43 @@ export function osConfigPatchDeploymentRecurringScheduleTimeOfDayToTerraform(str
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function osConfigPatchDeploymentRecurringScheduleTimeOfDayToHclTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeOfDay): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference extends cdktf.ComplexObject {
@@ -3093,6 +3823,31 @@ export function osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform(stru
   }
 }
 
+
+export function osConfigPatchDeploymentRecurringScheduleTimeZoneToHclTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeZone): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3177,6 +3932,25 @@ export function osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform(struct
   return {
     day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
   }
+}
+
+
+export function osConfigPatchDeploymentRecurringScheduleWeeklyToHclTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference | OsConfigPatchDeploymentRecurringScheduleWeekly): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference extends cdktf.ComplexObject {
@@ -3278,6 +4052,55 @@ export function osConfigPatchDeploymentRecurringScheduleToTerraform(struct?: OsC
     time_zone: osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform(struct!.timeZone),
     weekly: osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform(struct!.weekly),
   }
+}
+
+
+export function osConfigPatchDeploymentRecurringScheduleToHclTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleOutputReference | OsConfigPatchDeploymentRecurringSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_time: {
+      value: cdktf.stringToHclTerraform(struct!.endTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    monthly: {
+      value: osConfigPatchDeploymentRecurringScheduleMonthlyToHclTerraform(struct!.monthly),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentRecurringScheduleMonthlyList",
+    },
+    time_of_day: {
+      value: osConfigPatchDeploymentRecurringScheduleTimeOfDayToHclTerraform(struct!.timeOfDay),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentRecurringScheduleTimeOfDayList",
+    },
+    time_zone: {
+      value: osConfigPatchDeploymentRecurringScheduleTimeZoneToHclTerraform(struct!.timeZone),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentRecurringScheduleTimeZoneList",
+    },
+    weekly: {
+      value: osConfigPatchDeploymentRecurringScheduleWeeklyToHclTerraform(struct!.weekly),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentRecurringScheduleWeeklyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdktf.ComplexObject {
@@ -3468,6 +4291,31 @@ export function osConfigPatchDeploymentRolloutDisruptionBudgetToTerraform(struct
   }
 }
 
+
+export function osConfigPatchDeploymentRolloutDisruptionBudgetToHclTerraform(struct?: OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference | OsConfigPatchDeploymentRolloutDisruptionBudget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    fixed: {
+      value: cdktf.numberToHclTerraform(struct!.fixed),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    percentage: {
+      value: cdktf.numberToHclTerraform(struct!.percentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3564,6 +4412,31 @@ export function osConfigPatchDeploymentRolloutToTerraform(struct?: OsConfigPatch
   }
 }
 
+
+export function osConfigPatchDeploymentRolloutToHclTerraform(struct?: OsConfigPatchDeploymentRolloutOutputReference | OsConfigPatchDeploymentRollout): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disruption_budget: {
+      value: osConfigPatchDeploymentRolloutDisruptionBudgetToHclTerraform(struct!.disruptionBudget),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OsConfigPatchDeploymentRolloutDisruptionBudgetList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3648,6 +4521,31 @@ export function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatc
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function osConfigPatchDeploymentTimeoutsToHclTerraform(struct?: OsConfigPatchDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -4007,5 +4905,79 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
       rollout: osConfigPatchDeploymentRolloutToTerraform(this._rollout.internalValue),
       timeouts: osConfigPatchDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      duration: {
+        value: cdktf.stringToHclTerraform(this._duration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      patch_deployment_id: {
+        value: cdktf.stringToHclTerraform(this._patchDeploymentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_filter: {
+        value: osConfigPatchDeploymentInstanceFilterToHclTerraform(this._instanceFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "OsConfigPatchDeploymentInstanceFilterList",
+      },
+      one_time_schedule: {
+        value: osConfigPatchDeploymentOneTimeScheduleToHclTerraform(this._oneTimeSchedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "OsConfigPatchDeploymentOneTimeScheduleList",
+      },
+      patch_config: {
+        value: osConfigPatchDeploymentPatchConfigToHclTerraform(this._patchConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "OsConfigPatchDeploymentPatchConfigList",
+      },
+      recurring_schedule: {
+        value: osConfigPatchDeploymentRecurringScheduleToHclTerraform(this._recurringSchedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "OsConfigPatchDeploymentRecurringScheduleList",
+      },
+      rollout: {
+        value: osConfigPatchDeploymentRolloutToHclTerraform(this._rollout.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "OsConfigPatchDeploymentRolloutList",
+      },
+      timeouts: {
+        value: osConfigPatchDeploymentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "OsConfigPatchDeploymentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

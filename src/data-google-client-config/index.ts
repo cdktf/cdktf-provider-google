@@ -104,4 +104,10 @@ export class DataGoogleClientConfig extends cdktf.TerraformDataSource {
     return {
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+    };
+    return attrs;
+  }
 }

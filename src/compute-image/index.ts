@@ -159,6 +159,25 @@ export function computeImageGuestOsFeaturesToTerraform(struct?: ComputeImageGues
   }
 }
 
+
+export function computeImageGuestOsFeaturesToHclTerraform(struct?: ComputeImageGuestOsFeatures | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeImageGuestOsFeaturesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -263,6 +282,31 @@ export function computeImageImageEncryptionKeyToTerraform(struct?: ComputeImageI
     kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
     kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
   }
+}
+
+
+export function computeImageImageEncryptionKeyToHclTerraform(struct?: ComputeImageImageEncryptionKeyOutputReference | ComputeImageImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_self_link: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeySelfLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeImageImageEncryptionKeyOutputReference extends cdktf.ComplexObject {
@@ -372,6 +416,37 @@ export function computeImageRawDiskToTerraform(struct?: ComputeImageRawDiskOutpu
     sha1: cdktf.stringToTerraform(struct!.sha1),
     source: cdktf.stringToTerraform(struct!.source),
   }
+}
+
+
+export function computeImageRawDiskToHclTerraform(struct?: ComputeImageRawDiskOutputReference | ComputeImageRawDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container_type: {
+      value: cdktf.stringToHclTerraform(struct!.containerType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sha1: {
+      value: cdktf.stringToHclTerraform(struct!.sha1),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source: {
+      value: cdktf.stringToHclTerraform(struct!.source),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeImageRawDiskOutputReference extends cdktf.ComplexObject {
@@ -488,6 +563,37 @@ export function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeouts | 
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeImageTimeoutsToHclTerraform(struct?: ComputeImageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -974,5 +1080,109 @@ export class ComputeImage extends cdktf.TerraformResource {
       raw_disk: computeImageRawDiskToTerraform(this._rawDisk.internalValue),
       timeouts: computeImageTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disk_size_gb: {
+        value: cdktf.numberToHclTerraform(this._diskSizeGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      family: {
+        value: cdktf.stringToHclTerraform(this._family),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      licenses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._licenses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_disk: {
+        value: cdktf.stringToHclTerraform(this._sourceDisk),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_image: {
+        value: cdktf.stringToHclTerraform(this._sourceImage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_snapshot: {
+        value: cdktf.stringToHclTerraform(this._sourceSnapshot),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_locations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._storageLocations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      guest_os_features: {
+        value: cdktf.listMapperHcl(computeImageGuestOsFeaturesToHclTerraform, true)(this._guestOsFeatures.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ComputeImageGuestOsFeaturesList",
+      },
+      image_encryption_key: {
+        value: computeImageImageEncryptionKeyToHclTerraform(this._imageEncryptionKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeImageImageEncryptionKeyList",
+      },
+      raw_disk: {
+        value: computeImageRawDiskToHclTerraform(this._rawDisk.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeImageRawDiskList",
+      },
+      timeouts: {
+        value: computeImageTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeImageTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

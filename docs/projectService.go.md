@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectService.ProjectService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 projectservice.NewProjectService(scope Construct, id *string, config ProjectServiceConfig) ProjectService
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.projectService.ProjectService.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectService.ProjectService.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.projectService.ProjectService.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.projectService.ProjectService.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectService.ProjectService.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectService.ProjectService.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.projectService.ProjectService.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.projectService.ProjectService.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.projectService.ProjectService.toMetadata"></a>
 
@@ -419,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.projectService.ProjectService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 projectservice.ProjectService_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.projectService.ProjectService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 projectservice.ProjectService_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ projectservice.ProjectService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.projectService.ProjectService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 projectservice.ProjectService_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ projectservice.ProjectService_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.projectService.ProjectService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 projectservice.ProjectService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -840,7 +847,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectService.ProjectServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 &projectservice.ProjectServiceConfig {
 	Connection: interface{},
@@ -855,7 +862,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
 	DisableOnDestroy: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.projectService.ProjectServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.projectService.ProjectServiceTimeouts,
 }
 ```
 
@@ -1031,7 +1038,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectService.ProjectServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 &projectservice.ProjectServiceTimeouts {
 	Create: *string,
@@ -1107,7 +1114,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectService.ProjectServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/projectservice"
 
 projectservice.NewProjectServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ProjectServiceTimeoutsOutputReference
 ```

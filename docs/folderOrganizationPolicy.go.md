@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.NewFolderOrganizationPolicy(scope Construct, id *string, config FolderOrganizationPolicyConfig) FolderOrganizationPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -134,6 +135,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.toMetadata"></a>
 
@@ -465,7 +472,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.FolderOrganizationPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -497,7 +504,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.FolderOrganizationPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -511,7 +518,7 @@ folderorganizationpolicy.FolderOrganizationPolicy_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.FolderOrganizationPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -525,7 +532,7 @@ folderorganizationpolicy.FolderOrganizationPolicy_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.FolderOrganizationPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -952,7 +959,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyBooleanPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 &folderorganizationpolicy.FolderOrganizationPolicyBooleanPolicy {
 	Enforced: interface{},
@@ -986,7 +993,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 &folderorganizationpolicy.FolderOrganizationPolicyConfig {
 	Connection: interface{},
@@ -998,11 +1005,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationp
 	Provisioners: *[]interface{},
 	Constraint: *string,
 	Folder: *string,
-	BooleanPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.folderOrganizationPolicy.FolderOrganizationPolicyBooleanPolicy,
+	BooleanPolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.folderOrganizationPolicy.FolderOrganizationPolicyBooleanPolicy,
 	Id: *string,
-	ListPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.folderOrganizationPolicy.FolderOrganizationPolicyListPolicy,
-	RestorePolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.folderOrganizationPolicy.FolderOrganizationPolicyRestorePolicy,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.folderOrganizationPolicy.FolderOrganizationPolicyTimeouts,
+	ListPolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.folderOrganizationPolicy.FolderOrganizationPolicyListPolicy,
+	RestorePolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.folderOrganizationPolicy.FolderOrganizationPolicyRestorePolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.folderOrganizationPolicy.FolderOrganizationPolicyTimeouts,
 	Version: *f64,
 }
 ```
@@ -1217,11 +1224,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyListPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 &folderorganizationpolicy.FolderOrganizationPolicyListPolicy {
-	Allow: github.com/cdktf/cdktf-provider-google-go/google/v12.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyAllow,
-	Deny: github.com/cdktf/cdktf-provider-google-go/google/v12.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyDeny,
+	Allow: github.com/cdktf/cdktf-provider-google-go/google/v13.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyAllow,
+	Deny: github.com/cdktf/cdktf-provider-google-go/google/v13.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyDeny,
 	InheritFromParent: interface{},
 	SuggestedValue: *string,
 }
@@ -1299,7 +1306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyAllow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 &folderorganizationpolicy.FolderOrganizationPolicyListPolicyAllow {
 	All: interface{},
@@ -1349,7 +1356,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyDeny.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 &folderorganizationpolicy.FolderOrganizationPolicyListPolicyDeny {
 	All: interface{},
@@ -1399,7 +1406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyRestorePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 &folderorganizationpolicy.FolderOrganizationPolicyRestorePolicy {
 	Default: interface{},
@@ -1433,7 +1440,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 &folderorganizationpolicy.FolderOrganizationPolicyTimeouts {
 	Create: *string,
@@ -1509,7 +1516,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyBooleanPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.NewFolderOrganizationPolicyBooleanPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderOrganizationPolicyBooleanPolicyOutputReference
 ```
@@ -1780,7 +1787,7 @@ func InternalValue() FolderOrganizationPolicyBooleanPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyAllowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.NewFolderOrganizationPolicyListPolicyAllowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderOrganizationPolicyListPolicyAllowOutputReference
 ```
@@ -2087,7 +2094,7 @@ func InternalValue() FolderOrganizationPolicyListPolicyAllow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyDenyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.NewFolderOrganizationPolicyListPolicyDenyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderOrganizationPolicyListPolicyDenyOutputReference
 ```
@@ -2394,7 +2401,7 @@ func InternalValue() FolderOrganizationPolicyListPolicyDeny
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyListPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.NewFolderOrganizationPolicyListPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderOrganizationPolicyListPolicyOutputReference
 ```
@@ -2785,7 +2792,7 @@ func InternalValue() FolderOrganizationPolicyListPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyRestorePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.NewFolderOrganizationPolicyRestorePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderOrganizationPolicyRestorePolicyOutputReference
 ```
@@ -3056,7 +3063,7 @@ func InternalValue() FolderOrganizationPolicyRestorePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderOrganizationPolicy.FolderOrganizationPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderorganizationpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderorganizationpolicy"
 
 folderorganizationpolicy.NewFolderOrganizationPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderOrganizationPolicyTimeoutsOutputReference
 ```

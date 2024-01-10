@@ -117,6 +117,31 @@ export function vpcAccessConnectorSubnetToTerraform(struct?: VpcAccessConnectorS
   }
 }
 
+
+export function vpcAccessConnectorSubnetToHclTerraform(struct?: VpcAccessConnectorSubnetOutputReference | VpcAccessConnectorSubnet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_id: {
+      value: cdktf.stringToHclTerraform(struct!.projectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VpcAccessConnectorSubnetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -207,6 +232,31 @@ export function vpcAccessConnectorTimeoutsToTerraform(struct?: VpcAccessConnecto
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function vpcAccessConnectorTimeoutsToHclTerraform(struct?: VpcAccessConnectorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VpcAccessConnectorTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -600,5 +650,91 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
       subnet: vpcAccessConnectorSubnetToTerraform(this._subnet.internalValue),
       timeouts: vpcAccessConnectorTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_cidr_range: {
+        value: cdktf.stringToHclTerraform(this._ipCidrRange),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      machine_type: {
+        value: cdktf.stringToHclTerraform(this._machineType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_instances: {
+        value: cdktf.numberToHclTerraform(this._maxInstances),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      max_throughput: {
+        value: cdktf.numberToHclTerraform(this._maxThroughput),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      min_instances: {
+        value: cdktf.numberToHclTerraform(this._minInstances),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      min_throughput: {
+        value: cdktf.numberToHclTerraform(this._minThroughput),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subnet: {
+        value: vpcAccessConnectorSubnetToHclTerraform(this._subnet.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VpcAccessConnectorSubnetList",
+      },
+      timeouts: {
+        value: vpcAccessConnectorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VpcAccessConnectorTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

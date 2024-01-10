@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dnsmanagedzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiampolicy"
 
 dnsmanagedzoneiampolicy.NewDnsManagedZoneIamPolicy(scope Construct, id *string, config DnsManagedZoneIamPolicyConfig) DnsManagedZoneIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -126,6 +127,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.toMetadata"></a>
 
@@ -385,7 +392,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dnsmanagedzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiampolicy"
 
 dnsmanagedzoneiampolicy.DnsManagedZoneIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -417,7 +424,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dnsmanagedzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiampolicy"
 
 dnsmanagedzoneiampolicy.DnsManagedZoneIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -431,7 +438,7 @@ dnsmanagedzoneiampolicy.DnsManagedZoneIamPolicy_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dnsmanagedzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiampolicy"
 
 dnsmanagedzoneiampolicy.DnsManagedZoneIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -445,7 +452,7 @@ dnsmanagedzoneiampolicy.DnsManagedZoneIamPolicy_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dnsmanagedzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiampolicy"
 
 dnsmanagedzoneiampolicy.DnsManagedZoneIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -773,7 +780,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsManagedZoneIamPolicy.DnsManagedZoneIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dnsmanagedzoneiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiampolicy"
 
 &dnsmanagedzoneiampolicy.DnsManagedZoneIamPolicyConfig {
 	Connection: interface{},

@@ -50,6 +50,17 @@ export function firebaserulesRulesetMetadataToTerraform(struct?: FirebaserulesRu
   }
 }
 
+
+export function firebaserulesRulesetMetadataToHclTerraform(struct?: FirebaserulesRulesetMetadata): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class FirebaserulesRulesetMetadataOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -133,6 +144,37 @@ export function firebaserulesRulesetSourceFilesToTerraform(struct?: Firebaserule
     fingerprint: cdktf.stringToTerraform(struct!.fingerprint),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function firebaserulesRulesetSourceFilesToHclTerraform(struct?: FirebaserulesRulesetSourceFiles | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    fingerprint: {
+      value: cdktf.stringToHclTerraform(struct!.fingerprint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirebaserulesRulesetSourceFilesOutputReference extends cdktf.ComplexObject {
@@ -279,6 +321,31 @@ export function firebaserulesRulesetSourceToTerraform(struct?: FirebaserulesRule
   }
 }
 
+
+export function firebaserulesRulesetSourceToHclTerraform(struct?: FirebaserulesRulesetSourceOutputReference | FirebaserulesRulesetSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    language: {
+      value: cdktf.stringToHclTerraform(struct!.language),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    files: {
+      value: cdktf.listMapperHcl(firebaserulesRulesetSourceFilesToHclTerraform, true)(struct!.files),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FirebaserulesRulesetSourceFilesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FirebaserulesRulesetSourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -366,6 +433,31 @@ export function firebaserulesRulesetTimeoutsToTerraform(struct?: FirebaserulesRu
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function firebaserulesRulesetTimeoutsToHclTerraform(struct?: FirebaserulesRulesetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirebaserulesRulesetTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -598,5 +690,37 @@ export class FirebaserulesRuleset extends cdktf.TerraformResource {
       source: firebaserulesRulesetSourceToTerraform(this._source.internalValue),
       timeouts: firebaserulesRulesetTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source: {
+        value: firebaserulesRulesetSourceToHclTerraform(this._source.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirebaserulesRulesetSourceList",
+      },
+      timeouts: {
+        value: firebaserulesRulesetTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "FirebaserulesRulesetTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 storagetransferagentpool.NewStorageTransferAgentPool(scope Construct, id *string, config StorageTransferAgentPoolConfig) StorageTransferAgentPool
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ storagetransferagentpool.StorageTransferAgentPool_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ storagetransferagentpool.StorageTransferAgentPool_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -864,7 +871,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 &storagetransferagentpool.StorageTransferAgentPoolBandwidthLimit {
 	LimitMbps: *string,
@@ -898,7 +905,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 &storagetransferagentpool.StorageTransferAgentPoolConfig {
 	Connection: interface{},
@@ -909,11 +916,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagen
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	BandwidthLimit: github.com/cdktf/cdktf-provider-google-go/google/v12.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimit,
+	BandwidthLimit: github.com/cdktf/cdktf-provider-google-go/google/v13.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimit,
 	DisplayName: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.storageTransferAgentPool.StorageTransferAgentPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.storageTransferAgentPool.StorageTransferAgentPoolTimeouts,
 }
 ```
 
@@ -1106,7 +1113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 &storagetransferagentpool.StorageTransferAgentPoolTimeouts {
 	Create: *string,
@@ -1168,7 +1175,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 storagetransferagentpool.NewStorageTransferAgentPoolBandwidthLimitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageTransferAgentPoolBandwidthLimitOutputReference
 ```
@@ -1439,7 +1446,7 @@ func InternalValue() StorageTransferAgentPoolBandwidthLimit
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagetransferagentpool"
 
 storagetransferagentpool.NewStorageTransferAgentPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageTransferAgentPoolTimeoutsOutputReference
 ```

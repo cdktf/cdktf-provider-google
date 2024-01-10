@@ -44,6 +44,17 @@ export function dataGoogleIamTestablePermissionsPermissionsToTerraform(struct?: 
   }
 }
 
+
+export function dataGoogleIamTestablePermissionsPermissionsToHclTerraform(struct?: DataGoogleIamTestablePermissionsPermissions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleIamTestablePermissionsPermissionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -256,5 +267,37 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
       id: cdktf.stringToTerraform(this._id),
       stages: cdktf.listMapper(cdktf.stringToTerraform, false)(this._stages),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      custom_support_level: {
+        value: cdktf.stringToHclTerraform(this._customSupportLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      full_resource_name: {
+        value: cdktf.stringToHclTerraform(this._fullResourceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stages: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._stages),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

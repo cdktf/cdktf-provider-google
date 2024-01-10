@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscaler(scope Construct, id *string, config ComputeAutoscalerConfig) ComputeAutoscaler
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.ComputeAutoscaler_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.ComputeAutoscaler_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ computeautoscaler.ComputeAutoscaler_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.ComputeAutoscaler_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ computeautoscaler.ComputeAutoscaler_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.ComputeAutoscaler_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -919,17 +926,17 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicy {
 	MaxReplicas: *f64,
 	MinReplicas: *f64,
 	CooldownPeriod: *f64,
-	CpuUtilization: github.com/cdktf/cdktf-provider-google-go/google/v12.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization,
-	LoadBalancingUtilization: github.com/cdktf/cdktf-provider-google-go/google/v12.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization,
+	CpuUtilization: github.com/cdktf/cdktf-provider-google-go/google/v13.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization,
+	LoadBalancingUtilization: github.com/cdktf/cdktf-provider-google-go/google/v13.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization,
 	Metric: interface{},
 	Mode: *string,
-	ScaleInControl: github.com/cdktf/cdktf-provider-google-go/google/v12.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl,
+	ScaleInControl: github.com/cdktf/cdktf-provider-google-go/google/v13.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl,
 	ScalingSchedules: interface{},
 }
 ```
@@ -1099,7 +1106,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization {
 	Target: *f64,
@@ -1165,7 +1172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization {
 	Target: *f64,
@@ -1202,7 +1209,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetric.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyMetric {
 	Name: *string,
@@ -1279,10 +1286,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl {
-	MaxScaledInReplicas: github.com/cdktf/cdktf-provider-google-go/google/v12.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas,
+	MaxScaledInReplicas: github.com/cdktf/cdktf-provider-google-go/google/v13.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas,
 	TimeWindowSec: *f64,
 }
 ```
@@ -1329,7 +1336,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas {
 	Fixed: *f64,
@@ -1379,7 +1386,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules {
 	DurationSec: *f64,
@@ -1515,7 +1522,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerConfig {
 	Connection: interface{},
@@ -1525,13 +1532,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	AutoscalingPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.computeAutoscaler.ComputeAutoscalerAutoscalingPolicy,
+	AutoscalingPolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.computeAutoscaler.ComputeAutoscalerAutoscalingPolicy,
 	Name: *string,
 	Target: *string,
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeAutoscaler.ComputeAutoscalerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeAutoscaler.ComputeAutoscalerTimeouts,
 	Zone: *string,
 }
 ```
@@ -1750,7 +1757,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerTimeouts {
 	Create: *string,
@@ -1812,7 +1819,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference
 ```
@@ -2112,7 +2119,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyCpuUtilization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference
 ```
@@ -2383,7 +2390,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyMetricList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeAutoscalerAutoscalingPolicyMetricList
 ```
@@ -2424,10 +2431,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2526,7 +2550,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyMetricOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeAutoscalerAutoscalingPolicyMetricOutputReference
 ```
@@ -2873,7 +2897,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyOutputReference
 ```
@@ -3434,7 +3458,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference
 ```
@@ -3741,7 +3765,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference
 ```
@@ -4061,7 +4085,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyScaleInControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScalingSchedulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeAutoscalerAutoscalingPolicyScalingSchedulesList
 ```
@@ -4102,10 +4126,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4204,7 +4245,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScalingSchedulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeAutoscalerAutoscalingPolicyScalingSchedulesOutputReference
 ```
@@ -4646,7 +4687,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerTimeoutsOutputReference
 ```

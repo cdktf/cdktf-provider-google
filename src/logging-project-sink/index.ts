@@ -99,6 +99,25 @@ export function loggingProjectSinkBigqueryOptionsToTerraform(struct?: LoggingPro
   }
 }
 
+
+export function loggingProjectSinkBigqueryOptionsToHclTerraform(struct?: LoggingProjectSinkBigqueryOptionsOutputReference | LoggingProjectSinkBigqueryOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    use_partitioned_tables: {
+      value: cdktf.booleanToHclTerraform(struct!.usePartitionedTables),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -182,6 +201,43 @@ export function loggingProjectSinkExclusionsToTerraform(struct?: LoggingProjectS
     filter: cdktf.stringToTerraform(struct!.filter),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function loggingProjectSinkExclusionsToHclTerraform(struct?: LoggingProjectSinkExclusions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disabled: {
+      value: cdktf.booleanToHclTerraform(struct!.disabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filter: {
+      value: cdktf.stringToHclTerraform(struct!.filter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LoggingProjectSinkExclusionsOutputReference extends cdktf.ComplexObject {
@@ -586,5 +642,79 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
       bigquery_options: loggingProjectSinkBigqueryOptionsToTerraform(this._bigqueryOptions.internalValue),
       exclusions: cdktf.listMapper(loggingProjectSinkExclusionsToTerraform, true)(this._exclusions.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      custom_writer_identity: {
+        value: cdktf.stringToHclTerraform(this._customWriterIdentity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination: {
+        value: cdktf.stringToHclTerraform(this._destination),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      filter: {
+        value: cdktf.stringToHclTerraform(this._filter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      unique_writer_identity: {
+        value: cdktf.booleanToHclTerraform(this._uniqueWriterIdentity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      bigquery_options: {
+        value: loggingProjectSinkBigqueryOptionsToHclTerraform(this._bigqueryOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LoggingProjectSinkBigqueryOptionsList",
+      },
+      exclusions: {
+        value: cdktf.listMapperHcl(loggingProjectSinkExclusionsToHclTerraform, true)(this._exclusions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LoggingProjectSinkExclusionsList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

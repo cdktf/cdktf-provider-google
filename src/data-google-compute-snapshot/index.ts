@@ -56,6 +56,17 @@ export function dataGoogleComputeSnapshotSnapshotEncryptionKeyToTerraform(struct
   }
 }
 
+
+export function dataGoogleComputeSnapshotSnapshotEncryptionKeyToHclTerraform(struct?: DataGoogleComputeSnapshotSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -133,6 +144,17 @@ export function dataGoogleComputeSnapshotSourceDiskEncryptionKeyToTerraform(stru
   }
   return {
   }
+}
+
+
+export function dataGoogleComputeSnapshotSourceDiskEncryptionKeyToHclTerraform(struct?: DataGoogleComputeSnapshotSourceDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleComputeSnapshotSourceDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
@@ -437,5 +459,43 @@ export class DataGoogleComputeSnapshot extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      filter: {
+        value: cdktf.stringToHclTerraform(this._filter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      most_recent: {
+        value: cdktf.booleanToHclTerraform(this._mostRecent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

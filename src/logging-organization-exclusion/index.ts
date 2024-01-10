@@ -213,4 +213,48 @@ export class LoggingOrganizationExclusion extends cdktf.TerraformResource {
       org_id: cdktf.stringToTerraform(this._orgId),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      filter: {
+        value: cdktf.stringToHclTerraform(this._filter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_id: {
+        value: cdktf.stringToHclTerraform(this._orgId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

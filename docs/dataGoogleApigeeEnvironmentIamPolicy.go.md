@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.NewDataGoogleApigeeEnvironmentIamPolicy(scope Construct, id *string, config DataGoogleApigeeEnvironmentIamPolicyConfig) DataGoogleApigeeEnvironmentIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -119,6 +120,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.toMetadata"></a>
 
@@ -274,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleapigeeenvironmentiampolicy"
 
 datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -629,7 +638,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleApigeeEnvironmentIamPolicy.DataGoogleApigeeEnvironmentIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleapigeeenvironmentiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleapigeeenvironmentiampolicy"
 
 &datagoogleapigeeenvironmentiampolicy.DataGoogleApigeeEnvironmentIamPolicyConfig {
 	Connection: interface{},

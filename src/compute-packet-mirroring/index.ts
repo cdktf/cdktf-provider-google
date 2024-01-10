@@ -100,6 +100,25 @@ export function computePacketMirroringCollectorIlbToTerraform(struct?: ComputePa
   }
 }
 
+
+export function computePacketMirroringCollectorIlbToHclTerraform(struct?: ComputePacketMirroringCollectorIlbOutputReference | ComputePacketMirroringCollectorIlb): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -177,6 +196,37 @@ export function computePacketMirroringFilterToTerraform(struct?: ComputePacketMi
     direction: cdktf.stringToTerraform(struct!.direction),
     ip_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipProtocols),
   }
+}
+
+
+export function computePacketMirroringFilterToHclTerraform(struct?: ComputePacketMirroringFilterOutputReference | ComputePacketMirroringFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cidr_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.cidrRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    direction: {
+      value: cdktf.stringToHclTerraform(struct!.direction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_protocols: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ipProtocols),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexObject {
@@ -290,6 +340,25 @@ export function computePacketMirroringMirroredResourcesInstancesToTerraform(stru
   }
 }
 
+
+export function computePacketMirroringMirroredResourcesInstancesToHclTerraform(struct?: ComputePacketMirroringMirroredResourcesInstances | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputePacketMirroringMirroredResourcesInstancesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -384,6 +453,25 @@ export function computePacketMirroringMirroredResourcesSubnetworksToTerraform(st
   return {
     url: cdktf.stringToTerraform(struct!.url),
   }
+}
+
+
+export function computePacketMirroringMirroredResourcesSubnetworksToHclTerraform(struct?: ComputePacketMirroringMirroredResourcesSubnetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputePacketMirroringMirroredResourcesSubnetworksOutputReference extends cdktf.ComplexObject {
@@ -494,6 +582,37 @@ export function computePacketMirroringMirroredResourcesToTerraform(struct?: Comp
     instances: cdktf.listMapper(computePacketMirroringMirroredResourcesInstancesToTerraform, true)(struct!.instances),
     subnetworks: cdktf.listMapper(computePacketMirroringMirroredResourcesSubnetworksToTerraform, true)(struct!.subnetworks),
   }
+}
+
+
+export function computePacketMirroringMirroredResourcesToHclTerraform(struct?: ComputePacketMirroringMirroredResourcesOutputReference | ComputePacketMirroringMirroredResources): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    tags: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.tags),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    instances: {
+      value: cdktf.listMapperHcl(computePacketMirroringMirroredResourcesInstancesToHclTerraform, true)(struct!.instances),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputePacketMirroringMirroredResourcesInstancesList",
+    },
+    subnetworks: {
+      value: cdktf.listMapperHcl(computePacketMirroringMirroredResourcesSubnetworksToHclTerraform, true)(struct!.subnetworks),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputePacketMirroringMirroredResourcesSubnetworksList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputePacketMirroringMirroredResourcesOutputReference extends cdktf.ComplexObject {
@@ -607,6 +726,25 @@ export function computePacketMirroringNetworkToTerraform(struct?: ComputePacketM
   }
 }
 
+
+export function computePacketMirroringNetworkToHclTerraform(struct?: ComputePacketMirroringNetworkOutputReference | ComputePacketMirroringNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -677,6 +815,37 @@ export function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacket
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computePacketMirroringTimeoutsToHclTerraform(struct?: ComputePacketMirroringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1032,5 +1201,79 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
       network: computePacketMirroringNetworkToTerraform(this._network.internalValue),
       timeouts: computePacketMirroringTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      collector_ilb: {
+        value: computePacketMirroringCollectorIlbToHclTerraform(this._collectorIlb.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputePacketMirroringCollectorIlbList",
+      },
+      filter: {
+        value: computePacketMirroringFilterToHclTerraform(this._filter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputePacketMirroringFilterList",
+      },
+      mirrored_resources: {
+        value: computePacketMirroringMirroredResourcesToHclTerraform(this._mirroredResources.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputePacketMirroringMirroredResourcesList",
+      },
+      network: {
+        value: computePacketMirroringNetworkToHclTerraform(this._network.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputePacketMirroringNetworkList",
+      },
+      timeouts: {
+        value: computePacketMirroringTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputePacketMirroringTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

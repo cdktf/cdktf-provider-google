@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTrigger(scope Construct, id *string, config CloudbuildTriggerConfig) CloudbuildTrigger
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -160,6 +161,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.toMetadata"></a>
 
@@ -689,7 +696,7 @@ func ResetWebhookConfig()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.CloudbuildTrigger_IsConstruct(x interface{}) *bool
 ```
@@ -721,7 +728,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.CloudbuildTrigger_IsTerraformElement(x interface{}) *bool
 ```
@@ -735,7 +742,7 @@ cloudbuildtrigger.CloudbuildTrigger_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.CloudbuildTrigger_IsTerraformResource(x interface{}) *bool
 ```
@@ -749,7 +756,7 @@ cloudbuildtrigger.CloudbuildTrigger_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTrigger.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.CloudbuildTrigger_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1550,7 +1557,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerApprovalConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerApprovalConfig {
 	ApprovalRequired: interface{},
@@ -1587,14 +1594,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBitbucketServerTriggerConfig {
 	BitbucketServerConfigResource: *string,
 	ProjectKey: *string,
 	RepoSlug: *string,
-	PullRequest: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPullRequest,
-	Push: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPush,
+	PullRequest: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPullRequest,
+	Push: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPush,
 }
 ```
 
@@ -1688,7 +1695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPullRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBitbucketServerTriggerConfigPullRequest {
 	Branch: *string,
@@ -1756,7 +1763,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPush.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBitbucketServerTriggerConfigPush {
 	Branch: *string,
@@ -1822,18 +1829,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuild.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuild {
 	Step: interface{},
-	Artifacts: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuildArtifacts,
-	AvailableSecrets: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecrets,
+	Artifacts: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuildArtifacts,
+	AvailableSecrets: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecrets,
 	Images: *[]*string,
 	LogsBucket: *string,
-	Options: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuildOptions,
+	Options: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuildOptions,
 	QueueTtl: *string,
 	Secret: interface{},
-	Source: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuildSource,
+	Source: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuildSource,
 	Substitutions: *map[string]*string,
 	Tags: *[]*string,
 	Timeout: *string,
@@ -2046,13 +2053,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifacts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildArtifacts {
 	Images: *[]*string,
 	MavenArtifacts: interface{},
 	NpmPackages: interface{},
-	Objects: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjects,
+	Objects: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjects,
 	PythonPackages: interface{},
 }
 ```
@@ -2150,7 +2157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifacts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildArtifactsMavenArtifacts {
 	ArtifactId: *string,
@@ -2252,7 +2259,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildArtifactsNpmPackages {
 	PackagePath: *string,
@@ -2304,7 +2311,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjects.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildArtifactsObjects {
 	Location: *string,
@@ -2357,7 +2364,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTiming.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildArtifactsObjectsTiming {
 
@@ -2370,7 +2377,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildArtifactsPythonPackages {
 	Paths: *[]*string,
@@ -2424,7 +2431,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecrets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildAvailableSecrets {
 	SecretManager: interface{},
@@ -2458,7 +2465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManager.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildAvailableSecretsSecretManager {
 	Env: *string,
@@ -2514,7 +2521,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildOptions {
 	DiskSizeGb: *f64,
@@ -2747,7 +2754,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildOptionsVolumes {
 	Name: *string,
@@ -2803,7 +2810,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildSecret {
 	KmsKeyName: *string,
@@ -2857,11 +2864,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildSource {
-	RepoSource: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuildSourceRepoSource,
-	StorageSource: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuildSourceStorageSource,
+	RepoSource: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuildSourceRepoSource,
+	StorageSource: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuildSourceStorageSource,
 }
 ```
 
@@ -2907,7 +2914,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSourceRepoSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildSourceRepoSource {
 	RepoName: *string,
@@ -3064,7 +3071,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSourceStorageSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildSourceStorageSource {
 	Bucket: *string,
@@ -3130,7 +3137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStep.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildStep {
 	Name: *string,
@@ -3431,7 +3438,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerBuildStepVolumes {
 	Name: *string,
@@ -3487,7 +3494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerConfig {
 	Connection: interface{},
@@ -3497,15 +3504,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	ApprovalConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerApprovalConfig,
-	BitbucketServerTriggerConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfig,
-	BuildAttribute: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerBuild,
+	ApprovalConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerApprovalConfig,
+	BitbucketServerTriggerConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfig,
+	BuildAttribute: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerBuild,
 	Description: *string,
 	Disabled: interface{},
 	Filename: *string,
 	Filter: *string,
-	GitFileSource: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerGitFileSource,
-	Github: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerGithub,
+	GitFileSource: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerGitFileSource,
+	Github: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerGithub,
 	Id: *string,
 	IgnoredFiles: *[]*string,
 	IncludeBuildLogs: *string,
@@ -3513,15 +3520,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
 	Location: *string,
 	Name: *string,
 	Project: *string,
-	PubsubConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerPubsubConfig,
-	RepositoryEventConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfig,
+	PubsubConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerPubsubConfig,
+	RepositoryEventConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfig,
 	ServiceAccount: *string,
-	SourceToBuild: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerSourceToBuild,
+	SourceToBuild: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerSourceToBuild,
 	Substitutions: *map[string]*string,
 	Tags: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerTimeouts,
-	TriggerTemplate: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerTriggerTemplate,
-	WebhookConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerWebhookConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerTimeouts,
+	TriggerTemplate: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerTriggerTemplate,
+	WebhookConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerWebhookConfig,
 }
 ```
 
@@ -4015,7 +4022,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGitFileSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerGitFileSource {
 	Path: *string,
@@ -4154,14 +4161,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGithub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerGithub {
 	EnterpriseConfigResourceName: *string,
 	Name: *string,
 	Owner: *string,
-	PullRequest: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerGithubPullRequest,
-	Push: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerGithubPush,
+	PullRequest: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerGithubPullRequest,
+	Push: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerGithubPush,
 }
 ```
 
@@ -4252,7 +4259,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGithubPullRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerGithubPullRequest {
 	Branch: *string,
@@ -4318,7 +4325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGithubPush.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerGithubPush {
 	Branch: *string,
@@ -4384,7 +4391,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerPubsubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerPubsubConfig {
 	Topic: *string,
@@ -4434,11 +4441,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerRepositoryEventConfig {
-	PullRequest: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPullRequest,
-	Push: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPush,
+	PullRequest: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPullRequest,
+	Push: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPush,
 	Repository: *string,
 }
 ```
@@ -4500,7 +4507,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPullRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerRepositoryEventConfigPullRequest {
 	Branch: *string,
@@ -4569,7 +4576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPush.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerRepositoryEventConfigPush {
 	Branch: *string,
@@ -4641,7 +4648,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerSourceToBuild.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerSourceToBuild {
 	Ref: *string,
@@ -4755,7 +4762,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerTimeouts {
 	Create: *string,
@@ -4815,7 +4822,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerTriggerTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerTriggerTemplate {
 	BranchName: *string,
@@ -4955,7 +4962,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerWebhookConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 &cloudbuildtrigger.CloudbuildTriggerWebhookConfig {
 	Secret: *string,
@@ -4991,7 +4998,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerApprovalConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerApprovalConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerApprovalConfigOutputReference
 ```
@@ -5269,7 +5276,7 @@ func InternalValue() CloudbuildTriggerApprovalConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBitbucketServerTriggerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBitbucketServerTriggerConfigOutputReference
 ```
@@ -5668,7 +5675,7 @@ func InternalValue() CloudbuildTriggerBitbucketServerTriggerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPullRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBitbucketServerTriggerConfigPullRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBitbucketServerTriggerConfigPullRequestOutputReference
 ```
@@ -5997,7 +6004,7 @@ func InternalValue() CloudbuildTriggerBitbucketServerTriggerConfigPullRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBitbucketServerTriggerConfigPushOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBitbucketServerTriggerConfigPushOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBitbucketServerTriggerConfigPushOutputReference
 ```
@@ -6333,7 +6340,7 @@ func InternalValue() CloudbuildTriggerBitbucketServerTriggerConfigPush
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsMavenArtifactsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildArtifactsMavenArtifactsList
 ```
@@ -6374,10 +6381,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -6476,7 +6500,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsMavenArtifactsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsMavenArtifactsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildArtifactsMavenArtifactsOutputReference
 ```
@@ -6888,7 +6912,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsNpmPackagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildArtifactsNpmPackagesList
 ```
@@ -6929,10 +6953,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -7031,7 +7072,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsNpmPackagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsNpmPackagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildArtifactsNpmPackagesOutputReference
 ```
@@ -7356,7 +7397,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsObjectsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildArtifactsObjectsOutputReference
 ```
@@ -7674,7 +7715,7 @@ func InternalValue() CloudbuildTriggerBuildArtifactsObjects
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsObjectsTimingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildArtifactsObjectsTimingList
 ```
@@ -7715,10 +7756,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -7806,7 +7864,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsObjectsTimingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsObjectsTimingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildArtifactsObjectsTimingOutputReference
 ```
@@ -8095,7 +8153,7 @@ func InternalValue() CloudbuildTriggerBuildArtifactsObjectsTiming
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildArtifactsOutputReference
 ```
@@ -8541,7 +8599,7 @@ func InternalValue() CloudbuildTriggerBuildArtifacts
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsPythonPackagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildArtifactsPythonPackagesList
 ```
@@ -8582,10 +8640,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -8684,7 +8759,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildArtifactsPythonPackagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildArtifactsPythonPackagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildArtifactsPythonPackagesOutputReference
 ```
@@ -9009,7 +9084,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildAvailableSecretsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildAvailableSecretsOutputReference
 ```
@@ -9293,7 +9368,7 @@ func InternalValue() CloudbuildTriggerBuildAvailableSecrets
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildAvailableSecretsSecretManagerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildAvailableSecretsSecretManagerList
 ```
@@ -9334,10 +9409,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -9436,7 +9528,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManagerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildAvailableSecretsSecretManagerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildAvailableSecretsSecretManagerOutputReference
 ```
@@ -9747,7 +9839,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildOptionsOutputReference
 ```
@@ -10357,7 +10449,7 @@ func InternalValue() CloudbuildTriggerBuildOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildOptionsVolumesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildOptionsVolumesList
 ```
@@ -10398,10 +10490,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -10500,7 +10609,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOptionsVolumesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildOptionsVolumesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildOptionsVolumesOutputReference
 ```
@@ -10825,7 +10934,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildOutputReference
 ```
@@ -11493,7 +11602,7 @@ func InternalValue() CloudbuildTriggerBuild
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildSecretList
 ```
@@ -11534,10 +11643,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -11636,7 +11762,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildSecretOutputReference
 ```
@@ -11954,7 +12080,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildSourceOutputReference
 ```
@@ -12287,7 +12413,7 @@ func InternalValue() CloudbuildTriggerBuildSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSourceRepoSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildSourceRepoSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildSourceRepoSourceOutputReference
 ```
@@ -12761,7 +12887,7 @@ func InternalValue() CloudbuildTriggerBuildSourceRepoSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildSourceStorageSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildSourceStorageSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerBuildSourceStorageSourceOutputReference
 ```
@@ -13083,7 +13209,7 @@ func InternalValue() CloudbuildTriggerBuildSourceStorageSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildStepList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildStepList
 ```
@@ -13124,10 +13250,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -13226,7 +13369,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildStepOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildStepOutputReference
 ```
@@ -13905,7 +14048,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildStepVolumesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildTriggerBuildStepVolumesList
 ```
@@ -13946,10 +14089,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -14048,7 +14208,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildStepVolumesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerBuildStepVolumesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildTriggerBuildStepVolumesOutputReference
 ```
@@ -14359,7 +14519,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGitFileSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerGitFileSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerGitFileSourceOutputReference
 ```
@@ -14797,7 +14957,7 @@ func InternalValue() CloudbuildTriggerGitFileSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGithubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerGithubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerGithubOutputReference
 ```
@@ -15217,7 +15377,7 @@ func InternalValue() CloudbuildTriggerGithub
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGithubPullRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerGithubPullRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerGithubPullRequestOutputReference
 ```
@@ -15546,7 +15706,7 @@ func InternalValue() CloudbuildTriggerGithubPullRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerGithubPushOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerGithubPushOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerGithubPushOutputReference
 ```
@@ -15882,7 +16042,7 @@ func InternalValue() CloudbuildTriggerGithubPush
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerPubsubConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerPubsubConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerPubsubConfigOutputReference
 ```
@@ -16204,7 +16364,7 @@ func InternalValue() CloudbuildTriggerPubsubConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerRepositoryEventConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerRepositoryEventConfigOutputReference
 ```
@@ -16566,7 +16726,7 @@ func InternalValue() CloudbuildTriggerRepositoryEventConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPullRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerRepositoryEventConfigPullRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerRepositoryEventConfigPullRequestOutputReference
 ```
@@ -16902,7 +17062,7 @@ func InternalValue() CloudbuildTriggerRepositoryEventConfigPullRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerRepositoryEventConfigPushOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerRepositoryEventConfigPushOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerRepositoryEventConfigPushOutputReference
 ```
@@ -17238,7 +17398,7 @@ func InternalValue() CloudbuildTriggerRepositoryEventConfigPush
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerSourceToBuildOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerSourceToBuildOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerSourceToBuildOutputReference
 ```
@@ -17647,7 +17807,7 @@ func InternalValue() CloudbuildTriggerSourceToBuild
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerTimeoutsOutputReference
 ```
@@ -17983,7 +18143,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerTriggerTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerTriggerTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerTriggerTemplateOutputReference
 ```
@@ -18435,7 +18595,7 @@ func InternalValue() CloudbuildTriggerTriggerTemplate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerWebhookConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildtrigger"
 
 cloudbuildtrigger.NewCloudbuildTriggerWebhookConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildTriggerWebhookConfigOutputReference
 ```

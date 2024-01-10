@@ -77,6 +77,37 @@ export function dataplexTaskIamMemberConditionToTerraform(struct?: DataplexTaskI
   }
 }
 
+
+export function dataplexTaskIamMemberConditionToHclTerraform(struct?: DataplexTaskIamMemberConditionOutputReference | DataplexTaskIamMemberCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expression: {
+      value: cdktf.stringToHclTerraform(struct!.expression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataplexTaskIamMemberConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -365,5 +396,61 @@ export class DataplexTaskIamMember extends cdktf.TerraformResource {
       task_id: cdktf.stringToTerraform(this._taskId),
       condition: dataplexTaskIamMemberConditionToTerraform(this._condition.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lake: {
+        value: cdktf.stringToHclTerraform(this._lake),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      member: {
+        value: cdktf.stringToHclTerraform(this._member),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktf.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      task_id: {
+        value: cdktf.stringToHclTerraform(this._taskId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      condition: {
+        value: dataplexTaskIamMemberConditionToHclTerraform(this._condition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataplexTaskIamMemberConditionList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

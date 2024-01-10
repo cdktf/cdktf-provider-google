@@ -115,6 +115,31 @@ export function apigeeEnvironmentNodeConfigToTerraform(struct?: ApigeeEnvironmen
   }
 }
 
+
+export function apigeeEnvironmentNodeConfigToHclTerraform(struct?: ApigeeEnvironmentNodeConfigOutputReference | ApigeeEnvironmentNodeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_node_count: {
+      value: cdktf.stringToHclTerraform(struct!.maxNodeCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    min_node_count: {
+      value: cdktf.stringToHclTerraform(struct!.minNodeCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApigeeEnvironmentNodeConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -215,6 +240,37 @@ export function apigeeEnvironmentTimeoutsToTerraform(struct?: ApigeeEnvironmentT
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apigeeEnvironmentTimeoutsToHclTerraform(struct?: ApigeeEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApigeeEnvironmentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -558,5 +614,73 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
       node_config: apigeeEnvironmentNodeConfigToTerraform(this._nodeConfig.internalValue),
       timeouts: apigeeEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_proxy_type: {
+        value: cdktf.stringToHclTerraform(this._apiProxyType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deployment_type: {
+        value: cdktf.stringToHclTerraform(this._deploymentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_id: {
+        value: cdktf.stringToHclTerraform(this._orgId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_config: {
+        value: apigeeEnvironmentNodeConfigToHclTerraform(this._nodeConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApigeeEnvironmentNodeConfigList",
+      },
+      timeouts: {
+        value: apigeeEnvironmentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApigeeEnvironmentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

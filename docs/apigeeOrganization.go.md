@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.NewApigeeOrganization(scope Construct, id *string, config ApigeeOrganizationConfig) ApigeeOrganization
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -138,6 +139,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.toMetadata"></a>
 
@@ -481,7 +488,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.ApigeeOrganization_IsConstruct(x interface{}) *bool
 ```
@@ -513,7 +520,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.ApigeeOrganization_IsTerraformElement(x interface{}) *bool
 ```
@@ -527,7 +534,7 @@ apigeeorganization.ApigeeOrganization_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.ApigeeOrganization_IsTerraformResource(x interface{}) *bool
 ```
@@ -541,7 +548,7 @@ apigeeorganization.ApigeeOrganization_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganization.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.ApigeeOrganization_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1100,7 +1107,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 &apigeeorganization.ApigeeOrganizationConfig {
 	Connection: interface{},
@@ -1118,11 +1125,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
 	DisableVpcPeering: interface{},
 	DisplayName: *string,
 	Id: *string,
-	Properties: github.com/cdktf/cdktf-provider-google-go/google/v12.apigeeOrganization.ApigeeOrganizationProperties,
+	Properties: github.com/cdktf/cdktf-provider-google-go/google/v13.apigeeOrganization.ApigeeOrganizationProperties,
 	Retention: *string,
 	RuntimeDatabaseEncryptionKeyName: *string,
 	RuntimeType: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.apigeeOrganization.ApigeeOrganizationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.apigeeOrganization.ApigeeOrganizationTimeouts,
 }
 ```
 
@@ -1428,7 +1435,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 &apigeeorganization.ApigeeOrganizationProperties {
 	Property: interface{},
@@ -1462,7 +1469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesProperty.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 &apigeeorganization.ApigeeOrganizationPropertiesProperty {
 	Name: *string,
@@ -1512,7 +1519,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 &apigeeorganization.ApigeeOrganizationTimeouts {
 	Create: *string,
@@ -1574,7 +1581,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.NewApigeeOrganizationPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeOrganizationPropertiesOutputReference
 ```
@@ -1865,7 +1872,7 @@ func InternalValue() ApigeeOrganizationProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.NewApigeeOrganizationPropertiesPropertyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApigeeOrganizationPropertiesPropertyList
 ```
@@ -1906,10 +1913,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2008,7 +2032,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationPropertiesPropertyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.NewApigeeOrganizationPropertiesPropertyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApigeeOrganizationPropertiesPropertyOutputReference
 ```
@@ -2333,7 +2357,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeOrganization.ApigeeOrganizationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/apigeeorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/apigeeorganization"
 
 apigeeorganization.NewApigeeOrganizationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeOrganizationTimeoutsOutputReference
 ```

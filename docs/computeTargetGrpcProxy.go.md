@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 computetargetgrpcproxy.NewComputeTargetGrpcProxy(scope Construct, id *string, config ComputeTargetGrpcProxyConfig) ComputeTargetGrpcProxy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.toMetadata"></a>
 
@@ -426,7 +433,7 @@ func ResetValidateForProxyless()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 computetargetgrpcproxy.ComputeTargetGrpcProxy_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 computetargetgrpcproxy.ComputeTargetGrpcProxy_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ computetargetgrpcproxy.ComputeTargetGrpcProxy_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 computetargetgrpcproxy.ComputeTargetGrpcProxy_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +493,7 @@ computetargetgrpcproxy.ComputeTargetGrpcProxy_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 computetargetgrpcproxy.ComputeTargetGrpcProxy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -913,7 +920,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 &computetargetgrpcproxy.ComputeTargetGrpcProxyConfig {
 	Connection: interface{},
@@ -927,7 +934,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcpr
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeTargetGrpcProxy.ComputeTargetGrpcProxyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeTargetGrpcProxy.ComputeTargetGrpcProxyTimeouts,
 	UrlMap: *string,
 	ValidateForProxyless: interface{},
 }
@@ -1146,7 +1153,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 &computetargetgrpcproxy.ComputeTargetGrpcProxyTimeouts {
 	Create: *string,
@@ -1208,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeTargetGrpcProxy.ComputeTargetGrpcProxyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetgrpcproxy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetgrpcproxy"
 
 computetargetgrpcproxy.NewComputeTargetGrpcProxyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeTargetGrpcProxyTimeoutsOutputReference
 ```

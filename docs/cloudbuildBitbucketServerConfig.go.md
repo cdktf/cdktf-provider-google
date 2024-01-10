@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.NewCloudbuildBitbucketServerConfig(scope Construct, id *string, config CloudbuildBitbucketServerConfigConfig) CloudbuildBitbucketServerConfig
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.toMetadata"></a>
 
@@ -452,7 +459,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfig_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +491,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +505,7 @@ cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfig_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +519,7 @@ cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfig_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1027,7 +1034,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 &cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfigConfig {
 	Connection: interface{},
@@ -1041,14 +1048,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucket
 	ConfigId: *string,
 	HostUri: *string,
 	Location: *string,
-	Secrets: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigSecrets,
+	Secrets: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigSecrets,
 	Username: *string,
 	ConnectedRepositories: interface{},
 	Id: *string,
 	PeeredNetwork: *string,
 	Project: *string,
 	SslCa: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigTimeouts,
 }
 ```
 
@@ -1333,7 +1340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositories.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 &cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfigConnectedRepositories {
 	ProjectKey: *string,
@@ -1383,7 +1390,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigSecrets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 &cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfigSecrets {
 	AdminAccessTokenVersionName: *string,
@@ -1452,7 +1459,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 &cloudbuildbitbucketserverconfig.CloudbuildBitbucketServerConfigTimeouts {
 	Create: *string,
@@ -1514,7 +1521,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.NewCloudbuildBitbucketServerConfigConnectedRepositoriesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudbuildBitbucketServerConfigConnectedRepositoriesList
 ```
@@ -1555,10 +1562,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1657,7 +1681,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigConnectedRepositoriesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.NewCloudbuildBitbucketServerConfigConnectedRepositoriesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudbuildBitbucketServerConfigConnectedRepositoriesOutputReference
 ```
@@ -1968,7 +1992,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigSecretsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.NewCloudbuildBitbucketServerConfigSecretsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildBitbucketServerConfigSecretsOutputReference
 ```
@@ -2283,7 +2307,7 @@ func InternalValue() CloudbuildBitbucketServerConfigSecrets
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig.CloudbuildBitbucketServerConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/cloudbuildbitbucketserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/cloudbuildbitbucketserverconfig"
 
 cloudbuildbitbucketserverconfig.NewCloudbuildBitbucketServerConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildBitbucketServerConfigTimeoutsOutputReference
 ```

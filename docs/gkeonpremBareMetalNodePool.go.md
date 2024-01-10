@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePool(scope Construct, id *string, config GkeonpremBareMetalNodePoolConfig) GkeonpremBareMetalNodePool
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.GkeonpremBareMetalNodePool_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.GkeonpremBareMetalNodePool_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ gkeonprembaremetalnodepool.GkeonpremBareMetalNodePool_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.GkeonpremBareMetalNodePool_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ gkeonprembaremetalnodepool.GkeonpremBareMetalNodePool_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.GkeonpremBareMetalNodePool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1018,7 +1025,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 &gkeonprembaremetalnodepool.GkeonpremBareMetalNodePoolConfig {
 	Connection: interface{},
@@ -1031,12 +1038,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetaln
 	BareMetalCluster: *string,
 	Location: *string,
 	Name: *string,
-	NodePoolConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfig,
+	NodePoolConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfig,
 	Annotations: *map[string]*string,
 	DisplayName: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolTimeouts,
 }
 ```
 
@@ -1274,7 +1281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 &gkeonprembaremetalnodepool.GkeonpremBareMetalNodePoolNodePoolConfig {
 	NodeConfigs: interface{},
@@ -1366,7 +1373,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 &gkeonprembaremetalnodepool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigs {
 	Labels: *map[string]*string,
@@ -1426,7 +1433,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 &gkeonprembaremetalnodepool.GkeonpremBareMetalNodePoolNodePoolConfigTaints {
 	Effect: *string,
@@ -1492,7 +1499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 &gkeonprembaremetalnodepool.GkeonpremBareMetalNodePoolStatus {
 
@@ -1505,7 +1512,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetaln
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 &gkeonprembaremetalnodepool.GkeonpremBareMetalNodePoolStatusConditions {
 
@@ -1518,7 +1525,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetaln
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 &gkeonprembaremetalnodepool.GkeonpremBareMetalNodePoolTimeouts {
 	Create: *string,
@@ -1580,7 +1587,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList
 ```
@@ -1621,10 +1628,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1723,7 +1747,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremBareMetalNodePoolNodePoolConfigNodeConfigsOutputReference
 ```
@@ -2048,7 +2072,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolNodePoolConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremBareMetalNodePoolNodePoolConfigOutputReference
 ```
@@ -2432,7 +2456,7 @@ func InternalValue() GkeonpremBareMetalNodePoolNodePoolConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolNodePoolConfigTaintsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremBareMetalNodePoolNodePoolConfigTaintsList
 ```
@@ -2473,10 +2497,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2575,7 +2616,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolNodePoolConfigTaintsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolNodePoolConfigTaintsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremBareMetalNodePoolNodePoolConfigTaintsOutputReference
 ```
@@ -2929,7 +2970,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolStatusConditionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremBareMetalNodePoolStatusConditionsList
 ```
@@ -2970,10 +3011,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3061,7 +3119,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolStatusConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremBareMetalNodePoolStatusConditionsOutputReference
 ```
@@ -3383,7 +3441,7 @@ func InternalValue() GkeonpremBareMetalNodePoolStatusConditions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremBareMetalNodePoolStatusList
 ```
@@ -3424,10 +3482,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3515,7 +3590,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremBareMetalNodePoolStatusOutputReference
 ```
@@ -3804,7 +3879,7 @@ func InternalValue() GkeonpremBareMetalNodePoolStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalNodePool.GkeonpremBareMetalNodePoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkeonprembaremetalnodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonprembaremetalnodepool"
 
 gkeonprembaremetalnodepool.NewGkeonpremBareMetalNodePoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremBareMetalNodePoolTimeoutsOutputReference
 ```

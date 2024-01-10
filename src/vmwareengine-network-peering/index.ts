@@ -114,6 +114,37 @@ export function vmwareengineNetworkPeeringTimeoutsToTerraform(struct?: Vmwareeng
   }
 }
 
+
+export function vmwareengineNetworkPeeringTimeoutsToHclTerraform(struct?: VmwareengineNetworkPeeringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VmwareengineNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -515,5 +546,85 @@ export class VmwareengineNetworkPeering extends cdktf.TerraformResource {
       vmware_engine_network: cdktf.stringToTerraform(this._vmwareEngineNetwork),
       timeouts: vmwareengineNetworkPeeringTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      export_custom_routes: {
+        value: cdktf.booleanToHclTerraform(this._exportCustomRoutes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      export_custom_routes_with_public_ip: {
+        value: cdktf.booleanToHclTerraform(this._exportCustomRoutesWithPublicIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      import_custom_routes: {
+        value: cdktf.booleanToHclTerraform(this._importCustomRoutes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      import_custom_routes_with_public_ip: {
+        value: cdktf.booleanToHclTerraform(this._importCustomRoutesWithPublicIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_network: {
+        value: cdktf.stringToHclTerraform(this._peerNetwork),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_network_type: {
+        value: cdktf.stringToHclTerraform(this._peerNetworkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vmware_engine_network: {
+        value: cdktf.stringToHclTerraform(this._vmwareEngineNetwork),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: vmwareengineNetworkPeeringTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VmwareengineNetworkPeeringTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

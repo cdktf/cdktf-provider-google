@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchema(scope Construct, id *string, config DocumentAiWarehouseDocumentSchemaConfig) DocumentAiWarehouseDocumentSchema
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.toMetadata"></a>
 
@@ -418,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchema_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchema_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchema_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchema_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchema_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchema.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchema_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -872,7 +879,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaConfig {
 	Connection: interface{},
@@ -888,7 +895,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 	PropertyDefinitions: interface{},
 	DocumentIsFolder: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaTimeouts,
 }
 ```
 
@@ -1087,26 +1094,26 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitions {
 	Name: *string,
-	DateTimeTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTimeTypeOptions,
+	DateTimeTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTimeTypeOptions,
 	DisplayName: *string,
-	EnumTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTypeOptions,
-	FloatTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTypeOptions,
-	IntegerTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsIntegerTypeOptions,
+	EnumTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTypeOptions,
+	FloatTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTypeOptions,
+	IntegerTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsIntegerTypeOptions,
 	IsFilterable: interface{},
 	IsMetadata: interface{},
 	IsRepeatable: interface{},
 	IsRequired: interface{},
 	IsSearchable: interface{},
-	MapTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapTypeOptions,
-	PropertyTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptions,
+	MapTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapTypeOptions,
+	PropertyTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptions,
 	RetrievalImportance: *string,
 	SchemaSources: interface{},
-	TextTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTypeOptions,
-	TimestampTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimestampTypeOptions,
+	TextTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTypeOptions,
+	TimestampTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimestampTypeOptions,
 }
 ```
 
@@ -1377,7 +1384,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTimeTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTimeTypeOptions {
 
@@ -1390,7 +1397,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTypeOptions {
 	PossibleValues: *[]*string,
@@ -1442,7 +1449,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTypeOptions {
 
@@ -1455,7 +1462,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsIntegerTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsIntegerTypeOptions {
 
@@ -1468,7 +1475,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapTypeOptions {
 
@@ -1481,7 +1488,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptions {
 	PropertyDefinitions: interface{},
@@ -1515,25 +1522,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitions {
 	Name: *string,
-	DateTimeTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsDateTimeTypeOptions,
+	DateTimeTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsDateTimeTypeOptions,
 	DisplayName: *string,
-	EnumTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsEnumTypeOptions,
-	FloatTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsFloatTypeOptions,
-	IntegerTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsIntegerTypeOptions,
+	EnumTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsEnumTypeOptions,
+	FloatTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsFloatTypeOptions,
+	IntegerTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsIntegerTypeOptions,
 	IsFilterable: interface{},
 	IsMetadata: interface{},
 	IsRepeatable: interface{},
 	IsRequired: interface{},
 	IsSearchable: interface{},
-	MapTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsMapTypeOptions,
+	MapTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsMapTypeOptions,
 	RetrievalImportance: *string,
 	SchemaSources: interface{},
-	TextTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTextTypeOptions,
-	TimestampTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v12.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTimestampTypeOptions,
+	TextTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTextTypeOptions,
+	TimestampTypeOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTimestampTypeOptions,
 }
 ```
 
@@ -1789,7 +1796,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsDateTimeTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsDateTimeTypeOptions {
 
@@ -1802,7 +1809,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsEnumTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsEnumTypeOptions {
 	PossibleValues: *[]*string,
@@ -1854,7 +1861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsFloatTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsFloatTypeOptions {
 
@@ -1867,7 +1874,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsIntegerTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsIntegerTypeOptions {
 
@@ -1880,7 +1887,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsMapTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsMapTypeOptions {
 
@@ -1893,7 +1900,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSources {
 	Name: *string,
@@ -1943,7 +1950,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTextTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTextTypeOptions {
 
@@ -1956,7 +1963,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTimestampTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTimestampTypeOptions {
 
@@ -1969,7 +1976,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSources {
 	Name: *string,
@@ -2019,7 +2026,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTypeOptions {
 
@@ -2032,7 +2039,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimestampTypeOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimestampTypeOptions {
 
@@ -2045,7 +2052,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehouse
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 &documentaiwarehousedocumentschema.DocumentAiWarehouseDocumentSchemaTimeouts {
 	Create: *string,
@@ -2093,7 +2100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTimeTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTimeTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTimeTypeOptionsOutputReference
 ```
@@ -2342,7 +2349,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsDateTim
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTypeOptionsOutputReference
 ```
@@ -2642,7 +2649,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsEnumTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTypeOptionsOutputReference
 ```
@@ -2891,7 +2898,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsFloatTy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsIntegerTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsIntegerTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsIntegerTypeOptionsOutputReference
 ```
@@ -3140,7 +3147,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsInteger
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList
 ```
@@ -3181,10 +3188,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3283,7 +3307,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapTypeOptionsOutputReference
 ```
@@ -3532,7 +3556,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsMapType
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsOutputReference
 ```
@@ -4402,7 +4426,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsOutputReference
 ```
@@ -4686,7 +4710,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsDateTimeTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsDateTimeTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsDateTimeTypeOptionsOutputReference
 ```
@@ -4935,7 +4959,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsEnumTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsEnumTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsEnumTypeOptionsOutputReference
 ```
@@ -5235,7 +5259,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsFloatTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsFloatTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsFloatTypeOptionsOutputReference
 ```
@@ -5484,7 +5508,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsIntegerTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsIntegerTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsIntegerTypeOptionsOutputReference
 ```
@@ -5733,7 +5757,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList
 ```
@@ -5774,10 +5798,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -5876,7 +5917,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsMapTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsMapTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsMapTypeOptionsOutputReference
 ```
@@ -6125,7 +6166,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsOutputReference
 ```
@@ -6953,7 +6994,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList
 ```
@@ -6994,10 +7035,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -7096,7 +7154,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsSchemaSourcesOutputReference
 ```
@@ -7421,7 +7479,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTextTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTextTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTextTypeOptionsOutputReference
 ```
@@ -7670,7 +7728,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTimestampTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTimestampTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropertyTypeOptionsPropertyDefinitionsTimestampTypeOptionsOutputReference
 ```
@@ -7919,7 +7977,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsPropert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList
 ```
@@ -7960,10 +8018,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -8062,7 +8137,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsSchemaSourcesOutputReference
 ```
@@ -8387,7 +8462,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTypeOptionsOutputReference
 ```
@@ -8636,7 +8711,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTextTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimestampTypeOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimestampTypeOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimestampTypeOptionsOutputReference
 ```
@@ -8885,7 +8960,7 @@ func InternalValue() DocumentAiWarehouseDocumentSchemaPropertyDefinitionsTimesta
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiWarehouseDocumentSchema.DocumentAiWarehouseDocumentSchemaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/documentaiwarehousedocumentschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiwarehousedocumentschema"
 
 documentaiwarehousedocumentschema.NewDocumentAiWarehouseDocumentSchemaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiWarehouseDocumentSchemaTimeoutsOutputReference
 ```

@@ -57,6 +57,25 @@ export function computeDiskAsyncReplicationSecondaryDiskToTerraform(struct?: Com
   }
 }
 
+
+export function computeDiskAsyncReplicationSecondaryDiskToHclTerraform(struct?: ComputeDiskAsyncReplicationSecondaryDiskOutputReference | ComputeDiskAsyncReplicationSecondaryDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disk: {
+      value: cdktf.stringToHclTerraform(struct!.disk),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeDiskAsyncReplicationSecondaryDiskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -127,6 +146,31 @@ export function computeDiskAsyncReplicationTimeoutsToTerraform(struct?: ComputeD
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function computeDiskAsyncReplicationTimeoutsToHclTerraform(struct?: ComputeDiskAsyncReplicationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeDiskAsyncReplicationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -340,5 +384,37 @@ export class ComputeDiskAsyncReplication extends cdktf.TerraformResource {
       secondary_disk: computeDiskAsyncReplicationSecondaryDiskToTerraform(this._secondaryDisk.internalValue),
       timeouts: computeDiskAsyncReplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      primary_disk: {
+        value: cdktf.stringToHclTerraform(this._primaryDisk),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secondary_disk: {
+        value: computeDiskAsyncReplicationSecondaryDiskToHclTerraform(this._secondaryDisk.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeDiskAsyncReplicationSecondaryDiskList",
+      },
+      timeouts: {
+        value: computeDiskAsyncReplicationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeDiskAsyncReplicationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

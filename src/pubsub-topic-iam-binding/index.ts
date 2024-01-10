@@ -69,6 +69,37 @@ export function pubsubTopicIamBindingConditionToTerraform(struct?: PubsubTopicIa
   }
 }
 
+
+export function pubsubTopicIamBindingConditionToHclTerraform(struct?: PubsubTopicIamBindingConditionOutputReference | PubsubTopicIamBindingCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expression: {
+      value: cdktf.stringToHclTerraform(struct!.expression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PubsubTopicIamBindingConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -324,5 +355,49 @@ export class PubsubTopicIamBinding extends cdktf.TerraformResource {
       topic: cdktf.stringToTerraform(this._topic),
       condition: pubsubTopicIamBindingConditionToTerraform(this._condition.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      members: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._members),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktf.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      topic: {
+        value: cdktf.stringToHclTerraform(this._topic),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      condition: {
+        value: pubsubTopicIamBindingConditionToHclTerraform(this._condition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PubsubTopicIamBindingConditionList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

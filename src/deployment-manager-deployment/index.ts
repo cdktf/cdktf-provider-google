@@ -114,6 +114,31 @@ export function deploymentManagerDeploymentLabelsToTerraform(struct?: Deployment
   }
 }
 
+
+export function deploymentManagerDeploymentLabelsToHclTerraform(struct?: DeploymentManagerDeploymentLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DeploymentManagerDeploymentLabelsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -235,6 +260,25 @@ export function deploymentManagerDeploymentTargetConfigToTerraform(struct?: Depl
   }
 }
 
+
+export function deploymentManagerDeploymentTargetConfigToHclTerraform(struct?: DeploymentManagerDeploymentTargetConfigOutputReference | DeploymentManagerDeploymentTargetConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -305,6 +349,31 @@ export function deploymentManagerDeploymentTargetImportsToTerraform(struct?: Dep
     content: cdktf.stringToTerraform(struct!.content),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function deploymentManagerDeploymentTargetImportsToHclTerraform(struct?: DeploymentManagerDeploymentTargetImports | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DeploymentManagerDeploymentTargetImportsOutputReference extends cdktf.ComplexObject {
@@ -435,6 +504,31 @@ export function deploymentManagerDeploymentTargetToTerraform(struct?: Deployment
   }
 }
 
+
+export function deploymentManagerDeploymentTargetToHclTerraform(struct?: DeploymentManagerDeploymentTargetOutputReference | DeploymentManagerDeploymentTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    config: {
+      value: deploymentManagerDeploymentTargetConfigToHclTerraform(struct!.config),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeploymentManagerDeploymentTargetConfigList",
+    },
+    imports: {
+      value: cdktf.listMapperHcl(deploymentManagerDeploymentTargetImportsToHclTerraform, true)(struct!.imports),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeploymentManagerDeploymentTargetImportsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -527,6 +621,37 @@ export function deploymentManagerDeploymentTimeoutsToTerraform(struct?: Deployme
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function deploymentManagerDeploymentTimeoutsToHclTerraform(struct?: DeploymentManagerDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -885,5 +1010,73 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       target: deploymentManagerDeploymentTargetToTerraform(this._target.internalValue),
       timeouts: deploymentManagerDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      create_policy: {
+        value: cdktf.stringToHclTerraform(this._createPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      delete_policy: {
+        value: cdktf.stringToHclTerraform(this._deletePolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preview: {
+        value: cdktf.booleanToHclTerraform(this._preview),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.listMapperHcl(deploymentManagerDeploymentLabelsToHclTerraform, true)(this._labels.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "DeploymentManagerDeploymentLabelsList",
+      },
+      target: {
+        value: deploymentManagerDeploymentTargetToHclTerraform(this._target.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DeploymentManagerDeploymentTargetList",
+      },
+      timeouts: {
+        value: deploymentManagerDeploymentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DeploymentManagerDeploymentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

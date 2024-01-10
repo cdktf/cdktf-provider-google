@@ -94,6 +94,17 @@ export function apigeeKeystoresAliasesSelfSignedCertCertsInfoCertInfoToTerraform
   }
 }
 
+
+export function apigeeKeystoresAliasesSelfSignedCertCertsInfoCertInfoToHclTerraform(struct?: ApigeeKeystoresAliasesSelfSignedCertCertsInfoCertInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class ApigeeKeystoresAliasesSelfSignedCertCertsInfoCertInfoOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -208,6 +219,17 @@ export function apigeeKeystoresAliasesSelfSignedCertCertsInfoToTerraform(struct?
   }
 }
 
+
+export function apigeeKeystoresAliasesSelfSignedCertCertsInfoToHclTerraform(struct?: ApigeeKeystoresAliasesSelfSignedCertCertsInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class ApigeeKeystoresAliasesSelfSignedCertCertsInfoOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -320,6 +342,61 @@ export function apigeeKeystoresAliasesSelfSignedCertSubjectToTerraform(struct?: 
     org_unit: cdktf.stringToTerraform(struct!.orgUnit),
     state: cdktf.stringToTerraform(struct!.state),
   }
+}
+
+
+export function apigeeKeystoresAliasesSelfSignedCertSubjectToHclTerraform(struct?: ApigeeKeystoresAliasesSelfSignedCertSubjectOutputReference | ApigeeKeystoresAliasesSelfSignedCertSubject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    common_name: {
+      value: cdktf.stringToHclTerraform(struct!.commonName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country_code: {
+      value: cdktf.stringToHclTerraform(struct!.countryCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    locality: {
+      value: cdktf.stringToHclTerraform(struct!.locality),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    org: {
+      value: cdktf.stringToHclTerraform(struct!.org),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    org_unit: {
+      value: cdktf.stringToHclTerraform(struct!.orgUnit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktf.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApigeeKeystoresAliasesSelfSignedCertSubjectOutputReference extends cdktf.ComplexObject {
@@ -521,6 +598,25 @@ export function apigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNamesTo
   }
 }
 
+
+export function apigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNamesToHclTerraform(struct?: ApigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNamesOutputReference | ApigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNames): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subject_alternative_name: {
+      value: cdktf.stringToHclTerraform(struct!.subjectAlternativeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNamesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -589,6 +685,31 @@ export function apigeeKeystoresAliasesSelfSignedCertTimeoutsToTerraform(struct?:
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function apigeeKeystoresAliasesSelfSignedCertTimeoutsToHclTerraform(struct?: ApigeeKeystoresAliasesSelfSignedCertTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApigeeKeystoresAliasesSelfSignedCertTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -927,5 +1048,79 @@ export class ApigeeKeystoresAliasesSelfSignedCert extends cdktf.TerraformResourc
       subject_alternative_dns_names: apigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNamesToTerraform(this._subjectAlternativeDnsNames.internalValue),
       timeouts: apigeeKeystoresAliasesSelfSignedCertTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      alias: {
+        value: cdktf.stringToHclTerraform(this._alias),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cert_validity_in_days: {
+        value: cdktf.numberToHclTerraform(this._certValidityInDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      environment: {
+        value: cdktf.stringToHclTerraform(this._environment),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_size: {
+        value: cdktf.stringToHclTerraform(this._keySize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      keystore: {
+        value: cdktf.stringToHclTerraform(this._keystore),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_id: {
+        value: cdktf.stringToHclTerraform(this._orgId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sig_alg: {
+        value: cdktf.stringToHclTerraform(this._sigAlg),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subject: {
+        value: apigeeKeystoresAliasesSelfSignedCertSubjectToHclTerraform(this._subject.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApigeeKeystoresAliasesSelfSignedCertSubjectList",
+      },
+      subject_alternative_dns_names: {
+        value: apigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNamesToHclTerraform(this._subjectAlternativeDnsNames.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApigeeKeystoresAliasesSelfSignedCertSubjectAlternativeDnsNamesList",
+      },
+      timeouts: {
+        value: apigeeKeystoresAliasesSelfSignedCertTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApigeeKeystoresAliasesSelfSignedCertTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

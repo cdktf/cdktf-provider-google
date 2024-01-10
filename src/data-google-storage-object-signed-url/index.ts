@@ -279,4 +279,66 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
       path: cdktf.stringToTerraform(this._path),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket: {
+        value: cdktf.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_md5: {
+        value: cdktf.stringToHclTerraform(this._contentMd5),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_type: {
+        value: cdktf.stringToHclTerraform(this._contentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      credentials: {
+        value: cdktf.stringToHclTerraform(this._credentials),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      duration: {
+        value: cdktf.stringToHclTerraform(this._duration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      extension_headers: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._extensionHeaders),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      http_method: {
+        value: cdktf.stringToHclTerraform(this._httpMethod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      path: {
+        value: cdktf.stringToHclTerraform(this._path),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

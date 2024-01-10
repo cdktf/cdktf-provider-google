@@ -148,6 +148,25 @@ export function dataprocMetastoreServiceEncryptionConfigToTerraform(struct?: Dat
   }
 }
 
+
+export function dataprocMetastoreServiceEncryptionConfigToHclTerraform(struct?: DataprocMetastoreServiceEncryptionConfigOutputReference | DataprocMetastoreServiceEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataprocMetastoreServiceEncryptionConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -223,6 +242,37 @@ export function dataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsToTe
     key: cdktf.stringToTerraform(struct!.key),
     version: cdktf.stringToTerraform(struct!.version),
   }
+}
+
+
+export function dataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsToHclTerraform(struct?: DataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    config_overrides: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.configOverrides),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsOutputReference extends cdktf.ComplexObject {
@@ -364,6 +414,25 @@ export function dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytabT
   }
 }
 
+
+export function dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytabToHclTerraform(struct?: DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytabOutputReference | DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytab): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cloud_secret: {
+      value: cdktf.stringToHclTerraform(struct!.cloudSecret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytabOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -440,6 +509,37 @@ export function dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigToTerra
     principal: cdktf.stringToTerraform(struct!.principal),
     keytab: dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytabToTerraform(struct!.keytab),
   }
+}
+
+
+export function dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigToHclTerraform(struct?: DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigOutputReference | DataprocMetastoreServiceHiveMetastoreConfigKerberosConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    krb5_config_gcs_uri: {
+      value: cdktf.stringToHclTerraform(struct!.krb5ConfigGcsUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    principal: {
+      value: cdktf.stringToHclTerraform(struct!.principal),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    keytab: {
+      value: dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytabToHclTerraform(struct!.keytab),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigKeytabList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigOutputReference extends cdktf.ComplexObject {
@@ -571,6 +671,49 @@ export function dataprocMetastoreServiceHiveMetastoreConfigToTerraform(struct?: 
     auxiliary_versions: cdktf.listMapper(dataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsToTerraform, true)(struct!.auxiliaryVersions),
     kerberos_config: dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigToTerraform(struct!.kerberosConfig),
   }
+}
+
+
+export function dataprocMetastoreServiceHiveMetastoreConfigToHclTerraform(struct?: DataprocMetastoreServiceHiveMetastoreConfigOutputReference | DataprocMetastoreServiceHiveMetastoreConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    config_overrides: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.configOverrides),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    endpoint_protocol: {
+      value: cdktf.stringToHclTerraform(struct!.endpointProtocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    auxiliary_versions: {
+      value: cdktf.listMapperHcl(dataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsToHclTerraform, true)(struct!.auxiliaryVersions),
+      isBlock: true,
+      type: "set",
+      storageClassType: "DataprocMetastoreServiceHiveMetastoreConfigAuxiliaryVersionsList",
+    },
+    kerberos_config: {
+      value: dataprocMetastoreServiceHiveMetastoreConfigKerberosConfigToHclTerraform(struct!.kerberosConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataprocMetastoreServiceHiveMetastoreConfigKerberosConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataprocMetastoreServiceHiveMetastoreConfigOutputReference extends cdktf.ComplexObject {
@@ -732,6 +875,31 @@ export function dataprocMetastoreServiceMaintenanceWindowToTerraform(struct?: Da
   }
 }
 
+
+export function dataprocMetastoreServiceMaintenanceWindowToHclTerraform(struct?: DataprocMetastoreServiceMaintenanceWindowOutputReference | DataprocMetastoreServiceMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    hour_of_day: {
+      value: cdktf.numberToHclTerraform(struct!.hourOfDay),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataprocMetastoreServiceMaintenanceWindowOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -815,6 +983,25 @@ export function dataprocMetastoreServiceMetadataIntegrationDataCatalogConfigToTe
   }
 }
 
+
+export function dataprocMetastoreServiceMetadataIntegrationDataCatalogConfigToHclTerraform(struct?: DataprocMetastoreServiceMetadataIntegrationDataCatalogConfigOutputReference | DataprocMetastoreServiceMetadataIntegrationDataCatalogConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataprocMetastoreServiceMetadataIntegrationDataCatalogConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -877,6 +1064,25 @@ export function dataprocMetastoreServiceMetadataIntegrationToTerraform(struct?: 
   return {
     data_catalog_config: dataprocMetastoreServiceMetadataIntegrationDataCatalogConfigToTerraform(struct!.dataCatalogConfig),
   }
+}
+
+
+export function dataprocMetastoreServiceMetadataIntegrationToHclTerraform(struct?: DataprocMetastoreServiceMetadataIntegrationOutputReference | DataprocMetastoreServiceMetadataIntegration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data_catalog_config: {
+      value: dataprocMetastoreServiceMetadataIntegrationDataCatalogConfigToHclTerraform(struct!.dataCatalogConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataprocMetastoreServiceMetadataIntegrationDataCatalogConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataprocMetastoreServiceMetadataIntegrationOutputReference extends cdktf.ComplexObject {
@@ -944,6 +1150,25 @@ export function dataprocMetastoreServiceNetworkConfigConsumersToTerraform(struct
   return {
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
   }
+}
+
+
+export function dataprocMetastoreServiceNetworkConfigConsumersToHclTerraform(struct?: DataprocMetastoreServiceNetworkConfigConsumers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subnetwork: {
+      value: cdktf.stringToHclTerraform(struct!.subnetwork),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataprocMetastoreServiceNetworkConfigConsumersOutputReference extends cdktf.ComplexObject {
@@ -1047,6 +1272,25 @@ export function dataprocMetastoreServiceNetworkConfigToTerraform(struct?: Datapr
   }
 }
 
+
+export function dataprocMetastoreServiceNetworkConfigToHclTerraform(struct?: DataprocMetastoreServiceNetworkConfigOutputReference | DataprocMetastoreServiceNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    consumers: {
+      value: cdktf.listMapperHcl(dataprocMetastoreServiceNetworkConfigConsumersToHclTerraform, true)(struct!.consumers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataprocMetastoreServiceNetworkConfigConsumersList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataprocMetastoreServiceNetworkConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1116,6 +1360,31 @@ export function dataprocMetastoreServiceScalingConfigToTerraform(struct?: Datapr
     instance_size: cdktf.stringToTerraform(struct!.instanceSize),
     scaling_factor: cdktf.numberToTerraform(struct!.scalingFactor),
   }
+}
+
+
+export function dataprocMetastoreServiceScalingConfigToHclTerraform(struct?: DataprocMetastoreServiceScalingConfigOutputReference | DataprocMetastoreServiceScalingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    instance_size: {
+      value: cdktf.stringToHclTerraform(struct!.instanceSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scaling_factor: {
+      value: cdktf.numberToHclTerraform(struct!.scalingFactor),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataprocMetastoreServiceScalingConfigOutputReference extends cdktf.ComplexObject {
@@ -1207,6 +1476,25 @@ export function dataprocMetastoreServiceTelemetryConfigToTerraform(struct?: Data
   }
 }
 
+
+export function dataprocMetastoreServiceTelemetryConfigToHclTerraform(struct?: DataprocMetastoreServiceTelemetryConfigOutputReference | DataprocMetastoreServiceTelemetryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    log_format: {
+      value: cdktf.stringToHclTerraform(struct!.logFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataprocMetastoreServiceTelemetryConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1280,6 +1568,37 @@ export function dataprocMetastoreServiceTimeoutsToTerraform(struct?: DataprocMet
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataprocMetastoreServiceTimeoutsToHclTerraform(struct?: DataprocMetastoreServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataprocMetastoreServiceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1812,5 +2131,121 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
       telemetry_config: dataprocMetastoreServiceTelemetryConfigToTerraform(this._telemetryConfig.internalValue),
       timeouts: dataprocMetastoreServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      database_type: {
+        value: cdktf.stringToHclTerraform(this._databaseType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      port: {
+        value: cdktf.numberToHclTerraform(this._port),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_channel: {
+        value: cdktf.stringToHclTerraform(this._releaseChannel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_id: {
+        value: cdktf.stringToHclTerraform(this._serviceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tier: {
+        value: cdktf.stringToHclTerraform(this._tier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      encryption_config: {
+        value: dataprocMetastoreServiceEncryptionConfigToHclTerraform(this._encryptionConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataprocMetastoreServiceEncryptionConfigList",
+      },
+      hive_metastore_config: {
+        value: dataprocMetastoreServiceHiveMetastoreConfigToHclTerraform(this._hiveMetastoreConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataprocMetastoreServiceHiveMetastoreConfigList",
+      },
+      maintenance_window: {
+        value: dataprocMetastoreServiceMaintenanceWindowToHclTerraform(this._maintenanceWindow.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataprocMetastoreServiceMaintenanceWindowList",
+      },
+      metadata_integration: {
+        value: dataprocMetastoreServiceMetadataIntegrationToHclTerraform(this._metadataIntegration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataprocMetastoreServiceMetadataIntegrationList",
+      },
+      network_config: {
+        value: dataprocMetastoreServiceNetworkConfigToHclTerraform(this._networkConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataprocMetastoreServiceNetworkConfigList",
+      },
+      scaling_config: {
+        value: dataprocMetastoreServiceScalingConfigToHclTerraform(this._scalingConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataprocMetastoreServiceScalingConfigList",
+      },
+      telemetry_config: {
+        value: dataprocMetastoreServiceTelemetryConfigToHclTerraform(this._telemetryConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataprocMetastoreServiceTelemetryConfigList",
+      },
+      timeouts: {
+        value: dataprocMetastoreServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataprocMetastoreServiceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

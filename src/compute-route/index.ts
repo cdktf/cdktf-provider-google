@@ -164,6 +164,31 @@ export function computeRouteTimeoutsToTerraform(struct?: ComputeRouteTimeouts | 
   }
 }
 
+
+export function computeRouteTimeoutsToHclTerraform(struct?: ComputeRouteTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRouteTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -580,5 +605,103 @@ export class ComputeRoute extends cdktf.TerraformResource {
       tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       timeouts: computeRouteTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dest_range: {
+        value: cdktf.stringToHclTerraform(this._destRange),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      next_hop_gateway: {
+        value: cdktf.stringToHclTerraform(this._nextHopGateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      next_hop_ilb: {
+        value: cdktf.stringToHclTerraform(this._nextHopIlb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      next_hop_instance: {
+        value: cdktf.stringToHclTerraform(this._nextHopInstance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      next_hop_instance_zone: {
+        value: cdktf.stringToHclTerraform(this._nextHopInstanceZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      next_hop_ip: {
+        value: cdktf.stringToHclTerraform(this._nextHopIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      next_hop_vpn_tunnel: {
+        value: cdktf.stringToHclTerraform(this._nextHopVpnTunnel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._tags),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      timeouts: {
+        value: computeRouteTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeRouteTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

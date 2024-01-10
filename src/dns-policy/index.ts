@@ -98,6 +98,31 @@ export function dnsPolicyAlternativeNameServerConfigTargetNameServersToTerraform
   }
 }
 
+
+export function dnsPolicyAlternativeNameServerConfigTargetNameServersToHclTerraform(struct?: DnsPolicyAlternativeNameServerConfigTargetNameServers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    forwarding_path: {
+      value: cdktf.stringToHclTerraform(struct!.forwardingPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ipv4_address: {
+      value: cdktf.stringToHclTerraform(struct!.ipv4Address),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DnsPolicyAlternativeNameServerConfigTargetNameServersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -216,6 +241,25 @@ export function dnsPolicyAlternativeNameServerConfigToTerraform(struct?: DnsPoli
   }
 }
 
+
+export function dnsPolicyAlternativeNameServerConfigToHclTerraform(struct?: DnsPolicyAlternativeNameServerConfigOutputReference | DnsPolicyAlternativeNameServerConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    target_name_servers: {
+      value: cdktf.listMapperHcl(dnsPolicyAlternativeNameServerConfigTargetNameServersToHclTerraform, true)(struct!.targetNameServers),
+      isBlock: true,
+      type: "set",
+      storageClassType: "DnsPolicyAlternativeNameServerConfigTargetNameServersList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DnsPolicyAlternativeNameServerConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -280,6 +324,25 @@ export function dnsPolicyNetworksToTerraform(struct?: DnsPolicyNetworks | cdktf.
   return {
     network_url: cdktf.stringToTerraform(struct!.networkUrl),
   }
+}
+
+
+export function dnsPolicyNetworksToHclTerraform(struct?: DnsPolicyNetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    network_url: {
+      value: cdktf.stringToHclTerraform(struct!.networkUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DnsPolicyNetworksOutputReference extends cdktf.ComplexObject {
@@ -384,6 +447,37 @@ export function dnsPolicyTimeoutsToTerraform(struct?: DnsPolicyTimeouts | cdktf.
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dnsPolicyTimeoutsToHclTerraform(struct?: DnsPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DnsPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -712,5 +806,67 @@ export class DnsPolicy extends cdktf.TerraformResource {
       networks: cdktf.listMapper(dnsPolicyNetworksToTerraform, true)(this._networks.internalValue),
       timeouts: dnsPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_inbound_forwarding: {
+        value: cdktf.booleanToHclTerraform(this._enableInboundForwarding),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_logging: {
+        value: cdktf.booleanToHclTerraform(this._enableLogging),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alternative_name_server_config: {
+        value: dnsPolicyAlternativeNameServerConfigToHclTerraform(this._alternativeNameServerConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DnsPolicyAlternativeNameServerConfigList",
+      },
+      networks: {
+        value: cdktf.listMapperHcl(dnsPolicyNetworksToHclTerraform, true)(this._networks.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "DnsPolicyNetworksList",
+      },
+      timeouts: {
+        value: dnsPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DnsPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

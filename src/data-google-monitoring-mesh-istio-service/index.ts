@@ -57,6 +57,17 @@ export function dataGoogleMonitoringMeshIstioServiceTelemetryToTerraform(struct?
   }
 }
 
+
+export function dataGoogleMonitoringMeshIstioServiceTelemetryToHclTerraform(struct?: DataGoogleMonitoringMeshIstioServiceTelemetry): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleMonitoringMeshIstioServiceTelemetryOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -282,5 +293,43 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
       service_name: cdktf.stringToTerraform(this._serviceName),
       service_namespace: cdktf.stringToTerraform(this._serviceNamespace),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mesh_uid: {
+        value: cdktf.stringToHclTerraform(this._meshUid),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_name: {
+        value: cdktf.stringToHclTerraform(this._serviceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_namespace: {
+        value: cdktf.stringToHclTerraform(this._serviceNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

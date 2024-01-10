@@ -141,4 +141,24 @@ export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
       range_type: cdktf.stringToTerraform(this._rangeType),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      range_type: {
+        value: cdktf.stringToHclTerraform(this._rangeType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

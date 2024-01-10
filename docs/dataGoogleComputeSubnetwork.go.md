@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 datagooglecomputesubnetwork.NewDataGoogleComputeSubnetwork(scope Construct, id *string, config DataGoogleComputeSubnetworkConfig) DataGoogleComputeSubnetwork
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -123,6 +124,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.toMetadata"></a>
 
@@ -302,7 +311,7 @@ func ResetSelfLink()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 datagooglecomputesubnetwork.DataGoogleComputeSubnetwork_IsConstruct(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 datagooglecomputesubnetwork.DataGoogleComputeSubnetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -348,7 +357,7 @@ datagooglecomputesubnetwork.DataGoogleComputeSubnetwork_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 datagooglecomputesubnetwork.DataGoogleComputeSubnetwork_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -362,7 +371,7 @@ datagooglecomputesubnetwork.DataGoogleComputeSubnetwork_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 datagooglecomputesubnetwork.DataGoogleComputeSubnetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -756,7 +765,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 &datagooglecomputesubnetwork.DataGoogleComputeSubnetworkConfig {
 	Connection: interface{},
@@ -931,7 +940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 &datagooglecomputesubnetwork.DataGoogleComputeSubnetworkSecondaryIpRange {
 
@@ -946,7 +955,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 datagooglecomputesubnetwork.NewDataGoogleComputeSubnetworkSecondaryIpRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeSubnetworkSecondaryIpRangeList
 ```
@@ -987,10 +996,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1078,7 +1104,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetwork.DataGoogleComputeSubnetworkSecondaryIpRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesubnetwork"
 
 datagooglecomputesubnetwork.NewDataGoogleComputeSubnetworkSecondaryIpRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeSubnetworkSecondaryIpRangeOutputReference
 ```

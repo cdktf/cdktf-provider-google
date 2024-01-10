@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenetworks"
 
 datagooglecomputenetworks.NewDataGoogleComputeNetworks(scope Construct, id *string, config DataGoogleComputeNetworksConfig) DataGoogleComputeNetworks
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -120,6 +121,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.toMetadata"></a>
 
@@ -281,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenetworks"
 
 datagooglecomputenetworks.DataGoogleComputeNetworks_IsConstruct(x interface{}) *bool
 ```
@@ -313,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenetworks"
 
 datagooglecomputenetworks.DataGoogleComputeNetworks_IsTerraformElement(x interface{}) *bool
 ```
@@ -327,7 +336,7 @@ datagooglecomputenetworks.DataGoogleComputeNetworks_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenetworks"
 
 datagooglecomputenetworks.DataGoogleComputeNetworks_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -341,7 +350,7 @@ datagooglecomputenetworks.DataGoogleComputeNetworks_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenetworks"
 
 datagooglecomputenetworks.DataGoogleComputeNetworks_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -614,7 +623,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenetworks"
 
 &datagooglecomputenetworks.DataGoogleComputeNetworksConfig {
 	Connection: interface{},

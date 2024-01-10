@@ -101,6 +101,17 @@ export function dataplexZoneAssetStatusToTerraform(struct?: DataplexZoneAssetSta
   }
 }
 
+
+export function dataplexZoneAssetStatusToHclTerraform(struct?: DataplexZoneAssetStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataplexZoneAssetStatusOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -201,6 +212,43 @@ export function dataplexZoneDiscoverySpecCsvOptionsToTerraform(struct?: Dataplex
     encoding: cdktf.stringToTerraform(struct!.encoding),
     header_rows: cdktf.numberToTerraform(struct!.headerRows),
   }
+}
+
+
+export function dataplexZoneDiscoverySpecCsvOptionsToHclTerraform(struct?: DataplexZoneDiscoverySpecCsvOptionsOutputReference | DataplexZoneDiscoverySpecCsvOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    delimiter: {
+      value: cdktf.stringToHclTerraform(struct!.delimiter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disable_type_inference: {
+      value: cdktf.booleanToHclTerraform(struct!.disableTypeInference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    encoding: {
+      value: cdktf.stringToHclTerraform(struct!.encoding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    header_rows: {
+      value: cdktf.numberToHclTerraform(struct!.headerRows),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataplexZoneDiscoverySpecCsvOptionsOutputReference extends cdktf.ComplexObject {
@@ -343,6 +391,31 @@ export function dataplexZoneDiscoverySpecJsonOptionsToTerraform(struct?: Dataple
   }
 }
 
+
+export function dataplexZoneDiscoverySpecJsonOptionsToHclTerraform(struct?: DataplexZoneDiscoverySpecJsonOptionsOutputReference | DataplexZoneDiscoverySpecJsonOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disable_type_inference: {
+      value: cdktf.booleanToHclTerraform(struct!.disableTypeInference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    encoding: {
+      value: cdktf.stringToHclTerraform(struct!.encoding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataplexZoneDiscoverySpecJsonOptionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -465,6 +538,55 @@ export function dataplexZoneDiscoverySpecToTerraform(struct?: DataplexZoneDiscov
     csv_options: dataplexZoneDiscoverySpecCsvOptionsToTerraform(struct!.csvOptions),
     json_options: dataplexZoneDiscoverySpecJsonOptionsToTerraform(struct!.jsonOptions),
   }
+}
+
+
+export function dataplexZoneDiscoverySpecToHclTerraform(struct?: DataplexZoneDiscoverySpecOutputReference | DataplexZoneDiscoverySpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    exclude_patterns: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludePatterns),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    include_patterns: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includePatterns),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    schedule: {
+      value: cdktf.stringToHclTerraform(struct!.schedule),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    csv_options: {
+      value: dataplexZoneDiscoverySpecCsvOptionsToHclTerraform(struct!.csvOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataplexZoneDiscoverySpecCsvOptionsList",
+    },
+    json_options: {
+      value: dataplexZoneDiscoverySpecJsonOptionsToHclTerraform(struct!.jsonOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataplexZoneDiscoverySpecJsonOptionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataplexZoneDiscoverySpecOutputReference extends cdktf.ComplexObject {
@@ -641,6 +763,25 @@ export function dataplexZoneResourceSpecToTerraform(struct?: DataplexZoneResourc
   }
 }
 
+
+export function dataplexZoneResourceSpecToHclTerraform(struct?: DataplexZoneResourceSpecOutputReference | DataplexZoneResourceSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    location_type: {
+      value: cdktf.stringToHclTerraform(struct!.locationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataplexZoneResourceSpecOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -711,6 +852,37 @@ export function dataplexZoneTimeoutsToTerraform(struct?: DataplexZoneTimeouts | 
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataplexZoneTimeoutsToHclTerraform(struct?: DataplexZoneTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataplexZoneTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1116,5 +1288,85 @@ export class DataplexZone extends cdktf.TerraformResource {
       resource_spec: dataplexZoneResourceSpecToTerraform(this._resourceSpec.internalValue),
       timeouts: dataplexZoneTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      lake: {
+        value: cdktf.stringToHclTerraform(this._lake),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      discovery_spec: {
+        value: dataplexZoneDiscoverySpecToHclTerraform(this._discoverySpec.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataplexZoneDiscoverySpecList",
+      },
+      resource_spec: {
+        value: dataplexZoneResourceSpecToHclTerraform(this._resourceSpec.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataplexZoneResourceSpecList",
+      },
+      timeouts: {
+        value: dataplexZoneTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataplexZoneTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

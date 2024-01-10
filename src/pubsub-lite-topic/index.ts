@@ -92,6 +92,31 @@ export function pubsubLiteTopicPartitionConfigCapacityToTerraform(struct?: Pubsu
   }
 }
 
+
+export function pubsubLiteTopicPartitionConfigCapacityToHclTerraform(struct?: PubsubLiteTopicPartitionConfigCapacityOutputReference | PubsubLiteTopicPartitionConfigCapacity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    publish_mib_per_sec: {
+      value: cdktf.numberToHclTerraform(struct!.publishMibPerSec),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    subscribe_mib_per_sec: {
+      value: cdktf.numberToHclTerraform(struct!.subscribeMibPerSec),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -182,6 +207,31 @@ export function pubsubLiteTopicPartitionConfigToTerraform(struct?: PubsubLiteTop
   }
 }
 
+
+export function pubsubLiteTopicPartitionConfigToHclTerraform(struct?: PubsubLiteTopicPartitionConfigOutputReference | PubsubLiteTopicPartitionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    count: {
+      value: cdktf.numberToHclTerraform(struct!.count),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    capacity: {
+      value: pubsubLiteTopicPartitionConfigCapacityToHclTerraform(struct!.capacity),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PubsubLiteTopicPartitionConfigCapacityList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -268,6 +318,25 @@ export function pubsubLiteTopicReservationConfigToTerraform(struct?: PubsubLiteT
   }
 }
 
+
+export function pubsubLiteTopicReservationConfigToHclTerraform(struct?: PubsubLiteTopicReservationConfigOutputReference | PubsubLiteTopicReservationConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    throughput_reservation: {
+      value: cdktf.stringToHclTerraform(struct!.throughputReservation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PubsubLiteTopicReservationConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -345,6 +414,31 @@ export function pubsubLiteTopicRetentionConfigToTerraform(struct?: PubsubLiteTop
     per_partition_bytes: cdktf.stringToTerraform(struct!.perPartitionBytes),
     period: cdktf.stringToTerraform(struct!.period),
   }
+}
+
+
+export function pubsubLiteTopicRetentionConfigToHclTerraform(struct?: PubsubLiteTopicRetentionConfigOutputReference | PubsubLiteTopicRetentionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    per_partition_bytes: {
+      value: cdktf.stringToHclTerraform(struct!.perPartitionBytes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    period: {
+      value: cdktf.stringToHclTerraform(struct!.period),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.ComplexObject {
@@ -439,6 +533,37 @@ export function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeo
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function pubsubLiteTopicTimeoutsToHclTerraform(struct?: PubsubLiteTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -767,5 +892,67 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
       retention_config: pubsubLiteTopicRetentionConfigToTerraform(this._retentionConfig.internalValue),
       timeouts: pubsubLiteTopicTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partition_config: {
+        value: pubsubLiteTopicPartitionConfigToHclTerraform(this._partitionConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PubsubLiteTopicPartitionConfigList",
+      },
+      reservation_config: {
+        value: pubsubLiteTopicReservationConfigToHclTerraform(this._reservationConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PubsubLiteTopicReservationConfigList",
+      },
+      retention_config: {
+        value: pubsubLiteTopicRetentionConfigToHclTerraform(this._retentionConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PubsubLiteTopicRetentionConfigList",
+      },
+      timeouts: {
+        value: pubsubLiteTopicTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "PubsubLiteTopicTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

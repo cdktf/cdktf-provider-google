@@ -93,6 +93,17 @@ export function vertexAiEndpointDeployedModelsAutomaticResourcesToTerraform(stru
   }
 }
 
+
+export function vertexAiEndpointDeployedModelsAutomaticResourcesToHclTerraform(struct?: VertexAiEndpointDeployedModelsAutomaticResources): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class VertexAiEndpointDeployedModelsAutomaticResourcesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -162,6 +173,17 @@ export function vertexAiEndpointDeployedModelsDedicatedResourcesAutoscalingMetri
   }
 }
 
+
+export function vertexAiEndpointDeployedModelsDedicatedResourcesAutoscalingMetricSpecsToHclTerraform(struct?: VertexAiEndpointDeployedModelsDedicatedResourcesAutoscalingMetricSpecs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class VertexAiEndpointDeployedModelsDedicatedResourcesAutoscalingMetricSpecsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -229,6 +251,17 @@ export function vertexAiEndpointDeployedModelsDedicatedResourcesMachineSpecToTer
   }
   return {
   }
+}
+
+
+export function vertexAiEndpointDeployedModelsDedicatedResourcesMachineSpecToHclTerraform(struct?: VertexAiEndpointDeployedModelsDedicatedResourcesMachineSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class VertexAiEndpointDeployedModelsDedicatedResourcesMachineSpecOutputReference extends cdktf.ComplexObject {
@@ -303,6 +336,17 @@ export function vertexAiEndpointDeployedModelsDedicatedResourcesToTerraform(stru
   }
   return {
   }
+}
+
+
+export function vertexAiEndpointDeployedModelsDedicatedResourcesToHclTerraform(struct?: VertexAiEndpointDeployedModelsDedicatedResources): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class VertexAiEndpointDeployedModelsDedicatedResourcesOutputReference extends cdktf.ComplexObject {
@@ -386,6 +430,17 @@ export function vertexAiEndpointDeployedModelsPrivateEndpointsToTerraform(struct
   }
 }
 
+
+export function vertexAiEndpointDeployedModelsPrivateEndpointsToHclTerraform(struct?: VertexAiEndpointDeployedModelsPrivateEndpoints): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class VertexAiEndpointDeployedModelsPrivateEndpointsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -463,6 +518,17 @@ export function vertexAiEndpointDeployedModelsToTerraform(struct?: VertexAiEndpo
   }
   return {
   }
+}
+
+
+export function vertexAiEndpointDeployedModelsToHclTerraform(struct?: VertexAiEndpointDeployedModels): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class VertexAiEndpointDeployedModelsOutputReference extends cdktf.ComplexObject {
@@ -594,6 +660,25 @@ export function vertexAiEndpointEncryptionSpecToTerraform(struct?: VertexAiEndpo
   }
 }
 
+
+export function vertexAiEndpointEncryptionSpecToHclTerraform(struct?: VertexAiEndpointEncryptionSpecOutputReference | VertexAiEndpointEncryptionSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VertexAiEndpointEncryptionSpecOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -664,6 +749,37 @@ export function vertexAiEndpointTimeoutsToTerraform(struct?: VertexAiEndpointTim
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function vertexAiEndpointTimeoutsToHclTerraform(struct?: VertexAiEndpointTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VertexAiEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1060,5 +1176,79 @@ export class VertexAiEndpoint extends cdktf.TerraformResource {
       encryption_spec: vertexAiEndpointEncryptionSpecToTerraform(this._encryptionSpec.internalValue),
       timeouts: vertexAiEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      encryption_spec: {
+        value: vertexAiEndpointEncryptionSpecToHclTerraform(this._encryptionSpec.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VertexAiEndpointEncryptionSpecList",
+      },
+      timeouts: {
+        value: vertexAiEndpointTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VertexAiEndpointTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

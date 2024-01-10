@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloud(scope Construct, id *string, config VmwareenginePrivateCloudConfig) VmwareenginePrivateCloud
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.toMetadata"></a>
 
@@ -445,7 +452,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +484,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +498,7 @@ vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +512,7 @@ vmwareengineprivatecloud.VmwareenginePrivateCloud_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloud.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.VmwareenginePrivateCloud_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -987,7 +994,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudConfig {
 	Connection: interface{},
@@ -998,13 +1005,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivate
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Location: *string,
-	ManagementCluster: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementCluster,
+	ManagementCluster: github.com/cdktf/cdktf-provider-google-go/google/v13.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementCluster,
 	Name: *string,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfig,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfig,
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeouts,
 	Type: *string,
 }
 ```
@@ -1232,7 +1239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcx.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudHcx {
 
@@ -1245,7 +1252,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivate
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudManagementCluster {
 	ClusterId: *string,
@@ -1303,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigs {
 	NodeCount: *f64,
@@ -1371,7 +1378,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudNetworkConfig {
 	ManagementCidr: *string,
@@ -1424,7 +1431,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsx.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudNsx {
 
@@ -1437,7 +1444,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivate
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudTimeouts {
 	Create: *string,
@@ -1497,7 +1504,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 &vmwareengineprivatecloud.VmwareenginePrivateCloudVcenter {
 
@@ -1512,7 +1519,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudHcxList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudHcxList
 ```
@@ -1553,10 +1560,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1644,7 +1668,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudHcxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudHcxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudHcxOutputReference
 ```
@@ -1955,7 +1979,7 @@ func InternalValue() VmwareenginePrivateCloudHcx
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudManagementClusterNodeTypeConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList
 ```
@@ -1996,10 +2020,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2098,7 +2139,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterNodeTypeConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudManagementClusterNodeTypeConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudManagementClusterNodeTypeConfigsOutputReference
 ```
@@ -2438,7 +2479,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudManagementClusterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudManagementClusterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareenginePrivateCloudManagementClusterOutputReference
 ```
@@ -2751,7 +2792,7 @@ func InternalValue() VmwareenginePrivateCloudManagementCluster
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareenginePrivateCloudNetworkConfigOutputReference
 ```
@@ -3084,7 +3125,7 @@ func InternalValue() VmwareenginePrivateCloudNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudNsxList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudNsxList
 ```
@@ -3125,10 +3166,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3216,7 +3274,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudNsxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudNsxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudNsxOutputReference
 ```
@@ -3527,7 +3585,7 @@ func InternalValue() VmwareenginePrivateCloudNsx
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareenginePrivateCloudTimeoutsOutputReference
 ```
@@ -3863,7 +3921,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudVcenterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareenginePrivateCloudVcenterList
 ```
@@ -3904,10 +3962,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3995,7 +4070,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareenginePrivateCloud.VmwareenginePrivateCloudVcenterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/vmwareengineprivatecloud"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/vmwareengineprivatecloud"
 
 vmwareengineprivatecloud.NewVmwareenginePrivateCloudVcenterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareenginePrivateCloudVcenterOutputReference
 ```

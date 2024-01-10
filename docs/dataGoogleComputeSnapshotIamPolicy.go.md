@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.NewDataGoogleComputeSnapshotIamPolicy(scope Construct, id *string, config DataGoogleComputeSnapshotIamPolicyConfig) DataGoogleComputeSnapshotIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -120,6 +121,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.toMetadata"></a>
 
@@ -281,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -313,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -327,7 +336,7 @@ datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -341,7 +350,7 @@ datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -636,7 +645,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputesnapshotiampolicy"
 
 &datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicyConfig {
 	Connection: interface{},

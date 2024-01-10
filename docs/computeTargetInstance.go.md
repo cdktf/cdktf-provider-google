@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 computetargetinstance.NewComputeTargetInstance(scope Construct, id *string, config ComputeTargetInstanceConfig) ComputeTargetInstance
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.toMetadata"></a>
 
@@ -426,7 +433,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 computetargetinstance.ComputeTargetInstance_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 computetargetinstance.ComputeTargetInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ computetargetinstance.ComputeTargetInstance_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 computetargetinstance.ComputeTargetInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +493,7 @@ computetargetinstance.ComputeTargetInstance_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 computetargetinstance.ComputeTargetInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -913,7 +920,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 &computetargetinstance.ComputeTargetInstanceConfig {
 	Connection: interface{},
@@ -929,7 +936,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstan
 	Id: *string,
 	NatPolicy: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeTargetInstance.ComputeTargetInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeTargetInstance.ComputeTargetInstanceTimeouts,
 	Zone: *string,
 }
 ```
@@ -1158,7 +1165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 &computetargetinstance.ComputeTargetInstanceTimeouts {
 	Create: *string,
@@ -1206,7 +1213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeTargetInstance.ComputeTargetInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computetargetinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computetargetinstance"
 
 computetargetinstance.NewComputeTargetInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeTargetInstanceTimeoutsOutputReference
 ```

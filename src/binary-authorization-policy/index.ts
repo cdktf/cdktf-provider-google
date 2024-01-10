@@ -84,6 +84,25 @@ export function binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform(s
   }
 }
 
+
+export function binaryAuthorizationPolicyAdmissionWhitelistPatternsToHclTerraform(struct?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name_pattern: {
+      value: cdktf.stringToHclTerraform(struct!.namePattern),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BinaryAuthorizationPolicyAdmissionWhitelistPatternsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -207,6 +226,43 @@ export function binaryAuthorizationPolicyClusterAdmissionRulesToTerraform(struct
     evaluation_mode: cdktf.stringToTerraform(struct!.evaluationMode),
     require_attestations_by: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requireAttestationsBy),
   }
+}
+
+
+export function binaryAuthorizationPolicyClusterAdmissionRulesToHclTerraform(struct?: BinaryAuthorizationPolicyClusterAdmissionRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster: {
+      value: cdktf.stringToHclTerraform(struct!.cluster),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enforcement_mode: {
+      value: cdktf.stringToHclTerraform(struct!.enforcementMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    evaluation_mode: {
+      value: cdktf.stringToHclTerraform(struct!.evaluationMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    require_attestations_by: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.requireAttestationsBy),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BinaryAuthorizationPolicyClusterAdmissionRulesOutputReference extends cdktf.ComplexObject {
@@ -389,6 +445,37 @@ export function binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(struct?
   }
 }
 
+
+export function binaryAuthorizationPolicyDefaultAdmissionRuleToHclTerraform(struct?: BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference | BinaryAuthorizationPolicyDefaultAdmissionRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enforcement_mode: {
+      value: cdktf.stringToHclTerraform(struct!.enforcementMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    evaluation_mode: {
+      value: cdktf.stringToHclTerraform(struct!.evaluationMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    require_attestations_by: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.requireAttestationsBy),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -500,6 +587,37 @@ export function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuth
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function binaryAuthorizationPolicyTimeoutsToHclTerraform(struct?: BinaryAuthorizationPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -810,5 +928,61 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
       default_admission_rule: binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(this._defaultAdmissionRule.internalValue),
       timeouts: binaryAuthorizationPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      global_policy_evaluation_mode: {
+        value: cdktf.stringToHclTerraform(this._globalPolicyEvaluationMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      admission_whitelist_patterns: {
+        value: cdktf.listMapperHcl(binaryAuthorizationPolicyAdmissionWhitelistPatternsToHclTerraform, true)(this._admissionWhitelistPatterns.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BinaryAuthorizationPolicyAdmissionWhitelistPatternsList",
+      },
+      cluster_admission_rules: {
+        value: cdktf.listMapperHcl(binaryAuthorizationPolicyClusterAdmissionRulesToHclTerraform, true)(this._clusterAdmissionRules.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "BinaryAuthorizationPolicyClusterAdmissionRulesList",
+      },
+      default_admission_rule: {
+        value: binaryAuthorizationPolicyDefaultAdmissionRuleToHclTerraform(this._defaultAdmissionRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BinaryAuthorizationPolicyDefaultAdmissionRuleList",
+      },
+      timeouts: {
+        value: binaryAuthorizationPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BinaryAuthorizationPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

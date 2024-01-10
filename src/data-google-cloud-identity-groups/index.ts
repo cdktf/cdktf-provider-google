@@ -42,6 +42,17 @@ export function dataGoogleCloudIdentityGroupsGroupsAdditionalGroupKeysToTerrafor
   }
 }
 
+
+export function dataGoogleCloudIdentityGroupsGroupsAdditionalGroupKeysToHclTerraform(struct?: DataGoogleCloudIdentityGroupsGroupsAdditionalGroupKeys): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudIdentityGroupsGroupsAdditionalGroupKeysOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -111,6 +122,17 @@ export function dataGoogleCloudIdentityGroupsGroupsGroupKeyToTerraform(struct?: 
   }
 }
 
+
+export function dataGoogleCloudIdentityGroupsGroupsGroupKeyToHclTerraform(struct?: DataGoogleCloudIdentityGroupsGroupsGroupKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudIdentityGroupsGroupsGroupKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -178,6 +200,17 @@ export function dataGoogleCloudIdentityGroupsGroupsToTerraform(struct?: DataGoog
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudIdentityGroupsGroupsToHclTerraform(struct?: DataGoogleCloudIdentityGroupsGroups): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudIdentityGroupsGroupsOutputReference extends cdktf.ComplexObject {
@@ -384,5 +417,25 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       parent: cdktf.stringToTerraform(this._parent),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent: {
+        value: cdktf.stringToHclTerraform(this._parent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

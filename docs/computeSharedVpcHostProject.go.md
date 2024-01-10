@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 computesharedvpchostproject.NewComputeSharedVpcHostProject(scope Construct, id *string, config ComputeSharedVpcHostProjectConfig) ComputeSharedVpcHostProject
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 computesharedvpchostproject.ComputeSharedVpcHostProject_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 computesharedvpchostproject.ComputeSharedVpcHostProject_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ computesharedvpchostproject.ComputeSharedVpcHostProject_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 computesharedvpchostproject.ComputeSharedVpcHostProject_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ computesharedvpchostproject.ComputeSharedVpcHostProject_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 computesharedvpchostproject.ComputeSharedVpcHostProject_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -753,7 +760,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 &computesharedvpchostproject.ComputeSharedVpcHostProjectConfig {
 	Connection: interface{},
@@ -765,7 +772,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchos
 	Provisioners: *[]interface{},
 	Project: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeouts,
 }
 ```
 
@@ -904,7 +911,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 &computesharedvpchostproject.ComputeSharedVpcHostProjectTimeouts {
 	Create: *string,
@@ -952,7 +959,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesharedvpchostproject"
 
 computesharedvpchostproject.NewComputeSharedVpcHostProjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSharedVpcHostProjectTimeoutsOutputReference
 ```

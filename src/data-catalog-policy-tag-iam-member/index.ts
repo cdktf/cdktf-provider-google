@@ -65,6 +65,37 @@ export function dataCatalogPolicyTagIamMemberConditionToTerraform(struct?: DataC
   }
 }
 
+
+export function dataCatalogPolicyTagIamMemberConditionToHclTerraform(struct?: DataCatalogPolicyTagIamMemberConditionOutputReference | DataCatalogPolicyTagIamMemberCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expression: {
+      value: cdktf.stringToHclTerraform(struct!.expression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataCatalogPolicyTagIamMemberConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -302,5 +333,43 @@ export class DataCatalogPolicyTagIamMember extends cdktf.TerraformResource {
       role: cdktf.stringToTerraform(this._role),
       condition: dataCatalogPolicyTagIamMemberConditionToTerraform(this._condition.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      member: {
+        value: cdktf.stringToHclTerraform(this._member),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_tag: {
+        value: cdktf.stringToHclTerraform(this._policyTag),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktf.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      condition: {
+        value: dataCatalogPolicyTagIamMemberConditionToHclTerraform(this._condition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataCatalogPolicyTagIamMemberConditionList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

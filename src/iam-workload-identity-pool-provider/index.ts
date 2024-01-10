@@ -191,6 +191,25 @@ export function iamWorkloadIdentityPoolProviderAwsToTerraform(struct?: IamWorklo
   }
 }
 
+
+export function iamWorkloadIdentityPoolProviderAwsToHclTerraform(struct?: IamWorkloadIdentityPoolProviderAwsOutputReference | IamWorkloadIdentityPoolProviderAws): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    account_id: {
+      value: cdktf.stringToHclTerraform(struct!.accountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IamWorkloadIdentityPoolProviderAwsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -302,6 +321,37 @@ export function iamWorkloadIdentityPoolProviderOidcToTerraform(struct?: IamWorkl
   }
 }
 
+
+export function iamWorkloadIdentityPoolProviderOidcToHclTerraform(struct?: IamWorkloadIdentityPoolProviderOidcOutputReference | IamWorkloadIdentityPoolProviderOidc): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_audiences: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedAudiences),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    issuer_uri: {
+      value: cdktf.stringToHclTerraform(struct!.issuerUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    jwks_json: {
+      value: cdktf.stringToHclTerraform(struct!.jwksJson),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IamWorkloadIdentityPoolProviderOidcOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -410,6 +460,25 @@ export function iamWorkloadIdentityPoolProviderSamlToTerraform(struct?: IamWorkl
   }
 }
 
+
+export function iamWorkloadIdentityPoolProviderSamlToHclTerraform(struct?: IamWorkloadIdentityPoolProviderSamlOutputReference | IamWorkloadIdentityPoolProviderSaml): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    idp_metadata_xml: {
+      value: cdktf.stringToHclTerraform(struct!.idpMetadataXml),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IamWorkloadIdentityPoolProviderSamlOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -480,6 +549,37 @@ export function iamWorkloadIdentityPoolProviderTimeoutsToTerraform(struct?: IamW
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function iamWorkloadIdentityPoolProviderTimeoutsToHclTerraform(struct?: IamWorkloadIdentityPoolProviderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IamWorkloadIdentityPoolProviderTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -887,5 +987,91 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
       saml: iamWorkloadIdentityPoolProviderSamlToTerraform(this._saml.internalValue),
       timeouts: iamWorkloadIdentityPoolProviderTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      attribute_condition: {
+        value: cdktf.stringToHclTerraform(this._attributeCondition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      attribute_mapping: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._attributeMapping),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workload_identity_pool_id: {
+        value: cdktf.stringToHclTerraform(this._workloadIdentityPoolId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workload_identity_pool_provider_id: {
+        value: cdktf.stringToHclTerraform(this._workloadIdentityPoolProviderId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      aws: {
+        value: iamWorkloadIdentityPoolProviderAwsToHclTerraform(this._aws.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IamWorkloadIdentityPoolProviderAwsList",
+      },
+      oidc: {
+        value: iamWorkloadIdentityPoolProviderOidcToHclTerraform(this._oidc.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IamWorkloadIdentityPoolProviderOidcList",
+      },
+      saml: {
+        value: iamWorkloadIdentityPoolProviderSamlToHclTerraform(this._saml.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IamWorkloadIdentityPoolProviderSamlList",
+      },
+      timeouts: {
+        value: iamWorkloadIdentityPoolProviderTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "IamWorkloadIdentityPoolProviderTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

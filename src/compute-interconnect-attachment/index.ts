@@ -184,6 +184,17 @@ export function computeInterconnectAttachmentPrivateInterconnectInfoToTerraform(
   }
 }
 
+
+export function computeInterconnectAttachmentPrivateInterconnectInfoToHclTerraform(struct?: ComputeInterconnectAttachmentPrivateInterconnectInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class ComputeInterconnectAttachmentPrivateInterconnectInfoOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -261,6 +272,37 @@ export function computeInterconnectAttachmentTimeoutsToTerraform(struct?: Comput
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeInterconnectAttachmentTimeoutsToHclTerraform(struct?: ComputeInterconnectAttachmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeInterconnectAttachmentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -776,5 +818,115 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
       vlan_tag8021q: cdktf.numberToTerraform(this._vlanTag8021Q),
       timeouts: computeInterconnectAttachmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      admin_enabled: {
+        value: cdktf.booleanToHclTerraform(this._adminEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      bandwidth: {
+        value: cdktf.stringToHclTerraform(this._bandwidth),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      candidate_subnets: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._candidateSubnets),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      edge_availability_domain: {
+        value: cdktf.stringToHclTerraform(this._edgeAvailabilityDomain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      encryption: {
+        value: cdktf.stringToHclTerraform(this._encryption),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interconnect: {
+        value: cdktf.stringToHclTerraform(this._interconnect),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipsec_internal_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._ipsecInternalAddresses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      mtu: {
+        value: cdktf.stringToHclTerraform(this._mtu),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      router: {
+        value: cdktf.stringToHclTerraform(this._router),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vlan_tag8021q: {
+        value: cdktf.numberToHclTerraform(this._vlanTag8021Q),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      timeouts: {
+        value: computeInterconnectAttachmentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeInterconnectAttachmentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

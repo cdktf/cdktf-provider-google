@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 sccsourceiammember.NewSccSourceIamMember(scope Construct, id *string, config SccSourceIamMemberConfig) SccSourceIamMember
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 sccsourceiammember.SccSourceIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 sccsourceiammember.SccSourceIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ sccsourceiammember.SccSourceIamMember_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 sccsourceiammember.SccSourceIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ sccsourceiammember.SccSourceIamMember_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 sccsourceiammember.SccSourceIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -830,7 +837,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 &sccsourceiammember.SccSourceIamMemberCondition {
 	Expression: *string,
@@ -890,7 +897,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 &sccsourceiammember.SccSourceIamMemberConfig {
 	Connection: interface{},
@@ -904,7 +911,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
 	Organization: *string,
 	Role: *string,
 	Source: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.sccSourceIamMember.SccSourceIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.sccSourceIamMember.SccSourceIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -1083,7 +1090,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSourceIamMember.SccSourceIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/sccsourceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/sccsourceiammember"
 
 sccsourceiammember.NewSccSourceIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccSourceIamMemberConditionOutputReference
 ```

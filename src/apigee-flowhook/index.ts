@@ -84,6 +84,31 @@ export function apigeeFlowhookTimeoutsToTerraform(struct?: ApigeeFlowhookTimeout
   }
 }
 
+
+export function apigeeFlowhookTimeoutsToHclTerraform(struct?: ApigeeFlowhookTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApigeeFlowhookTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -361,5 +386,61 @@ export class ApigeeFlowhook extends cdktf.TerraformResource {
       sharedflow: cdktf.stringToTerraform(this._sharedflow),
       timeouts: apigeeFlowhookTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      continue_on_error: {
+        value: cdktf.booleanToHclTerraform(this._continueOnError),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      environment: {
+        value: cdktf.stringToHclTerraform(this._environment),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      flow_hook_point: {
+        value: cdktf.stringToHclTerraform(this._flowHookPoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_id: {
+        value: cdktf.stringToHclTerraform(this._orgId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sharedflow: {
+        value: cdktf.stringToHclTerraform(this._sharedflow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: apigeeFlowhookTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApigeeFlowhookTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

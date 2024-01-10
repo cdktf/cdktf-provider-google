@@ -49,6 +49,17 @@ export function dataGoogleCloudbuildTriggerApprovalConfigToTerraform(struct?: Da
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerApprovalConfigToHclTerraform(struct?: DataGoogleCloudbuildTriggerApprovalConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerApprovalConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -111,6 +122,17 @@ export function dataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPullReque
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPullRequestToHclTerraform(struct?: DataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPullRequest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPullRequestOutputReference extends cdktf.ComplexObject {
@@ -187,6 +209,17 @@ export function dataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPushToTer
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPushToHclTerraform(struct?: DataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPush): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBitbucketServerTriggerConfigPushOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -259,6 +292,17 @@ export function dataGoogleCloudbuildTriggerBitbucketServerTriggerConfigToTerrafo
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBitbucketServerTriggerConfigToHclTerraform(struct?: DataGoogleCloudbuildTriggerBitbucketServerTriggerConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBitbucketServerTriggerConfigOutputReference extends cdktf.ComplexObject {
@@ -347,6 +391,17 @@ export function dataGoogleCloudbuildTriggerBuildArtifactsMavenArtifactsToTerrafo
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildArtifactsMavenArtifactsToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildArtifactsMavenArtifacts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildArtifactsMavenArtifactsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -431,6 +486,17 @@ export function dataGoogleCloudbuildTriggerBuildArtifactsNpmPackagesToTerraform(
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildArtifactsNpmPackagesToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildArtifactsNpmPackages): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildArtifactsNpmPackagesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -500,6 +566,17 @@ export function dataGoogleCloudbuildTriggerBuildArtifactsObjectsTimingToTerrafor
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildArtifactsObjectsTimingToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildArtifactsObjectsTiming): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildArtifactsObjectsTimingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -567,6 +644,17 @@ export function dataGoogleCloudbuildTriggerBuildArtifactsObjectsToTerraform(stru
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBuildArtifactsObjectsToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildArtifactsObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf.ComplexObject {
@@ -644,6 +732,17 @@ export function dataGoogleCloudbuildTriggerBuildArtifactsPythonPackagesToTerrafo
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildArtifactsPythonPackagesToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildArtifactsPythonPackages): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildArtifactsPythonPackagesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -711,6 +810,17 @@ export function dataGoogleCloudbuildTriggerBuildArtifactsToTerraform(struct?: Da
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBuildArtifactsToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildArtifacts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBuildArtifactsOutputReference extends cdktf.ComplexObject {
@@ -801,6 +911,17 @@ export function dataGoogleCloudbuildTriggerBuildAvailableSecretsSecretManagerToT
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildAvailableSecretsSecretManagerToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildAvailableSecretsSecretManager): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildAvailableSecretsSecretManagerOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -870,6 +991,17 @@ export function dataGoogleCloudbuildTriggerBuildAvailableSecretsToTerraform(stru
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildAvailableSecretsToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildAvailableSecrets): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildAvailableSecretsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -933,6 +1065,17 @@ export function dataGoogleCloudbuildTriggerBuildOptionsVolumesToTerraform(struct
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBuildOptionsVolumesToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildOptionsVolumes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBuildOptionsVolumesOutputReference extends cdktf.ComplexObject {
@@ -1002,6 +1145,17 @@ export function dataGoogleCloudbuildTriggerBuildOptionsToTerraform(struct?: Data
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBuildOptionsToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexObject {
@@ -1124,6 +1278,17 @@ export function dataGoogleCloudbuildTriggerBuildSecretToTerraform(struct?: DataG
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildSecretToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildSecret): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildSecretOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1192,6 +1357,17 @@ export function dataGoogleCloudbuildTriggerBuildSourceRepoSourceToTerraform(stru
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBuildSourceRepoSourceToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildSourceRepoSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf.ComplexObject {
@@ -1294,6 +1470,17 @@ export function dataGoogleCloudbuildTriggerBuildSourceStorageSourceToTerraform(s
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildSourceStorageSourceToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildSourceStorageSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildSourceStorageSourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1368,6 +1555,17 @@ export function dataGoogleCloudbuildTriggerBuildSourceToTerraform(struct?: DataG
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildSourceToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1439,6 +1637,17 @@ export function dataGoogleCloudbuildTriggerBuildStepVolumesToTerraform(struct?: 
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildStepVolumesToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildStepVolumes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildStepVolumesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1506,6 +1715,17 @@ export function dataGoogleCloudbuildTriggerBuildStepToTerraform(struct?: DataGoo
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerBuildStepToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuildStep): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerBuildStepOutputReference extends cdktf.ComplexObject {
@@ -1638,6 +1858,17 @@ export function dataGoogleCloudbuildTriggerBuildToTerraform(struct?: DataGoogleC
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerBuildToHclTerraform(struct?: DataGoogleCloudbuildTriggerBuild): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1764,6 +1995,17 @@ export function dataGoogleCloudbuildTriggerGitFileSourceToTerraform(struct?: Dat
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerGitFileSourceToHclTerraform(struct?: DataGoogleCloudbuildTriggerGitFileSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerGitFileSourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1858,6 +2100,17 @@ export function dataGoogleCloudbuildTriggerGithubPullRequestToTerraform(struct?:
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerGithubPullRequestToHclTerraform(struct?: DataGoogleCloudbuildTriggerGithubPullRequest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerGithubPullRequestOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1932,6 +2185,17 @@ export function dataGoogleCloudbuildTriggerGithubPushToTerraform(struct?: DataGo
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerGithubPushToHclTerraform(struct?: DataGoogleCloudbuildTriggerGithubPush): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2004,6 +2268,17 @@ export function dataGoogleCloudbuildTriggerGithubToTerraform(struct?: DataGoogle
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerGithubToHclTerraform(struct?: DataGoogleCloudbuildTriggerGithub): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject {
@@ -2092,6 +2367,17 @@ export function dataGoogleCloudbuildTriggerPubsubConfigToTerraform(struct?: Data
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerPubsubConfigToHclTerraform(struct?: DataGoogleCloudbuildTriggerPubsubConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2171,6 +2457,17 @@ export function dataGoogleCloudbuildTriggerRepositoryEventConfigPullRequestToTer
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerRepositoryEventConfigPullRequestToHclTerraform(struct?: DataGoogleCloudbuildTriggerRepositoryEventConfigPullRequest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerRepositoryEventConfigPullRequestOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2243,6 +2540,17 @@ export function dataGoogleCloudbuildTriggerRepositoryEventConfigPushToTerraform(
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerRepositoryEventConfigPushToHclTerraform(struct?: DataGoogleCloudbuildTriggerRepositoryEventConfigPush): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerRepositoryEventConfigPushOutputReference extends cdktf.ComplexObject {
@@ -2319,6 +2627,17 @@ export function dataGoogleCloudbuildTriggerRepositoryEventConfigToTerraform(stru
   }
 }
 
+
+export function dataGoogleCloudbuildTriggerRepositoryEventConfigToHclTerraform(struct?: DataGoogleCloudbuildTriggerRepositoryEventConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleCloudbuildTriggerRepositoryEventConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2393,6 +2712,17 @@ export function dataGoogleCloudbuildTriggerSourceToBuildToTerraform(struct?: Dat
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerSourceToBuildToHclTerraform(struct?: DataGoogleCloudbuildTriggerSourceToBuild): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerSourceToBuildOutputReference extends cdktf.ComplexObject {
@@ -2482,6 +2812,17 @@ export function dataGoogleCloudbuildTriggerTriggerTemplateToTerraform(struct?: D
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerTriggerTemplateToHclTerraform(struct?: DataGoogleCloudbuildTriggerTriggerTemplate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerTriggerTemplateOutputReference extends cdktf.ComplexObject {
@@ -2576,6 +2917,17 @@ export function dataGoogleCloudbuildTriggerWebhookConfigToTerraform(struct?: Dat
   }
   return {
   }
+}
+
+
+export function dataGoogleCloudbuildTriggerWebhookConfigToHclTerraform(struct?: DataGoogleCloudbuildTriggerWebhookConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleCloudbuildTriggerWebhookConfigOutputReference extends cdktf.ComplexObject {
@@ -2887,5 +3239,37 @@ export class DataGoogleCloudbuildTrigger extends cdktf.TerraformDataSource {
       project: cdktf.stringToTerraform(this._project),
       trigger_id: cdktf.stringToTerraform(this._triggerId),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_id: {
+        value: cdktf.stringToHclTerraform(this._triggerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

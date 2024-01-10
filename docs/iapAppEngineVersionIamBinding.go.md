@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 iapappengineversioniambinding.NewIapAppEngineVersionIamBinding(scope Construct, id *string, config IapAppEngineVersionIamBindingConfig) IapAppEngineVersionIamBinding
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 iapappengineversioniambinding.IapAppEngineVersionIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -881,7 +888,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 &iapappengineversioniambinding.IapAppEngineVersionIamBindingCondition {
 	Expression: *string,
@@ -941,7 +948,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 &iapappengineversioniambinding.IapAppEngineVersionIamBindingConfig {
 	Connection: interface{},
@@ -956,7 +963,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversion
 	Role: *string,
 	Service: *string,
 	VersionId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1162,7 +1169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/iapappengineversioniambinding"
 
 iapappengineversioniambinding.NewIapAppEngineVersionIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapAppEngineVersionIamBindingConditionOutputReference
 ```

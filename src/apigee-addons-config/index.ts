@@ -57,6 +57,25 @@ export function apigeeAddonsConfigAddonsConfigAdvancedApiOpsConfigToTerraform(st
   }
 }
 
+
+export function apigeeAddonsConfigAddonsConfigAdvancedApiOpsConfigToHclTerraform(struct?: ApigeeAddonsConfigAddonsConfigAdvancedApiOpsConfigOutputReference | ApigeeAddonsConfigAddonsConfigAdvancedApiOpsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApigeeAddonsConfigAddonsConfigAdvancedApiOpsConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -122,6 +141,25 @@ export function apigeeAddonsConfigAddonsConfigApiSecurityConfigToTerraform(struc
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
+}
+
+
+export function apigeeAddonsConfigAddonsConfigApiSecurityConfigToHclTerraform(struct?: ApigeeAddonsConfigAddonsConfigApiSecurityConfigOutputReference | ApigeeAddonsConfigAddonsConfigApiSecurityConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApigeeAddonsConfigAddonsConfigApiSecurityConfigOutputReference extends cdktf.ComplexObject {
@@ -196,6 +234,25 @@ export function apigeeAddonsConfigAddonsConfigConnectorsPlatformConfigToTerrafor
   }
 }
 
+
+export function apigeeAddonsConfigAddonsConfigConnectorsPlatformConfigToHclTerraform(struct?: ApigeeAddonsConfigAddonsConfigConnectorsPlatformConfigOutputReference | ApigeeAddonsConfigAddonsConfigConnectorsPlatformConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApigeeAddonsConfigAddonsConfigConnectorsPlatformConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -268,6 +325,25 @@ export function apigeeAddonsConfigAddonsConfigIntegrationConfigToTerraform(struc
   }
 }
 
+
+export function apigeeAddonsConfigAddonsConfigIntegrationConfigToHclTerraform(struct?: ApigeeAddonsConfigAddonsConfigIntegrationConfigOutputReference | ApigeeAddonsConfigAddonsConfigIntegrationConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApigeeAddonsConfigAddonsConfigIntegrationConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -333,6 +409,25 @@ export function apigeeAddonsConfigAddonsConfigMonetizationConfigToTerraform(stru
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
+}
+
+
+export function apigeeAddonsConfigAddonsConfigMonetizationConfigToHclTerraform(struct?: ApigeeAddonsConfigAddonsConfigMonetizationConfigOutputReference | ApigeeAddonsConfigAddonsConfigMonetizationConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApigeeAddonsConfigAddonsConfigMonetizationConfigOutputReference extends cdktf.ComplexObject {
@@ -428,6 +523,49 @@ export function apigeeAddonsConfigAddonsConfigToTerraform(struct?: ApigeeAddonsC
     integration_config: apigeeAddonsConfigAddonsConfigIntegrationConfigToTerraform(struct!.integrationConfig),
     monetization_config: apigeeAddonsConfigAddonsConfigMonetizationConfigToTerraform(struct!.monetizationConfig),
   }
+}
+
+
+export function apigeeAddonsConfigAddonsConfigToHclTerraform(struct?: ApigeeAddonsConfigAddonsConfigOutputReference | ApigeeAddonsConfigAddonsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    advanced_api_ops_config: {
+      value: apigeeAddonsConfigAddonsConfigAdvancedApiOpsConfigToHclTerraform(struct!.advancedApiOpsConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApigeeAddonsConfigAddonsConfigAdvancedApiOpsConfigList",
+    },
+    api_security_config: {
+      value: apigeeAddonsConfigAddonsConfigApiSecurityConfigToHclTerraform(struct!.apiSecurityConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApigeeAddonsConfigAddonsConfigApiSecurityConfigList",
+    },
+    connectors_platform_config: {
+      value: apigeeAddonsConfigAddonsConfigConnectorsPlatformConfigToHclTerraform(struct!.connectorsPlatformConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApigeeAddonsConfigAddonsConfigConnectorsPlatformConfigList",
+    },
+    integration_config: {
+      value: apigeeAddonsConfigAddonsConfigIntegrationConfigToHclTerraform(struct!.integrationConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApigeeAddonsConfigAddonsConfigIntegrationConfigList",
+    },
+    monetization_config: {
+      value: apigeeAddonsConfigAddonsConfigMonetizationConfigToHclTerraform(struct!.monetizationConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApigeeAddonsConfigAddonsConfigMonetizationConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApigeeAddonsConfigAddonsConfigOutputReference extends cdktf.ComplexObject {
@@ -591,6 +729,37 @@ export function apigeeAddonsConfigTimeoutsToTerraform(struct?: ApigeeAddonsConfi
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apigeeAddonsConfigTimeoutsToHclTerraform(struct?: ApigeeAddonsConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApigeeAddonsConfigTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -829,5 +998,37 @@ export class ApigeeAddonsConfig extends cdktf.TerraformResource {
       addons_config: apigeeAddonsConfigAddonsConfigToTerraform(this._addonsConfig.internalValue),
       timeouts: apigeeAddonsConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org: {
+        value: cdktf.stringToHclTerraform(this._org),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      addons_config: {
+        value: apigeeAddonsConfigAddonsConfigToHclTerraform(this._addonsConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApigeeAddonsConfigAddonsConfigList",
+      },
+      timeouts: {
+        value: apigeeAddonsConfigTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApigeeAddonsConfigTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

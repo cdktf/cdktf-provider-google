@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicy(scope Construct, id *string, config NetworkConnectivityServiceConnectionPolicyConfig) NetworkConnectivityServiceConnectionPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.toMetadata"></a>
 
@@ -439,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionP
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +506,7 @@ networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionP
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1025,7 +1032,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 &networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicyConfig {
 	Connection: interface{},
@@ -1043,8 +1050,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivity
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	PscConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyTimeouts,
+	PscConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyTimeouts,
 }
 ```
 
@@ -1292,7 +1299,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 &networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicyPscConfig {
 	Subnetworks: *[]*string,
@@ -1342,7 +1349,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnections.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 &networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicyPscConnections {
 
@@ -1355,7 +1362,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivity
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsError.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 &networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsError {
 
@@ -1368,7 +1375,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivity
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 &networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfo {
 
@@ -1381,7 +1388,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivity
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 &networkconnectivityserviceconnectionpolicy.NetworkConnectivityServiceConnectionPolicyTimeouts {
 	Create: *string,
@@ -1443,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyPscConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivityServiceConnectionPolicyPscConfigOutputReference
 ```
@@ -1743,7 +1750,7 @@ func InternalValue() NetworkConnectivityServiceConnectionPolicyPscConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList
 ```
@@ -1784,10 +1791,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1875,7 +1899,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorInfoOutputReference
 ```
@@ -2175,7 +2199,7 @@ func InternalValue() NetworkConnectivityServiceConnectionPolicyPscConnectionsErr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList
 ```
@@ -2216,10 +2240,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2307,7 +2348,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyPscConnectionsErrorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectivityServiceConnectionPolicyPscConnectionsErrorOutputReference
 ```
@@ -2607,7 +2648,7 @@ func InternalValue() NetworkConnectivityServiceConnectionPolicyPscConnectionsErr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyPscConnectionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectivityServiceConnectionPolicyPscConnectionsList
 ```
@@ -2648,10 +2689,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2739,7 +2797,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyPscConnectionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyPscConnectionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectivityServiceConnectionPolicyPscConnectionsOutputReference
 ```
@@ -3105,7 +3163,7 @@ func InternalValue() NetworkConnectivityServiceConnectionPolicyPscConnections
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityServiceConnectionPolicy.NetworkConnectivityServiceConnectionPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/networkconnectivityserviceconnectionpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivityserviceconnectionpolicy"
 
 networkconnectivityserviceconnectionpolicy.NewNetworkConnectivityServiceConnectionPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivityServiceConnectionPolicyTimeoutsOutputReference
 ```

@@ -197,4 +197,42 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
       role_entity: cdktf.listMapper(cdktf.stringToTerraform, false)(this._roleEntity),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket: {
+        value: cdktf.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_acl: {
+        value: cdktf.stringToHclTerraform(this._defaultAcl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      predefined_acl: {
+        value: cdktf.stringToHclTerraform(this._predefinedAcl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_entity: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._roleEntity),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

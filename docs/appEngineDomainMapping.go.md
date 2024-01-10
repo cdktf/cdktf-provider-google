@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMapping(scope Construct, id *string, config AppEngineDomainMappingConfig) AppEngineDomainMapping
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.AppEngineDomainMapping_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.AppEngineDomainMapping_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ appenginedomainmapping.AppEngineDomainMapping_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.AppEngineDomainMapping_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ appenginedomainmapping.AppEngineDomainMapping_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.AppEngineDomainMapping_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -875,7 +882,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingConfig {
 	Connection: interface{},
@@ -889,8 +896,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapp
 	Id: *string,
 	OverrideStrategy: *string,
 	Project: *string,
-	SslSettings: github.com/cdktf/cdktf-provider-google-go/google/v12.appEngineDomainMapping.AppEngineDomainMappingSslSettings,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.appEngineDomainMapping.AppEngineDomainMappingTimeouts,
+	SslSettings: github.com/cdktf/cdktf-provider-google-go/google/v13.appEngineDomainMapping.AppEngineDomainMappingSslSettings,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.appEngineDomainMapping.AppEngineDomainMappingTimeouts,
 }
 ```
 
@@ -1074,7 +1081,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecords.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingResourceRecords {
 
@@ -1087,7 +1094,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapp
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingSslSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingSslSettings {
 	SslManagementType: *string,
@@ -1147,7 +1154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingTimeouts {
 	Create: *string,
@@ -1209,7 +1216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingResourceRecordsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppEngineDomainMappingResourceRecordsList
 ```
@@ -1250,10 +1257,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1341,7 +1365,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingResourceRecordsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppEngineDomainMappingResourceRecordsOutputReference
 ```
@@ -1641,7 +1665,7 @@ func InternalValue() AppEngineDomainMappingResourceRecords
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingSslSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingSslSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineDomainMappingSslSettingsOutputReference
 ```
@@ -1952,7 +1976,7 @@ func InternalValue() AppEngineDomainMappingSslSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineDomainMappingTimeoutsOutputReference
 ```

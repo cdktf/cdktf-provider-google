@@ -114,6 +114,37 @@ export function dialogflowCxWebhookGenericWebServiceToTerraform(struct?: Dialogf
   }
 }
 
+
+export function dialogflowCxWebhookGenericWebServiceToHclTerraform(struct?: DialogflowCxWebhookGenericWebServiceOutputReference | DialogflowCxWebhookGenericWebService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_ca_certs: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedCaCerts),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    request_headers: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.requestHeaders),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxWebhookGenericWebServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -236,6 +267,37 @@ export function dialogflowCxWebhookServiceDirectoryGenericWebServiceToTerraform(
   }
 }
 
+
+export function dialogflowCxWebhookServiceDirectoryGenericWebServiceToHclTerraform(struct?: DialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference | DialogflowCxWebhookServiceDirectoryGenericWebService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_ca_certs: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedCaCerts),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    request_headers: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.requestHeaders),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -351,6 +413,31 @@ export function dialogflowCxWebhookServiceDirectoryToTerraform(struct?: Dialogfl
   }
 }
 
+
+export function dialogflowCxWebhookServiceDirectoryToHclTerraform(struct?: DialogflowCxWebhookServiceDirectoryOutputReference | DialogflowCxWebhookServiceDirectory): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    generic_web_service: {
+      value: dialogflowCxWebhookServiceDirectoryGenericWebServiceToHclTerraform(struct!.genericWebService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxWebhookServiceDirectoryGenericWebServiceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxWebhookServiceDirectoryOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -440,6 +527,37 @@ export function dialogflowCxWebhookTimeoutsToTerraform(struct?: DialogflowCxWebh
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dialogflowCxWebhookTimeoutsToHclTerraform(struct?: DialogflowCxWebhookTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxWebhookTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -814,5 +932,79 @@ export class DialogflowCxWebhook extends cdktf.TerraformResource {
       service_directory: dialogflowCxWebhookServiceDirectoryToTerraform(this._serviceDirectory.internalValue),
       timeouts: dialogflowCxWebhookTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_spell_correction: {
+        value: cdktf.booleanToHclTerraform(this._enableSpellCorrection),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_stackdriver_logging: {
+        value: cdktf.booleanToHclTerraform(this._enableStackdriverLogging),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent: {
+        value: cdktf.stringToHclTerraform(this._parent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_settings: {
+        value: cdktf.stringToHclTerraform(this._securitySettings),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeout: {
+        value: cdktf.stringToHclTerraform(this._timeout),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      generic_web_service: {
+        value: dialogflowCxWebhookGenericWebServiceToHclTerraform(this._genericWebService.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxWebhookGenericWebServiceList",
+      },
+      service_directory: {
+        value: dialogflowCxWebhookServiceDirectoryToHclTerraform(this._serviceDirectory.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxWebhookServiceDirectoryList",
+      },
+      timeouts: {
+        value: dialogflowCxWebhookTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DialogflowCxWebhookTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

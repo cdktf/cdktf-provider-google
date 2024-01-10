@@ -191,4 +191,42 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
       target_service_account: cdktf.stringToTerraform(this._targetServiceAccount),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      delegates: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._delegates),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lifetime: {
+        value: cdktf.stringToHclTerraform(this._lifetime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scopes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      target_service_account: {
+        value: cdktf.stringToHclTerraform(this._targetServiceAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

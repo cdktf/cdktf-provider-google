@@ -140,6 +140,25 @@ export function dialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationToTerr
   }
 }
 
+
+export function dialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationToHclTerraform(struct?: DialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationOutputReference | DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -219,6 +238,37 @@ export function dialogflowCxAgentAdvancedSettingsDtmfSettingsToTerraform(struct?
     finish_digit: cdktf.stringToTerraform(struct!.finishDigit),
     max_digits: cdktf.numberToTerraform(struct!.maxDigits),
   }
+}
+
+
+export function dialogflowCxAgentAdvancedSettingsDtmfSettingsToHclTerraform(struct?: DialogflowCxAgentAdvancedSettingsDtmfSettingsOutputReference | DialogflowCxAgentAdvancedSettingsDtmfSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    finish_digit: {
+      value: cdktf.stringToHclTerraform(struct!.finishDigit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_digits: {
+      value: cdktf.numberToHclTerraform(struct!.maxDigits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxAgentAdvancedSettingsDtmfSettingsOutputReference extends cdktf.ComplexObject {
@@ -339,6 +389,31 @@ export function dialogflowCxAgentAdvancedSettingsToTerraform(struct?: Dialogflow
   }
 }
 
+
+export function dialogflowCxAgentAdvancedSettingsToHclTerraform(struct?: DialogflowCxAgentAdvancedSettingsOutputReference | DialogflowCxAgentAdvancedSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audio_export_gcs_destination: {
+      value: dialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationToHclTerraform(struct!.audioExportGcsDestination),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationList",
+    },
+    dtmf_settings: {
+      value: dialogflowCxAgentAdvancedSettingsDtmfSettingsToHclTerraform(struct!.dtmfSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxAgentAdvancedSettingsDtmfSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxAgentAdvancedSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -454,6 +529,49 @@ export function dialogflowCxAgentGitIntegrationSettingsGithubSettingsToTerraform
     repository_uri: cdktf.stringToTerraform(struct!.repositoryUri),
     tracking_branch: cdktf.stringToTerraform(struct!.trackingBranch),
   }
+}
+
+
+export function dialogflowCxAgentGitIntegrationSettingsGithubSettingsToHclTerraform(struct?: DialogflowCxAgentGitIntegrationSettingsGithubSettingsOutputReference | DialogflowCxAgentGitIntegrationSettingsGithubSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access_token: {
+      value: cdktf.stringToHclTerraform(struct!.accessToken),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    branches: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.branches),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    display_name: {
+      value: cdktf.stringToHclTerraform(struct!.displayName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    repository_uri: {
+      value: cdktf.stringToHclTerraform(struct!.repositoryUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tracking_branch: {
+      value: cdktf.stringToHclTerraform(struct!.trackingBranch),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxAgentGitIntegrationSettingsGithubSettingsOutputReference extends cdktf.ComplexObject {
@@ -611,6 +729,25 @@ export function dialogflowCxAgentGitIntegrationSettingsToTerraform(struct?: Dial
   }
 }
 
+
+export function dialogflowCxAgentGitIntegrationSettingsToHclTerraform(struct?: DialogflowCxAgentGitIntegrationSettingsOutputReference | DialogflowCxAgentGitIntegrationSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    github_settings: {
+      value: dialogflowCxAgentGitIntegrationSettingsGithubSettingsToHclTerraform(struct!.githubSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxAgentGitIntegrationSettingsGithubSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxAgentGitIntegrationSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -676,6 +813,25 @@ export function dialogflowCxAgentSpeechToTextSettingsToTerraform(struct?: Dialog
   return {
     enable_speech_adaptation: cdktf.booleanToTerraform(struct!.enableSpeechAdaptation),
   }
+}
+
+
+export function dialogflowCxAgentSpeechToTextSettingsToHclTerraform(struct?: DialogflowCxAgentSpeechToTextSettingsOutputReference | DialogflowCxAgentSpeechToTextSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_speech_adaptation: {
+      value: cdktf.booleanToHclTerraform(struct!.enableSpeechAdaptation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxAgentSpeechToTextSettingsOutputReference extends cdktf.ComplexObject {
@@ -746,6 +902,25 @@ export function dialogflowCxAgentTextToSpeechSettingsToTerraform(struct?: Dialog
   return {
     synthesize_speech_configs: cdktf.stringToTerraform(struct!.synthesizeSpeechConfigs),
   }
+}
+
+
+export function dialogflowCxAgentTextToSpeechSettingsToHclTerraform(struct?: DialogflowCxAgentTextToSpeechSettingsOutputReference | DialogflowCxAgentTextToSpeechSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    synthesize_speech_configs: {
+      value: cdktf.stringToHclTerraform(struct!.synthesizeSpeechConfigs),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxAgentTextToSpeechSettingsOutputReference extends cdktf.ComplexObject {
@@ -821,6 +996,37 @@ export function dialogflowCxAgentTimeoutsToTerraform(struct?: DialogflowCxAgentT
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dialogflowCxAgentTimeoutsToHclTerraform(struct?: DialogflowCxAgentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1294,5 +1500,115 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
       text_to_speech_settings: dialogflowCxAgentTextToSpeechSettingsToTerraform(this._textToSpeechSettings.internalValue),
       timeouts: dialogflowCxAgentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      avatar_uri: {
+        value: cdktf.stringToHclTerraform(this._avatarUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_language_code: {
+        value: cdktf.stringToHclTerraform(this._defaultLanguageCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_spell_correction: {
+        value: cdktf.booleanToHclTerraform(this._enableSpellCorrection),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_stackdriver_logging: {
+        value: cdktf.booleanToHclTerraform(this._enableStackdriverLogging),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_settings: {
+        value: cdktf.stringToHclTerraform(this._securitySettings),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      supported_language_codes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._supportedLanguageCodes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      time_zone: {
+        value: cdktf.stringToHclTerraform(this._timeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      advanced_settings: {
+        value: dialogflowCxAgentAdvancedSettingsToHclTerraform(this._advancedSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxAgentAdvancedSettingsList",
+      },
+      git_integration_settings: {
+        value: dialogflowCxAgentGitIntegrationSettingsToHclTerraform(this._gitIntegrationSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxAgentGitIntegrationSettingsList",
+      },
+      speech_to_text_settings: {
+        value: dialogflowCxAgentSpeechToTextSettingsToHclTerraform(this._speechToTextSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxAgentSpeechToTextSettingsList",
+      },
+      text_to_speech_settings: {
+        value: dialogflowCxAgentTextToSpeechSettingsToHclTerraform(this._textToSpeechSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxAgentTextToSpeechSettingsList",
+      },
+      timeouts: {
+        value: dialogflowCxAgentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DialogflowCxAgentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

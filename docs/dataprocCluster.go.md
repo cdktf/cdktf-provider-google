@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocCluster(scope Construct, id *string, config DataprocClusterConfig) DataprocCluster
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocCluster.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -135,6 +136,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.toMetadata"></a>
 
@@ -466,7 +473,7 @@ func ResetVirtualClusterConfig()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.DataprocCluster_IsConstruct(x interface{}) *bool
 ```
@@ -498,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.DataprocCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -512,7 +519,7 @@ dataproccluster.DataprocCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.DataprocCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -526,7 +533,7 @@ dataproccluster.DataprocCluster_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocCluster.DataprocCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.DataprocCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -975,25 +982,25 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfig {
-	AutoscalingConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigAutoscalingConfig,
+	AutoscalingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigAutoscalingConfig,
 	AuxiliaryNodeGroups: interface{},
-	DataprocMetricConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig,
-	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigEncryptionConfig,
-	EndpointConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigEndpointConfig,
-	GceClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig,
+	DataprocMetricConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig,
+	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigEncryptionConfig,
+	EndpointConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigEndpointConfig,
+	GceClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig,
 	InitializationAction: interface{},
-	LifecycleConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigLifecycleConfig,
-	MasterConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigMasterConfig,
-	MetastoreConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigMetastoreConfig,
-	PreemptibleWorkerConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfig,
-	SecurityConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigSecurityConfig,
-	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigSoftwareConfig,
+	LifecycleConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigLifecycleConfig,
+	MasterConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigMasterConfig,
+	MetastoreConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigMetastoreConfig,
+	PreemptibleWorkerConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfig,
+	SecurityConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigSecurityConfig,
+	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigSoftwareConfig,
 	StagingBucket: *string,
 	TempBucket: *string,
-	WorkerConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigWorkerConfig,
+	WorkerConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigWorkerConfig,
 }
 ```
 
@@ -1253,7 +1260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAutoscalingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigAutoscalingConfig {
 	PolicyUri: *string,
@@ -1287,7 +1294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroups.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigAuxiliaryNodeGroups {
 	NodeGroup: interface{},
@@ -1339,11 +1346,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroup {
 	Roles: *[]*string,
-	NodeGroupConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig,
+	NodeGroupConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig,
 }
 ```
 
@@ -1389,11 +1396,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig {
 	Accelerators: interface{},
-	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig,
+	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig,
 	MachineType: *string,
 	MinCpuPlatform: *string,
 	NumInstances: *f64,
@@ -1489,7 +1496,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators {
 	AcceleratorCount: *f64,
@@ -1541,7 +1548,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig {
 	BootDiskSizeGb: *f64,
@@ -1609,7 +1616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigDataprocMetricConfig {
 	Metrics: interface{},
@@ -1643,7 +1650,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigDataprocMetricConfigMetrics {
 	MetricSource: *string,
@@ -1693,7 +1700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEncryptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigEncryptionConfig {
 	KmsKeyName: *string,
@@ -1727,7 +1734,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigEndpointConfig {
 	EnableHttpPortAccess: interface{},
@@ -1763,17 +1770,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigGceClusterConfig {
 	InternalIpOnly: interface{},
 	Metadata: *map[string]*string,
 	Network: *string,
-	NodeGroupAffinity: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity,
-	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigReservationAffinity,
+	NodeGroupAffinity: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity,
+	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigReservationAffinity,
 	ServiceAccount: *string,
 	ServiceAccountScopes: *[]*string,
-	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig,
+	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig,
 	Subnetwork: *string,
 	Tags: *[]*string,
 	Zone: *string,
@@ -1965,7 +1972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity {
 	NodeGroupUri: *string,
@@ -1999,7 +2006,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigReservationAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigGceClusterConfigReservationAffinity {
 	ConsumeReservationType: *string,
@@ -2065,7 +2072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
 	EnableIntegrityMonitoring: interface{},
@@ -2131,7 +2138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigInitializationAction {
 	Script: *string,
@@ -2185,7 +2192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigLifecycleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigLifecycleConfig {
 	AutoDeleteTime: *string,
@@ -2237,11 +2244,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigMasterConfig {
 	Accelerators: interface{},
-	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigMasterConfigDiskConfig,
+	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigMasterConfigDiskConfig,
 	ImageUri: *string,
 	MachineType: *string,
 	MinCpuPlatform: *string,
@@ -2353,7 +2360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAccelerators.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigMasterConfigAccelerators {
 	AcceleratorCount: *f64,
@@ -2405,7 +2412,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigMasterConfigDiskConfig {
 	BootDiskSizeGb: *f64,
@@ -2473,7 +2480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMetastoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigMetastoreConfig {
 	DataprocMetastoreService: *string,
@@ -2507,11 +2514,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigPreemptibleWorkerConfig {
-	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig,
-	InstanceFlexibilityPolicy: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy,
+	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig,
+	InstanceFlexibilityPolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy,
 	NumInstances: *f64,
 	Preemptibility: *string,
 }
@@ -2589,7 +2596,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
 	BootDiskSizeGb: *f64,
@@ -2659,7 +2666,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy {
 	InstanceSelectionList: interface{},
@@ -2693,7 +2700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStruct {
 	MachineTypes: *[]*string,
@@ -2745,7 +2752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResults.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResults {
 
@@ -2758,10 +2765,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigSecurityConfig {
-	KerberosConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig,
+	KerberosConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig,
 }
 ```
 
@@ -2792,7 +2799,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigSecurityConfigKerberosConfig {
 	KmsKeyUri: *string,
@@ -3061,7 +3068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSoftwareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigSoftwareConfig {
 	ImageVersion: *string,
@@ -3129,11 +3136,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigWorkerConfig {
 	Accelerators: interface{},
-	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfigWorkerConfigDiskConfig,
+	DiskConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfigWorkerConfigDiskConfig,
 	ImageUri: *string,
 	MachineType: *string,
 	MinCpuPlatform: *string,
@@ -3261,7 +3268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAccelerators.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigWorkerConfigAccelerators {
 	AcceleratorCount: *f64,
@@ -3313,7 +3320,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterClusterConfigWorkerConfigDiskConfig {
 	BootDiskSizeGb: *f64,
@@ -3381,7 +3388,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterConfig {
 	Connection: interface{},
@@ -3392,14 +3399,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	ClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterClusterConfig,
+	ClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterClusterConfig,
 	GracefulDecommissionTimeout: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterTimeouts,
-	VirtualClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterTimeouts,
+	VirtualClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfig,
 }
 ```
 
@@ -3633,7 +3640,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterTimeouts {
 	Create: *string,
@@ -3693,11 +3700,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfig {
-	AuxiliaryServicesConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfig,
-	KubernetesClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfig,
+	AuxiliaryServicesConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfig,
+	KubernetesClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfig,
 	StagingBucket: *string,
 }
 ```
@@ -3761,11 +3768,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfig {
-	MetastoreConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig,
-	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig,
+	MetastoreConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig,
+	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig,
 }
 ```
 
@@ -3811,7 +3818,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig {
 	DataprocMetastoreService: *string,
@@ -3845,7 +3852,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig {
 	DataprocCluster: *string,
@@ -3879,11 +3886,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfig {
-	GkeClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig,
-	KubernetesSoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig,
+	GkeClusterConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig,
+	KubernetesSoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig,
 	KubernetesNamespace: *string,
 }
 ```
@@ -3947,7 +3954,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig {
 	GkeClusterTarget: *string,
@@ -3999,12 +4006,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget {
 	NodePool: *string,
 	Roles: *[]*string,
-	NodePoolConfig: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig,
+	NodePoolConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig,
 }
 ```
 
@@ -4065,12 +4072,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig {
 	Locations: *[]*string,
-	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling,
-	Config: github.com/cdktf/cdktf-provider-google-go/google/v12.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig,
+	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling,
+	Config: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig,
 }
 ```
 
@@ -4131,7 +4138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling {
 	MaxNodeCount: *f64,
@@ -4181,7 +4188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig {
 	LocalSsdCount: *f64,
@@ -4283,7 +4290,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 &dataproccluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig {
 	ComponentVersion: *map[string]*string,
@@ -4337,7 +4344,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAutoscalingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAutoscalingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigAutoscalingConfigOutputReference
 ```
@@ -4608,7 +4615,7 @@ func InternalValue() DataprocClusterClusterConfigAutoscalingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigAuxiliaryNodeGroupsList
 ```
@@ -4649,10 +4656,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4751,7 +4775,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList
 ```
@@ -4792,10 +4816,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4894,7 +4935,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList
 ```
@@ -4935,10 +4976,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -5037,7 +5095,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAcceleratorsOutputReference
 ```
@@ -5348,7 +5406,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfigOutputReference
 ```
@@ -5684,7 +5742,7 @@ func InternalValue() DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNod
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigOutputReference
 ```
@@ -6115,7 +6173,7 @@ func InternalValue() DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupNod
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigAuxiliaryNodeGroupsNodeGroupOutputReference
 ```
@@ -6457,7 +6515,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigAuxiliaryNodeGroupsOutputReference
 ```
@@ -6788,7 +6846,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigDataprocMetricConfigMetricsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigDataprocMetricConfigMetricsList
 ```
@@ -6829,10 +6887,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -6931,7 +7006,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference
 ```
@@ -7249,7 +7324,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigDataprocMetricConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigDataprocMetricConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigDataprocMetricConfigOutputReference
 ```
@@ -7533,7 +7608,7 @@ func InternalValue() DataprocClusterClusterConfigDataprocMetricConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEncryptionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigEncryptionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigEncryptionConfigOutputReference
 ```
@@ -7804,7 +7879,7 @@ func InternalValue() DataprocClusterClusterConfigEncryptionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigEndpointConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigEndpointConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigEndpointConfigOutputReference
 ```
@@ -8086,7 +8161,7 @@ func InternalValue() DataprocClusterClusterConfigEndpointConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityOutputReference
 ```
@@ -8357,7 +8432,7 @@ func InternalValue() DataprocClusterClusterConfigGceClusterConfigNodeGroupAffini
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigGceClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigGceClusterConfigOutputReference
 ```
@@ -8964,7 +9039,7 @@ func InternalValue() DataprocClusterClusterConfigGceClusterConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference
 ```
@@ -9300,7 +9375,7 @@ func InternalValue() DataprocClusterClusterConfigGceClusterConfigReservationAffi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference
 ```
@@ -9636,7 +9711,7 @@ func InternalValue() DataprocClusterClusterConfigGceClusterConfigShieldedInstanc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigInitializationActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigInitializationActionList
 ```
@@ -9677,10 +9752,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -9779,7 +9871,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigInitializationActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigInitializationActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigInitializationActionOutputReference
 ```
@@ -10097,7 +10189,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigLifecycleConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigLifecycleConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigLifecycleConfigOutputReference
 ```
@@ -10415,7 +10507,7 @@ func InternalValue() DataprocClusterClusterConfigLifecycleConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigMasterConfigAcceleratorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigMasterConfigAcceleratorsList
 ```
@@ -10456,10 +10548,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -10558,7 +10667,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigMasterConfigAcceleratorsOutputReference
 ```
@@ -10869,7 +10978,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigMasterConfigDiskConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference
 ```
@@ -11205,7 +11314,7 @@ func InternalValue() DataprocClusterClusterConfigMasterConfigDiskConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMasterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigMasterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigMasterConfigOutputReference
 ```
@@ -11665,7 +11774,7 @@ func InternalValue() DataprocClusterClusterConfigMasterConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigMetastoreConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigMetastoreConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigMetastoreConfigOutputReference
 ```
@@ -11936,7 +12045,7 @@ func InternalValue() DataprocClusterClusterConfigMetastoreConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigOutputReference
 ```
@@ -12842,7 +12951,7 @@ func InternalValue() DataprocClusterClusterConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference
 ```
@@ -13178,7 +13287,7 @@ func InternalValue() DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList
 ```
@@ -13219,10 +13328,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -13321,7 +13447,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionListStructOutputReference
 ```
@@ -13646,7 +13772,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList
 ```
@@ -13687,10 +13813,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -13778,7 +13921,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResultsOutputReference
 ```
@@ -14067,7 +14210,7 @@ func InternalValue() DataprocClusterClusterConfigPreemptibleWorkerConfigInstance
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyOutputReference
 ```
@@ -14369,7 +14512,7 @@ func InternalValue() DataprocClusterClusterConfigPreemptibleWorkerConfigInstance
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference
 ```
@@ -14771,7 +14914,7 @@ func InternalValue() DataprocClusterClusterConfigPreemptibleWorkerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference
 ```
@@ -15441,7 +15584,7 @@ func InternalValue() DataprocClusterClusterConfigSecurityConfigKerberosConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSecurityConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigSecurityConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigSecurityConfigOutputReference
 ```
@@ -15725,7 +15868,7 @@ func InternalValue() DataprocClusterClusterConfigSecurityConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigSoftwareConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigSoftwareConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigSoftwareConfigOutputReference
 ```
@@ -16072,7 +16215,7 @@ func InternalValue() DataprocClusterClusterConfigSoftwareConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigWorkerConfigAcceleratorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterClusterConfigWorkerConfigAcceleratorsList
 ```
@@ -16113,10 +16256,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -16215,7 +16375,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterClusterConfigWorkerConfigAcceleratorsOutputReference
 ```
@@ -16526,7 +16686,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference
 ```
@@ -16862,7 +17022,7 @@ func InternalValue() DataprocClusterClusterConfigWorkerConfigDiskConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterClusterConfigWorkerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterClusterConfigWorkerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterClusterConfigWorkerConfigOutputReference
 ```
@@ -17351,7 +17511,7 @@ func InternalValue() DataprocClusterClusterConfigWorkerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterTimeoutsOutputReference
 ```
@@ -17687,7 +17847,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfigOutputReference
 ```
@@ -17965,7 +18125,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigM
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigAuxiliaryServicesConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigOutputReference
 ```
@@ -18298,7 +18458,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigAuxiliaryServicesConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfigOutputReference
 ```
@@ -18576,7 +18736,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigAuxiliaryServicesConfigS
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList
 ```
@@ -18617,10 +18777,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -18719,7 +18896,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscalingOutputReference
 ```
@@ -19026,7 +19203,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigKubernetesClusterConfigG
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigOutputReference
 ```
@@ -19420,7 +19597,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigKubernetesClusterConfigG
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigOutputReference
 ```
@@ -19775,7 +19952,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigKubernetesClusterConfigG
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetOutputReference
 ```
@@ -20128,7 +20305,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigOutputReference
 ```
@@ -20448,7 +20625,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigKubernetesClusterConfigG
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfigOutputReference
 ```
@@ -20748,7 +20925,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigKubernetesClusterConfigK
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigKubernetesClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigKubernetesClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigKubernetesClusterConfigOutputReference
 ```
@@ -21096,7 +21273,7 @@ func InternalValue() DataprocClusterVirtualClusterConfigKubernetesClusterConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocCluster.DataprocClusterVirtualClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/dataproccluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataproccluster"
 
 dataproccluster.NewDataprocClusterVirtualClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterVirtualClusterConfigOutputReference
 ```

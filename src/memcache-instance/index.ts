@@ -116,6 +116,17 @@ export function memcacheInstanceMaintenanceScheduleToTerraform(struct?: Memcache
   }
 }
 
+
+export function memcacheInstanceMaintenanceScheduleToHclTerraform(struct?: MemcacheInstanceMaintenanceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class MemcacheInstanceMaintenanceScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -188,6 +199,17 @@ export function memcacheInstanceMemcacheNodesToTerraform(struct?: MemcacheInstan
   }
   return {
   }
+}
+
+
+export function memcacheInstanceMemcacheNodesToHclTerraform(struct?: MemcacheInstanceMemcacheNodes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class MemcacheInstanceMemcacheNodesOutputReference extends cdktf.ComplexObject {
@@ -302,6 +324,43 @@ export function memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTim
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToHclTerraform(struct?: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference | MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference extends cdktf.ComplexObject {
@@ -461,6 +520,37 @@ export function memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraf
   }
 }
 
+
+export function memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowToHclTerraform(struct?: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.stringToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    duration: {
+      value: cdktf.stringToHclTerraform(struct!.duration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToHclTerraform(struct!.startTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -604,6 +694,31 @@ export function memcacheInstanceMaintenancePolicyToTerraform(struct?: MemcacheIn
   }
 }
 
+
+export function memcacheInstanceMaintenancePolicyToHclTerraform(struct?: MemcacheInstanceMaintenancePolicyOutputReference | MemcacheInstanceMaintenancePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    weekly_maintenance_window: {
+      value: cdktf.listMapperHcl(memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowToHclTerraform, true)(struct!.weeklyMaintenanceWindow),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MemcacheInstanceMaintenancePolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -700,6 +815,25 @@ export function memcacheInstanceMemcacheParametersToTerraform(struct?: MemcacheI
   }
 }
 
+
+export function memcacheInstanceMemcacheParametersToHclTerraform(struct?: MemcacheInstanceMemcacheParametersOutputReference | MemcacheInstanceMemcacheParameters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    params: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.params),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MemcacheInstanceMemcacheParametersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -777,6 +911,31 @@ export function memcacheInstanceNodeConfigToTerraform(struct?: MemcacheInstanceN
     cpu_count: cdktf.numberToTerraform(struct!.cpuCount),
     memory_size_mb: cdktf.numberToTerraform(struct!.memorySizeMb),
   }
+}
+
+
+export function memcacheInstanceNodeConfigToHclTerraform(struct?: MemcacheInstanceNodeConfigOutputReference | MemcacheInstanceNodeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cpu_count: {
+      value: cdktf.numberToHclTerraform(struct!.cpuCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    memory_size_mb: {
+      value: cdktf.numberToHclTerraform(struct!.memorySizeMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MemcacheInstanceNodeConfigOutputReference extends cdktf.ComplexObject {
@@ -868,6 +1027,37 @@ export function memcacheInstanceTimeoutsToTerraform(struct?: MemcacheInstanceTim
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function memcacheInstanceTimeoutsToHclTerraform(struct?: MemcacheInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MemcacheInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1319,5 +1509,97 @@ export class MemcacheInstance extends cdktf.TerraformResource {
       node_config: memcacheInstanceNodeConfigToTerraform(this._nodeConfig.internalValue),
       timeouts: memcacheInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      authorized_network: {
+        value: cdktf.stringToHclTerraform(this._authorizedNetwork),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      memcache_version: {
+        value: cdktf.stringToHclTerraform(this._memcacheVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_count: {
+        value: cdktf.numberToHclTerraform(this._nodeCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zones: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._zones),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      maintenance_policy: {
+        value: memcacheInstanceMaintenancePolicyToHclTerraform(this._maintenancePolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MemcacheInstanceMaintenancePolicyList",
+      },
+      memcache_parameters: {
+        value: memcacheInstanceMemcacheParametersToHclTerraform(this._memcacheParameters.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MemcacheInstanceMemcacheParametersList",
+      },
+      node_config: {
+        value: memcacheInstanceNodeConfigToHclTerraform(this._nodeConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MemcacheInstanceNodeConfigList",
+      },
+      timeouts: {
+        value: memcacheInstanceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MemcacheInstanceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

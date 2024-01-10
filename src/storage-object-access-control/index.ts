@@ -70,6 +70,17 @@ export function storageObjectAccessControlProjectTeamToTerraform(struct?: Storag
   }
 }
 
+
+export function storageObjectAccessControlProjectTeamToHclTerraform(struct?: StorageObjectAccessControlProjectTeam): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class StorageObjectAccessControlProjectTeamOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -152,6 +163,37 @@ export function storageObjectAccessControlTimeoutsToTerraform(struct?: StorageOb
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function storageObjectAccessControlTimeoutsToHclTerraform(struct?: StorageObjectAccessControlTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StorageObjectAccessControlTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -443,5 +485,49 @@ export class StorageObjectAccessControl extends cdktf.TerraformResource {
       role: cdktf.stringToTerraform(this._role),
       timeouts: storageObjectAccessControlTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket: {
+        value: cdktf.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      entity: {
+        value: cdktf.stringToHclTerraform(this._entity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      object: {
+        value: cdktf.stringToHclTerraform(this._object),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktf.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: storageObjectAccessControlTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StorageObjectAccessControlTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

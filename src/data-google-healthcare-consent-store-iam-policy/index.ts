@@ -152,4 +152,30 @@ export class DataGoogleHealthcareConsentStoreIamPolicy extends cdktf.TerraformDa
       id: cdktf.stringToTerraform(this._id),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      consent_store_id: {
+        value: cdktf.stringToHclTerraform(this._consentStoreId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dataset: {
+        value: cdktf.stringToHclTerraform(this._dataset),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

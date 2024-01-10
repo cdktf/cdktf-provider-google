@@ -124,6 +124,37 @@ export function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNod
   }
 }
 
+
+export function computeNodeGroupAutoscalingPolicyToHclTerraform(struct?: ComputeNodeGroupAutoscalingPolicyOutputReference | ComputeNodeGroupAutoscalingPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_nodes: {
+      value: cdktf.numberToHclTerraform(struct!.maxNodes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_nodes: {
+      value: cdktf.numberToHclTerraform(struct!.minNodes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -235,6 +266,25 @@ export function computeNodeGroupMaintenanceWindowToTerraform(struct?: ComputeNod
   }
 }
 
+
+export function computeNodeGroupMaintenanceWindowToHclTerraform(struct?: ComputeNodeGroupMaintenanceWindowOutputReference | ComputeNodeGroupMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -305,6 +355,31 @@ export function computeNodeGroupShareSettingsProjectMapToTerraform(struct?: Comp
     id: cdktf.stringToTerraform(struct!.id),
     project_id: cdktf.stringToTerraform(struct!.projectId),
   }
+}
+
+
+export function computeNodeGroupShareSettingsProjectMapToHclTerraform(struct?: ComputeNodeGroupShareSettingsProjectMap | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_id: {
+      value: cdktf.stringToHclTerraform(struct!.projectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeNodeGroupShareSettingsProjectMapOutputReference extends cdktf.ComplexObject {
@@ -429,6 +504,31 @@ export function computeNodeGroupShareSettingsToTerraform(struct?: ComputeNodeGro
   }
 }
 
+
+export function computeNodeGroupShareSettingsToHclTerraform(struct?: ComputeNodeGroupShareSettingsOutputReference | ComputeNodeGroupShareSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    share_type: {
+      value: cdktf.stringToHclTerraform(struct!.shareType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_map: {
+      value: cdktf.listMapperHcl(computeNodeGroupShareSettingsProjectMapToHclTerraform, true)(struct!.projectMap),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ComputeNodeGroupShareSettingsProjectMapList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeNodeGroupShareSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -521,6 +621,37 @@ export function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTim
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeNodeGroupTimeoutsToHclTerraform(struct?: ComputeNodeGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -918,5 +1049,85 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
       share_settings: computeNodeGroupShareSettingsToTerraform(this._shareSettings.internalValue),
       timeouts: computeNodeGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      initial_size: {
+        value: cdktf.numberToHclTerraform(this._initialSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      maintenance_policy: {
+        value: cdktf.stringToHclTerraform(this._maintenancePolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_template: {
+        value: cdktf.stringToHclTerraform(this._nodeTemplate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      autoscaling_policy: {
+        value: computeNodeGroupAutoscalingPolicyToHclTerraform(this._autoscalingPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeNodeGroupAutoscalingPolicyList",
+      },
+      maintenance_window: {
+        value: computeNodeGroupMaintenanceWindowToHclTerraform(this._maintenanceWindow.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeNodeGroupMaintenanceWindowList",
+      },
+      share_settings: {
+        value: computeNodeGroupShareSettingsToHclTerraform(this._shareSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeNodeGroupShareSettingsList",
+      },
+      timeouts: {
+        value: computeNodeGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeNodeGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

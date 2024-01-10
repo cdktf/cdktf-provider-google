@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBinding(scope Construct, id *string, config GkeHubMembershipBindingConfig) GkeHubMembershipBinding
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -965,7 +972,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 &gkehubmembershipbinding.GkeHubMembershipBindingConfig {
 	Connection: interface{},
@@ -982,7 +989,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbin
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.gkeHubMembershipBinding.GkeHubMembershipBindingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeHubMembershipBinding.GkeHubMembershipBindingTimeouts,
 }
 ```
 
@@ -1199,7 +1206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingState.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 &gkehubmembershipbinding.GkeHubMembershipBindingState {
 
@@ -1212,7 +1219,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 &gkehubmembershipbinding.GkeHubMembershipBindingTimeouts {
 	Create: *string,
@@ -1274,7 +1281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBindingStateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeHubMembershipBindingStateList
 ```
@@ -1315,10 +1322,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1406,7 +1430,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBindingStateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeHubMembershipBindingStateOutputReference
 ```
@@ -1684,7 +1708,7 @@ func InternalValue() GkeHubMembershipBindingState
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBindingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubMembershipBindingTimeoutsOutputReference
 ```

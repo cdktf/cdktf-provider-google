@@ -67,6 +67,31 @@ export function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphert
   }
 }
 
+
+export function kmsSecretCiphertextTimeoutsToHclTerraform(struct?: KmsSecretCiphertextTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -301,5 +326,43 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
       plaintext: cdktf.stringToTerraform(this._plaintext),
       timeouts: kmsSecretCiphertextTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      additional_authenticated_data: {
+        value: cdktf.stringToHclTerraform(this._additionalAuthenticatedData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      crypto_key: {
+        value: cdktf.stringToHclTerraform(this._cryptoKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      plaintext: {
+        value: cdktf.stringToHclTerraform(this._plaintext),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: kmsSecretCiphertextTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KmsSecretCiphertextTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

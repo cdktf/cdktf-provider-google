@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.NewDataGoogleServiceAccountJwt(scope Construct, id *string, config DataGoogleServiceAccountJwtConfig) DataGoogleServiceAccountJwt
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -121,6 +122,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.toMetadata"></a>
 
@@ -288,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +357,7 @@ datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -676,7 +685,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleserviceaccountjwt"
 
 &datagoogleserviceaccountjwt.DataGoogleServiceAccountJwtConfig {
 	Connection: interface{},

@@ -58,6 +58,17 @@ export function dataGoogleComputeRegionNetworkEndpointGroupAppEngineToTerraform(
   }
 }
 
+
+export function dataGoogleComputeRegionNetworkEndpointGroupAppEngineToHclTerraform(struct?: DataGoogleComputeRegionNetworkEndpointGroupAppEngine): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleComputeRegionNetworkEndpointGroupAppEngineOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -132,6 +143,17 @@ export function dataGoogleComputeRegionNetworkEndpointGroupCloudFunctionToTerraf
   }
 }
 
+
+export function dataGoogleComputeRegionNetworkEndpointGroupCloudFunctionToHclTerraform(struct?: DataGoogleComputeRegionNetworkEndpointGroupCloudFunction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleComputeRegionNetworkEndpointGroupCloudFunctionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -199,6 +221,17 @@ export function dataGoogleComputeRegionNetworkEndpointGroupCloudRunToTerraform(s
   }
   return {
   }
+}
+
+
+export function dataGoogleComputeRegionNetworkEndpointGroupCloudRunToHclTerraform(struct?: DataGoogleComputeRegionNetworkEndpointGroupCloudRun): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cdktf.ComplexObject {
@@ -461,5 +494,43 @@ export class DataGoogleComputeRegionNetworkEndpointGroup extends cdktf.Terraform
       region: cdktf.stringToTerraform(this._region),
       self_link: cdktf.stringToTerraform(this._selfLink),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      self_link: {
+        value: cdktf.stringToHclTerraform(this._selfLink),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

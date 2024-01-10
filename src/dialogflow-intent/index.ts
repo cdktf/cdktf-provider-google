@@ -122,6 +122,17 @@ export function dialogflowIntentFollowupIntentInfoToTerraform(struct?: Dialogflo
   }
 }
 
+
+export function dialogflowIntentFollowupIntentInfoToHclTerraform(struct?: DialogflowIntentFollowupIntentInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DialogflowIntentFollowupIntentInfoOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -204,6 +215,37 @@ export function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTim
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dialogflowIntentTimeoutsToHclTerraform(struct?: DialogflowIntentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowIntentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -638,5 +680,97 @@ export class DialogflowIntent extends cdktf.TerraformResource {
       webhook_state: cdktf.stringToTerraform(this._webhookState),
       timeouts: dialogflowIntentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      action: {
+        value: cdktf.stringToHclTerraform(this._action),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_response_platforms: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._defaultResponsePlatforms),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      events: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._events),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      input_context_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._inputContextNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      is_fallback: {
+        value: cdktf.booleanToHclTerraform(this._isFallback),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      ml_disabled: {
+        value: cdktf.booleanToHclTerraform(this._mlDisabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      parent_followup_intent_name: {
+        value: cdktf.stringToHclTerraform(this._parentFollowupIntentName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      reset_contexts: {
+        value: cdktf.booleanToHclTerraform(this._resetContexts),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      webhook_state: {
+        value: cdktf.stringToHclTerraform(this._webhookState),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dialogflowIntentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DialogflowIntentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

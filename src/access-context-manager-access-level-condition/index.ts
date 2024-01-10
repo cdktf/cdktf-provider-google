@@ -126,6 +126,31 @@ export function accessContextManagerAccessLevelConditionDevicePolicyOsConstraint
   }
 }
 
+
+export function accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToHclTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    minimum_version: {
+      value: cdktf.stringToHclTerraform(struct!.minimumVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    os_type: {
+      value: cdktf.stringToHclTerraform(struct!.osType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AccessContextManagerAccessLevelConditionDevicePolicyOsConstraintsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -280,6 +305,55 @@ export function accessContextManagerAccessLevelConditionDevicePolicyToTerraform(
     require_screen_lock: cdktf.booleanToTerraform(struct!.requireScreenLock),
     os_constraints: cdktf.listMapper(accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToTerraform, true)(struct!.osConstraints),
   }
+}
+
+
+export function accessContextManagerAccessLevelConditionDevicePolicyToHclTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOutputReference | AccessContextManagerAccessLevelConditionDevicePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_device_management_levels: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedDeviceManagementLevels),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    allowed_encryption_statuses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedEncryptionStatuses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    require_admin_approval: {
+      value: cdktf.booleanToHclTerraform(struct!.requireAdminApproval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    require_corp_owned: {
+      value: cdktf.booleanToHclTerraform(struct!.requireCorpOwned),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    require_screen_lock: {
+      value: cdktf.booleanToHclTerraform(struct!.requireScreenLock),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    os_constraints: {
+      value: cdktf.listMapperHcl(accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToHclTerraform, true)(struct!.osConstraints),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AccessContextManagerAccessLevelConditionDevicePolicyOsConstraintsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference extends cdktf.ComplexObject {
@@ -462,6 +536,31 @@ export function accessContextManagerAccessLevelConditionTimeoutsToTerraform(stru
   }
 }
 
+
+export function accessContextManagerAccessLevelConditionTimeoutsToHclTerraform(struct?: AccessContextManagerAccessLevelConditionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -568,6 +667,31 @@ export function accessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubn
   }
 }
 
+
+export function accessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubnetworkToHclTerraform(struct?: AccessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubnetworkOutputReference | AccessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubnetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    network: {
+      value: cdktf.stringToHclTerraform(struct!.network),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vpc_ip_subnetworks: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.vpcIpSubnetworks),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AccessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubnetworkOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -652,6 +776,25 @@ export function accessContextManagerAccessLevelConditionVpcNetworkSourcesToTerra
   return {
     vpc_subnetwork: accessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubnetworkToTerraform(struct!.vpcSubnetwork),
   }
+}
+
+
+export function accessContextManagerAccessLevelConditionVpcNetworkSourcesToHclTerraform(struct?: AccessContextManagerAccessLevelConditionVpcNetworkSources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    vpc_subnetwork: {
+      value: accessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubnetworkToHclTerraform(struct!.vpcSubnetwork),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AccessContextManagerAccessLevelConditionVpcNetworkSourcesVpcSubnetworkList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AccessContextManagerAccessLevelConditionVpcNetworkSourcesOutputReference extends cdktf.ComplexObject {
@@ -976,5 +1119,73 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
       timeouts: accessContextManagerAccessLevelConditionTimeoutsToTerraform(this._timeouts.internalValue),
       vpc_network_sources: cdktf.listMapper(accessContextManagerAccessLevelConditionVpcNetworkSourcesToTerraform, true)(this._vpcNetworkSources.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      access_level: {
+        value: cdktf.stringToHclTerraform(this._accessLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_subnetworks: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._ipSubnetworks),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      members: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._members),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      negate: {
+        value: cdktf.booleanToHclTerraform(this._negate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      regions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._regions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      required_access_levels: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._requiredAccessLevels),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      device_policy: {
+        value: accessContextManagerAccessLevelConditionDevicePolicyToHclTerraform(this._devicePolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AccessContextManagerAccessLevelConditionDevicePolicyList",
+      },
+      timeouts: {
+        value: accessContextManagerAccessLevelConditionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AccessContextManagerAccessLevelConditionTimeouts",
+      },
+      vpc_network_sources: {
+        value: cdktf.listMapperHcl(accessContextManagerAccessLevelConditionVpcNetworkSourcesToHclTerraform, true)(this._vpcNetworkSources.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AccessContextManagerAccessLevelConditionVpcNetworkSourcesList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

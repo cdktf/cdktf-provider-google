@@ -249,4 +249,54 @@ export class StorageNotification extends cdktf.TerraformResource {
       topic: cdktf.stringToTerraform(this._topic),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket: {
+        value: cdktf.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_attributes: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._customAttributes),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      event_types: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._eventTypes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      object_name_prefix: {
+        value: cdktf.stringToHclTerraform(this._objectNamePrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      payload_format: {
+        value: cdktf.stringToHclTerraform(this._payloadFormat),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      topic: {
+        value: cdktf.stringToHclTerraform(this._topic),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

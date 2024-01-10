@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.NewDataGoogleBillingAccountIamPolicy(scope Construct, id *string, config DataGoogleBillingAccountIamPolicyConfig) DataGoogleBillingAccountIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -119,6 +120,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.toMetadata"></a>
 
@@ -274,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_IsTerraformD
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebillingaccountiampolicy"
 
 datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -607,7 +616,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBillingAccountIamPolicy.DataGoogleBillingAccountIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglebillingaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglebillingaccountiampolicy"
 
 &datagooglebillingaccountiampolicy.DataGoogleBillingAccountIamPolicyConfig {
 	Connection: interface{},

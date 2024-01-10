@@ -152,4 +152,30 @@ export class DataGoogleSccSourceIamPolicy extends cdktf.TerraformDataSource {
       source: cdktf.stringToTerraform(this._source),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      organization: {
+        value: cdktf.stringToHclTerraform(this._organization),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source: {
+        value: cdktf.stringToHclTerraform(this._source),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

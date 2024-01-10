@@ -195,4 +195,42 @@ export class DataGoogleServiceAccountJwt extends cdktf.TerraformDataSource {
       target_service_account: cdktf.stringToTerraform(this._targetServiceAccount),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      delegates: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._delegates),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      expires_in: {
+        value: cdktf.numberToHclTerraform(this._expiresIn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      payload: {
+        value: cdktf.stringToHclTerraform(this._payload),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_service_account: {
+        value: cdktf.stringToHclTerraform(this._targetServiceAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

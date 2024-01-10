@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRule(scope Construct, id *string, config ComputeRegionNetworkFirewallPolicyRuleConfig) ComputeRegionNetworkFirewallPolicyRule
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -137,6 +138,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.toMetadata"></a>
 
@@ -480,7 +487,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRule_IsConstruct(x interface{}) *bool
 ```
@@ -512,7 +519,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -526,7 +533,7 @@ computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRule_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -540,7 +547,7 @@ computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRule_Is
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1121,7 +1128,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 &computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRuleConfig {
 	Connection: interface{},
@@ -1134,7 +1141,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetwor
 	Action: *string,
 	Direction: *string,
 	FirewallPolicy: *string,
-	Match: github.com/cdktf/cdktf-provider-google-go/google/v12.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatch,
+	Match: github.com/cdktf/cdktf-provider-google-go/google/v13.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatch,
 	Priority: *f64,
 	Description: *string,
 	Disabled: interface{},
@@ -1145,7 +1152,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetwor
 	RuleName: *string,
 	TargetSecureTags: interface{},
 	TargetServiceAccounts: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTimeouts,
 }
 ```
 
@@ -1470,7 +1477,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 &computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRuleMatch {
 	Layer4Configs: interface{},
@@ -1692,7 +1699,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4Configs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 &computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4Configs {
 	IpProtocol: *string,
@@ -1746,7 +1753,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 &computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTags {
 	Name: *string,
@@ -1778,7 +1785,7 @@ Name of the secure tag, created with TagManager's TagValue API.
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 &computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTags {
 	Name: *string,
@@ -1810,7 +1817,7 @@ Name of the secure tag, created with TagManager's TagValue API.
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 &computeregionnetworkfirewallpolicyrule.ComputeRegionNetworkFirewallPolicyRuleTimeouts {
 	Create: *string,
@@ -1872,7 +1879,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList
 ```
@@ -1913,10 +1920,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2015,7 +2039,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsOutputReference
 ```
@@ -2333,7 +2357,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleMatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionNetworkFirewallPolicyRuleMatchOutputReference
 ```
@@ -2949,7 +2973,7 @@ func InternalValue() ComputeRegionNetworkFirewallPolicyRuleMatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList
 ```
@@ -2990,10 +3014,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3092,7 +3133,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsOutputReference
 ```
@@ -3392,7 +3433,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList
 ```
@@ -3433,10 +3474,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3535,7 +3593,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRegionNetworkFirewallPolicyRuleTargetSecureTagsOutputReference
 ```
@@ -3835,7 +3893,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computeregionnetworkfirewallpolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeregionnetworkfirewallpolicyrule"
 
 computeregionnetworkfirewallpolicyrule.NewComputeRegionNetworkFirewallPolicyRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionNetworkFirewallPolicyRuleTimeoutsOutputReference
 ```

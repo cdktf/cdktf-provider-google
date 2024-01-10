@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.NewFolderAccessApprovalSettings(scope Construct, id *string, config FolderAccessApprovalSettingsConfig) FolderAccessApprovalSettings
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.toMetadata"></a>
 
@@ -425,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.FolderAccessApprovalSettings_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.FolderAccessApprovalSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ folderaccessapprovalsettings.FolderAccessApprovalSettings_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.FolderAccessApprovalSettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ folderaccessapprovalsettings.FolderAccessApprovalSettings_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.FolderAccessApprovalSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -890,7 +897,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 &folderaccessapprovalsettings.FolderAccessApprovalSettingsConfig {
 	Connection: interface{},
@@ -905,7 +912,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprova
 	ActiveKeyVersion: *string,
 	Id: *string,
 	NotificationEmails: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.folderAccessApprovalSettings.FolderAccessApprovalSettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.folderAccessApprovalSettings.FolderAccessApprovalSettingsTimeouts,
 }
 ```
 
@@ -1095,7 +1102,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServices.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 &folderaccessapprovalsettings.FolderAccessApprovalSettingsEnrolledServices {
 	CloudProduct: *string,
@@ -1172,7 +1179,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 &folderaccessapprovalsettings.FolderAccessApprovalSettingsTimeouts {
 	Create: *string,
@@ -1234,7 +1241,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.NewFolderAccessApprovalSettingsEnrolledServicesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FolderAccessApprovalSettingsEnrolledServicesList
 ```
@@ -1275,10 +1282,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1377,7 +1401,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsEnrolledServicesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.NewFolderAccessApprovalSettingsEnrolledServicesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FolderAccessApprovalSettingsEnrolledServicesOutputReference
 ```
@@ -1695,7 +1719,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderAccessApprovalSettings.FolderAccessApprovalSettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/folderaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderaccessapprovalsettings"
 
 folderaccessapprovalsettings.NewFolderAccessApprovalSettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderAccessApprovalSettingsTimeoutsOutputReference
 ```

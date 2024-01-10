@@ -88,6 +88,31 @@ export function documentAiWarehouseLocationTimeoutsToTerraform(struct?: Document
   }
 }
 
+
+export function documentAiWarehouseLocationTimeoutsToHclTerraform(struct?: DocumentAiWarehouseLocationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DocumentAiWarehouseLocationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -365,5 +390,61 @@ export class DocumentAiWarehouseLocation extends cdktf.TerraformResource {
       project_number: cdktf.stringToTerraform(this._projectNumber),
       timeouts: documentAiWarehouseLocationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      access_control_mode: {
+        value: cdktf.stringToHclTerraform(this._accessControlMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      database_type: {
+        value: cdktf.stringToHclTerraform(this._databaseType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      document_creator_default_role: {
+        value: cdktf.stringToHclTerraform(this._documentCreatorDefaultRole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key: {
+        value: cdktf.stringToHclTerraform(this._kmsKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project_number: {
+        value: cdktf.stringToHclTerraform(this._projectNumber),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: documentAiWarehouseLocationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DocumentAiWarehouseLocationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

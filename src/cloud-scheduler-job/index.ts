@@ -141,6 +141,37 @@ export function cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToTerraform(
   }
 }
 
+
+export function cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToHclTerraform(struct?: CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference | CloudSchedulerJobAppEngineHttpTargetAppEngineRouting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    instance: {
+      value: cdktf.stringToHclTerraform(struct!.instance),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -288,6 +319,49 @@ export function cloudSchedulerJobAppEngineHttpTargetToTerraform(struct?: CloudSc
     relative_uri: cdktf.stringToTerraform(struct!.relativeUri),
     app_engine_routing: cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToTerraform(struct!.appEngineRouting),
   }
+}
+
+
+export function cloudSchedulerJobAppEngineHttpTargetToHclTerraform(struct?: CloudSchedulerJobAppEngineHttpTargetOutputReference | CloudSchedulerJobAppEngineHttpTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body: {
+      value: cdktf.stringToHclTerraform(struct!.body),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    headers: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.headers),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    http_method: {
+      value: cdktf.stringToHclTerraform(struct!.httpMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    relative_uri: {
+      value: cdktf.stringToHclTerraform(struct!.relativeUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    app_engine_routing: {
+      value: cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToHclTerraform(struct!.appEngineRouting),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.ComplexObject {
@@ -451,6 +525,31 @@ export function cloudSchedulerJobHttpTargetOauthTokenToTerraform(struct?: CloudS
   }
 }
 
+
+export function cloudSchedulerJobHttpTargetOauthTokenToHclTerraform(struct?: CloudSchedulerJobHttpTargetOauthTokenOutputReference | CloudSchedulerJobHttpTargetOauthToken): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    scope: {
+      value: cdktf.stringToHclTerraform(struct!.scope),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_account_email: {
+      value: cdktf.stringToHclTerraform(struct!.serviceAccountEmail),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -544,6 +643,31 @@ export function cloudSchedulerJobHttpTargetOidcTokenToTerraform(struct?: CloudSc
     audience: cdktf.stringToTerraform(struct!.audience),
     service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
   }
+}
+
+
+export function cloudSchedulerJobHttpTargetOidcTokenToHclTerraform(struct?: CloudSchedulerJobHttpTargetOidcTokenOutputReference | CloudSchedulerJobHttpTargetOidcToken): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audience: {
+      value: cdktf.stringToHclTerraform(struct!.audience),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_account_email: {
+      value: cdktf.stringToHclTerraform(struct!.serviceAccountEmail),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.ComplexObject {
@@ -670,6 +794,55 @@ export function cloudSchedulerJobHttpTargetToTerraform(struct?: CloudSchedulerJo
     oauth_token: cloudSchedulerJobHttpTargetOauthTokenToTerraform(struct!.oauthToken),
     oidc_token: cloudSchedulerJobHttpTargetOidcTokenToTerraform(struct!.oidcToken),
   }
+}
+
+
+export function cloudSchedulerJobHttpTargetToHclTerraform(struct?: CloudSchedulerJobHttpTargetOutputReference | CloudSchedulerJobHttpTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body: {
+      value: cdktf.stringToHclTerraform(struct!.body),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    headers: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.headers),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    http_method: {
+      value: cdktf.stringToHclTerraform(struct!.httpMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    oauth_token: {
+      value: cloudSchedulerJobHttpTargetOauthTokenToHclTerraform(struct!.oauthToken),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudSchedulerJobHttpTargetOauthTokenList",
+    },
+    oidc_token: {
+      value: cloudSchedulerJobHttpTargetOidcTokenToHclTerraform(struct!.oidcToken),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudSchedulerJobHttpTargetOidcTokenList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObject {
@@ -867,6 +1040,37 @@ export function cloudSchedulerJobPubsubTargetToTerraform(struct?: CloudScheduler
   }
 }
 
+
+export function cloudSchedulerJobPubsubTargetToHclTerraform(struct?: CloudSchedulerJobPubsubTargetOutputReference | CloudSchedulerJobPubsubTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    attributes: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.attributes),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    data: {
+      value: cdktf.stringToHclTerraform(struct!.data),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    topic_name: {
+      value: cdktf.stringToHclTerraform(struct!.topicName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1010,6 +1214,49 @@ export function cloudSchedulerJobRetryConfigToTerraform(struct?: CloudSchedulerJ
     min_backoff_duration: cdktf.stringToTerraform(struct!.minBackoffDuration),
     retry_count: cdktf.numberToTerraform(struct!.retryCount),
   }
+}
+
+
+export function cloudSchedulerJobRetryConfigToHclTerraform(struct?: CloudSchedulerJobRetryConfigOutputReference | CloudSchedulerJobRetryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_backoff_duration: {
+      value: cdktf.stringToHclTerraform(struct!.maxBackoffDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_doublings: {
+      value: cdktf.numberToHclTerraform(struct!.maxDoublings),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_retry_duration: {
+      value: cdktf.stringToHclTerraform(struct!.maxRetryDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    min_backoff_duration: {
+      value: cdktf.stringToHclTerraform(struct!.minBackoffDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    retry_count: {
+      value: cdktf.numberToHclTerraform(struct!.retryCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexObject {
@@ -1173,6 +1420,37 @@ export function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobT
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cloudSchedulerJobTimeoutsToHclTerraform(struct?: CloudSchedulerJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1596,5 +1874,97 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
       retry_config: cloudSchedulerJobRetryConfigToTerraform(this._retryConfig.internalValue),
       timeouts: cloudSchedulerJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      attempt_deadline: {
+        value: cdktf.stringToHclTerraform(this._attemptDeadline),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      paused: {
+        value: cdktf.booleanToHclTerraform(this._paused),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      schedule: {
+        value: cdktf.stringToHclTerraform(this._schedule),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_zone: {
+        value: cdktf.stringToHclTerraform(this._timeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      app_engine_http_target: {
+        value: cloudSchedulerJobAppEngineHttpTargetToHclTerraform(this._appEngineHttpTarget.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudSchedulerJobAppEngineHttpTargetList",
+      },
+      http_target: {
+        value: cloudSchedulerJobHttpTargetToHclTerraform(this._httpTarget.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudSchedulerJobHttpTargetList",
+      },
+      pubsub_target: {
+        value: cloudSchedulerJobPubsubTargetToHclTerraform(this._pubsubTarget.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudSchedulerJobPubsubTargetList",
+      },
+      retry_config: {
+        value: cloudSchedulerJobRetryConfigToHclTerraform(this._retryConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudSchedulerJobRetryConfigList",
+      },
+      timeouts: {
+        value: cloudSchedulerJobTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CloudSchedulerJobTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -140,6 +140,25 @@ export function lookerInstanceAdminSettingsToTerraform(struct?: LookerInstanceAd
   }
 }
 
+
+export function lookerInstanceAdminSettingsToHclTerraform(struct?: LookerInstanceAdminSettingsOutputReference | LookerInstanceAdminSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_email_domains: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedEmailDomains),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LookerInstanceAdminSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -222,6 +241,37 @@ export function lookerInstanceDenyMaintenancePeriodEndDateToTerraform(struct?: L
     month: cdktf.numberToTerraform(struct!.month),
     year: cdktf.numberToTerraform(struct!.year),
   }
+}
+
+
+export function lookerInstanceDenyMaintenancePeriodEndDateToHclTerraform(struct?: LookerInstanceDenyMaintenancePeriodEndDateOutputReference | LookerInstanceDenyMaintenancePeriodEndDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LookerInstanceDenyMaintenancePeriodEndDateOutputReference extends cdktf.ComplexObject {
@@ -350,6 +400,37 @@ export function lookerInstanceDenyMaintenancePeriodStartDateToTerraform(struct?:
     month: cdktf.numberToTerraform(struct!.month),
     year: cdktf.numberToTerraform(struct!.year),
   }
+}
+
+
+export function lookerInstanceDenyMaintenancePeriodStartDateToHclTerraform(struct?: LookerInstanceDenyMaintenancePeriodStartDateOutputReference | LookerInstanceDenyMaintenancePeriodStartDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LookerInstanceDenyMaintenancePeriodStartDateOutputReference extends cdktf.ComplexObject {
@@ -482,6 +563,43 @@ export function lookerInstanceDenyMaintenancePeriodTimeToTerraform(struct?: Look
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function lookerInstanceDenyMaintenancePeriodTimeToHclTerraform(struct?: LookerInstanceDenyMaintenancePeriodTimeOutputReference | LookerInstanceDenyMaintenancePeriodTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LookerInstanceDenyMaintenancePeriodTimeOutputReference extends cdktf.ComplexObject {
@@ -631,6 +749,37 @@ export function lookerInstanceDenyMaintenancePeriodToTerraform(struct?: LookerIn
   }
 }
 
+
+export function lookerInstanceDenyMaintenancePeriodToHclTerraform(struct?: LookerInstanceDenyMaintenancePeriodOutputReference | LookerInstanceDenyMaintenancePeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_date: {
+      value: lookerInstanceDenyMaintenancePeriodEndDateToHclTerraform(struct!.endDate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LookerInstanceDenyMaintenancePeriodEndDateList",
+    },
+    start_date: {
+      value: lookerInstanceDenyMaintenancePeriodStartDateToHclTerraform(struct!.startDate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LookerInstanceDenyMaintenancePeriodStartDateList",
+    },
+    time: {
+      value: lookerInstanceDenyMaintenancePeriodTimeToHclTerraform(struct!.time),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LookerInstanceDenyMaintenancePeriodTimeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LookerInstanceDenyMaintenancePeriodOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -733,6 +882,25 @@ export function lookerInstanceEncryptionConfigToTerraform(struct?: LookerInstanc
   }
 }
 
+
+export function lookerInstanceEncryptionConfigToHclTerraform(struct?: LookerInstanceEncryptionConfigOutputReference | LookerInstanceEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LookerInstanceEncryptionConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -829,6 +997,43 @@ export function lookerInstanceMaintenanceWindowStartTimeToTerraform(struct?: Loo
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function lookerInstanceMaintenanceWindowStartTimeToHclTerraform(struct?: LookerInstanceMaintenanceWindowStartTimeOutputReference | LookerInstanceMaintenanceWindowStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LookerInstanceMaintenanceWindowStartTimeOutputReference extends cdktf.ComplexObject {
@@ -979,6 +1184,31 @@ export function lookerInstanceMaintenanceWindowToTerraform(struct?: LookerInstan
   }
 }
 
+
+export function lookerInstanceMaintenanceWindowToHclTerraform(struct?: LookerInstanceMaintenanceWindowOutputReference | LookerInstanceMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: lookerInstanceMaintenanceWindowStartTimeToHclTerraform(struct!.startTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LookerInstanceMaintenanceWindowStartTimeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LookerInstanceMaintenanceWindowOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1067,6 +1297,31 @@ export function lookerInstanceOauthConfigToTerraform(struct?: LookerInstanceOaut
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
   }
+}
+
+
+export function lookerInstanceOauthConfigToHclTerraform(struct?: LookerInstanceOauthConfigOutputReference | LookerInstanceOauthConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    client_id: {
+      value: cdktf.stringToHclTerraform(struct!.clientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_secret: {
+      value: cdktf.stringToHclTerraform(struct!.clientSecret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LookerInstanceOauthConfigOutputReference extends cdktf.ComplexObject {
@@ -1158,6 +1413,37 @@ export function lookerInstanceTimeoutsToTerraform(struct?: LookerInstanceTimeout
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function lookerInstanceTimeoutsToHclTerraform(struct?: LookerInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LookerInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1293,6 +1579,37 @@ export function lookerInstanceUserMetadataToTerraform(struct?: LookerInstanceUse
     additional_standard_user_count: cdktf.numberToTerraform(struct!.additionalStandardUserCount),
     additional_viewer_user_count: cdktf.numberToTerraform(struct!.additionalViewerUserCount),
   }
+}
+
+
+export function lookerInstanceUserMetadataToHclTerraform(struct?: LookerInstanceUserMetadataOutputReference | LookerInstanceUserMetadata): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    additional_developer_user_count: {
+      value: cdktf.numberToHclTerraform(struct!.additionalDeveloperUserCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    additional_standard_user_count: {
+      value: cdktf.numberToHclTerraform(struct!.additionalStandardUserCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    additional_viewer_user_count: {
+      value: cdktf.numberToHclTerraform(struct!.additionalViewerUserCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LookerInstanceUserMetadataOutputReference extends cdktf.ComplexObject {
@@ -1772,5 +2089,109 @@ export class LookerInstance extends cdktf.TerraformResource {
       timeouts: lookerInstanceTimeoutsToTerraform(this._timeouts.internalValue),
       user_metadata: lookerInstanceUserMetadataToTerraform(this._userMetadata.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      consumer_network: {
+        value: cdktf.stringToHclTerraform(this._consumerNetwork),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      platform_edition: {
+        value: cdktf.stringToHclTerraform(this._platformEdition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_ip_enabled: {
+        value: cdktf.booleanToHclTerraform(this._privateIpEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_ip_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicIpEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      reserved_range: {
+        value: cdktf.stringToHclTerraform(this._reservedRange),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      admin_settings: {
+        value: lookerInstanceAdminSettingsToHclTerraform(this._adminSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LookerInstanceAdminSettingsList",
+      },
+      deny_maintenance_period: {
+        value: lookerInstanceDenyMaintenancePeriodToHclTerraform(this._denyMaintenancePeriod.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LookerInstanceDenyMaintenancePeriodList",
+      },
+      encryption_config: {
+        value: lookerInstanceEncryptionConfigToHclTerraform(this._encryptionConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LookerInstanceEncryptionConfigList",
+      },
+      maintenance_window: {
+        value: lookerInstanceMaintenanceWindowToHclTerraform(this._maintenanceWindow.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LookerInstanceMaintenanceWindowList",
+      },
+      oauth_config: {
+        value: lookerInstanceOauthConfigToHclTerraform(this._oauthConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LookerInstanceOauthConfigList",
+      },
+      timeouts: {
+        value: lookerInstanceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LookerInstanceTimeouts",
+      },
+      user_metadata: {
+        value: lookerInstanceUserMetadataToHclTerraform(this._userMetadata.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LookerInstanceUserMetadataList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

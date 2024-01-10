@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDisk(scope Construct, id *string, config ComputeDiskConfig) ComputeDisk
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDisk.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDisk.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDisk.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeDisk.ComputeDisk.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDisk.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDisk.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDisk.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -150,6 +151,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeDisk.ComputeDisk.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeDisk.ComputeDisk.toMetadata"></a>
 
@@ -589,7 +596,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeDisk.ComputeDisk.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.ComputeDisk_IsConstruct(x interface{}) *bool
 ```
@@ -621,7 +628,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeDisk.ComputeDisk.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.ComputeDisk_IsTerraformElement(x interface{}) *bool
 ```
@@ -635,7 +642,7 @@ computedisk.ComputeDisk_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeDisk.ComputeDisk.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.ComputeDisk_IsTerraformResource(x interface{}) *bool
 ```
@@ -649,7 +656,7 @@ computedisk.ComputeDisk_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeDisk.ComputeDisk.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.ComputeDisk_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1461,7 +1468,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDisk.ComputeDiskAsyncPrimaryDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 &computedisk.ComputeDiskAsyncPrimaryDisk {
 	Disk: *string,
@@ -1495,7 +1502,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDisk.ComputeDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 &computedisk.ComputeDiskConfig {
 	Connection: interface{},
@@ -1506,9 +1513,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	AsyncPrimaryDisk: github.com/cdktf/cdktf-provider-google-go/google/v12.computeDisk.ComputeDiskAsyncPrimaryDisk,
+	AsyncPrimaryDisk: github.com/cdktf/cdktf-provider-google-go/google/v13.computeDisk.ComputeDiskAsyncPrimaryDisk,
 	Description: *string,
-	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v12.computeDisk.ComputeDiskDiskEncryptionKey,
+	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v13.computeDisk.ComputeDiskDiskEncryptionKey,
 	GuestOsFeatures: interface{},
 	Id: *string,
 	Image: *string,
@@ -1521,9 +1528,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
 	Size: *f64,
 	Snapshot: *string,
 	SourceDisk: *string,
-	SourceImageEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v12.computeDisk.ComputeDiskSourceImageEncryptionKey,
-	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v12.computeDisk.ComputeDiskSourceSnapshotEncryptionKey,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.computeDisk.ComputeDiskTimeouts,
+	SourceImageEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v13.computeDisk.ComputeDiskSourceImageEncryptionKey,
+	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v13.computeDisk.ComputeDiskSourceSnapshotEncryptionKey,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeDisk.ComputeDiskTimeouts,
 	Type: *string,
 	Zone: *string,
 }
@@ -2001,7 +2008,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 &computedisk.ComputeDiskDiskEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2093,7 +2100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 &computedisk.ComputeDiskGuestOsFeatures {
 	Type: *string,
@@ -2129,7 +2136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDisk.ComputeDiskSourceImageEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 &computedisk.ComputeDiskSourceImageEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2203,7 +2210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDisk.ComputeDiskSourceSnapshotEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 &computedisk.ComputeDiskSourceSnapshotEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2277,7 +2284,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDisk.ComputeDiskTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 &computedisk.ComputeDiskTimeouts {
 	Create: *string,
@@ -2339,7 +2346,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDiskAsyncPrimaryDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDiskAsyncPrimaryDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeDiskAsyncPrimaryDiskOutputReference
 ```
@@ -2610,7 +2617,7 @@ func InternalValue() ComputeDiskAsyncPrimaryDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDiskDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeDiskDiskEncryptionKeyOutputReference
 ```
@@ -2986,7 +2993,7 @@ func InternalValue() ComputeDiskDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDiskGuestOsFeaturesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeDiskGuestOsFeaturesList
 ```
@@ -3027,10 +3034,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3129,7 +3153,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDiskGuestOsFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDiskGuestOsFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeDiskGuestOsFeaturesOutputReference
 ```
@@ -3418,7 +3442,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDiskSourceImageEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDiskSourceImageEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeDiskSourceImageEncryptionKeyOutputReference
 ```
@@ -3765,7 +3789,7 @@ func InternalValue() ComputeDiskSourceImageEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDiskSourceSnapshotEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDiskSourceSnapshotEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeDiskSourceSnapshotEncryptionKeyOutputReference
 ```
@@ -4112,7 +4136,7 @@ func InternalValue() ComputeDiskSourceSnapshotEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDisk.ComputeDiskTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computedisk"
 
 computedisk.NewComputeDiskTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeDiskTimeoutsOutputReference
 ```

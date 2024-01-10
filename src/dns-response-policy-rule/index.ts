@@ -95,6 +95,43 @@ export function dnsResponsePolicyRuleLocalDataLocalDatasToTerraform(struct?: Dns
   }
 }
 
+
+export function dnsResponsePolicyRuleLocalDataLocalDatasToHclTerraform(struct?: DnsResponsePolicyRuleLocalDataLocalDatas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rrdatas: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.rrdatas),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    ttl: {
+      value: cdktf.numberToHclTerraform(struct!.ttl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DnsResponsePolicyRuleLocalDataLocalDatasOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -254,6 +291,25 @@ export function dnsResponsePolicyRuleLocalDataToTerraform(struct?: DnsResponsePo
   }
 }
 
+
+export function dnsResponsePolicyRuleLocalDataToHclTerraform(struct?: DnsResponsePolicyRuleLocalDataOutputReference | DnsResponsePolicyRuleLocalData): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    local_datas: {
+      value: cdktf.listMapperHcl(dnsResponsePolicyRuleLocalDataLocalDatasToHclTerraform, true)(struct!.localDatas),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DnsResponsePolicyRuleLocalDataLocalDatasList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DnsResponsePolicyRuleLocalDataOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -324,6 +380,37 @@ export function dnsResponsePolicyRuleTimeoutsToTerraform(struct?: DnsResponsePol
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dnsResponsePolicyRuleTimeoutsToHclTerraform(struct?: DnsResponsePolicyRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DnsResponsePolicyRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -610,5 +697,55 @@ export class DnsResponsePolicyRule extends cdktf.TerraformResource {
       local_data: dnsResponsePolicyRuleLocalDataToTerraform(this._localData.internalValue),
       timeouts: dnsResponsePolicyRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dns_name: {
+        value: cdktf.stringToHclTerraform(this._dnsName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      response_policy: {
+        value: cdktf.stringToHclTerraform(this._responsePolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rule_name: {
+        value: cdktf.stringToHclTerraform(this._ruleName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      local_data: {
+        value: dnsResponsePolicyRuleLocalDataToHclTerraform(this._localData.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DnsResponsePolicyRuleLocalDataList",
+      },
+      timeouts: {
+        value: dnsResponsePolicyRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DnsResponsePolicyRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.NewDataGoogleCloudbuildv2ConnectionIamPolicy(scope Construct, id *string, config DataGoogleCloudbuildv2ConnectionIamPolicyConfig) DataGoogleCloudbuildv2ConnectionIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -121,6 +122,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.toMetadata"></a>
 
@@ -288,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPol
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +357,7 @@ datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPol
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -665,7 +674,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudbuildv2connectioniampolicy"
 
 &datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig {
 	Connection: interface{},

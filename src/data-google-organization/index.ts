@@ -173,4 +173,30 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
       organization: cdktf.stringToTerraform(this._organization),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      domain: {
+        value: cdktf.stringToHclTerraform(this._domain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      organization: {
+        value: cdktf.stringToHclTerraform(this._organization),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

@@ -93,6 +93,43 @@ export function iamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondit
   }
 }
 
+
+export function iamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionToHclTerraform(struct?: IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionOutputReference | IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expression: {
+      value: cdktf.stringToHclTerraform(struct!.expression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -237,6 +274,37 @@ export function iamAccessBoundaryPolicyRulesAccessBoundaryRuleToTerraform(struct
   }
 }
 
+
+export function iamAccessBoundaryPolicyRulesAccessBoundaryRuleToHclTerraform(struct?: IamAccessBoundaryPolicyRulesAccessBoundaryRuleOutputReference | IamAccessBoundaryPolicyRulesAccessBoundaryRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    available_permissions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.availablePermissions),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    available_resource: {
+      value: cdktf.stringToHclTerraform(struct!.availableResource),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    availability_condition: {
+      value: iamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionToHclTerraform(struct!.availabilityCondition),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IamAccessBoundaryPolicyRulesAccessBoundaryRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -353,6 +421,31 @@ export function iamAccessBoundaryPolicyRulesToTerraform(struct?: IamAccessBounda
     description: cdktf.stringToTerraform(struct!.description),
     access_boundary_rule: iamAccessBoundaryPolicyRulesAccessBoundaryRuleToTerraform(struct!.accessBoundaryRule),
   }
+}
+
+
+export function iamAccessBoundaryPolicyRulesToHclTerraform(struct?: IamAccessBoundaryPolicyRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    access_boundary_rule: {
+      value: iamAccessBoundaryPolicyRulesAccessBoundaryRuleToHclTerraform(struct!.accessBoundaryRule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IamAccessBoundaryPolicyRulesAccessBoundaryRuleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IamAccessBoundaryPolicyRulesOutputReference extends cdktf.ComplexObject {
@@ -482,6 +575,37 @@ export function iamAccessBoundaryPolicyTimeoutsToTerraform(struct?: IamAccessBou
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function iamAccessBoundaryPolicyTimeoutsToHclTerraform(struct?: IamAccessBoundaryPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IamAccessBoundaryPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -755,5 +879,49 @@ export class IamAccessBoundaryPolicy extends cdktf.TerraformResource {
       rules: cdktf.listMapper(iamAccessBoundaryPolicyRulesToTerraform, true)(this._rules.internalValue),
       timeouts: iamAccessBoundaryPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent: {
+        value: cdktf.stringToHclTerraform(this._parent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rules: {
+        value: cdktf.listMapperHcl(iamAccessBoundaryPolicyRulesToHclTerraform, true)(this._rules.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IamAccessBoundaryPolicyRulesList",
+      },
+      timeouts: {
+        value: iamAccessBoundaryPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "IamAccessBoundaryPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

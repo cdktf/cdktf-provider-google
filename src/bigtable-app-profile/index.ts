@@ -107,6 +107,31 @@ export function bigtableAppProfileSingleClusterRoutingToTerraform(struct?: Bigta
   }
 }
 
+
+export function bigtableAppProfileSingleClusterRoutingToHclTerraform(struct?: BigtableAppProfileSingleClusterRoutingOutputReference | BigtableAppProfileSingleClusterRouting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allow_transactional_writes: {
+      value: cdktf.booleanToHclTerraform(struct!.allowTransactionalWrites),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    cluster_id: {
+      value: cdktf.stringToHclTerraform(struct!.clusterId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -193,6 +218,25 @@ export function bigtableAppProfileStandardIsolationToTerraform(struct?: Bigtable
   }
 }
 
+
+export function bigtableAppProfileStandardIsolationToHclTerraform(struct?: BigtableAppProfileStandardIsolationOutputReference | BigtableAppProfileStandardIsolation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    priority: {
+      value: cdktf.stringToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigtableAppProfileStandardIsolationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -263,6 +307,37 @@ export function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfil
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function bigtableAppProfileTimeoutsToHclTerraform(struct?: BigtableAppProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -632,5 +707,79 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
       standard_isolation: bigtableAppProfileStandardIsolationToTerraform(this._standardIsolation.internalValue),
       timeouts: bigtableAppProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app_profile_id: {
+        value: cdktf.stringToHclTerraform(this._appProfileId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ignore_warnings: {
+        value: cdktf.booleanToHclTerraform(this._ignoreWarnings),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      instance: {
+        value: cdktf.stringToHclTerraform(this._instance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_cluster_routing_cluster_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._multiClusterRoutingClusterIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      multi_cluster_routing_use_any: {
+        value: cdktf.booleanToHclTerraform(this._multiClusterRoutingUseAny),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      single_cluster_routing: {
+        value: bigtableAppProfileSingleClusterRoutingToHclTerraform(this._singleClusterRouting.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigtableAppProfileSingleClusterRoutingList",
+      },
+      standard_isolation: {
+        value: bigtableAppProfileStandardIsolationToHclTerraform(this._standardIsolation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigtableAppProfileStandardIsolationList",
+      },
+      timeouts: {
+        value: bigtableAppProfileTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BigtableAppProfileTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

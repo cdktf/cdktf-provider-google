@@ -81,6 +81,37 @@ export function bigqueryBiReservationPreferredTablesToTerraform(struct?: Bigquer
   }
 }
 
+
+export function bigqueryBiReservationPreferredTablesToHclTerraform(struct?: BigqueryBiReservationPreferredTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataset_id: {
+      value: cdktf.stringToHclTerraform(struct!.datasetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_id: {
+      value: cdktf.stringToHclTerraform(struct!.projectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    table_id: {
+      value: cdktf.stringToHclTerraform(struct!.tableId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigqueryBiReservationPreferredTablesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -230,6 +261,37 @@ export function bigqueryBiReservationTimeoutsToTerraform(struct?: BigqueryBiRese
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function bigqueryBiReservationTimeoutsToHclTerraform(struct?: BigqueryBiReservationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryBiReservationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -514,5 +576,49 @@ export class BigqueryBiReservation extends cdktf.TerraformResource {
       preferred_tables: cdktf.listMapper(bigqueryBiReservationPreferredTablesToTerraform, true)(this._preferredTables.internalValue),
       timeouts: bigqueryBiReservationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      size: {
+        value: cdktf.numberToHclTerraform(this._size),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      preferred_tables: {
+        value: cdktf.listMapperHcl(bigqueryBiReservationPreferredTablesToHclTerraform, true)(this._preferredTables.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryBiReservationPreferredTablesList",
+      },
+      timeouts: {
+        value: bigqueryBiReservationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BigqueryBiReservationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

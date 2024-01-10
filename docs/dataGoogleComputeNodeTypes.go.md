@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.NewDataGoogleComputeNodeTypes(scope Construct, id *string, config DataGoogleComputeNodeTypesConfig) DataGoogleComputeNodeTypes
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -121,6 +122,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.toMetadata"></a>
 
@@ -288,7 +297,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsConstruct(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsTerraformElement(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -348,7 +357,7 @@ datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.DataGoogleComputeNodeTypes_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -632,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputenodetypes"
 
 &datagooglecomputenodetypes.DataGoogleComputeNodeTypesConfig {
 	Connection: interface{},
