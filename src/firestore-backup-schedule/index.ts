@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/firestore_backup_schedule
 // generated from terraform resource schema
 
@@ -69,6 +64,17 @@ export function firestoreBackupScheduleDailyRecurrenceToTerraform(struct?: Fires
   }
 }
 
+
+export function firestoreBackupScheduleDailyRecurrenceToHclTerraform(struct?: FirestoreBackupScheduleDailyRecurrenceOutputReference | FirestoreBackupScheduleDailyRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class FirestoreBackupScheduleDailyRecurrenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -120,6 +126,37 @@ export function firestoreBackupScheduleTimeoutsToTerraform(struct?: FirestoreBac
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function firestoreBackupScheduleTimeoutsToHclTerraform(struct?: FirestoreBackupScheduleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirestoreBackupScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -241,6 +278,25 @@ export function firestoreBackupScheduleWeeklyRecurrenceToTerraform(struct?: Fire
   return {
     day: cdktf.stringToTerraform(struct!.day),
   }
+}
+
+
+export function firestoreBackupScheduleWeeklyRecurrenceToHclTerraform(struct?: FirestoreBackupScheduleWeeklyRecurrenceOutputReference | FirestoreBackupScheduleWeeklyRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.stringToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirestoreBackupScheduleWeeklyRecurrenceOutputReference extends cdktf.ComplexObject {
@@ -484,5 +540,55 @@ export class FirestoreBackupSchedule extends cdktf.TerraformResource {
       timeouts: firestoreBackupScheduleTimeoutsToTerraform(this._timeouts.internalValue),
       weekly_recurrence: firestoreBackupScheduleWeeklyRecurrenceToTerraform(this._weeklyRecurrence.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      database: {
+        value: cdktf.stringToHclTerraform(this._database),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention: {
+        value: cdktf.stringToHclTerraform(this._retention),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      daily_recurrence: {
+        value: firestoreBackupScheduleDailyRecurrenceToHclTerraform(this._dailyRecurrence.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirestoreBackupScheduleDailyRecurrenceList",
+      },
+      timeouts: {
+        value: firestoreBackupScheduleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "FirestoreBackupScheduleTimeouts",
+      },
+      weekly_recurrence: {
+        value: firestoreBackupScheduleWeeklyRecurrenceToHclTerraform(this._weeklyRecurrence.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirestoreBackupScheduleWeeklyRecurrenceList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

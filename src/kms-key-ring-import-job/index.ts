@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/kms_key_ring_import_job
 // generated from terraform resource schema
 
@@ -62,6 +57,17 @@ export function kmsKeyRingImportJobAttestationToTerraform(struct?: KmsKeyRingImp
   }
   return {
   }
+}
+
+
+export function kmsKeyRingImportJobAttestationToHclTerraform(struct?: KmsKeyRingImportJobAttestation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class KmsKeyRingImportJobAttestationOutputReference extends cdktf.ComplexObject {
@@ -131,6 +137,17 @@ export function kmsKeyRingImportJobPublicKeyToTerraform(struct?: KmsKeyRingImpor
   }
   return {
   }
+}
+
+
+export function kmsKeyRingImportJobPublicKeyToHclTerraform(struct?: KmsKeyRingImportJobPublicKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class KmsKeyRingImportJobPublicKeyOutputReference extends cdktf.ComplexObject {
@@ -205,6 +222,31 @@ export function kmsKeyRingImportJobTimeoutsToTerraform(struct?: KmsKeyRingImport
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function kmsKeyRingImportJobTimeoutsToHclTerraform(struct?: KmsKeyRingImportJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KmsKeyRingImportJobTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -475,5 +517,49 @@ export class KmsKeyRingImportJob extends cdktf.TerraformResource {
       protection_level: cdktf.stringToTerraform(this._protectionLevel),
       timeouts: kmsKeyRingImportJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      import_job_id: {
+        value: cdktf.stringToHclTerraform(this._importJobId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      import_method: {
+        value: cdktf.stringToHclTerraform(this._importMethod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_ring: {
+        value: cdktf.stringToHclTerraform(this._keyRing),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      protection_level: {
+        value: cdktf.stringToHclTerraform(this._protectionLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: kmsKeyRingImportJobTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KmsKeyRingImportJobTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

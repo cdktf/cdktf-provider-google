@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/redis_cluster
 // generated from terraform resource schema
 
@@ -86,6 +81,17 @@ export function redisClusterDiscoveryEndpointsPscConfigToTerraform(struct?: Redi
   }
 }
 
+
+export function redisClusterDiscoveryEndpointsPscConfigToHclTerraform(struct?: RedisClusterDiscoveryEndpointsPscConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class RedisClusterDiscoveryEndpointsPscConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -148,6 +154,17 @@ export function redisClusterDiscoveryEndpointsToTerraform(struct?: RedisClusterD
   }
   return {
   }
+}
+
+
+export function redisClusterDiscoveryEndpointsToHclTerraform(struct?: RedisClusterDiscoveryEndpoints): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class RedisClusterDiscoveryEndpointsOutputReference extends cdktf.ComplexObject {
@@ -223,6 +240,17 @@ export function redisClusterPscConnectionsToTerraform(struct?: RedisClusterPscCo
   }
   return {
   }
+}
+
+
+export function redisClusterPscConnectionsToHclTerraform(struct?: RedisClusterPscConnections): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class RedisClusterPscConnectionsOutputReference extends cdktf.ComplexObject {
@@ -309,6 +337,17 @@ export function redisClusterStateInfoUpdateInfoToTerraform(struct?: RedisCluster
   }
 }
 
+
+export function redisClusterStateInfoUpdateInfoToHclTerraform(struct?: RedisClusterStateInfoUpdateInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class RedisClusterStateInfoUpdateInfoOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -376,6 +415,17 @@ export function redisClusterStateInfoToTerraform(struct?: RedisClusterStateInfo)
   }
   return {
   }
+}
+
+
+export function redisClusterStateInfoToHclTerraform(struct?: RedisClusterStateInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class RedisClusterStateInfoOutputReference extends cdktf.ComplexObject {
@@ -450,6 +500,25 @@ export function redisClusterPscConfigsToTerraform(struct?: RedisClusterPscConfig
   return {
     network: cdktf.stringToTerraform(struct!.network),
   }
+}
+
+
+export function redisClusterPscConfigsToHclTerraform(struct?: RedisClusterPscConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    network: {
+      value: cdktf.stringToHclTerraform(struct!.network),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RedisClusterPscConfigsOutputReference extends cdktf.ComplexObject {
@@ -554,6 +623,37 @@ export function redisClusterTimeoutsToTerraform(struct?: RedisClusterTimeouts | 
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function redisClusterTimeoutsToHclTerraform(struct?: RedisClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RedisClusterTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -935,5 +1035,73 @@ export class RedisCluster extends cdktf.TerraformResource {
       psc_configs: cdktf.listMapper(redisClusterPscConfigsToTerraform, true)(this._pscConfigs.internalValue),
       timeouts: redisClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      authorization_mode: {
+        value: cdktf.stringToHclTerraform(this._authorizationMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replica_count: {
+        value: cdktf.numberToHclTerraform(this._replicaCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      shard_count: {
+        value: cdktf.numberToHclTerraform(this._shardCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      transit_encryption_mode: {
+        value: cdktf.stringToHclTerraform(this._transitEncryptionMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      psc_configs: {
+        value: cdktf.listMapperHcl(redisClusterPscConfigsToHclTerraform, true)(this._pscConfigs.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "RedisClusterPscConfigsList",
+      },
+      timeouts: {
+        value: redisClusterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "RedisClusterTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

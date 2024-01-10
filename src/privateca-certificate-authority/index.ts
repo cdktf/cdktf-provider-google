@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/privateca_certificate_authority
 // generated from terraform resource schema
 
@@ -154,6 +149,17 @@ export function privatecaCertificateAuthorityAccessUrlsToTerraform(struct?: Priv
   }
 }
 
+
+export function privatecaCertificateAuthorityAccessUrlsToHclTerraform(struct?: PrivatecaCertificateAuthorityAccessUrls): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class PrivatecaCertificateAuthorityAccessUrlsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -277,6 +283,67 @@ export function privatecaCertificateAuthorityConfigSubjectConfigSubjectToTerrafo
     province: cdktf.stringToTerraform(struct!.province),
     street_address: cdktf.stringToTerraform(struct!.streetAddress),
   }
+}
+
+
+export function privatecaCertificateAuthorityConfigSubjectConfigSubjectToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputReference | PrivatecaCertificateAuthorityConfigSubjectConfigSubject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    common_name: {
+      value: cdktf.stringToHclTerraform(struct!.commonName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country_code: {
+      value: cdktf.stringToHclTerraform(struct!.countryCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    locality: {
+      value: cdktf.stringToHclTerraform(struct!.locality),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organization: {
+      value: cdktf.stringToHclTerraform(struct!.organization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organizational_unit: {
+      value: cdktf.stringToHclTerraform(struct!.organizationalUnit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktf.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    province: {
+      value: cdktf.stringToHclTerraform(struct!.province),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    street_address: {
+      value: cdktf.stringToHclTerraform(struct!.streetAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputReference extends cdktf.ComplexObject {
@@ -515,6 +582,43 @@ export function privatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameTo
   }
 }
 
+
+export function privatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutputReference | PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltName): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dns_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dnsNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    email_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.emailAddresses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    ip_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ipAddresses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    uris: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.uris),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -655,6 +759,31 @@ export function privatecaCertificateAuthorityConfigSubjectConfigToTerraform(stru
   }
 }
 
+
+export function privatecaCertificateAuthorityConfigSubjectConfigToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference | PrivatecaCertificateAuthorityConfigSubjectConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subject: {
+      value: privatecaCertificateAuthorityConfigSubjectConfigSubjectToHclTerraform(struct!.subject),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigSubjectConfigSubjectList",
+    },
+    subject_alt_name: {
+      value: privatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameToHclTerraform(struct!.subjectAltName),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -741,6 +870,25 @@ export function privatecaCertificateAuthorityConfigX509ConfigAdditionalExtension
   }
 }
 
+
+export function privatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectIdToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectIdOutputReference | PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectId): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    object_id_path: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.objectIdPath),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectIdOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -818,6 +966,37 @@ export function privatecaCertificateAuthorityConfigX509ConfigAdditionalExtension
     value: cdktf.stringToTerraform(struct!.value),
     object_id: privatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectIdToTerraform(struct!.objectId),
   }
+}
+
+
+export function privatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    critical: {
+      value: cdktf.booleanToHclTerraform(struct!.critical),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object_id: {
+      value: privatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectIdToHclTerraform(struct!.objectId),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectIdList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsOutputReference extends cdktf.ComplexObject {
@@ -978,6 +1157,43 @@ export function privatecaCertificateAuthorityConfigX509ConfigCaOptionsToTerrafor
     non_ca: cdktf.booleanToTerraform(struct!.nonCa),
     zero_max_issuer_path_length: cdktf.booleanToTerraform(struct!.zeroMaxIssuerPathLength),
   }
+}
+
+
+export function privatecaCertificateAuthorityConfigX509ConfigCaOptionsToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReference | PrivatecaCertificateAuthorityConfigX509ConfigCaOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    is_ca: {
+      value: cdktf.booleanToHclTerraform(struct!.isCa),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    max_issuer_path_length: {
+      value: cdktf.numberToHclTerraform(struct!.maxIssuerPathLength),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    non_ca: {
+      value: cdktf.booleanToHclTerraform(struct!.nonCa),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    zero_max_issuer_path_length: {
+      value: cdktf.booleanToHclTerraform(struct!.zeroMaxIssuerPathLength),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReference extends cdktf.ComplexObject {
@@ -1164,6 +1380,73 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsag
     key_agreement: cdktf.booleanToTerraform(struct!.keyAgreement),
     key_encipherment: cdktf.booleanToTerraform(struct!.keyEncipherment),
   }
+}
+
+
+export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOutputReference | PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cert_sign: {
+      value: cdktf.booleanToHclTerraform(struct!.certSign),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    content_commitment: {
+      value: cdktf.booleanToHclTerraform(struct!.contentCommitment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    crl_sign: {
+      value: cdktf.booleanToHclTerraform(struct!.crlSign),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    data_encipherment: {
+      value: cdktf.booleanToHclTerraform(struct!.dataEncipherment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    decipher_only: {
+      value: cdktf.booleanToHclTerraform(struct!.decipherOnly),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    digital_signature: {
+      value: cdktf.booleanToHclTerraform(struct!.digitalSignature),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    encipher_only: {
+      value: cdktf.booleanToHclTerraform(struct!.encipherOnly),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    key_agreement: {
+      value: cdktf.booleanToHclTerraform(struct!.keyAgreement),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    key_encipherment: {
+      value: cdktf.booleanToHclTerraform(struct!.keyEncipherment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOutputReference extends cdktf.ComplexObject {
@@ -1444,6 +1727,55 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKey
   }
 }
 
+
+export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference | PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    client_auth: {
+      value: cdktf.booleanToHclTerraform(struct!.clientAuth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    code_signing: {
+      value: cdktf.booleanToHclTerraform(struct!.codeSigning),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    email_protection: {
+      value: cdktf.booleanToHclTerraform(struct!.emailProtection),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ocsp_signing: {
+      value: cdktf.booleanToHclTerraform(struct!.ocspSigning),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    server_auth: {
+      value: cdktf.booleanToHclTerraform(struct!.serverAuth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    time_stamping: {
+      value: cdktf.booleanToHclTerraform(struct!.timeStamping),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1621,6 +1953,25 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExte
   }
 }
 
+
+export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    object_id_path: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.objectIdPath),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1729,6 +2080,37 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageToTerraform
     extended_key_usage: privatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform(struct!.extendedKeyUsage),
     unknown_extended_key_usages: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToTerraform, true)(struct!.unknownExtendedKeyUsages),
   }
+}
+
+
+export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReference | PrivatecaCertificateAuthorityConfigX509ConfigKeyUsage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    base_key_usage: {
+      value: privatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageToHclTerraform(struct!.baseKeyUsage),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageList",
+    },
+    extended_key_usage: {
+      value: privatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageToHclTerraform(struct!.extendedKeyUsage),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageList",
+    },
+    unknown_extended_key_usages: {
+      value: cdktf.listMapperHcl(privatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToHclTerraform, true)(struct!.unknownExtendedKeyUsages),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReference extends cdktf.ComplexObject {
@@ -1914,6 +2296,73 @@ export function privatecaCertificateAuthorityConfigX509ConfigNameConstraintsToTe
     permitted_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.permittedIpRanges),
     permitted_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.permittedUris),
   }
+}
+
+
+export function privatecaCertificateAuthorityConfigX509ConfigNameConstraintsToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsOutputReference | PrivatecaCertificateAuthorityConfigX509ConfigNameConstraints): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    critical: {
+      value: cdktf.booleanToHclTerraform(struct!.critical),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    excluded_dns_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedDnsNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    excluded_email_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedEmailAddresses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    excluded_ip_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedIpRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    excluded_uris: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedUris),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    permitted_dns_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.permittedDnsNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    permitted_email_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.permittedEmailAddresses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    permitted_ip_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.permittedIpRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    permitted_uris: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.permittedUris),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsOutputReference extends cdktf.ComplexObject {
@@ -2156,6 +2605,25 @@ export function privatecaCertificateAuthorityConfigX509ConfigPolicyIdsToTerrafor
   }
 }
 
+
+export function privatecaCertificateAuthorityConfigX509ConfigPolicyIdsToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigPolicyIds | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    object_id_path: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.objectIdPath),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityConfigX509ConfigPolicyIdsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2286,6 +2754,55 @@ export function privatecaCertificateAuthorityConfigX509ConfigToTerraform(struct?
     name_constraints: privatecaCertificateAuthorityConfigX509ConfigNameConstraintsToTerraform(struct!.nameConstraints),
     policy_ids: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigPolicyIdsToTerraform, true)(struct!.policyIds),
   }
+}
+
+
+export function privatecaCertificateAuthorityConfigX509ConfigToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigX509ConfigOutputReference | PrivatecaCertificateAuthorityConfigX509Config): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    aia_ocsp_servers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.aiaOcspServers),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    additional_extensions: {
+      value: cdktf.listMapperHcl(privatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsToHclTerraform, true)(struct!.additionalExtensions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsList",
+    },
+    ca_options: {
+      value: privatecaCertificateAuthorityConfigX509ConfigCaOptionsToHclTerraform(struct!.caOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsList",
+    },
+    key_usage: {
+      value: privatecaCertificateAuthorityConfigX509ConfigKeyUsageToHclTerraform(struct!.keyUsage),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageList",
+    },
+    name_constraints: {
+      value: privatecaCertificateAuthorityConfigX509ConfigNameConstraintsToHclTerraform(struct!.nameConstraints),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsList",
+    },
+    policy_ids: {
+      value: cdktf.listMapperHcl(privatecaCertificateAuthorityConfigX509ConfigPolicyIdsToHclTerraform, true)(struct!.policyIds),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigPolicyIdsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extends cdktf.ComplexObject {
@@ -2466,6 +2983,31 @@ export function privatecaCertificateAuthorityConfigAToTerraform(struct?: Private
   }
 }
 
+
+export function privatecaCertificateAuthorityConfigAToHclTerraform(struct?: PrivatecaCertificateAuthorityConfigAOutputReference | PrivatecaCertificateAuthorityConfigA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subject_config: {
+      value: privatecaCertificateAuthorityConfigSubjectConfigToHclTerraform(struct!.subjectConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigSubjectConfigList",
+    },
+    x509_config: {
+      value: privatecaCertificateAuthorityConfigX509ConfigToHclTerraform(struct!.x509Config),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthorityConfigX509ConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2560,6 +3102,31 @@ export function privatecaCertificateAuthorityKeySpecToTerraform(struct?: Private
   }
 }
 
+
+export function privatecaCertificateAuthorityKeySpecToHclTerraform(struct?: PrivatecaCertificateAuthorityKeySpecOutputReference | PrivatecaCertificateAuthorityKeySpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.algorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cloud_kms_key_version: {
+      value: cdktf.stringToHclTerraform(struct!.cloudKmsKeyVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2649,6 +3216,25 @@ export function privatecaCertificateAuthoritySubordinateConfigPemIssuerChainToTe
   }
 }
 
+
+export function privatecaCertificateAuthoritySubordinateConfigPemIssuerChainToHclTerraform(struct?: PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference | PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pem_certificates: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.pemCertificates),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2726,6 +3312,31 @@ export function privatecaCertificateAuthoritySubordinateConfigToTerraform(struct
     certificate_authority: cdktf.stringToTerraform(struct!.certificateAuthority),
     pem_issuer_chain: privatecaCertificateAuthoritySubordinateConfigPemIssuerChainToTerraform(struct!.pemIssuerChain),
   }
+}
+
+
+export function privatecaCertificateAuthoritySubordinateConfigToHclTerraform(struct?: PrivatecaCertificateAuthoritySubordinateConfigOutputReference | PrivatecaCertificateAuthoritySubordinateConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate_authority: {
+      value: cdktf.stringToHclTerraform(struct!.certificateAuthority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pem_issuer_chain: {
+      value: privatecaCertificateAuthoritySubordinateConfigPemIssuerChainToHclTerraform(struct!.pemIssuerChain),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthoritySubordinateConfigOutputReference extends cdktf.ComplexObject {
@@ -2823,6 +3434,37 @@ export function privatecaCertificateAuthorityTimeoutsToTerraform(struct?: Privat
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function privatecaCertificateAuthorityTimeoutsToHclTerraform(struct?: PrivatecaCertificateAuthorityTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -3344,5 +3986,121 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       subordinate_config: privatecaCertificateAuthoritySubordinateConfigToTerraform(this._subordinateConfig.internalValue),
       timeouts: privatecaCertificateAuthorityTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      certificate_authority_id: {
+        value: cdktf.stringToHclTerraform(this._certificateAuthorityId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deletion_protection: {
+        value: cdktf.booleanToHclTerraform(this._deletionProtection),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      desired_state: {
+        value: cdktf.stringToHclTerraform(this._desiredState),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gcs_bucket: {
+        value: cdktf.stringToHclTerraform(this._gcsBucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ignore_active_certificates_on_deletion: {
+        value: cdktf.booleanToHclTerraform(this._ignoreActiveCertificatesOnDeletion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      lifetime: {
+        value: cdktf.stringToHclTerraform(this._lifetime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pem_ca_certificate: {
+        value: cdktf.stringToHclTerraform(this._pemCaCertificate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pool: {
+        value: cdktf.stringToHclTerraform(this._pool),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      skip_grace_period: {
+        value: cdktf.booleanToHclTerraform(this._skipGracePeriod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      config: {
+        value: privatecaCertificateAuthorityConfigAToHclTerraform(this._config.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PrivatecaCertificateAuthorityConfigAList",
+      },
+      key_spec: {
+        value: privatecaCertificateAuthorityKeySpecToHclTerraform(this._keySpec.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PrivatecaCertificateAuthorityKeySpecList",
+      },
+      subordinate_config: {
+        value: privatecaCertificateAuthoritySubordinateConfigToHclTerraform(this._subordinateConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PrivatecaCertificateAuthoritySubordinateConfigList",
+      },
+      timeouts: {
+        value: privatecaCertificateAuthorityTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "PrivatecaCertificateAuthorityTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

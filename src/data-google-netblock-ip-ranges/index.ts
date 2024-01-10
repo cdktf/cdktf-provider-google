@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/netblock_ip_ranges
 // generated from terraform resource schema
 
@@ -140,5 +135,25 @@ export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       range_type: cdktf.stringToTerraform(this._rangeType),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      range_type: {
+        value: cdktf.stringToHclTerraform(this._rangeType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_router_peer
 // generated from terraform resource schema
 
@@ -194,6 +189,31 @@ export function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeR
   }
 }
 
+
+export function computeRouterPeerAdvertisedIpRangesToHclTerraform(struct?: ComputeRouterPeerAdvertisedIpRanges | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    range: {
+      value: cdktf.stringToHclTerraform(struct!.range),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRouterPeerAdvertisedIpRangesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -347,6 +367,43 @@ export function computeRouterPeerBfdToTerraform(struct?: ComputeRouterPeerBfdOut
   }
 }
 
+
+export function computeRouterPeerBfdToHclTerraform(struct?: ComputeRouterPeerBfdOutputReference | ComputeRouterPeerBfd): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    min_receive_interval: {
+      value: cdktf.numberToHclTerraform(struct!.minReceiveInterval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_transmit_interval: {
+      value: cdktf.numberToHclTerraform(struct!.minTransmitInterval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    multiplier: {
+      value: cdktf.numberToHclTerraform(struct!.multiplier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    session_initialization_mode: {
+      value: cdktf.stringToHclTerraform(struct!.sessionInitializationMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRouterPeerBfdOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -483,6 +540,37 @@ export function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerT
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeRouterPeerTimeoutsToHclTerraform(struct?: ComputeRouterPeerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1005,5 +1093,133 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       bfd: computeRouterPeerBfdToTerraform(this._bfd.internalValue),
       timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      advertise_mode: {
+        value: cdktf.stringToHclTerraform(this._advertiseMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      advertised_groups: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._advertisedGroups),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      advertised_route_priority: {
+        value: cdktf.numberToHclTerraform(this._advertisedRoutePriority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      enable: {
+        value: cdktf.booleanToHclTerraform(this._enable),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_ipv6: {
+        value: cdktf.booleanToHclTerraform(this._enableIpv6),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interface: {
+        value: cdktf.stringToHclTerraform(this._interface),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_address: {
+        value: cdktf.stringToHclTerraform(this._ipAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipv6_nexthop_address: {
+        value: cdktf.stringToHclTerraform(this._ipv6NexthopAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_asn: {
+        value: cdktf.numberToHclTerraform(this._peerAsn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      peer_ip_address: {
+        value: cdktf.stringToHclTerraform(this._peerIpAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_ipv6_nexthop_address: {
+        value: cdktf.stringToHclTerraform(this._peerIpv6NexthopAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      router: {
+        value: cdktf.stringToHclTerraform(this._router),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      router_appliance_instance: {
+        value: cdktf.stringToHclTerraform(this._routerApplianceInstance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      advertised_ip_ranges: {
+        value: cdktf.listMapperHcl(computeRouterPeerAdvertisedIpRangesToHclTerraform, true)(this._advertisedIpRanges.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRouterPeerAdvertisedIpRangesList",
+      },
+      bfd: {
+        value: computeRouterPeerBfdToHclTerraform(this._bfd.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRouterPeerBfdList",
+      },
+      timeouts: {
+        value: computeRouterPeerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeRouterPeerTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

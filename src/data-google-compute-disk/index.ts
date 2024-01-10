@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_disk
 // generated from terraform resource schema
 
@@ -52,6 +47,17 @@ export function dataGoogleComputeDiskAsyncPrimaryDiskToTerraform(struct?: DataGo
   }
   return {
   }
+}
+
+
+export function dataGoogleComputeDiskAsyncPrimaryDiskToHclTerraform(struct?: DataGoogleComputeDiskAsyncPrimaryDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleComputeDiskAsyncPrimaryDiskOutputReference extends cdktf.ComplexObject {
@@ -116,6 +122,17 @@ export function dataGoogleComputeDiskDiskEncryptionKeyToTerraform(struct?: DataG
   }
   return {
   }
+}
+
+
+export function dataGoogleComputeDiskDiskEncryptionKeyToHclTerraform(struct?: DataGoogleComputeDiskDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleComputeDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
@@ -202,6 +219,17 @@ export function dataGoogleComputeDiskGuestOsFeaturesToTerraform(struct?: DataGoo
   }
 }
 
+
+export function dataGoogleComputeDiskGuestOsFeaturesToHclTerraform(struct?: DataGoogleComputeDiskGuestOsFeatures): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleComputeDiskGuestOsFeaturesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -264,6 +292,17 @@ export function dataGoogleComputeDiskSourceImageEncryptionKeyToTerraform(struct?
   }
   return {
   }
+}
+
+
+export function dataGoogleComputeDiskSourceImageEncryptionKeyToHclTerraform(struct?: DataGoogleComputeDiskSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleComputeDiskSourceImageEncryptionKeyOutputReference extends cdktf.ComplexObject {
@@ -343,6 +382,17 @@ export function dataGoogleComputeDiskSourceSnapshotEncryptionKeyToTerraform(stru
   }
   return {
   }
+}
+
+
+export function dataGoogleComputeDiskSourceSnapshotEncryptionKeyToHclTerraform(struct?: DataGoogleComputeDiskSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleComputeDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
@@ -689,5 +739,37 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
       project: cdktf.stringToTerraform(this._project),
       zone: cdktf.stringToTerraform(this._zone),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

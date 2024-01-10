@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/logging_organization_bucket_config
 // generated from terraform resource schema
 
@@ -84,6 +79,25 @@ export function loggingOrganizationBucketConfigCmekSettingsToTerraform(struct?: 
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
+}
+
+
+export function loggingOrganizationBucketConfigCmekSettingsToHclTerraform(struct?: LoggingOrganizationBucketConfigCmekSettingsOutputReference | LoggingOrganizationBucketConfigCmekSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LoggingOrganizationBucketConfigCmekSettingsOutputReference extends cdktf.ComplexObject {
@@ -172,6 +186,31 @@ export function loggingOrganizationBucketConfigIndexConfigsToTerraform(struct?: 
     field_path: cdktf.stringToTerraform(struct!.fieldPath),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function loggingOrganizationBucketConfigIndexConfigsToHclTerraform(struct?: LoggingOrganizationBucketConfigIndexConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    field_path: {
+      value: cdktf.stringToHclTerraform(struct!.fieldPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LoggingOrganizationBucketConfigIndexConfigsOutputReference extends cdktf.ComplexObject {
@@ -480,5 +519,61 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
       cmek_settings: loggingOrganizationBucketConfigCmekSettingsToTerraform(this._cmekSettings.internalValue),
       index_configs: cdktf.listMapper(loggingOrganizationBucketConfigIndexConfigsToTerraform, true)(this._indexConfigs.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket_id: {
+        value: cdktf.stringToHclTerraform(this._bucketId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      organization: {
+        value: cdktf.stringToHclTerraform(this._organization),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_days: {
+        value: cdktf.numberToHclTerraform(this._retentionDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      cmek_settings: {
+        value: loggingOrganizationBucketConfigCmekSettingsToHclTerraform(this._cmekSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LoggingOrganizationBucketConfigCmekSettingsList",
+      },
+      index_configs: {
+        value: cdktf.listMapperHcl(loggingOrganizationBucketConfigIndexConfigsToHclTerraform, true)(this._indexConfigs.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "LoggingOrganizationBucketConfigIndexConfigsList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

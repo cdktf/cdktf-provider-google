@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.NewStorageBucketObject(scope Construct, id *string, config StorageBucketObjectConfig) StorageBucketObject
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -144,6 +145,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.toMetadata"></a>
 
@@ -529,7 +536,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.StorageBucketObject_IsConstruct(x interface{}) *bool
 ```
@@ -561,7 +568,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.StorageBucketObject_IsTerraformElement(x interface{}) *bool
 ```
@@ -575,7 +582,7 @@ storagebucketobject.StorageBucketObject_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.StorageBucketObject_IsTerraformResource(x interface{}) *bool
 ```
@@ -589,7 +596,7 @@ storagebucketobject.StorageBucketObject_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.StorageBucketObject_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1291,7 +1298,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 &storagebucketobject.StorageBucketObjectConfig {
 	Connection: interface{},
@@ -1309,17 +1316,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject
 	ContentEncoding: *string,
 	ContentLanguage: *string,
 	ContentType: *string,
-	CustomerEncryption: github.com/cdktf/cdktf-provider-google-go/google/v12.storageBucketObject.StorageBucketObjectCustomerEncryption,
+	CustomerEncryption: github.com/cdktf/cdktf-provider-google-go/google.storageBucketObject.StorageBucketObjectCustomerEncryption,
 	DetectMd5Hash: *string,
 	EventBasedHold: interface{},
 	Id: *string,
 	KmsKeyName: *string,
 	Metadata: *map[string]*string,
-	Retention: github.com/cdktf/cdktf-provider-google-go/google/v12.storageBucketObject.StorageBucketObjectRetention,
+	Retention: github.com/cdktf/cdktf-provider-google-go/google.storageBucketObject.StorageBucketObjectRetention,
 	Source: *string,
 	StorageClass: *string,
 	TemporaryHold: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.storageBucketObject.StorageBucketObjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.storageBucketObject.StorageBucketObjectTimeouts,
 }
 ```
 
@@ -1708,7 +1715,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectCustomerEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 &storagebucketobject.StorageBucketObjectCustomerEncryption {
 	EncryptionKey: *string,
@@ -1758,7 +1765,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectRetention.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 &storagebucketobject.StorageBucketObjectRetention {
 	Mode: *string,
@@ -1808,7 +1815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 &storagebucketobject.StorageBucketObjectTimeouts {
 	Create: *string,
@@ -1870,7 +1877,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectCustomerEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.NewStorageBucketObjectCustomerEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageBucketObjectCustomerEncryptionOutputReference
 ```
@@ -2170,7 +2177,7 @@ func InternalValue() StorageBucketObjectCustomerEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectRetentionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.NewStorageBucketObjectRetentionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageBucketObjectRetentionOutputReference
 ```
@@ -2463,7 +2470,7 @@ func InternalValue() StorageBucketObjectRetention
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/storagebucketobject"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketobject"
 
 storagebucketobject.NewStorageBucketObjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageBucketObjectTimeoutsOutputReference
 ```

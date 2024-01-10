@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 pubsubschemaiambinding.NewPubsubSchemaIamBinding(scope Construct, id *string, config PubsubSchemaIamBindingConfig) PubsubSchemaIamBinding
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 pubsubschemaiambinding.PubsubSchemaIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 pubsubschemaiambinding.PubsubSchemaIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ pubsubschemaiambinding.PubsubSchemaIamBinding_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 pubsubschemaiambinding.PubsubSchemaIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ pubsubschemaiambinding.PubsubSchemaIamBinding_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 pubsubschemaiambinding.PubsubSchemaIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -837,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 &pubsubschemaiambinding.PubsubSchemaIamBindingCondition {
 	Expression: *string,
@@ -897,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 &pubsubschemaiambinding.PubsubSchemaIamBindingConfig {
 	Connection: interface{},
@@ -910,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambind
 	Members: *[]*string,
 	Role: *string,
 	Schema: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1090,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsubschemaiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschemaiambinding"
 
 pubsubschemaiambinding.NewPubsubSchemaIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSchemaIamBindingConditionOutputReference
 ```

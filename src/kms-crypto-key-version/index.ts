@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/kms_crypto_key_version
 // generated from terraform resource schema
 
@@ -49,6 +44,17 @@ export function kmsCryptoKeyVersionAttestationCertChainsToTerraform(struct?: Kms
   }
   return {
   }
+}
+
+
+export function kmsCryptoKeyVersionAttestationCertChainsToHclTerraform(struct?: KmsCryptoKeyVersionAttestationCertChains): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class KmsCryptoKeyVersionAttestationCertChainsOutputReference extends cdktf.ComplexObject {
@@ -125,6 +131,17 @@ export function kmsCryptoKeyVersionAttestationExternalProtectionLevelOptionsToTe
   }
 }
 
+
+export function kmsCryptoKeyVersionAttestationExternalProtectionLevelOptionsToHclTerraform(struct?: KmsCryptoKeyVersionAttestationExternalProtectionLevelOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class KmsCryptoKeyVersionAttestationExternalProtectionLevelOptionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -192,6 +209,17 @@ export function kmsCryptoKeyVersionAttestationToTerraform(struct?: KmsCryptoKeyV
   }
   return {
   }
+}
+
+
+export function kmsCryptoKeyVersionAttestationToHclTerraform(struct?: KmsCryptoKeyVersionAttestation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class KmsCryptoKeyVersionAttestationOutputReference extends cdktf.ComplexObject {
@@ -288,6 +316,37 @@ export function kmsCryptoKeyVersionTimeoutsToTerraform(struct?: KmsCryptoKeyVers
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function kmsCryptoKeyVersionTimeoutsToHclTerraform(struct?: KmsCryptoKeyVersionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KmsCryptoKeyVersionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -552,5 +611,37 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
       state: cdktf.stringToTerraform(this._state),
       timeouts: kmsCryptoKeyVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      crypto_key: {
+        value: cdktf.stringToHclTerraform(this._cryptoKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      state: {
+        value: cdktf.stringToHclTerraform(this._state),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: kmsCryptoKeyVersionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KmsCryptoKeyVersionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

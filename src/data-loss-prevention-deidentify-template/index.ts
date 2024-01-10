@@ -1,15 +1,12 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // generated from terraform resource schema
 
 import { DataLossPreventionDeidentifyTemplateDeidentifyConfig, 
 dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform, 
+dataLossPreventionDeidentifyTemplateDeidentifyConfigToHclTerraform, 
 DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference, 
 DataLossPreventionDeidentifyTemplateTimeouts, 
 dataLossPreventionDeidentifyTemplateTimeoutsToTerraform, 
+dataLossPreventionDeidentifyTemplateTimeoutsToHclTerraform, 
 DataLossPreventionDeidentifyTemplateTimeoutsOutputReference} from './index-structs'
 export * from './index-structs'
 import { Construct } from 'constructs';
@@ -266,5 +263,55 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
       deidentify_config: dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(this._deidentifyConfig.internalValue),
       timeouts: dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent: {
+        value: cdktf.stringToHclTerraform(this._parent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      template_id: {
+        value: cdktf.stringToHclTerraform(this._templateId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deidentify_config: {
+        value: dataLossPreventionDeidentifyTemplateDeidentifyConfigToHclTerraform(this._deidentifyConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataLossPreventionDeidentifyTemplateDeidentifyConfigList",
+      },
+      timeouts: {
+        value: dataLossPreventionDeidentifyTemplateTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataLossPreventionDeidentifyTemplateTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

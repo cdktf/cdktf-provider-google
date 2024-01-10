@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/serviceaccountkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountkey"
 
 serviceaccountkey.NewServiceAccountKey(scope Construct, id *string, config ServiceAccountKeyConfig) ServiceAccountKey
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.toMetadata"></a>
 
@@ -413,7 +420,7 @@ func ResetPublicKeyType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/serviceaccountkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountkey"
 
 serviceaccountkey.ServiceAccountKey_IsConstruct(x interface{}) *bool
 ```
@@ -445,7 +452,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/serviceaccountkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountkey"
 
 serviceaccountkey.ServiceAccountKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -459,7 +466,7 @@ serviceaccountkey.ServiceAccountKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/serviceaccountkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountkey"
 
 serviceaccountkey.ServiceAccountKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -473,7 +480,7 @@ serviceaccountkey.ServiceAccountKey_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/serviceaccountkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountkey"
 
 serviceaccountkey.ServiceAccountKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -911,7 +918,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.serviceAccountKey.ServiceAccountKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/serviceaccountkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountkey"
 
 &serviceaccountkey.ServiceAccountKeyConfig {
 	Connection: interface{},

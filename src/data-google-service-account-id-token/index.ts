@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/service_account_id_token
 // generated from terraform resource schema
 
@@ -193,5 +188,43 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
       target_audience: cdktf.stringToTerraform(this._targetAudience),
       target_service_account: cdktf.stringToTerraform(this._targetServiceAccount),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      delegates: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._delegates),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      include_email: {
+        value: cdktf.booleanToHclTerraform(this._includeEmail),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      target_audience: {
+        value: cdktf.stringToHclTerraform(this._targetAudience),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_service_account: {
+        value: cdktf.stringToHclTerraform(this._targetServiceAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

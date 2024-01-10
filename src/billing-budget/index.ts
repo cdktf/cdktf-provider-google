@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/billing_budget
 // generated from terraform resource schema
 
@@ -111,6 +106,43 @@ export function billingBudgetAllUpdatesRuleToTerraform(struct?: BillingBudgetAll
     pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
     schema_version: cdktf.stringToTerraform(struct!.schemaVersion),
   }
+}
+
+
+export function billingBudgetAllUpdatesRuleToHclTerraform(struct?: BillingBudgetAllUpdatesRuleOutputReference | BillingBudgetAllUpdatesRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disable_default_iam_recipients: {
+      value: cdktf.booleanToHclTerraform(struct!.disableDefaultIamRecipients),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    monitoring_notification_channels: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.monitoringNotificationChannels),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    pubsub_topic: {
+      value: cdktf.stringToHclTerraform(struct!.pubsubTopic),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schema_version: {
+      value: cdktf.stringToHclTerraform(struct!.schemaVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObject {
@@ -267,6 +299,37 @@ export function billingBudgetAmountSpecifiedAmountToTerraform(struct?: BillingBu
   }
 }
 
+
+export function billingBudgetAmountSpecifiedAmountToHclTerraform(struct?: BillingBudgetAmountSpecifiedAmountOutputReference | BillingBudgetAmountSpecifiedAmount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    currency_code: {
+      value: cdktf.stringToHclTerraform(struct!.currencyCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    units: {
+      value: cdktf.stringToHclTerraform(struct!.units),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -388,6 +451,31 @@ export function billingBudgetAmountToTerraform(struct?: BillingBudgetAmountOutpu
   }
 }
 
+
+export function billingBudgetAmountToHclTerraform(struct?: BillingBudgetAmountOutputReference | BillingBudgetAmount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    last_period_amount: {
+      value: cdktf.booleanToHclTerraform(struct!.lastPeriodAmount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    specified_amount: {
+      value: billingBudgetAmountSpecifiedAmountToHclTerraform(struct!.specifiedAmount),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BillingBudgetAmountSpecifiedAmountList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -489,6 +577,37 @@ export function billingBudgetBudgetFilterCustomPeriodEndDateToTerraform(struct?:
     month: cdktf.numberToTerraform(struct!.month),
     year: cdktf.numberToTerraform(struct!.year),
   }
+}
+
+
+export function billingBudgetBudgetFilterCustomPeriodEndDateToHclTerraform(struct?: BillingBudgetBudgetFilterCustomPeriodEndDateOutputReference | BillingBudgetBudgetFilterCustomPeriodEndDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BillingBudgetBudgetFilterCustomPeriodEndDateOutputReference extends cdktf.ComplexObject {
@@ -607,6 +726,37 @@ export function billingBudgetBudgetFilterCustomPeriodStartDateToTerraform(struct
   }
 }
 
+
+export function billingBudgetBudgetFilterCustomPeriodStartDateToHclTerraform(struct?: BillingBudgetBudgetFilterCustomPeriodStartDateOutputReference | BillingBudgetBudgetFilterCustomPeriodStartDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BillingBudgetBudgetFilterCustomPeriodStartDateOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -714,6 +864,31 @@ export function billingBudgetBudgetFilterCustomPeriodToTerraform(struct?: Billin
     end_date: billingBudgetBudgetFilterCustomPeriodEndDateToTerraform(struct!.endDate),
     start_date: billingBudgetBudgetFilterCustomPeriodStartDateToTerraform(struct!.startDate),
   }
+}
+
+
+export function billingBudgetBudgetFilterCustomPeriodToHclTerraform(struct?: BillingBudgetBudgetFilterCustomPeriodOutputReference | BillingBudgetBudgetFilterCustomPeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_date: {
+      value: billingBudgetBudgetFilterCustomPeriodEndDateToHclTerraform(struct!.endDate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BillingBudgetBudgetFilterCustomPeriodEndDateList",
+    },
+    start_date: {
+      value: billingBudgetBudgetFilterCustomPeriodStartDateToHclTerraform(struct!.startDate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BillingBudgetBudgetFilterCustomPeriodStartDateList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BillingBudgetBudgetFilterCustomPeriodOutputReference extends cdktf.ComplexObject {
@@ -885,6 +1060,73 @@ export function billingBudgetBudgetFilterToTerraform(struct?: BillingBudgetBudge
     subaccounts: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.subaccounts),
     custom_period: billingBudgetBudgetFilterCustomPeriodToTerraform(struct!.customPeriod),
   }
+}
+
+
+export function billingBudgetBudgetFilterToHclTerraform(struct?: BillingBudgetBudgetFilterOutputReference | BillingBudgetBudgetFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    calendar_period: {
+      value: cdktf.stringToHclTerraform(struct!.calendarPeriod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    credit_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.creditTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    credit_types_treatment: {
+      value: cdktf.stringToHclTerraform(struct!.creditTypesTreatment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    projects: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.projects),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    resource_ancestors: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.resourceAncestors),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    services: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.services),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    subaccounts: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.subaccounts),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    custom_period: {
+      value: billingBudgetBudgetFilterCustomPeriodToHclTerraform(struct!.customPeriod),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BillingBudgetBudgetFilterCustomPeriodList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObject {
@@ -1139,6 +1381,31 @@ export function billingBudgetThresholdRulesToTerraform(struct?: BillingBudgetThr
   }
 }
 
+
+export function billingBudgetThresholdRulesToHclTerraform(struct?: BillingBudgetThresholdRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    spend_basis: {
+      value: cdktf.stringToHclTerraform(struct!.spendBasis),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    threshold_percent: {
+      value: cdktf.numberToHclTerraform(struct!.thresholdPercent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BillingBudgetThresholdRulesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1263,6 +1530,37 @@ export function billingBudgetTimeoutsToTerraform(struct?: BillingBudgetTimeouts 
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function billingBudgetTimeoutsToHclTerraform(struct?: BillingBudgetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1575,5 +1873,61 @@ export class BillingBudget extends cdktf.TerraformResource {
       threshold_rules: cdktf.listMapper(billingBudgetThresholdRulesToTerraform, true)(this._thresholdRules.internalValue),
       timeouts: billingBudgetTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      billing_account: {
+        value: cdktf.stringToHclTerraform(this._billingAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      all_updates_rule: {
+        value: billingBudgetAllUpdatesRuleToHclTerraform(this._allUpdatesRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BillingBudgetAllUpdatesRuleList",
+      },
+      amount: {
+        value: billingBudgetAmountToHclTerraform(this._amount.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BillingBudgetAmountList",
+      },
+      budget_filter: {
+        value: billingBudgetBudgetFilterToHclTerraform(this._budgetFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BillingBudgetBudgetFilterList",
+      },
+      threshold_rules: {
+        value: cdktf.listMapperHcl(billingBudgetThresholdRulesToHclTerraform, true)(this._thresholdRules.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BillingBudgetThresholdRulesList",
+      },
+      timeouts: {
+        value: billingBudgetTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BillingBudgetTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/netapp_active_directory
 // generated from terraform resource schema
 
@@ -178,6 +173,37 @@ export function netappActiveDirectoryTimeoutsToTerraform(struct?: NetappActiveDi
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function netappActiveDirectoryTimeoutsToHclTerraform(struct?: NetappActiveDirectoryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetappActiveDirectoryTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -749,5 +775,145 @@ export class NetappActiveDirectory extends cdktf.TerraformResource {
       username: cdktf.stringToTerraform(this._username),
       timeouts: netappActiveDirectoryTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      aes_encryption: {
+        value: cdktf.booleanToHclTerraform(this._aesEncryption),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      backup_operators: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._backupOperators),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dns: {
+        value: cdktf.stringToHclTerraform(this._dns),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain: {
+        value: cdktf.stringToHclTerraform(this._domain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      encrypt_dc_connections: {
+        value: cdktf.booleanToHclTerraform(this._encryptDcConnections),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kdc_hostname: {
+        value: cdktf.stringToHclTerraform(this._kdcHostname),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kdc_ip: {
+        value: cdktf.stringToHclTerraform(this._kdcIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      ldap_signing: {
+        value: cdktf.booleanToHclTerraform(this._ldapSigning),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      net_bios_prefix: {
+        value: cdktf.stringToHclTerraform(this._netBiosPrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      nfs_users_with_ldap: {
+        value: cdktf.booleanToHclTerraform(this._nfsUsersWithLdap),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      organizational_unit: {
+        value: cdktf.stringToHclTerraform(this._organizationalUnit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password: {
+        value: cdktf.stringToHclTerraform(this._password),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_operators: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._securityOperators),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      site: {
+        value: cdktf.stringToHclTerraform(this._site),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      username: {
+        value: cdktf.stringToHclTerraform(this._username),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: netappActiveDirectoryTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetappActiveDirectoryTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

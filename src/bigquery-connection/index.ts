@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/bigquery_connection
 // generated from terraform resource schema
 
@@ -115,6 +110,25 @@ export function bigqueryConnectionAwsAccessRoleToTerraform(struct?: BigqueryConn
   }
 }
 
+
+export function bigqueryConnectionAwsAccessRoleToHclTerraform(struct?: BigqueryConnectionAwsAccessRoleOutputReference | BigqueryConnectionAwsAccessRole): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    iam_role_id: {
+      value: cdktf.stringToHclTerraform(struct!.iamRoleId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigqueryConnectionAwsAccessRoleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -182,6 +196,25 @@ export function bigqueryConnectionAwsToTerraform(struct?: BigqueryConnectionAwsO
   return {
     access_role: bigqueryConnectionAwsAccessRoleToTerraform(struct!.accessRole),
   }
+}
+
+
+export function bigqueryConnectionAwsToHclTerraform(struct?: BigqueryConnectionAwsOutputReference | BigqueryConnectionAws): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access_role: {
+      value: bigqueryConnectionAwsAccessRoleToHclTerraform(struct!.accessRole),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryConnectionAwsAccessRoleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryConnectionAwsOutputReference extends cdktf.ComplexObject {
@@ -253,6 +286,31 @@ export function bigqueryConnectionAzureToTerraform(struct?: BigqueryConnectionAz
     customer_tenant_id: cdktf.stringToTerraform(struct!.customerTenantId),
     federated_application_client_id: cdktf.stringToTerraform(struct!.federatedApplicationClientId),
   }
+}
+
+
+export function bigqueryConnectionAzureToHclTerraform(struct?: BigqueryConnectionAzureOutputReference | BigqueryConnectionAzure): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    customer_tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.customerTenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    federated_application_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.federatedApplicationClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryConnectionAzureOutputReference extends cdktf.ComplexObject {
@@ -359,6 +417,17 @@ export function bigqueryConnectionCloudResourceToTerraform(struct?: BigqueryConn
   }
 }
 
+
+export function bigqueryConnectionCloudResourceToHclTerraform(struct?: BigqueryConnectionCloudResourceOutputReference | BigqueryConnectionCloudResource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class BigqueryConnectionCloudResourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -442,6 +511,55 @@ export function bigqueryConnectionCloudSpannerToTerraform(struct?: BigqueryConne
     use_parallelism: cdktf.booleanToTerraform(struct!.useParallelism),
     use_serverless_analytics: cdktf.booleanToTerraform(struct!.useServerlessAnalytics),
   }
+}
+
+
+export function bigqueryConnectionCloudSpannerToHclTerraform(struct?: BigqueryConnectionCloudSpannerOutputReference | BigqueryConnectionCloudSpanner): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    database: {
+      value: cdktf.stringToHclTerraform(struct!.database),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    database_role: {
+      value: cdktf.stringToHclTerraform(struct!.databaseRole),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_parallelism: {
+      value: cdktf.numberToHclTerraform(struct!.maxParallelism),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    use_data_boost: {
+      value: cdktf.booleanToHclTerraform(struct!.useDataBoost),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    use_parallelism: {
+      value: cdktf.booleanToHclTerraform(struct!.useParallelism),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    use_serverless_analytics: {
+      value: cdktf.booleanToHclTerraform(struct!.useServerlessAnalytics),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryConnectionCloudSpannerOutputReference extends cdktf.ComplexObject {
@@ -625,6 +743,31 @@ export function bigqueryConnectionCloudSqlCredentialToTerraform(struct?: Bigquer
   }
 }
 
+
+export function bigqueryConnectionCloudSqlCredentialToHclTerraform(struct?: BigqueryConnectionCloudSqlCredentialOutputReference | BigqueryConnectionCloudSqlCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigqueryConnectionCloudSqlCredentialOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -727,6 +870,43 @@ export function bigqueryConnectionCloudSqlToTerraform(struct?: BigqueryConnectio
     type: cdktf.stringToTerraform(struct!.type),
     credential: bigqueryConnectionCloudSqlCredentialToTerraform(struct!.credential),
   }
+}
+
+
+export function bigqueryConnectionCloudSqlToHclTerraform(struct?: BigqueryConnectionCloudSqlOutputReference | BigqueryConnectionCloudSql): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    database: {
+      value: cdktf.stringToHclTerraform(struct!.database),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    instance_id: {
+      value: cdktf.stringToHclTerraform(struct!.instanceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    credential: {
+      value: bigqueryConnectionCloudSqlCredentialToHclTerraform(struct!.credential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryConnectionCloudSqlCredentialList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryConnectionCloudSqlOutputReference extends cdktf.ComplexObject {
@@ -855,6 +1035,25 @@ export function bigqueryConnectionSparkMetastoreServiceConfigToTerraform(struct?
   }
 }
 
+
+export function bigqueryConnectionSparkMetastoreServiceConfigToHclTerraform(struct?: BigqueryConnectionSparkMetastoreServiceConfigOutputReference | BigqueryConnectionSparkMetastoreServiceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metastore_service: {
+      value: cdktf.stringToHclTerraform(struct!.metastoreService),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigqueryConnectionSparkMetastoreServiceConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -920,6 +1119,25 @@ export function bigqueryConnectionSparkSparkHistoryServerConfigToTerraform(struc
   return {
     dataproc_cluster: cdktf.stringToTerraform(struct!.dataprocCluster),
   }
+}
+
+
+export function bigqueryConnectionSparkSparkHistoryServerConfigToHclTerraform(struct?: BigqueryConnectionSparkSparkHistoryServerConfigOutputReference | BigqueryConnectionSparkSparkHistoryServerConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataproc_cluster: {
+      value: cdktf.stringToHclTerraform(struct!.dataprocCluster),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryConnectionSparkSparkHistoryServerConfigOutputReference extends cdktf.ComplexObject {
@@ -994,6 +1212,31 @@ export function bigqueryConnectionSparkToTerraform(struct?: BigqueryConnectionSp
     metastore_service_config: bigqueryConnectionSparkMetastoreServiceConfigToTerraform(struct!.metastoreServiceConfig),
     spark_history_server_config: bigqueryConnectionSparkSparkHistoryServerConfigToTerraform(struct!.sparkHistoryServerConfig),
   }
+}
+
+
+export function bigqueryConnectionSparkToHclTerraform(struct?: BigqueryConnectionSparkOutputReference | BigqueryConnectionSpark): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metastore_service_config: {
+      value: bigqueryConnectionSparkMetastoreServiceConfigToHclTerraform(struct!.metastoreServiceConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryConnectionSparkMetastoreServiceConfigList",
+    },
+    spark_history_server_config: {
+      value: bigqueryConnectionSparkSparkHistoryServerConfigToHclTerraform(struct!.sparkHistoryServerConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryConnectionSparkSparkHistoryServerConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryConnectionSparkOutputReference extends cdktf.ComplexObject {
@@ -1096,6 +1339,37 @@ export function bigqueryConnectionTimeoutsToTerraform(struct?: BigqueryConnectio
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function bigqueryConnectionTimeoutsToHclTerraform(struct?: BigqueryConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1509,5 +1783,91 @@ export class BigqueryConnection extends cdktf.TerraformResource {
       spark: bigqueryConnectionSparkToTerraform(this._spark.internalValue),
       timeouts: bigqueryConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      connection_id: {
+        value: cdktf.stringToHclTerraform(this._connectionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      friendly_name: {
+        value: cdktf.stringToHclTerraform(this._friendlyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      aws: {
+        value: bigqueryConnectionAwsToHclTerraform(this._aws.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryConnectionAwsList",
+      },
+      azure: {
+        value: bigqueryConnectionAzureToHclTerraform(this._azure.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryConnectionAzureList",
+      },
+      cloud_resource: {
+        value: bigqueryConnectionCloudResourceToHclTerraform(this._cloudResource.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryConnectionCloudResourceList",
+      },
+      cloud_spanner: {
+        value: bigqueryConnectionCloudSpannerToHclTerraform(this._cloudSpanner.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryConnectionCloudSpannerList",
+      },
+      cloud_sql: {
+        value: bigqueryConnectionCloudSqlToHclTerraform(this._cloudSql.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryConnectionCloudSqlList",
+      },
+      spark: {
+        value: bigqueryConnectionSparkToHclTerraform(this._spark.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryConnectionSparkList",
+      },
+      timeouts: {
+        value: bigqueryConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BigqueryConnectionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

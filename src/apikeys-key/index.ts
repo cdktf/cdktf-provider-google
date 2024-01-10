@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/apikeys_key
 // generated from terraform resource schema
 
@@ -74,6 +69,31 @@ export function apikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsT
     package_name: cdktf.stringToTerraform(struct!.packageName),
     sha1_fingerprint: cdktf.stringToTerraform(struct!.sha1Fingerprint),
   }
+}
+
+
+export function apikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsToHclTerraform(struct?: ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    package_name: {
+      value: cdktf.stringToHclTerraform(struct!.packageName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sha1_fingerprint: {
+      value: cdktf.stringToHclTerraform(struct!.sha1Fingerprint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsOutputReference extends cdktf.ComplexObject {
@@ -191,6 +211,25 @@ export function apikeysKeyRestrictionsAndroidKeyRestrictionsToTerraform(struct?:
   }
 }
 
+
+export function apikeysKeyRestrictionsAndroidKeyRestrictionsToHclTerraform(struct?: ApikeysKeyRestrictionsAndroidKeyRestrictionsOutputReference | ApikeysKeyRestrictionsAndroidKeyRestrictions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_applications: {
+      value: cdktf.listMapperHcl(apikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsToHclTerraform, true)(struct!.allowedApplications),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApikeysKeyRestrictionsAndroidKeyRestrictionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -260,6 +299,31 @@ export function apikeysKeyRestrictionsApiTargetsToTerraform(struct?: ApikeysKeyR
     methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.methods),
     service: cdktf.stringToTerraform(struct!.service),
   }
+}
+
+
+export function apikeysKeyRestrictionsApiTargetsToHclTerraform(struct?: ApikeysKeyRestrictionsApiTargets | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    methods: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.methods),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApikeysKeyRestrictionsApiTargetsOutputReference extends cdktf.ComplexObject {
@@ -380,6 +444,25 @@ export function apikeysKeyRestrictionsBrowserKeyRestrictionsToTerraform(struct?:
   }
 }
 
+
+export function apikeysKeyRestrictionsBrowserKeyRestrictionsToHclTerraform(struct?: ApikeysKeyRestrictionsBrowserKeyRestrictionsOutputReference | ApikeysKeyRestrictionsBrowserKeyRestrictions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_referrers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedReferrers),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApikeysKeyRestrictionsBrowserKeyRestrictionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -444,6 +527,25 @@ export function apikeysKeyRestrictionsIosKeyRestrictionsToTerraform(struct?: Api
   }
 }
 
+
+export function apikeysKeyRestrictionsIosKeyRestrictionsToHclTerraform(struct?: ApikeysKeyRestrictionsIosKeyRestrictionsOutputReference | ApikeysKeyRestrictionsIosKeyRestrictions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_bundle_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedBundleIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApikeysKeyRestrictionsIosKeyRestrictionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -506,6 +608,25 @@ export function apikeysKeyRestrictionsServerKeyRestrictionsToTerraform(struct?: 
   return {
     allowed_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedIps),
   }
+}
+
+
+export function apikeysKeyRestrictionsServerKeyRestrictionsToHclTerraform(struct?: ApikeysKeyRestrictionsServerKeyRestrictionsOutputReference | ApikeysKeyRestrictionsServerKeyRestrictions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_ips: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedIps),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApikeysKeyRestrictionsServerKeyRestrictionsOutputReference extends cdktf.ComplexObject {
@@ -598,6 +719,49 @@ export function apikeysKeyRestrictionsToTerraform(struct?: ApikeysKeyRestriction
     ios_key_restrictions: apikeysKeyRestrictionsIosKeyRestrictionsToTerraform(struct!.iosKeyRestrictions),
     server_key_restrictions: apikeysKeyRestrictionsServerKeyRestrictionsToTerraform(struct!.serverKeyRestrictions),
   }
+}
+
+
+export function apikeysKeyRestrictionsToHclTerraform(struct?: ApikeysKeyRestrictionsOutputReference | ApikeysKeyRestrictions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    android_key_restrictions: {
+      value: apikeysKeyRestrictionsAndroidKeyRestrictionsToHclTerraform(struct!.androidKeyRestrictions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApikeysKeyRestrictionsAndroidKeyRestrictionsList",
+    },
+    api_targets: {
+      value: cdktf.listMapperHcl(apikeysKeyRestrictionsApiTargetsToHclTerraform, true)(struct!.apiTargets),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApikeysKeyRestrictionsApiTargetsList",
+    },
+    browser_key_restrictions: {
+      value: apikeysKeyRestrictionsBrowserKeyRestrictionsToHclTerraform(struct!.browserKeyRestrictions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApikeysKeyRestrictionsBrowserKeyRestrictionsList",
+    },
+    ios_key_restrictions: {
+      value: apikeysKeyRestrictionsIosKeyRestrictionsToHclTerraform(struct!.iosKeyRestrictions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApikeysKeyRestrictionsIosKeyRestrictionsList",
+    },
+    server_key_restrictions: {
+      value: apikeysKeyRestrictionsServerKeyRestrictionsToHclTerraform(struct!.serverKeyRestrictions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApikeysKeyRestrictionsServerKeyRestrictionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApikeysKeyRestrictionsOutputReference extends cdktf.ComplexObject {
@@ -761,6 +925,37 @@ export function apikeysKeyTimeoutsToTerraform(struct?: ApikeysKeyTimeouts | cdkt
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apikeysKeyTimeoutsToHclTerraform(struct?: ApikeysKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApikeysKeyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1045,5 +1240,49 @@ export class ApikeysKey extends cdktf.TerraformResource {
       restrictions: apikeysKeyRestrictionsToTerraform(this._restrictions.internalValue),
       timeouts: apikeysKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restrictions: {
+        value: apikeysKeyRestrictionsToHclTerraform(this._restrictions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApikeysKeyRestrictionsList",
+      },
+      timeouts: {
+        value: apikeysKeyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApikeysKeyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

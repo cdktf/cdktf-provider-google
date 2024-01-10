@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/monitoring_metric_descriptor
 // generated from terraform resource schema
 
@@ -134,6 +129,37 @@ export function monitoringMetricDescriptorLabelsToTerraform(struct?: MonitoringM
     key: cdktf.stringToTerraform(struct!.key),
     value_type: cdktf.stringToTerraform(struct!.valueType),
   }
+}
+
+
+export function monitoringMetricDescriptorLabelsToHclTerraform(struct?: MonitoringMetricDescriptorLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value_type: {
+      value: cdktf.stringToHclTerraform(struct!.valueType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringMetricDescriptorLabelsOutputReference extends cdktf.ComplexObject {
@@ -283,6 +309,31 @@ export function monitoringMetricDescriptorMetadataToTerraform(struct?: Monitorin
   }
 }
 
+
+export function monitoringMetricDescriptorMetadataToHclTerraform(struct?: MonitoringMetricDescriptorMetadataOutputReference | MonitoringMetricDescriptorMetadata): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ingest_delay: {
+      value: cdktf.stringToHclTerraform(struct!.ingestDelay),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sample_period: {
+      value: cdktf.stringToHclTerraform(struct!.samplePeriod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitoringMetricDescriptorMetadataOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -378,6 +429,37 @@ export function monitoringMetricDescriptorTimeoutsToTerraform(struct?: Monitorin
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitoringMetricDescriptorTimeoutsToHclTerraform(struct?: MonitoringMetricDescriptorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -758,5 +840,85 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
       metadata: monitoringMetricDescriptorMetadataToTerraform(this._metadata.internalValue),
       timeouts: monitoringMetricDescriptorTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      launch_stage: {
+        value: cdktf.stringToHclTerraform(this._launchStage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metric_kind: {
+        value: cdktf.stringToHclTerraform(this._metricKind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      unit: {
+        value: cdktf.stringToHclTerraform(this._unit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      value_type: {
+        value: cdktf.stringToHclTerraform(this._valueType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.listMapperHcl(monitoringMetricDescriptorLabelsToHclTerraform, true)(this._labels.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "MonitoringMetricDescriptorLabelsList",
+      },
+      metadata: {
+        value: monitoringMetricDescriptorMetadataToHclTerraform(this._metadata.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitoringMetricDescriptorMetadataList",
+      },
+      timeouts: {
+        value: monitoringMetricDescriptorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitoringMetricDescriptorTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

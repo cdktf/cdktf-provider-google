@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/cloud_identity_group_membership
 // generated from terraform resource schema
 
@@ -86,6 +81,31 @@ export function cloudIdentityGroupMembershipPreferredMemberKeyToTerraform(struct
     id: cdktf.stringToTerraform(struct!.id),
     namespace: cdktf.stringToTerraform(struct!.namespace),
   }
+}
+
+
+export function cloudIdentityGroupMembershipPreferredMemberKeyToHclTerraform(struct?: CloudIdentityGroupMembershipPreferredMemberKeyOutputReference | CloudIdentityGroupMembershipPreferredMemberKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    namespace: {
+      value: cdktf.stringToHclTerraform(struct!.namespace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudIdentityGroupMembershipPreferredMemberKeyOutputReference extends cdktf.ComplexObject {
@@ -179,6 +199,25 @@ export function cloudIdentityGroupMembershipRolesExpiryDetailToTerraform(struct?
   }
 }
 
+
+export function cloudIdentityGroupMembershipRolesExpiryDetailToHclTerraform(struct?: CloudIdentityGroupMembershipRolesExpiryDetailOutputReference | CloudIdentityGroupMembershipRolesExpiryDetail): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expire_time: {
+      value: cdktf.stringToHclTerraform(struct!.expireTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CloudIdentityGroupMembershipRolesExpiryDetailOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -248,6 +287,31 @@ export function cloudIdentityGroupMembershipRolesToTerraform(struct?: CloudIdent
     name: cdktf.stringToTerraform(struct!.name),
     expiry_detail: cloudIdentityGroupMembershipRolesExpiryDetailToTerraform(struct!.expiryDetail),
   }
+}
+
+
+export function cloudIdentityGroupMembershipRolesToHclTerraform(struct?: CloudIdentityGroupMembershipRoles | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expiry_detail: {
+      value: cloudIdentityGroupMembershipRolesExpiryDetailToHclTerraform(struct!.expiryDetail),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudIdentityGroupMembershipRolesExpiryDetailList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudIdentityGroupMembershipRolesOutputReference extends cdktf.ComplexObject {
@@ -374,6 +438,37 @@ export function cloudIdentityGroupMembershipTimeoutsToTerraform(struct?: CloudId
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cloudIdentityGroupMembershipTimeoutsToHclTerraform(struct?: CloudIdentityGroupMembershipTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudIdentityGroupMembershipTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -647,5 +742,43 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
       roles: cdktf.listMapper(cloudIdentityGroupMembershipRolesToTerraform, true)(this._roles.internalValue),
       timeouts: cloudIdentityGroupMembershipTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      group: {
+        value: cdktf.stringToHclTerraform(this._group),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preferred_member_key: {
+        value: cloudIdentityGroupMembershipPreferredMemberKeyToHclTerraform(this._preferredMemberKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudIdentityGroupMembershipPreferredMemberKeyList",
+      },
+      roles: {
+        value: cdktf.listMapperHcl(cloudIdentityGroupMembershipRolesToHclTerraform, true)(this._roles.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CloudIdentityGroupMembershipRolesList",
+      },
+      timeouts: {
+        value: cloudIdentityGroupMembershipTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CloudIdentityGroupMembershipTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

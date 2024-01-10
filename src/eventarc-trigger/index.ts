@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/eventarc_trigger
 // generated from terraform resource schema
 
@@ -120,6 +115,37 @@ export function eventarcTriggerDestinationCloudRunServiceToTerraform(struct?: Ev
     region: cdktf.stringToTerraform(struct!.region),
     service: cdktf.stringToTerraform(struct!.service),
   }
+}
+
+
+export function eventarcTriggerDestinationCloudRunServiceToHclTerraform(struct?: EventarcTriggerDestinationCloudRunServiceOutputReference | EventarcTriggerDestinationCloudRunService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    region: {
+      value: cdktf.stringToHclTerraform(struct!.region),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cdktf.ComplexObject {
@@ -256,6 +282,49 @@ export function eventarcTriggerDestinationGkeToTerraform(struct?: EventarcTrigge
     path: cdktf.stringToTerraform(struct!.path),
     service: cdktf.stringToTerraform(struct!.service),
   }
+}
+
+
+export function eventarcTriggerDestinationGkeToHclTerraform(struct?: EventarcTriggerDestinationGkeOutputReference | EventarcTriggerDestinationGke): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster: {
+      value: cdktf.stringToHclTerraform(struct!.cluster),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    namespace: {
+      value: cdktf.stringToHclTerraform(struct!.namespace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventarcTriggerDestinationGkeOutputReference extends cdktf.ComplexObject {
@@ -422,6 +491,43 @@ export function eventarcTriggerDestinationToTerraform(struct?: EventarcTriggerDe
   }
 }
 
+
+export function eventarcTriggerDestinationToHclTerraform(struct?: EventarcTriggerDestinationOutputReference | EventarcTriggerDestination): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cloud_function: {
+      value: cdktf.stringToHclTerraform(struct!.cloudFunction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    workflow: {
+      value: cdktf.stringToHclTerraform(struct!.workflow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cloud_run_service: {
+      value: eventarcTriggerDestinationCloudRunServiceToHclTerraform(struct!.cloudRunService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EventarcTriggerDestinationCloudRunServiceList",
+    },
+    gke: {
+      value: eventarcTriggerDestinationGkeToHclTerraform(struct!.gke),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EventarcTriggerDestinationGkeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -569,6 +675,37 @@ export function eventarcTriggerMatchingCriteriaToTerraform(struct?: EventarcTrig
   }
 }
 
+
+export function eventarcTriggerMatchingCriteriaToHclTerraform(struct?: EventarcTriggerMatchingCriteria | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    attribute: {
+      value: cdktf.stringToHclTerraform(struct!.attribute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventarcTriggerMatchingCriteriaOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -714,6 +851,37 @@ export function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeo
   }
 }
 
+
+export function eventarcTriggerTimeoutsToHclTerraform(struct?: EventarcTriggerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -835,6 +1003,25 @@ export function eventarcTriggerTransportPubsubToTerraform(struct?: EventarcTrigg
   }
 }
 
+
+export function eventarcTriggerTransportPubsubToHclTerraform(struct?: EventarcTriggerTransportPubsubOutputReference | EventarcTriggerTransportPubsub): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    topic: {
+      value: cdktf.stringToHclTerraform(struct!.topic),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventarcTriggerTransportPubsubOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -905,6 +1092,25 @@ export function eventarcTriggerTransportToTerraform(struct?: EventarcTriggerTran
   return {
     pubsub: eventarcTriggerTransportPubsubToTerraform(struct!.pubsub),
   }
+}
+
+
+export function eventarcTriggerTransportToHclTerraform(struct?: EventarcTriggerTransportOutputReference | EventarcTriggerTransport): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pubsub: {
+      value: eventarcTriggerTransportPubsubToHclTerraform(struct!.pubsub),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EventarcTriggerTransportPubsubList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject {
@@ -1262,5 +1468,85 @@ export class EventarcTrigger extends cdktf.TerraformResource {
       timeouts: eventarcTriggerTimeoutsToTerraform(this._timeouts.internalValue),
       transport: eventarcTriggerTransportToTerraform(this._transport.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      channel: {
+        value: cdktf.stringToHclTerraform(this._channel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      event_data_content_type: {
+        value: cdktf.stringToHclTerraform(this._eventDataContentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_account: {
+        value: cdktf.stringToHclTerraform(this._serviceAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination: {
+        value: eventarcTriggerDestinationToHclTerraform(this._destination.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventarcTriggerDestinationList",
+      },
+      matching_criteria: {
+        value: cdktf.listMapperHcl(eventarcTriggerMatchingCriteriaToHclTerraform, true)(this._matchingCriteria.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "EventarcTriggerMatchingCriteriaList",
+      },
+      timeouts: {
+        value: eventarcTriggerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "EventarcTriggerTimeouts",
+      },
+      transport: {
+        value: eventarcTriggerTransportToHclTerraform(this._transport.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventarcTriggerTransportList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

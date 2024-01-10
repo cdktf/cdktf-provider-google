@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/folder_organization_policy
 // generated from terraform resource schema
 
@@ -42,6 +37,17 @@ export function dataGoogleFolderOrganizationPolicyBooleanPolicyToTerraform(struc
   }
   return {
   }
+}
+
+
+export function dataGoogleFolderOrganizationPolicyBooleanPolicyToHclTerraform(struct?: DataGoogleFolderOrganizationPolicyBooleanPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleFolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.ComplexObject {
@@ -106,6 +112,17 @@ export function dataGoogleFolderOrganizationPolicyListPolicyAllowToTerraform(str
   }
   return {
   }
+}
+
+
+export function dataGoogleFolderOrganizationPolicyListPolicyAllowToHclTerraform(struct?: DataGoogleFolderOrganizationPolicyListPolicyAllow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleFolderOrganizationPolicyListPolicyAllowOutputReference extends cdktf.ComplexObject {
@@ -177,6 +194,17 @@ export function dataGoogleFolderOrganizationPolicyListPolicyDenyToTerraform(stru
   }
 }
 
+
+export function dataGoogleFolderOrganizationPolicyListPolicyDenyToHclTerraform(struct?: DataGoogleFolderOrganizationPolicyListPolicyDeny): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataGoogleFolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -244,6 +272,17 @@ export function dataGoogleFolderOrganizationPolicyListPolicyToTerraform(struct?:
   }
   return {
   }
+}
+
+
+export function dataGoogleFolderOrganizationPolicyListPolicyToHclTerraform(struct?: DataGoogleFolderOrganizationPolicyListPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleFolderOrganizationPolicyListPolicyOutputReference extends cdktf.ComplexObject {
@@ -325,6 +364,17 @@ export function dataGoogleFolderOrganizationPolicyRestorePolicyToTerraform(struc
   }
   return {
   }
+}
+
+
+export function dataGoogleFolderOrganizationPolicyRestorePolicyToHclTerraform(struct?: DataGoogleFolderOrganizationPolicyRestorePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataGoogleFolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.ComplexObject {
@@ -525,5 +575,31 @@ export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSourc
       folder: cdktf.stringToTerraform(this._folder),
       id: cdktf.stringToTerraform(this._id),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      constraint: {
+        value: cdktf.stringToHclTerraform(this._constraint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      folder: {
+        value: cdktf.stringToHclTerraform(this._folder),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

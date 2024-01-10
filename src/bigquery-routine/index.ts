@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/bigquery_routine
 // generated from terraform resource schema
 
@@ -154,6 +149,43 @@ export function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArgu
     mode: cdktf.stringToTerraform(struct!.mode),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function bigqueryRoutineArgumentsToHclTerraform(struct?: BigqueryRoutineArguments | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    argument_kind: {
+      value: cdktf.stringToHclTerraform(struct!.argumentKind),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_type: {
+      value: cdktf.stringToHclTerraform(struct!.dataType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryRoutineArgumentsOutputReference extends cdktf.ComplexObject {
@@ -327,6 +359,37 @@ export function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeo
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function bigqueryRoutineTimeoutsToHclTerraform(struct?: BigqueryRoutineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -746,5 +809,97 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       arguments: cdktf.listMapper(bigqueryRoutineArgumentsToTerraform, true)(this._arguments.internalValue),
       timeouts: bigqueryRoutineTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dataset_id: {
+        value: cdktf.stringToHclTerraform(this._datasetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      definition_body: {
+        value: cdktf.stringToHclTerraform(this._definitionBody),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      determinism_level: {
+        value: cdktf.stringToHclTerraform(this._determinismLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      imported_libraries: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._importedLibraries),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      language: {
+        value: cdktf.stringToHclTerraform(this._language),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      return_table_type: {
+        value: cdktf.stringToHclTerraform(this._returnTableType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      return_type: {
+        value: cdktf.stringToHclTerraform(this._returnType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      routine_id: {
+        value: cdktf.stringToHclTerraform(this._routineId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      routine_type: {
+        value: cdktf.stringToHclTerraform(this._routineType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      arguments: {
+        value: cdktf.listMapperHcl(bigqueryRoutineArgumentsToHclTerraform, true)(this._arguments.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryRoutineArgumentsList",
+      },
+      timeouts: {
+        value: bigqueryRoutineTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BigqueryRoutineTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/edgecontainer_vpn_connection
 // generated from terraform resource schema
 
@@ -100,6 +95,17 @@ export function edgecontainerVpnConnectionDetailsCloudRouterToTerraform(struct?:
   }
 }
 
+
+export function edgecontainerVpnConnectionDetailsCloudRouterToHclTerraform(struct?: EdgecontainerVpnConnectionDetailsCloudRouter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class EdgecontainerVpnConnectionDetailsCloudRouterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -164,6 +170,17 @@ export function edgecontainerVpnConnectionDetailsCloudVpnsToTerraform(struct?: E
   }
 }
 
+
+export function edgecontainerVpnConnectionDetailsCloudVpnsToHclTerraform(struct?: EdgecontainerVpnConnectionDetailsCloudVpns): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class EdgecontainerVpnConnectionDetailsCloudVpnsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -226,6 +243,17 @@ export function edgecontainerVpnConnectionDetailsToTerraform(struct?: Edgecontai
   }
   return {
   }
+}
+
+
+export function edgecontainerVpnConnectionDetailsToHclTerraform(struct?: EdgecontainerVpnConnectionDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class EdgecontainerVpnConnectionDetailsOutputReference extends cdktf.ComplexObject {
@@ -322,6 +350,37 @@ export function edgecontainerVpnConnectionTimeoutsToTerraform(struct?: Edgeconta
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function edgecontainerVpnConnectionTimeoutsToHclTerraform(struct?: EdgecontainerVpnConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EdgecontainerVpnConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -443,6 +502,25 @@ export function edgecontainerVpnConnectionVpcProjectToTerraform(struct?: Edgecon
   return {
     project_id: cdktf.stringToTerraform(struct!.projectId),
   }
+}
+
+
+export function edgecontainerVpnConnectionVpcProjectToHclTerraform(struct?: EdgecontainerVpnConnectionVpcProjectOutputReference | EdgecontainerVpnConnectionVpcProject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    project_id: {
+      value: cdktf.stringToHclTerraform(struct!.projectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EdgecontainerVpnConnectionVpcProjectOutputReference extends cdktf.ComplexObject {
@@ -793,5 +871,85 @@ export class EdgecontainerVpnConnection extends cdktf.TerraformResource {
       timeouts: edgecontainerVpnConnectionTimeoutsToTerraform(this._timeouts.internalValue),
       vpc_project: edgecontainerVpnConnectionVpcProjectToTerraform(this._vpcProject.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster: {
+        value: cdktf.stringToHclTerraform(this._cluster),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_high_availability: {
+        value: cdktf.booleanToHclTerraform(this._enableHighAvailability),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      nat_gateway_ip: {
+        value: cdktf.stringToHclTerraform(this._natGatewayIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      router: {
+        value: cdktf.stringToHclTerraform(this._router),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vpc: {
+        value: cdktf.stringToHclTerraform(this._vpc),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: edgecontainerVpnConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "EdgecontainerVpnConnectionTimeouts",
+      },
+      vpc_project: {
+        value: edgecontainerVpnConnectionVpcProjectToHclTerraform(this._vpcProject.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EdgecontainerVpnConnectionVpcProjectList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

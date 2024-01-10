@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computediskiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computediskiampolicy"
 
 computediskiampolicy.NewComputeDiskIamPolicy(scope Construct, id *string, config ComputeDiskIamPolicyConfig) ComputeDiskIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.toMetadata"></a>
 
@@ -392,7 +399,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computediskiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computediskiampolicy"
 
 computediskiampolicy.ComputeDiskIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -424,7 +431,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computediskiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computediskiampolicy"
 
 computediskiampolicy.ComputeDiskIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -438,7 +445,7 @@ computediskiampolicy.ComputeDiskIamPolicy_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computediskiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computediskiampolicy"
 
 computediskiampolicy.ComputeDiskIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -452,7 +459,7 @@ computediskiampolicy.ComputeDiskIamPolicy_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computediskiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computediskiampolicy"
 
 computediskiampolicy.ComputeDiskIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -802,7 +809,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeDiskIamPolicy.ComputeDiskIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/computediskiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computediskiampolicy"
 
 &computediskiampolicy.ComputeDiskIamPolicyConfig {
 	Connection: interface{},

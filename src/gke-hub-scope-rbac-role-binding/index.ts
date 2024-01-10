@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_hub_scope_rbac_role_binding
 // generated from terraform resource schema
 
@@ -87,6 +82,17 @@ export function gkeHubScopeRbacRoleBindingStateToTerraform(struct?: GkeHubScopeR
   }
 }
 
+
+export function gkeHubScopeRbacRoleBindingStateToHclTerraform(struct?: GkeHubScopeRbacRoleBindingState): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class GkeHubScopeRbacRoleBindingStateOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -156,6 +162,25 @@ export function gkeHubScopeRbacRoleBindingRoleToTerraform(struct?: GkeHubScopeRb
   return {
     predefined_role: cdktf.stringToTerraform(struct!.predefinedRole),
   }
+}
+
+
+export function gkeHubScopeRbacRoleBindingRoleToHclTerraform(struct?: GkeHubScopeRbacRoleBindingRoleOutputReference | GkeHubScopeRbacRoleBindingRole): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    predefined_role: {
+      value: cdktf.stringToHclTerraform(struct!.predefinedRole),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeHubScopeRbacRoleBindingRoleOutputReference extends cdktf.ComplexObject {
@@ -231,6 +256,37 @@ export function gkeHubScopeRbacRoleBindingTimeoutsToTerraform(struct?: GkeHubSco
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function gkeHubScopeRbacRoleBindingTimeoutsToHclTerraform(struct?: GkeHubScopeRbacRoleBindingTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GkeHubScopeRbacRoleBindingTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -596,5 +652,67 @@ export class GkeHubScopeRbacRoleBinding extends cdktf.TerraformResource {
       role: gkeHubScopeRbacRoleBindingRoleToTerraform(this._role.internalValue),
       timeouts: gkeHubScopeRbacRoleBindingTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      group: {
+        value: cdktf.stringToHclTerraform(this._group),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope_id: {
+        value: cdktf.stringToHclTerraform(this._scopeId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope_rbac_role_binding_id: {
+        value: cdktf.stringToHclTerraform(this._scopeRbacRoleBindingId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user: {
+        value: cdktf.stringToHclTerraform(this._user),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: gkeHubScopeRbacRoleBindingRoleToHclTerraform(this._role.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "GkeHubScopeRbacRoleBindingRoleList",
+      },
+      timeouts: {
+        value: gkeHubScopeRbacRoleBindingTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "GkeHubScopeRbacRoleBindingTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/storage_bucket_acl
 // generated from terraform resource schema
 
@@ -196,5 +191,43 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
       predefined_acl: cdktf.stringToTerraform(this._predefinedAcl),
       role_entity: cdktf.listMapper(cdktf.stringToTerraform, false)(this._roleEntity),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket: {
+        value: cdktf.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_acl: {
+        value: cdktf.stringToHclTerraform(this._defaultAcl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      predefined_acl: {
+        value: cdktf.stringToHclTerraform(this._predefinedAcl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_entity: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._roleEntity),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

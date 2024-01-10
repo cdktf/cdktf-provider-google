@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/bigtable_gc_policy
 // generated from terraform resource schema
 
@@ -108,6 +103,31 @@ export function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAg
   }
 }
 
+
+export function bigtableGcPolicyMaxAgeToHclTerraform(struct?: BigtableGcPolicyMaxAgeOutputReference | BigtableGcPolicyMaxAge): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days: {
+      value: cdktf.numberToHclTerraform(struct!.days),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    duration: {
+      value: cdktf.stringToHclTerraform(struct!.duration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -195,6 +215,25 @@ export function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyM
   return {
     number: cdktf.numberToTerraform(struct!.number),
   }
+}
+
+
+export function bigtableGcPolicyMaxVersionToHclTerraform(struct?: BigtableGcPolicyMaxVersion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    number: {
+      value: cdktf.numberToHclTerraform(struct!.number),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigtableGcPolicyMaxVersionOutputReference extends cdktf.ComplexObject {
@@ -294,6 +333,31 @@ export function bigtableGcPolicyTimeoutsToTerraform(struct?: BigtableGcPolicyTim
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function bigtableGcPolicyTimeoutsToHclTerraform(struct?: BigtableGcPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigtableGcPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -630,5 +694,79 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       max_version: cdktf.listMapper(bigtableGcPolicyMaxVersionToTerraform, true)(this._maxVersion.internalValue),
       timeouts: bigtableGcPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      column_family: {
+        value: cdktf.stringToHclTerraform(this._columnFamily),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deletion_policy: {
+        value: cdktf.stringToHclTerraform(this._deletionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gc_rules: {
+        value: cdktf.stringToHclTerraform(this._gcRules),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_name: {
+        value: cdktf.stringToHclTerraform(this._instanceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mode: {
+        value: cdktf.stringToHclTerraform(this._mode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      table: {
+        value: cdktf.stringToHclTerraform(this._table),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_age: {
+        value: bigtableGcPolicyMaxAgeToHclTerraform(this._maxAge.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigtableGcPolicyMaxAgeList",
+      },
+      max_version: {
+        value: cdktf.listMapperHcl(bigtableGcPolicyMaxVersionToHclTerraform, true)(this._maxVersion.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigtableGcPolicyMaxVersionList",
+      },
+      timeouts: {
+        value: bigtableGcPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BigtableGcPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

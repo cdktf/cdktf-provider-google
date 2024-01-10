@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/vertex_ai_feature_online_store
 // generated from terraform resource schema
 
@@ -94,6 +89,37 @@ export function vertexAiFeatureOnlineStoreBigtableAutoScalingToTerraform(struct?
     max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
     min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
   }
+}
+
+
+export function vertexAiFeatureOnlineStoreBigtableAutoScalingToHclTerraform(struct?: VertexAiFeatureOnlineStoreBigtableAutoScalingOutputReference | VertexAiFeatureOnlineStoreBigtableAutoScaling): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cpu_utilization_target: {
+      value: cdktf.numberToHclTerraform(struct!.cpuUtilizationTarget),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_node_count: {
+      value: cdktf.numberToHclTerraform(struct!.maxNodeCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_node_count: {
+      value: cdktf.numberToHclTerraform(struct!.minNodeCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VertexAiFeatureOnlineStoreBigtableAutoScalingOutputReference extends cdktf.ComplexObject {
@@ -201,6 +227,25 @@ export function vertexAiFeatureOnlineStoreBigtableToTerraform(struct?: VertexAiF
   }
 }
 
+
+export function vertexAiFeatureOnlineStoreBigtableToHclTerraform(struct?: VertexAiFeatureOnlineStoreBigtableOutputReference | VertexAiFeatureOnlineStoreBigtable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    auto_scaling: {
+      value: vertexAiFeatureOnlineStoreBigtableAutoScalingToHclTerraform(struct!.autoScaling),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VertexAiFeatureOnlineStoreBigtableAutoScalingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VertexAiFeatureOnlineStoreBigtableOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -271,6 +316,37 @@ export function vertexAiFeatureOnlineStoreTimeoutsToTerraform(struct?: VertexAiF
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function vertexAiFeatureOnlineStoreTimeoutsToHclTerraform(struct?: VertexAiFeatureOnlineStoreTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VertexAiFeatureOnlineStoreTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -613,5 +689,61 @@ export class VertexAiFeatureOnlineStore extends cdktf.TerraformResource {
       bigtable: vertexAiFeatureOnlineStoreBigtableToTerraform(this._bigtable.internalValue),
       timeouts: vertexAiFeatureOnlineStoreTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      force_destroy: {
+        value: cdktf.booleanToHclTerraform(this._forceDestroy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      bigtable: {
+        value: vertexAiFeatureOnlineStoreBigtableToHclTerraform(this._bigtable.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VertexAiFeatureOnlineStoreBigtableList",
+      },
+      timeouts: {
+        value: vertexAiFeatureOnlineStoreTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VertexAiFeatureOnlineStoreTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/bigquery_reservation
 // generated from terraform resource schema
 
@@ -102,6 +97,25 @@ export function bigqueryReservationAutoscaleToTerraform(struct?: BigqueryReserva
   }
 }
 
+
+export function bigqueryReservationAutoscaleToHclTerraform(struct?: BigqueryReservationAutoscaleOutputReference | BigqueryReservationAutoscale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_slots: {
+      value: cdktf.numberToHclTerraform(struct!.maxSlots),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BigqueryReservationAutoscaleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -180,6 +194,37 @@ export function bigqueryReservationTimeoutsToTerraform(struct?: BigqueryReservat
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function bigqueryReservationTimeoutsToHclTerraform(struct?: BigqueryReservationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BigqueryReservationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -541,5 +586,79 @@ export class BigqueryReservation extends cdktf.TerraformResource {
       autoscale: bigqueryReservationAutoscaleToTerraform(this._autoscale.internalValue),
       timeouts: bigqueryReservationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      concurrency: {
+        value: cdktf.numberToHclTerraform(this._concurrency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      edition: {
+        value: cdktf.stringToHclTerraform(this._edition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ignore_idle_slots: {
+        value: cdktf.booleanToHclTerraform(this._ignoreIdleSlots),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_region_auxiliary: {
+        value: cdktf.booleanToHclTerraform(this._multiRegionAuxiliary),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      slot_capacity: {
+        value: cdktf.numberToHclTerraform(this._slotCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      autoscale: {
+        value: bigqueryReservationAutoscaleToHclTerraform(this._autoscale.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryReservationAutoscaleList",
+      },
+      timeouts: {
+        value: bigqueryReservationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BigqueryReservationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

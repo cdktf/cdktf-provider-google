@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/cloudbuildv2_connection
 // generated from terraform resource schema
 
@@ -89,6 +84,17 @@ export function cloudbuildv2ConnectionInstallationStateToTerraform(struct?: Clou
   }
 }
 
+
+export function cloudbuildv2ConnectionInstallationStateToHclTerraform(struct?: Cloudbuildv2ConnectionInstallationState): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class Cloudbuildv2ConnectionInstallationStateOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -172,6 +178,25 @@ export function cloudbuildv2ConnectionGithubConfigAuthorizerCredentialToTerrafor
   }
 }
 
+
+export function cloudbuildv2ConnectionGithubConfigAuthorizerCredentialToHclTerraform(struct?: Cloudbuildv2ConnectionGithubConfigAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionGithubConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    oauth_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.oauthTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class Cloudbuildv2ConnectionGithubConfigAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -249,6 +274,31 @@ export function cloudbuildv2ConnectionGithubConfigToTerraform(struct?: Cloudbuil
     app_installation_id: cdktf.numberToTerraform(struct!.appInstallationId),
     authorizer_credential: cloudbuildv2ConnectionGithubConfigAuthorizerCredentialToTerraform(struct!.authorizerCredential),
   }
+}
+
+
+export function cloudbuildv2ConnectionGithubConfigToHclTerraform(struct?: Cloudbuildv2ConnectionGithubConfigOutputReference | Cloudbuildv2ConnectionGithubConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    app_installation_id: {
+      value: cdktf.numberToHclTerraform(struct!.appInstallationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    authorizer_credential: {
+      value: cloudbuildv2ConnectionGithubConfigAuthorizerCredentialToHclTerraform(struct!.authorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionGithubConfigAuthorizerCredentialList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class Cloudbuildv2ConnectionGithubConfigOutputReference extends cdktf.ComplexObject {
@@ -338,6 +388,25 @@ export function cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConf
   return {
     service: cdktf.stringToTerraform(struct!.service),
   }
+}
+
+
+export function cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigToHclTerraform(struct?: Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigOutputReference | Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigOutputReference extends cdktf.ComplexObject {
@@ -455,6 +524,67 @@ export function cloudbuildv2ConnectionGithubEnterpriseConfigToTerraform(struct?:
     webhook_secret_secret_version: cdktf.stringToTerraform(struct!.webhookSecretSecretVersion),
     service_directory_config: cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigToTerraform(struct!.serviceDirectoryConfig),
   }
+}
+
+
+export function cloudbuildv2ConnectionGithubEnterpriseConfigToHclTerraform(struct?: Cloudbuildv2ConnectionGithubEnterpriseConfigOutputReference | Cloudbuildv2ConnectionGithubEnterpriseConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    app_id: {
+      value: cdktf.numberToHclTerraform(struct!.appId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    app_installation_id: {
+      value: cdktf.numberToHclTerraform(struct!.appInstallationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    app_slug: {
+      value: cdktf.stringToHclTerraform(struct!.appSlug),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_uri: {
+      value: cdktf.stringToHclTerraform(struct!.hostUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_key_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.privateKeySecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssl_ca: {
+      value: cdktf.stringToHclTerraform(struct!.sslCa),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook_secret_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.webhookSecretSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_directory_config: {
+      value: cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigToHclTerraform(struct!.serviceDirectoryConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class Cloudbuildv2ConnectionGithubEnterpriseConfigOutputReference extends cdktf.ComplexObject {
@@ -677,6 +807,25 @@ export function cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialToTerrafor
   }
 }
 
+
+export function cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialToHclTerraform(struct?: Cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class Cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -748,6 +897,25 @@ export function cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialToTerr
   }
 }
 
+
+export function cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialToHclTerraform(struct?: Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -815,6 +983,25 @@ export function cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigToTerraf
   return {
     service: cdktf.stringToTerraform(struct!.service),
   }
+}
+
+
+export function cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigToHclTerraform(struct?: Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigOutputReference | Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigOutputReference extends cdktf.ComplexObject {
@@ -916,6 +1103,55 @@ export function cloudbuildv2ConnectionGitlabConfigToTerraform(struct?: Cloudbuil
     read_authorizer_credential: cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialToTerraform(struct!.readAuthorizerCredential),
     service_directory_config: cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigToTerraform(struct!.serviceDirectoryConfig),
   }
+}
+
+
+export function cloudbuildv2ConnectionGitlabConfigToHclTerraform(struct?: Cloudbuildv2ConnectionGitlabConfigOutputReference | Cloudbuildv2ConnectionGitlabConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host_uri: {
+      value: cdktf.stringToHclTerraform(struct!.hostUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssl_ca: {
+      value: cdktf.stringToHclTerraform(struct!.sslCa),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook_secret_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.webhookSecretSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    authorizer_credential: {
+      value: cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialToHclTerraform(struct!.authorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialList",
+    },
+    read_authorizer_credential: {
+      value: cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialToHclTerraform(struct!.readAuthorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialList",
+    },
+    service_directory_config: {
+      value: cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigToHclTerraform(struct!.serviceDirectoryConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class Cloudbuildv2ConnectionGitlabConfigOutputReference extends cdktf.ComplexObject {
@@ -1097,6 +1333,37 @@ export function cloudbuildv2ConnectionTimeoutsToTerraform(struct?: Cloudbuildv2C
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cloudbuildv2ConnectionTimeoutsToHclTerraform(struct?: Cloudbuildv2ConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class Cloudbuildv2ConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1472,5 +1739,73 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
       gitlab_config: cloudbuildv2ConnectionGitlabConfigToTerraform(this._gitlabConfig.internalValue),
       timeouts: cloudbuildv2ConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      annotations: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._annotations),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      github_config: {
+        value: cloudbuildv2ConnectionGithubConfigToHclTerraform(this._githubConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "Cloudbuildv2ConnectionGithubConfigList",
+      },
+      github_enterprise_config: {
+        value: cloudbuildv2ConnectionGithubEnterpriseConfigToHclTerraform(this._githubEnterpriseConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "Cloudbuildv2ConnectionGithubEnterpriseConfigList",
+      },
+      gitlab_config: {
+        value: cloudbuildv2ConnectionGitlabConfigToHclTerraform(this._gitlabConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "Cloudbuildv2ConnectionGitlabConfigList",
+      },
+      timeouts: {
+        value: cloudbuildv2ConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "Cloudbuildv2ConnectionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/filestore_instance
 // generated from terraform resource schema
 
@@ -142,6 +137,49 @@ export function filestoreInstanceFileSharesNfsExportOptionsToTerraform(struct?: 
     ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipRanges),
     squash_mode: cdktf.stringToTerraform(struct!.squashMode),
   }
+}
+
+
+export function filestoreInstanceFileSharesNfsExportOptionsToHclTerraform(struct?: FilestoreInstanceFileSharesNfsExportOptions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access_mode: {
+      value: cdktf.stringToHclTerraform(struct!.accessMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    anon_gid: {
+      value: cdktf.numberToHclTerraform(struct!.anonGid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    anon_uid: {
+      value: cdktf.numberToHclTerraform(struct!.anonUid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ip_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ipRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    squash_mode: {
+      value: cdktf.stringToHclTerraform(struct!.squashMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FilestoreInstanceFileSharesNfsExportOptionsOutputReference extends cdktf.ComplexObject {
@@ -346,6 +384,37 @@ export function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanc
   }
 }
 
+
+export function filestoreInstanceFileSharesToHclTerraform(struct?: FilestoreInstanceFileSharesOutputReference | FilestoreInstanceFileShares): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    capacity_gb: {
+      value: cdktf.numberToHclTerraform(struct!.capacityGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    nfs_export_options: {
+      value: cdktf.listMapperHcl(filestoreInstanceFileSharesNfsExportOptionsToHclTerraform, true)(struct!.nfsExportOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FilestoreInstanceFileSharesNfsExportOptionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -480,6 +549,43 @@ export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceN
     network: cdktf.stringToTerraform(struct!.network),
     reserved_ip_range: cdktf.stringToTerraform(struct!.reservedIpRange),
   }
+}
+
+
+export function filestoreInstanceNetworksToHclTerraform(struct?: FilestoreInstanceNetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    connect_mode: {
+      value: cdktf.stringToHclTerraform(struct!.connectMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    modes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.modes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    network: {
+      value: cdktf.stringToHclTerraform(struct!.network),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reserved_ip_range: {
+      value: cdktf.stringToHclTerraform(struct!.reservedIpRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FilestoreInstanceNetworksOutputReference extends cdktf.ComplexObject {
@@ -652,6 +758,37 @@ export function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceT
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function filestoreInstanceTimeoutsToHclTerraform(struct?: FilestoreInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1047,5 +1184,85 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       networks: cdktf.listMapper(filestoreInstanceNetworksToTerraform, true)(this._networks.internalValue),
       timeouts: filestoreInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_name: {
+        value: cdktf.stringToHclTerraform(this._kmsKeyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tier: {
+        value: cdktf.stringToHclTerraform(this._tier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      file_shares: {
+        value: filestoreInstanceFileSharesToHclTerraform(this._fileShares.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FilestoreInstanceFileSharesList",
+      },
+      networks: {
+        value: cdktf.listMapperHcl(filestoreInstanceNetworksToHclTerraform, true)(this._networks.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FilestoreInstanceNetworksList",
+      },
+      timeouts: {
+        value: filestoreInstanceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "FilestoreInstanceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

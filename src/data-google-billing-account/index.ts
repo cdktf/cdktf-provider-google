@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/billing_account
 // generated from terraform resource schema
 
@@ -201,5 +196,43 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
       lookup_projects: cdktf.booleanToTerraform(this._lookupProjects),
       open: cdktf.booleanToTerraform(this._open),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      billing_account: {
+        value: cdktf.stringToHclTerraform(this._billingAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lookup_projects: {
+        value: cdktf.booleanToHclTerraform(this._lookupProjects),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      open: {
+        value: cdktf.booleanToHclTerraform(this._open),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

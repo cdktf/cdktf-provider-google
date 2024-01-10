@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/active_directory_domain_trust
 // generated from terraform resource schema
 
@@ -98,6 +93,37 @@ export function activeDirectoryDomainTrustTimeoutsToTerraform(struct?: ActiveDir
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function activeDirectoryDomainTrustTimeoutsToHclTerraform(struct?: ActiveDirectoryDomainTrustTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ActiveDirectoryDomainTrustTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -429,5 +455,73 @@ export class ActiveDirectoryDomainTrust extends cdktf.TerraformResource {
       trust_type: cdktf.stringToTerraform(this._trustType),
       timeouts: activeDirectoryDomainTrustTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      domain: {
+        value: cdktf.stringToHclTerraform(this._domain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      selective_authentication: {
+        value: cdktf.booleanToHclTerraform(this._selectiveAuthentication),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      target_dns_ip_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._targetDnsIpAddresses),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      target_domain_name: {
+        value: cdktf.stringToHclTerraform(this._targetDomainName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trust_direction: {
+        value: cdktf.stringToHclTerraform(this._trustDirection),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trust_handshake_secret: {
+        value: cdktf.stringToHclTerraform(this._trustHandshakeSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trust_type: {
+        value: cdktf.stringToHclTerraform(this._trustType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: activeDirectoryDomainTrustTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ActiveDirectoryDomainTrustTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

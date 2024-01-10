@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/app_engine_domain_mapping
 // generated from terraform resource schema
 
@@ -59,6 +54,17 @@ export function appEngineDomainMappingResourceRecordsToTerraform(struct?: AppEng
   }
   return {
   }
+}
+
+
+export function appEngineDomainMappingResourceRecordsToHclTerraform(struct?: AppEngineDomainMappingResourceRecords): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class AppEngineDomainMappingResourceRecordsOutputReference extends cdktf.ComplexObject {
@@ -153,6 +159,31 @@ export function appEngineDomainMappingSslSettingsToTerraform(struct?: AppEngineD
     certificate_id: cdktf.stringToTerraform(struct!.certificateId),
     ssl_management_type: cdktf.stringToTerraform(struct!.sslManagementType),
   }
+}
+
+
+export function appEngineDomainMappingSslSettingsToHclTerraform(struct?: AppEngineDomainMappingSslSettingsOutputReference | AppEngineDomainMappingSslSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.certificateId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssl_management_type: {
+      value: cdktf.stringToHclTerraform(struct!.sslManagementType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.ComplexObject {
@@ -252,6 +283,37 @@ export function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDoma
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function appEngineDomainMappingTimeoutsToHclTerraform(struct?: AppEngineDomainMappingTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -537,5 +599,49 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
       ssl_settings: appEngineDomainMappingSslSettingsToTerraform(this._sslSettings.internalValue),
       timeouts: appEngineDomainMappingTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      domain_name: {
+        value: cdktf.stringToHclTerraform(this._domainName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      override_strategy: {
+        value: cdktf.stringToHclTerraform(this._overrideStrategy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ssl_settings: {
+        value: appEngineDomainMappingSslSettingsToHclTerraform(this._sslSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineDomainMappingSslSettingsList",
+      },
+      timeouts: {
+        value: appEngineDomainMappingTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppEngineDomainMappingTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

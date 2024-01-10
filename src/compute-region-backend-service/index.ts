@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_region_backend_service
 // generated from terraform resource schema
 
@@ -415,6 +410,91 @@ export function computeRegionBackendServiceBackendToTerraform(struct?: ComputeRe
   }
 }
 
+
+export function computeRegionBackendServiceBackendToHclTerraform(struct?: ComputeRegionBackendServiceBackend | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    balancing_mode: {
+      value: cdktf.stringToHclTerraform(struct!.balancingMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    capacity_scaler: {
+      value: cdktf.numberToHclTerraform(struct!.capacityScaler),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    failover: {
+      value: cdktf.booleanToHclTerraform(struct!.failover),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    group: {
+      value: cdktf.stringToHclTerraform(struct!.group),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_connections: {
+      value: cdktf.numberToHclTerraform(struct!.maxConnections),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_connections_per_endpoint: {
+      value: cdktf.numberToHclTerraform(struct!.maxConnectionsPerEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_connections_per_instance: {
+      value: cdktf.numberToHclTerraform(struct!.maxConnectionsPerInstance),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_rate: {
+      value: cdktf.numberToHclTerraform(struct!.maxRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_rate_per_endpoint: {
+      value: cdktf.numberToHclTerraform(struct!.maxRatePerEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_rate_per_instance: {
+      value: cdktf.numberToHclTerraform(struct!.maxRatePerInstance),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_utilization: {
+      value: cdktf.numberToHclTerraform(struct!.maxUtilization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceBackendOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -804,6 +884,55 @@ export function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(st
   }
 }
 
+
+export function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToHclTerraform(struct?: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference | ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    include_host: {
+      value: cdktf.booleanToHclTerraform(struct!.includeHost),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    include_named_cookies: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includeNamedCookies),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    include_protocol: {
+      value: cdktf.booleanToHclTerraform(struct!.includeProtocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    include_query_string: {
+      value: cdktf.booleanToHclTerraform(struct!.includeQueryString),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    query_string_blacklist: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.queryStringBlacklist),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    query_string_whitelist: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.queryStringWhitelist),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -982,6 +1111,25 @@ export function computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerra
   }
 }
 
+
+export function computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToHclTerraform(struct?: ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    code: {
+      value: cdktf.numberToHclTerraform(struct!.code),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1146,6 +1294,73 @@ export function computeRegionBackendServiceCdnPolicyToTerraform(struct?: Compute
     cache_key_policy: computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
     negative_caching_policy: cdktf.listMapper(computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToTerraform, true)(struct!.negativeCachingPolicy),
   }
+}
+
+
+export function computeRegionBackendServiceCdnPolicyToHclTerraform(struct?: ComputeRegionBackendServiceCdnPolicyOutputReference | ComputeRegionBackendServiceCdnPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cache_mode: {
+      value: cdktf.stringToHclTerraform(struct!.cacheMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_ttl: {
+      value: cdktf.numberToHclTerraform(struct!.clientTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    default_ttl: {
+      value: cdktf.numberToHclTerraform(struct!.defaultTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_ttl: {
+      value: cdktf.numberToHclTerraform(struct!.maxTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    negative_caching: {
+      value: cdktf.booleanToHclTerraform(struct!.negativeCaching),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    serve_while_stale: {
+      value: cdktf.numberToHclTerraform(struct!.serveWhileStale),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    signed_url_cache_max_age_sec: {
+      value: cdktf.numberToHclTerraform(struct!.signedUrlCacheMaxAgeSec),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    cache_key_policy: {
+      value: computeRegionBackendServiceCdnPolicyCacheKeyPolicyToHclTerraform(struct!.cacheKeyPolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyList",
+    },
+    negative_caching_policy: {
+      value: cdktf.listMapperHcl(computeRegionBackendServiceCdnPolicyNegativeCachingPolicyToHclTerraform, true)(struct!.negativeCachingPolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeRegionBackendServiceCdnPolicyNegativeCachingPolicyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.ComplexObject {
@@ -1426,6 +1641,49 @@ export function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: C
   }
 }
 
+
+export function computeRegionBackendServiceCircuitBreakersToHclTerraform(struct?: ComputeRegionBackendServiceCircuitBreakersOutputReference | ComputeRegionBackendServiceCircuitBreakers): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_connections: {
+      value: cdktf.numberToHclTerraform(struct!.maxConnections),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_pending_requests: {
+      value: cdktf.numberToHclTerraform(struct!.maxPendingRequests),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_requests: {
+      value: cdktf.numberToHclTerraform(struct!.maxRequests),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_requests_per_connection: {
+      value: cdktf.numberToHclTerraform(struct!.maxRequestsPerConnection),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_retries: {
+      value: cdktf.numberToHclTerraform(struct!.maxRetries),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1592,6 +1850,31 @@ export function computeRegionBackendServiceConsistentHashHttpCookieTtlToTerrafor
   }
 }
 
+
+export function computeRegionBackendServiceConsistentHashHttpCookieTtlToHclTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookieTtl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1690,6 +1973,37 @@ export function computeRegionBackendServiceConsistentHashHttpCookieToTerraform(s
     path: cdktf.stringToTerraform(struct!.path),
     ttl: computeRegionBackendServiceConsistentHashHttpCookieTtlToTerraform(struct!.ttl),
   }
+}
+
+
+export function computeRegionBackendServiceConsistentHashHttpCookieToHclTerraform(struct?: ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference | ComputeRegionBackendServiceConsistentHashHttpCookie): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ttl: {
+      value: computeRegionBackendServiceConsistentHashHttpCookieTtlToHclTerraform(struct!.ttl),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeRegionBackendServiceConsistentHashHttpCookieTtlList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference extends cdktf.ComplexObject {
@@ -1821,6 +2135,37 @@ export function computeRegionBackendServiceConsistentHashToTerraform(struct?: Co
     minimum_ring_size: cdktf.numberToTerraform(struct!.minimumRingSize),
     http_cookie: computeRegionBackendServiceConsistentHashHttpCookieToTerraform(struct!.httpCookie),
   }
+}
+
+
+export function computeRegionBackendServiceConsistentHashToHclTerraform(struct?: ComputeRegionBackendServiceConsistentHashOutputReference | ComputeRegionBackendServiceConsistentHash): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    http_header_name: {
+      value: cdktf.stringToHclTerraform(struct!.httpHeaderName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    minimum_ring_size: {
+      value: cdktf.numberToHclTerraform(struct!.minimumRingSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    http_cookie: {
+      value: computeRegionBackendServiceConsistentHashHttpCookieToHclTerraform(struct!.httpCookie),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeRegionBackendServiceConsistentHashHttpCookieList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionBackendServiceConsistentHashOutputReference extends cdktf.ComplexObject {
@@ -1965,6 +2310,37 @@ export function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: Co
   }
 }
 
+
+export function computeRegionBackendServiceFailoverPolicyToHclTerraform(struct?: ComputeRegionBackendServiceFailoverPolicyOutputReference | ComputeRegionBackendServiceFailoverPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disable_connection_drain_on_failover: {
+      value: cdktf.booleanToHclTerraform(struct!.disableConnectionDrainOnFailover),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    drop_traffic_if_unhealthy: {
+      value: cdktf.booleanToHclTerraform(struct!.dropTrafficIfUnhealthy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    failover_ratio: {
+      value: cdktf.numberToHclTerraform(struct!.failoverRatio),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2083,6 +2459,31 @@ export function computeRegionBackendServiceIapToTerraform(struct?: ComputeRegion
   }
 }
 
+
+export function computeRegionBackendServiceIapToHclTerraform(struct?: ComputeRegionBackendServiceIapOutputReference | ComputeRegionBackendServiceIap): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    oauth2_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.oauth2ClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    oauth2_client_secret: {
+      value: cdktf.stringToHclTerraform(struct!.oauth2ClientSecret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceIapOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2179,6 +2580,31 @@ export function computeRegionBackendServiceLogConfigToTerraform(struct?: Compute
     enable: cdktf.booleanToTerraform(struct!.enable),
     sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
   }
+}
+
+
+export function computeRegionBackendServiceLogConfigToHclTerraform(struct?: ComputeRegionBackendServiceLogConfigOutputReference | ComputeRegionBackendServiceLogConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable: {
+      value: cdktf.booleanToHclTerraform(struct!.enable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    sample_rate: {
+      value: cdktf.numberToHclTerraform(struct!.sampleRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.ComplexObject {
@@ -2280,6 +2706,31 @@ export function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTer
   }
 }
 
+
+export function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToHclTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference | ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2374,6 +2825,31 @@ export function computeRegionBackendServiceOutlierDetectionIntervalToTerraform(s
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function computeRegionBackendServiceOutlierDetectionIntervalToHclTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference | ComputeRegionBackendServiceOutlierDetectionInterval): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference extends cdktf.ComplexObject {
@@ -2553,6 +3029,85 @@ export function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: 
     base_ejection_time: computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct!.baseEjectionTime),
     interval: computeRegionBackendServiceOutlierDetectionIntervalToTerraform(struct!.interval),
   }
+}
+
+
+export function computeRegionBackendServiceOutlierDetectionToHclTerraform(struct?: ComputeRegionBackendServiceOutlierDetectionOutputReference | ComputeRegionBackendServiceOutlierDetection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    consecutive_errors: {
+      value: cdktf.numberToHclTerraform(struct!.consecutiveErrors),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    consecutive_gateway_failure: {
+      value: cdktf.numberToHclTerraform(struct!.consecutiveGatewayFailure),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    enforcing_consecutive_errors: {
+      value: cdktf.numberToHclTerraform(struct!.enforcingConsecutiveErrors),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    enforcing_consecutive_gateway_failure: {
+      value: cdktf.numberToHclTerraform(struct!.enforcingConsecutiveGatewayFailure),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    enforcing_success_rate: {
+      value: cdktf.numberToHclTerraform(struct!.enforcingSuccessRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_ejection_percent: {
+      value: cdktf.numberToHclTerraform(struct!.maxEjectionPercent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    success_rate_minimum_hosts: {
+      value: cdktf.numberToHclTerraform(struct!.successRateMinimumHosts),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    success_rate_request_volume: {
+      value: cdktf.numberToHclTerraform(struct!.successRateRequestVolume),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    success_rate_stdev_factor: {
+      value: cdktf.numberToHclTerraform(struct!.successRateStdevFactor),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    base_ejection_time: {
+      value: computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToHclTerraform(struct!.baseEjectionTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeList",
+    },
+    interval: {
+      value: computeRegionBackendServiceOutlierDetectionIntervalToHclTerraform(struct!.interval),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeRegionBackendServiceOutlierDetectionIntervalList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends cdktf.ComplexObject {
@@ -2848,6 +3403,37 @@ export function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeR
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeRegionBackendServiceTimeoutsToHclTerraform(struct?: ComputeRegionBackendServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -3479,5 +4065,163 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       outlier_detection: computeRegionBackendServiceOutlierDetectionToTerraform(this._outlierDetection.internalValue),
       timeouts: computeRegionBackendServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      affinity_cookie_ttl_sec: {
+        value: cdktf.numberToHclTerraform(this._affinityCookieTtlSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      connection_draining_timeout_sec: {
+        value: cdktf.numberToHclTerraform(this._connectionDrainingTimeoutSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_cdn: {
+        value: cdktf.booleanToHclTerraform(this._enableCdn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      health_checks: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._healthChecks),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      load_balancing_scheme: {
+        value: cdktf.stringToHclTerraform(this._loadBalancingScheme),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      locality_lb_policy: {
+        value: cdktf.stringToHclTerraform(this._localityLbPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      port_name: {
+        value: cdktf.stringToHclTerraform(this._portName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      protocol: {
+        value: cdktf.stringToHclTerraform(this._protocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      session_affinity: {
+        value: cdktf.stringToHclTerraform(this._sessionAffinity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeout_sec: {
+        value: cdktf.numberToHclTerraform(this._timeoutSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      backend: {
+        value: cdktf.listMapperHcl(computeRegionBackendServiceBackendToHclTerraform, true)(this._backend.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ComputeRegionBackendServiceBackendList",
+      },
+      cdn_policy: {
+        value: computeRegionBackendServiceCdnPolicyToHclTerraform(this._cdnPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionBackendServiceCdnPolicyList",
+      },
+      circuit_breakers: {
+        value: computeRegionBackendServiceCircuitBreakersToHclTerraform(this._circuitBreakers.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionBackendServiceCircuitBreakersList",
+      },
+      consistent_hash: {
+        value: computeRegionBackendServiceConsistentHashToHclTerraform(this._consistentHash.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionBackendServiceConsistentHashList",
+      },
+      failover_policy: {
+        value: computeRegionBackendServiceFailoverPolicyToHclTerraform(this._failoverPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionBackendServiceFailoverPolicyList",
+      },
+      iap: {
+        value: computeRegionBackendServiceIapToHclTerraform(this._iap.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionBackendServiceIapList",
+      },
+      log_config: {
+        value: computeRegionBackendServiceLogConfigToHclTerraform(this._logConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionBackendServiceLogConfigList",
+      },
+      outlier_detection: {
+        value: computeRegionBackendServiceOutlierDetectionToHclTerraform(this._outlierDetection.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRegionBackendServiceOutlierDetectionList",
+      },
+      timeouts: {
+        value: computeRegionBackendServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeRegionBackendServiceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

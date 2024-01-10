@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/clouddeploy_target
 // generated from terraform resource schema
 
@@ -129,6 +124,25 @@ export function clouddeployTargetAnthosClusterToTerraform(struct?: ClouddeployTa
   }
 }
 
+
+export function clouddeployTargetAnthosClusterToHclTerraform(struct?: ClouddeployTargetAnthosClusterOutputReference | ClouddeployTargetAnthosCluster): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    membership: {
+      value: cdktf.stringToHclTerraform(struct!.membership),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ClouddeployTargetAnthosClusterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -222,6 +236,49 @@ export function clouddeployTargetExecutionConfigsToTerraform(struct?: Clouddeplo
     usages: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.usages),
     worker_pool: cdktf.stringToTerraform(struct!.workerPool),
   }
+}
+
+
+export function clouddeployTargetExecutionConfigsToHclTerraform(struct?: ClouddeployTargetExecutionConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    artifact_storage: {
+      value: cdktf.stringToHclTerraform(struct!.artifactStorage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    execution_timeout: {
+      value: cdktf.stringToHclTerraform(struct!.executionTimeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_account: {
+      value: cdktf.stringToHclTerraform(struct!.serviceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    usages: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.usages),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    worker_pool: {
+      value: cdktf.stringToHclTerraform(struct!.workerPool),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.ComplexObject {
@@ -415,6 +472,31 @@ export function clouddeployTargetGkeToTerraform(struct?: ClouddeployTargetGkeOut
   }
 }
 
+
+export function clouddeployTargetGkeToHclTerraform(struct?: ClouddeployTargetGkeOutputReference | ClouddeployTargetGke): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster: {
+      value: cdktf.stringToHclTerraform(struct!.cluster),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    internal_ip: {
+      value: cdktf.booleanToHclTerraform(struct!.internalIp),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ClouddeployTargetGkeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -504,6 +586,25 @@ export function clouddeployTargetMultiTargetToTerraform(struct?: ClouddeployTarg
   }
 }
 
+
+export function clouddeployTargetMultiTargetToHclTerraform(struct?: ClouddeployTargetMultiTargetOutputReference | ClouddeployTargetMultiTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    target_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.targetIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ClouddeployTargetMultiTargetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -566,6 +667,25 @@ export function clouddeployTargetRunToTerraform(struct?: ClouddeployTargetRunOut
   return {
     location: cdktf.stringToTerraform(struct!.location),
   }
+}
+
+
+export function clouddeployTargetRunToHclTerraform(struct?: ClouddeployTargetRunOutputReference | ClouddeployTargetRun): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ClouddeployTargetRunOutputReference extends cdktf.ComplexObject {
@@ -638,6 +758,37 @@ export function clouddeployTargetTimeoutsToTerraform(struct?: ClouddeployTargetT
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function clouddeployTargetTimeoutsToHclTerraform(struct?: ClouddeployTargetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ClouddeployTargetTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1114,5 +1265,103 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       run: clouddeployTargetRunToTerraform(this._run.internalValue),
       timeouts: clouddeployTargetTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      annotations: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._annotations),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      deploy_parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._deployParameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      require_approval: {
+        value: cdktf.booleanToHclTerraform(this._requireApproval),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      anthos_cluster: {
+        value: clouddeployTargetAnthosClusterToHclTerraform(this._anthosCluster.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ClouddeployTargetAnthosClusterList",
+      },
+      execution_configs: {
+        value: cdktf.listMapperHcl(clouddeployTargetExecutionConfigsToHclTerraform, true)(this._executionConfigs.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ClouddeployTargetExecutionConfigsList",
+      },
+      gke: {
+        value: clouddeployTargetGkeToHclTerraform(this._gke.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ClouddeployTargetGkeList",
+      },
+      multi_target: {
+        value: clouddeployTargetMultiTargetToHclTerraform(this._multiTarget.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ClouddeployTargetMultiTargetList",
+      },
+      run: {
+        value: clouddeployTargetRunToHclTerraform(this._run.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ClouddeployTargetRunList",
+      },
+      timeouts: {
+        value: clouddeployTargetTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ClouddeployTargetTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/app_engine_service_network_settings
 // generated from terraform resource schema
 
@@ -59,6 +54,25 @@ export function appEngineServiceNetworkSettingsNetworkSettingsToTerraform(struct
   return {
     ingress_traffic_allowed: cdktf.stringToTerraform(struct!.ingressTrafficAllowed),
   }
+}
+
+
+export function appEngineServiceNetworkSettingsNetworkSettingsToHclTerraform(struct?: AppEngineServiceNetworkSettingsNetworkSettingsOutputReference | AppEngineServiceNetworkSettingsNetworkSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ingress_traffic_allowed: {
+      value: cdktf.stringToHclTerraform(struct!.ingressTrafficAllowed),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference extends cdktf.ComplexObject {
@@ -134,6 +148,37 @@ export function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppE
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function appEngineServiceNetworkSettingsTimeoutsToHclTerraform(struct?: AppEngineServiceNetworkSettingsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -387,5 +432,43 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
       network_settings: appEngineServiceNetworkSettingsNetworkSettingsToTerraform(this._networkSettings.internalValue),
       timeouts: appEngineServiceNetworkSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service: {
+        value: cdktf.stringToHclTerraform(this._service),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_settings: {
+        value: appEngineServiceNetworkSettingsNetworkSettingsToHclTerraform(this._networkSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppEngineServiceNetworkSettingsNetworkSettingsList",
+      },
+      timeouts: {
+        value: appEngineServiceNetworkSettingsTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppEngineServiceNetworkSettingsTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

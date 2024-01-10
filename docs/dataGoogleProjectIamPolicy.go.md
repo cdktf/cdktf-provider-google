@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectiampolicy"
 
 datagoogleprojectiampolicy.NewDataGoogleProjectIamPolicy(scope Construct, id *string, config DataGoogleProjectIamPolicyConfig) DataGoogleProjectIamPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -119,6 +120,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.toMetadata"></a>
 
@@ -274,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectiampolicy"
 
 datagoogleprojectiampolicy.DataGoogleProjectIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -306,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectiampolicy"
 
 datagoogleprojectiampolicy.DataGoogleProjectIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -320,7 +329,7 @@ datagoogleprojectiampolicy.DataGoogleProjectIamPolicy_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectiampolicy"
 
 datagoogleprojectiampolicy.DataGoogleProjectIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -334,7 +343,7 @@ datagoogleprojectiampolicy.DataGoogleProjectIamPolicy_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectiampolicy"
 
 datagoogleprojectiampolicy.DataGoogleProjectIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -607,7 +616,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleProjectIamPolicy.DataGoogleProjectIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/datagoogleprojectiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectiampolicy"
 
 &datagoogleprojectiampolicy.DataGoogleProjectIamPolicyConfig {
 	Connection: interface{},

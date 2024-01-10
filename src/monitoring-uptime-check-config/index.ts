@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/monitoring_uptime_check_config
 // generated from terraform resource schema
 
@@ -128,6 +123,31 @@ export function monitoringUptimeCheckConfigContentMatchersJsonPathMatcherToTerra
   }
 }
 
+
+export function monitoringUptimeCheckConfigContentMatchersJsonPathMatcherToHclTerraform(struct?: MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference | MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    json_matcher: {
+      value: cdktf.stringToHclTerraform(struct!.jsonMatcher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    json_path: {
+      value: cdktf.stringToHclTerraform(struct!.jsonPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -226,6 +246,37 @@ export function monitoringUptimeCheckConfigContentMatchersToTerraform(struct?: M
     matcher: cdktf.stringToTerraform(struct!.matcher),
     json_path_matcher: monitoringUptimeCheckConfigContentMatchersJsonPathMatcherToTerraform(struct!.jsonPathMatcher),
   }
+}
+
+
+export function monitoringUptimeCheckConfigContentMatchersToHclTerraform(struct?: MonitoringUptimeCheckConfigContentMatchers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    matcher: {
+      value: cdktf.stringToHclTerraform(struct!.matcher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    json_path_matcher: {
+      value: monitoringUptimeCheckConfigContentMatchersJsonPathMatcherToHclTerraform(struct!.jsonPathMatcher),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringUptimeCheckConfigContentMatchersOutputReference extends cdktf.ComplexObject {
@@ -375,6 +426,31 @@ export function monitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesT
   }
 }
 
+
+export function monitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesToHclTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    status_class: {
+      value: cdktf.stringToHclTerraform(struct!.statusClass),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    status_value: {
+      value: cdktf.numberToHclTerraform(struct!.statusValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -503,6 +579,31 @@ export function monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform(struct?:
   }
 }
 
+
+export function monitoringUptimeCheckConfigHttpCheckAuthInfoToHclTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference | MonitoringUptimeCheckConfigHttpCheckAuthInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -584,6 +685,25 @@ export function monitoringUptimeCheckConfigHttpCheckPingConfigToTerraform(struct
   return {
     pings_count: cdktf.numberToTerraform(struct!.pingsCount),
   }
+}
+
+
+export function monitoringUptimeCheckConfigHttpCheckPingConfigToHclTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckPingConfigOutputReference | MonitoringUptimeCheckConfigHttpCheckPingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pings_count: {
+      value: cdktf.numberToHclTerraform(struct!.pingsCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringUptimeCheckConfigHttpCheckPingConfigOutputReference extends cdktf.ComplexObject {
@@ -732,6 +852,97 @@ export function monitoringUptimeCheckConfigHttpCheckToTerraform(struct?: Monitor
     auth_info: monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform(struct!.authInfo),
     ping_config: monitoringUptimeCheckConfigHttpCheckPingConfigToTerraform(struct!.pingConfig),
   }
+}
+
+
+export function monitoringUptimeCheckConfigHttpCheckToHclTerraform(struct?: MonitoringUptimeCheckConfigHttpCheckOutputReference | MonitoringUptimeCheckConfigHttpCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body: {
+      value: cdktf.stringToHclTerraform(struct!.body),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    content_type: {
+      value: cdktf.stringToHclTerraform(struct!.contentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    custom_content_type: {
+      value: cdktf.stringToHclTerraform(struct!.customContentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    headers: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.headers),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    mask_headers: {
+      value: cdktf.booleanToHclTerraform(struct!.maskHeaders),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    request_method: {
+      value: cdktf.stringToHclTerraform(struct!.requestMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_ssl: {
+      value: cdktf.booleanToHclTerraform(struct!.useSsl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    validate_ssl: {
+      value: cdktf.booleanToHclTerraform(struct!.validateSsl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    accepted_response_status_codes: {
+      value: cdktf.listMapperHcl(monitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesToHclTerraform, true)(struct!.acceptedResponseStatusCodes),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesList",
+    },
+    auth_info: {
+      value: monitoringUptimeCheckConfigHttpCheckAuthInfoToHclTerraform(struct!.authInfo),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringUptimeCheckConfigHttpCheckAuthInfoList",
+    },
+    ping_config: {
+      value: monitoringUptimeCheckConfigHttpCheckPingConfigToHclTerraform(struct!.pingConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringUptimeCheckConfigHttpCheckPingConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.ComplexObject {
@@ -1072,6 +1283,31 @@ export function monitoringUptimeCheckConfigMonitoredResourceToTerraform(struct?:
   }
 }
 
+
+export function monitoringUptimeCheckConfigMonitoredResourceToHclTerraform(struct?: MonitoringUptimeCheckConfigMonitoredResourceOutputReference | MonitoringUptimeCheckConfigMonitoredResource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitoringUptimeCheckConfigMonitoredResourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1160,6 +1396,31 @@ export function monitoringUptimeCheckConfigResourceGroupToTerraform(struct?: Mon
     group_id: cdktf.stringToTerraform(struct!.groupId),
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
   }
+}
+
+
+export function monitoringUptimeCheckConfigResourceGroupToHclTerraform(struct?: MonitoringUptimeCheckConfigResourceGroupOutputReference | MonitoringUptimeCheckConfigResourceGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    group_id: {
+      value: cdktf.stringToHclTerraform(struct!.groupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_type: {
+      value: cdktf.stringToHclTerraform(struct!.resourceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdktf.ComplexObject {
@@ -1251,6 +1512,25 @@ export function monitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2ToTerr
   }
 }
 
+
+export function monitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2ToHclTerraform(struct?: MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference | MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1315,6 +1595,25 @@ export function monitoringUptimeCheckConfigSyntheticMonitorToTerraform(struct?: 
   }
 }
 
+
+export function monitoringUptimeCheckConfigSyntheticMonitorToHclTerraform(struct?: MonitoringUptimeCheckConfigSyntheticMonitorOutputReference | MonitoringUptimeCheckConfigSyntheticMonitor): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cloud_function_v2: {
+      value: monitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2ToHclTerraform(struct!.cloudFunctionV2),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2List",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitoringUptimeCheckConfigSyntheticMonitorOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1377,6 +1676,25 @@ export function monitoringUptimeCheckConfigTcpCheckPingConfigToTerraform(struct?
   return {
     pings_count: cdktf.numberToTerraform(struct!.pingsCount),
   }
+}
+
+
+export function monitoringUptimeCheckConfigTcpCheckPingConfigToHclTerraform(struct?: MonitoringUptimeCheckConfigTcpCheckPingConfigOutputReference | MonitoringUptimeCheckConfigTcpCheckPingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pings_count: {
+      value: cdktf.numberToHclTerraform(struct!.pingsCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringUptimeCheckConfigTcpCheckPingConfigOutputReference extends cdktf.ComplexObject {
@@ -1448,6 +1766,31 @@ export function monitoringUptimeCheckConfigTcpCheckToTerraform(struct?: Monitori
     port: cdktf.numberToTerraform(struct!.port),
     ping_config: monitoringUptimeCheckConfigTcpCheckPingConfigToTerraform(struct!.pingConfig),
   }
+}
+
+
+export function monitoringUptimeCheckConfigTcpCheckToHclTerraform(struct?: MonitoringUptimeCheckConfigTcpCheckOutputReference | MonitoringUptimeCheckConfigTcpCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ping_config: {
+      value: monitoringUptimeCheckConfigTcpCheckPingConfigToHclTerraform(struct!.pingConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringUptimeCheckConfigTcpCheckPingConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.ComplexObject {
@@ -1542,6 +1885,37 @@ export function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: Monitori
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitoringUptimeCheckConfigTimeoutsToHclTerraform(struct?: MonitoringUptimeCheckConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1985,5 +2359,103 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       tcp_check: monitoringUptimeCheckConfigTcpCheckToTerraform(this._tcpCheck.internalValue),
       timeouts: monitoringUptimeCheckConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      checker_type: {
+        value: cdktf.stringToHclTerraform(this._checkerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      period: {
+        value: cdktf.stringToHclTerraform(this._period),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      selected_regions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._selectedRegions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      timeout: {
+        value: cdktf.stringToHclTerraform(this._timeout),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._userLabels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      content_matchers: {
+        value: cdktf.listMapperHcl(monitoringUptimeCheckConfigContentMatchersToHclTerraform, true)(this._contentMatchers.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitoringUptimeCheckConfigContentMatchersList",
+      },
+      http_check: {
+        value: monitoringUptimeCheckConfigHttpCheckToHclTerraform(this._httpCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitoringUptimeCheckConfigHttpCheckList",
+      },
+      monitored_resource: {
+        value: monitoringUptimeCheckConfigMonitoredResourceToHclTerraform(this._monitoredResource.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitoringUptimeCheckConfigMonitoredResourceList",
+      },
+      resource_group: {
+        value: monitoringUptimeCheckConfigResourceGroupToHclTerraform(this._resourceGroup.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitoringUptimeCheckConfigResourceGroupList",
+      },
+      synthetic_monitor: {
+        value: monitoringUptimeCheckConfigSyntheticMonitorToHclTerraform(this._syntheticMonitor.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitoringUptimeCheckConfigSyntheticMonitorList",
+      },
+      tcp_check: {
+        value: monitoringUptimeCheckConfigTcpCheckToHclTerraform(this._tcpCheck.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitoringUptimeCheckConfigTcpCheckList",
+      },
+      timeouts: {
+        value: monitoringUptimeCheckConfigTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitoringUptimeCheckConfigTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

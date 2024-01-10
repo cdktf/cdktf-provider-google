@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/logging_folder_sink
 // generated from terraform resource schema
 
@@ -93,6 +88,25 @@ export function loggingFolderSinkBigqueryOptionsToTerraform(struct?: LoggingFold
   }
 }
 
+
+export function loggingFolderSinkBigqueryOptionsToHclTerraform(struct?: LoggingFolderSinkBigqueryOptionsOutputReference | LoggingFolderSinkBigqueryOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    use_partitioned_tables: {
+      value: cdktf.booleanToHclTerraform(struct!.usePartitionedTables),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LoggingFolderSinkBigqueryOptionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -176,6 +190,43 @@ export function loggingFolderSinkExclusionsToTerraform(struct?: LoggingFolderSin
     filter: cdktf.stringToTerraform(struct!.filter),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function loggingFolderSinkExclusionsToHclTerraform(struct?: LoggingFolderSinkExclusions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disabled: {
+      value: cdktf.booleanToHclTerraform(struct!.disabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filter: {
+      value: cdktf.stringToHclTerraform(struct!.filter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LoggingFolderSinkExclusionsOutputReference extends cdktf.ComplexObject {
@@ -559,5 +610,73 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
       bigquery_options: loggingFolderSinkBigqueryOptionsToTerraform(this._bigqueryOptions.internalValue),
       exclusions: cdktf.listMapper(loggingFolderSinkExclusionsToTerraform, true)(this._exclusions.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination: {
+        value: cdktf.stringToHclTerraform(this._destination),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      filter: {
+        value: cdktf.stringToHclTerraform(this._filter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      folder: {
+        value: cdktf.stringToHclTerraform(this._folder),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      include_children: {
+        value: cdktf.booleanToHclTerraform(this._includeChildren),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      bigquery_options: {
+        value: loggingFolderSinkBigqueryOptionsToHclTerraform(this._bigqueryOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LoggingFolderSinkBigqueryOptionsList",
+      },
+      exclusions: {
+        value: cdktf.listMapperHcl(loggingFolderSinkExclusionsToHclTerraform, true)(this._exclusions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LoggingFolderSinkExclusionsList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

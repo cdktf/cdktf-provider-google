@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/alloydb_cluster
 // generated from terraform resource schema
 
@@ -156,6 +151,17 @@ export function alloydbClusterBackupSourceToTerraform(struct?: AlloydbClusterBac
   }
 }
 
+
+export function alloydbClusterBackupSourceToHclTerraform(struct?: AlloydbClusterBackupSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class AlloydbClusterBackupSourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -218,6 +224,17 @@ export function alloydbClusterContinuousBackupInfoEncryptionInfoToTerraform(stru
   }
   return {
   }
+}
+
+
+export function alloydbClusterContinuousBackupInfoEncryptionInfoToHclTerraform(struct?: AlloydbClusterContinuousBackupInfoEncryptionInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class AlloydbClusterContinuousBackupInfoEncryptionInfoOutputReference extends cdktf.ComplexObject {
@@ -287,6 +304,17 @@ export function alloydbClusterContinuousBackupInfoToTerraform(struct?: AlloydbCl
   }
   return {
   }
+}
+
+
+export function alloydbClusterContinuousBackupInfoToHclTerraform(struct?: AlloydbClusterContinuousBackupInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class AlloydbClusterContinuousBackupInfoOutputReference extends cdktf.ComplexObject {
@@ -369,6 +397,17 @@ export function alloydbClusterEncryptionInfoToTerraform(struct?: AlloydbClusterE
   }
 }
 
+
+export function alloydbClusterEncryptionInfoToHclTerraform(struct?: AlloydbClusterEncryptionInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class AlloydbClusterEncryptionInfoOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -436,6 +475,17 @@ export function alloydbClusterMigrationSourceToTerraform(struct?: AlloydbCluster
   }
   return {
   }
+}
+
+
+export function alloydbClusterMigrationSourceToHclTerraform(struct?: AlloydbClusterMigrationSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class AlloydbClusterMigrationSourceOutputReference extends cdktf.ComplexObject {
@@ -519,6 +569,25 @@ export function alloydbClusterAutomatedBackupPolicyEncryptionConfigToTerraform(s
   }
 }
 
+
+export function alloydbClusterAutomatedBackupPolicyEncryptionConfigToHclTerraform(struct?: AlloydbClusterAutomatedBackupPolicyEncryptionConfigOutputReference | AlloydbClusterAutomatedBackupPolicyEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbClusterAutomatedBackupPolicyEncryptionConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -584,6 +653,25 @@ export function alloydbClusterAutomatedBackupPolicyQuantityBasedRetentionToTerra
   return {
     count: cdktf.numberToTerraform(struct!.count),
   }
+}
+
+
+export function alloydbClusterAutomatedBackupPolicyQuantityBasedRetentionToHclTerraform(struct?: AlloydbClusterAutomatedBackupPolicyQuantityBasedRetentionOutputReference | AlloydbClusterAutomatedBackupPolicyQuantityBasedRetention): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    count: {
+      value: cdktf.numberToHclTerraform(struct!.count),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterAutomatedBackupPolicyQuantityBasedRetentionOutputReference extends cdktf.ComplexObject {
@@ -652,6 +740,25 @@ export function alloydbClusterAutomatedBackupPolicyTimeBasedRetentionToTerraform
   return {
     retention_period: cdktf.stringToTerraform(struct!.retentionPeriod),
   }
+}
+
+
+export function alloydbClusterAutomatedBackupPolicyTimeBasedRetentionToHclTerraform(struct?: AlloydbClusterAutomatedBackupPolicyTimeBasedRetentionOutputReference | AlloydbClusterAutomatedBackupPolicyTimeBasedRetention): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    retention_period: {
+      value: cdktf.stringToHclTerraform(struct!.retentionPeriod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterAutomatedBackupPolicyTimeBasedRetentionOutputReference extends cdktf.ComplexObject {
@@ -740,6 +847,43 @@ export function alloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimesToTer
     nanos: cdktf.numberToTerraform(struct!.nanos),
     seconds: cdktf.numberToTerraform(struct!.seconds),
   }
+}
+
+
+export function alloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimesToHclTerraform(struct?: AlloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimesOutputReference extends cdktf.ComplexObject {
@@ -914,6 +1058,31 @@ export function alloydbClusterAutomatedBackupPolicyWeeklyScheduleToTerraform(str
   }
 }
 
+
+export function alloydbClusterAutomatedBackupPolicyWeeklyScheduleToHclTerraform(struct?: AlloydbClusterAutomatedBackupPolicyWeeklyScheduleOutputReference | AlloydbClusterAutomatedBackupPolicyWeeklySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    start_times: {
+      value: cdktf.listMapperHcl(alloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimesToHclTerraform, true)(struct!.startTimes),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbClusterAutomatedBackupPolicyWeeklyScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1051,6 +1220,67 @@ export function alloydbClusterAutomatedBackupPolicyToTerraform(struct?: AlloydbC
     time_based_retention: alloydbClusterAutomatedBackupPolicyTimeBasedRetentionToTerraform(struct!.timeBasedRetention),
     weekly_schedule: alloydbClusterAutomatedBackupPolicyWeeklyScheduleToTerraform(struct!.weeklySchedule),
   }
+}
+
+
+export function alloydbClusterAutomatedBackupPolicyToHclTerraform(struct?: AlloydbClusterAutomatedBackupPolicyOutputReference | AlloydbClusterAutomatedBackupPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    backup_window: {
+      value: cdktf.stringToHclTerraform(struct!.backupWindow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    encryption_config: {
+      value: alloydbClusterAutomatedBackupPolicyEncryptionConfigToHclTerraform(struct!.encryptionConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterAutomatedBackupPolicyEncryptionConfigList",
+    },
+    quantity_based_retention: {
+      value: alloydbClusterAutomatedBackupPolicyQuantityBasedRetentionToHclTerraform(struct!.quantityBasedRetention),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterAutomatedBackupPolicyQuantityBasedRetentionList",
+    },
+    time_based_retention: {
+      value: alloydbClusterAutomatedBackupPolicyTimeBasedRetentionToHclTerraform(struct!.timeBasedRetention),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterAutomatedBackupPolicyTimeBasedRetentionList",
+    },
+    weekly_schedule: {
+      value: alloydbClusterAutomatedBackupPolicyWeeklyScheduleToHclTerraform(struct!.weeklySchedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterAutomatedBackupPolicyWeeklyScheduleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterAutomatedBackupPolicyOutputReference extends cdktf.ComplexObject {
@@ -1274,6 +1504,25 @@ export function alloydbClusterContinuousBackupConfigEncryptionConfigToTerraform(
   }
 }
 
+
+export function alloydbClusterContinuousBackupConfigEncryptionConfigToHclTerraform(struct?: AlloydbClusterContinuousBackupConfigEncryptionConfigOutputReference | AlloydbClusterContinuousBackupConfigEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbClusterContinuousBackupConfigEncryptionConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1355,6 +1604,37 @@ export function alloydbClusterContinuousBackupConfigToTerraform(struct?: Alloydb
     recovery_window_days: cdktf.numberToTerraform(struct!.recoveryWindowDays),
     encryption_config: alloydbClusterContinuousBackupConfigEncryptionConfigToTerraform(struct!.encryptionConfig),
   }
+}
+
+
+export function alloydbClusterContinuousBackupConfigToHclTerraform(struct?: AlloydbClusterContinuousBackupConfigOutputReference | AlloydbClusterContinuousBackupConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recovery_window_days: {
+      value: cdktf.numberToHclTerraform(struct!.recoveryWindowDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    encryption_config: {
+      value: alloydbClusterContinuousBackupConfigEncryptionConfigToHclTerraform(struct!.encryptionConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterContinuousBackupConfigEncryptionConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterContinuousBackupConfigOutputReference extends cdktf.ComplexObject {
@@ -1468,6 +1748,25 @@ export function alloydbClusterEncryptionConfigToTerraform(struct?: AlloydbCluste
   }
 }
 
+
+export function alloydbClusterEncryptionConfigToHclTerraform(struct?: AlloydbClusterEncryptionConfigOutputReference | AlloydbClusterEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbClusterEncryptionConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1540,6 +1839,31 @@ export function alloydbClusterInitialUserToTerraform(struct?: AlloydbClusterInit
     password: cdktf.stringToTerraform(struct!.password),
     user: cdktf.stringToTerraform(struct!.user),
   }
+}
+
+
+export function alloydbClusterInitialUserToHclTerraform(struct?: AlloydbClusterInitialUserOutputReference | AlloydbClusterInitialUser): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user: {
+      value: cdktf.stringToHclTerraform(struct!.user),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterInitialUserOutputReference extends cdktf.ComplexObject {
@@ -1637,6 +1961,31 @@ export function alloydbClusterNetworkConfigToTerraform(struct?: AlloydbClusterNe
   }
 }
 
+
+export function alloydbClusterNetworkConfigToHclTerraform(struct?: AlloydbClusterNetworkConfigOutputReference | AlloydbClusterNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allocated_ip_range: {
+      value: cdktf.stringToHclTerraform(struct!.allocatedIpRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    network: {
+      value: cdktf.stringToHclTerraform(struct!.network),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbClusterNetworkConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1726,6 +2075,25 @@ export function alloydbClusterRestoreBackupSourceToTerraform(struct?: AlloydbClu
   }
 }
 
+
+export function alloydbClusterRestoreBackupSourceToHclTerraform(struct?: AlloydbClusterRestoreBackupSourceOutputReference | AlloydbClusterRestoreBackupSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    backup_name: {
+      value: cdktf.stringToHclTerraform(struct!.backupName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbClusterRestoreBackupSourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1795,6 +2163,31 @@ export function alloydbClusterRestoreContinuousBackupSourceToTerraform(struct?: 
     cluster: cdktf.stringToTerraform(struct!.cluster),
     point_in_time: cdktf.stringToTerraform(struct!.pointInTime),
   }
+}
+
+
+export function alloydbClusterRestoreContinuousBackupSourceToHclTerraform(struct?: AlloydbClusterRestoreContinuousBackupSourceOutputReference | AlloydbClusterRestoreContinuousBackupSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster: {
+      value: cdktf.stringToHclTerraform(struct!.cluster),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    point_in_time: {
+      value: cdktf.stringToHclTerraform(struct!.pointInTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterRestoreContinuousBackupSourceOutputReference extends cdktf.ComplexObject {
@@ -1881,6 +2274,25 @@ export function alloydbClusterSecondaryConfigToTerraform(struct?: AlloydbCluster
   }
 }
 
+
+export function alloydbClusterSecondaryConfigToHclTerraform(struct?: AlloydbClusterSecondaryConfigOutputReference | AlloydbClusterSecondaryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    primary_cluster_name: {
+      value: cdktf.stringToHclTerraform(struct!.primaryClusterName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AlloydbClusterSecondaryConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1951,6 +2363,37 @@ export function alloydbClusterTimeoutsToTerraform(struct?: AlloydbClusterTimeout
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function alloydbClusterTimeoutsToHclTerraform(struct?: AlloydbClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AlloydbClusterTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2541,5 +2984,133 @@ export class AlloydbCluster extends cdktf.TerraformResource {
       secondary_config: alloydbClusterSecondaryConfigToTerraform(this._secondaryConfig.internalValue),
       timeouts: alloydbClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      annotations: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._annotations),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      cluster_id: {
+        value: cdktf.stringToHclTerraform(this._clusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cluster_type: {
+        value: cdktf.stringToHclTerraform(this._clusterType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deletion_policy: {
+        value: cdktf.stringToHclTerraform(this._deletionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      etag: {
+        value: cdktf.stringToHclTerraform(this._etag),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      automated_backup_policy: {
+        value: alloydbClusterAutomatedBackupPolicyToHclTerraform(this._automatedBackupPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterAutomatedBackupPolicyList",
+      },
+      continuous_backup_config: {
+        value: alloydbClusterContinuousBackupConfigToHclTerraform(this._continuousBackupConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterContinuousBackupConfigList",
+      },
+      encryption_config: {
+        value: alloydbClusterEncryptionConfigToHclTerraform(this._encryptionConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterEncryptionConfigList",
+      },
+      initial_user: {
+        value: alloydbClusterInitialUserToHclTerraform(this._initialUser.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterInitialUserList",
+      },
+      network_config: {
+        value: alloydbClusterNetworkConfigToHclTerraform(this._networkConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterNetworkConfigList",
+      },
+      restore_backup_source: {
+        value: alloydbClusterRestoreBackupSourceToHclTerraform(this._restoreBackupSource.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterRestoreBackupSourceList",
+      },
+      restore_continuous_backup_source: {
+        value: alloydbClusterRestoreContinuousBackupSourceToHclTerraform(this._restoreContinuousBackupSource.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterRestoreContinuousBackupSourceList",
+      },
+      secondary_config: {
+        value: alloydbClusterSecondaryConfigToHclTerraform(this._secondaryConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterSecondaryConfigList",
+      },
+      timeouts: {
+        value: alloydbClusterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AlloydbClusterTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

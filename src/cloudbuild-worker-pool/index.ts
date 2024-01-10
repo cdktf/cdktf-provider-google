@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/cloudbuild_worker_pool
 // generated from terraform resource schema
 
@@ -97,6 +92,31 @@ export function cloudbuildWorkerPoolNetworkConfigToTerraform(struct?: Cloudbuild
   }
 }
 
+
+export function cloudbuildWorkerPoolNetworkConfigToHclTerraform(struct?: CloudbuildWorkerPoolNetworkConfigOutputReference | CloudbuildWorkerPoolNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    peered_network: {
+      value: cdktf.stringToHclTerraform(struct!.peeredNetwork),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    peered_network_ip_range: {
+      value: cdktf.stringToHclTerraform(struct!.peeredNetworkIpRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CloudbuildWorkerPoolNetworkConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -189,6 +209,37 @@ export function cloudbuildWorkerPoolTimeoutsToTerraform(struct?: CloudbuildWorke
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cloudbuildWorkerPoolTimeoutsToHclTerraform(struct?: CloudbuildWorkerPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudbuildWorkerPoolTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -324,6 +375,37 @@ export function cloudbuildWorkerPoolWorkerConfigToTerraform(struct?: CloudbuildW
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     no_external_ip: cdktf.booleanToTerraform(struct!.noExternalIp),
   }
+}
+
+
+export function cloudbuildWorkerPoolWorkerConfigToHclTerraform(struct?: CloudbuildWorkerPoolWorkerConfigOutputReference | CloudbuildWorkerPoolWorkerConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disk_size_gb: {
+      value: cdktf.numberToHclTerraform(struct!.diskSizeGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    machine_type: {
+      value: cdktf.stringToHclTerraform(struct!.machineType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    no_external_ip: {
+      value: cdktf.booleanToHclTerraform(struct!.noExternalIp),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudbuildWorkerPoolWorkerConfigOutputReference extends cdktf.ComplexObject {
@@ -670,5 +752,67 @@ export class CloudbuildWorkerPool extends cdktf.TerraformResource {
       timeouts: cloudbuildWorkerPoolTimeoutsToTerraform(this._timeouts.internalValue),
       worker_config: cloudbuildWorkerPoolWorkerConfigToTerraform(this._workerConfig.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      annotations: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._annotations),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_config: {
+        value: cloudbuildWorkerPoolNetworkConfigToHclTerraform(this._networkConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudbuildWorkerPoolNetworkConfigList",
+      },
+      timeouts: {
+        value: cloudbuildWorkerPoolTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CloudbuildWorkerPoolTimeouts",
+      },
+      worker_config: {
+        value: cloudbuildWorkerPoolWorkerConfigToHclTerraform(this._workerConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudbuildWorkerPoolWorkerConfigList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

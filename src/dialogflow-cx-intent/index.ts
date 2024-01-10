@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/dialogflow_cx_intent
 // generated from terraform resource schema
 
@@ -154,6 +149,43 @@ export function dialogflowCxIntentParametersToTerraform(struct?: DialogflowCxInt
     is_list: cdktf.booleanToTerraform(struct!.isList),
     redact: cdktf.booleanToTerraform(struct!.redact),
   }
+}
+
+
+export function dialogflowCxIntentParametersToHclTerraform(struct?: DialogflowCxIntentParameters | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    entity_type: {
+      value: cdktf.stringToHclTerraform(struct!.entityType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_list: {
+      value: cdktf.booleanToHclTerraform(struct!.isList),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    redact: {
+      value: cdktf.booleanToHclTerraform(struct!.redact),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxIntentParametersOutputReference extends cdktf.ComplexObject {
@@ -323,6 +355,37 @@ export function dialogflowCxIntentTimeoutsToTerraform(struct?: DialogflowCxInten
   }
 }
 
+
+export function dialogflowCxIntentTimeoutsToHclTerraform(struct?: DialogflowCxIntentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxIntentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -451,6 +514,31 @@ export function dialogflowCxIntentTrainingPhrasesPartsToTerraform(struct?: Dialo
   }
 }
 
+
+export function dialogflowCxIntentTrainingPhrasesPartsToHclTerraform(struct?: DialogflowCxIntentTrainingPhrasesParts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    parameter_id: {
+      value: cdktf.stringToHclTerraform(struct!.parameterId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    text: {
+      value: cdktf.stringToHclTerraform(struct!.text),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DialogflowCxIntentTrainingPhrasesPartsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -574,6 +662,31 @@ export function dialogflowCxIntentTrainingPhrasesToTerraform(struct?: Dialogflow
     repeat_count: cdktf.numberToTerraform(struct!.repeatCount),
     parts: cdktf.listMapper(dialogflowCxIntentTrainingPhrasesPartsToTerraform, true)(struct!.parts),
   }
+}
+
+
+export function dialogflowCxIntentTrainingPhrasesToHclTerraform(struct?: DialogflowCxIntentTrainingPhrases | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    repeat_count: {
+      value: cdktf.numberToHclTerraform(struct!.repeatCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    parts: {
+      value: cdktf.listMapperHcl(dialogflowCxIntentTrainingPhrasesPartsToHclTerraform, true)(struct!.parts),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxIntentTrainingPhrasesPartsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DialogflowCxIntentTrainingPhrasesOutputReference extends cdktf.ComplexObject {
@@ -993,5 +1106,91 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
       timeouts: dialogflowCxIntentTimeoutsToTerraform(this._timeouts.internalValue),
       training_phrases: cdktf.listMapper(dialogflowCxIntentTrainingPhrasesToTerraform, true)(this._trainingPhrases.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_default_negative_intent: {
+        value: cdktf.booleanToHclTerraform(this._isDefaultNegativeIntent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      is_default_welcome_intent: {
+        value: cdktf.booleanToHclTerraform(this._isDefaultWelcomeIntent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      is_fallback: {
+        value: cdktf.booleanToHclTerraform(this._isFallback),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      language_code: {
+        value: cdktf.stringToHclTerraform(this._languageCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent: {
+        value: cdktf.stringToHclTerraform(this._parent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      parameters: {
+        value: cdktf.listMapperHcl(dialogflowCxIntentParametersToHclTerraform, true)(this._parameters.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxIntentParametersList",
+      },
+      timeouts: {
+        value: dialogflowCxIntentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DialogflowCxIntentTimeouts",
+      },
+      training_phrases: {
+        value: cdktf.listMapperHcl(dialogflowCxIntentTrainingPhrasesToHclTerraform, true)(this._trainingPhrases.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxIntentTrainingPhrasesList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

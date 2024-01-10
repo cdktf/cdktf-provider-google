@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/notebooks_runtime
 // generated from terraform resource schema
 
@@ -87,6 +82,17 @@ export function notebooksRuntimeMetricsToTerraform(struct?: NotebooksRuntimeMetr
   }
 }
 
+
+export function notebooksRuntimeMetricsToHclTerraform(struct?: NotebooksRuntimeMetrics): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class NotebooksRuntimeMetricsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -167,6 +173,31 @@ export function notebooksRuntimeAccessConfigToTerraform(struct?: NotebooksRuntim
     access_type: cdktf.stringToTerraform(struct!.accessType),
     runtime_owner: cdktf.stringToTerraform(struct!.runtimeOwner),
   }
+}
+
+
+export function notebooksRuntimeAccessConfigToHclTerraform(struct?: NotebooksRuntimeAccessConfigOutputReference | NotebooksRuntimeAccessConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access_type: {
+      value: cdktf.stringToHclTerraform(struct!.accessType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    runtime_owner: {
+      value: cdktf.stringToHclTerraform(struct!.runtimeOwner),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeAccessConfigOutputReference extends cdktf.ComplexObject {
@@ -269,6 +300,31 @@ export function notebooksRuntimeSoftwareConfigKernelsToTerraform(struct?: Notebo
     repository: cdktf.stringToTerraform(struct!.repository),
     tag: cdktf.stringToTerraform(struct!.tag),
   }
+}
+
+
+export function notebooksRuntimeSoftwareConfigKernelsToHclTerraform(struct?: NotebooksRuntimeSoftwareConfigKernels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    repository: {
+      value: cdktf.stringToHclTerraform(struct!.repository),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeSoftwareConfigKernelsOutputReference extends cdktf.ComplexObject {
@@ -449,6 +505,73 @@ export function notebooksRuntimeSoftwareConfigToTerraform(struct?: NotebooksRunt
     post_startup_script_behavior: cdktf.stringToTerraform(struct!.postStartupScriptBehavior),
     kernels: cdktf.listMapper(notebooksRuntimeSoftwareConfigKernelsToTerraform, true)(struct!.kernels),
   }
+}
+
+
+export function notebooksRuntimeSoftwareConfigToHclTerraform(struct?: NotebooksRuntimeSoftwareConfigOutputReference | NotebooksRuntimeSoftwareConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_gpu_driver_path: {
+      value: cdktf.stringToHclTerraform(struct!.customGpuDriverPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enable_health_monitoring: {
+      value: cdktf.booleanToHclTerraform(struct!.enableHealthMonitoring),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    idle_shutdown: {
+      value: cdktf.booleanToHclTerraform(struct!.idleShutdown),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    idle_shutdown_timeout: {
+      value: cdktf.numberToHclTerraform(struct!.idleShutdownTimeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    install_gpu_driver: {
+      value: cdktf.booleanToHclTerraform(struct!.installGpuDriver),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    notebook_upgrade_schedule: {
+      value: cdktf.stringToHclTerraform(struct!.notebookUpgradeSchedule),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    post_startup_script: {
+      value: cdktf.stringToHclTerraform(struct!.postStartupScript),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    post_startup_script_behavior: {
+      value: cdktf.stringToHclTerraform(struct!.postStartupScriptBehavior),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kernels: {
+      value: cdktf.listMapperHcl(notebooksRuntimeSoftwareConfigKernelsToHclTerraform, true)(struct!.kernels),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeSoftwareConfigKernelsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeSoftwareConfigOutputReference extends cdktf.ComplexObject {
@@ -707,6 +830,37 @@ export function notebooksRuntimeTimeoutsToTerraform(struct?: NotebooksRuntimeTim
   }
 }
 
+
+export function notebooksRuntimeTimeoutsToHclTerraform(struct?: NotebooksRuntimeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NotebooksRuntimeTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -837,6 +991,31 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorCon
   }
 }
 
+
+export function notebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigToHclTerraform(struct?: NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigOutputReference | NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    core_count: {
+      value: cdktf.numberToHclTerraform(struct!.coreCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -932,6 +1111,31 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigContainerImage
     repository: cdktf.stringToTerraform(struct!.repository),
     tag: cdktf.stringToTerraform(struct!.tag),
   }
+}
+
+
+export function notebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesToHclTerraform(struct?: NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    repository: {
+      value: cdktf.stringToHclTerraform(struct!.repository),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesOutputReference extends cdktf.ComplexObject {
@@ -1089,6 +1293,49 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitia
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
   }
+}
+
+
+export function notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsToHclTerraform(struct?: NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsOutputReference | NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_name: {
+      value: cdktf.stringToHclTerraform(struct!.diskName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_size_gb: {
+      value: cdktf.numberToHclTerraform(struct!.diskSizeGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    disk_type: {
+      value: cdktf.stringToHclTerraform(struct!.diskType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsOutputReference extends cdktf.ComplexObject {
@@ -1281,6 +1528,49 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskToTerr
     type: cdktf.stringToTerraform(struct!.type),
     initialize_params: notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsToTerraform(struct!.initializeParams),
   }
+}
+
+
+export function notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskToHclTerraform(struct?: NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskOutputReference | NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    interface: {
+      value: cdktf.stringToHclTerraform(struct!.interface),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source: {
+      value: cdktf.stringToHclTerraform(struct!.source),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    initialize_params: {
+      value: notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsToHclTerraform(struct!.initializeParams),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskOutputReference extends cdktf.ComplexObject {
@@ -1477,6 +1767,25 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConf
   }
 }
 
+
+export function notebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigToHclTerraform(struct?: NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigOutputReference | NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1566,6 +1875,37 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstan
     enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
     enable_vtpm: cdktf.booleanToTerraform(struct!.enableVtpm),
   }
+}
+
+
+export function notebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigToHclTerraform(struct?: NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigOutputReference | NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_integrity_monitoring: {
+      value: cdktf.booleanToHclTerraform(struct!.enableIntegrityMonitoring),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_secure_boot: {
+      value: cdktf.booleanToHclTerraform(struct!.enableSecureBoot),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_vtpm: {
+      value: cdktf.booleanToHclTerraform(struct!.enableVtpm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
@@ -1803,6 +2143,103 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigToTerraform(st
     encryption_config: notebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigToTerraform(struct!.encryptionConfig),
     shielded_instance_config: notebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
   }
+}
+
+
+export function notebooksRuntimeVirtualMachineVirtualMachineConfigToHclTerraform(struct?: NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference | NotebooksRuntimeVirtualMachineVirtualMachineConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    internal_ip_only: {
+      value: cdktf.booleanToHclTerraform(struct!.internalIpOnly),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    machine_type: {
+      value: cdktf.stringToHclTerraform(struct!.machineType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    metadata: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.metadata),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    network: {
+      value: cdktf.stringToHclTerraform(struct!.network),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    nic_type: {
+      value: cdktf.stringToHclTerraform(struct!.nicType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reserved_ip_range: {
+      value: cdktf.stringToHclTerraform(struct!.reservedIpRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet: {
+      value: cdktf.stringToHclTerraform(struct!.subnet),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tags: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.tags),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    accelerator_config: {
+      value: notebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigToHclTerraform(struct!.acceleratorConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigList",
+    },
+    container_images: {
+      value: cdktf.listMapperHcl(notebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesToHclTerraform, true)(struct!.containerImages),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesList",
+    },
+    data_disk: {
+      value: notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskToHclTerraform(struct!.dataDisk),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskList",
+    },
+    encryption_config: {
+      value: notebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigToHclTerraform(struct!.encryptionConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigList",
+    },
+    shielded_instance_config: {
+      value: notebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigToHclTerraform(struct!.shieldedInstanceConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference extends cdktf.ComplexObject {
@@ -2163,6 +2600,25 @@ export function notebooksRuntimeVirtualMachineToTerraform(struct?: NotebooksRunt
   }
 }
 
+
+export function notebooksRuntimeVirtualMachineToHclTerraform(struct?: NotebooksRuntimeVirtualMachineOutputReference | NotebooksRuntimeVirtualMachine): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    virtual_machine_config: {
+      value: notebooksRuntimeVirtualMachineVirtualMachineConfigToHclTerraform(struct!.virtualMachineConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotebooksRuntimeVirtualMachineVirtualMachineConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NotebooksRuntimeVirtualMachineOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2470,5 +2926,67 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
       timeouts: notebooksRuntimeTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_machine: notebooksRuntimeVirtualMachineToTerraform(this._virtualMachine.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      access_config: {
+        value: notebooksRuntimeAccessConfigToHclTerraform(this._accessConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NotebooksRuntimeAccessConfigList",
+      },
+      software_config: {
+        value: notebooksRuntimeSoftwareConfigToHclTerraform(this._softwareConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NotebooksRuntimeSoftwareConfigList",
+      },
+      timeouts: {
+        value: notebooksRuntimeTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NotebooksRuntimeTimeouts",
+      },
+      virtual_machine: {
+        value: notebooksRuntimeVirtualMachineToHclTerraform(this._virtualMachine.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NotebooksRuntimeVirtualMachineList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

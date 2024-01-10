@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 pubsublitereservation.NewPubsubLiteReservation(scope Construct, id *string, config PubsubLiteReservationConfig) PubsubLiteReservation
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 pubsublitereservation.PubsubLiteReservation_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 pubsublitereservation.PubsubLiteReservation_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ pubsublitereservation.PubsubLiteReservation_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 pubsublitereservation.PubsubLiteReservation_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ pubsublitereservation.PubsubLiteReservation_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 pubsublitereservation.PubsubLiteReservation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -833,7 +840,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 &pubsublitereservation.PubsubLiteReservationConfig {
 	Connection: interface{},
@@ -848,7 +855,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservati
 	Id: *string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.pubsubLiteReservation.PubsubLiteReservationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.pubsubLiteReservation.PubsubLiteReservationTimeouts,
 }
 ```
 
@@ -1034,7 +1041,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 &pubsublitereservation.PubsubLiteReservationTimeouts {
 	Create: *string,
@@ -1096,7 +1103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubLiteReservation.PubsubLiteReservationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/pubsublitereservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsublitereservation"
 
 pubsublitereservation.NewPubsubLiteReservationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubLiteReservationTimeoutsOutputReference
 ```

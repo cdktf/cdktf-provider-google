@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeployment(scope Construct, id *string, config DeploymentManagerDeploymentConfig) DeploymentManagerDeployment
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -135,6 +136,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.toMetadata"></a>
 
@@ -466,7 +473,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.DeploymentManagerDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -498,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.DeploymentManagerDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -512,7 +519,7 @@ deploymentmanagerdeployment.DeploymentManagerDeployment_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.DeploymentManagerDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -526,7 +533,7 @@ deploymentmanagerdeployment.DeploymentManagerDeployment_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeployment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.DeploymentManagerDeployment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1008,7 +1015,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 &deploymentmanagerdeployment.DeploymentManagerDeploymentConfig {
 	Connection: interface{},
@@ -1019,7 +1026,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerde
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	Target: github.com/cdktf/cdktf-provider-google-go/google/v12.deploymentManagerDeployment.DeploymentManagerDeploymentTarget,
+	Target: github.com/cdktf/cdktf-provider-google-go/google.deploymentManagerDeployment.DeploymentManagerDeploymentTarget,
 	CreatePolicy: *string,
 	DeletePolicy: *string,
 	Description: *string,
@@ -1027,7 +1034,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerde
 	Labels: interface{},
 	Preview: interface{},
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.deploymentManagerDeployment.DeploymentManagerDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.deploymentManagerDeployment.DeploymentManagerDeploymentTimeouts,
 }
 ```
 
@@ -1289,7 +1296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 &deploymentmanagerdeployment.DeploymentManagerDeploymentLabels {
 	Key: *string,
@@ -1339,10 +1346,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 &deploymentmanagerdeployment.DeploymentManagerDeploymentTarget {
-	Config: github.com/cdktf/cdktf-provider-google-go/google/v12.deploymentManagerDeployment.DeploymentManagerDeploymentTargetConfig,
+	Config: github.com/cdktf/cdktf-provider-google-go/google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetConfig,
 	Imports: interface{},
 }
 ```
@@ -1389,7 +1396,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 &deploymentmanagerdeployment.DeploymentManagerDeploymentTargetConfig {
 	Content: *string,
@@ -1423,7 +1430,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImports.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 &deploymentmanagerdeployment.DeploymentManagerDeploymentTargetImports {
 	Content: *string,
@@ -1473,7 +1480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 &deploymentmanagerdeployment.DeploymentManagerDeploymentTimeouts {
 	Create: *string,
@@ -1535,7 +1542,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeploymentLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DeploymentManagerDeploymentLabelsList
 ```
@@ -1576,10 +1583,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1678,7 +1702,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeploymentLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DeploymentManagerDeploymentLabelsOutputReference
 ```
@@ -2003,7 +2027,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeploymentTargetConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DeploymentManagerDeploymentTargetConfigOutputReference
 ```
@@ -2274,7 +2298,7 @@ func InternalValue() DeploymentManagerDeploymentTargetConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeploymentTargetImportsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DeploymentManagerDeploymentTargetImportsList
 ```
@@ -2315,10 +2339,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2417,7 +2458,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetImportsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeploymentTargetImportsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DeploymentManagerDeploymentTargetImportsOutputReference
 ```
@@ -2742,7 +2783,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeploymentTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DeploymentManagerDeploymentTargetOutputReference
 ```
@@ -3068,7 +3109,7 @@ func InternalValue() DeploymentManagerDeploymentTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.deploymentManagerDeployment.DeploymentManagerDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/deploymentmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/deploymentmanagerdeployment"
 
 deploymentmanagerdeployment.NewDeploymentManagerDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DeploymentManagerDeploymentTimeoutsOutputReference
 ```

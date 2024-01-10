@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/cloud_run_domain_mapping
 // generated from terraform resource schema
 
@@ -64,6 +59,17 @@ export function cloudRunDomainMappingStatusConditionsToTerraform(struct?: CloudR
   }
   return {
   }
+}
+
+
+export function cloudRunDomainMappingStatusConditionsToHclTerraform(struct?: CloudRunDomainMappingStatusConditions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class CloudRunDomainMappingStatusConditionsOutputReference extends cdktf.ComplexObject {
@@ -145,6 +151,17 @@ export function cloudRunDomainMappingStatusResourceRecordsToTerraform(struct?: C
   }
 }
 
+
+export function cloudRunDomainMappingStatusResourceRecordsToHclTerraform(struct?: CloudRunDomainMappingStatusResourceRecords): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class CloudRunDomainMappingStatusResourceRecordsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -217,6 +234,17 @@ export function cloudRunDomainMappingStatusToTerraform(struct?: CloudRunDomainMa
   }
   return {
   }
+}
+
+
+export function cloudRunDomainMappingStatusToHclTerraform(struct?: CloudRunDomainMappingStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class CloudRunDomainMappingStatusOutputReference extends cdktf.ComplexObject {
@@ -335,6 +363,37 @@ export function cloudRunDomainMappingMetadataToTerraform(struct?: CloudRunDomain
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     namespace: cdktf.stringToTerraform(struct!.namespace),
   }
+}
+
+
+export function cloudRunDomainMappingMetadataToHclTerraform(struct?: CloudRunDomainMappingMetadataOutputReference | CloudRunDomainMappingMetadata): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    annotations: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.annotations),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    namespace: {
+      value: cdktf.stringToHclTerraform(struct!.namespace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexObject {
@@ -501,6 +560,37 @@ export function cloudRunDomainMappingSpecToTerraform(struct?: CloudRunDomainMapp
   }
 }
 
+
+export function cloudRunDomainMappingSpecToHclTerraform(struct?: CloudRunDomainMappingSpecOutputReference | CloudRunDomainMappingSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate_mode: {
+      value: cdktf.stringToHclTerraform(struct!.certificateMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    force_override: {
+      value: cdktf.booleanToHclTerraform(struct!.forceOverride),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    route_name: {
+      value: cdktf.stringToHclTerraform(struct!.routeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -610,6 +700,31 @@ export function cloudRunDomainMappingTimeoutsToTerraform(struct?: CloudRunDomain
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
   }
+}
+
+
+export function cloudRunDomainMappingTimeoutsToHclTerraform(struct?: CloudRunDomainMappingTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -880,5 +995,55 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
       spec: cloudRunDomainMappingSpecToTerraform(this._spec.internalValue),
       timeouts: cloudRunDomainMappingTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metadata: {
+        value: cloudRunDomainMappingMetadataToHclTerraform(this._metadata.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudRunDomainMappingMetadataList",
+      },
+      spec: {
+        value: cloudRunDomainMappingSpecToHclTerraform(this._spec.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudRunDomainMappingSpecList",
+      },
+      timeouts: {
+        value: cloudRunDomainMappingTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CloudRunDomainMappingTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

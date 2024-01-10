@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_vpn_tunnel
 // generated from terraform resource schema
 
@@ -175,6 +170,37 @@ export function computeVpnTunnelTimeoutsToTerraform(struct?: ComputeVpnTunnelTim
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeVpnTunnelTimeoutsToHclTerraform(struct?: ComputeVpnTunnelTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeVpnTunnelTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -717,5 +743,127 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
       vpn_gateway_interface: cdktf.numberToTerraform(this._vpnGatewayInterface),
       timeouts: computeVpnTunnelTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ike_version: {
+        value: cdktf.numberToHclTerraform(this._ikeVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      local_traffic_selector: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._localTrafficSelector),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_external_gateway: {
+        value: cdktf.stringToHclTerraform(this._peerExternalGateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_external_gateway_interface: {
+        value: cdktf.numberToHclTerraform(this._peerExternalGatewayInterface),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      peer_gcp_gateway: {
+        value: cdktf.stringToHclTerraform(this._peerGcpGateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_ip: {
+        value: cdktf.stringToHclTerraform(this._peerIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      remote_traffic_selector: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._remoteTrafficSelector),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      router: {
+        value: cdktf.stringToHclTerraform(this._router),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      shared_secret: {
+        value: cdktf.stringToHclTerraform(this._sharedSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_vpn_gateway: {
+        value: cdktf.stringToHclTerraform(this._targetVpnGateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vpn_gateway: {
+        value: cdktf.stringToHclTerraform(this._vpnGateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vpn_gateway_interface: {
+        value: cdktf.numberToHclTerraform(this._vpnGatewayInterface),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      timeouts: {
+        value: computeVpnTunnelTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeVpnTunnelTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

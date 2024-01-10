@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 iaptunnelinstanceiammember.NewIapTunnelInstanceIamMember(scope Construct, id *string, config IapTunnelInstanceIamMemberConfig) IapTunnelInstanceIamMember
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 iaptunnelinstanceiammember.IapTunnelInstanceIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 iaptunnelinstanceiammember.IapTunnelInstanceIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ iaptunnelinstanceiammember.IapTunnelInstanceIamMember_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 iaptunnelinstanceiammember.IapTunnelInstanceIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ iaptunnelinstanceiammember.IapTunnelInstanceIamMember_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 iaptunnelinstanceiammember.IapTunnelInstanceIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -866,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 &iaptunnelinstanceiammember.IapTunnelInstanceIamMemberCondition {
 	Expression: *string,
@@ -926,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 &iaptunnelinstanceiammember.IapTunnelInstanceIamMemberConfig {
 	Connection: interface{},
@@ -939,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceia
 	Instance: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v12.iapTunnelInstanceIamMember.IapTunnelInstanceIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Zone: *string,
@@ -1133,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelInstanceIamMember.IapTunnelInstanceIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/iaptunnelinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiammember"
 
 iaptunnelinstanceiammember.NewIapTunnelInstanceIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapTunnelInstanceIamMemberConditionOutputReference
 ```

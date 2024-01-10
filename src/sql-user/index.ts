@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/sql_user
 // generated from terraform resource schema
 
@@ -90,6 +85,17 @@ export function sqlUserSqlServerUserDetailsToTerraform(struct?: SqlUserSqlServer
   }
 }
 
+
+export function sqlUserSqlServerUserDetailsToHclTerraform(struct?: SqlUserSqlServerUserDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class SqlUserSqlServerUserDetailsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -157,6 +163,17 @@ export function sqlUserPasswordPolicyStatusToTerraform(struct?: SqlUserPasswordP
   }
   return {
   }
+}
+
+
+export function sqlUserPasswordPolicyStatusToHclTerraform(struct?: SqlUserPasswordPolicyStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class SqlUserPasswordPolicyStatusOutputReference extends cdktf.ComplexObject {
@@ -254,6 +271,43 @@ export function sqlUserPasswordPolicyToTerraform(struct?: SqlUserPasswordPolicyO
     enable_password_verification: cdktf.booleanToTerraform(struct!.enablePasswordVerification),
     password_expiration_duration: cdktf.stringToTerraform(struct!.passwordExpirationDuration),
   }
+}
+
+
+export function sqlUserPasswordPolicyToHclTerraform(struct?: SqlUserPasswordPolicyOutputReference | SqlUserPasswordPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_failed_attempts: {
+      value: cdktf.numberToHclTerraform(struct!.allowedFailedAttempts),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    enable_failed_attempts_check: {
+      value: cdktf.booleanToHclTerraform(struct!.enableFailedAttemptsCheck),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_password_verification: {
+      value: cdktf.booleanToHclTerraform(struct!.enablePasswordVerification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    password_expiration_duration: {
+      value: cdktf.stringToHclTerraform(struct!.passwordExpirationDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SqlUserPasswordPolicyOutputReference extends cdktf.ComplexObject {
@@ -401,6 +455,37 @@ export function sqlUserTimeoutsToTerraform(struct?: SqlUserTimeouts | cdktf.IRes
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sqlUserTimeoutsToHclTerraform(struct?: SqlUserTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SqlUserTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -750,5 +835,73 @@ export class SqlUser extends cdktf.TerraformResource {
       password_policy: sqlUserPasswordPolicyToTerraform(this._passwordPolicy.internalValue),
       timeouts: sqlUserTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      deletion_policy: {
+        value: cdktf.stringToHclTerraform(this._deletionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      host: {
+        value: cdktf.stringToHclTerraform(this._host),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance: {
+        value: cdktf.stringToHclTerraform(this._instance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password: {
+        value: cdktf.stringToHclTerraform(this._password),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password_policy: {
+        value: sqlUserPasswordPolicyToHclTerraform(this._passwordPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SqlUserPasswordPolicyList",
+      },
+      timeouts: {
+        value: sqlUserTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SqlUserTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

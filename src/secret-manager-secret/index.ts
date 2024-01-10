@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/secret_manager_secret
 // generated from terraform resource schema
 
@@ -147,6 +142,25 @@ export function secretManagerSecretReplicationAutoCustomerManagedEncryptionToTer
   }
 }
 
+
+export function secretManagerSecretReplicationAutoCustomerManagedEncryptionToHclTerraform(struct?: SecretManagerSecretReplicationAutoCustomerManagedEncryptionOutputReference | SecretManagerSecretReplicationAutoCustomerManagedEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SecretManagerSecretReplicationAutoCustomerManagedEncryptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -209,6 +223,25 @@ export function secretManagerSecretReplicationAutoToTerraform(struct?: SecretMan
   return {
     customer_managed_encryption: secretManagerSecretReplicationAutoCustomerManagedEncryptionToTerraform(struct!.customerManagedEncryption),
   }
+}
+
+
+export function secretManagerSecretReplicationAutoToHclTerraform(struct?: SecretManagerSecretReplicationAutoOutputReference | SecretManagerSecretReplicationAuto): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    customer_managed_encryption: {
+      value: secretManagerSecretReplicationAutoCustomerManagedEncryptionToHclTerraform(struct!.customerManagedEncryption),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SecretManagerSecretReplicationAutoCustomerManagedEncryptionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecretManagerSecretReplicationAutoOutputReference extends cdktf.ComplexObject {
@@ -276,6 +309,25 @@ export function secretManagerSecretReplicationUserManagedReplicasCustomerManaged
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
   }
+}
+
+
+export function secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToHclTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference | SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference extends cdktf.ComplexObject {
@@ -347,6 +399,31 @@ export function secretManagerSecretReplicationUserManagedReplicasToTerraform(str
     location: cdktf.stringToTerraform(struct!.location),
     customer_managed_encryption: secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToTerraform(struct!.customerManagedEncryption),
   }
+}
+
+
+export function secretManagerSecretReplicationUserManagedReplicasToHclTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    customer_managed_encryption: {
+      value: secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToHclTerraform(struct!.customerManagedEncryption),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecretManagerSecretReplicationUserManagedReplicasOutputReference extends cdktf.ComplexObject {
@@ -467,6 +544,25 @@ export function secretManagerSecretReplicationUserManagedToTerraform(struct?: Se
   }
 }
 
+
+export function secretManagerSecretReplicationUserManagedToHclTerraform(struct?: SecretManagerSecretReplicationUserManagedOutputReference | SecretManagerSecretReplicationUserManaged): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    replicas: {
+      value: cdktf.listMapperHcl(secretManagerSecretReplicationUserManagedReplicasToHclTerraform, true)(struct!.replicas),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SecretManagerSecretReplicationUserManagedReplicasList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SecretManagerSecretReplicationUserManagedOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -536,6 +632,31 @@ export function secretManagerSecretReplicationToTerraform(struct?: SecretManager
     auto: secretManagerSecretReplicationAutoToTerraform(struct!.auto),
     user_managed: secretManagerSecretReplicationUserManagedToTerraform(struct!.userManaged),
   }
+}
+
+
+export function secretManagerSecretReplicationToHclTerraform(struct?: SecretManagerSecretReplicationOutputReference | SecretManagerSecretReplication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    auto: {
+      value: secretManagerSecretReplicationAutoToHclTerraform(struct!.auto),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SecretManagerSecretReplicationAutoList",
+    },
+    user_managed: {
+      value: secretManagerSecretReplicationUserManagedToHclTerraform(struct!.userManaged),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SecretManagerSecretReplicationUserManagedList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecretManagerSecretReplicationOutputReference extends cdktf.ComplexObject {
@@ -636,6 +757,31 @@ export function secretManagerSecretRotationToTerraform(struct?: SecretManagerSec
   }
 }
 
+
+export function secretManagerSecretRotationToHclTerraform(struct?: SecretManagerSecretRotationOutputReference | SecretManagerSecretRotation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    next_rotation_time: {
+      value: cdktf.stringToHclTerraform(struct!.nextRotationTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rotation_period: {
+      value: cdktf.stringToHclTerraform(struct!.rotationPeriod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -731,6 +877,37 @@ export function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSec
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function secretManagerSecretTimeoutsToHclTerraform(struct?: SecretManagerSecretTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -855,6 +1032,25 @@ export function secretManagerSecretTopicsToTerraform(struct?: SecretManagerSecre
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function secretManagerSecretTopicsToHclTerraform(struct?: SecretManagerSecretTopics | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecretManagerSecretTopicsOutputReference extends cdktf.ComplexObject {
@@ -1237,5 +1433,85 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
       timeouts: secretManagerSecretTimeoutsToTerraform(this._timeouts.internalValue),
       topics: cdktf.listMapper(secretManagerSecretTopicsToTerraform, true)(this._topics.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      annotations: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._annotations),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      expire_time: {
+        value: cdktf.stringToHclTerraform(this._expireTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secret_id: {
+        value: cdktf.stringToHclTerraform(this._secretId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ttl: {
+        value: cdktf.stringToHclTerraform(this._ttl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_aliases: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._versionAliases),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      replication: {
+        value: secretManagerSecretReplicationToHclTerraform(this._replication.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SecretManagerSecretReplicationList",
+      },
+      rotation: {
+        value: secretManagerSecretRotationToHclTerraform(this._rotation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SecretManagerSecretRotationList",
+      },
+      timeouts: {
+        value: secretManagerSecretTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SecretManagerSecretTimeouts",
+      },
+      topics: {
+        value: cdktf.listMapperHcl(secretManagerSecretTopicsToHclTerraform, true)(this._topics.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SecretManagerSecretTopicsList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringService.MonitoringService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.NewMonitoringService(scope Construct, id *string, config MonitoringServiceConfig) MonitoringService
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-google.monitoringService.MonitoringService.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-google.monitoringService.MonitoringService.toMetadata"></a>
 
@@ -439,7 +446,7 @@ func ResetUserLabels()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.monitoringService.MonitoringService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.MonitoringService_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.monitoringService.MonitoringService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.MonitoringService_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ monitoringservice.MonitoringService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.monitoringService.MonitoringService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.MonitoringService_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +506,7 @@ monitoringservice.MonitoringService_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.monitoringService.MonitoringService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.MonitoringService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -904,7 +911,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringService.MonitoringServiceBasicService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 &monitoringservice.MonitoringServiceBasicService {
 	ServiceLabels: *map[string]*string,
@@ -954,7 +961,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringService.MonitoringServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 &monitoringservice.MonitoringServiceConfig {
 	Connection: interface{},
@@ -965,11 +972,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	ServiceId: *string,
-	BasicService: github.com/cdktf/cdktf-provider-google-go/google/v12.monitoringService.MonitoringServiceBasicService,
+	BasicService: github.com/cdktf/cdktf-provider-google-go/google.monitoringService.MonitoringServiceBasicService,
 	DisplayName: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v12.monitoringService.MonitoringServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.monitoringService.MonitoringServiceTimeouts,
 	UserLabels: *map[string]*string,
 }
 ```
@@ -1174,7 +1181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringService.MonitoringServiceTelemetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 &monitoringservice.MonitoringServiceTelemetry {
 
@@ -1187,7 +1194,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 &monitoringservice.MonitoringServiceTimeouts {
 	Create: *string,
@@ -1249,7 +1256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringService.MonitoringServiceBasicServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.NewMonitoringServiceBasicServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringServiceBasicServiceOutputReference
 ```
@@ -1556,7 +1563,7 @@ func InternalValue() MonitoringServiceBasicService
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.NewMonitoringServiceTelemetryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitoringServiceTelemetryList
 ```
@@ -1597,10 +1604,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1688,7 +1712,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringService.MonitoringServiceTelemetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.NewMonitoringServiceTelemetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitoringServiceTelemetryOutputReference
 ```
@@ -1966,7 +1990,7 @@ func InternalValue() MonitoringServiceTelemetry
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringService.MonitoringServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v12/monitoringservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringservice"
 
 monitoringservice.NewMonitoringServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringServiceTimeoutsOutputReference
 ```

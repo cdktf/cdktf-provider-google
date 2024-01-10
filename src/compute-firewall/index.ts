@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_firewall
 // generated from terraform resource schema
 
@@ -216,6 +211,31 @@ export function computeFirewallAllowToTerraform(struct?: ComputeFirewallAllow | 
   }
 }
 
+
+export function computeFirewallAllowToHclTerraform(struct?: ComputeFirewallAllow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ports: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ports),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeFirewallAllowOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -350,6 +370,31 @@ export function computeFirewallDenyToTerraform(struct?: ComputeFirewallDeny | cd
   }
 }
 
+
+export function computeFirewallDenyToHclTerraform(struct?: ComputeFirewallDeny | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ports: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ports),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeFirewallDenyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -468,6 +513,25 @@ export function computeFirewallLogConfigToTerraform(struct?: ComputeFirewallLogC
   }
 }
 
+
+export function computeFirewallLogConfigToHclTerraform(struct?: ComputeFirewallLogConfigOutputReference | ComputeFirewallLogConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeFirewallLogConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -538,6 +602,37 @@ export function computeFirewallTimeoutsToTerraform(struct?: ComputeFirewallTimeo
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeFirewallTimeoutsToHclTerraform(struct?: ComputeFirewallTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeFirewallTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1053,5 +1148,127 @@ export class ComputeFirewall extends cdktf.TerraformResource {
       log_config: computeFirewallLogConfigToTerraform(this._logConfig.internalValue),
       timeouts: computeFirewallTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._destinationRanges),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      direction: {
+        value: cdktf.stringToHclTerraform(this._direction),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_logging: {
+        value: cdktf.booleanToHclTerraform(this._enableLogging),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._sourceRanges),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      source_service_accounts: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._sourceServiceAccounts),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      source_tags: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._sourceTags),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      target_service_accounts: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._targetServiceAccounts),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      target_tags: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._targetTags),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      allow: {
+        value: cdktf.listMapperHcl(computeFirewallAllowToHclTerraform, true)(this._allow.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ComputeFirewallAllowList",
+      },
+      deny: {
+        value: cdktf.listMapperHcl(computeFirewallDenyToHclTerraform, true)(this._deny.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ComputeFirewallDenyList",
+      },
+      log_config: {
+        value: computeFirewallLogConfigToHclTerraform(this._logConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeFirewallLogConfigList",
+      },
+      timeouts: {
+        value: computeFirewallTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeFirewallTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

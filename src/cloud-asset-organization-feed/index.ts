@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/cloud_asset_organization_feed
 // generated from terraform resource schema
 
@@ -124,6 +119,43 @@ export function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAss
     location: cdktf.stringToTerraform(struct!.location),
     title: cdktf.stringToTerraform(struct!.title),
   }
+}
+
+
+export function cloudAssetOrganizationFeedConditionToHclTerraform(struct?: CloudAssetOrganizationFeedConditionOutputReference | CloudAssetOrganizationFeedCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expression: {
+      value: cdktf.stringToHclTerraform(struct!.expression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.ComplexObject {
@@ -256,6 +288,25 @@ export function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTer
   }
 }
 
+
+export function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToHclTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference | CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    topic: {
+      value: cdktf.stringToHclTerraform(struct!.topic),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -318,6 +369,25 @@ export function cloudAssetOrganizationFeedFeedOutputConfigToTerraform(struct?: C
   return {
     pubsub_destination: cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(struct!.pubsubDestination),
   }
+}
+
+
+export function cloudAssetOrganizationFeedFeedOutputConfigToHclTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigOutputReference | CloudAssetOrganizationFeedFeedOutputConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pubsub_destination: {
+      value: cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToHclTerraform(struct!.pubsubDestination),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudAssetOrganizationFeedFeedOutputConfigOutputReference extends cdktf.ComplexObject {
@@ -390,6 +460,37 @@ export function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAsse
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cloudAssetOrganizationFeedTimeoutsToHclTerraform(struct?: CloudAssetOrganizationFeedTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudAssetOrganizationFeedTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -732,5 +833,73 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
       feed_output_config: cloudAssetOrganizationFeedFeedOutputConfigToTerraform(this._feedOutputConfig.internalValue),
       timeouts: cloudAssetOrganizationFeedTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      asset_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._assetNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      asset_types: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._assetTypes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      billing_project: {
+        value: cdktf.stringToHclTerraform(this._billingProject),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_type: {
+        value: cdktf.stringToHclTerraform(this._contentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      feed_id: {
+        value: cdktf.stringToHclTerraform(this._feedId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_id: {
+        value: cdktf.stringToHclTerraform(this._orgId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      condition: {
+        value: cloudAssetOrganizationFeedConditionToHclTerraform(this._condition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudAssetOrganizationFeedConditionList",
+      },
+      feed_output_config: {
+        value: cloudAssetOrganizationFeedFeedOutputConfigToHclTerraform(this._feedOutputConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudAssetOrganizationFeedFeedOutputConfigList",
+      },
+      timeouts: {
+        value: cloudAssetOrganizationFeedTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CloudAssetOrganizationFeedTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

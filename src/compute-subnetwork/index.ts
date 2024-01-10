@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/compute_subnetwork
 // generated from terraform resource schema
 
@@ -171,6 +166,31 @@ export function computeSubnetworkSecondaryIpRangeToTerraform(struct?: ComputeSub
   }
 }
 
+
+export function computeSubnetworkSecondaryIpRangeToHclTerraform(struct?: ComputeSubnetworkSecondaryIpRange | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ip_cidr_range: {
+      value: struct!.ipCidrRange === undefined ? null : cdktf.stringToHclTerraform(struct!.ipCidrRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    range_name: {
+      value: struct!.rangeName === undefined ? null : cdktf.stringToHclTerraform(struct!.rangeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ComputeSubnetworkSecondaryIpRangeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -330,6 +350,49 @@ export function computeSubnetworkLogConfigToTerraform(struct?: ComputeSubnetwork
     metadata: cdktf.stringToTerraform(struct!.metadata),
     metadata_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.metadataFields),
   }
+}
+
+
+export function computeSubnetworkLogConfigToHclTerraform(struct?: ComputeSubnetworkLogConfigOutputReference | ComputeSubnetworkLogConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    aggregation_interval: {
+      value: cdktf.stringToHclTerraform(struct!.aggregationInterval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filter_expr: {
+      value: cdktf.stringToHclTerraform(struct!.filterExpr),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    flow_sampling: {
+      value: cdktf.numberToHclTerraform(struct!.flowSampling),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    metadata_fields: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.metadataFields),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObject {
@@ -493,6 +556,37 @@ export function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkT
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function computeSubnetworkTimeoutsToHclTerraform(struct?: ComputeSubnetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -989,5 +1083,115 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       log_config: computeSubnetworkLogConfigToTerraform(this._logConfig.internalValue),
       timeouts: computeSubnetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      external_ipv6_prefix: {
+        value: cdktf.stringToHclTerraform(this._externalIpv6Prefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_cidr_range: {
+        value: cdktf.stringToHclTerraform(this._ipCidrRange),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipv6_access_type: {
+        value: cdktf.stringToHclTerraform(this._ipv6AccessType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network: {
+        value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_ip_google_access: {
+        value: cdktf.booleanToHclTerraform(this._privateIpGoogleAccess),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      private_ipv6_google_access: {
+        value: cdktf.stringToHclTerraform(this._privateIpv6GoogleAccess),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      purpose: {
+        value: cdktf.stringToHclTerraform(this._purpose),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktf.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktf.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secondary_ip_range: {
+        value: cdktf.listMapperHcl(computeSubnetworkSecondaryIpRangeToHclTerraform, false)(this._secondaryIpRange.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeSubnetworkSecondaryIpRangeList",
+      },
+      stack_type: {
+        value: cdktf.stringToHclTerraform(this._stackType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_config: {
+        value: computeSubnetworkLogConfigToHclTerraform(this._logConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeSubnetworkLogConfigList",
+      },
+      timeouts: {
+        value: computeSubnetworkTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ComputeSubnetworkTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

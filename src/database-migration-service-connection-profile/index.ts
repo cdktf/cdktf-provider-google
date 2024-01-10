@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/database_migration_service_connection_profile
 // generated from terraform resource schema
 
@@ -100,6 +95,17 @@ export function databaseMigrationServiceConnectionProfileErrorToTerraform(struct
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileErrorToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileError): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DatabaseMigrationServiceConnectionProfileErrorOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -187,6 +193,31 @@ export function databaseMigrationServiceConnectionProfileAlloydbSettingsInitialU
     password: cdktf.stringToTerraform(struct!.password),
     user: cdktf.stringToTerraform(struct!.user),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileAlloydbSettingsInitialUserToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileAlloydbSettingsInitialUserOutputReference | DatabaseMigrationServiceConnectionProfileAlloydbSettingsInitialUser): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user: {
+      value: cdktf.stringToHclTerraform(struct!.user),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileAlloydbSettingsInitialUserOutputReference extends cdktf.ComplexObject {
@@ -277,6 +308,25 @@ export function databaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryI
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsMachineConfigToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsMachineConfigOutputReference | DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsMachineConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cpu_count: {
+      value: cdktf.numberToHclTerraform(struct!.cpuCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsMachineConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -363,6 +413,43 @@ export function databaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryI
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     machine_config: databaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsMachineConfigToTerraform(struct!.machineConfig),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsOutputReference | DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    database_flags: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.databaseFlags),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    machine_config: {
+      value: databaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsMachineConfigToHclTerraform(struct!.machineConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsMachineConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsOutputReference extends cdktf.ComplexObject {
@@ -519,6 +606,43 @@ export function databaseMigrationServiceConnectionProfileAlloydbSettingsToTerraf
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileAlloydbSettingsToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileAlloydbSettingsOutputReference | DatabaseMigrationServiceConnectionProfileAlloydbSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    vpc_network: {
+      value: cdktf.stringToHclTerraform(struct!.vpcNetwork),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    initial_user: {
+      value: databaseMigrationServiceConnectionProfileAlloydbSettingsInitialUserToHclTerraform(struct!.initialUser),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileAlloydbSettingsInitialUserList",
+    },
+    primary_instance_settings: {
+      value: databaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsToHclTerraform(struct!.primaryInstanceSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileAlloydbSettingsPrimaryInstanceSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabaseMigrationServiceConnectionProfileAlloydbSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -653,6 +777,31 @@ export function databaseMigrationServiceConnectionProfileAlloydbToTerraform(stru
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileAlloydbToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileAlloydbOutputReference | DatabaseMigrationServiceConnectionProfileAlloydb): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster_id: {
+      value: cdktf.stringToHclTerraform(struct!.clusterId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    settings: {
+      value: databaseMigrationServiceConnectionProfileAlloydbSettingsToHclTerraform(struct!.settings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileAlloydbSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabaseMigrationServiceConnectionProfileAlloydbOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -758,6 +907,43 @@ export function databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfi
     ttl: cdktf.stringToTerraform(struct!.ttl),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigAuthorizedNetworksToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigAuthorizedNetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expire_time: {
+      value: cdktf.stringToHclTerraform(struct!.expireTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ttl: {
+      value: cdktf.stringToHclTerraform(struct!.ttl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigAuthorizedNetworksOutputReference extends cdktf.ComplexObject {
@@ -942,6 +1128,43 @@ export function databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfi
     require_ssl: cdktf.booleanToTerraform(struct!.requireSsl),
     authorized_networks: cdktf.listMapper(databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigAuthorizedNetworksToTerraform, true)(struct!.authorizedNetworks),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigOutputReference | DatabaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_ipv4: {
+      value: cdktf.booleanToHclTerraform(struct!.enableIpv4),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    private_network: {
+      value: cdktf.stringToHclTerraform(struct!.privateNetwork),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    require_ssl: {
+      value: cdktf.booleanToHclTerraform(struct!.requireSsl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    authorized_networks: {
+      value: cdktf.listMapperHcl(databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigAuthorizedNetworksToHclTerraform, true)(struct!.authorizedNetworks),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigAuthorizedNetworksList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigOutputReference extends cdktf.ComplexObject {
@@ -1183,6 +1406,115 @@ export function databaseMigrationServiceConnectionProfileCloudsqlSettingsToTerra
     zone: cdktf.stringToTerraform(struct!.zone),
     ip_config: databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigToTerraform(struct!.ipConfig),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileCloudsqlSettingsToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileCloudsqlSettingsOutputReference | DatabaseMigrationServiceConnectionProfileCloudsqlSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    activation_policy: {
+      value: cdktf.stringToHclTerraform(struct!.activationPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    auto_storage_increase: {
+      value: cdktf.booleanToHclTerraform(struct!.autoStorageIncrease),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    cmek_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.cmekKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    collation: {
+      value: cdktf.stringToHclTerraform(struct!.collation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_disk_size_gb: {
+      value: cdktf.stringToHclTerraform(struct!.dataDiskSizeGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_disk_type: {
+      value: cdktf.stringToHclTerraform(struct!.dataDiskType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    database_flags: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.databaseFlags),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    database_version: {
+      value: cdktf.stringToHclTerraform(struct!.databaseVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    edition: {
+      value: cdktf.stringToHclTerraform(struct!.edition),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    root_password: {
+      value: cdktf.stringToHclTerraform(struct!.rootPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_auto_resize_limit: {
+      value: cdktf.stringToHclTerraform(struct!.storageAutoResizeLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tier: {
+      value: cdktf.stringToHclTerraform(struct!.tier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user_labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.userLabels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    zone: {
+      value: cdktf.stringToHclTerraform(struct!.zone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_config: {
+      value: databaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigToHclTerraform(struct!.ipConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileCloudsqlSettingsIpConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileCloudsqlSettingsOutputReference extends cdktf.ComplexObject {
@@ -1584,6 +1916,25 @@ export function databaseMigrationServiceConnectionProfileCloudsqlToTerraform(str
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileCloudsqlToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileCloudsqlOutputReference | DatabaseMigrationServiceConnectionProfileCloudsql): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    settings: {
+      value: databaseMigrationServiceConnectionProfileCloudsqlSettingsToHclTerraform(struct!.settings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileCloudsqlSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabaseMigrationServiceConnectionProfileCloudsqlOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1681,6 +2032,37 @@ export function databaseMigrationServiceConnectionProfileMysqlSslToTerraform(str
     client_certificate: cdktf.stringToTerraform(struct!.clientCertificate),
     client_key: cdktf.stringToTerraform(struct!.clientKey),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileMysqlSslToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileMysqlSslOutputReference | DatabaseMigrationServiceConnectionProfileMysqlSsl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ca_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.caCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_key: {
+      value: cdktf.stringToHclTerraform(struct!.clientKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileMysqlSslOutputReference extends cdktf.ComplexObject {
@@ -1830,6 +2212,55 @@ export function databaseMigrationServiceConnectionProfileMysqlToTerraform(struct
     username: cdktf.stringToTerraform(struct!.username),
     ssl: databaseMigrationServiceConnectionProfileMysqlSslToTerraform(struct!.ssl),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileMysqlToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileMysqlOutputReference | DatabaseMigrationServiceConnectionProfileMysql): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cloud_sql_id: {
+      value: cdktf.stringToHclTerraform(struct!.cloudSqlId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssl: {
+      value: databaseMigrationServiceConnectionProfileMysqlSslToHclTerraform(struct!.ssl),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileMysqlSslList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileMysqlOutputReference extends cdktf.ComplexObject {
@@ -2030,6 +2461,49 @@ export function databaseMigrationServiceConnectionProfileOracleForwardSshConnect
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileOracleForwardSshConnectivityToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileOracleForwardSshConnectivityOutputReference | DatabaseMigrationServiceConnectionProfileOracleForwardSshConnectivity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hostname: {
+      value: cdktf.stringToHclTerraform(struct!.hostname),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    private_key: {
+      value: cdktf.stringToHclTerraform(struct!.privateKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabaseMigrationServiceConnectionProfileOracleForwardSshConnectivityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2176,6 +2650,25 @@ export function databaseMigrationServiceConnectionProfileOraclePrivateConnectivi
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileOraclePrivateConnectivityToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileOraclePrivateConnectivityOutputReference | DatabaseMigrationServiceConnectionProfileOraclePrivateConnectivity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    private_connection: {
+      value: cdktf.stringToHclTerraform(struct!.privateConnection),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabaseMigrationServiceConnectionProfileOraclePrivateConnectivityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2255,6 +2748,37 @@ export function databaseMigrationServiceConnectionProfileOracleSslToTerraform(st
     client_certificate: cdktf.stringToTerraform(struct!.clientCertificate),
     client_key: cdktf.stringToTerraform(struct!.clientKey),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileOracleSslToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileOracleSslOutputReference | DatabaseMigrationServiceConnectionProfileOracleSsl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ca_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.caCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_key: {
+      value: cdktf.stringToHclTerraform(struct!.clientKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileOracleSslOutputReference extends cdktf.ComplexObject {
@@ -2363,6 +2887,17 @@ export function databaseMigrationServiceConnectionProfileOracleStaticServiceIpCo
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfileOracleStaticServiceIpConnectivityToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileOracleStaticServiceIpConnectivityOutputReference | DatabaseMigrationServiceConnectionProfileOracleStaticServiceIpConnectivity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DatabaseMigrationServiceConnectionProfileOracleStaticServiceIpConnectivityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2463,6 +2998,73 @@ export function databaseMigrationServiceConnectionProfileOracleToTerraform(struc
     ssl: databaseMigrationServiceConnectionProfileOracleSslToTerraform(struct!.ssl),
     static_service_ip_connectivity: databaseMigrationServiceConnectionProfileOracleStaticServiceIpConnectivityToTerraform(struct!.staticServiceIpConnectivity),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileOracleToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileOracleOutputReference | DatabaseMigrationServiceConnectionProfileOracle): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    database_service: {
+      value: cdktf.stringToHclTerraform(struct!.databaseService),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    forward_ssh_connectivity: {
+      value: databaseMigrationServiceConnectionProfileOracleForwardSshConnectivityToHclTerraform(struct!.forwardSshConnectivity),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileOracleForwardSshConnectivityList",
+    },
+    private_connectivity: {
+      value: databaseMigrationServiceConnectionProfileOraclePrivateConnectivityToHclTerraform(struct!.privateConnectivity),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileOraclePrivateConnectivityList",
+    },
+    ssl: {
+      value: databaseMigrationServiceConnectionProfileOracleSslToHclTerraform(struct!.ssl),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileOracleSslList",
+    },
+    static_service_ip_connectivity: {
+      value: databaseMigrationServiceConnectionProfileOracleStaticServiceIpConnectivityToHclTerraform(struct!.staticServiceIpConnectivity),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfileOracleStaticServiceIpConnectivityList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileOracleOutputReference extends cdktf.ComplexObject {
@@ -2715,6 +3317,37 @@ export function databaseMigrationServiceConnectionProfilePostgresqlSslToTerrafor
   }
 }
 
+
+export function databaseMigrationServiceConnectionProfilePostgresqlSslToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfilePostgresqlSslOutputReference | DatabaseMigrationServiceConnectionProfilePostgresqlSsl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ca_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.caCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_key: {
+      value: cdktf.stringToHclTerraform(struct!.clientKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabaseMigrationServiceConnectionProfilePostgresqlSslOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2862,6 +3495,55 @@ export function databaseMigrationServiceConnectionProfilePostgresqlToTerraform(s
     username: cdktf.stringToTerraform(struct!.username),
     ssl: databaseMigrationServiceConnectionProfilePostgresqlSslToTerraform(struct!.ssl),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfilePostgresqlToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfilePostgresqlOutputReference | DatabaseMigrationServiceConnectionProfilePostgresql): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cloud_sql_id: {
+      value: cdktf.stringToHclTerraform(struct!.cloudSqlId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssl: {
+      value: databaseMigrationServiceConnectionProfilePostgresqlSslToHclTerraform(struct!.ssl),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatabaseMigrationServiceConnectionProfilePostgresqlSslList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfilePostgresqlOutputReference extends cdktf.ComplexObject {
@@ -3045,6 +3727,37 @@ export function databaseMigrationServiceConnectionProfileTimeoutsToTerraform(str
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function databaseMigrationServiceConnectionProfileTimeoutsToHclTerraform(struct?: DatabaseMigrationServiceConnectionProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabaseMigrationServiceConnectionProfileTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -3465,5 +4178,85 @@ export class DatabaseMigrationServiceConnectionProfile extends cdktf.TerraformRe
       postgresql: databaseMigrationServiceConnectionProfilePostgresqlToTerraform(this._postgresql.internalValue),
       timeouts: databaseMigrationServiceConnectionProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      connection_profile_id: {
+        value: cdktf.stringToHclTerraform(this._connectionProfileId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alloydb: {
+        value: databaseMigrationServiceConnectionProfileAlloydbToHclTerraform(this._alloydb.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatabaseMigrationServiceConnectionProfileAlloydbList",
+      },
+      cloudsql: {
+        value: databaseMigrationServiceConnectionProfileCloudsqlToHclTerraform(this._cloudsql.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatabaseMigrationServiceConnectionProfileCloudsqlList",
+      },
+      mysql: {
+        value: databaseMigrationServiceConnectionProfileMysqlToHclTerraform(this._mysql.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatabaseMigrationServiceConnectionProfileMysqlList",
+      },
+      oracle: {
+        value: databaseMigrationServiceConnectionProfileOracleToHclTerraform(this._oracle.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatabaseMigrationServiceConnectionProfileOracleList",
+      },
+      postgresql: {
+        value: databaseMigrationServiceConnectionProfilePostgresqlToHclTerraform(this._postgresql.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatabaseMigrationServiceConnectionProfilePostgresqlList",
+      },
+      timeouts: {
+        value: databaseMigrationServiceConnectionProfileTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DatabaseMigrationServiceConnectionProfileTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

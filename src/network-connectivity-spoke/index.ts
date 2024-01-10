@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/network_connectivity_spoke
 // generated from terraform resource schema
 
@@ -115,6 +110,31 @@ export function networkConnectivitySpokeLinkedInterconnectAttachmentsToTerraform
   }
 }
 
+
+export function networkConnectivitySpokeLinkedInterconnectAttachmentsToHclTerraform(struct?: NetworkConnectivitySpokeLinkedInterconnectAttachmentsOutputReference | NetworkConnectivitySpokeLinkedInterconnectAttachments): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    site_to_site_data_transfer: {
+      value: cdktf.booleanToHclTerraform(struct!.siteToSiteDataTransfer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    uris: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.uris),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkConnectivitySpokeLinkedInterconnectAttachmentsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -203,6 +223,31 @@ export function networkConnectivitySpokeLinkedRouterApplianceInstancesInstancesT
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     virtual_machine: cdktf.stringToTerraform(struct!.virtualMachine),
   }
+}
+
+
+export function networkConnectivitySpokeLinkedRouterApplianceInstancesInstancesToHclTerraform(struct?: NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.ipAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_machine: {
+      value: cdktf.stringToHclTerraform(struct!.virtualMachine),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesOutputReference extends cdktf.ComplexObject {
@@ -333,6 +378,31 @@ export function networkConnectivitySpokeLinkedRouterApplianceInstancesToTerrafor
   }
 }
 
+
+export function networkConnectivitySpokeLinkedRouterApplianceInstancesToHclTerraform(struct?: NetworkConnectivitySpokeLinkedRouterApplianceInstancesOutputReference | NetworkConnectivitySpokeLinkedRouterApplianceInstances): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    site_to_site_data_transfer: {
+      value: cdktf.booleanToHclTerraform(struct!.siteToSiteDataTransfer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    instances: {
+      value: cdktf.listMapperHcl(networkConnectivitySpokeLinkedRouterApplianceInstancesInstancesToHclTerraform, true)(struct!.instances),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkConnectivitySpokeLinkedRouterApplianceInstancesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -421,6 +491,31 @@ export function networkConnectivitySpokeLinkedVpcNetworkToTerraform(struct?: Net
     exclude_export_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeExportRanges),
     uri: cdktf.stringToTerraform(struct!.uri),
   }
+}
+
+
+export function networkConnectivitySpokeLinkedVpcNetworkToHclTerraform(struct?: NetworkConnectivitySpokeLinkedVpcNetworkOutputReference | NetworkConnectivitySpokeLinkedVpcNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    exclude_export_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeExportRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectivitySpokeLinkedVpcNetworkOutputReference extends cdktf.ComplexObject {
@@ -516,6 +611,31 @@ export function networkConnectivitySpokeLinkedVpnTunnelsToTerraform(struct?: Net
   }
 }
 
+
+export function networkConnectivitySpokeLinkedVpnTunnelsToHclTerraform(struct?: NetworkConnectivitySpokeLinkedVpnTunnelsOutputReference | NetworkConnectivitySpokeLinkedVpnTunnels): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    site_to_site_data_transfer: {
+      value: cdktf.booleanToHclTerraform(struct!.siteToSiteDataTransfer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    uris: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.uris),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkConnectivitySpokeLinkedVpnTunnelsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -605,6 +725,37 @@ export function networkConnectivitySpokeTimeoutsToTerraform(struct?: NetworkConn
     delete: cdktf.stringToTerraform(struct!.delete),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function networkConnectivitySpokeTimeoutsToHclTerraform(struct?: NetworkConnectivitySpokeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectivitySpokeTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1013,5 +1164,85 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
       linked_vpn_tunnels: networkConnectivitySpokeLinkedVpnTunnelsToTerraform(this._linkedVpnTunnels.internalValue),
       timeouts: networkConnectivitySpokeTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      hub: {
+        value: cdktf.stringToHclTerraform(this._hub),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project: {
+        value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      linked_interconnect_attachments: {
+        value: networkConnectivitySpokeLinkedInterconnectAttachmentsToHclTerraform(this._linkedInterconnectAttachments.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkConnectivitySpokeLinkedInterconnectAttachmentsList",
+      },
+      linked_router_appliance_instances: {
+        value: networkConnectivitySpokeLinkedRouterApplianceInstancesToHclTerraform(this._linkedRouterApplianceInstances.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkConnectivitySpokeLinkedRouterApplianceInstancesList",
+      },
+      linked_vpc_network: {
+        value: networkConnectivitySpokeLinkedVpcNetworkToHclTerraform(this._linkedVpcNetwork.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkConnectivitySpokeLinkedVpcNetworkList",
+      },
+      linked_vpn_tunnels: {
+        value: networkConnectivitySpokeLinkedVpnTunnelsToHclTerraform(this._linkedVpnTunnels.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkConnectivitySpokeLinkedVpnTunnelsList",
+      },
+      timeouts: {
+        value: networkConnectivitySpokeTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetworkConnectivitySpokeTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
