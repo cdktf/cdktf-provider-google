@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstance(scope Construct, id *string, config DataGoogleComputeInstanceConfig) DataGoogleComputeInstance
 ```
@@ -311,7 +311,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.DataGoogleComputeInstance_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.DataGoogleComputeInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglecomputeinstance.DataGoogleComputeInstance_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.DataGoogleComputeInstance_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ datagooglecomputeinstance.DataGoogleComputeInstance_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.DataGoogleComputeInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1073,7 +1073,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceAdvancedMachineFeatures {
 
@@ -1086,7 +1086,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceAttachedDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceAttachedDisk {
 
@@ -1099,7 +1099,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceBootDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceBootDisk {
 
@@ -1112,7 +1112,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceBootDiskInitializeParams.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceBootDiskInitializeParams {
 
@@ -1125,7 +1125,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfidentialInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceConfidentialInstanceConfig {
 
@@ -1138,7 +1138,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceConfig {
 	Connection: interface{},
@@ -1325,7 +1325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceGuestAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceGuestAccelerator {
 
@@ -1338,7 +1338,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceNetworkInterface {
 
@@ -1351,7 +1351,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceNetworkInterfaceAccessConfig {
 
@@ -1364,7 +1364,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceAliasIpRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceNetworkInterfaceAliasIpRange {
 
@@ -1377,7 +1377,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfig {
 
@@ -1390,7 +1390,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkPerformanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceNetworkPerformanceConfig {
 
@@ -1403,7 +1403,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceParams.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceParams {
 
@@ -1416,7 +1416,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceReservationAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceReservationAffinity {
 
@@ -1429,7 +1429,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceReservationAffinitySpecificReservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceReservationAffinitySpecificReservation {
 
@@ -1442,7 +1442,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceScheduling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceScheduling {
 
@@ -1455,7 +1455,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeout {
 
@@ -1468,7 +1468,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingNodeAffinities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceSchedulingNodeAffinities {
 
@@ -1481,7 +1481,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceScratchDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceScratchDisk {
 
@@ -1494,7 +1494,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceServiceAccount {
 
@@ -1507,7 +1507,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 &datagooglecomputeinstance.DataGoogleComputeInstanceShieldedInstanceConfig {
 
@@ -1522,7 +1522,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstan
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceAdvancedMachineFeaturesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceAdvancedMachineFeaturesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceAdvancedMachineFeaturesList
 ```
@@ -1671,7 +1671,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceAdvancedMachineFeaturesOutputReference
 ```
@@ -1971,7 +1971,7 @@ func InternalValue() DataGoogleComputeInstanceAdvancedMachineFeatures
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceAttachedDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceAttachedDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceAttachedDiskList
 ```
@@ -2120,7 +2120,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceAttachedDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceAttachedDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceAttachedDiskOutputReference
 ```
@@ -2453,7 +2453,7 @@ func InternalValue() DataGoogleComputeInstanceAttachedDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceBootDiskInitializeParamsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceBootDiskInitializeParamsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceBootDiskInitializeParamsList
 ```
@@ -2602,7 +2602,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceBootDiskInitializeParamsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceBootDiskInitializeParamsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceBootDiskInitializeParamsOutputReference
 ```
@@ -2946,7 +2946,7 @@ func InternalValue() DataGoogleComputeInstanceBootDiskInitializeParams
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceBootDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceBootDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceBootDiskList
 ```
@@ -3095,7 +3095,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceBootDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceBootDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceBootDiskOutputReference
 ```
@@ -3450,7 +3450,7 @@ func InternalValue() DataGoogleComputeInstanceBootDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfidentialInstanceConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceConfidentialInstanceConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceConfidentialInstanceConfigList
 ```
@@ -3599,7 +3599,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfidentialInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceConfidentialInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceConfidentialInstanceConfigOutputReference
 ```
@@ -3877,7 +3877,7 @@ func InternalValue() DataGoogleComputeInstanceConfidentialInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceGuestAcceleratorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceGuestAcceleratorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceGuestAcceleratorList
 ```
@@ -4026,7 +4026,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceGuestAcceleratorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceGuestAcceleratorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceGuestAcceleratorOutputReference
 ```
@@ -4315,7 +4315,7 @@ func InternalValue() DataGoogleComputeInstanceGuestAccelerator
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceAccessConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceAccessConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceNetworkInterfaceAccessConfigList
 ```
@@ -4464,7 +4464,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceAccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceAccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceNetworkInterfaceAccessConfigOutputReference
 ```
@@ -4764,7 +4764,7 @@ func InternalValue() DataGoogleComputeInstanceNetworkInterfaceAccessConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceAliasIpRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceAliasIpRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceNetworkInterfaceAliasIpRangeList
 ```
@@ -4913,7 +4913,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceAliasIpRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceAliasIpRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceNetworkInterfaceAliasIpRangeOutputReference
 ```
@@ -5202,7 +5202,7 @@ func InternalValue() DataGoogleComputeInstanceNetworkInterfaceAliasIpRange
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfigList
 ```
@@ -5351,7 +5351,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference
 ```
@@ -5673,7 +5673,7 @@ func InternalValue() DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceNetworkInterfaceList
 ```
@@ -5822,7 +5822,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceNetworkInterfaceOutputReference
 ```
@@ -6243,7 +6243,7 @@ func InternalValue() DataGoogleComputeInstanceNetworkInterface
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkPerformanceConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkPerformanceConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceNetworkPerformanceConfigList
 ```
@@ -6392,7 +6392,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceNetworkPerformanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceNetworkPerformanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceNetworkPerformanceConfigOutputReference
 ```
@@ -6670,7 +6670,7 @@ func InternalValue() DataGoogleComputeInstanceNetworkPerformanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceParamsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceParamsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceParamsList
 ```
@@ -6819,7 +6819,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceParamsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceParamsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceParamsOutputReference
 ```
@@ -7097,7 +7097,7 @@ func InternalValue() DataGoogleComputeInstanceParams
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceReservationAffinityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceReservationAffinityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceReservationAffinityList
 ```
@@ -7246,7 +7246,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceReservationAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceReservationAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceReservationAffinityOutputReference
 ```
@@ -7535,7 +7535,7 @@ func InternalValue() DataGoogleComputeInstanceReservationAffinity
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceReservationAffinitySpecificReservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceReservationAffinitySpecificReservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceReservationAffinitySpecificReservationList
 ```
@@ -7684,7 +7684,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceReservationAffinitySpecificReservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceReservationAffinitySpecificReservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceReservationAffinitySpecificReservationOutputReference
 ```
@@ -7973,7 +7973,7 @@ func InternalValue() DataGoogleComputeInstanceReservationAffinitySpecificReserva
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceSchedulingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceSchedulingList
 ```
@@ -8122,7 +8122,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutList
 ```
@@ -8271,7 +8271,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference
 ```
@@ -8560,7 +8560,7 @@ func InternalValue() DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeout
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingNodeAffinitiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceSchedulingNodeAffinitiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceSchedulingNodeAffinitiesList
 ```
@@ -8709,7 +8709,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingNodeAffinitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceSchedulingNodeAffinitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceSchedulingNodeAffinitiesOutputReference
 ```
@@ -9009,7 +9009,7 @@ func InternalValue() DataGoogleComputeInstanceSchedulingNodeAffinities
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceSchedulingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceSchedulingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceSchedulingOutputReference
 ```
@@ -9364,7 +9364,7 @@ func InternalValue() DataGoogleComputeInstanceScheduling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceScratchDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceScratchDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceScratchDiskList
 ```
@@ -9513,7 +9513,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceScratchDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceScratchDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceScratchDiskOutputReference
 ```
@@ -9813,7 +9813,7 @@ func InternalValue() DataGoogleComputeInstanceScratchDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceServiceAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceServiceAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceServiceAccountList
 ```
@@ -9962,7 +9962,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceServiceAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceServiceAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceServiceAccountOutputReference
 ```
@@ -10251,7 +10251,7 @@ func InternalValue() DataGoogleComputeInstanceServiceAccount
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceShieldedInstanceConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceShieldedInstanceConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeInstanceShieldedInstanceConfigList
 ```
@@ -10400,7 +10400,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeinstance"
 
 datagooglecomputeinstance.NewDataGoogleComputeInstanceShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeInstanceShieldedInstanceConfigOutputReference
 ```
