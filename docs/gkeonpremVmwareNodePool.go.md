@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePool(scope Construct, id *string, config GkeonpremVmwareNodePoolConfig) GkeonpremVmwareNodePool
 ```
@@ -459,7 +459,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.GkeonpremVmwareNodePool_IsConstruct(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.GkeonpremVmwareNodePool_IsTerraformElement(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ gkeonpremvmwarenodepool.GkeonpremVmwareNodePool_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.GkeonpremVmwareNodePool_IsTerraformResource(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ gkeonpremvmwarenodepool.GkeonpremVmwareNodePool_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.GkeonpremVmwareNodePool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1078,7 +1078,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolConfig {
 	Connection: interface{},
@@ -1088,16 +1088,16 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Config: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigA,
 	Location: *string,
 	Name: *string,
 	VmwareCluster: *string,
 	Annotations: *map[string]*string,
 	DisplayName: *string,
 	Id: *string,
-	NodePoolAutoscaling: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolNodePoolAutoscaling,
+	NodePoolAutoscaling: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolNodePoolAutoscaling,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolTimeouts,
 }
 ```
 
@@ -1350,7 +1350,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolConfigA {
 	ImageType: *string,
@@ -1520,7 +1520,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigTaints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolConfigTaints {
 	Key: *string,
@@ -1586,7 +1586,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigVsphereConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolConfigVsphereConfig {
 
@@ -1599,7 +1599,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigVsphereConfigTags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolConfigVsphereConfigTags {
 
@@ -1612,7 +1612,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolNodePoolAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolNodePoolAutoscaling {
 	MaxReplicas: *f64,
@@ -1662,7 +1662,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolStatus {
 
@@ -1675,7 +1675,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolStatusConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolStatusConditions {
 
@@ -1688,7 +1688,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 &gkeonpremvmwarenodepool.GkeonpremVmwareNodePoolTimeouts {
 	Create: *string,
@@ -1750,7 +1750,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareNodePoolConfigAOutputReference
 ```
@@ -2277,7 +2277,7 @@ func InternalValue() GkeonpremVmwareNodePoolConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigTaintsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolConfigTaintsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareNodePoolConfigTaintsList
 ```
@@ -2437,7 +2437,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigTaintsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolConfigTaintsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareNodePoolConfigTaintsOutputReference
 ```
@@ -2777,7 +2777,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigVsphereConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolConfigVsphereConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareNodePoolConfigVsphereConfigList
 ```
@@ -2926,7 +2926,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolConfigVsphereConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference
 ```
@@ -3215,7 +3215,7 @@ func InternalValue() GkeonpremVmwareNodePoolConfigVsphereConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigVsphereConfigTagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolConfigVsphereConfigTagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareNodePoolConfigVsphereConfigTagsList
 ```
@@ -3364,7 +3364,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference
 ```
@@ -3653,7 +3653,7 @@ func InternalValue() GkeonpremVmwareNodePoolConfigVsphereConfigTags
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolNodePoolAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolNodePoolAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareNodePoolNodePoolAutoscalingOutputReference
 ```
@@ -3946,7 +3946,7 @@ func InternalValue() GkeonpremVmwareNodePoolNodePoolAutoscaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolStatusConditionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolStatusConditionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareNodePoolStatusConditionsList
 ```
@@ -4095,7 +4095,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolStatusConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolStatusConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareNodePoolStatusConditionsOutputReference
 ```
@@ -4417,7 +4417,7 @@ func InternalValue() GkeonpremVmwareNodePoolStatusConditions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareNodePoolStatusList
 ```
@@ -4566,7 +4566,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareNodePoolStatusOutputReference
 ```
@@ -4855,7 +4855,7 @@ func InternalValue() GkeonpremVmwareNodePoolStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareNodePool.GkeonpremVmwareNodePoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarenodepool"
 
 gkeonpremvmwarenodepool.NewGkeonpremVmwareNodePoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareNodePoolTimeoutsOutputReference
 ```
