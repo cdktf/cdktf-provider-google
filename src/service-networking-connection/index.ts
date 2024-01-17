@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection
+// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,13 @@ import * as cdktf from 'cdktf';
 
 export interface ServiceNetworkingConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}
+  * When set to ABANDON, terraform will abandon management of the resource instead of deleting it. Prevents terraform apply failures with CloudSQL. Note: The resource will still exist.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#deletion_policy ServiceNetworkingConnection#deletion_policy}
+  */
+  readonly deletionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,39 +28,39 @@ export interface ServiceNetworkingConnectionConfig extends cdktf.TerraformMetaAr
   /**
   * Name of VPC network connected with service producers using VPC peering.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#network ServiceNetworkingConnection#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#network ServiceNetworkingConnection#network}
   */
   readonly network: string;
   /**
   * Named IP address range(s) of PEERING type reserved for this service provider. Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
   */
   readonly reservedPeeringRanges: string[];
   /**
   * Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#service ServiceNetworkingConnection#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#service ServiceNetworkingConnection#service}
   */
   readonly service: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#timeouts ServiceNetworkingConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#timeouts ServiceNetworkingConnection#timeouts}
   */
   readonly timeouts?: ServiceNetworkingConnectionTimeouts;
 }
 export interface ServiceNetworkingConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}
   */
   readonly update?: string;
 }
@@ -206,7 +212,7 @@ export class ServiceNetworkingConnectionTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection google_service_networking_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection google_service_networking_connection}
 */
 export class ServiceNetworkingConnection extends cdktf.TerraformResource {
 
@@ -222,7 +228,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ServiceNetworkingConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ServiceNetworkingConnection to import
-  * @param importFromId The id of the existing ServiceNetworkingConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ServiceNetworkingConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ServiceNetworkingConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -234,7 +240,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_networking_connection google_service_networking_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_networking_connection google_service_networking_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -245,7 +251,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_service_networking_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.11.0',
+        providerVersion: '5.12.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -256,6 +262,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._deletionPolicy = config.deletionPolicy;
     this._id = config.id;
     this._network = config.network;
     this._reservedPeeringRanges = config.reservedPeeringRanges;
@@ -266,6 +273,22 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // deletion_policy - computed: false, optional: true, required: false
+  private _deletionPolicy?: string; 
+  public get deletionPolicy() {
+    return this.getStringAttribute('deletion_policy');
+  }
+  public set deletionPolicy(value: string) {
+    this._deletionPolicy = value;
+  }
+  public resetDeletionPolicy() {
+    this._deletionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionPolicyInput() {
+    return this._deletionPolicy;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -349,6 +372,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
       id: cdktf.stringToTerraform(this._id),
       network: cdktf.stringToTerraform(this._network),
       reserved_peering_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._reservedPeeringRanges),
@@ -359,6 +383,12 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      deletion_policy: {
+        value: cdktf.stringToHclTerraform(this._deletionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       id: {
         value: cdktf.stringToHclTerraform(this._id),
         isBlock: false,

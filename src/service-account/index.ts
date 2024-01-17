@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account
+// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,29 +15,35 @@ export interface ServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z]([-a-z0-9]*[a-z0-9]) to comply with RFC1035. Changing this forces a new service account to be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#account_id ServiceAccount#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#account_id ServiceAccount#account_id}
   */
   readonly accountId: string;
   /**
+  * If set to true, skip service account creation if a service account with the same email already exists.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#create_ignore_already_exists ServiceAccount#create_ignore_already_exists}
+  */
+  readonly createIgnoreAlreadyExists?: boolean | cdktf.IResolvable;
+  /**
   * A text description of the service account. Must be less than or equal to 256 UTF-8 bytes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#description ServiceAccount#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#description ServiceAccount#description}
   */
   readonly description?: string;
   /**
   * Whether the service account is disabled. Defaults to false
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#disabled ServiceAccount#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#disabled ServiceAccount#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The display name for the service account. Can be updated without creating a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#display_name ServiceAccount#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#display_name ServiceAccount#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#id ServiceAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#id ServiceAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -46,19 +52,19 @@ export interface ServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * The ID of the project that the service account will be created in. Defaults to the provider project configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#project ServiceAccount#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#project ServiceAccount#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#timeouts ServiceAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#timeouts ServiceAccount#timeouts}
   */
   readonly timeouts?: ServiceAccountTimeouts;
 }
 export interface ServiceAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#create ServiceAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#create ServiceAccount#create}
   */
   readonly create?: string;
 }
@@ -152,7 +158,7 @@ export class ServiceAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account google_service_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account google_service_account}
 */
 export class ServiceAccount extends cdktf.TerraformResource {
 
@@ -168,7 +174,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ServiceAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ServiceAccount to import
-  * @param importFromId The id of the existing ServiceAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ServiceAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ServiceAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -180,7 +186,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/service_account google_service_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/service_account google_service_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -191,7 +197,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
       terraformResourceType: 'google_service_account',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.11.0',
+        providerVersion: '5.12.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -203,6 +209,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._accountId = config.accountId;
+    this._createIgnoreAlreadyExists = config.createIgnoreAlreadyExists;
     this._description = config.description;
     this._disabled = config.disabled;
     this._displayName = config.displayName;
@@ -226,6 +233,22 @@ export class ServiceAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accountIdInput() {
     return this._accountId;
+  }
+
+  // create_ignore_already_exists - computed: false, optional: true, required: false
+  private _createIgnoreAlreadyExists?: boolean | cdktf.IResolvable; 
+  public get createIgnoreAlreadyExists() {
+    return this.getBooleanAttribute('create_ignore_already_exists');
+  }
+  public set createIgnoreAlreadyExists(value: boolean | cdktf.IResolvable) {
+    this._createIgnoreAlreadyExists = value;
+  }
+  public resetCreateIgnoreAlreadyExists() {
+    this._createIgnoreAlreadyExists = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createIgnoreAlreadyExistsInput() {
+    return this._createIgnoreAlreadyExists;
   }
 
   // description - computed: false, optional: true, required: false
@@ -351,6 +374,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_id: cdktf.stringToTerraform(this._accountId),
+      create_ignore_already_exists: cdktf.booleanToTerraform(this._createIgnoreAlreadyExists),
       description: cdktf.stringToTerraform(this._description),
       disabled: cdktf.booleanToTerraform(this._disabled),
       display_name: cdktf.stringToTerraform(this._displayName),
@@ -367,6 +391,12 @@ export class ServiceAccount extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      create_ignore_already_exists: {
+        value: cdktf.booleanToHclTerraform(this._createIgnoreAlreadyExists),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       description: {
         value: cdktf.stringToHclTerraform(this._description),
