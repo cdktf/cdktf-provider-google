@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan
+// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface GkeBackupBackupPlanConfig extends cdktf.TerraformMetaArguments 
   /**
   * The source cluster from which Backups will be created via this BackupPlan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#cluster GkeBackupBackupPlan#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#cluster GkeBackupBackupPlan#cluster}
   */
   readonly cluster: string;
   /**
@@ -24,17 +19,17 @@ export interface GkeBackupBackupPlanConfig extends cdktf.TerraformMetaArguments 
   * (except deletes), including the deactivated field itself. It also prevents any new Backups
   * from being created via this BackupPlan (including scheduled Backups).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#deactivated GkeBackupBackupPlan#deactivated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#deactivated GkeBackupBackupPlan#deactivated}
   */
   readonly deactivated?: boolean | cdktf.IResolvable;
   /**
   * User specified descriptive string for this BackupPlan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#description GkeBackupBackupPlan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#description GkeBackupBackupPlan#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#id GkeBackupBackupPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#id GkeBackupBackupPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -49,47 +44,47 @@ export interface GkeBackupBackupPlanConfig extends cdktf.TerraformMetaArguments 
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#labels GkeBackupBackupPlan#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#labels GkeBackupBackupPlan#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The region of the Backup Plan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#location GkeBackupBackupPlan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#location GkeBackupBackupPlan#location}
   */
   readonly location: string;
   /**
   * The full name of the BackupPlan Resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#project GkeBackupBackupPlan#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#project GkeBackupBackupPlan#project}
   */
   readonly project?: string;
   /**
   * backup_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#backup_config GkeBackupBackupPlan#backup_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#backup_config GkeBackupBackupPlan#backup_config}
   */
   readonly backupConfig?: GkeBackupBackupPlanBackupConfig;
   /**
   * backup_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#backup_schedule GkeBackupBackupPlan#backup_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#backup_schedule GkeBackupBackupPlan#backup_schedule}
   */
   readonly backupSchedule?: GkeBackupBackupPlanBackupSchedule;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#retention_policy GkeBackupBackupPlan#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#retention_policy GkeBackupBackupPlan#retention_policy}
   */
   readonly retentionPolicy?: GkeBackupBackupPlanRetentionPolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#timeouts GkeBackupBackupPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#timeouts GkeBackupBackupPlan#timeouts}
   */
   readonly timeouts?: GkeBackupBackupPlanTimeouts;
 }
@@ -97,7 +92,7 @@ export interface GkeBackupBackupPlanBackupConfigEncryptionKey {
   /**
   * Google Cloud KMS encryption key. Format: projects/* /locations/* /keyRings/* /cryptoKeys/*
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#gcp_kms_encryption_key GkeBackupBackupPlan#gcp_kms_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#gcp_kms_encryption_key GkeBackupBackupPlan#gcp_kms_encryption_key}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -182,13 +177,13 @@ export interface GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNa
   /**
   * The name of a Kubernetes Resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
   */
   readonly name: string;
   /**
   * The namespace of a Kubernetes Resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#namespace GkeBackupBackupPlan#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#namespace GkeBackupBackupPlan#namespace}
   */
   readonly namespace: string;
 }
@@ -329,7 +324,7 @@ export interface GkeBackupBackupPlanBackupConfigSelectedApplications {
   /**
   * namespaced_names block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#namespaced_names GkeBackupBackupPlan#namespaced_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#namespaced_names GkeBackupBackupPlan#namespaced_names}
   */
   readonly namespacedNames: GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNames[] | cdktf.IResolvable;
 }
@@ -412,7 +407,7 @@ export interface GkeBackupBackupPlanBackupConfigSelectedNamespaces {
   /**
   * A list of Kubernetes Namespaces.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#namespaces GkeBackupBackupPlan#namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#namespaces GkeBackupBackupPlan#namespaces}
   */
   readonly namespaces: string[];
 }
@@ -495,39 +490,39 @@ export interface GkeBackupBackupPlanBackupConfig {
   /**
   * If True, include all namespaced resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#all_namespaces GkeBackupBackupPlan#all_namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#all_namespaces GkeBackupBackupPlan#all_namespaces}
   */
   readonly allNamespaces?: boolean | cdktf.IResolvable;
   /**
   * This flag specifies whether Kubernetes Secret resources should be included
   * when they fall into the scope of Backups.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#include_secrets GkeBackupBackupPlan#include_secrets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#include_secrets GkeBackupBackupPlan#include_secrets}
   */
   readonly includeSecrets?: boolean | cdktf.IResolvable;
   /**
   * This flag specifies whether volume data should be backed up when PVCs are
   * included in the scope of a Backup.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#include_volume_data GkeBackupBackupPlan#include_volume_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#include_volume_data GkeBackupBackupPlan#include_volume_data}
   */
   readonly includeVolumeData?: boolean | cdktf.IResolvable;
   /**
   * encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#encryption_key GkeBackupBackupPlan#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#encryption_key GkeBackupBackupPlan#encryption_key}
   */
   readonly encryptionKey?: GkeBackupBackupPlanBackupConfigEncryptionKey;
   /**
   * selected_applications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#selected_applications GkeBackupBackupPlan#selected_applications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#selected_applications GkeBackupBackupPlan#selected_applications}
   */
   readonly selectedApplications?: GkeBackupBackupPlanBackupConfigSelectedApplications;
   /**
   * selected_namespaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#selected_namespaces GkeBackupBackupPlan#selected_namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#selected_namespaces GkeBackupBackupPlan#selected_namespaces}
   */
   readonly selectedNamespaces?: GkeBackupBackupPlanBackupConfigSelectedNamespaces;
 }
@@ -760,13 +755,13 @@ export interface GkeBackupBackupPlanBackupSchedule {
   * creating Backups via this BackupPlan.
   * If this is defined, then backupRetainDays must also be defined.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#cron_schedule GkeBackupBackupPlan#cron_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#cron_schedule GkeBackupBackupPlan#cron_schedule}
   */
   readonly cronSchedule?: string;
   /**
   * This flag denotes whether automatic Backup creation is paused for this BackupPlan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#paused GkeBackupBackupPlan#paused}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#paused GkeBackupBackupPlan#paused}
   */
   readonly paused?: boolean | cdktf.IResolvable;
 }
@@ -886,7 +881,7 @@ export interface GkeBackupBackupPlanRetentionPolicy {
   * Updating this field of a BackupPlan does not affect existing Backups.
   * Backups created after a successful update will inherit this new value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#backup_delete_lock_days GkeBackupBackupPlan#backup_delete_lock_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#backup_delete_lock_days GkeBackupBackupPlan#backup_delete_lock_days}
   */
   readonly backupDeleteLockDays?: number;
   /**
@@ -901,7 +896,7 @@ export interface GkeBackupBackupPlanRetentionPolicy {
   * NOTE: backupRetainDays must be >= backupDeleteLockDays.
   * If cronSchedule is defined, then this must be <= 360 * the creation interval.]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#backup_retain_days GkeBackupBackupPlan#backup_retain_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#backup_retain_days GkeBackupBackupPlan#backup_retain_days}
   */
   readonly backupRetainDays?: number;
   /**
@@ -909,7 +904,7 @@ export interface GkeBackupBackupPlanRetentionPolicy {
   * If set to True, no further update is allowed on this policy, including
   * the locked field itself.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#locked GkeBackupBackupPlan#locked}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#locked GkeBackupBackupPlan#locked}
   */
   readonly locked?: boolean | cdktf.IResolvable;
 }
@@ -1051,15 +1046,15 @@ export class GkeBackupBackupPlanRetentionPolicyOutputReference extends cdktf.Com
 }
 export interface GkeBackupBackupPlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#create GkeBackupBackupPlan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#create GkeBackupBackupPlan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#delete GkeBackupBackupPlan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#delete GkeBackupBackupPlan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#update GkeBackupBackupPlan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#update GkeBackupBackupPlan#update}
   */
   readonly update?: string;
 }
@@ -1211,7 +1206,7 @@ export class GkeBackupBackupPlanTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan}
 */
 export class GkeBackupBackupPlan extends cdktf.TerraformResource {
 
@@ -1227,7 +1222,7 @@ export class GkeBackupBackupPlan extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GkeBackupBackupPlan resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GkeBackupBackupPlan to import
-  * @param importFromId The id of the existing GkeBackupBackupPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GkeBackupBackupPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GkeBackupBackupPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1239,7 +1234,7 @@ export class GkeBackupBackupPlan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1250,7 +1245,7 @@ export class GkeBackupBackupPlan extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_backup_backup_plan',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.11.0',
+        providerVersion: '5.12.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

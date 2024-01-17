@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group
+// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,26 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group#id DataGoogleComputeInstanceGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group#id DataGoogleComputeInstanceGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group#name DataGoogleComputeInstanceGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group#name DataGoogleComputeInstanceGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group#project DataGoogleComputeInstanceGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group#project DataGoogleComputeInstanceGroup#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group#self_link DataGoogleComputeInstanceGroup#self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group#self_link DataGoogleComputeInstanceGroup#self_link}
   */
   readonly selfLink?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group#zone DataGoogleComputeInstanceGroup#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group#zone DataGoogleComputeInstanceGroup#zone}
   */
   readonly zone?: string;
 }
@@ -118,7 +113,7 @@ export class DataGoogleComputeInstanceGroupNamedPortList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group google_compute_instance_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group google_compute_instance_group}
 */
 export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
 
@@ -134,7 +129,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleComputeInstanceGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeInstanceGroup to import
-  * @param importFromId The id of the existing DataGoogleComputeInstanceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeInstanceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeInstanceGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -146,7 +141,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/data-sources/compute_instance_group google_compute_instance_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/data-sources/compute_instance_group google_compute_instance_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -157,7 +152,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_instance_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.11.0',
+        providerVersion: '5.12.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

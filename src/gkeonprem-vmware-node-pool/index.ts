@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool
+// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -26,17 +21,17 @@ export interface GkeonpremVmwareNodePoolConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#annotations GkeonpremVmwareNodePool#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#annotations GkeonpremVmwareNodePool#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * The display name for the node pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#display_name GkeonpremVmwareNodePool#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#display_name GkeonpremVmwareNodePool#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#id GkeonpremVmwareNodePool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#id GkeonpremVmwareNodePool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -45,41 +40,41 @@ export interface GkeonpremVmwareNodePoolConfig extends cdktf.TerraformMetaArgume
   /**
   * The location of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#location GkeonpremVmwareNodePool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#location GkeonpremVmwareNodePool#location}
   */
   readonly location: string;
   /**
   * The vmware node pool name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#name GkeonpremVmwareNodePool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#name GkeonpremVmwareNodePool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#project GkeonpremVmwareNodePool#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#project GkeonpremVmwareNodePool#project}
   */
   readonly project?: string;
   /**
   * The cluster this node pool belongs to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#vmware_cluster GkeonpremVmwareNodePool#vmware_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#vmware_cluster GkeonpremVmwareNodePool#vmware_cluster}
   */
   readonly vmwareCluster: string;
   /**
   * config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#config GkeonpremVmwareNodePool#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#config GkeonpremVmwareNodePool#config}
   */
   readonly config: GkeonpremVmwareNodePoolConfigA;
   /**
   * node_pool_autoscaling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#node_pool_autoscaling GkeonpremVmwareNodePool#node_pool_autoscaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#node_pool_autoscaling GkeonpremVmwareNodePool#node_pool_autoscaling}
   */
   readonly nodePoolAutoscaling?: GkeonpremVmwareNodePoolNodePoolAutoscaling;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#timeouts GkeonpremVmwareNodePool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#timeouts GkeonpremVmwareNodePool#timeouts}
   */
   readonly timeouts?: GkeonpremVmwareNodePoolTimeouts;
 }
@@ -259,184 +254,23 @@ export class GkeonpremVmwareNodePoolStatusList extends cdktf.ComplexList {
     return new GkeonpremVmwareNodePoolStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface GkeonpremVmwareNodePoolConfigVsphereConfigTags {
-}
-
-export function gkeonpremVmwareNodePoolConfigVsphereConfigTagsToTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfigTags): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-
-export function gkeonpremVmwareNodePoolConfigVsphereConfigTagsToHclTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfigTags): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-  };
-  return attrs;
-}
-
-export class GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): GkeonpremVmwareNodePoolConfigVsphereConfigTags | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: GkeonpremVmwareNodePoolConfigVsphereConfigTags | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // category - computed: true, optional: false, required: false
-  public get category() {
-    return this.getStringAttribute('category');
-  }
-
-  // tag - computed: true, optional: false, required: false
-  public get tag() {
-    return this.getStringAttribute('tag');
-  }
-}
-
-export class GkeonpremVmwareNodePoolConfigVsphereConfigTagsList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference {
-    return new GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface GkeonpremVmwareNodePoolConfigVsphereConfig {
-}
-
-export function gkeonpremVmwareNodePoolConfigVsphereConfigToTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfig): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-
-export function gkeonpremVmwareNodePoolConfigVsphereConfigToHclTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfig): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-  };
-  return attrs;
-}
-
-export class GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): GkeonpremVmwareNodePoolConfigVsphereConfig | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: GkeonpremVmwareNodePoolConfigVsphereConfig | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // datastore - computed: true, optional: false, required: false
-  public get datastore() {
-    return this.getStringAttribute('datastore');
-  }
-
-  // tags - computed: true, optional: false, required: false
-  private _tags = new GkeonpremVmwareNodePoolConfigVsphereConfigTagsList(this, "tags", false);
-  public get tags() {
-    return this._tags;
-  }
-}
-
-export class GkeonpremVmwareNodePoolConfigVsphereConfigList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference {
-    return new GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface GkeonpremVmwareNodePoolConfigTaints {
   /**
   * Available taint effects. Possible values: ["EFFECT_UNSPECIFIED", "NO_SCHEDULE", "PREFER_NO_SCHEDULE", "NO_EXECUTE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#effect GkeonpremVmwareNodePool#effect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#effect GkeonpremVmwareNodePool#effect}
   */
   readonly effect?: string;
   /**
   * Key associated with the effect.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#key GkeonpremVmwareNodePool#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#key GkeonpremVmwareNodePool#key}
   */
   readonly key: string;
   /**
   * Value associated with the effect.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#value GkeonpremVmwareNodePool#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#value GkeonpremVmwareNodePool#value}
   */
   readonly value: string;
 }
@@ -602,37 +436,346 @@ export class GkeonpremVmwareNodePoolConfigTaintsList extends cdktf.ComplexList {
     return new GkeonpremVmwareNodePoolConfigTaintsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface GkeonpremVmwareNodePoolConfigVsphereConfigTags {
+  /**
+  * The Vsphere tag category.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#category GkeonpremVmwareNodePool#category}
+  */
+  readonly category?: string;
+  /**
+  * The Vsphere tag name.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#tag GkeonpremVmwareNodePool#tag}
+  */
+  readonly tag?: string;
+}
+
+export function gkeonpremVmwareNodePoolConfigVsphereConfigTagsToTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfigTags | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    category: cdktf.stringToTerraform(struct!.category),
+    tag: cdktf.stringToTerraform(struct!.tag),
+  }
+}
+
+
+export function gkeonpremVmwareNodePoolConfigVsphereConfigTagsToHclTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfigTags | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    category: {
+      value: cdktf.stringToHclTerraform(struct!.category),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GkeonpremVmwareNodePoolConfigVsphereConfigTags | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._category !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.category = this._category;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeonpremVmwareNodePoolConfigVsphereConfigTags | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._category = undefined;
+      this._tag = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._category = value.category;
+      this._tag = value.tag;
+    }
+  }
+
+  // category - computed: false, optional: true, required: false
+  private _category?: string; 
+  public get category() {
+    return this.getStringAttribute('category');
+  }
+  public set category(value: string) {
+    this._category = value;
+  }
+  public resetCategory() {
+    this._category = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryInput() {
+    return this._category;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+}
+
+export class GkeonpremVmwareNodePoolConfigVsphereConfigTagsList extends cdktf.ComplexList {
+  public internalValue? : GkeonpremVmwareNodePoolConfigVsphereConfigTags[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference {
+    return new GkeonpremVmwareNodePoolConfigVsphereConfigTagsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface GkeonpremVmwareNodePoolConfigVsphereConfig {
+  /**
+  * The name of the vCenter datastore. Inherited from the user cluster.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#datastore GkeonpremVmwareNodePool#datastore}
+  */
+  readonly datastore?: string;
+  /**
+  * Vsphere host groups to apply to all VMs in the node pool
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#host_groups GkeonpremVmwareNodePool#host_groups}
+  */
+  readonly hostGroups?: string[];
+  /**
+  * tags block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#tags GkeonpremVmwareNodePool#tags}
+  */
+  readonly tags?: GkeonpremVmwareNodePoolConfigVsphereConfigTags[] | cdktf.IResolvable;
+}
+
+export function gkeonpremVmwareNodePoolConfigVsphereConfigToTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference | GkeonpremVmwareNodePoolConfigVsphereConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    datastore: cdktf.stringToTerraform(struct!.datastore),
+    host_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.hostGroups),
+    tags: cdktf.listMapper(gkeonpremVmwareNodePoolConfigVsphereConfigTagsToTerraform, true)(struct!.tags),
+  }
+}
+
+
+export function gkeonpremVmwareNodePoolConfigVsphereConfigToHclTerraform(struct?: GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference | GkeonpremVmwareNodePoolConfigVsphereConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    datastore: {
+      value: cdktf.stringToHclTerraform(struct!.datastore),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_groups: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.hostGroups),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    tags: {
+      value: cdktf.listMapperHcl(gkeonpremVmwareNodePoolConfigVsphereConfigTagsToHclTerraform, true)(struct!.tags),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeonpremVmwareNodePoolConfigVsphereConfigTagsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeonpremVmwareNodePoolConfigVsphereConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._datastore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.datastore = this._datastore;
+    }
+    if (this._hostGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostGroups = this._hostGroups;
+    }
+    if (this._tags?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeonpremVmwareNodePoolConfigVsphereConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._datastore = undefined;
+      this._hostGroups = undefined;
+      this._tags.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._datastore = value.datastore;
+      this._hostGroups = value.hostGroups;
+      this._tags.internalValue = value.tags;
+    }
+  }
+
+  // datastore - computed: false, optional: true, required: false
+  private _datastore?: string; 
+  public get datastore() {
+    return this.getStringAttribute('datastore');
+  }
+  public set datastore(value: string) {
+    this._datastore = value;
+  }
+  public resetDatastore() {
+    this._datastore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datastoreInput() {
+    return this._datastore;
+  }
+
+  // host_groups - computed: false, optional: true, required: false
+  private _hostGroups?: string[]; 
+  public get hostGroups() {
+    return this.getListAttribute('host_groups');
+  }
+  public set hostGroups(value: string[]) {
+    this._hostGroups = value;
+  }
+  public resetHostGroups() {
+    this._hostGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostGroupsInput() {
+    return this._hostGroups;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags = new GkeonpremVmwareNodePoolConfigVsphereConfigTagsList(this, "tags", false);
+  public get tags() {
+    return this._tags;
+  }
+  public putTags(value: GkeonpremVmwareNodePoolConfigVsphereConfigTags[] | cdktf.IResolvable) {
+    this._tags.internalValue = value;
+  }
+  public resetTags() {
+    this._tags.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags.internalValue;
+  }
+}
 export interface GkeonpremVmwareNodePoolConfigA {
   /**
   * VMware disk size to be used during creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#boot_disk_size_gb GkeonpremVmwareNodePool#boot_disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#boot_disk_size_gb GkeonpremVmwareNodePool#boot_disk_size_gb}
   */
   readonly bootDiskSizeGb?: number;
   /**
   * The number of CPUs for each node in the node pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#cpus GkeonpremVmwareNodePool#cpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#cpus GkeonpremVmwareNodePool#cpus}
   */
   readonly cpus?: number;
   /**
   * Allow node pool traffic to be load balanced. Only works for clusters with
   * MetalLB load balancers.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#enable_load_balancer GkeonpremVmwareNodePool#enable_load_balancer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#enable_load_balancer GkeonpremVmwareNodePool#enable_load_balancer}
   */
   readonly enableLoadBalancer?: boolean | cdktf.IResolvable;
   /**
   * The OS image name in vCenter, only valid when using Windows.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#image GkeonpremVmwareNodePool#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#image GkeonpremVmwareNodePool#image}
   */
   readonly image?: string;
   /**
   * The OS image to be used for each node in a node pool.
   * Currently 'cos', 'ubuntu', 'ubuntu_containerd' and 'windows' are supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#image_type GkeonpremVmwareNodePool#image_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#image_type GkeonpremVmwareNodePool#image_type}
   */
   readonly imageType: string;
   /**
@@ -643,27 +786,33 @@ export interface GkeonpremVmwareNodePoolConfigA {
   * the Kubernetes version -- it's best to assume the behavior is undefined
   * and conflicts should be avoided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#labels GkeonpremVmwareNodePool#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#labels GkeonpremVmwareNodePool#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The megabytes of memory for each node in the node pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#memory_mb GkeonpremVmwareNodePool#memory_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#memory_mb GkeonpremVmwareNodePool#memory_mb}
   */
   readonly memoryMb?: number;
   /**
   * The number of nodes in the node pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#replicas GkeonpremVmwareNodePool#replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#replicas GkeonpremVmwareNodePool#replicas}
   */
   readonly replicas?: number;
   /**
   * taints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#taints GkeonpremVmwareNodePool#taints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#taints GkeonpremVmwareNodePool#taints}
   */
   readonly taints?: GkeonpremVmwareNodePoolConfigTaints[] | cdktf.IResolvable;
+  /**
+  * vsphere_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#vsphere_config GkeonpremVmwareNodePool#vsphere_config}
+  */
+  readonly vsphereConfig?: GkeonpremVmwareNodePoolConfigVsphereConfig;
 }
 
 export function gkeonpremVmwareNodePoolConfigAToTerraform(struct?: GkeonpremVmwareNodePoolConfigAOutputReference | GkeonpremVmwareNodePoolConfigA): any {
@@ -681,6 +830,7 @@ export function gkeonpremVmwareNodePoolConfigAToTerraform(struct?: GkeonpremVmwa
     memory_mb: cdktf.numberToTerraform(struct!.memoryMb),
     replicas: cdktf.numberToTerraform(struct!.replicas),
     taints: cdktf.listMapper(gkeonpremVmwareNodePoolConfigTaintsToTerraform, true)(struct!.taints),
+    vsphere_config: gkeonpremVmwareNodePoolConfigVsphereConfigToTerraform(struct!.vsphereConfig),
   }
 }
 
@@ -745,6 +895,12 @@ export function gkeonpremVmwareNodePoolConfigAToHclTerraform(struct?: GkeonpremV
       type: "list",
       storageClassType: "GkeonpremVmwareNodePoolConfigTaintsList",
     },
+    vsphere_config: {
+      value: gkeonpremVmwareNodePoolConfigVsphereConfigToHclTerraform(struct!.vsphereConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeonpremVmwareNodePoolConfigVsphereConfigList",
+    },
   };
 
   // remove undefined attributes
@@ -801,6 +957,10 @@ export class GkeonpremVmwareNodePoolConfigAOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.taints = this._taints?.internalValue;
     }
+    if (this._vsphereConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vsphereConfig = this._vsphereConfig?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -816,6 +976,7 @@ export class GkeonpremVmwareNodePoolConfigAOutputReference extends cdktf.Complex
       this._memoryMb = undefined;
       this._replicas = undefined;
       this._taints.internalValue = undefined;
+      this._vsphereConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -828,6 +989,7 @@ export class GkeonpremVmwareNodePoolConfigAOutputReference extends cdktf.Complex
       this._memoryMb = value.memoryMb;
       this._replicas = value.replicas;
       this._taints.internalValue = value.taints;
+      this._vsphereConfig.internalValue = value.vsphereConfig;
     }
   }
 
@@ -956,12 +1118,6 @@ export class GkeonpremVmwareNodePoolConfigAOutputReference extends cdktf.Complex
     return this._replicas;
   }
 
-  // vsphere_config - computed: true, optional: false, required: false
-  private _vsphereConfig = new GkeonpremVmwareNodePoolConfigVsphereConfigList(this, "vsphere_config", false);
-  public get vsphereConfig() {
-    return this._vsphereConfig;
-  }
-
   // taints - computed: false, optional: true, required: false
   private _taints = new GkeonpremVmwareNodePoolConfigTaintsList(this, "taints", false);
   public get taints() {
@@ -977,18 +1133,34 @@ export class GkeonpremVmwareNodePoolConfigAOutputReference extends cdktf.Complex
   public get taintsInput() {
     return this._taints.internalValue;
   }
+
+  // vsphere_config - computed: false, optional: true, required: false
+  private _vsphereConfig = new GkeonpremVmwareNodePoolConfigVsphereConfigOutputReference(this, "vsphere_config");
+  public get vsphereConfig() {
+    return this._vsphereConfig;
+  }
+  public putVsphereConfig(value: GkeonpremVmwareNodePoolConfigVsphereConfig) {
+    this._vsphereConfig.internalValue = value;
+  }
+  public resetVsphereConfig() {
+    this._vsphereConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vsphereConfigInput() {
+    return this._vsphereConfig.internalValue;
+  }
 }
 export interface GkeonpremVmwareNodePoolNodePoolAutoscaling {
   /**
   * Maximum number of replicas in the NodePool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#max_replicas GkeonpremVmwareNodePool#max_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#max_replicas GkeonpremVmwareNodePool#max_replicas}
   */
   readonly maxReplicas: number;
   /**
   * Minimum number of replicas in the NodePool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#min_replicas GkeonpremVmwareNodePool#min_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#min_replicas GkeonpremVmwareNodePool#min_replicas}
   */
   readonly minReplicas: number;
 }
@@ -1095,15 +1267,15 @@ export class GkeonpremVmwareNodePoolNodePoolAutoscalingOutputReference extends c
 }
 export interface GkeonpremVmwareNodePoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#create GkeonpremVmwareNodePool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#create GkeonpremVmwareNodePool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#delete GkeonpremVmwareNodePool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#delete GkeonpremVmwareNodePool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#update GkeonpremVmwareNodePool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#update GkeonpremVmwareNodePool#update}
   */
   readonly update?: string;
 }
@@ -1255,7 +1427,7 @@ export class GkeonpremVmwareNodePoolTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool google_gkeonprem_vmware_node_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool google_gkeonprem_vmware_node_pool}
 */
 export class GkeonpremVmwareNodePool extends cdktf.TerraformResource {
 
@@ -1271,7 +1443,7 @@ export class GkeonpremVmwareNodePool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GkeonpremVmwareNodePool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GkeonpremVmwareNodePool to import
-  * @param importFromId The id of the existing GkeonpremVmwareNodePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GkeonpremVmwareNodePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GkeonpremVmwareNodePool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1283,7 +1455,7 @@ export class GkeonpremVmwareNodePool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.11.0/docs/resources/gkeonprem_vmware_node_pool google_gkeonprem_vmware_node_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/gkeonprem_vmware_node_pool google_gkeonprem_vmware_node_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1294,7 +1466,7 @@ export class GkeonpremVmwareNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_gkeonprem_vmware_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.11.0',
+        providerVersion: '5.12.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
