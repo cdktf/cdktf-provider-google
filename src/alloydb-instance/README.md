@@ -1,3 +1,3 @@
 # `google_alloydb_instance`
 
-Refer to the Terraform Registry for docs: [`google_alloydb_instance`](https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/alloydb_instance).
+Refer to the Terraform Registry for docs: [`google_alloydb_instance`](https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/alloydb_instance).

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface IamDenyPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The display name of the rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#display_name IamDenyPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#display_name IamDenyPolicy#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#id IamDenyPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#id IamDenyPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,25 +23,25 @@ export interface IamDenyPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#name IamDenyPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#name IamDenyPolicy#name}
   */
   readonly name: string;
   /**
   * The attachment point is identified by its URL-encoded full resource name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#parent IamDenyPolicy#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#parent IamDenyPolicy#parent}
   */
   readonly parent: string;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#rules IamDenyPolicy#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#rules IamDenyPolicy#rules}
   */
   readonly rules: IamDenyPolicyRules[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#timeouts IamDenyPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#timeouts IamDenyPolicy#timeouts}
   */
   readonly timeouts?: IamDenyPolicyTimeouts;
 }
@@ -55,27 +50,27 @@ export interface IamDenyPolicyRulesDenyRuleDenialCondition {
   * Description of the expression. This is a longer text which describes the expression,
   * e.g. when hovered over it in a UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#description IamDenyPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#description IamDenyPolicy#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#expression IamDenyPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#expression IamDenyPolicy#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting,
   * e.g. a file name and a position in the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#location IamDenyPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#location IamDenyPolicy#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   * This can be used e.g. in UIs which allow to enter the expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#title IamDenyPolicy#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#title IamDenyPolicy#title}
   */
   readonly title?: string;
 }
@@ -246,13 +241,13 @@ export interface IamDenyPolicyRulesDenyRule {
   * The permissions that are explicitly denied by this rule. Each permission uses the format '{service-fqdn}/{resource}.{verb}',
   * where '{service-fqdn}' is the fully qualified domain name for the service. For example, 'iam.googleapis.com/roles.list'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#denied_permissions IamDenyPolicy#denied_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#denied_permissions IamDenyPolicy#denied_permissions}
   */
   readonly deniedPermissions?: string[];
   /**
   * The identities that are prevented from using one or more permissions on Google Cloud resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#denied_principals IamDenyPolicy#denied_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#denied_principals IamDenyPolicy#denied_principals}
   */
   readonly deniedPrincipals?: string[];
   /**
@@ -260,20 +255,20 @@ export interface IamDenyPolicyRulesDenyRule {
   * If a permission appears in deniedPermissions and in exceptionPermissions then it will not be denied.
   * The excluded permissions can be specified using the same syntax as deniedPermissions.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#exception_permissions IamDenyPolicy#exception_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#exception_permissions IamDenyPolicy#exception_permissions}
   */
   readonly exceptionPermissions?: string[];
   /**
   * The identities that are excluded from the deny rule, even if they are listed in the deniedPrincipals.
   * For example, you could add a Google group to the deniedPrincipals, then exclude specific users who belong to that group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#exception_principals IamDenyPolicy#exception_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#exception_principals IamDenyPolicy#exception_principals}
   */
   readonly exceptionPrincipals?: string[];
   /**
   * denial_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#denial_condition IamDenyPolicy#denial_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#denial_condition IamDenyPolicy#denial_condition}
   */
   readonly denialCondition?: IamDenyPolicyRulesDenyRuleDenialCondition;
 }
@@ -475,13 +470,13 @@ export interface IamDenyPolicyRules {
   /**
   * The description of the rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#description IamDenyPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#description IamDenyPolicy#description}
   */
   readonly description?: string;
   /**
   * deny_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#deny_rule IamDenyPolicy#deny_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#deny_rule IamDenyPolicy#deny_rule}
   */
   readonly denyRule?: IamDenyPolicyRulesDenyRule;
 }
@@ -626,15 +621,15 @@ export class IamDenyPolicyRulesList extends cdktf.ComplexList {
 }
 export interface IamDenyPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#create IamDenyPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#create IamDenyPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#delete IamDenyPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#delete IamDenyPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#update IamDenyPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#update IamDenyPolicy#update}
   */
   readonly update?: string;
 }
@@ -786,7 +781,7 @@ export class IamDenyPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy google_iam_deny_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy google_iam_deny_policy}
 */
 export class IamDenyPolicy extends cdktf.TerraformResource {
 
@@ -802,7 +797,7 @@ export class IamDenyPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IamDenyPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IamDenyPolicy to import
-  * @param importFromId The id of the existing IamDenyPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IamDenyPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IamDenyPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -814,7 +809,7 @@ export class IamDenyPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/iam_deny_policy google_iam_deny_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/iam_deny_policy google_iam_deny_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -825,7 +820,7 @@ export class IamDenyPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_deny_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.12.0',
+        providerVersion: '5.13.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

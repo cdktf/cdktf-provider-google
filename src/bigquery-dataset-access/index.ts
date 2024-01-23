@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access
+// https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,38 +12,38 @@ export interface BigqueryDatasetAccessAConfig extends cdktf.TerraformMetaArgumen
   * must contain only letters (a-z, A-Z), numbers (0-9), or
   * underscores (_). The maximum length is 1,024 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
   */
   readonly datasetId: string;
   /**
   * A domain to grant access to. Any users signed in with the
   * domain specified will be granted the specified access
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#domain BigqueryDatasetAccessA#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#domain BigqueryDatasetAccessA#domain}
   */
   readonly domain?: string;
   /**
   * An email address of a Google Group to grant access to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#group_by_email BigqueryDatasetAccessA#group_by_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#group_by_email BigqueryDatasetAccessA#group_by_email}
   */
   readonly groupByEmail?: string;
   /**
   * Some other type of member that appears in the IAM Policy but isn't a user,
   * group, domain, or special group. For example: 'allUsers'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#iam_member BigqueryDatasetAccessA#iam_member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#iam_member BigqueryDatasetAccessA#iam_member}
   */
   readonly iamMember?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#id BigqueryDatasetAccessA#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#id BigqueryDatasetAccessA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#project BigqueryDatasetAccessA#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#project BigqueryDatasetAccessA#project}
   */
   readonly project?: string;
   /**
@@ -59,7 +54,7 @@ export interface BigqueryDatasetAccessAConfig extends cdktf.TerraformMetaArgumen
   * post-create. See
   * [official docs](https://cloud.google.com/bigquery/docs/access-control).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#role BigqueryDatasetAccessA#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#role BigqueryDatasetAccessA#role}
   */
   readonly role?: string;
   /**
@@ -77,38 +72,38 @@ export interface BigqueryDatasetAccessAConfig extends cdktf.TerraformMetaArgumen
   * 
   * * 'allAuthenticatedUsers': All authenticated BigQuery users.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#special_group BigqueryDatasetAccessA#special_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#special_group BigqueryDatasetAccessA#special_group}
   */
   readonly specialGroup?: string;
   /**
   * An email address of a user to grant access to. For example:
   * fred@example.com
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#user_by_email BigqueryDatasetAccessA#user_by_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#user_by_email BigqueryDatasetAccessA#user_by_email}
   */
   readonly userByEmail?: string;
   /**
   * dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#dataset BigqueryDatasetAccessA#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#dataset BigqueryDatasetAccessA#dataset}
   */
   readonly dataset?: BigqueryDatasetAccessDatasetA;
   /**
   * routine block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#routine BigqueryDatasetAccessA#routine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#routine BigqueryDatasetAccessA#routine}
   */
   readonly routine?: BigqueryDatasetAccessRoutineA;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#timeouts BigqueryDatasetAccessA#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#timeouts BigqueryDatasetAccessA#timeouts}
   */
   readonly timeouts?: BigqueryDatasetAccessTimeouts;
   /**
   * view block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#view BigqueryDatasetAccessA#view}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#view BigqueryDatasetAccessA#view}
   */
   readonly view?: BigqueryDatasetAccessViewA;
 }
@@ -116,13 +111,13 @@ export interface BigqueryDatasetAccessDatasetDatasetA {
   /**
   * The ID of the dataset containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
   */
   readonly projectId: string;
 }
@@ -232,13 +227,13 @@ export interface BigqueryDatasetAccessDatasetA {
   * Which resources in the dataset this entry applies to. Currently, only views are supported,
   * but additional target types may be added in the future. Possible values: VIEWS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#target_types BigqueryDatasetAccessA#target_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#target_types BigqueryDatasetAccessA#target_types}
   */
   readonly targetTypes: string[];
   /**
   * dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#dataset BigqueryDatasetAccessA#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#dataset BigqueryDatasetAccessA#dataset}
   */
   readonly dataset: BigqueryDatasetAccessDatasetDatasetA;
 }
@@ -347,13 +342,13 @@ export interface BigqueryDatasetAccessRoutineA {
   /**
   * The ID of the dataset containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
   */
   readonly projectId: string;
   /**
@@ -361,7 +356,7 @@ export interface BigqueryDatasetAccessRoutineA {
   * A-Z), numbers (0-9), or underscores (_). The maximum length
   * is 256 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#routine_id BigqueryDatasetAccessA#routine_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#routine_id BigqueryDatasetAccessA#routine_id}
   */
   readonly routineId: string;
 }
@@ -494,11 +489,11 @@ export class BigqueryDatasetAccessRoutineAOutputReference extends cdktf.ComplexO
 }
 export interface BigqueryDatasetAccessTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#create BigqueryDatasetAccessA#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#create BigqueryDatasetAccessA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#delete BigqueryDatasetAccessA#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#delete BigqueryDatasetAccessA#delete}
   */
   readonly delete?: string;
 }
@@ -623,13 +618,13 @@ export interface BigqueryDatasetAccessViewA {
   /**
   * The ID of the dataset containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
   */
   readonly projectId: string;
   /**
@@ -637,7 +632,7 @@ export interface BigqueryDatasetAccessViewA {
   * A-Z), numbers (0-9), or underscores (_). The maximum length
   * is 1,024 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#table_id BigqueryDatasetAccessA#table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#table_id BigqueryDatasetAccessA#table_id}
   */
   readonly tableId: string;
 }
@@ -770,7 +765,7 @@ export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access google_bigquery_dataset_access}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access google_bigquery_dataset_access}
 */
 export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
 
@@ -786,7 +781,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigqueryDatasetAccessA resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigqueryDatasetAccessA to import
-  * @param importFromId The id of the existing BigqueryDatasetAccessA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigqueryDatasetAccessA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigqueryDatasetAccessA to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -798,7 +793,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/bigquery_dataset_access google_bigquery_dataset_access} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/bigquery_dataset_access google_bigquery_dataset_access} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -809,7 +804,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_dataset_access',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.12.0',
+        providerVersion: '5.13.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

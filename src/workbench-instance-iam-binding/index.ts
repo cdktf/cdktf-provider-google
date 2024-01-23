@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface WorkbenchInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#id WorkbenchInstanceIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#id WorkbenchInstanceIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#location WorkbenchInstanceIamBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#location WorkbenchInstanceIamBinding#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#members WorkbenchInstanceIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#members WorkbenchInstanceIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#name WorkbenchInstanceIamBinding#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#name WorkbenchInstanceIamBinding#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#project WorkbenchInstanceIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#project WorkbenchInstanceIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#role WorkbenchInstanceIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#role WorkbenchInstanceIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#condition WorkbenchInstanceIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#condition WorkbenchInstanceIamBinding#condition}
   */
   readonly condition?: WorkbenchInstanceIamBindingCondition;
 }
 export interface WorkbenchInstanceIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#description WorkbenchInstanceIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#description WorkbenchInstanceIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#expression WorkbenchInstanceIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#expression WorkbenchInstanceIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#title WorkbenchInstanceIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#title WorkbenchInstanceIamBinding#title}
   */
   readonly title: string;
 }
@@ -192,7 +187,7 @@ export class WorkbenchInstanceIamBindingConditionOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding google_workbench_instance_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding google_workbench_instance_iam_binding}
 */
 export class WorkbenchInstanceIamBinding extends cdktf.TerraformResource {
 
@@ -208,7 +203,7 @@ export class WorkbenchInstanceIamBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a WorkbenchInstanceIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the WorkbenchInstanceIamBinding to import
-  * @param importFromId The id of the existing WorkbenchInstanceIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing WorkbenchInstanceIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the WorkbenchInstanceIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +215,7 @@ export class WorkbenchInstanceIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/workbench_instance_iam_binding google_workbench_instance_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/workbench_instance_iam_binding google_workbench_instance_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +226,7 @@ export class WorkbenchInstanceIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_workbench_instance_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.12.0',
+        providerVersion: '5.13.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

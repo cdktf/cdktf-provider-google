@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module
+// https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,17 +14,17 @@ export interface SccOrganizationCustomModuleConfig extends cdktf.TerraformMetaAr
   * 128 characters, start with a lowercase letter, and contain alphanumeric
   * characters or underscores only.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#display_name SccOrganizationCustomModule#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#display_name SccOrganizationCustomModule#display_name}
   */
   readonly displayName: string;
   /**
   * The enablement state of the custom module. Possible values: ["ENABLED", "DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#enablement_state SccOrganizationCustomModule#enablement_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#enablement_state SccOrganizationCustomModule#enablement_state}
   */
   readonly enablementState: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#id SccOrganizationCustomModule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#id SccOrganizationCustomModule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,19 +33,19 @@ export interface SccOrganizationCustomModuleConfig extends cdktf.TerraformMetaAr
   /**
   * Numerical ID of the parent organization.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#organization SccOrganizationCustomModule#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#organization SccOrganizationCustomModule#organization}
   */
   readonly organization: string;
   /**
   * custom_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#custom_config SccOrganizationCustomModule#custom_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#custom_config SccOrganizationCustomModule#custom_config}
   */
   readonly customConfig: SccOrganizationCustomModuleCustomConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#timeouts SccOrganizationCustomModule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#timeouts SccOrganizationCustomModule#timeouts}
   */
   readonly timeouts?: SccOrganizationCustomModuleTimeouts;
 }
@@ -59,27 +54,27 @@ export interface SccOrganizationCustomModuleCustomConfigCustomOutputPropertiesVa
   * Description of the expression. This is a longer text which describes the
   * expression, e.g. when hovered over it in a UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a
   * file name and a position in the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose. This can
   * be used e.g. in UIs which allow to enter the expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
   */
   readonly title?: string;
 }
@@ -249,13 +244,13 @@ export interface SccOrganizationCustomModuleCustomConfigCustomOutputProperties {
   /**
   * Name of the property for the custom output.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#name SccOrganizationCustomModule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#name SccOrganizationCustomModule#name}
   */
   readonly name?: string;
   /**
   * value_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#value_expression SccOrganizationCustomModule#value_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#value_expression SccOrganizationCustomModule#value_expression}
   */
   readonly valueExpression?: SccOrganizationCustomModuleCustomConfigCustomOutputPropertiesValueExpression;
 }
@@ -402,7 +397,7 @@ export interface SccOrganizationCustomModuleCustomConfigCustomOutput {
   /**
   * properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#properties SccOrganizationCustomModule#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#properties SccOrganizationCustomModule#properties}
   */
   readonly properties?: SccOrganizationCustomModuleCustomConfigCustomOutputProperties[] | cdktf.IResolvable;
 }
@@ -489,27 +484,27 @@ export interface SccOrganizationCustomModuleCustomConfigPredicate {
   * Description of the expression. This is a longer text which describes the
   * expression, e.g. when hovered over it in a UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#expression SccOrganizationCustomModule#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a
   * file name and a position in the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#location SccOrganizationCustomModule#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose. This can
   * be used e.g. in UIs which allow to enter the expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#title SccOrganizationCustomModule#title}
   */
   readonly title?: string;
 }
@@ -679,7 +674,7 @@ export interface SccOrganizationCustomModuleCustomConfigResourceSelector {
   /**
   * The resource types to run the detector on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#resource_types SccOrganizationCustomModule#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#resource_types SccOrganizationCustomModule#resource_types}
   */
   readonly resourceTypes: string[];
 }
@@ -764,7 +759,7 @@ export interface SccOrganizationCustomModuleCustomConfig {
   * module detects. This explanation is returned with each finding instance to
   * help investigators understand the detected issue. The text must be enclosed in quotation marks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#description SccOrganizationCustomModule#description}
   */
   readonly description?: string;
   /**
@@ -772,31 +767,31 @@ export interface SccOrganizationCustomModuleCustomConfig {
   * the detected issue. This explanation is returned with each finding generated by
   * this module in the nextSteps property of the finding JSON.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#recommendation SccOrganizationCustomModule#recommendation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#recommendation SccOrganizationCustomModule#recommendation}
   */
   readonly recommendation: string;
   /**
   * The severity to assign to findings generated by the module. Possible values: ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#severity SccOrganizationCustomModule#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#severity SccOrganizationCustomModule#severity}
   */
   readonly severity: string;
   /**
   * custom_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#custom_output SccOrganizationCustomModule#custom_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#custom_output SccOrganizationCustomModule#custom_output}
   */
   readonly customOutput?: SccOrganizationCustomModuleCustomConfigCustomOutput;
   /**
   * predicate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#predicate SccOrganizationCustomModule#predicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#predicate SccOrganizationCustomModule#predicate}
   */
   readonly predicate: SccOrganizationCustomModuleCustomConfigPredicate;
   /**
   * resource_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#resource_selector SccOrganizationCustomModule#resource_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#resource_selector SccOrganizationCustomModule#resource_selector}
   */
   readonly resourceSelector: SccOrganizationCustomModuleCustomConfigResourceSelector;
 }
@@ -1013,15 +1008,15 @@ export class SccOrganizationCustomModuleCustomConfigOutputReference extends cdkt
 }
 export interface SccOrganizationCustomModuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#create SccOrganizationCustomModule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#create SccOrganizationCustomModule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#delete SccOrganizationCustomModule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#delete SccOrganizationCustomModule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#update SccOrganizationCustomModule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#update SccOrganizationCustomModule#update}
   */
   readonly update?: string;
 }
@@ -1173,7 +1168,7 @@ export class SccOrganizationCustomModuleTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module google_scc_organization_custom_module}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module google_scc_organization_custom_module}
 */
 export class SccOrganizationCustomModule extends cdktf.TerraformResource {
 
@@ -1189,7 +1184,7 @@ export class SccOrganizationCustomModule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SccOrganizationCustomModule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SccOrganizationCustomModule to import
-  * @param importFromId The id of the existing SccOrganizationCustomModule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SccOrganizationCustomModule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SccOrganizationCustomModule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1201,7 +1196,7 @@ export class SccOrganizationCustomModule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/scc_organization_custom_module google_scc_organization_custom_module} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/scc_organization_custom_module google_scc_organization_custom_module} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1212,7 +1207,7 @@ export class SccOrganizationCustomModule extends cdktf.TerraformResource {
       terraformResourceType: 'google_scc_organization_custom_module',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.12.0',
+        providerVersion: '5.13.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
