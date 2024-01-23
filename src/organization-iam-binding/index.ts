@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +13,44 @@ import * as cdktf from 'cdktf';
 
 export interface OrganizationIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#id OrganizationIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#id OrganizationIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#members OrganizationIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#members OrganizationIamBinding#members}
   */
   readonly members: string[];
   /**
   * The numeric ID of the organization in which you want to manage the audit logging config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#org_id OrganizationIamBinding#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#org_id OrganizationIamBinding#org_id}
   */
   readonly orgId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#role OrganizationIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#role OrganizationIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#condition OrganizationIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#condition OrganizationIamBinding#condition}
   */
   readonly condition?: OrganizationIamBindingCondition;
 }
 export interface OrganizationIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#description OrganizationIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#description OrganizationIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#expression OrganizationIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#expression OrganizationIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#title OrganizationIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#title OrganizationIamBinding#title}
   */
   readonly title: string;
 }
@@ -186,7 +186,7 @@ export class OrganizationIamBindingConditionOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding google_organization_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding google_organization_iam_binding}
 */
 export class OrganizationIamBinding extends cdktf.TerraformResource {
 
@@ -202,7 +202,7 @@ export class OrganizationIamBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a OrganizationIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the OrganizationIamBinding to import
-  * @param importFromId The id of the existing OrganizationIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing OrganizationIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the OrganizationIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -214,7 +214,7 @@ export class OrganizationIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.12.0/docs/resources/organization_iam_binding google_organization_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/organization_iam_binding google_organization_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -225,7 +225,7 @@ export class OrganizationIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_organization_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.12.0',
+        providerVersion: '5.13.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

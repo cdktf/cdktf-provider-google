@@ -568,15 +568,20 @@ Object.defineProperty(exports, 'monitoringService', { get: function () { return 
 Object.defineProperty(exports, 'monitoringSlo', { get: function () { return require('./monitoring-slo'); } });
 Object.defineProperty(exports, 'monitoringUptimeCheckConfig', { get: function () { return require('./monitoring-uptime-check-config'); } });
 Object.defineProperty(exports, 'netappActiveDirectory', { get: function () { return require('./netapp-active-directory'); } });
+Object.defineProperty(exports, 'netappBackupPolicy', { get: function () { return require('./netapp-backup-policy'); } });
 Object.defineProperty(exports, 'netappBackupVault', { get: function () { return require('./netapp-backup-vault'); } });
 Object.defineProperty(exports, 'netappKmsconfig', { get: function () { return require('./netapp-kmsconfig'); } });
 Object.defineProperty(exports, 'netappStoragePool', { get: function () { return require('./netapp-storage-pool'); } });
+Object.defineProperty(exports, 'netappVolume', { get: function () { return require('./netapp-volume'); } });
 Object.defineProperty(exports, 'networkConnectivityHub', { get: function () { return require('./network-connectivity-hub'); } });
 Object.defineProperty(exports, 'networkConnectivityPolicyBasedRoute', { get: function () { return require('./network-connectivity-policy-based-route'); } });
 Object.defineProperty(exports, 'networkConnectivityServiceConnectionPolicy', { get: function () { return require('./network-connectivity-service-connection-policy'); } });
 Object.defineProperty(exports, 'networkConnectivitySpoke', { get: function () { return require('./network-connectivity-spoke'); } });
 Object.defineProperty(exports, 'networkManagementConnectivityTest', { get: function () { return require('./network-management-connectivity-test'); } });
 Object.defineProperty(exports, 'networkSecurityAddressGroup', { get: function () { return require('./network-security-address-group'); } });
+Object.defineProperty(exports, 'networkSecurityAddressGroupIamBinding', { get: function () { return require('./network-security-address-group-iam-binding'); } });
+Object.defineProperty(exports, 'networkSecurityAddressGroupIamMember', { get: function () { return require('./network-security-address-group-iam-member'); } });
+Object.defineProperty(exports, 'networkSecurityAddressGroupIamPolicy', { get: function () { return require('./network-security-address-group-iam-policy'); } });
 Object.defineProperty(exports, 'networkSecurityGatewaySecurityPolicy', { get: function () { return require('./network-security-gateway-security-policy'); } });
 Object.defineProperty(exports, 'networkSecurityGatewaySecurityPolicyRule', { get: function () { return require('./network-security-gateway-security-policy-rule'); } });
 Object.defineProperty(exports, 'networkSecurityUrlLists', { get: function () { return require('./network-security-url-lists'); } });
@@ -720,6 +725,7 @@ Object.defineProperty(exports, 'tpuNode', { get: function () { return require('.
 Object.defineProperty(exports, 'vertexAiDataset', { get: function () { return require('./vertex-ai-dataset'); } });
 Object.defineProperty(exports, 'vertexAiEndpoint', { get: function () { return require('./vertex-ai-endpoint'); } });
 Object.defineProperty(exports, 'vertexAiFeatureGroup', { get: function () { return require('./vertex-ai-feature-group'); } });
+Object.defineProperty(exports, 'vertexAiFeatureGroupFeature', { get: function () { return require('./vertex-ai-feature-group-feature'); } });
 Object.defineProperty(exports, 'vertexAiFeatureOnlineStore', { get: function () { return require('./vertex-ai-feature-online-store'); } });
 Object.defineProperty(exports, 'vertexAiFeatureOnlineStoreFeatureview', { get: function () { return require('./vertex-ai-feature-online-store-featureview'); } });
 Object.defineProperty(exports, 'vertexAiFeaturestore', { get: function () { return require('./vertex-ai-featurestore'); } });
@@ -916,6 +922,7 @@ Object.defineProperty(exports, 'dataGoogleMonitoringMeshIstioService', { get: fu
 Object.defineProperty(exports, 'dataGoogleMonitoringNotificationChannel', { get: function () { return require('./data-google-monitoring-notification-channel'); } });
 Object.defineProperty(exports, 'dataGoogleMonitoringUptimeCheckIps', { get: function () { return require('./data-google-monitoring-uptime-check-ips'); } });
 Object.defineProperty(exports, 'dataGoogleNetblockIpRanges', { get: function () { return require('./data-google-netblock-ip-ranges'); } });
+Object.defineProperty(exports, 'dataGoogleNetworkSecurityAddressGroupIamPolicy', { get: function () { return require('./data-google-network-security-address-group-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleNotebooksInstanceIamPolicy', { get: function () { return require('./data-google-notebooks-instance-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleNotebooksRuntimeIamPolicy', { get: function () { return require('./data-google-notebooks-runtime-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleOrganization', { get: function () { return require('./data-google-organization'); } });
