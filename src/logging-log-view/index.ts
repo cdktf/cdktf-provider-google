@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view
+// https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +15,23 @@ export interface LoggingLogViewConfig extends cdktf.TerraformMetaArguments {
   /**
   * The bucket of the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#bucket LoggingLogView#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#bucket LoggingLogView#bucket}
   */
   readonly bucket: string;
   /**
   * Describes this view.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#description LoggingLogView#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#description LoggingLogView#description}
   */
   readonly description?: string;
   /**
   * Filter that restricts which log entries in a bucket are visible in this view. Filters are restricted to be a logical AND of ==/!= of any of the following: - originating project/folder/organization/billing account. - resource type - log id For example: SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#filter LoggingLogView#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#filter LoggingLogView#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#id LoggingLogView#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#id LoggingLogView#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,39 +40,39 @@ export interface LoggingLogViewConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#location LoggingLogView#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#location LoggingLogView#location}
   */
   readonly location?: string;
   /**
   * The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#name LoggingLogView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#name LoggingLogView#name}
   */
   readonly name: string;
   /**
   * The parent of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#parent LoggingLogView#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#parent LoggingLogView#parent}
   */
   readonly parent?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#timeouts LoggingLogView#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#timeouts LoggingLogView#timeouts}
   */
   readonly timeouts?: LoggingLogViewTimeouts;
 }
 export interface LoggingLogViewTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#create LoggingLogView#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#create LoggingLogView#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#delete LoggingLogView#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#delete LoggingLogView#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#update LoggingLogView#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#update LoggingLogView#update}
   */
   readonly update?: string;
 }
@@ -224,7 +224,7 @@ export class LoggingLogViewTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view google_logging_log_view}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view google_logging_log_view}
 */
 export class LoggingLogView extends cdktf.TerraformResource {
 
@@ -240,7 +240,7 @@ export class LoggingLogView extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LoggingLogView resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LoggingLogView to import
-  * @param importFromId The id of the existing LoggingLogView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LoggingLogView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LoggingLogView to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -252,7 +252,7 @@ export class LoggingLogView extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_log_view google_logging_log_view} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_log_view google_logging_log_view} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -263,7 +263,7 @@ export class LoggingLogView extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_log_view',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.13.0',
+        providerVersion: '5.14.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

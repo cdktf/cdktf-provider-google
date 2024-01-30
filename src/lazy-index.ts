@@ -384,6 +384,7 @@ Object.defineProperty(exports, 'dialogflowCxWebhook', { get: function () { retur
 Object.defineProperty(exports, 'dialogflowEntityType', { get: function () { return require('./dialogflow-entity-type'); } });
 Object.defineProperty(exports, 'dialogflowFulfillment', { get: function () { return require('./dialogflow-fulfillment'); } });
 Object.defineProperty(exports, 'dialogflowIntent', { get: function () { return require('./dialogflow-intent'); } });
+Object.defineProperty(exports, 'discoveryEngineDataStore', { get: function () { return require('./discovery-engine-data-store'); } });
 Object.defineProperty(exports, 'dnsManagedZone', { get: function () { return require('./dns-managed-zone'); } });
 Object.defineProperty(exports, 'dnsManagedZoneIamBinding', { get: function () { return require('./dns-managed-zone-iam-binding'); } });
 Object.defineProperty(exports, 'dnsManagedZoneIamMember', { get: function () { return require('./dns-managed-zone-iam-member'); } });
@@ -671,6 +672,8 @@ Object.defineProperty(exports, 'secureSourceManagerInstance', { get: function ()
 Object.defineProperty(exports, 'secureSourceManagerInstanceIamBinding', { get: function () { return require('./secure-source-manager-instance-iam-binding'); } });
 Object.defineProperty(exports, 'secureSourceManagerInstanceIamMember', { get: function () { return require('./secure-source-manager-instance-iam-member'); } });
 Object.defineProperty(exports, 'secureSourceManagerInstanceIamPolicy', { get: function () { return require('./secure-source-manager-instance-iam-policy'); } });
+Object.defineProperty(exports, 'securityposturePosture', { get: function () { return require('./securityposture-posture'); } });
+Object.defineProperty(exports, 'securityposturePostureDeployment', { get: function () { return require('./securityposture-posture-deployment'); } });
 Object.defineProperty(exports, 'serviceAccount', { get: function () { return require('./service-account'); } });
 Object.defineProperty(exports, 'serviceAccountIamBinding', { get: function () { return require('./service-account-iam-binding'); } });
 Object.defineProperty(exports, 'serviceAccountIamMember', { get: function () { return require('./service-account-iam-member'); } });

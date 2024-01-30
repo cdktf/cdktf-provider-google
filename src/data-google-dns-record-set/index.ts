@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set
+// https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,31 +15,31 @@ export interface DataGoogleDnsRecordSetConfig extends cdktf.TerraformMetaArgumen
   /**
   * The Name of the zone.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
   */
   readonly managedZone: string;
   /**
   * The DNS name for the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
   */
   readonly name: string;
   /**
   * The ID of the project for the Google Cloud.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
   */
   readonly project?: string;
   /**
   * The identifier of a supported record type. See the list of Supported DNS record types.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
   */
   readonly type: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set google_dns_record_set}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set google_dns_record_set}
 */
 export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
 
@@ -55,7 +55,7 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleDnsRecordSet resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleDnsRecordSet to import
-  * @param importFromId The id of the existing DataGoogleDnsRecordSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleDnsRecordSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleDnsRecordSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -67,7 +67,7 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/dns_record_set google_dns_record_set} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/dns_record_set google_dns_record_set} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -78,7 +78,7 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_dns_record_set',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.13.0',
+        providerVersion: '5.14.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
