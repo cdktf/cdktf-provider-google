@@ -4,12 +4,12 @@
 
 ### LoggingFolderSettings <a name="LoggingFolderSettings" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings google_logging_folder_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings google_logging_folder_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.NewLoggingFolderSettings(scope Construct, id *string, config LoggingFolderSettingsConfig) LoggingFolderSettings
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ loggingfoldersettings.LoggingFolderSettings_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ loggingfoldersettings.LoggingFolderSettings_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -515,7 +515,7 @@ The construct id used in the generated config for the LoggingFolderSettings to i
 
 The id of the existing LoggingFolderSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -880,7 +880,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 &loggingfoldersettings.LoggingFolderSettingsConfig {
 	Connection: interface{},
@@ -895,7 +895,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettin
 	Id: *string,
 	KmsKeyName: *string,
 	StorageLocation: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.loggingFolderSettings.LoggingFolderSettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.loggingFolderSettings.LoggingFolderSettingsTimeouts,
 }
 ```
 
@@ -912,7 +912,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettin
 | <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.folder">Folder</a></code> | <code>*string</code> | The folder for which to retrieve settings. |
 | <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.disableDefaultSink">DisableDefaultSink</a></code> | <code>interface{}</code> | If set to true, the _Default sink in newly created projects and folders will created in a disabled state. |
-| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#id LoggingFolderSettings#id}. |
+| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#id LoggingFolderSettings#id}. |
 | <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.kmsKeyName">KmsKeyName</a></code> | <code>*string</code> | The resource name for the configured Cloud KMS key. |
 | <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.storageLocation">StorageLocation</a></code> | <code>*string</code> | The storage location that Cloud Logging will use to create new resources when a location is needed but not explicitly provided. |
 | <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts">LoggingFolderSettingsTimeouts</a></code> | timeouts block. |
@@ -999,7 +999,7 @@ Folder *string
 
 The folder for which to retrieve settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#folder LoggingFolderSettings#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#folder LoggingFolderSettings#folder}
 
 ---
 
@@ -1015,7 +1015,7 @@ If set to true, the _Default sink in newly created projects and folders will cre
 
 This can be used to automatically disable log storage if there is already an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled manually if needed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#disable_default_sink LoggingFolderSettings#disable_default_sink}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#disable_default_sink LoggingFolderSettings#disable_default_sink}
 
 ---
 
@@ -1027,7 +1027,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#id LoggingFolderSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#id LoggingFolderSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1044,7 +1044,7 @@ KmsKeyName *string
 
 The resource name for the configured Cloud KMS key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#kms_key_name LoggingFolderSettings#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#kms_key_name LoggingFolderSettings#kms_key_name}
 
 ---
 
@@ -1058,7 +1058,7 @@ StorageLocation *string
 
 The storage location that Cloud Logging will use to create new resources when a location is needed but not explicitly provided.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#storage_location LoggingFolderSettings#storage_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#storage_location LoggingFolderSettings#storage_location}
 
 ---
 
@@ -1072,7 +1072,7 @@ Timeouts LoggingFolderSettingsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#timeouts LoggingFolderSettings#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#timeouts LoggingFolderSettings#timeouts}
 
 ---
 
@@ -1081,7 +1081,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 &loggingfoldersettings.LoggingFolderSettingsTimeouts {
 	Create: *string,
@@ -1094,9 +1094,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettin
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#create LoggingFolderSettings#create}. |
-| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#delete LoggingFolderSettings#delete}. |
-| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#update LoggingFolderSettings#update}. |
+| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#create LoggingFolderSettings#create}. |
+| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#delete LoggingFolderSettings#delete}. |
+| <code><a href="#@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#update LoggingFolderSettings#update}. |
 
 ---
 
@@ -1108,7 +1108,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#create LoggingFolderSettings#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#create LoggingFolderSettings#create}.
 
 ---
 
@@ -1120,7 +1120,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#delete LoggingFolderSettings#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#delete LoggingFolderSettings#delete}.
 
 ---
 
@@ -1132,7 +1132,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/resources/logging_folder_settings#update LoggingFolderSettings#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/logging_folder_settings#update LoggingFolderSettings#update}.
 
 ---
 
@@ -1143,7 +1143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.NewLoggingFolderSettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingFolderSettingsTimeoutsOutputReference
 ```

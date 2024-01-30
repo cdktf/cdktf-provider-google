@@ -4,12 +4,12 @@
 
 ### DataGoogleStorageBucket <a name="DataGoogleStorageBucket" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucket"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/storage_bucket google_storage_bucket}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/storage_bucket google_storage_bucket}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucket.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucket(scope Construct, id *string, config DataGoogleStorageBucketConfig) DataGoogleStorageBucket
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucket.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.DataGoogleStorageBucket_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucket.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.DataGoogleStorageBucket_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagooglestoragebucket.DataGoogleStorageBucket_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucket.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.DataGoogleStorageBucket_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglestoragebucket.DataGoogleStorageBucket_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucket.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.DataGoogleStorageBucket_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -372,7 +372,7 @@ The construct id used in the generated config for the DataGoogleStorageBucket to
 
 The id of the existing DataGoogleStorageBucket that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/storage_bucket#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/storage_bucket#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -858,7 +858,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketAutoclass.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketAutoclass {
 
@@ -871,7 +871,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketConfig {
 	Connection: interface{},
@@ -898,7 +898,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketConfig.property.name">Name</a></code> | <code>*string</code> | The name of the bucket. |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/storage_bucket#id DataGoogleStorageBucket#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/storage_bucket#id DataGoogleStorageBucket#id}. |
 
 ---
 
@@ -982,7 +982,7 @@ Name *string
 
 The name of the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/storage_bucket#name DataGoogleStorageBucket#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/storage_bucket#name DataGoogleStorageBucket#name}
 
 ---
 
@@ -994,7 +994,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.13.0/docs/data-sources/storage_bucket#id DataGoogleStorageBucket#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/data-sources/storage_bucket#id DataGoogleStorageBucket#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1006,7 +1006,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketCors {
 
@@ -1019,7 +1019,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketCustomPlacementConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketCustomPlacementConfig {
 
@@ -1032,7 +1032,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketEncryption {
 
@@ -1045,7 +1045,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketLifecycleRule {
 
@@ -1058,7 +1058,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketLifecycleRuleAction {
 
@@ -1071,7 +1071,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketLifecycleRuleCondition {
 
@@ -1084,7 +1084,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLogging.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketLogging {
 
@@ -1097,7 +1097,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketRetentionPolicy {
 
@@ -1110,7 +1110,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketVersioning.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketVersioning {
 
@@ -1123,7 +1123,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketWebsite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 &datagooglestoragebucket.DataGoogleStorageBucketWebsite {
 
@@ -1138,7 +1138,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketAutoclassList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketAutoclassList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketAutoclassList
 ```
@@ -1287,7 +1287,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketAutoclassOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketAutoclassOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketAutoclassOutputReference
 ```
@@ -1576,7 +1576,7 @@ func InternalValue() DataGoogleStorageBucketAutoclass
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketCorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketCorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketCorsList
 ```
@@ -1725,7 +1725,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketCorsOutputReference
 ```
@@ -2036,7 +2036,7 @@ func InternalValue() DataGoogleStorageBucketCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketCustomPlacementConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketCustomPlacementConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketCustomPlacementConfigList
 ```
@@ -2185,7 +2185,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketCustomPlacementConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketCustomPlacementConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketCustomPlacementConfigOutputReference
 ```
@@ -2463,7 +2463,7 @@ func InternalValue() DataGoogleStorageBucketCustomPlacementConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketEncryptionList
 ```
@@ -2612,7 +2612,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketEncryptionOutputReference
 ```
@@ -2890,7 +2890,7 @@ func InternalValue() DataGoogleStorageBucketEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLifecycleRuleActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketLifecycleRuleActionList
 ```
@@ -3039,7 +3039,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLifecycleRuleActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketLifecycleRuleActionOutputReference
 ```
@@ -3328,7 +3328,7 @@ func InternalValue() DataGoogleStorageBucketLifecycleRuleAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLifecycleRuleConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketLifecycleRuleConditionList
 ```
@@ -3477,7 +3477,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLifecycleRuleConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketLifecycleRuleConditionOutputReference
 ```
@@ -3876,7 +3876,7 @@ func InternalValue() DataGoogleStorageBucketLifecycleRuleCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLifecycleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketLifecycleRuleList
 ```
@@ -4025,7 +4025,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLifecycleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLifecycleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketLifecycleRuleOutputReference
 ```
@@ -4314,7 +4314,7 @@ func InternalValue() DataGoogleStorageBucketLifecycleRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLoggingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLoggingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketLoggingList
 ```
@@ -4463,7 +4463,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketLoggingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketLoggingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketLoggingOutputReference
 ```
@@ -4752,7 +4752,7 @@ func InternalValue() DataGoogleStorageBucketLogging
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketRetentionPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketRetentionPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketRetentionPolicyList
 ```
@@ -4901,7 +4901,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketRetentionPolicyOutputReference
 ```
@@ -5190,7 +5190,7 @@ func InternalValue() DataGoogleStorageBucketRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketVersioningList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketVersioningList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketVersioningList
 ```
@@ -5339,7 +5339,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketVersioningOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketVersioningOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketVersioningOutputReference
 ```
@@ -5617,7 +5617,7 @@ func InternalValue() DataGoogleStorageBucketVersioning
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketWebsiteList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketWebsiteList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleStorageBucketWebsiteList
 ```
@@ -5766,7 +5766,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucket.DataGoogleStorageBucketWebsiteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglestoragebucket"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragebucket"
 
 datagooglestoragebucket.NewDataGoogleStorageBucketWebsiteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleStorageBucketWebsiteOutputReference
 ```
