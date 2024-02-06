@@ -4,7 +4,7 @@
 
 ### MemcacheInstance <a name="MemcacheInstance" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance google_memcache_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance google_memcache_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer"></a>
 
@@ -33,6 +33,7 @@ memcacheInstance.MemcacheInstance(
   memcache_version: str = None,
   project: str = None,
   region: str = None,
+  reserved_ip_range_id: typing.List[str] = None,
   timeouts: MemcacheInstanceTimeouts = None,
   zones: typing.List[str] = None
 )
@@ -54,13 +55,14 @@ memcacheInstance.MemcacheInstance(
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.nodeCount">node_count</a></code> | <code>typing.Union[int, float]</code> | Number of nodes in the memcache instance. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.authorizedNetwork">authorized_network</a></code> | <code>str</code> | The full name of the GCE network to connect the instance to.  If not provided, 'default' will be used. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | A user-visible name for the instance. |
-| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#id MemcacheInstance#id}. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#id MemcacheInstance#id}. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Resource labels to represent user-provided metadata. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.maintenancePolicy">maintenance_policy</a></code> | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicy">MemcacheInstanceMaintenancePolicy</a></code> | maintenance_policy block. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.memcacheParameters">memcache_parameters</a></code> | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceMemcacheParameters">MemcacheInstanceMemcacheParameters</a></code> | memcache_parameters block. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.memcacheVersion">memcache_version</a></code> | <code>str</code> | The major version of Memcached software. |
-| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#project MemcacheInstance#project}. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#project MemcacheInstance#project}. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.region">region</a></code> | <code>str</code> | The region of the Memcache instance. If it is not provided, the provider region is used. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.reservedIpRangeId">reserved_ip_range_id</a></code> | <code>typing.List[str]</code> | Contains the name of allocated IP address ranges associated with the private service access connection for example, "test-default" associated with IP range 10.0.0.0/29. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts">MemcacheInstanceTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.zones">zones</a></code> | <code>typing.List[str]</code> | Zones where memcache nodes should be provisioned.  If not provided, all zones will be used. |
 
@@ -132,7 +134,7 @@ Must be unique amongst siblings in the same scope
 
 The resource name of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#name MemcacheInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#name MemcacheInstance#name}
 
 ---
 
@@ -142,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#node_config MemcacheInstance#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#node_config MemcacheInstance#node_config}
 
 ---
 
@@ -152,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Number of nodes in the memcache instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#node_count MemcacheInstance#node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#node_count MemcacheInstance#node_count}
 
 ---
 
@@ -162,7 +164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The full name of the GCE network to connect the instance to.  If not provided, 'default' will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#authorized_network MemcacheInstance#authorized_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#authorized_network MemcacheInstance#authorized_network}
 
 ---
 
@@ -172,7 +174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A user-visible name for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#display_name MemcacheInstance#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#display_name MemcacheInstance#display_name}
 
 ---
 
@@ -180,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#id MemcacheInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#id MemcacheInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -196,7 +198,7 @@ Resource labels to represent user-provided metadata.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#labels MemcacheInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#labels MemcacheInstance#labels}
 
 ---
 
@@ -206,7 +208,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 maintenance_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#maintenance_policy MemcacheInstance#maintenance_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#maintenance_policy MemcacheInstance#maintenance_policy}
 
 ---
 
@@ -216,7 +218,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 memcache_parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#memcache_parameters MemcacheInstance#memcache_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#memcache_parameters MemcacheInstance#memcache_parameters}
 
 ---
 
@@ -230,7 +232,7 @@ If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
 determined by our system based on the latest supported minor version. Default value: "MEMCACHE_1_5" Possible values: ["MEMCACHE_1_5", "MEMCACHE_1_6_15"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#memcache_version MemcacheInstance#memcache_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#memcache_version MemcacheInstance#memcache_version}
 
 ---
 
@@ -238,7 +240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#project MemcacheInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#project MemcacheInstance#project}.
 
 ---
 
@@ -248,7 +250,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The region of the Memcache instance. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#region MemcacheInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#region MemcacheInstance#region}
+
+---
+
+##### `reserved_ip_range_id`<sup>Optional</sup> <a name="reserved_ip_range_id" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.Initializer.parameter.reservedIpRangeId"></a>
+
+- *Type:* typing.List[str]
+
+Contains the name of allocated IP address ranges associated with the private service access connection for example, "test-default" associated with IP range 10.0.0.0/29.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#reserved_ip_range_id MemcacheInstance#reserved_ip_range_id}
 
 ---
 
@@ -258,7 +270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#timeouts MemcacheInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#timeouts MemcacheInstance#timeouts}
 
 ---
 
@@ -268,7 +280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Zones where memcache nodes should be provisioned.  If not provided, all zones will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#zones MemcacheInstance#zones}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#zones MemcacheInstance#zones}
 
 ---
 
@@ -312,6 +324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetMemcacheVersion">reset_memcache_version</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetProject">reset_project</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetRegion">reset_region</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetReservedIpRangeId">reset_reserved_ip_range_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetTimeouts">reset_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetZones">reset_zones</a></code> | *No description.* |
 
@@ -657,7 +670,7 @@ def put_maintenance_policy(
 
 weekly_maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#weekly_maintenance_window MemcacheInstance#weekly_maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#weekly_maintenance_window MemcacheInstance#weekly_maintenance_window}
 
 ---
 
@@ -667,7 +680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#description MemcacheInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#description MemcacheInstance#description}
 
 ---
 
@@ -685,7 +698,7 @@ def put_memcache_parameters(
 
 User-defined set of parameters to use in the memcache process.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#params MemcacheInstance#params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#params MemcacheInstance#params}
 
 ---
 
@@ -704,7 +717,7 @@ def put_node_config(
 
 Number of CPUs per node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#cpu_count MemcacheInstance#cpu_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#cpu_count MemcacheInstance#cpu_count}
 
 ---
 
@@ -714,7 +727,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Memory size in Mebibytes for each memcache node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#memory_size_mb MemcacheInstance#memory_size_mb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#memory_size_mb MemcacheInstance#memory_size_mb}
 
 ---
 
@@ -732,7 +745,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#create MemcacheInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#create MemcacheInstance#create}.
 
 ---
 
@@ -740,7 +753,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#delete MemcacheInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#delete MemcacheInstance#delete}.
 
 ---
 
@@ -748,7 +761,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#update MemcacheInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#update MemcacheInstance#update}.
 
 ---
 
@@ -804,6 +817,12 @@ def reset_project() -> None
 
 ```python
 def reset_region() -> None
+```
+
+##### `reset_reserved_ip_range_id` <a name="reset_reserved_ip_range_id" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetReservedIpRangeId"></a>
+
+```python
+def reset_reserved_ip_range_id() -> None
 ```
 
 ##### `reset_timeouts` <a name="reset_timeouts" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.resetTimeouts"></a>
@@ -932,7 +951,7 @@ The construct id used in the generated config for the MemcacheInstance to import
 
 The id of the existing MemcacheInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -985,6 +1004,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.nodeCountInput">node_count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.regionInput">region_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.reservedIpRangeIdInput">reserved_ip_range_id_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts">MemcacheInstanceTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.zonesInput">zones_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.authorizedNetwork">authorized_network</a></code> | <code>str</code> | *No description.* |
@@ -996,6 +1016,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.nodeCount">node_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.project">project</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.region">region</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.reservedIpRangeId">reserved_ip_range_id</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.zones">zones</a></code> | <code>typing.List[str]</code> | *No description.* |
 
 ---
@@ -1372,6 +1393,16 @@ region_input: str
 
 ---
 
+##### `reserved_ip_range_id_input`<sup>Optional</sup> <a name="reserved_ip_range_id_input" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.reservedIpRangeIdInput"></a>
+
+```python
+reserved_ip_range_id_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.timeoutsInput"></a>
 
 ```python
@@ -1482,6 +1513,16 @@ region: str
 
 ---
 
+##### `reserved_ip_range_id`<sup>Required</sup> <a name="reserved_ip_range_id" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.reservedIpRangeId"></a>
+
+```python
+reserved_ip_range_id: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `zones`<sup>Required</sup> <a name="zones" id="@cdktf/provider-google.memcacheInstance.MemcacheInstance.property.zones"></a>
 
 ```python
@@ -1539,6 +1580,7 @@ memcacheInstance.MemcacheInstanceConfig(
   memcache_version: str = None,
   project: str = None,
   region: str = None,
+  reserved_ip_range_id: typing.List[str] = None,
   timeouts: MemcacheInstanceTimeouts = None,
   zones: typing.List[str] = None
 )
@@ -1560,13 +1602,14 @@ memcacheInstance.MemcacheInstanceConfig(
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.nodeCount">node_count</a></code> | <code>typing.Union[int, float]</code> | Number of nodes in the memcache instance. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.authorizedNetwork">authorized_network</a></code> | <code>str</code> | The full name of the GCE network to connect the instance to.  If not provided, 'default' will be used. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.displayName">display_name</a></code> | <code>str</code> | A user-visible name for the instance. |
-| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#id MemcacheInstance#id}. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#id MemcacheInstance#id}. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Resource labels to represent user-provided metadata. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.maintenancePolicy">maintenance_policy</a></code> | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceMaintenancePolicy">MemcacheInstanceMaintenancePolicy</a></code> | maintenance_policy block. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.memcacheParameters">memcache_parameters</a></code> | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceMemcacheParameters">MemcacheInstanceMemcacheParameters</a></code> | memcache_parameters block. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.memcacheVersion">memcache_version</a></code> | <code>str</code> | The major version of Memcached software. |
-| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#project MemcacheInstance#project}. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#project MemcacheInstance#project}. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.region">region</a></code> | <code>str</code> | The region of the Memcache instance. If it is not provided, the provider region is used. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.reservedIpRangeId">reserved_ip_range_id</a></code> | <code>typing.List[str]</code> | Contains the name of allocated IP address ranges associated with the private service access connection for example, "test-default" associated with IP range 10.0.0.0/29. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts">MemcacheInstanceTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.zones">zones</a></code> | <code>typing.List[str]</code> | Zones where memcache nodes should be provisioned.  If not provided, all zones will be used. |
 
@@ -1652,7 +1695,7 @@ name: str
 
 The resource name of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#name MemcacheInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#name MemcacheInstance#name}
 
 ---
 
@@ -1666,7 +1709,7 @@ node_config: MemcacheInstanceNodeConfig
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#node_config MemcacheInstance#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#node_config MemcacheInstance#node_config}
 
 ---
 
@@ -1680,7 +1723,7 @@ node_count: typing.Union[int, float]
 
 Number of nodes in the memcache instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#node_count MemcacheInstance#node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#node_count MemcacheInstance#node_count}
 
 ---
 
@@ -1694,7 +1737,7 @@ authorized_network: str
 
 The full name of the GCE network to connect the instance to.  If not provided, 'default' will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#authorized_network MemcacheInstance#authorized_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#authorized_network MemcacheInstance#authorized_network}
 
 ---
 
@@ -1708,7 +1751,7 @@ display_name: str
 
 A user-visible name for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#display_name MemcacheInstance#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#display_name MemcacheInstance#display_name}
 
 ---
 
@@ -1720,7 +1763,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#id MemcacheInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#id MemcacheInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1740,7 +1783,7 @@ Resource labels to represent user-provided metadata.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#labels MemcacheInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#labels MemcacheInstance#labels}
 
 ---
 
@@ -1754,7 +1797,7 @@ maintenance_policy: MemcacheInstanceMaintenancePolicy
 
 maintenance_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#maintenance_policy MemcacheInstance#maintenance_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#maintenance_policy MemcacheInstance#maintenance_policy}
 
 ---
 
@@ -1768,7 +1811,7 @@ memcache_parameters: MemcacheInstanceMemcacheParameters
 
 memcache_parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#memcache_parameters MemcacheInstance#memcache_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#memcache_parameters MemcacheInstance#memcache_parameters}
 
 ---
 
@@ -1786,7 +1829,7 @@ If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
 determined by our system based on the latest supported minor version. Default value: "MEMCACHE_1_5" Possible values: ["MEMCACHE_1_5", "MEMCACHE_1_6_15"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#memcache_version MemcacheInstance#memcache_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#memcache_version MemcacheInstance#memcache_version}
 
 ---
 
@@ -1798,7 +1841,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#project MemcacheInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#project MemcacheInstance#project}.
 
 ---
 
@@ -1812,7 +1855,21 @@ region: str
 
 The region of the Memcache instance. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#region MemcacheInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#region MemcacheInstance#region}
+
+---
+
+##### `reserved_ip_range_id`<sup>Optional</sup> <a name="reserved_ip_range_id" id="@cdktf/provider-google.memcacheInstance.MemcacheInstanceConfig.property.reservedIpRangeId"></a>
+
+```python
+reserved_ip_range_id: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Contains the name of allocated IP address ranges associated with the private service access connection for example, "test-default" associated with IP range 10.0.0.0/29.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#reserved_ip_range_id MemcacheInstance#reserved_ip_range_id}
 
 ---
 
@@ -1826,7 +1883,7 @@ timeouts: MemcacheInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#timeouts MemcacheInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#timeouts MemcacheInstance#timeouts}
 
 ---
 
@@ -1840,7 +1897,7 @@ zones: typing.List[str]
 
 Zones where memcache nodes should be provisioned.  If not provided, all zones will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#zones MemcacheInstance#zones}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#zones MemcacheInstance#zones}
 
 ---
 
@@ -1876,7 +1933,7 @@ weekly_maintenance_window: typing.Union[IResolvable, typing.List[MemcacheInstanc
 
 weekly_maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#weekly_maintenance_window MemcacheInstance#weekly_maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#weekly_maintenance_window MemcacheInstance#weekly_maintenance_window}
 
 ---
 
@@ -1890,7 +1947,7 @@ description: str
 
 Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#description MemcacheInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#description MemcacheInstance#description}
 
 ---
 
@@ -1939,7 +1996,7 @@ The day of week that maintenance updates occur.
 * SATURDAY: Saturday
 * SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#day MemcacheInstance#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#day MemcacheInstance#day}
 
 ---
 
@@ -1957,7 +2014,7 @@ The length of the maintenance window, ranging from 3 hours to 8 hours.
 A duration in seconds with up to nine fractional digits,
 terminated by 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#duration MemcacheInstance#duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#duration MemcacheInstance#duration}
 
 ---
 
@@ -1971,7 +2028,7 @@ start_time: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime
 
 start_time block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#start_time MemcacheInstance#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#start_time MemcacheInstance#start_time}
 
 ---
 
@@ -2014,7 +2071,7 @@ Hours of day in 24 hour format.
 Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#hours MemcacheInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#hours MemcacheInstance#hours}
 
 ---
 
@@ -2028,7 +2085,7 @@ minutes: typing.Union[int, float]
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#minutes MemcacheInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#minutes MemcacheInstance#minutes}
 
 ---
 
@@ -2042,7 +2099,7 @@ nanos: typing.Union[int, float]
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#nanos MemcacheInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#nanos MemcacheInstance#nanos}
 
 ---
 
@@ -2059,7 +2116,7 @@ Seconds of minutes of the time.
 Must normally be from 0 to 59.
 An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#seconds MemcacheInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#seconds MemcacheInstance#seconds}
 
 ---
 
@@ -2115,7 +2172,7 @@ params: typing.Mapping[str]
 
 User-defined set of parameters to use in the memcache process.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#params MemcacheInstance#params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#params MemcacheInstance#params}
 
 ---
 
@@ -2151,7 +2208,7 @@ cpu_count: typing.Union[int, float]
 
 Number of CPUs per node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#cpu_count MemcacheInstance#cpu_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#cpu_count MemcacheInstance#cpu_count}
 
 ---
 
@@ -2165,7 +2222,7 @@ memory_size_mb: typing.Union[int, float]
 
 Memory size in Mebibytes for each memcache node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#memory_size_mb MemcacheInstance#memory_size_mb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#memory_size_mb MemcacheInstance#memory_size_mb}
 
 ---
 
@@ -2187,9 +2244,9 @@ memcacheInstance.MemcacheInstanceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#create MemcacheInstance#create}. |
-| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#delete MemcacheInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#update MemcacheInstance#update}. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#create MemcacheInstance#create}. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#delete MemcacheInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.memcacheInstance.MemcacheInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#update MemcacheInstance#update}. |
 
 ---
 
@@ -2201,7 +2258,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#create MemcacheInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#create MemcacheInstance#create}.
 
 ---
 
@@ -2213,7 +2270,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#delete MemcacheInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#delete MemcacheInstance#delete}.
 
 ---
 
@@ -2225,7 +2282,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#update MemcacheInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#update MemcacheInstance#update}.
 
 ---
 
@@ -3032,7 +3089,7 @@ Hours of day in 24 hour format.
 Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#hours MemcacheInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#hours MemcacheInstance#hours}
 
 ---
 
@@ -3042,7 +3099,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#minutes MemcacheInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#minutes MemcacheInstance#minutes}
 
 ---
 
@@ -3052,7 +3109,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#nanos MemcacheInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#nanos MemcacheInstance#nanos}
 
 ---
 
@@ -3065,7 +3122,7 @@ Seconds of minutes of the time.
 Must normally be from 0 to 59.
 An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.14.0/docs/resources/memcache_instance#seconds MemcacheInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/memcache_instance#seconds MemcacheInstance#seconds}
 
 ---
 
