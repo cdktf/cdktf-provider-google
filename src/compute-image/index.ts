@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image
+// https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,13 +11,13 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * An optional description of this resource. Provide this property when
   * you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#description ComputeImage#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#description ComputeImage#description}
   */
   readonly description?: string;
   /**
   * Size of the image when restored onto a persistent disk (in GB).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#disk_size_gb ComputeImage#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#disk_size_gb ComputeImage#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
@@ -32,11 +27,11 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * not deprecated. The name of the image family must comply with
   * RFC1035.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#family ComputeImage#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#family ComputeImage#family}
   */
   readonly family?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#id ComputeImage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#id ComputeImage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -48,13 +43,13 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#labels ComputeImage#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#labels ComputeImage#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Any applicable license URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#licenses ComputeImage#licenses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#licenses ComputeImage#licenses}
   */
   readonly licenses?: string[];
   /**
@@ -66,11 +61,11 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * characters must be a dash, lowercase letter, or digit, except the
   * last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#name ComputeImage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#name ComputeImage#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#project ComputeImage#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#project ComputeImage#project}
   */
   readonly project?: string;
   /**
@@ -78,7 +73,7 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * You must provide either this property or the
   * rawDisk.source property but not both to create an image.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#source_disk ComputeImage#source_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#source_disk ComputeImage#source_disk}
   */
   readonly sourceDisk?: string;
   /**
@@ -90,7 +85,7 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * * The rawDisk.source URL
   * * The sourceDisk URL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#source_image ComputeImage#source_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#source_image ComputeImage#source_image}
   */
   readonly sourceImage?: string;
   /**
@@ -104,7 +99,7 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * * The rawDisk.source URL
   * * The sourceDisk URL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#source_snapshot ComputeImage#source_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#source_snapshot ComputeImage#source_snapshot}
   */
   readonly sourceSnapshot?: string;
   /**
@@ -112,31 +107,31 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * (regional or multi-regional).
   * Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#storage_locations ComputeImage#storage_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#storage_locations ComputeImage#storage_locations}
   */
   readonly storageLocations?: string[];
   /**
   * guest_os_features block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#guest_os_features ComputeImage#guest_os_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#guest_os_features ComputeImage#guest_os_features}
   */
   readonly guestOsFeatures?: ComputeImageGuestOsFeatures[] | cdktf.IResolvable;
   /**
   * image_encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#image_encryption_key ComputeImage#image_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#image_encryption_key ComputeImage#image_encryption_key}
   */
   readonly imageEncryptionKey?: ComputeImageImageEncryptionKey;
   /**
   * raw_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#raw_disk ComputeImage#raw_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#raw_disk ComputeImage#raw_disk}
   */
   readonly rawDisk?: ComputeImageRawDisk;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#timeouts ComputeImage#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#timeouts ComputeImage#timeouts}
   */
   readonly timeouts?: ComputeImageTimeouts;
 }
@@ -144,7 +139,7 @@ export interface ComputeImageGuestOsFeatures {
   /**
   * The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC", "SEV_LIVE_MIGRATABLE", "SEV_SNP_CAPABLE", "SUSPEND_RESUME_COMPATIBLE", "TDX_CAPABLE", "SEV_LIVE_MIGRATABLE_V2"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#type ComputeImage#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#type ComputeImage#type}
   */
   readonly type: string;
 }
@@ -260,7 +255,7 @@ export interface ComputeImageImageEncryptionKey {
   * The self link of the encryption key that is stored in Google Cloud
   * KMS.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
@@ -268,7 +263,7 @@ export interface ComputeImageImageEncryptionKey {
   * given KMS key. If absent, the Compute Engine default service
   * account is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
   */
   readonly kmsKeyServiceAccount?: string;
 }
@@ -386,14 +381,14 @@ export interface ComputeImageRawDisk {
   * and not a runtime format. Provided by the client when the disk
   * image is created. Default value: "TAR" Possible values: ["TAR"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#container_type ComputeImage#container_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#container_type ComputeImage#container_type}
   */
   readonly containerType?: string;
   /**
   * An optional SHA1 checksum of the disk image before unpackaging.
   * This is provided by the client when the disk image is created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#sha1 ComputeImage#sha1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#sha1 ComputeImage#sha1}
   */
   readonly sha1?: string;
   /**
@@ -401,7 +396,7 @@ export interface ComputeImageRawDisk {
   * You must provide either this property or the sourceDisk property
   * but not both.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#source ComputeImage#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#source ComputeImage#source}
   */
   readonly source: string;
 }
@@ -540,15 +535,15 @@ export class ComputeImageRawDiskOutputReference extends cdktf.ComplexObject {
 }
 export interface ComputeImageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#create ComputeImage#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#create ComputeImage#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#delete ComputeImage#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#delete ComputeImage#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#update ComputeImage#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#update ComputeImage#update}
   */
   readonly update?: string;
 }
@@ -700,7 +695,7 @@ export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image google_compute_image}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image google_compute_image}
 */
 export class ComputeImage extends cdktf.TerraformResource {
 
@@ -716,7 +711,7 @@ export class ComputeImage extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeImage resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeImage to import
-  * @param importFromId The id of the existing ComputeImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeImage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -728,7 +723,7 @@ export class ComputeImage extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/compute_image google_compute_image} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_image google_compute_image} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -739,7 +734,7 @@ export class ComputeImage extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_image',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.15.0',
+        providerVersion: '5.16.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

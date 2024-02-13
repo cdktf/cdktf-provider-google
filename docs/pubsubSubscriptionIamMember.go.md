@@ -4,12 +4,12 @@
 
 ### PubsubSubscriptionIamMember <a name="PubsubSubscriptionIamMember" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member google_pubsub_subscription_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member google_pubsub_subscription_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.NewPubsubSubscriptionIamMember(scope Construct, id *string, config PubsubSubscriptionIamMemberConfig) PubsubSubscriptionIamMember
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the PubsubSubscriptionIamMembe
 
 The id of the existing PubsubSubscriptionIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -844,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 &pubsubsubscriptioniammember.PubsubSubscriptionIamMemberCondition {
 	Expression: *string,
@@ -857,9 +857,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioni
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#expression PubsubSubscriptionIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#title PubsubSubscriptionIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#description PubsubSubscriptionIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#expression PubsubSubscriptionIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#title PubsubSubscriptionIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#description PubsubSubscriptionIamMember#description}. |
 
 ---
 
@@ -871,7 +871,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#expression PubsubSubscriptionIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#expression PubsubSubscriptionIamMember#expression}.
 
 ---
 
@@ -883,7 +883,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#title PubsubSubscriptionIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#title PubsubSubscriptionIamMember#title}.
 
 ---
 
@@ -895,7 +895,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#description PubsubSubscriptionIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#description PubsubSubscriptionIamMember#description}.
 
 ---
 
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 &pubsubsubscriptioniammember.PubsubSubscriptionIamMemberConfig {
 	Connection: interface{},
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioni
 	Member: *string,
 	Role: *string,
 	Subscription: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -934,12 +934,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioni
 | <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#member PubsubSubscriptionIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#role PubsubSubscriptionIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.subscription">Subscription</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#subscription PubsubSubscriptionIamMember#subscription}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#member PubsubSubscriptionIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#role PubsubSubscriptionIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.subscription">Subscription</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#subscription PubsubSubscriptionIamMember#subscription}. |
 | <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition">PubsubSubscriptionIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#id PubsubSubscriptionIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#project PubsubSubscriptionIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#id PubsubSubscriptionIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#project PubsubSubscriptionIamMember#project}. |
 
 ---
 
@@ -1021,7 +1021,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#member PubsubSubscriptionIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#member PubsubSubscriptionIamMember#member}.
 
 ---
 
@@ -1033,7 +1033,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#role PubsubSubscriptionIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#role PubsubSubscriptionIamMember#role}.
 
 ---
 
@@ -1045,7 +1045,7 @@ Subscription *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#subscription PubsubSubscriptionIamMember#subscription}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#subscription PubsubSubscriptionIamMember#subscription}.
 
 ---
 
@@ -1059,7 +1059,7 @@ Condition PubsubSubscriptionIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#condition PubsubSubscriptionIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#condition PubsubSubscriptionIamMember#condition}
 
 ---
 
@@ -1071,7 +1071,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#id PubsubSubscriptionIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#id PubsubSubscriptionIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1086,7 +1086,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/pubsub_subscription_iam_member#project PubsubSubscriptionIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/pubsub_subscription_iam_member#project PubsubSubscriptionIamMember#project}.
 
 ---
 
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.NewPubsubSubscriptionIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionIamMemberConditionOutputReference
 ```
