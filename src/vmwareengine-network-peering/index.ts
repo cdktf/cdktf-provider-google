@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering
+// https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +15,23 @@ export interface VmwareengineNetworkPeeringConfig extends cdktf.TerraformMetaArg
   /**
   * User-provided description for this network peering.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#description VmwareengineNetworkPeering#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#description VmwareengineNetworkPeering#description}
   */
   readonly description?: string;
   /**
   * True if custom routes are exported to the peered network; false otherwise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#export_custom_routes VmwareengineNetworkPeering#export_custom_routes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#export_custom_routes VmwareengineNetworkPeering#export_custom_routes}
   */
   readonly exportCustomRoutes?: boolean | cdktf.IResolvable;
   /**
   * True if all subnet routes with a public IP address range are exported; false otherwise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#export_custom_routes_with_public_ip VmwareengineNetworkPeering#export_custom_routes_with_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#export_custom_routes_with_public_ip VmwareengineNetworkPeering#export_custom_routes_with_public_ip}
   */
   readonly exportCustomRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#id VmwareengineNetworkPeering#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#id VmwareengineNetworkPeering#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,36 +40,36 @@ export interface VmwareengineNetworkPeeringConfig extends cdktf.TerraformMetaArg
   /**
   * True if custom routes are imported from the peered network; false otherwise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#import_custom_routes VmwareengineNetworkPeering#import_custom_routes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#import_custom_routes VmwareengineNetworkPeering#import_custom_routes}
   */
   readonly importCustomRoutes?: boolean | cdktf.IResolvable;
   /**
   * True if custom routes are imported from the peered network; false otherwise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#import_custom_routes_with_public_ip VmwareengineNetworkPeering#import_custom_routes_with_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#import_custom_routes_with_public_ip VmwareengineNetworkPeering#import_custom_routes_with_public_ip}
   */
   readonly importCustomRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
   * The ID of the Network Peering.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#name VmwareengineNetworkPeering#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#name VmwareengineNetworkPeering#name}
   */
   readonly name: string;
   /**
   * The relative resource name of the network to peer with a standard VMware Engine network.
   * The provided network can be a consumer VPC network or another standard VMware Engine network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#peer_network VmwareengineNetworkPeering#peer_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#peer_network VmwareengineNetworkPeering#peer_network}
   */
   readonly peerNetwork: string;
   /**
   * The type of the network to peer with the VMware Engine network. Possible values: ["STANDARD", "VMWARE_ENGINE_NETWORK", "PRIVATE_SERVICES_ACCESS", "NETAPP_CLOUD_VOLUMES", "THIRD_PARTY_SERVICE", "DELL_POWERSCALE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#peer_network_type VmwareengineNetworkPeering#peer_network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#peer_network_type VmwareengineNetworkPeering#peer_network_type}
   */
   readonly peerNetworkType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#project VmwareengineNetworkPeering#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#project VmwareengineNetworkPeering#project}
   */
   readonly project?: string;
   /**
@@ -77,27 +77,27 @@ export interface VmwareengineNetworkPeeringConfig extends cdktf.TerraformMetaArg
   * projects/{project}/locations/{location}/vmwareEngineNetworks/{vmwareEngineNetworkId} where {project}
   * can either be a project number or a project ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#vmware_engine_network VmwareengineNetworkPeering#vmware_engine_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#vmware_engine_network VmwareengineNetworkPeering#vmware_engine_network}
   */
   readonly vmwareEngineNetwork: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#timeouts VmwareengineNetworkPeering#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#timeouts VmwareengineNetworkPeering#timeouts}
   */
   readonly timeouts?: VmwareengineNetworkPeeringTimeouts;
 }
 export interface VmwareengineNetworkPeeringTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#create VmwareengineNetworkPeering#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#create VmwareengineNetworkPeering#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#delete VmwareengineNetworkPeering#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#delete VmwareengineNetworkPeering#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#update VmwareengineNetworkPeering#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#update VmwareengineNetworkPeering#update}
   */
   readonly update?: string;
 }
@@ -249,7 +249,7 @@ export class VmwareengineNetworkPeeringTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering google_vmwareengine_network_peering}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering google_vmwareengine_network_peering}
 */
 export class VmwareengineNetworkPeering extends cdktf.TerraformResource {
 
@@ -265,7 +265,7 @@ export class VmwareengineNetworkPeering extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VmwareengineNetworkPeering resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VmwareengineNetworkPeering to import
-  * @param importFromId The id of the existing VmwareengineNetworkPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VmwareengineNetworkPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VmwareengineNetworkPeering to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -277,7 +277,7 @@ export class VmwareengineNetworkPeering extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.15.0/docs/resources/vmwareengine_network_peering google_vmwareengine_network_peering} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_network_peering google_vmwareengine_network_peering} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -288,7 +288,7 @@ export class VmwareengineNetworkPeering extends cdktf.TerraformResource {
       terraformResourceType: 'google_vmwareengine_network_peering',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.15.0',
+        providerVersion: '5.16.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
