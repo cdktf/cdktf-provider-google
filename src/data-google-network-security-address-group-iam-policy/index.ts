@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleNetworkSecurityAddressGroupIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy#id DataGoogleNetworkSecurityAddressGroupIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy#id DataGoogleNetworkSecurityAddressGroupIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy#location DataGoogleNetworkSecurityAddressGroupIamPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy#location DataGoogleNetworkSecurityAddressGroupIamPolicy#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy#name DataGoogleNetworkSecurityAddressGroupIamPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy#name DataGoogleNetworkSecurityAddressGroupIamPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy#project DataGoogleNetworkSecurityAddressGroupIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy#project DataGoogleNetworkSecurityAddressGroupIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy google_network_security_address_group_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy google_network_security_address_group_iam_policy}
 */
 export class DataGoogleNetworkSecurityAddressGroupIamPolicy extends cdktf.TerraformDataSource {
 
@@ -50,7 +45,7 @@ export class DataGoogleNetworkSecurityAddressGroupIamPolicy extends cdktf.Terraf
   * Generates CDKTF code for importing a DataGoogleNetworkSecurityAddressGroupIamPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleNetworkSecurityAddressGroupIamPolicy to import
-  * @param importFromId The id of the existing DataGoogleNetworkSecurityAddressGroupIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleNetworkSecurityAddressGroupIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleNetworkSecurityAddressGroupIamPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -62,7 +57,7 @@ export class DataGoogleNetworkSecurityAddressGroupIamPolicy extends cdktf.Terraf
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/network_security_address_group_iam_policy google_network_security_address_group_iam_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/network_security_address_group_iam_policy google_network_security_address_group_iam_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -73,7 +68,7 @@ export class DataGoogleNetworkSecurityAddressGroupIamPolicy extends cdktf.Terraf
       terraformResourceType: 'google_network_security_address_group_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.16.0',
+        providerVersion: '5.17.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

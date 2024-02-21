@@ -4,12 +4,12 @@
 
 ### IdentityPlatformConfig <a name="IdentityPlatformConfig" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config google_identity_platform_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config google_identity_platform_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfig(scope Construct, id *string, config IdentityPlatformConfigConfig) IdentityPlatformConfig
 ```
@@ -74,6 +74,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putBlockingFunctions">PutBlockingFunctions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putClient">PutClient</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMfa">PutMfa</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMonitoring">PutMonitoring</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMultiTenant">PutMultiTenant</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putQuota">PutQuota</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putSignIn">PutSignIn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putSmsRegionConfig">PutSmsRegionConfig</a></code> | *No description.* |
@@ -81,7 +85,11 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetAuthorizedDomains">ResetAuthorizedDomains</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetAutodeleteAnonymousUsers">ResetAutodeleteAnonymousUsers</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetBlockingFunctions">ResetBlockingFunctions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetClient">ResetClient</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetId">ResetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetMfa">ResetMfa</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetMonitoring">ResetMonitoring</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetMultiTenant">ResetMultiTenant</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetProject">ResetProject</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetQuota">ResetQuota</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetSignIn">ResetSignIn</a></code> | *No description.* |
@@ -390,6 +398,54 @@ func PutBlockingFunctions(value IdentityPlatformConfigBlockingFunctions)
 
 ---
 
+##### `PutClient` <a name="PutClient" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putClient"></a>
+
+```go
+func PutClient(value IdentityPlatformConfigClient)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putClient.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient">IdentityPlatformConfigClient</a>
+
+---
+
+##### `PutMfa` <a name="PutMfa" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMfa"></a>
+
+```go
+func PutMfa(value IdentityPlatformConfigMfa)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMfa.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa">IdentityPlatformConfigMfa</a>
+
+---
+
+##### `PutMonitoring` <a name="PutMonitoring" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMonitoring"></a>
+
+```go
+func PutMonitoring(value IdentityPlatformConfigMonitoring)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMonitoring.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring">IdentityPlatformConfigMonitoring</a>
+
+---
+
+##### `PutMultiTenant` <a name="PutMultiTenant" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMultiTenant"></a>
+
+```go
+func PutMultiTenant(value IdentityPlatformConfigMultiTenant)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putMultiTenant.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant">IdentityPlatformConfigMultiTenant</a>
+
+---
+
 ##### `PutQuota` <a name="PutQuota" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.putQuota"></a>
 
 ```go
@@ -456,10 +512,34 @@ func ResetAutodeleteAnonymousUsers()
 func ResetBlockingFunctions()
 ```
 
+##### `ResetClient` <a name="ResetClient" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetClient"></a>
+
+```go
+func ResetClient()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetId"></a>
 
 ```go
 func ResetId()
+```
+
+##### `ResetMfa` <a name="ResetMfa" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetMfa"></a>
+
+```go
+func ResetMfa()
+```
+
+##### `ResetMonitoring` <a name="ResetMonitoring" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetMonitoring"></a>
+
+```go
+func ResetMonitoring()
+```
+
+##### `ResetMultiTenant` <a name="ResetMultiTenant" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetMultiTenant"></a>
+
+```go
+func ResetMultiTenant()
 ```
 
 ##### `ResetProject` <a name="ResetProject" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.resetProject"></a>
@@ -506,7 +586,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.IdentityPlatformConfig_IsConstruct(x interface{}) *bool
 ```
@@ -538,7 +618,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.IdentityPlatformConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -552,7 +632,7 @@ identityplatformconfig.IdentityPlatformConfig_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.IdentityPlatformConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -566,7 +646,7 @@ identityplatformconfig.IdentityPlatformConfig_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.IdentityPlatformConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -595,7 +675,7 @@ The construct id used in the generated config for the IdentityPlatformConfig to 
 
 The id of the existing IdentityPlatformConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -626,6 +706,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.blockingFunctions">BlockingFunctions</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsOutputReference">IdentityPlatformConfigBlockingFunctionsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.client">Client</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference">IdentityPlatformConfigClientOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.mfa">Mfa</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference">IdentityPlatformConfigMfaOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.monitoring">Monitoring</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference">IdentityPlatformConfigMonitoringOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.multiTenant">MultiTenant</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference">IdentityPlatformConfigMultiTenantOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.name">Name</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.quota">Quota</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuotaOutputReference">IdentityPlatformConfigQuotaOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.signIn">SignIn</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInOutputReference">IdentityPlatformConfigSignInOutputReference</a></code> | *No description.* |
@@ -634,7 +718,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.authorizedDomainsInput">AuthorizedDomainsInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.autodeleteAnonymousUsersInput">AutodeleteAnonymousUsersInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.blockingFunctionsInput">BlockingFunctionsInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctions">IdentityPlatformConfigBlockingFunctions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.clientInput">ClientInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient">IdentityPlatformConfigClient</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.mfaInput">MfaInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa">IdentityPlatformConfigMfa</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.monitoringInput">MonitoringInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring">IdentityPlatformConfigMonitoring</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.multiTenantInput">MultiTenantInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant">IdentityPlatformConfigMultiTenant</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.quotaInput">QuotaInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuota">IdentityPlatformConfigQuota</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.signInInput">SignInInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignIn">IdentityPlatformConfigSignIn</a></code> | *No description.* |
@@ -799,6 +887,46 @@ func BlockingFunctions() IdentityPlatformConfigBlockingFunctionsOutputReference
 
 ---
 
+##### `Client`<sup>Required</sup> <a name="Client" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.client"></a>
+
+```go
+func Client() IdentityPlatformConfigClientOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference">IdentityPlatformConfigClientOutputReference</a>
+
+---
+
+##### `Mfa`<sup>Required</sup> <a name="Mfa" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.mfa"></a>
+
+```go
+func Mfa() IdentityPlatformConfigMfaOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference">IdentityPlatformConfigMfaOutputReference</a>
+
+---
+
+##### `Monitoring`<sup>Required</sup> <a name="Monitoring" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.monitoring"></a>
+
+```go
+func Monitoring() IdentityPlatformConfigMonitoringOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference">IdentityPlatformConfigMonitoringOutputReference</a>
+
+---
+
+##### `MultiTenant`<sup>Required</sup> <a name="MultiTenant" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.multiTenant"></a>
+
+```go
+func MultiTenant() IdentityPlatformConfigMultiTenantOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference">IdentityPlatformConfigMultiTenantOutputReference</a>
+
+---
+
 ##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.name"></a>
 
 ```go
@@ -879,6 +1007,16 @@ func BlockingFunctionsInput() IdentityPlatformConfigBlockingFunctions
 
 ---
 
+##### `ClientInput`<sup>Optional</sup> <a name="ClientInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.clientInput"></a>
+
+```go
+func ClientInput() IdentityPlatformConfigClient
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient">IdentityPlatformConfigClient</a>
+
+---
+
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.idInput"></a>
 
 ```go
@@ -886,6 +1024,36 @@ func IdInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `MfaInput`<sup>Optional</sup> <a name="MfaInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.mfaInput"></a>
+
+```go
+func MfaInput() IdentityPlatformConfigMfa
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa">IdentityPlatformConfigMfa</a>
+
+---
+
+##### `MonitoringInput`<sup>Optional</sup> <a name="MonitoringInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.monitoringInput"></a>
+
+```go
+func MonitoringInput() IdentityPlatformConfigMonitoring
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring">IdentityPlatformConfigMonitoring</a>
+
+---
+
+##### `MultiTenantInput`<sup>Optional</sup> <a name="MultiTenantInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.property.multiTenantInput"></a>
+
+```go
+func MultiTenantInput() IdentityPlatformConfigMultiTenant
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant">IdentityPlatformConfigMultiTenant</a>
 
 ---
 
@@ -1004,11 +1172,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigBlockingFunctions {
 	Triggers: interface{},
-	ForwardInboundCredentials: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials,
+	ForwardInboundCredentials: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials,
 }
 ```
 
@@ -1031,7 +1199,7 @@ Triggers interface{}
 
 triggers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
 
 ---
 
@@ -1045,7 +1213,7 @@ ForwardInboundCredentials IdentityPlatformConfigBlockingFunctionsForwardInboundC
 
 forward_inbound_credentials block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
 
 ---
 
@@ -1054,7 +1222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials {
 	AccessToken: interface{},
@@ -1083,7 +1251,7 @@ AccessToken interface{}
 
 Whether to pass the user's OAuth identity provider's access token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
 
 ---
 
@@ -1097,7 +1265,7 @@ IdToken interface{}
 
 Whether to pass the user's OIDC identity provider's ID token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
 
 ---
 
@@ -1111,7 +1279,7 @@ RefreshToken interface{}
 
 Whether to pass the user's OAuth identity provider's refresh token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
 
 ---
 
@@ -1120,7 +1288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigBlockingFunctionsTriggers {
 	EventType: *string,
@@ -1132,7 +1300,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformcon
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggers.property.eventType">EventType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggers.property.eventType">EventType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggers.property.functionUri">FunctionUri</a></code> | <code>*string</code> | HTTP URI trigger for the Cloud Function. |
 
 ---
@@ -1145,7 +1313,7 @@ EventType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}.
 
 ---
 
@@ -1159,7 +1327,91 @@ FunctionUri *string
 
 HTTP URI trigger for the Cloud Function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
+
+---
+
+### IdentityPlatformConfigClient <a name="IdentityPlatformConfigClient" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigClient {
+	Permissions: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigClientPermissions,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient.property.permissions">Permissions</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions">IdentityPlatformConfigClientPermissions</a></code> | permissions block. |
+
+---
+
+##### `Permissions`<sup>Optional</sup> <a name="Permissions" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient.property.permissions"></a>
+
+```go
+Permissions IdentityPlatformConfigClientPermissions
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions">IdentityPlatformConfigClientPermissions</a>
+
+permissions block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#permissions IdentityPlatformConfig#permissions}
+
+---
+
+### IdentityPlatformConfigClientPermissions <a name="IdentityPlatformConfigClientPermissions" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigClientPermissions {
+	DisabledUserDeletion: interface{},
+	DisabledUserSignup: interface{},
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions.property.disabledUserDeletion">DisabledUserDeletion</a></code> | <code>interface{}</code> | When true, end users cannot delete their account on the associated project through any of our API methods. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions.property.disabledUserSignup">DisabledUserSignup</a></code> | <code>interface{}</code> | When true, end users cannot sign up for a new account on the associated project through any of our API methods. |
+
+---
+
+##### `DisabledUserDeletion`<sup>Optional</sup> <a name="DisabledUserDeletion" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions.property.disabledUserDeletion"></a>
+
+```go
+DisabledUserDeletion interface{}
+```
+
+- *Type:* interface{}
+
+When true, end users cannot delete their account on the associated project through any of our API methods.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#disabled_user_deletion IdentityPlatformConfig#disabled_user_deletion}
+
+---
+
+##### `DisabledUserSignup`<sup>Optional</sup> <a name="DisabledUserSignup" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions.property.disabledUserSignup"></a>
+
+```go
+DisabledUserSignup interface{}
+```
+
+- *Type:* interface{}
+
+When true, end users cannot sign up for a new account on the associated project through any of our API methods.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#disabled_user_signup IdentityPlatformConfig#disabled_user_signup}
 
 ---
 
@@ -1168,7 +1420,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigConfig {
 	Connection: interface{},
@@ -1180,13 +1432,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformcon
 	Provisioners: *[]interface{},
 	AuthorizedDomains: *[]*string,
 	AutodeleteAnonymousUsers: interface{},
-	BlockingFunctions: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigBlockingFunctions,
+	BlockingFunctions: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctions,
+	Client: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigClient,
 	Id: *string,
+	Mfa: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigMfa,
+	Monitoring: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigMonitoring,
+	MultiTenant: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigMultiTenant,
 	Project: *string,
-	Quota: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigQuota,
-	SignIn: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigSignIn,
-	SmsRegionConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigTimeouts,
+	Quota: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigQuota,
+	SignIn: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigSignIn,
+	SmsRegionConfig: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigTimeouts,
 }
 ```
 
@@ -1204,8 +1460,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformcon
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.authorizedDomains">AuthorizedDomains</a></code> | <code>*[]*string</code> | List of domains authorized for OAuth redirects. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.autodeleteAnonymousUsers">AutodeleteAnonymousUsers</a></code> | <code>interface{}</code> | Whether anonymous users will be auto-deleted after a period of 30 days. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.blockingFunctions">BlockingFunctions</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctions">IdentityPlatformConfigBlockingFunctions</a></code> | blocking_functions block. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.client">Client</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient">IdentityPlatformConfigClient</a></code> | client block. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.mfa">Mfa</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa">IdentityPlatformConfigMfa</a></code> | mfa block. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.monitoring">Monitoring</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring">IdentityPlatformConfigMonitoring</a></code> | monitoring block. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.multiTenant">MultiTenant</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant">IdentityPlatformConfigMultiTenant</a></code> | multi_tenant block. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.quota">Quota</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuota">IdentityPlatformConfigQuota</a></code> | quota block. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.signIn">SignIn</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignIn">IdentityPlatformConfigSignIn</a></code> | sign_in block. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.smsRegionConfig">SmsRegionConfig</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfig">IdentityPlatformConfigSmsRegionConfig</a></code> | sms_region_config block. |
@@ -1293,7 +1553,7 @@ AuthorizedDomains *[]*string
 
 List of domains authorized for OAuth redirects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
 
 ---
 
@@ -1307,7 +1567,7 @@ AutodeleteAnonymousUsers interface{}
 
 Whether anonymous users will be auto-deleted after a period of 30 days.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
 
 ---
 
@@ -1321,7 +1581,21 @@ BlockingFunctions IdentityPlatformConfigBlockingFunctions
 
 blocking_functions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
+
+---
+
+##### `Client`<sup>Optional</sup> <a name="Client" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.client"></a>
+
+```go
+Client IdentityPlatformConfigClient
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient">IdentityPlatformConfigClient</a>
+
+client block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#client IdentityPlatformConfig#client}
 
 ---
 
@@ -1333,10 +1607,52 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `Mfa`<sup>Optional</sup> <a name="Mfa" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.mfa"></a>
+
+```go
+Mfa IdentityPlatformConfigMfa
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa">IdentityPlatformConfigMfa</a>
+
+mfa block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#mfa IdentityPlatformConfig#mfa}
+
+---
+
+##### `Monitoring`<sup>Optional</sup> <a name="Monitoring" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.monitoring"></a>
+
+```go
+Monitoring IdentityPlatformConfigMonitoring
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring">IdentityPlatformConfigMonitoring</a>
+
+monitoring block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#monitoring IdentityPlatformConfig#monitoring}
+
+---
+
+##### `MultiTenant`<sup>Optional</sup> <a name="MultiTenant" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.multiTenant"></a>
+
+```go
+MultiTenant IdentityPlatformConfigMultiTenant
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant">IdentityPlatformConfigMultiTenant</a>
+
+multi_tenant block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#multi_tenant IdentityPlatformConfig#multi_tenant}
 
 ---
 
@@ -1348,7 +1664,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}.
 
 ---
 
@@ -1362,7 +1678,7 @@ Quota IdentityPlatformConfigQuota
 
 quota block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
 
 ---
 
@@ -1376,7 +1692,7 @@ SignIn IdentityPlatformConfigSignIn
 
 sign_in block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#sign_in IdentityPlatformConfig#sign_in}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#sign_in IdentityPlatformConfig#sign_in}
 
 ---
 
@@ -1390,7 +1706,7 @@ SmsRegionConfig IdentityPlatformConfigSmsRegionConfig
 
 sms_region_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#sms_region_config IdentityPlatformConfig#sms_region_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#sms_region_config IdentityPlatformConfig#sms_region_config}
 
 ---
 
@@ -1404,7 +1720,278 @@ Timeouts IdentityPlatformConfigTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
+
+---
+
+### IdentityPlatformConfigMfa <a name="IdentityPlatformConfigMfa" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigMfa {
+	EnabledProviders: *[]*string,
+	ProviderConfigs: interface{},
+	State: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa.property.enabledProviders">EnabledProviders</a></code> | <code>*[]*string</code> | A list of usable second factors for this project. Possible values: ["PHONE_SMS"]. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa.property.providerConfigs">ProviderConfigs</a></code> | <code>interface{}</code> | provider_configs block. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa.property.state">State</a></code> | <code>*string</code> | Whether MultiFactor Authentication has been enabled for this project. Possible values: ["DISABLED", "ENABLED", "MANDATORY"]. |
+
+---
+
+##### `EnabledProviders`<sup>Optional</sup> <a name="EnabledProviders" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa.property.enabledProviders"></a>
+
+```go
+EnabledProviders *[]*string
+```
+
+- *Type:* *[]*string
+
+A list of usable second factors for this project. Possible values: ["PHONE_SMS"].
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#enabled_providers IdentityPlatformConfig#enabled_providers}
+
+---
+
+##### `ProviderConfigs`<sup>Optional</sup> <a name="ProviderConfigs" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa.property.providerConfigs"></a>
+
+```go
+ProviderConfigs interface{}
+```
+
+- *Type:* interface{}
+
+provider_configs block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#provider_configs IdentityPlatformConfig#provider_configs}
+
+---
+
+##### `State`<sup>Optional</sup> <a name="State" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa.property.state"></a>
+
+```go
+State *string
+```
+
+- *Type:* *string
+
+Whether MultiFactor Authentication has been enabled for this project. Possible values: ["DISABLED", "ENABLED", "MANDATORY"].
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#state IdentityPlatformConfig#state}
+
+---
+
+### IdentityPlatformConfigMfaProviderConfigs <a name="IdentityPlatformConfigMfaProviderConfigs" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigs"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigs.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigMfaProviderConfigs {
+	State: *string,
+	TotpProviderConfig: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigs.property.state">State</a></code> | <code>*string</code> | Whether MultiFactor Authentication has been enabled for this project. Possible values: ["DISABLED", "ENABLED", "MANDATORY"]. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigs.property.totpProviderConfig">TotpProviderConfig</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig</a></code> | totp_provider_config block. |
+
+---
+
+##### `State`<sup>Optional</sup> <a name="State" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigs.property.state"></a>
+
+```go
+State *string
+```
+
+- *Type:* *string
+
+Whether MultiFactor Authentication has been enabled for this project. Possible values: ["DISABLED", "ENABLED", "MANDATORY"].
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#state IdentityPlatformConfig#state}
+
+---
+
+##### `TotpProviderConfig`<sup>Optional</sup> <a name="TotpProviderConfig" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigs.property.totpProviderConfig"></a>
+
+```go
+TotpProviderConfig IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig</a>
+
+totp_provider_config block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#totp_provider_config IdentityPlatformConfig#totp_provider_config}
+
+---
+
+### IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig <a name="IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig {
+	AdjacentIntervals: *f64,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig.property.adjacentIntervals">AdjacentIntervals</a></code> | <code>*f64</code> | The allowed number of adjacent intervals that will be used for verification to avoid clock skew. |
+
+---
+
+##### `AdjacentIntervals`<sup>Optional</sup> <a name="AdjacentIntervals" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig.property.adjacentIntervals"></a>
+
+```go
+AdjacentIntervals *f64
+```
+
+- *Type:* *f64
+
+The allowed number of adjacent intervals that will be used for verification to avoid clock skew.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#adjacent_intervals IdentityPlatformConfig#adjacent_intervals}
+
+---
+
+### IdentityPlatformConfigMonitoring <a name="IdentityPlatformConfigMonitoring" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigMonitoring {
+	RequestLogging: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring.property.requestLogging">RequestLogging</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging">IdentityPlatformConfigMonitoringRequestLogging</a></code> | request_logging block. |
+
+---
+
+##### `RequestLogging`<sup>Optional</sup> <a name="RequestLogging" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring.property.requestLogging"></a>
+
+```go
+RequestLogging IdentityPlatformConfigMonitoringRequestLogging
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging">IdentityPlatformConfigMonitoringRequestLogging</a>
+
+request_logging block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#request_logging IdentityPlatformConfig#request_logging}
+
+---
+
+### IdentityPlatformConfigMonitoringRequestLogging <a name="IdentityPlatformConfigMonitoringRequestLogging" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigMonitoringRequestLogging {
+	Enabled: interface{},
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging.property.enabled">Enabled</a></code> | <code>interface{}</code> | Whether logging is enabled for this project or not. |
+
+---
+
+##### `Enabled`<sup>Optional</sup> <a name="Enabled" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging.property.enabled"></a>
+
+```go
+Enabled interface{}
+```
+
+- *Type:* interface{}
+
+Whether logging is enabled for this project or not.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+
+---
+
+### IdentityPlatformConfigMultiTenant <a name="IdentityPlatformConfigMultiTenant" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+&identityplatformconfig.IdentityPlatformConfigMultiTenant {
+	AllowTenants: interface{},
+	DefaultTenantLocation: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant.property.allowTenants">AllowTenants</a></code> | <code>interface{}</code> | Whether this project can have tenants or not. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant.property.defaultTenantLocation">DefaultTenantLocation</a></code> | <code>*string</code> | The default cloud parent org or folder that the tenant project should be created under. |
+
+---
+
+##### `AllowTenants`<sup>Optional</sup> <a name="AllowTenants" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant.property.allowTenants"></a>
+
+```go
+AllowTenants interface{}
+```
+
+- *Type:* interface{}
+
+Whether this project can have tenants or not.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#allow_tenants IdentityPlatformConfig#allow_tenants}
+
+---
+
+##### `DefaultTenantLocation`<sup>Optional</sup> <a name="DefaultTenantLocation" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant.property.defaultTenantLocation"></a>
+
+```go
+DefaultTenantLocation *string
+```
+
+- *Type:* *string
+
+The default cloud parent org or folder that the tenant project should be created under.
+
+The parent resource name should be in the format of "/", such as "folders/123" or "organizations/456".
+If the value is not set, the tenant will be created under the same organization or folder as the agent project.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#default_tenant_location IdentityPlatformConfig#default_tenant_location}
 
 ---
 
@@ -1413,10 +2000,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuota.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigQuota {
-	SignUpQuotaConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigQuotaSignUpQuotaConfig,
+	SignUpQuotaConfig: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigQuotaSignUpQuotaConfig,
 }
 ```
 
@@ -1438,7 +2025,7 @@ SignUpQuotaConfig IdentityPlatformConfigQuotaSignUpQuotaConfig
 
 sign_up_quota_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
 
 ---
 
@@ -1447,7 +2034,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuotaSignUpQuotaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigQuotaSignUpQuotaConfig {
 	Quota: *f64,
@@ -1476,7 +2063,7 @@ Quota *f64
 
 A sign up APIs quota that customers can override temporarily.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
 
 ---
 
@@ -1490,7 +2077,7 @@ QuotaDuration *string
 
 How long this quota will be active for. It is measurred in seconds, e.g., Example: "9.615s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
 
 ---
 
@@ -1504,7 +2091,7 @@ StartTime *string
 
 When this quota will take affect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
 
 ---
 
@@ -1513,13 +2100,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSignIn {
 	AllowDuplicateEmails: interface{},
-	Anonymous: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigSignInAnonymous,
-	Email: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigSignInEmail,
-	PhoneNumber: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigSignInPhoneNumber,
+	Anonymous: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigSignInAnonymous,
+	Email: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigSignInEmail,
+	PhoneNumber: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigSignInPhoneNumber,
 }
 ```
 
@@ -1544,7 +2131,7 @@ AllowDuplicateEmails interface{}
 
 Whether to allow more than one account to have the same email.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#allow_duplicate_emails IdentityPlatformConfig#allow_duplicate_emails}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#allow_duplicate_emails IdentityPlatformConfig#allow_duplicate_emails}
 
 ---
 
@@ -1558,7 +2145,7 @@ Anonymous IdentityPlatformConfigSignInAnonymous
 
 anonymous block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#anonymous IdentityPlatformConfig#anonymous}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#anonymous IdentityPlatformConfig#anonymous}
 
 ---
 
@@ -1572,7 +2159,7 @@ Email IdentityPlatformConfigSignInEmail
 
 email block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#email IdentityPlatformConfig#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#email IdentityPlatformConfig#email}
 
 ---
 
@@ -1586,7 +2173,7 @@ PhoneNumber IdentityPlatformConfigSignInPhoneNumber
 
 phone_number block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#phone_number IdentityPlatformConfig#phone_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#phone_number IdentityPlatformConfig#phone_number}
 
 ---
 
@@ -1595,7 +2182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInAnonymous.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSignInAnonymous {
 	Enabled: interface{},
@@ -1620,7 +2207,7 @@ Enabled interface{}
 
 Whether anonymous user auth is enabled for the project or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
 
 ---
 
@@ -1629,7 +2216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInEmail.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSignInEmail {
 	Enabled: interface{},
@@ -1656,7 +2243,7 @@ Enabled interface{}
 
 Whether email auth is enabled for the project or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
 
 ---
 
@@ -1674,7 +2261,7 @@ If true, both an email and
 password must be provided to sign in. If false, a user may sign in via either
 email/password or email link.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#password_required IdentityPlatformConfig#password_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#password_required IdentityPlatformConfig#password_required}
 
 ---
 
@@ -1683,7 +2270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInHashConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSignInHashConfig {
 
@@ -1696,7 +2283,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformcon
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInPhoneNumber.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSignInPhoneNumber {
 	Enabled: interface{},
@@ -1723,7 +2310,7 @@ Enabled interface{}
 
 Whether phone number auth is enabled for the project or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
 
 ---
 
@@ -1737,7 +2324,7 @@ TestPhoneNumbers *map[string]*string
 
 A map of <test phone number, fake code> that can be used for phone auth testing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#test_phone_numbers IdentityPlatformConfig#test_phone_numbers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#test_phone_numbers IdentityPlatformConfig#test_phone_numbers}
 
 ---
 
@@ -1746,11 +2333,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSmsRegionConfig {
-	AllowByDefault: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowByDefault,
-	AllowlistOnly: github.com/cdktf/cdktf-provider-google-go/google/v13.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowlistOnly,
+	AllowByDefault: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowByDefault,
+	AllowlistOnly: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowlistOnly,
 }
 ```
 
@@ -1773,7 +2360,7 @@ AllowByDefault IdentityPlatformConfigSmsRegionConfigAllowByDefault
 
 allow_by_default block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#allow_by_default IdentityPlatformConfig#allow_by_default}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#allow_by_default IdentityPlatformConfig#allow_by_default}
 
 ---
 
@@ -1787,7 +2374,7 @@ AllowlistOnly IdentityPlatformConfigSmsRegionConfigAllowlistOnly
 
 allowlist_only block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#allowlist_only IdentityPlatformConfig#allowlist_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#allowlist_only IdentityPlatformConfig#allowlist_only}
 
 ---
 
@@ -1796,7 +2383,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowByDefault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSmsRegionConfigAllowByDefault {
 	DisallowedRegions: *[]*string,
@@ -1821,7 +2408,7 @@ DisallowedRegions *[]*string
 
 Two letter unicode region codes to disallow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#disallowed_regions IdentityPlatformConfig#disallowed_regions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#disallowed_regions IdentityPlatformConfig#disallowed_regions}
 
 ---
 
@@ -1830,7 +2417,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowlistOnly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigSmsRegionConfigAllowlistOnly {
 	AllowedRegions: *[]*string,
@@ -1855,7 +2442,7 @@ AllowedRegions *[]*string
 
 Two letter unicode region codes to allow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#allowed_regions IdentityPlatformConfig#allowed_regions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#allowed_regions IdentityPlatformConfig#allowed_regions}
 
 ---
 
@@ -1864,7 +2451,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 &identityplatformconfig.IdentityPlatformConfigTimeouts {
 	Create: *string,
@@ -1877,9 +2464,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformcon
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}. |
 
 ---
 
@@ -1891,7 +2478,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}.
 
 ---
 
@@ -1903,7 +2490,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}.
 
 ---
 
@@ -1915,7 +2502,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}.
 
 ---
 
@@ -1926,7 +2513,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOutputReference
 ```
@@ -2262,7 +2849,7 @@ func InternalValue() IdentityPlatformConfigBlockingFunctionsForwardInboundCreden
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigBlockingFunctionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigBlockingFunctionsOutputReference
 ```
@@ -2588,7 +3175,7 @@ func InternalValue() IdentityPlatformConfigBlockingFunctions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigBlockingFunctionsTriggersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IdentityPlatformConfigBlockingFunctionsTriggersList
 ```
@@ -2748,7 +3335,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigBlockingFunctionsTriggersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IdentityPlatformConfigBlockingFunctionsTriggersOutputReference
 ```
@@ -3065,12 +3652,2633 @@ func InternalValue() interface{}
 ---
 
 
+### IdentityPlatformConfigClientOutputReference <a name="IdentityPlatformConfigClientOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigClientOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigClientOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.putPermissions">PutPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.resetPermissions">ResetPermissions</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutPermissions` <a name="PutPermissions" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.putPermissions"></a>
+
+```go
+func PutPermissions(value IdentityPlatformConfigClientPermissions)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.putPermissions.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions">IdentityPlatformConfigClientPermissions</a>
+
+---
+
+##### `ResetPermissions` <a name="ResetPermissions" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.resetPermissions"></a>
+
+```go
+func ResetPermissions()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.apiKey">ApiKey</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.firebaseSubdomain">FirebaseSubdomain</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.permissions">Permissions</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference">IdentityPlatformConfigClientPermissionsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.permissionsInput">PermissionsInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions">IdentityPlatformConfigClientPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient">IdentityPlatformConfigClient</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ApiKey`<sup>Required</sup> <a name="ApiKey" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.apiKey"></a>
+
+```go
+func ApiKey() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `FirebaseSubdomain`<sup>Required</sup> <a name="FirebaseSubdomain" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.firebaseSubdomain"></a>
+
+```go
+func FirebaseSubdomain() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Permissions`<sup>Required</sup> <a name="Permissions" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.permissions"></a>
+
+```go
+func Permissions() IdentityPlatformConfigClientPermissionsOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference">IdentityPlatformConfigClientPermissionsOutputReference</a>
+
+---
+
+##### `PermissionsInput`<sup>Optional</sup> <a name="PermissionsInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.permissionsInput"></a>
+
+```go
+func PermissionsInput() IdentityPlatformConfigClientPermissions
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions">IdentityPlatformConfigClientPermissions</a>
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() IdentityPlatformConfigClient
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClient">IdentityPlatformConfigClient</a>
+
+---
+
+
+### IdentityPlatformConfigClientPermissionsOutputReference <a name="IdentityPlatformConfigClientPermissionsOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigClientPermissionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigClientPermissionsOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.resetDisabledUserDeletion">ResetDisabledUserDeletion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.resetDisabledUserSignup">ResetDisabledUserSignup</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetDisabledUserDeletion` <a name="ResetDisabledUserDeletion" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.resetDisabledUserDeletion"></a>
+
+```go
+func ResetDisabledUserDeletion()
+```
+
+##### `ResetDisabledUserSignup` <a name="ResetDisabledUserSignup" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.resetDisabledUserSignup"></a>
+
+```go
+func ResetDisabledUserSignup()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserDeletionInput">DisabledUserDeletionInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserSignupInput">DisabledUserSignupInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserDeletion">DisabledUserDeletion</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserSignup">DisabledUserSignup</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions">IdentityPlatformConfigClientPermissions</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `DisabledUserDeletionInput`<sup>Optional</sup> <a name="DisabledUserDeletionInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserDeletionInput"></a>
+
+```go
+func DisabledUserDeletionInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `DisabledUserSignupInput`<sup>Optional</sup> <a name="DisabledUserSignupInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserSignupInput"></a>
+
+```go
+func DisabledUserSignupInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `DisabledUserDeletion`<sup>Required</sup> <a name="DisabledUserDeletion" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserDeletion"></a>
+
+```go
+func DisabledUserDeletion() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `DisabledUserSignup`<sup>Required</sup> <a name="DisabledUserSignup" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.disabledUserSignup"></a>
+
+```go
+func DisabledUserSignup() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissionsOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() IdentityPlatformConfigClientPermissions
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigClientPermissions">IdentityPlatformConfigClientPermissions</a>
+
+---
+
+
+### IdentityPlatformConfigMfaOutputReference <a name="IdentityPlatformConfigMfaOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigMfaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigMfaOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.putProviderConfigs">PutProviderConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resetEnabledProviders">ResetEnabledProviders</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resetProviderConfigs">ResetProviderConfigs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resetState">ResetState</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutProviderConfigs` <a name="PutProviderConfigs" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.putProviderConfigs"></a>
+
+```go
+func PutProviderConfigs(value interface{})
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.putProviderConfigs.parameter.value"></a>
+
+- *Type:* interface{}
+
+---
+
+##### `ResetEnabledProviders` <a name="ResetEnabledProviders" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resetEnabledProviders"></a>
+
+```go
+func ResetEnabledProviders()
+```
+
+##### `ResetProviderConfigs` <a name="ResetProviderConfigs" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resetProviderConfigs"></a>
+
+```go
+func ResetProviderConfigs()
+```
+
+##### `ResetState` <a name="ResetState" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.resetState"></a>
+
+```go
+func ResetState()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.providerConfigs">ProviderConfigs</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList">IdentityPlatformConfigMfaProviderConfigsList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.enabledProvidersInput">EnabledProvidersInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.providerConfigsInput">ProviderConfigsInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.stateInput">StateInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.enabledProviders">EnabledProviders</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.state">State</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa">IdentityPlatformConfigMfa</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ProviderConfigs`<sup>Required</sup> <a name="ProviderConfigs" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.providerConfigs"></a>
+
+```go
+func ProviderConfigs() IdentityPlatformConfigMfaProviderConfigsList
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList">IdentityPlatformConfigMfaProviderConfigsList</a>
+
+---
+
+##### `EnabledProvidersInput`<sup>Optional</sup> <a name="EnabledProvidersInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.enabledProvidersInput"></a>
+
+```go
+func EnabledProvidersInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ProviderConfigsInput`<sup>Optional</sup> <a name="ProviderConfigsInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.providerConfigsInput"></a>
+
+```go
+func ProviderConfigsInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `StateInput`<sup>Optional</sup> <a name="StateInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.stateInput"></a>
+
+```go
+func StateInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `EnabledProviders`<sup>Required</sup> <a name="EnabledProviders" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.enabledProviders"></a>
+
+```go
+func EnabledProviders() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `State`<sup>Required</sup> <a name="State" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.state"></a>
+
+```go
+func State() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() IdentityPlatformConfigMfa
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfa">IdentityPlatformConfigMfa</a>
+
+---
+
+
+### IdentityPlatformConfigMfaProviderConfigsList <a name="IdentityPlatformConfigMfaProviderConfigsList" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigMfaProviderConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IdentityPlatformConfigMfaProviderConfigsList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.get"></a>
+
+```go
+func Get(index *f64) IdentityPlatformConfigMfaProviderConfigsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.get.parameter.index"></a>
+
+- *Type:* *f64
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsList.property.internalValue"></a>
+
+```go
+func InternalValue() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+
+### IdentityPlatformConfigMfaProviderConfigsOutputReference <a name="IdentityPlatformConfigMfaProviderConfigsOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigMfaProviderConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IdentityPlatformConfigMfaProviderConfigsOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* *f64
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.putTotpProviderConfig">PutTotpProviderConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.resetState">ResetState</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.resetTotpProviderConfig">ResetTotpProviderConfig</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutTotpProviderConfig` <a name="PutTotpProviderConfig" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.putTotpProviderConfig"></a>
+
+```go
+func PutTotpProviderConfig(value IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.putTotpProviderConfig.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig</a>
+
+---
+
+##### `ResetState` <a name="ResetState" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.resetState"></a>
+
+```go
+func ResetState()
+```
+
+##### `ResetTotpProviderConfig` <a name="ResetTotpProviderConfig" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.resetTotpProviderConfig"></a>
+
+```go
+func ResetTotpProviderConfig()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.totpProviderConfig">TotpProviderConfig</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.stateInput">StateInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.totpProviderConfigInput">TotpProviderConfigInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.state">State</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TotpProviderConfig`<sup>Required</sup> <a name="TotpProviderConfig" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.totpProviderConfig"></a>
+
+```go
+func TotpProviderConfig() IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference</a>
+
+---
+
+##### `StateInput`<sup>Optional</sup> <a name="StateInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.stateInput"></a>
+
+```go
+func StateInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TotpProviderConfigInput`<sup>Optional</sup> <a name="TotpProviderConfigInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.totpProviderConfigInput"></a>
+
+```go
+func TotpProviderConfigInput() IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig</a>
+
+---
+
+##### `State`<sup>Required</sup> <a name="State" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.state"></a>
+
+```go
+func State() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+
+### IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference <a name="IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.resetAdjacentIntervals">ResetAdjacentIntervals</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAdjacentIntervals` <a name="ResetAdjacentIntervals" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.resetAdjacentIntervals"></a>
+
+```go
+func ResetAdjacentIntervals()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.adjacentIntervalsInput">AdjacentIntervalsInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.adjacentIntervals">AdjacentIntervals</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AdjacentIntervalsInput`<sup>Optional</sup> <a name="AdjacentIntervalsInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.adjacentIntervalsInput"></a>
+
+```go
+func AdjacentIntervalsInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `AdjacentIntervals`<sup>Required</sup> <a name="AdjacentIntervals" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.adjacentIntervals"></a>
+
+```go
+func AdjacentIntervals() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfigOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig">IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig</a>
+
+---
+
+
+### IdentityPlatformConfigMonitoringOutputReference <a name="IdentityPlatformConfigMonitoringOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigMonitoringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigMonitoringOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.putRequestLogging">PutRequestLogging</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.resetRequestLogging">ResetRequestLogging</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutRequestLogging` <a name="PutRequestLogging" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.putRequestLogging"></a>
+
+```go
+func PutRequestLogging(value IdentityPlatformConfigMonitoringRequestLogging)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.putRequestLogging.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging">IdentityPlatformConfigMonitoringRequestLogging</a>
+
+---
+
+##### `ResetRequestLogging` <a name="ResetRequestLogging" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.resetRequestLogging"></a>
+
+```go
+func ResetRequestLogging()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.requestLogging">RequestLogging</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference">IdentityPlatformConfigMonitoringRequestLoggingOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.requestLoggingInput">RequestLoggingInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging">IdentityPlatformConfigMonitoringRequestLogging</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring">IdentityPlatformConfigMonitoring</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `RequestLogging`<sup>Required</sup> <a name="RequestLogging" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.requestLogging"></a>
+
+```go
+func RequestLogging() IdentityPlatformConfigMonitoringRequestLoggingOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference">IdentityPlatformConfigMonitoringRequestLoggingOutputReference</a>
+
+---
+
+##### `RequestLoggingInput`<sup>Optional</sup> <a name="RequestLoggingInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.requestLoggingInput"></a>
+
+```go
+func RequestLoggingInput() IdentityPlatformConfigMonitoringRequestLogging
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging">IdentityPlatformConfigMonitoringRequestLogging</a>
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() IdentityPlatformConfigMonitoring
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoring">IdentityPlatformConfigMonitoring</a>
+
+---
+
+
+### IdentityPlatformConfigMonitoringRequestLoggingOutputReference <a name="IdentityPlatformConfigMonitoringRequestLoggingOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigMonitoringRequestLoggingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigMonitoringRequestLoggingOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.resetEnabled">ResetEnabled</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetEnabled` <a name="ResetEnabled" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.resetEnabled"></a>
+
+```go
+func ResetEnabled()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.enabledInput">EnabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.enabled">Enabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging">IdentityPlatformConfigMonitoringRequestLogging</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `EnabledInput`<sup>Optional</sup> <a name="EnabledInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.enabledInput"></a>
+
+```go
+func EnabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.enabled"></a>
+
+```go
+func Enabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLoggingOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() IdentityPlatformConfigMonitoringRequestLogging
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMonitoringRequestLogging">IdentityPlatformConfigMonitoringRequestLogging</a>
+
+---
+
+
+### IdentityPlatformConfigMultiTenantOutputReference <a name="IdentityPlatformConfigMultiTenantOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
+
+identityplatformconfig.NewIdentityPlatformConfigMultiTenantOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigMultiTenantOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.resetAllowTenants">ResetAllowTenants</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.resetDefaultTenantLocation">ResetDefaultTenantLocation</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowTenants` <a name="ResetAllowTenants" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.resetAllowTenants"></a>
+
+```go
+func ResetAllowTenants()
+```
+
+##### `ResetDefaultTenantLocation` <a name="ResetDefaultTenantLocation" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.resetDefaultTenantLocation"></a>
+
+```go
+func ResetDefaultTenantLocation()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.allowTenantsInput">AllowTenantsInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.defaultTenantLocationInput">DefaultTenantLocationInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.allowTenants">AllowTenants</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.defaultTenantLocation">DefaultTenantLocation</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant">IdentityPlatformConfigMultiTenant</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AllowTenantsInput`<sup>Optional</sup> <a name="AllowTenantsInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.allowTenantsInput"></a>
+
+```go
+func AllowTenantsInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `DefaultTenantLocationInput`<sup>Optional</sup> <a name="DefaultTenantLocationInput" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.defaultTenantLocationInput"></a>
+
+```go
+func DefaultTenantLocationInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AllowTenants`<sup>Required</sup> <a name="AllowTenants" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.allowTenants"></a>
+
+```go
+func AllowTenants() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `DefaultTenantLocation`<sup>Required</sup> <a name="DefaultTenantLocation" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.defaultTenantLocation"></a>
+
+```go
+func DefaultTenantLocation() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenantOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() IdentityPlatformConfigMultiTenant
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigMultiTenant">IdentityPlatformConfigMultiTenant</a>
+
+---
+
+
 ### IdentityPlatformConfigQuotaOutputReference <a name="IdentityPlatformConfigQuotaOutputReference" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuotaOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuotaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigQuotaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigQuotaOutputReference
 ```
@@ -3361,7 +6569,7 @@ func InternalValue() IdentityPlatformConfigQuota
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuotaSignUpQuotaConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigQuotaSignUpQuotaConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigQuotaSignUpQuotaConfigOutputReference
 ```
@@ -3697,7 +6905,7 @@ func InternalValue() IdentityPlatformConfigQuotaSignUpQuotaConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInAnonymousOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSignInAnonymousOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigSignInAnonymousOutputReference
 ```
@@ -3968,7 +7176,7 @@ func InternalValue() IdentityPlatformConfigSignInAnonymous
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInEmailOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSignInEmailOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigSignInEmailOutputReference
 ```
@@ -4268,7 +7476,7 @@ func InternalValue() IdentityPlatformConfigSignInEmail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInHashConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSignInHashConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IdentityPlatformConfigSignInHashConfigList
 ```
@@ -4417,7 +7625,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInHashConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSignInHashConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IdentityPlatformConfigSignInHashConfigOutputReference
 ```
@@ -4739,7 +7947,7 @@ func InternalValue() IdentityPlatformConfigSignInHashConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSignInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigSignInOutputReference
 ```
@@ -5154,7 +8362,7 @@ func InternalValue() IdentityPlatformConfigSignIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSignInPhoneNumberOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSignInPhoneNumberOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigSignInPhoneNumberOutputReference
 ```
@@ -5454,7 +8662,7 @@ func InternalValue() IdentityPlatformConfigSignInPhoneNumber
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowByDefaultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSmsRegionConfigAllowByDefaultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigSmsRegionConfigAllowByDefaultOutputReference
 ```
@@ -5732,7 +8940,7 @@ func InternalValue() IdentityPlatformConfigSmsRegionConfigAllowByDefault
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigAllowlistOnlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSmsRegionConfigAllowlistOnlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigSmsRegionConfigAllowlistOnlyOutputReference
 ```
@@ -6010,7 +9218,7 @@ func InternalValue() IdentityPlatformConfigSmsRegionConfigAllowlistOnly
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigSmsRegionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigSmsRegionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigSmsRegionConfigOutputReference
 ```
@@ -6343,7 +9551,7 @@ func InternalValue() IdentityPlatformConfigSmsRegionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/identityplatformconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformconfig"
 
 identityplatformconfig.NewIdentityPlatformConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformConfigTimeoutsOutputReference
 ```

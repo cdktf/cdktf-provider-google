@@ -4,7 +4,7 @@
 
 ### WorkbenchInstance <a name="WorkbenchInstance" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance google_workbench_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance google_workbench_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer"></a>
 
@@ -75,6 +75,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.putGceSetup">PutGceSetup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.putTimeouts">PutTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetDesiredState">ResetDesiredState</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetDisableProxyAccess">ResetDisableProxyAccess</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetGceSetup">ResetGceSetup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetId">ResetId</a></code> | *No description.* |
@@ -398,6 +399,12 @@ private void PutTimeouts(WorkbenchInstanceTimeouts Value)
 
 ---
 
+##### `ResetDesiredState` <a name="ResetDesiredState" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetDesiredState"></a>
+
+```csharp
+private void ResetDesiredState()
+```
+
 ##### `ResetDisableProxyAccess` <a name="ResetDisableProxyAccess" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetDisableProxyAccess"></a>
 
 ```csharp
@@ -549,7 +556,7 @@ The construct id used in the generated config for the WorkbenchInstance to impor
 
 The id of the existing WorkbenchInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -591,6 +598,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeoutsOutputReference">WorkbenchInstanceTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.updateTime">UpdateTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.upgradeHistory">UpgradeHistory</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceUpgradeHistoryList">WorkbenchInstanceUpgradeHistoryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.desiredStateInput">DesiredStateInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.disableProxyAccessInput">DisableProxyAccessInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.gceSetupInput">GceSetupInput</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup">WorkbenchInstanceGceSetup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
@@ -601,6 +609,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.desiredState">DesiredState</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.disableProxyAccess">DisableProxyAccess</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.instanceId">InstanceId</a></code> | <code>string</code> | *No description.* |
@@ -874,6 +883,16 @@ public WorkbenchInstanceUpgradeHistoryList UpgradeHistory { get; }
 
 ---
 
+##### `DesiredStateInput`<sup>Optional</sup> <a name="DesiredStateInput" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.desiredStateInput"></a>
+
+```csharp
+public string DesiredStateInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `DisableProxyAccessInput`<sup>Optional</sup> <a name="DisableProxyAccessInput" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.disableProxyAccessInput"></a>
 
 ```csharp
@@ -971,6 +990,16 @@ public object TimeoutsInput { get; }
 ```
 
 - *Type:* object
+
+---
+
+##### `DesiredState`<sup>Required</sup> <a name="DesiredState" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.desiredState"></a>
+
+```csharp
+public string DesiredState { get; }
+```
+
+- *Type:* string
 
 ---
 
@@ -1091,6 +1120,7 @@ new WorkbenchInstanceConfig {
     object[] Provisioners = null,
     string Location,
     string Name,
+    string DesiredState = null,
     object DisableProxyAccess = null,
     WorkbenchInstanceGceSetup GceSetup = null,
     string Id = null,
@@ -1115,13 +1145,14 @@ new WorkbenchInstanceConfig {
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.location">Location</a></code> | <code>string</code> | Part of 'parent'. See documentation of 'projectsId'. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.name">Name</a></code> | <code>string</code> | The name of this workbench instance. Format: 'projects/{project_id}/locations/{location}/instances/{instance_id}'. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.desiredState">DesiredState</a></code> | <code>string</code> | Desired state of the Workbench Instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.disableProxyAccess">DisableProxyAccess</a></code> | <code>object</code> | Optional. If true, the workbench instance will not register with the proxy. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.gceSetup">GceSetup</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup">WorkbenchInstanceGceSetup</a></code> | gce_setup block. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#id WorkbenchInstance#id}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#id WorkbenchInstance#id}. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.instanceId">InstanceId</a></code> | <code>string</code> | Required. User-defined unique ID of this instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.instanceOwners">InstanceOwners</a></code> | <code>string[]</code> | 'Optional. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Optional. Labels to apply to this instance. These can be later modified by the UpdateInstance method. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#project WorkbenchInstance#project}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#project WorkbenchInstance#project}. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts">WorkbenchInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1206,7 +1237,7 @@ public string Location { get; set; }
 
 Part of 'parent'. See documentation of 'projectsId'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
 
 ---
 
@@ -1220,7 +1251,23 @@ public string Name { get; set; }
 
 The name of this workbench instance. Format: 'projects/{project_id}/locations/{location}/instances/{instance_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+
+---
+
+##### `DesiredState`<sup>Optional</sup> <a name="DesiredState" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.desiredState"></a>
+
+```csharp
+public string DesiredState { get; set; }
+```
+
+- *Type:* string
+
+Desired state of the Workbench Instance.
+
+Set this field to 'ACTIVE' to start the Instance, and 'STOPPED' to stop the Instance.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#desired_state WorkbenchInstance#desired_state}
 
 ---
 
@@ -1234,7 +1281,7 @@ public object DisableProxyAccess { get; set; }
 
 Optional. If true, the workbench instance will not register with the proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
 
 ---
 
@@ -1248,7 +1295,7 @@ public WorkbenchInstanceGceSetup GceSetup { get; set; }
 
 gce_setup block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
 
 ---
 
@@ -1260,7 +1307,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#id WorkbenchInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#id WorkbenchInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1277,7 +1324,7 @@ public string InstanceId { get; set; }
 
 Required. User-defined unique ID of this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
 
 ---
 
@@ -1295,7 +1342,7 @@ Input only. The owner of this instance after creation. Format:
 'alias@example.com' Currently supports one owner only. If not specified, all of
 the service account users of your VM instance''s service account can use the instance.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
 
 ---
 
@@ -1312,7 +1359,7 @@ Optional. Labels to apply to this instance. These can be later modified by the U
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
 
 ---
 
@@ -1324,7 +1371,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#project WorkbenchInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#project WorkbenchInstance#project}.
 
 ---
 
@@ -1338,7 +1385,7 @@ public WorkbenchInstanceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
 
 ---
 
@@ -1392,7 +1439,7 @@ public object AcceleratorConfigs { get; set; }
 
 accelerator_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
 
 ---
 
@@ -1406,7 +1453,7 @@ public WorkbenchInstanceGceSetupBootDisk BootDisk { get; set; }
 
 boot_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
 
 ---
 
@@ -1420,7 +1467,7 @@ public WorkbenchInstanceGceSetupDataDisks DataDisks { get; set; }
 
 data_disks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
 
 ---
 
@@ -1434,7 +1481,7 @@ public object DisablePublicIp { get; set; }
 
 Optional. If true, no external IP will be assigned to this VM instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
 
 ---
 
@@ -1448,7 +1495,7 @@ public object EnableIpForwarding { get; set; }
 
 Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
 
 ---
 
@@ -1462,7 +1509,7 @@ public string MachineType { get; set; }
 
 Optional. The machine type of the VM instance. https://cloud.google.com/compute/docs/machine-resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
 
 ---
 
@@ -1476,7 +1523,7 @@ public System.Collections.Generic.IDictionary<string, string> Metadata { get; se
 
 Optional. Custom metadata to apply to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
 
 ---
 
@@ -1490,7 +1537,7 @@ public object NetworkInterfaces { get; set; }
 
 network_interfaces block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
 
 ---
 
@@ -1504,7 +1551,7 @@ public object ServiceAccounts { get; set; }
 
 service_accounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
 
 ---
 
@@ -1518,7 +1565,7 @@ public string[] Tags { get; set; }
 
 Optional. The Compute Engine tags to add to instance (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
 
 ---
 
@@ -1532,7 +1579,7 @@ public WorkbenchInstanceGceSetupVmImage VmImage { get; set; }
 
 vm_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
 
 ---
 
@@ -1568,7 +1615,7 @@ public string CoreCount { get; set; }
 
 Optional. Count of cores of this accelerator.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#core_count WorkbenchInstance#core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#core_count WorkbenchInstance#core_count}
 
 ---
 
@@ -1582,7 +1629,7 @@ public string Type { get; set; }
 
 Optional. Type of this accelerator. Possible values: ["NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_A100", "NVIDIA_A100_80GB", "NVIDIA_L4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#type WorkbenchInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#type WorkbenchInstance#type}
 
 ---
 
@@ -1622,7 +1669,7 @@ public string DiskEncryption { get; set; }
 
 Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
 
 ---
 
@@ -1640,7 +1687,7 @@ The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). If not specified, this defaults to the
 recommended value of 150GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
 
 ---
 
@@ -1654,7 +1701,7 @@ public string DiskType { get; set; }
 
 Optional. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
 
 ---
 
@@ -1668,11 +1715,11 @@ public string KmsKey { get; set; }
 
 'Optional.
 
-Input only. The KMS key used to encrypt the disks, only
+The KMS key used to encrypt the disks, only
 applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
 Learn more about using your own encryption keys.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
 
 ---
 
@@ -1712,7 +1759,7 @@ public string DiskEncryption { get; set; }
 
 Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
 
 ---
 
@@ -1730,7 +1777,7 @@ The size of the disk in GB attached to this VM instance,
 up to a maximum of 64000 GB (64 TB). If not specified, this defaults to
 100.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
 
 ---
 
@@ -1744,7 +1791,7 @@ public string DiskType { get; set; }
 
 Optional. Input only. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
 
 ---
 
@@ -1758,11 +1805,11 @@ public string KmsKey { get; set; }
 
 'Optional.
 
-Input only. The KMS key used to encrypt the disks,
+The KMS key used to encrypt the disks,
 only applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
 Learn more about using your own encryption keys.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
 
 ---
 
@@ -1800,7 +1847,7 @@ public string Network { get; set; }
 
 Optional. The name of the VPC that this VM instance is in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#network WorkbenchInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#network WorkbenchInstance#network}
 
 ---
 
@@ -1817,7 +1864,7 @@ Optional.
 The type of vNIC to be used on this interface. This
 may be gVNIC or VirtioNet. Possible values: ["VIRTIO_NET", "GVNIC"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#nic_type WorkbenchInstance#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#nic_type WorkbenchInstance#nic_type}
 
 ---
 
@@ -1831,7 +1878,7 @@ public string Subnet { get; set; }
 
 Optional. The name of the subnet that this VM instance is in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#subnet WorkbenchInstance#subnet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#subnet WorkbenchInstance#subnet}
 
 ---
 
@@ -1865,7 +1912,7 @@ public string Email { get; set; }
 
 Optional. Email address of the service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#email WorkbenchInstance#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#email WorkbenchInstance#email}
 
 ---
 
@@ -1903,7 +1950,7 @@ public string Family { get; set; }
 
 Optional. Use this VM image family to find the image; the newest image in this family will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
 
 ---
 
@@ -1917,7 +1964,7 @@ public string Name { get; set; }
 
 Optional. Use VM image name to find the image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
 
 ---
 
@@ -1931,7 +1978,7 @@ public string Project { get; set; }
 
 The name of the Google Cloud project that this VM image belongs to. Format: {project_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
 
 ---
 
@@ -1966,9 +2013,9 @@ new WorkbenchInstanceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#create WorkbenchInstance#create}. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#update WorkbenchInstance#update}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#create WorkbenchInstance#create}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#update WorkbenchInstance#update}. |
 
 ---
 
@@ -1980,7 +2027,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#create WorkbenchInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#create WorkbenchInstance#create}.
 
 ---
 
@@ -1992,7 +2039,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}.
 
 ---
 
@@ -2004,7 +2051,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/workbench_instance#update WorkbenchInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/workbench_instance#update WorkbenchInstance#update}.
 
 ---
 

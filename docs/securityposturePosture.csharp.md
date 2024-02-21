@@ -4,7 +4,7 @@
 
 ### SecurityposturePosture <a name="SecurityposturePosture" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosture"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture google_securityposture_posture}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture google_securityposture_posture}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer"></a>
 
@@ -521,7 +521,7 @@ The construct id used in the generated config for the SecurityposturePosture to 
 
 The id of the existing SecurityposturePosture that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1000,7 +1000,7 @@ new SecurityposturePostureConfig {
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.postureId">PostureId</a></code> | <code>string</code> | Id of the posture. It is an immutable field. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.state">State</a></code> | <code>string</code> | State of the posture. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.description">Description</a></code> | <code>string</code> | Description of the posture. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.policySets">PolicySets</a></code> | <code>object</code> | policy_sets block. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts">SecurityposturePostureTimeouts</a></code> | timeouts block. |
 
@@ -1086,7 +1086,7 @@ public string Location { get; set; }
 
 Location of the resource, eg: global.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -1100,7 +1100,7 @@ public string Parent { get; set; }
 
 The parent of the resource, an organization. Format should be 'organizations/{organization_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
 
 ---
 
@@ -1114,7 +1114,7 @@ public string PostureId { get; set; }
 
 Id of the posture. It is an immutable field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
 
 ---
 
@@ -1131,7 +1131,7 @@ State of the posture.
 Update to state field should not be triggered along with
 with other field updates. Possible values: ["DEPRECATED", "DRAFT", "ACTIVE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
 
 ---
 
@@ -1145,7 +1145,7 @@ public string Description { get; set; }
 
 Description of the posture.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1157,7 +1157,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1174,7 +1174,7 @@ public object PolicySets { get; set; }
 
 policy_sets block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
 
 ---
 
@@ -1188,7 +1188,7 @@ public SecurityposturePostureTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
 
 ---
 
@@ -1226,7 +1226,7 @@ public string PolicySetId { get; set; }
 
 ID of the policy set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#policy_set_id SecurityposturePosture#policy_set_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#policy_set_id SecurityposturePosture#policy_set_id}
 
 ---
 
@@ -1240,7 +1240,7 @@ public string Description { get; set; }
 
 Description of the policy set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1254,7 +1254,7 @@ public object Policies { get; set; }
 
 policies block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#policies SecurityposturePosture#policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#policies SecurityposturePosture#policies}
 
 ---
 
@@ -1294,7 +1294,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraint Constraint { get; set;
 
 constraint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#constraint SecurityposturePosture#constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#constraint SecurityposturePosture#constraint}
 
 ---
 
@@ -1308,7 +1308,7 @@ public string PolicyId { get; set; }
 
 ID of the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#policy_id SecurityposturePosture#policy_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#policy_id SecurityposturePosture#policy_id}
 
 ---
 
@@ -1322,7 +1322,7 @@ public object ComplianceStandards { get; set; }
 
 compliance_standards block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#compliance_standards SecurityposturePosture#compliance_standards}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#compliance_standards SecurityposturePosture#compliance_standards}
 
 ---
 
@@ -1336,7 +1336,7 @@ public string Description { get; set; }
 
 Description of the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1372,7 +1372,7 @@ public string Control { get; set; }
 
 Mapping of security controls for the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#control SecurityposturePosture#control}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#control SecurityposturePosture#control}
 
 ---
 
@@ -1386,7 +1386,7 @@ public string Standard { get; set; }
 
 Mapping of compliance standards for the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#standard SecurityposturePosture#standard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#standard SecurityposturePosture#standard}
 
 ---
 
@@ -1426,7 +1426,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraint Org
 
 org_policy_constraint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#org_policy_constraint SecurityposturePosture#org_policy_constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#org_policy_constraint SecurityposturePosture#org_policy_constraint}
 
 ---
 
@@ -1440,7 +1440,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 
 org_policy_constraint_custom block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#org_policy_constraint_custom SecurityposturePosture#org_policy_constraint_custom}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#org_policy_constraint_custom SecurityposturePosture#org_policy_constraint_custom}
 
 ---
 
@@ -1454,7 +1454,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 security_health_analytics_custom_module block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#security_health_analytics_custom_module SecurityposturePosture#security_health_analytics_custom_module}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#security_health_analytics_custom_module SecurityposturePosture#security_health_analytics_custom_module}
 
 ---
 
@@ -1468,7 +1468,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 security_health_analytics_module block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#security_health_analytics_module SecurityposturePosture#security_health_analytics_module}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#security_health_analytics_module SecurityposturePosture#security_health_analytics_module}
 
 ---
 
@@ -1504,7 +1504,7 @@ public string CannedConstraintId { get; set; }
 
 Organization policy canned constraint Id.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#canned_constraint_id SecurityposturePosture#canned_constraint_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#canned_constraint_id SecurityposturePosture#canned_constraint_id}
 
 ---
 
@@ -1518,7 +1518,7 @@ public object PolicyRules { get; set; }
 
 policy_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
 
 ---
 
@@ -1554,7 +1554,7 @@ public object PolicyRules { get; set; }
 
 policy_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
 
 ---
 
@@ -1568,7 +1568,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 
 custom_constraint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#custom_constraint SecurityposturePosture#custom_constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#custom_constraint SecurityposturePosture#custom_constraint}
 
 ---
 
@@ -1614,7 +1614,7 @@ public string ActionType { get; set; }
 
 The action to take if the condition is met. Possible values: ["ALLOW", "DENY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#action_type SecurityposturePosture#action_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#action_type SecurityposturePosture#action_type}
 
 ---
 
@@ -1628,7 +1628,7 @@ public string Condition { get; set; }
 
 A CEL condition that refers to a supported service resource, for example 'resource.management.autoUpgrade == false'. For details about CEL usage, see [Common Expression Language](https://cloud.google.com/resource-manager/docs/organization-policy/creating-managing-custom-constraints#common_expression_language).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
 
 ---
 
@@ -1644,7 +1644,7 @@ A list of RESTful methods for which to enforce the constraint.
 
 Can be 'CREATE', 'UPDATE', or both. Not all Google Cloud services support both methods. To see supported methods for each service, find the service in [Supported services](https://cloud.google.com/resource-manager/docs/organization-policy/custom-constraint-supported-services).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#method_types SecurityposturePosture#method_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#method_types SecurityposturePosture#method_types}
 
 ---
 
@@ -1658,7 +1658,7 @@ public string Name { get; set; }
 
 Immutable. The name of the custom constraint. This is unique within the organization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
 
 ---
 
@@ -1674,7 +1674,7 @@ Immutable.
 
 The fully qualified name of the Google Cloud REST resource containing the object and field you want to restrict. For example, 'container.googleapis.com/NodePool'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
 
 ---
 
@@ -1688,7 +1688,7 @@ public string Description { get; set; }
 
 A human-friendly description of the constraint to display as an error message when the policy is violated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1702,7 +1702,7 @@ public string DisplayName { get; set; }
 
 A human-friendly name for the constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
 
 ---
 
@@ -1715,9 +1715,9 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules {
     object AllowAll = null,
+    SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition Condition = null,
     object DenyAll = null,
     object Enforce = null,
-    SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr Expr = null,
     SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValues Values = null
 };
 ```
@@ -1727,9 +1727,9 @@ new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomP
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.allowAll">AllowAll</a></code> | <code>object</code> | Setting this to true means that all values are allowed. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition</a></code> | condition block. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.denyAll">DenyAll</a></code> | <code>object</code> | Setting this to true means that all values are denied. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.enforce">Enforce</a></code> | <code>object</code> | If 'true', then the policy is enforced. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.expr">Expr</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr</a></code> | expr block. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.values">Values</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValues">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValues</a></code> | values block. |
 
 ---
@@ -1746,7 +1746,21 @@ Setting this to true means that all values are allowed.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+
+---
+
+##### `Condition`<sup>Optional</sup> <a name="Condition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.condition"></a>
+
+```csharp
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition Condition { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition</a>
+
+condition block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
 
 ---
 
@@ -1762,7 +1776,7 @@ Setting this to true means that all values are denied.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
 
 ---
 
@@ -1779,21 +1793,7 @@ If 'true', then the policy is enforced.
 If 'false', then any configuration is acceptable.
 This field can be set only in policies for boolean constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
-
----
-
-##### `Expr`<sup>Optional</sup> <a name="Expr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules.property.expr"></a>
-
-```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr Expr { get; set; }
-```
-
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr</a>
-
-expr block.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#expr SecurityposturePosture#expr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
 
 ---
 
@@ -1807,18 +1807,18 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 
 values block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
 
 ---
 
-### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr"></a>
+### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.Initializer"></a>
 
 ```csharp
 using HashiCorp.Cdktf.Providers.Google;
 
-new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr {
+new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition {
     string Expression,
     string Description = null,
     string Location = null,
@@ -1830,14 +1830,14 @@ new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomP
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.expression">Expression</a></code> | <code>string</code> | Textual representation of an expression in Common Expression Language syntax. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.description">Description</a></code> | <code>string</code> | Description of the expression. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.location">Location</a></code> | <code>string</code> | String indicating the location of the expression for error reporting, e.g. a file name and a position in the file. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.title">Title</a></code> | <code>string</code> | Title for the expression, i.e. a short string describing its purpose. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.expression">Expression</a></code> | <code>string</code> | Textual representation of an expression in Common Expression Language syntax. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.description">Description</a></code> | <code>string</code> | Description of the expression. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.location">Location</a></code> | <code>string</code> | String indicating the location of the expression for error reporting, e.g. a file name and a position in the file. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.title">Title</a></code> | <code>string</code> | Title for the expression, i.e. a short string describing its purpose. |
 
 ---
 
-##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.expression"></a>
+##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.expression"></a>
 
 ```csharp
 public string Expression { get; set; }
@@ -1847,11 +1847,11 @@ public string Expression { get; set; }
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
-##### `Description`<sup>Optional</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.description"></a>
+##### `Description`<sup>Optional</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.description"></a>
 
 ```csharp
 public string Description { get; set; }
@@ -1861,11 +1861,11 @@ public string Description { get; set; }
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
-##### `Location`<sup>Optional</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.location"></a>
+##### `Location`<sup>Optional</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.location"></a>
 
 ```csharp
 public string Location { get; set; }
@@ -1875,11 +1875,11 @@ public string Location { get; set; }
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
-##### `Title`<sup>Optional</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr.property.title"></a>
+##### `Title`<sup>Optional</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition.property.title"></a>
 
 ```csharp
 public string Title { get; set; }
@@ -1889,7 +1889,7 @@ public string Title { get; set; }
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -1925,7 +1925,7 @@ public string[] AllowedValues { get; set; }
 
 List of values allowed at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
 
 ---
 
@@ -1939,7 +1939,7 @@ public string[] DeniedValues { get; set; }
 
 List of values denied at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
 
 ---
 
@@ -1952,9 +1952,9 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules {
     object AllowAll = null,
+    SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition Condition = null,
     object DenyAll = null,
     object Enforce = null,
-    SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr Expr = null,
     SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValues Values = null
 };
 ```
@@ -1964,9 +1964,9 @@ new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyR
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.allowAll">AllowAll</a></code> | <code>object</code> | Setting this to true means that all values are allowed. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition</a></code> | condition block. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.denyAll">DenyAll</a></code> | <code>object</code> | Setting this to true means that all values are denied. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.enforce">Enforce</a></code> | <code>object</code> | If 'true', then the policy is enforced. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.expr">Expr</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr</a></code> | expr block. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.values">Values</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValues">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValues</a></code> | values block. |
 
 ---
@@ -1983,7 +1983,21 @@ Setting this to true means that all values are allowed.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+
+---
+
+##### `Condition`<sup>Optional</sup> <a name="Condition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.condition"></a>
+
+```csharp
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition Condition { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition</a>
+
+condition block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
 
 ---
 
@@ -1999,7 +2013,7 @@ Setting this to true means that all values are denied.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
 
 ---
 
@@ -2016,21 +2030,7 @@ If 'true', then the policy is enforced.
 If 'false', then any configuration is acceptable.
 This field can be set only in policies for boolean constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
-
----
-
-##### `Expr`<sup>Optional</sup> <a name="Expr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules.property.expr"></a>
-
-```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr Expr { get; set; }
-```
-
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr</a>
-
-expr block.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#expr SecurityposturePosture#expr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
 
 ---
 
@@ -2044,18 +2044,18 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPoli
 
 values block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
 
 ---
 
-### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr"></a>
+### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.Initializer"></a>
 
 ```csharp
 using HashiCorp.Cdktf.Providers.Google;
 
-new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr {
+new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition {
     string Expression,
     string Description = null,
     string Location = null,
@@ -2067,14 +2067,14 @@ new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyR
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.expression">Expression</a></code> | <code>string</code> | Textual representation of an expression in Common Expression Language syntax. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.description">Description</a></code> | <code>string</code> | Description of the expression. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.location">Location</a></code> | <code>string</code> | String indicating the location of the expression for error reporting, e.g. a file name and a position in the file. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.title">Title</a></code> | <code>string</code> | Title for the expression, i.e. a short string describing its purpose. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.expression">Expression</a></code> | <code>string</code> | Textual representation of an expression in Common Expression Language syntax. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.description">Description</a></code> | <code>string</code> | Description of the expression. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.location">Location</a></code> | <code>string</code> | String indicating the location of the expression for error reporting, e.g. a file name and a position in the file. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.title">Title</a></code> | <code>string</code> | Title for the expression, i.e. a short string describing its purpose. |
 
 ---
 
-##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.expression"></a>
+##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.expression"></a>
 
 ```csharp
 public string Expression { get; set; }
@@ -2084,11 +2084,11 @@ public string Expression { get; set; }
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
-##### `Description`<sup>Optional</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.description"></a>
+##### `Description`<sup>Optional</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.description"></a>
 
 ```csharp
 public string Description { get; set; }
@@ -2098,11 +2098,11 @@ public string Description { get; set; }
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
-##### `Location`<sup>Optional</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.location"></a>
+##### `Location`<sup>Optional</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.location"></a>
 
 ```csharp
 public string Location { get; set; }
@@ -2112,11 +2112,11 @@ public string Location { get; set; }
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
-##### `Title`<sup>Optional</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr.property.title"></a>
+##### `Title`<sup>Optional</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition.property.title"></a>
 
 ```csharp
 public string Title { get; set; }
@@ -2126,7 +2126,7 @@ public string Title { get; set; }
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -2162,7 +2162,7 @@ public string[] AllowedValues { get; set; }
 
 List of values allowed at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
 
 ---
 
@@ -2176,7 +2176,7 @@ public string[] DeniedValues { get; set; }
 
 List of values denied at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
 
 ---
 
@@ -2214,7 +2214,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#config SecurityposturePosture#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#config SecurityposturePosture#config}
 
 ---
 
@@ -2232,7 +2232,7 @@ This
 display name becomes the finding category for all findings that are
 returned by this custom module.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
 
 ---
 
@@ -2246,7 +2246,7 @@ public string ModuleEnablementState { get; set; }
 
 The state of enablement for the module at its level of the resource hierarchy. Possible values: ["ENABLEMENT_STATE_UNSPECIFIED", "ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
 
 ---
 
@@ -2290,7 +2290,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 predicate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#predicate SecurityposturePosture#predicate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#predicate SecurityposturePosture#predicate}
 
 ---
 
@@ -2304,7 +2304,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 resource_selector block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#resource_selector SecurityposturePosture#resource_selector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#resource_selector SecurityposturePosture#resource_selector}
 
 ---
 
@@ -2318,7 +2318,7 @@ public string Severity { get; set; }
 
 The severity to assign to findings generated by the module. Possible values: ["SEVERITY_UNSPECIFIED", "CRITICAL", "HIGH", "MEDIUM", "LOW"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#severity SecurityposturePosture#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#severity SecurityposturePosture#severity}
 
 ---
 
@@ -2332,7 +2332,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 custom_output block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#custom_output SecurityposturePosture#custom_output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#custom_output SecurityposturePosture#custom_output}
 
 ---
 
@@ -2346,7 +2346,7 @@ public string Description { get; set; }
 
 Text that describes the vulnerability or misconfiguration that the custom module detects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2360,7 +2360,7 @@ public string Recommendation { get; set; }
 
 An explanation of the recommended steps that security teams can take to resolve the detected issue.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#recommendation SecurityposturePosture#recommendation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#recommendation SecurityposturePosture#recommendation}
 
 ---
 
@@ -2394,7 +2394,7 @@ public object Properties { get; set; }
 
 properties block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#properties SecurityposturePosture#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#properties SecurityposturePosture#properties}
 
 ---
 
@@ -2430,7 +2430,7 @@ public string Name { get; set; }
 
 Name of the property for the custom output.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
 
 ---
 
@@ -2444,7 +2444,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 value_expression block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#value_expression SecurityposturePosture#value_expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#value_expression SecurityposturePosture#value_expression}
 
 ---
 
@@ -2484,7 +2484,7 @@ public string Expression { get; set; }
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
@@ -2498,7 +2498,7 @@ public string Description { get; set; }
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2512,7 +2512,7 @@ public string Location { get; set; }
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -2526,7 +2526,7 @@ public string Title { get; set; }
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -2566,7 +2566,7 @@ public string Expression { get; set; }
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
@@ -2580,7 +2580,7 @@ public string Description { get; set; }
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2594,7 +2594,7 @@ public string Location { get; set; }
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -2608,7 +2608,7 @@ public string Title { get; set; }
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -2642,7 +2642,7 @@ public string[] ResourceTypes { get; set; }
 
 The resource types to run the detector on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
 
 ---
 
@@ -2678,7 +2678,7 @@ public string ModuleName { get; set; }
 
 The name of the module eg: BIGQUERY_TABLE_CMEK_DISABLED.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#module_name SecurityposturePosture#module_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#module_name SecurityposturePosture#module_name}
 
 ---
 
@@ -2692,7 +2692,7 @@ public string ModuleEnablementState { get; set; }
 
 The state of enablement for the module at its level of the resource hierarchy. Possible values: ["ENABLEMENT_STATE_UNSPECIFIED", "ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
 
 ---
 
@@ -2714,9 +2714,9 @@ new SecurityposturePostureTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}. |
 
 ---
 
@@ -2728,7 +2728,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}.
 
 ---
 
@@ -2740,7 +2740,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}.
 
 ---
 
@@ -2752,7 +2752,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}.
 
 ---
 
@@ -4506,24 +4506,24 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 ---
 
 
-### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference"></a>
+### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.Initializer"></a>
 
 ```csharp
 using HashiCorp.Cdktf.Providers.Google;
 
-new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.Initializer.parameter.terraformResource"></a>
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* HashiCorp.Cdktf.IInterpolatingParent
 
@@ -4531,7 +4531,7 @@ The parent resource.
 
 ---
 
-##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
@@ -4543,152 +4543,152 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resetDescription">ResetDescription</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resetLocation">ResetLocation</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resetTitle">ResetTitle</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resetDescription">ResetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resetLocation">ResetLocation</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resetTitle">ResetTitle</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.computeFqn"></a>
 
 ```csharp
 private string ComputeFqn()
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getAnyMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getBooleanAttribute"></a>
 
 ```csharp
 private IResolvable GetBooleanAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getBooleanMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getListAttribute"></a>
 
 ```csharp
 private string[] GetListAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberAttribute"></a>
 
 ```csharp
 private double GetNumberAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberListAttribute"></a>
 
 ```csharp
 private double[] GetNumberListAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getStringAttribute"></a>
 
 ```csharp
 private string GetStringAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getStringMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.interpolationForAttribute"></a>
 
 ```csharp
 private IResolvable InterpolationForAttribute(string Property)
 ```
 
-###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resolve"></a>
 
 ```csharp
 private object Resolve(IResolveContext Context)
@@ -4696,13 +4696,13 @@ private object Resolve(IResolveContext Context)
 
 Produce the Token's value at resolution time.
 
-###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resolve.parameter._context"></a>
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resolve.parameter._context"></a>
 
 - *Type:* HashiCorp.Cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.toString"></a>
 
 ```csharp
 private string ToString()
@@ -4712,19 +4712,19 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `ResetDescription` <a name="ResetDescription" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resetDescription"></a>
+##### `ResetDescription` <a name="ResetDescription" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resetDescription"></a>
 
 ```csharp
 private void ResetDescription()
 ```
 
-##### `ResetLocation` <a name="ResetLocation" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resetLocation"></a>
+##### `ResetLocation` <a name="ResetLocation" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resetLocation"></a>
 
 ```csharp
 private void ResetLocation()
 ```
 
-##### `ResetTitle` <a name="ResetTitle" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.resetTitle"></a>
+##### `ResetTitle` <a name="ResetTitle" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.resetTitle"></a>
 
 ```csharp
 private void ResetTitle()
@@ -4735,21 +4735,21 @@ private void ResetTitle()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.expressionInput">ExpressionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.titleInput">TitleInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.description">Description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.expression">Expression</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.location">Location</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.title">Title</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.expressionInput">ExpressionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.titleInput">TitleInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.description">Description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.expression">Expression</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.location">Location</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.title">Title</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition</a></code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.creationStack"></a>
 
 ```csharp
 public string[] CreationStack { get; }
@@ -4763,7 +4763,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.fqn"></a>
 
 ```csharp
 public string Fqn { get; }
@@ -4773,7 +4773,7 @@ public string Fqn { get; }
 
 ---
 
-##### `DescriptionInput`<sup>Optional</sup> <a name="DescriptionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.descriptionInput"></a>
+##### `DescriptionInput`<sup>Optional</sup> <a name="DescriptionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.descriptionInput"></a>
 
 ```csharp
 public string DescriptionInput { get; }
@@ -4783,7 +4783,7 @@ public string DescriptionInput { get; }
 
 ---
 
-##### `ExpressionInput`<sup>Optional</sup> <a name="ExpressionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.expressionInput"></a>
+##### `ExpressionInput`<sup>Optional</sup> <a name="ExpressionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.expressionInput"></a>
 
 ```csharp
 public string ExpressionInput { get; }
@@ -4793,7 +4793,7 @@ public string ExpressionInput { get; }
 
 ---
 
-##### `LocationInput`<sup>Optional</sup> <a name="LocationInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.locationInput"></a>
+##### `LocationInput`<sup>Optional</sup> <a name="LocationInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.locationInput"></a>
 
 ```csharp
 public string LocationInput { get; }
@@ -4803,7 +4803,7 @@ public string LocationInput { get; }
 
 ---
 
-##### `TitleInput`<sup>Optional</sup> <a name="TitleInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.titleInput"></a>
+##### `TitleInput`<sup>Optional</sup> <a name="TitleInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.titleInput"></a>
 
 ```csharp
 public string TitleInput { get; }
@@ -4813,7 +4813,7 @@ public string TitleInput { get; }
 
 ---
 
-##### `Description`<sup>Required</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.description"></a>
+##### `Description`<sup>Required</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.description"></a>
 
 ```csharp
 public string Description { get; }
@@ -4823,7 +4823,7 @@ public string Description { get; }
 
 ---
 
-##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.expression"></a>
+##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.expression"></a>
 
 ```csharp
 public string Expression { get; }
@@ -4833,7 +4833,7 @@ public string Expression { get; }
 
 ---
 
-##### `Location`<sup>Required</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.location"></a>
+##### `Location`<sup>Required</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.location"></a>
 
 ```csharp
 public string Location { get; }
@@ -4843,7 +4843,7 @@ public string Location { get; }
 
 ---
 
-##### `Title`<sup>Required</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.title"></a>
+##### `Title`<sup>Required</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.title"></a>
 
 ```csharp
 public string Title { get; }
@@ -4853,13 +4853,13 @@ public string Title { get; }
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference.property.internalValue"></a>
 
 ```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr InternalValue { get; }
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition InternalValue { get; }
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr</a>
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition</a>
 
 ---
 
@@ -5092,12 +5092,12 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.putExpr">PutExpr</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.putCondition">PutCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.putValues">PutValues</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetAllowAll">ResetAllowAll</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetCondition">ResetCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetDenyAll">ResetDenyAll</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetEnforce">ResetEnforce</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetExpr">ResetExpr</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetValues">ResetValues</a></code> | *No description.* |
 
 ---
@@ -5252,15 +5252,15 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `PutExpr` <a name="PutExpr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.putExpr"></a>
+##### `PutCondition` <a name="PutCondition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.putCondition"></a>
 
 ```csharp
-private void PutExpr(SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr Value)
+private void PutCondition(SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition Value)
 ```
 
-###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.putExpr.parameter.value"></a>
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.putCondition.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr</a>
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition</a>
 
 ---
 
@@ -5282,6 +5282,12 @@ private void PutValues(SecurityposturePosturePolicySetsPoliciesConstraintOrgPoli
 private void ResetAllowAll()
 ```
 
+##### `ResetCondition` <a name="ResetCondition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetCondition"></a>
+
+```csharp
+private void ResetCondition()
+```
+
 ##### `ResetDenyAll` <a name="ResetDenyAll" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetDenyAll"></a>
 
 ```csharp
@@ -5292,12 +5298,6 @@ private void ResetDenyAll()
 
 ```csharp
 private void ResetEnforce()
-```
-
-##### `ResetExpr` <a name="ResetExpr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetExpr"></a>
-
-```csharp
-private void ResetExpr()
 ```
 
 ##### `ResetValues` <a name="ResetValues" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.resetValues"></a>
@@ -5313,12 +5313,12 @@ private void ResetValues()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.expr">Expr</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.values">Values</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValuesOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValuesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.allowAllInput">AllowAllInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.conditionInput">ConditionInput</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.denyAllInput">DenyAllInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.enforceInput">EnforceInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.exprInput">ExprInput</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.valuesInput">ValuesInput</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValues">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValues</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.allowAll">AllowAll</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.denyAll">DenyAll</a></code> | <code>object</code> | *No description.* |
@@ -5351,13 +5351,13 @@ public string Fqn { get; }
 
 ---
 
-##### `Expr`<sup>Required</sup> <a name="Expr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.expr"></a>
+##### `Condition`<sup>Required</sup> <a name="Condition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.condition"></a>
 
 ```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference Expr { get; }
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference Condition { get; }
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExprOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesConditionOutputReference</a>
 
 ---
 
@@ -5381,6 +5381,16 @@ public object AllowAllInput { get; }
 
 ---
 
+##### `ConditionInput`<sup>Optional</sup> <a name="ConditionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.conditionInput"></a>
+
+```csharp
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition ConditionInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition</a>
+
+---
+
 ##### `DenyAllInput`<sup>Optional</sup> <a name="DenyAllInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.denyAllInput"></a>
 
 ```csharp
@@ -5398,16 +5408,6 @@ public object EnforceInput { get; }
 ```
 
 - *Type:* object
-
----
-
-##### `ExprInput`<sup>Optional</sup> <a name="ExprInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesOutputReference.property.exprInput"></a>
-
-```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr ExprInput { get; }
-```
-
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesExpr</a>
 
 ---
 
@@ -6075,24 +6075,24 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraint Int
 ---
 
 
-### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference"></a>
+### SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference <a name="SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.Initializer"></a>
 
 ```csharp
 using HashiCorp.Cdktf.Providers.Google;
 
-new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+new SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.Initializer.parameter.terraformResource"></a>
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* HashiCorp.Cdktf.IInterpolatingParent
 
@@ -6100,7 +6100,7 @@ The parent resource.
 
 ---
 
-##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
@@ -6112,152 +6112,152 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resetDescription">ResetDescription</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resetLocation">ResetLocation</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resetTitle">ResetTitle</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resetDescription">ResetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resetLocation">ResetLocation</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resetTitle">ResetTitle</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.computeFqn"></a>
 
 ```csharp
 private string ComputeFqn()
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getAnyMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getBooleanAttribute"></a>
 
 ```csharp
 private IResolvable GetBooleanAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getBooleanMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getListAttribute"></a>
 
 ```csharp
 private string[] GetListAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberAttribute"></a>
 
 ```csharp
 private double GetNumberAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberListAttribute"></a>
 
 ```csharp
 private double[] GetNumberListAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getStringAttribute"></a>
 
 ```csharp
 private string GetStringAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getStringMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.interpolationForAttribute"></a>
 
 ```csharp
 private IResolvable InterpolationForAttribute(string Property)
 ```
 
-###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resolve"></a>
 
 ```csharp
 private object Resolve(IResolveContext Context)
@@ -6265,13 +6265,13 @@ private object Resolve(IResolveContext Context)
 
 Produce the Token's value at resolution time.
 
-###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resolve.parameter._context"></a>
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resolve.parameter._context"></a>
 
 - *Type:* HashiCorp.Cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.toString"></a>
 
 ```csharp
 private string ToString()
@@ -6281,19 +6281,19 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `ResetDescription` <a name="ResetDescription" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resetDescription"></a>
+##### `ResetDescription` <a name="ResetDescription" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resetDescription"></a>
 
 ```csharp
 private void ResetDescription()
 ```
 
-##### `ResetLocation` <a name="ResetLocation" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resetLocation"></a>
+##### `ResetLocation` <a name="ResetLocation" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resetLocation"></a>
 
 ```csharp
 private void ResetLocation()
 ```
 
-##### `ResetTitle` <a name="ResetTitle" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.resetTitle"></a>
+##### `ResetTitle` <a name="ResetTitle" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.resetTitle"></a>
 
 ```csharp
 private void ResetTitle()
@@ -6304,21 +6304,21 @@ private void ResetTitle()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.expressionInput">ExpressionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.titleInput">TitleInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.description">Description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.expression">Expression</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.location">Location</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.title">Title</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.expressionInput">ExpressionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.titleInput">TitleInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.description">Description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.expression">Expression</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.location">Location</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.title">Title</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition</a></code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.creationStack"></a>
 
 ```csharp
 public string[] CreationStack { get; }
@@ -6332,7 +6332,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.fqn"></a>
 
 ```csharp
 public string Fqn { get; }
@@ -6342,7 +6342,7 @@ public string Fqn { get; }
 
 ---
 
-##### `DescriptionInput`<sup>Optional</sup> <a name="DescriptionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.descriptionInput"></a>
+##### `DescriptionInput`<sup>Optional</sup> <a name="DescriptionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.descriptionInput"></a>
 
 ```csharp
 public string DescriptionInput { get; }
@@ -6352,7 +6352,7 @@ public string DescriptionInput { get; }
 
 ---
 
-##### `ExpressionInput`<sup>Optional</sup> <a name="ExpressionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.expressionInput"></a>
+##### `ExpressionInput`<sup>Optional</sup> <a name="ExpressionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.expressionInput"></a>
 
 ```csharp
 public string ExpressionInput { get; }
@@ -6362,7 +6362,7 @@ public string ExpressionInput { get; }
 
 ---
 
-##### `LocationInput`<sup>Optional</sup> <a name="LocationInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.locationInput"></a>
+##### `LocationInput`<sup>Optional</sup> <a name="LocationInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.locationInput"></a>
 
 ```csharp
 public string LocationInput { get; }
@@ -6372,7 +6372,7 @@ public string LocationInput { get; }
 
 ---
 
-##### `TitleInput`<sup>Optional</sup> <a name="TitleInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.titleInput"></a>
+##### `TitleInput`<sup>Optional</sup> <a name="TitleInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.titleInput"></a>
 
 ```csharp
 public string TitleInput { get; }
@@ -6382,7 +6382,7 @@ public string TitleInput { get; }
 
 ---
 
-##### `Description`<sup>Required</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.description"></a>
+##### `Description`<sup>Required</sup> <a name="Description" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.description"></a>
 
 ```csharp
 public string Description { get; }
@@ -6392,7 +6392,7 @@ public string Description { get; }
 
 ---
 
-##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.expression"></a>
+##### `Expression`<sup>Required</sup> <a name="Expression" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.expression"></a>
 
 ```csharp
 public string Expression { get; }
@@ -6402,7 +6402,7 @@ public string Expression { get; }
 
 ---
 
-##### `Location`<sup>Required</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.location"></a>
+##### `Location`<sup>Required</sup> <a name="Location" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.location"></a>
 
 ```csharp
 public string Location { get; }
@@ -6412,7 +6412,7 @@ public string Location { get; }
 
 ---
 
-##### `Title`<sup>Required</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.title"></a>
+##### `Title`<sup>Required</sup> <a name="Title" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.title"></a>
 
 ```csharp
 public string Title { get; }
@@ -6422,13 +6422,13 @@ public string Title { get; }
 
 ---
 
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference.property.internalValue"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference.property.internalValue"></a>
 
 ```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr InternalValue { get; }
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition InternalValue { get; }
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr</a>
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition</a>
 
 ---
 
@@ -6661,12 +6661,12 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.putExpr">PutExpr</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.putCondition">PutCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.putValues">PutValues</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetAllowAll">ResetAllowAll</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetCondition">ResetCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetDenyAll">ResetDenyAll</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetEnforce">ResetEnforce</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetExpr">ResetExpr</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetValues">ResetValues</a></code> | *No description.* |
 
 ---
@@ -6821,15 +6821,15 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `PutExpr` <a name="PutExpr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.putExpr"></a>
+##### `PutCondition` <a name="PutCondition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.putCondition"></a>
 
 ```csharp
-private void PutExpr(SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr Value)
+private void PutCondition(SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition Value)
 ```
 
-###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.putExpr.parameter.value"></a>
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.putCondition.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr</a>
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition</a>
 
 ---
 
@@ -6851,6 +6851,12 @@ private void PutValues(SecurityposturePosturePolicySetsPoliciesConstraintOrgPoli
 private void ResetAllowAll()
 ```
 
+##### `ResetCondition` <a name="ResetCondition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetCondition"></a>
+
+```csharp
+private void ResetCondition()
+```
+
 ##### `ResetDenyAll` <a name="ResetDenyAll" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetDenyAll"></a>
 
 ```csharp
@@ -6861,12 +6867,6 @@ private void ResetDenyAll()
 
 ```csharp
 private void ResetEnforce()
-```
-
-##### `ResetExpr` <a name="ResetExpr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetExpr"></a>
-
-```csharp
-private void ResetExpr()
 ```
 
 ##### `ResetValues` <a name="ResetValues" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.resetValues"></a>
@@ -6882,12 +6882,12 @@ private void ResetValues()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.expr">Expr</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.values">Values</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValuesOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValuesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.allowAllInput">AllowAllInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.conditionInput">ConditionInput</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.denyAllInput">DenyAllInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.enforceInput">EnforceInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.exprInput">ExprInput</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.valuesInput">ValuesInput</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValues">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValues</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.allowAll">AllowAll</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.denyAll">DenyAll</a></code> | <code>object</code> | *No description.* |
@@ -6920,13 +6920,13 @@ public string Fqn { get; }
 
 ---
 
-##### `Expr`<sup>Required</sup> <a name="Expr" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.expr"></a>
+##### `Condition`<sup>Required</sup> <a name="Condition" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.condition"></a>
 
 ```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference Expr { get; }
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference Condition { get; }
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExprOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesConditionOutputReference</a>
 
 ---
 
@@ -6950,6 +6950,16 @@ public object AllowAllInput { get; }
 
 ---
 
+##### `ConditionInput`<sup>Optional</sup> <a name="ConditionInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.conditionInput"></a>
+
+```csharp
+public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition ConditionInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition</a>
+
+---
+
 ##### `DenyAllInput`<sup>Optional</sup> <a name="DenyAllInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.denyAllInput"></a>
 
 ```csharp
@@ -6967,16 +6977,6 @@ public object EnforceInput { get; }
 ```
 
 - *Type:* object
-
----
-
-##### `ExprInput`<sup>Optional</sup> <a name="ExprInput" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesOutputReference.property.exprInput"></a>
-
-```csharp
-public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr ExprInput { get; }
-```
-
-- *Type:* <a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr">SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesExpr</a>
 
 ---
 

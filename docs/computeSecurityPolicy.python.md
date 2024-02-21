@@ -4,7 +4,7 @@
 
 ### ComputeSecurityPolicy <a name="ComputeSecurityPolicy" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy google_compute_security_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy google_compute_security_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer"></a>
 
@@ -49,7 +49,7 @@ computeSecurityPolicy.ComputeSecurityPolicy(
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.adaptiveProtectionConfig">adaptive_protection_config</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdaptiveProtectionConfig">ComputeSecurityPolicyAdaptiveProtectionConfig</a></code> | adaptive_protection_config block. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.advancedOptionsConfig">advanced_options_config</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig">ComputeSecurityPolicyAdvancedOptionsConfig</a></code> | advanced_options_config block. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.description">description</a></code> | <code>str</code> | An optional description of this security policy. Max size is 2048. |
-| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | The project in which the resource belongs. If it is not provided, the provider project is used. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.recaptchaOptionsConfig">recaptcha_options_config</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyRecaptchaOptionsConfig">ComputeSecurityPolicyRecaptchaOptionsConfig</a></code> | recaptcha_options_config block. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.Initializer.parameter.rule">rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyRule">ComputeSecurityPolicyRule</a>]]</code> | rule block. |
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the security policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#name ComputeSecurityPolicy#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#name ComputeSecurityPolicy#name}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 adaptive_protection_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#adaptive_protection_config ComputeSecurityPolicy#adaptive_protection_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#adaptive_protection_config ComputeSecurityPolicy#adaptive_protection_config}
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 advanced_options_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#advanced_options_config ComputeSecurityPolicy#advanced_options_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#advanced_options_config ComputeSecurityPolicy#advanced_options_config}
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An optional description of this security policy. Max size is 2048.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -175,7 +175,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The project in which the resource belongs. If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#project ComputeSecurityPolicy#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#project ComputeSecurityPolicy#project}
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 recaptcha_options_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#recaptcha_options_config ComputeSecurityPolicy#recaptcha_options_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#recaptcha_options_config ComputeSecurityPolicy#recaptcha_options_config}
 
 ---
 
@@ -195,7 +195,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#rule ComputeSecurityPolicy#rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#rule ComputeSecurityPolicy#rule}
 
 ---
 
@@ -205,7 +205,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#timeouts ComputeSecurityPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#timeouts ComputeSecurityPolicy#timeouts}
 
 ---
 
@@ -217,7 +217,7 @@ The type indicates the intended use of the security policy.
 
 CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
 
 ---
 
@@ -604,7 +604,7 @@ def put_adaptive_protection_config(
 
 layer_7_ddos_defense_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#layer_7_ddos_defense_config ComputeSecurityPolicy#layer_7_ddos_defense_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#layer_7_ddos_defense_config ComputeSecurityPolicy#layer_7_ddos_defense_config}
 
 ---
 
@@ -614,7 +614,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 def put_advanced_options_config(
   json_custom_config: ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig = None,
   json_parsing: str = None,
-  log_level: str = None
+  log_level: str = None,
+  user_ip_request_headers: typing.List[str] = None
 ) -> None
 ```
 
@@ -624,7 +625,7 @@ def put_advanced_options_config(
 
 json_custom_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#json_custom_config ComputeSecurityPolicy#json_custom_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#json_custom_config ComputeSecurityPolicy#json_custom_config}
 
 ---
 
@@ -634,7 +635,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 JSON body parsing. Supported values include: "DISABLED", "STANDARD".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#json_parsing ComputeSecurityPolicy#json_parsing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#json_parsing ComputeSecurityPolicy#json_parsing}
 
 ---
 
@@ -644,7 +645,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Logging level. Supported values include: "NORMAL", "VERBOSE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#log_level ComputeSecurityPolicy#log_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#log_level ComputeSecurityPolicy#log_level}
+
+---
+
+###### `user_ip_request_headers`<sup>Optional</sup> <a name="user_ip_request_headers" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicy.putAdvancedOptionsConfig.parameter.userIpRequestHeaders"></a>
+
+- *Type:* typing.List[str]
+
+An optional list of case-insensitive request header names to use for resolving the callers client IP address.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#user_ip_request_headers ComputeSecurityPolicy#user_ip_request_headers}
 
 ---
 
@@ -664,7 +675,7 @@ A field to supply a reCAPTCHA site key to be used for all the rules using the re
 
 The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#redirect_site_key ComputeSecurityPolicy#redirect_site_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#redirect_site_key ComputeSecurityPolicy#redirect_site_key}
 
 ---
 
@@ -696,7 +707,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}.
 
 ---
 
@@ -704,7 +715,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}.
 
 ---
 
@@ -712,7 +723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}.
 
 ---
 
@@ -884,7 +895,7 @@ The construct id used in the generated config for the ComputeSecurityPolicy to i
 
 The id of the existing ComputeSecurityPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1351,7 +1362,7 @@ layer7_ddos_defense_config: ComputeSecurityPolicyAdaptiveProtectionConfigLayer7D
 
 layer_7_ddos_defense_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#layer_7_ddos_defense_config ComputeSecurityPolicy#layer_7_ddos_defense_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#layer_7_ddos_defense_config ComputeSecurityPolicy#layer_7_ddos_defense_config}
 
 ---
 
@@ -1387,7 +1398,7 @@ enable: typing.Union[bool, IResolvable]
 
 If set to true, enables CAAP for L7 DDoS detection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#enable ComputeSecurityPolicy#enable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#enable ComputeSecurityPolicy#enable}
 
 ---
 
@@ -1401,7 +1412,7 @@ rule_visibility: str
 
 Rule visibility. Supported values include: "STANDARD", "PREMIUM".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#rule_visibility ComputeSecurityPolicy#rule_visibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#rule_visibility ComputeSecurityPolicy#rule_visibility}
 
 ---
 
@@ -1415,7 +1426,8 @@ from cdktf_cdktf_provider_google import compute_security_policy
 computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig(
   json_custom_config: ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig = None,
   json_parsing: str = None,
-  log_level: str = None
+  log_level: str = None,
+  user_ip_request_headers: typing.List[str] = None
 )
 ```
 
@@ -1426,6 +1438,7 @@ computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig(
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig.property.jsonCustomConfig">json_custom_config</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig">ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig</a></code> | json_custom_config block. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig.property.jsonParsing">json_parsing</a></code> | <code>str</code> | JSON body parsing. Supported values include: "DISABLED", "STANDARD". |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig.property.logLevel">log_level</a></code> | <code>str</code> | Logging level. Supported values include: "NORMAL", "VERBOSE". |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig.property.userIpRequestHeaders">user_ip_request_headers</a></code> | <code>typing.List[str]</code> | An optional list of case-insensitive request header names to use for resolving the callers client IP address. |
 
 ---
 
@@ -1439,7 +1452,7 @@ json_custom_config: ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig
 
 json_custom_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#json_custom_config ComputeSecurityPolicy#json_custom_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#json_custom_config ComputeSecurityPolicy#json_custom_config}
 
 ---
 
@@ -1453,7 +1466,7 @@ json_parsing: str
 
 JSON body parsing. Supported values include: "DISABLED", "STANDARD".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#json_parsing ComputeSecurityPolicy#json_parsing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#json_parsing ComputeSecurityPolicy#json_parsing}
 
 ---
 
@@ -1467,7 +1480,21 @@ log_level: str
 
 Logging level. Supported values include: "NORMAL", "VERBOSE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#log_level ComputeSecurityPolicy#log_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#log_level ComputeSecurityPolicy#log_level}
+
+---
+
+##### `user_ip_request_headers`<sup>Optional</sup> <a name="user_ip_request_headers" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig.property.userIpRequestHeaders"></a>
+
+```python
+user_ip_request_headers: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+An optional list of case-insensitive request header names to use for resolving the callers client IP address.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#user_ip_request_headers ComputeSecurityPolicy#user_ip_request_headers}
 
 ---
 
@@ -1501,7 +1528,7 @@ content_types: typing.List[str]
 
 A list of custom Content-Type header values to apply the JSON parsing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#content_types ComputeSecurityPolicy#content_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#content_types ComputeSecurityPolicy#content_types}
 
 ---
 
@@ -1548,7 +1575,7 @@ computeSecurityPolicy.ComputeSecurityPolicyConfig(
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.adaptiveProtectionConfig">adaptive_protection_config</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdaptiveProtectionConfig">ComputeSecurityPolicyAdaptiveProtectionConfig</a></code> | adaptive_protection_config block. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.advancedOptionsConfig">advanced_options_config</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig">ComputeSecurityPolicyAdvancedOptionsConfig</a></code> | advanced_options_config block. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.description">description</a></code> | <code>str</code> | An optional description of this security policy. Max size is 2048. |
-| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.project">project</a></code> | <code>str</code> | The project in which the resource belongs. If it is not provided, the provider project is used. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.recaptchaOptionsConfig">recaptcha_options_config</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyRecaptchaOptionsConfig">ComputeSecurityPolicyRecaptchaOptionsConfig</a></code> | recaptcha_options_config block. |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyConfig.property.rule">rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyRule">ComputeSecurityPolicyRule</a>]]</code> | rule block. |
@@ -1637,7 +1664,7 @@ name: str
 
 The name of the security policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#name ComputeSecurityPolicy#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#name ComputeSecurityPolicy#name}
 
 ---
 
@@ -1651,7 +1678,7 @@ adaptive_protection_config: ComputeSecurityPolicyAdaptiveProtectionConfig
 
 adaptive_protection_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#adaptive_protection_config ComputeSecurityPolicy#adaptive_protection_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#adaptive_protection_config ComputeSecurityPolicy#adaptive_protection_config}
 
 ---
 
@@ -1665,7 +1692,7 @@ advanced_options_config: ComputeSecurityPolicyAdvancedOptionsConfig
 
 advanced_options_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#advanced_options_config ComputeSecurityPolicy#advanced_options_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#advanced_options_config ComputeSecurityPolicy#advanced_options_config}
 
 ---
 
@@ -1679,7 +1706,7 @@ description: str
 
 An optional description of this security policy. Max size is 2048.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
 
 ---
 
@@ -1691,7 +1718,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1708,7 +1735,7 @@ project: str
 
 The project in which the resource belongs. If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#project ComputeSecurityPolicy#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#project ComputeSecurityPolicy#project}
 
 ---
 
@@ -1722,7 +1749,7 @@ recaptcha_options_config: ComputeSecurityPolicyRecaptchaOptionsConfig
 
 recaptcha_options_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#recaptcha_options_config ComputeSecurityPolicy#recaptcha_options_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#recaptcha_options_config ComputeSecurityPolicy#recaptcha_options_config}
 
 ---
 
@@ -1736,7 +1763,7 @@ rule: typing.Union[IResolvable, typing.List[ComputeSecurityPolicyRule]]
 
 rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#rule ComputeSecurityPolicy#rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#rule ComputeSecurityPolicy#rule}
 
 ---
 
@@ -1750,7 +1777,7 @@ timeouts: ComputeSecurityPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#timeouts ComputeSecurityPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#timeouts ComputeSecurityPolicy#timeouts}
 
 ---
 
@@ -1766,7 +1793,7 @@ The type indicates the intended use of the security policy.
 
 CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
 
 ---
 
@@ -1802,7 +1829,7 @@ A field to supply a reCAPTCHA site key to be used for all the rules using the re
 
 The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#redirect_site_key ComputeSecurityPolicy#redirect_site_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#redirect_site_key ComputeSecurityPolicy#redirect_site_key}
 
 ---
 
@@ -1850,7 +1877,7 @@ action: str
 
 Action to take when match matches the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#action ComputeSecurityPolicy#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#action ComputeSecurityPolicy#action}
 
 ---
 
@@ -1864,7 +1891,7 @@ match: ComputeSecurityPolicyRuleMatch
 
 match block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#match ComputeSecurityPolicy#match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#match ComputeSecurityPolicy#match}
 
 ---
 
@@ -1880,7 +1907,7 @@ An unique positive integer indicating the priority of evaluation for a rule.
 
 Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#priority ComputeSecurityPolicy#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#priority ComputeSecurityPolicy#priority}
 
 ---
 
@@ -1894,7 +1921,7 @@ description: str
 
 An optional description of this rule. Max size is 64.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
 
 ---
 
@@ -1908,7 +1935,7 @@ header_action: ComputeSecurityPolicyRuleHeaderAction
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#header_action ComputeSecurityPolicy#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#header_action ComputeSecurityPolicy#header_action}
 
 ---
 
@@ -1924,7 +1951,7 @@ When set to true, the action specified above is not enforced.
 
 Stackdriver logs for requests that trigger a preview action are annotated as such.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#preview ComputeSecurityPolicy#preview}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#preview ComputeSecurityPolicy#preview}
 
 ---
 
@@ -1938,7 +1965,7 @@ rate_limit_options: ComputeSecurityPolicyRuleRateLimitOptions
 
 rate_limit_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#rate_limit_options ComputeSecurityPolicy#rate_limit_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#rate_limit_options ComputeSecurityPolicy#rate_limit_options}
 
 ---
 
@@ -1952,7 +1979,7 @@ redirect_options: ComputeSecurityPolicyRuleRedirectOptions
 
 redirect_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#redirect_options ComputeSecurityPolicy#redirect_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#redirect_options ComputeSecurityPolicy#redirect_options}
 
 ---
 
@@ -1986,7 +2013,7 @@ request_headers_to_adds: typing.Union[IResolvable, typing.List[ComputeSecurityPo
 
 request_headers_to_adds block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#request_headers_to_adds ComputeSecurityPolicy#request_headers_to_adds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#request_headers_to_adds ComputeSecurityPolicy#request_headers_to_adds}
 
 ---
 
@@ -2022,7 +2049,7 @@ header_name: str
 
 The name of the header to set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#header_name ComputeSecurityPolicy#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#header_name ComputeSecurityPolicy#header_name}
 
 ---
 
@@ -2036,7 +2063,7 @@ header_value: str
 
 The value to set the named header to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#header_value ComputeSecurityPolicy#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#header_value ComputeSecurityPolicy#header_value}
 
 ---
 
@@ -2074,7 +2101,7 @@ config: ComputeSecurityPolicyRuleMatchConfig
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#config ComputeSecurityPolicy#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#config ComputeSecurityPolicy#config}
 
 ---
 
@@ -2088,7 +2115,7 @@ expr: ComputeSecurityPolicyRuleMatchExpr
 
 expr block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#expr ComputeSecurityPolicy#expr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#expr ComputeSecurityPolicy#expr}
 
 ---
 
@@ -2104,7 +2131,7 @@ Predefined rule expression.
 
 If this field is specified, config must also be specified. Available options:   SRC_IPS_V1: Must specify the corresponding src_ip_ranges field in config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#versioned_expr ComputeSecurityPolicy#versioned_expr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#versioned_expr ComputeSecurityPolicy#versioned_expr}
 
 ---
 
@@ -2140,7 +2167,7 @@ Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against i
 
 There is a limit of 10 IP ranges per rule. A value of '*' matches all IPs (can be used to override the default behavior).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#src_ip_ranges ComputeSecurityPolicy#src_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#src_ip_ranges ComputeSecurityPolicy#src_ip_ranges}
 
 ---
 
@@ -2176,7 +2203,7 @@ Textual representation of an expression in Common Expression Language syntax.
 
 The application context of the containing message determines which well-known feature set of CEL is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#expression ComputeSecurityPolicy#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#expression ComputeSecurityPolicy#expression}
 
 ---
 
@@ -2224,7 +2251,7 @@ conform_action: str
 
 Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#conform_action ComputeSecurityPolicy#conform_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#conform_action ComputeSecurityPolicy#conform_action}
 
 ---
 
@@ -2240,7 +2267,7 @@ Action to take for requests that are above the configured rate limit threshold, 
 
 Valid options are "deny()" where valid values for status are 403, 404, 429, and 502, and "redirect" where the redirect parameters come from exceedRedirectOptions below.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#exceed_action ComputeSecurityPolicy#exceed_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#exceed_action ComputeSecurityPolicy#exceed_action}
 
 ---
 
@@ -2254,7 +2281,7 @@ rate_limit_threshold: ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThreshol
 
 rate_limit_threshold block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#rate_limit_threshold ComputeSecurityPolicy#rate_limit_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#rate_limit_threshold ComputeSecurityPolicy#rate_limit_threshold}
 
 ---
 
@@ -2270,7 +2297,7 @@ Can only be specified if the action for the rule is "rate_based_ban".
 
 If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#ban_duration_sec ComputeSecurityPolicy#ban_duration_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#ban_duration_sec ComputeSecurityPolicy#ban_duration_sec}
 
 ---
 
@@ -2284,7 +2311,7 @@ ban_threshold: ComputeSecurityPolicyRuleRateLimitOptionsBanThreshold
 
 ban_threshold block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#ban_threshold ComputeSecurityPolicy#ban_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#ban_threshold ComputeSecurityPolicy#ban_threshold}
 
 ---
 
@@ -2298,7 +2325,7 @@ enforce_on_key: str
 
 Determines the key to enforce the rateLimitThreshold on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#enforce_on_key ComputeSecurityPolicy#enforce_on_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#enforce_on_key ComputeSecurityPolicy#enforce_on_key}
 
 ---
 
@@ -2314,7 +2341,7 @@ Rate limit key name applicable only for the following key types: HTTP_HEADER -- 
 
 HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#enforce_on_key_name ComputeSecurityPolicy#enforce_on_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#enforce_on_key_name ComputeSecurityPolicy#enforce_on_key_name}
 
 ---
 
@@ -2328,7 +2355,7 @@ exceed_redirect_options: ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirect
 
 exceed_redirect_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#exceed_redirect_options ComputeSecurityPolicy#exceed_redirect_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#exceed_redirect_options ComputeSecurityPolicy#exceed_redirect_options}
 
 ---
 
@@ -2364,7 +2391,7 @@ count: typing.Union[int, float]
 
 Number of HTTP(S) requests for calculating the threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
 
 ---
 
@@ -2378,7 +2405,7 @@ interval_sec: typing.Union[int, float]
 
 Interval over which the threshold is computed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
 
 ---
 
@@ -2414,7 +2441,7 @@ type: str
 
 Type of the redirect action.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
 
 ---
 
@@ -2428,7 +2455,7 @@ target: str
 
 Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
 
 ---
 
@@ -2464,7 +2491,7 @@ count: typing.Union[int, float]
 
 Number of HTTP(S) requests for calculating the threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
 
 ---
 
@@ -2478,7 +2505,7 @@ interval_sec: typing.Union[int, float]
 
 Interval over which the threshold is computed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
 
 ---
 
@@ -2516,7 +2543,7 @@ Type of the redirect action.
 
 Available options: EXTERNAL_302: Must specify the corresponding target field in config. GOOGLE_RECAPTCHA: Cannot specify target field in config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
 
 ---
 
@@ -2530,7 +2557,7 @@ target: str
 
 Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
 
 ---
 
@@ -2552,9 +2579,9 @@ computeSecurityPolicy.ComputeSecurityPolicyTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}. |
-| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}. |
-| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}. |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}. |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}. |
 
 ---
 
@@ -2566,7 +2593,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}.
 
 ---
 
@@ -2578,7 +2605,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}.
 
 ---
 
@@ -2590,7 +2617,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}.
 
 ---
 
@@ -3173,7 +3200,7 @@ def put_layer7_ddos_defense_config(
 
 If set to true, enables CAAP for L7 DDoS detection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#enable ComputeSecurityPolicy#enable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#enable ComputeSecurityPolicy#enable}
 
 ---
 
@@ -3183,7 +3210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Rule visibility. Supported values include: "STANDARD", "PREMIUM".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#rule_visibility ComputeSecurityPolicy#rule_visibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#rule_visibility ComputeSecurityPolicy#rule_visibility}
 
 ---
 
@@ -3614,6 +3641,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.resetJsonCustomConfig">reset_json_custom_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.resetJsonParsing">reset_json_parsing</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.resetLogLevel">reset_log_level</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.resetUserIpRequestHeaders">reset_user_ip_request_headers</a></code> | *No description.* |
 
 ---
 
@@ -3803,7 +3831,7 @@ def put_json_custom_config(
 
 A list of custom Content-Type header values to apply the JSON parsing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#content_types ComputeSecurityPolicy#content_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#content_types ComputeSecurityPolicy#content_types}
 
 ---
 
@@ -3825,6 +3853,12 @@ def reset_json_parsing() -> None
 def reset_log_level() -> None
 ```
 
+##### `reset_user_ip_request_headers` <a name="reset_user_ip_request_headers" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.resetUserIpRequestHeaders"></a>
+
+```python
+def reset_user_ip_request_headers() -> None
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -3836,8 +3870,10 @@ def reset_log_level() -> None
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.jsonCustomConfigInput">json_custom_config_input</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig">ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.jsonParsingInput">json_parsing_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.logLevelInput">log_level_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.userIpRequestHeadersInput">user_ip_request_headers_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.jsonParsing">json_parsing</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.logLevel">log_level</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.userIpRequestHeaders">user_ip_request_headers</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfig">ComputeSecurityPolicyAdvancedOptionsConfig</a></code> | *No description.* |
 
 ---
@@ -3906,6 +3942,16 @@ log_level_input: str
 
 ---
 
+##### `user_ip_request_headers_input`<sup>Optional</sup> <a name="user_ip_request_headers_input" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.userIpRequestHeadersInput"></a>
+
+```python
+user_ip_request_headers_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `json_parsing`<sup>Required</sup> <a name="json_parsing" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.jsonParsing"></a>
 
 ```python
@@ -3923,6 +3969,16 @@ log_level: str
 ```
 
 - *Type:* str
+
+---
+
+##### `user_ip_request_headers`<sup>Required</sup> <a name="user_ip_request_headers" id="@cdktf/provider-google.computeSecurityPolicy.ComputeSecurityPolicyAdvancedOptionsConfigOutputReference.property.userIpRequestHeaders"></a>
+
+```python
+user_ip_request_headers: typing.List[str]
+```
+
+- *Type:* typing.List[str]
 
 ---
 
@@ -6070,7 +6126,7 @@ Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against i
 
 There is a limit of 10 IP ranges per rule. A value of '*' matches all IPs (can be used to override the default behavior).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#src_ip_ranges ComputeSecurityPolicy#src_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#src_ip_ranges ComputeSecurityPolicy#src_ip_ranges}
 
 ---
 
@@ -6090,7 +6146,7 @@ Textual representation of an expression in Common Expression Language syntax.
 
 The application context of the containing message determines which well-known feature set of CEL is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#expression ComputeSecurityPolicy#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#expression ComputeSecurityPolicy#expression}
 
 ---
 
@@ -6495,7 +6551,7 @@ def put_header_action(
 
 request_headers_to_adds block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#request_headers_to_adds ComputeSecurityPolicy#request_headers_to_adds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#request_headers_to_adds ComputeSecurityPolicy#request_headers_to_adds}
 
 ---
 
@@ -6515,7 +6571,7 @@ def put_match(
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#config ComputeSecurityPolicy#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#config ComputeSecurityPolicy#config}
 
 ---
 
@@ -6525,7 +6581,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 expr block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#expr ComputeSecurityPolicy#expr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#expr ComputeSecurityPolicy#expr}
 
 ---
 
@@ -6537,7 +6593,7 @@ Predefined rule expression.
 
 If this field is specified, config must also be specified. Available options:   SRC_IPS_V1: Must specify the corresponding src_ip_ranges field in config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#versioned_expr ComputeSecurityPolicy#versioned_expr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#versioned_expr ComputeSecurityPolicy#versioned_expr}
 
 ---
 
@@ -6562,7 +6618,7 @@ def put_rate_limit_options(
 
 Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#conform_action ComputeSecurityPolicy#conform_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#conform_action ComputeSecurityPolicy#conform_action}
 
 ---
 
@@ -6574,7 +6630,7 @@ Action to take for requests that are above the configured rate limit threshold, 
 
 Valid options are "deny()" where valid values for status are 403, 404, 429, and 502, and "redirect" where the redirect parameters come from exceedRedirectOptions below.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#exceed_action ComputeSecurityPolicy#exceed_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#exceed_action ComputeSecurityPolicy#exceed_action}
 
 ---
 
@@ -6584,7 +6640,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 rate_limit_threshold block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#rate_limit_threshold ComputeSecurityPolicy#rate_limit_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#rate_limit_threshold ComputeSecurityPolicy#rate_limit_threshold}
 
 ---
 
@@ -6596,7 +6652,7 @@ Can only be specified if the action for the rule is "rate_based_ban".
 
 If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#ban_duration_sec ComputeSecurityPolicy#ban_duration_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#ban_duration_sec ComputeSecurityPolicy#ban_duration_sec}
 
 ---
 
@@ -6606,7 +6662,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ban_threshold block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#ban_threshold ComputeSecurityPolicy#ban_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#ban_threshold ComputeSecurityPolicy#ban_threshold}
 
 ---
 
@@ -6616,7 +6672,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Determines the key to enforce the rateLimitThreshold on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#enforce_on_key ComputeSecurityPolicy#enforce_on_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#enforce_on_key ComputeSecurityPolicy#enforce_on_key}
 
 ---
 
@@ -6628,7 +6684,7 @@ Rate limit key name applicable only for the following key types: HTTP_HEADER -- 
 
 HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#enforce_on_key_name ComputeSecurityPolicy#enforce_on_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#enforce_on_key_name ComputeSecurityPolicy#enforce_on_key_name}
 
 ---
 
@@ -6638,7 +6694,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 exceed_redirect_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#exceed_redirect_options ComputeSecurityPolicy#exceed_redirect_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#exceed_redirect_options ComputeSecurityPolicy#exceed_redirect_options}
 
 ---
 
@@ -6659,7 +6715,7 @@ Type of the redirect action.
 
 Available options: EXTERNAL_302: Must specify the corresponding target field in config. GOOGLE_RECAPTCHA: Cannot specify target field in config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
 
 ---
 
@@ -6669,7 +6725,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
 
 ---
 
@@ -7819,7 +7875,7 @@ def put_ban_threshold(
 
 Number of HTTP(S) requests for calculating the threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
 
 ---
 
@@ -7829,7 +7885,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Interval over which the threshold is computed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
 
 ---
 
@@ -7848,7 +7904,7 @@ def put_exceed_redirect_options(
 
 Type of the redirect action.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
 
 ---
 
@@ -7858,7 +7914,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
 
 ---
 
@@ -7877,7 +7933,7 @@ def put_rate_limit_threshold(
 
 Number of HTTP(S) requests for calculating the threshold.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
 
 ---
 
@@ -7887,7 +7943,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Interval over which the threshold is computed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
 
 ---
 

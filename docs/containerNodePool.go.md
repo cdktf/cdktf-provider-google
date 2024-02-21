@@ -4,12 +4,12 @@
 
 ### ContainerNodePool <a name="ContainerNodePool" id="@cdktf/provider-google.containerNodePool.ContainerNodePool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool google_container_node_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool google_container_node_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePool(scope Construct, id *string, config ContainerNodePoolConfig) ContainerNodePool
 ```
@@ -588,7 +588,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.ContainerNodePool_IsConstruct(x interface{}) *bool
 ```
@@ -620,7 +620,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.ContainerNodePool_IsTerraformElement(x interface{}) *bool
 ```
@@ -634,7 +634,7 @@ containernodepool.ContainerNodePool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.ContainerNodePool_IsTerraformResource(x interface{}) *bool
 ```
@@ -648,7 +648,7 @@ containernodepool.ContainerNodePool_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.containerNodePool.ContainerNodePool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.ContainerNodePool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -677,7 +677,7 @@ The construct id used in the generated config for the ContainerNodePool to impor
 
 The id of the existing ContainerNodePool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1306,7 +1306,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolAutoscaling {
 	LocationPolicy: *string,
@@ -1341,7 +1341,7 @@ Location policy specifies the algorithm used when scaling-up the node pool.
 
 "BALANCED" - Is a best effort policy that aims to balance the sizes of available zones. "ANY" - Instructs the cluster autoscaler to prioritize utilization of unused reservations, and reduces preemption risk for Spot VMs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#location_policy ContainerNodePool#location_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#location_policy ContainerNodePool#location_policy}
 
 ---
 
@@ -1357,7 +1357,7 @@ Maximum number of nodes per zone in the node pool.
 
 Must be >= min_node_count. Cannot be used with total limits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#max_node_count ContainerNodePool#max_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#max_node_count ContainerNodePool#max_node_count}
 
 ---
 
@@ -1373,7 +1373,7 @@ Minimum number of nodes per zone in the node pool.
 
 Must be >=0 and <= max_node_count. Cannot be used with total limits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#min_node_count ContainerNodePool#min_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#min_node_count ContainerNodePool#min_node_count}
 
 ---
 
@@ -1389,7 +1389,7 @@ Maximum number of all nodes in the node pool.
 
 Must be >= total_min_node_count. Cannot be used with per zone limits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#total_max_node_count ContainerNodePool#total_max_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#total_max_node_count ContainerNodePool#total_max_node_count}
 
 ---
 
@@ -1405,7 +1405,7 @@ Minimum number of all nodes in the node pool.
 
 Must be >=0 and <= total_max_node_count. Cannot be used with per zone limits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#total_min_node_count ContainerNodePool#total_min_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#total_min_node_count ContainerNodePool#total_min_node_count}
 
 ---
 
@@ -1414,7 +1414,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolConfig {
 	Connection: interface{},
@@ -1425,22 +1425,22 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Cluster: *string,
-	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolAutoscaling,
+	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolAutoscaling,
 	Id: *string,
 	InitialNodeCount: *f64,
 	Location: *string,
-	Management: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolManagement,
+	Management: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolManagement,
 	MaxPodsPerNode: *f64,
 	Name: *string,
 	NamePrefix: *string,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNetworkConfig,
-	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfig,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNetworkConfig,
+	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfig,
 	NodeCount: *f64,
 	NodeLocations: *[]*string,
-	PlacementPolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolPlacementPolicy,
+	PlacementPolicy: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolPlacementPolicy,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolTimeouts,
-	UpgradeSettings: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolUpgradeSettings,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolTimeouts,
+	UpgradeSettings: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolUpgradeSettings,
 	Version: *string,
 }
 ```
@@ -1458,7 +1458,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.cluster">Cluster</a></code> | <code>*string</code> | The cluster to create the node pool for. Cluster must be present in location provided for zonal clusters. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.autoscaling">Autoscaling</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolAutoscaling">ContainerNodePoolAutoscaling</a></code> | autoscaling block. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#id ContainerNodePool#id}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#id ContainerNodePool#id}. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.initialNodeCount">InitialNodeCount</a></code> | <code>*f64</code> | The initial number of nodes for the pool. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.location">Location</a></code> | <code>*string</code> | The location (region or zone) of the cluster. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolConfig.property.management">Management</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement">ContainerNodePoolManagement</a></code> | management block. |
@@ -1557,7 +1557,7 @@ Cluster *string
 
 The cluster to create the node pool for. Cluster must be present in location provided for zonal clusters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#cluster ContainerNodePool#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#cluster ContainerNodePool#cluster}
 
 ---
 
@@ -1571,7 +1571,7 @@ Autoscaling ContainerNodePoolAutoscaling
 
 autoscaling block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#autoscaling ContainerNodePool#autoscaling}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#autoscaling ContainerNodePool#autoscaling}
 
 ---
 
@@ -1583,7 +1583,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#id ContainerNodePool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#id ContainerNodePool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1602,7 +1602,7 @@ The initial number of nodes for the pool.
 
 In regional or multi-zonal clusters, this is the number of nodes per zone. Changing this will force recreation of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#initial_node_count ContainerNodePool#initial_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#initial_node_count ContainerNodePool#initial_node_count}
 
 ---
 
@@ -1616,7 +1616,7 @@ Location *string
 
 The location (region or zone) of the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#location ContainerNodePool#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#location ContainerNodePool#location}
 
 ---
 
@@ -1630,7 +1630,7 @@ Management ContainerNodePoolManagement
 
 management block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#management ContainerNodePool#management}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#management ContainerNodePool#management}
 
 ---
 
@@ -1646,7 +1646,7 @@ The maximum number of pods per node in this node pool.
 
 Note that this does not work on node pools which are "route-based" - that is, node pools belonging to clusters that do not have IP Aliasing enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#max_pods_per_node ContainerNodePool#max_pods_per_node}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#max_pods_per_node ContainerNodePool#max_pods_per_node}
 
 ---
 
@@ -1660,7 +1660,7 @@ Name *string
 
 The name of the node pool. If left blank, Terraform will auto-generate a unique name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#name ContainerNodePool#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#name ContainerNodePool#name}
 
 ---
 
@@ -1674,7 +1674,7 @@ NamePrefix *string
 
 Creates a unique name for the node pool beginning with the specified prefix. Conflicts with name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#name_prefix ContainerNodePool#name_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#name_prefix ContainerNodePool#name_prefix}
 
 ---
 
@@ -1688,7 +1688,7 @@ NetworkConfig ContainerNodePoolNetworkConfig
 
 network_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#network_config ContainerNodePool#network_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#network_config ContainerNodePool#network_config}
 
 ---
 
@@ -1702,7 +1702,7 @@ NodeConfig ContainerNodePoolNodeConfig
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#node_config ContainerNodePool#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#node_config ContainerNodePool#node_config}
 
 ---
 
@@ -1718,7 +1718,7 @@ The number of nodes per instance group.
 
 This field can be used to update the number of nodes per instance group but should not be used alongside autoscaling.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#node_count ContainerNodePool#node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#node_count ContainerNodePool#node_count}
 
 ---
 
@@ -1734,7 +1734,7 @@ The list of zones in which the node pool's nodes should be located.
 
 Nodes must be in the region of their regional cluster or in the same region as their cluster's zone for zonal clusters. If unspecified, the cluster-level node_locations will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#node_locations ContainerNodePool#node_locations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#node_locations ContainerNodePool#node_locations}
 
 ---
 
@@ -1748,7 +1748,7 @@ PlacementPolicy ContainerNodePoolPlacementPolicy
 
 placement_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#placement_policy ContainerNodePool#placement_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#placement_policy ContainerNodePool#placement_policy}
 
 ---
 
@@ -1764,7 +1764,7 @@ The ID of the project in which to create the node pool.
 
 If blank, the provider-configured project will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#project ContainerNodePool#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#project ContainerNodePool#project}
 
 ---
 
@@ -1778,7 +1778,7 @@ Timeouts ContainerNodePoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#timeouts ContainerNodePool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#timeouts ContainerNodePool#timeouts}
 
 ---
 
@@ -1792,7 +1792,7 @@ UpgradeSettings ContainerNodePoolUpgradeSettings
 
 upgrade_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#upgrade_settings ContainerNodePool#upgrade_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#upgrade_settings ContainerNodePool#upgrade_settings}
 
 ---
 
@@ -1808,7 +1808,7 @@ The Kubernetes version for the nodes in this pool.
 
 Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged. While a fuzzy version can be specified, it's recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source's version_prefix field to approximate fuzzy versions in a Terraform-compatible way.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#version ContainerNodePool#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#version ContainerNodePool#version}
 
 ---
 
@@ -1817,7 +1817,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolManagement {
 	AutoRepair: interface{},
@@ -1844,7 +1844,7 @@ AutoRepair interface{}
 
 Whether the nodes will be automatically repaired. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#auto_repair ContainerNodePool#auto_repair}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#auto_repair ContainerNodePool#auto_repair}
 
 ---
 
@@ -1858,7 +1858,7 @@ AutoUpgrade interface{}
 
 Whether the nodes will be automatically upgraded. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#auto_upgrade ContainerNodePool#auto_upgrade}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#auto_upgrade ContainerNodePool#auto_upgrade}
 
 ---
 
@@ -1867,13 +1867,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNetworkConfig {
 	CreatePodRange: interface{},
 	EnablePrivateNodes: interface{},
-	NetworkPerformanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNetworkConfigNetworkPerformanceConfig,
-	PodCidrOverprovisionConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig,
+	NetworkPerformanceConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNetworkConfigNetworkPerformanceConfig,
+	PodCidrOverprovisionConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig,
 	PodIpv4CidrBlock: *string,
 	PodRange: *string,
 }
@@ -1904,7 +1904,7 @@ Whether to create a new range for pod IPs in this node pool.
 
 Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#create_pod_range ContainerNodePool#create_pod_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#create_pod_range ContainerNodePool#create_pod_range}
 
 ---
 
@@ -1918,7 +1918,7 @@ EnablePrivateNodes interface{}
 
 Whether nodes have internal IP addresses only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#enable_private_nodes ContainerNodePool#enable_private_nodes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#enable_private_nodes ContainerNodePool#enable_private_nodes}
 
 ---
 
@@ -1932,7 +1932,7 @@ NetworkPerformanceConfig ContainerNodePoolNetworkConfigNetworkPerformanceConfig
 
 network_performance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#network_performance_config ContainerNodePool#network_performance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#network_performance_config ContainerNodePool#network_performance_config}
 
 ---
 
@@ -1946,7 +1946,7 @@ PodCidrOverprovisionConfig ContainerNodePoolNetworkConfigPodCidrOverprovisionCon
 
 pod_cidr_overprovision_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#pod_cidr_overprovision_config ContainerNodePool#pod_cidr_overprovision_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#pod_cidr_overprovision_config ContainerNodePool#pod_cidr_overprovision_config}
 
 ---
 
@@ -1962,7 +1962,7 @@ The IP address range for pod IPs in this node pool.
 
 Only applicable if create_pod_range is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#pod_ipv4_cidr_block ContainerNodePool#pod_ipv4_cidr_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#pod_ipv4_cidr_block ContainerNodePool#pod_ipv4_cidr_block}
 
 ---
 
@@ -1978,7 +1978,7 @@ The ID of the secondary range for pod IPs.
 
 If create_pod_range is true, this ID is used for the new range. If create_pod_range is false, uses an existing secondary range with this ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#pod_range ContainerNodePool#pod_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#pod_range ContainerNodePool#pod_range}
 
 ---
 
@@ -1987,7 +1987,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigNetworkPerformanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNetworkConfigNetworkPerformanceConfig {
 	TotalEgressBandwidthTier: *string,
@@ -2012,7 +2012,7 @@ TotalEgressBandwidthTier *string
 
 Specifies the total network bandwidth tier for the NodePool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#total_egress_bandwidth_tier ContainerNodePool#total_egress_bandwidth_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#total_egress_bandwidth_tier ContainerNodePool#total_egress_bandwidth_tier}
 
 ---
 
@@ -2021,7 +2021,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig {
 	Disabled: interface{},
@@ -2032,7 +2032,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#disabled ContainerNodePool#disabled}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#disabled ContainerNodePool#disabled}. |
 
 ---
 
@@ -2044,7 +2044,7 @@ Disabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#disabled ContainerNodePool#disabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#disabled ContainerNodePool#disabled}.
 
 ---
 
@@ -2053,25 +2053,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfig {
-	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures,
+	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures,
 	BootDiskKmsKey: *string,
-	ConfidentialNodes: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes,
+	ConfidentialNodes: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes,
 	DiskSizeGb: *f64,
 	DiskType: *string,
-	EphemeralStorageLocalSsdConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig,
-	FastSocket: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigFastSocket,
-	GcfsConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig,
+	EphemeralStorageLocalSsdConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig,
+	FastSocket: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigFastSocket,
+	GcfsConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig,
 	GuestAccelerator: interface{},
-	Gvnic: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigGvnic,
-	HostMaintenancePolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigHostMaintenancePolicy,
+	Gvnic: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigGvnic,
+	HostMaintenancePolicy: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigHostMaintenancePolicy,
 	ImageType: *string,
-	KubeletConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig,
+	KubeletConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig,
 	Labels: *map[string]*string,
-	LinuxNodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigLinuxNodeConfig,
-	LocalNvmeSsdBlockConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig,
+	LinuxNodeConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigLinuxNodeConfig,
+	LocalNvmeSsdBlockConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig,
 	LocalSsdCount: *f64,
 	LoggingVariant: *string,
 	MachineType: *string,
@@ -2080,15 +2080,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 	NodeGroup: *string,
 	OauthScopes: *[]*string,
 	Preemptible: interface{},
-	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigReservationAffinity,
+	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigReservationAffinity,
 	ResourceLabels: *map[string]*string,
 	ServiceAccount: *string,
-	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig,
-	SoleTenantConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig,
+	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig,
+	SoleTenantConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig,
 	Spot: interface{},
 	Tags: *[]*string,
 	Taint: interface{},
-	WorkloadMetadataConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolNodeConfigWorkloadMetadataConfig,
+	WorkloadMetadataConfig: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolNodeConfigWorkloadMetadataConfig,
 }
 ```
 
@@ -2142,7 +2142,7 @@ AdvancedMachineFeatures ContainerNodePoolNodeConfigAdvancedMachineFeatures
 
 advanced_machine_features block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#advanced_machine_features ContainerNodePool#advanced_machine_features}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#advanced_machine_features ContainerNodePool#advanced_machine_features}
 
 ---
 
@@ -2156,7 +2156,7 @@ BootDiskKmsKey *string
 
 The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#boot_disk_kms_key ContainerNodePool#boot_disk_kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#boot_disk_kms_key ContainerNodePool#boot_disk_kms_key}
 
 ---
 
@@ -2170,7 +2170,7 @@ ConfidentialNodes ContainerNodePoolNodeConfigConfidentialNodes
 
 confidential_nodes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#confidential_nodes ContainerNodePool#confidential_nodes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#confidential_nodes ContainerNodePool#confidential_nodes}
 
 ---
 
@@ -2184,7 +2184,7 @@ DiskSizeGb *f64
 
 Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#disk_size_gb ContainerNodePool#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#disk_size_gb ContainerNodePool#disk_size_gb}
 
 ---
 
@@ -2198,7 +2198,7 @@ DiskType *string
 
 Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#disk_type ContainerNodePool#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#disk_type ContainerNodePool#disk_type}
 
 ---
 
@@ -2212,7 +2212,7 @@ EphemeralStorageLocalSsdConfig ContainerNodePoolNodeConfigEphemeralStorageLocalS
 
 ephemeral_storage_local_ssd_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#ephemeral_storage_local_ssd_config ContainerNodePool#ephemeral_storage_local_ssd_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#ephemeral_storage_local_ssd_config ContainerNodePool#ephemeral_storage_local_ssd_config}
 
 ---
 
@@ -2226,7 +2226,7 @@ FastSocket ContainerNodePoolNodeConfigFastSocket
 
 fast_socket block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#fast_socket ContainerNodePool#fast_socket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#fast_socket ContainerNodePool#fast_socket}
 
 ---
 
@@ -2240,7 +2240,7 @@ GcfsConfig ContainerNodePoolNodeConfigGcfsConfig
 
 gcfs_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gcfs_config ContainerNodePool#gcfs_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gcfs_config ContainerNodePool#gcfs_config}
 
 ---
 
@@ -2254,7 +2254,7 @@ GuestAccelerator interface{}
 
 List of the type and count of accelerator cards attached to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#guest_accelerator ContainerNodePool#guest_accelerator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#guest_accelerator ContainerNodePool#guest_accelerator}
 
 ---
 
@@ -2268,7 +2268,7 @@ Gvnic ContainerNodePoolNodeConfigGvnic
 
 gvnic block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gvnic ContainerNodePool#gvnic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gvnic ContainerNodePool#gvnic}
 
 ---
 
@@ -2282,7 +2282,7 @@ HostMaintenancePolicy ContainerNodePoolNodeConfigHostMaintenancePolicy
 
 host_maintenance_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#host_maintenance_policy ContainerNodePool#host_maintenance_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#host_maintenance_policy ContainerNodePool#host_maintenance_policy}
 
 ---
 
@@ -2298,7 +2298,7 @@ The image type to use for this node.
 
 Note that for a given image type, the latest version of it will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#image_type ContainerNodePool#image_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#image_type ContainerNodePool#image_type}
 
 ---
 
@@ -2312,7 +2312,7 @@ KubeletConfig ContainerNodePoolNodeConfigKubeletConfig
 
 kubelet_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#kubelet_config ContainerNodePool#kubelet_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#kubelet_config ContainerNodePool#kubelet_config}
 
 ---
 
@@ -2328,7 +2328,7 @@ The map of Kubernetes labels (key/value pairs) to be applied to each node.
 
 These will added in addition to any default label(s) that Kubernetes may apply to the node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#labels ContainerNodePool#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#labels ContainerNodePool#labels}
 
 ---
 
@@ -2342,7 +2342,7 @@ LinuxNodeConfig ContainerNodePoolNodeConfigLinuxNodeConfig
 
 linux_node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#linux_node_config ContainerNodePool#linux_node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#linux_node_config ContainerNodePool#linux_node_config}
 
 ---
 
@@ -2356,7 +2356,7 @@ LocalNvmeSsdBlockConfig ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig
 
 local_nvme_ssd_block_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#local_nvme_ssd_block_config ContainerNodePool#local_nvme_ssd_block_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#local_nvme_ssd_block_config ContainerNodePool#local_nvme_ssd_block_config}
 
 ---
 
@@ -2370,7 +2370,7 @@ LocalSsdCount *f64
 
 The number of local SSD disks to be attached to the node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#local_ssd_count ContainerNodePool#local_ssd_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#local_ssd_count ContainerNodePool#local_ssd_count}
 
 ---
 
@@ -2386,7 +2386,7 @@ Type of logging agent that is used as the default value for node pools in the cl
 
 Valid values include DEFAULT and MAX_THROUGHPUT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#logging_variant ContainerNodePool#logging_variant}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#logging_variant ContainerNodePool#logging_variant}
 
 ---
 
@@ -2400,7 +2400,7 @@ MachineType *string
 
 The name of a Google Compute Engine machine type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#machine_type ContainerNodePool#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#machine_type ContainerNodePool#machine_type}
 
 ---
 
@@ -2414,7 +2414,7 @@ Metadata *map[string]*string
 
 The metadata key/value pairs assigned to instances in the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#metadata ContainerNodePool#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#metadata ContainerNodePool#metadata}
 
 ---
 
@@ -2430,7 +2430,7 @@ Minimum CPU platform to be used by this instance.
 
 The instance may be scheduled on the specified or newer CPU platform.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#min_cpu_platform ContainerNodePool#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#min_cpu_platform ContainerNodePool#min_cpu_platform}
 
 ---
 
@@ -2446,7 +2446,7 @@ Setting this field will assign instances of this pool to run on the specified no
 
 This is useful for running workloads on sole tenant nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#node_group ContainerNodePool#node_group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#node_group ContainerNodePool#node_group}
 
 ---
 
@@ -2460,7 +2460,7 @@ OauthScopes *[]*string
 
 The set of Google API scopes to be made available on all of the node VMs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#oauth_scopes ContainerNodePool#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#oauth_scopes ContainerNodePool#oauth_scopes}
 
 ---
 
@@ -2474,7 +2474,7 @@ Preemptible interface{}
 
 Whether the nodes are created as preemptible VM instances.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#preemptible ContainerNodePool#preemptible}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#preemptible ContainerNodePool#preemptible}
 
 ---
 
@@ -2488,7 +2488,7 @@ ReservationAffinity ContainerNodePoolNodeConfigReservationAffinity
 
 reservation_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#reservation_affinity ContainerNodePool#reservation_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#reservation_affinity ContainerNodePool#reservation_affinity}
 
 ---
 
@@ -2502,7 +2502,7 @@ ResourceLabels *map[string]*string
 
 The GCE resource labels (a map of key/value pairs) to be applied to the node pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#resource_labels ContainerNodePool#resource_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#resource_labels ContainerNodePool#resource_labels}
 
 ---
 
@@ -2516,7 +2516,7 @@ ServiceAccount *string
 
 The Google Cloud Platform Service Account to be used by the node VMs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#service_account ContainerNodePool#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#service_account ContainerNodePool#service_account}
 
 ---
 
@@ -2530,7 +2530,7 @@ ShieldedInstanceConfig ContainerNodePoolNodeConfigShieldedInstanceConfig
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#shielded_instance_config ContainerNodePool#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#shielded_instance_config ContainerNodePool#shielded_instance_config}
 
 ---
 
@@ -2544,7 +2544,7 @@ SoleTenantConfig ContainerNodePoolNodeConfigSoleTenantConfig
 
 sole_tenant_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#sole_tenant_config ContainerNodePool#sole_tenant_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#sole_tenant_config ContainerNodePool#sole_tenant_config}
 
 ---
 
@@ -2558,7 +2558,7 @@ Spot interface{}
 
 Whether the nodes are created as spot VM instances.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#spot ContainerNodePool#spot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#spot ContainerNodePool#spot}
 
 ---
 
@@ -2572,7 +2572,7 @@ Tags *[]*string
 
 The list of instance tags applied to all nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#tags ContainerNodePool#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#tags ContainerNodePool#tags}
 
 ---
 
@@ -2586,7 +2586,7 @@ Taint interface{}
 
 taint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#taint ContainerNodePool#taint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#taint ContainerNodePool#taint}
 
 ---
 
@@ -2600,7 +2600,7 @@ WorkloadMetadataConfig ContainerNodePoolNodeConfigWorkloadMetadataConfig
 
 workload_metadata_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#workload_metadata_config ContainerNodePool#workload_metadata_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#workload_metadata_config ContainerNodePool#workload_metadata_config}
 
 ---
 
@@ -2609,7 +2609,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigAdvancedMachineFeatures {
 	ThreadsPerCore: *f64,
@@ -2636,7 +2636,7 @@ The number of threads per physical core.
 
 To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#threads_per_core ContainerNodePool#threads_per_core}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#threads_per_core ContainerNodePool#threads_per_core}
 
 ---
 
@@ -2645,7 +2645,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigConfidentialNodes {
 	Enabled: interface{},
@@ -2670,7 +2670,7 @@ Enabled interface{}
 
 Whether Confidential Nodes feature is enabled for all nodes in this pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
 
 ---
 
@@ -2679,7 +2679,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigEffectiveTaints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigEffectiveTaints {
 
@@ -2692,7 +2692,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig {
 	LocalSsdCount: *f64,
@@ -2719,7 +2719,7 @@ Number of local SSDs to use to back ephemeral storage.
 
 Uses NVMe interfaces. Each local SSD must be 375 or 3000 GB in size, and all local SSDs must share the same size.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#local_ssd_count ContainerNodePool#local_ssd_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#local_ssd_count ContainerNodePool#local_ssd_count}
 
 ---
 
@@ -2728,7 +2728,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocket.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigFastSocket {
 	Enabled: interface{},
@@ -2753,7 +2753,7 @@ Enabled interface{}
 
 Whether or not NCCL Fast Socket is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
 
 ---
 
@@ -2762,7 +2762,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigGcfsConfig {
 	Enabled: interface{},
@@ -2787,7 +2787,7 @@ Enabled interface{}
 
 Whether or not GCFS is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
 
 ---
 
@@ -2796,7 +2796,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigGuestAccelerator {
 	Count: *f64,
@@ -2811,11 +2811,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#count ContainerNodePool#count}. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.gpuDriverInstallationConfig">GpuDriverInstallationConfig</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_driver_installation_config ContainerNodePool#gpu_driver_installation_config}. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.gpuPartitionSize">GpuPartitionSize</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_partition_size ContainerNodePool#gpu_partition_size}. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.gpuSharingConfig">GpuSharingConfig</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_sharing_config ContainerNodePool#gpu_sharing_config}. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#type ContainerNodePool#type}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#count ContainerNodePool#count}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.gpuDriverInstallationConfig">GpuDriverInstallationConfig</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_driver_installation_config ContainerNodePool#gpu_driver_installation_config}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.gpuPartitionSize">GpuPartitionSize</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_partition_size ContainerNodePool#gpu_partition_size}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.gpuSharingConfig">GpuSharingConfig</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_sharing_config ContainerNodePool#gpu_sharing_config}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAccelerator.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#type ContainerNodePool#type}. |
 
 ---
 
@@ -2827,7 +2827,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#count ContainerNodePool#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#count ContainerNodePool#count}.
 
 ---
 
@@ -2839,7 +2839,7 @@ GpuDriverInstallationConfig interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_driver_installation_config ContainerNodePool#gpu_driver_installation_config}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_driver_installation_config ContainerNodePool#gpu_driver_installation_config}.
 
 ---
 
@@ -2851,7 +2851,7 @@ GpuPartitionSize *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_partition_size ContainerNodePool#gpu_partition_size}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_partition_size ContainerNodePool#gpu_partition_size}.
 
 ---
 
@@ -2863,7 +2863,7 @@ GpuSharingConfig interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_sharing_config ContainerNodePool#gpu_sharing_config}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_sharing_config ContainerNodePool#gpu_sharing_config}.
 
 ---
 
@@ -2875,7 +2875,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#type ContainerNodePool#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#type ContainerNodePool#type}.
 
 ---
 
@@ -2884,7 +2884,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig {
 	GpuDriverVersion: *string,
@@ -2895,7 +2895,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig.property.gpuDriverVersion">GpuDriverVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_driver_version ContainerNodePool#gpu_driver_version}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig.property.gpuDriverVersion">GpuDriverVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_driver_version ContainerNodePool#gpu_driver_version}. |
 
 ---
 
@@ -2907,7 +2907,7 @@ GpuDriverVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_driver_version ContainerNodePool#gpu_driver_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_driver_version ContainerNodePool#gpu_driver_version}.
 
 ---
 
@@ -2916,7 +2916,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig {
 	GpuSharingStrategy: *string,
@@ -2928,8 +2928,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig.property.gpuSharingStrategy">GpuSharingStrategy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_sharing_strategy ContainerNodePool#gpu_sharing_strategy}. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig.property.maxSharedClientsPerGpu">MaxSharedClientsPerGpu</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#max_shared_clients_per_gpu ContainerNodePool#max_shared_clients_per_gpu}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig.property.gpuSharingStrategy">GpuSharingStrategy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_sharing_strategy ContainerNodePool#gpu_sharing_strategy}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig.property.maxSharedClientsPerGpu">MaxSharedClientsPerGpu</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#max_shared_clients_per_gpu ContainerNodePool#max_shared_clients_per_gpu}. |
 
 ---
 
@@ -2941,7 +2941,7 @@ GpuSharingStrategy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#gpu_sharing_strategy ContainerNodePool#gpu_sharing_strategy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#gpu_sharing_strategy ContainerNodePool#gpu_sharing_strategy}.
 
 ---
 
@@ -2953,7 +2953,7 @@ MaxSharedClientsPerGpu *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#max_shared_clients_per_gpu ContainerNodePool#max_shared_clients_per_gpu}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#max_shared_clients_per_gpu ContainerNodePool#max_shared_clients_per_gpu}.
 
 ---
 
@@ -2962,7 +2962,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigGvnic {
 	Enabled: interface{},
@@ -2987,7 +2987,7 @@ Enabled interface{}
 
 Whether or not gvnic is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#enabled ContainerNodePool#enabled}
 
 ---
 
@@ -2996,7 +2996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigHostMaintenancePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigHostMaintenancePolicy {
 	MaintenanceInterval: *string,
@@ -3021,7 +3021,7 @@ MaintenanceInterval *string
 
 .
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#maintenance_interval ContainerNodePool#maintenance_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#maintenance_interval ContainerNodePool#maintenance_interval}
 
 ---
 
@@ -3030,7 +3030,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigKubeletConfig {
 	CpuManagerPolicy: *string,
@@ -3061,7 +3061,7 @@ CpuManagerPolicy *string
 
 Control the CPU management policy on the node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#cpu_manager_policy ContainerNodePool#cpu_manager_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#cpu_manager_policy ContainerNodePool#cpu_manager_policy}
 
 ---
 
@@ -3075,7 +3075,7 @@ CpuCfsQuota interface{}
 
 Enable CPU CFS quota enforcement for containers that specify CPU limits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#cpu_cfs_quota ContainerNodePool#cpu_cfs_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#cpu_cfs_quota ContainerNodePool#cpu_cfs_quota}
 
 ---
 
@@ -3089,7 +3089,7 @@ CpuCfsQuotaPeriod *string
 
 Set the CPU CFS quota period value 'cpu.cfs_period_us'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#cpu_cfs_quota_period ContainerNodePool#cpu_cfs_quota_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#cpu_cfs_quota_period ContainerNodePool#cpu_cfs_quota_period}
 
 ---
 
@@ -3103,7 +3103,7 @@ PodPidsLimit *f64
 
 Controls the maximum number of processes allowed to run in a pod.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#pod_pids_limit ContainerNodePool#pod_pids_limit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#pod_pids_limit ContainerNodePool#pod_pids_limit}
 
 ---
 
@@ -3112,7 +3112,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigLinuxNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigLinuxNodeConfig {
 	CgroupMode: *string,
@@ -3139,7 +3139,7 @@ CgroupMode *string
 
 cgroupMode specifies the cgroup mode to be used on the node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#cgroup_mode ContainerNodePool#cgroup_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#cgroup_mode ContainerNodePool#cgroup_mode}
 
 ---
 
@@ -3153,7 +3153,7 @@ Sysctls *map[string]*string
 
 The Linux kernel parameters to be applied to the nodes and all pods running on the nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#sysctls ContainerNodePool#sysctls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#sysctls ContainerNodePool#sysctls}
 
 ---
 
@@ -3162,7 +3162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig {
 	LocalSsdCount: *f64,
@@ -3189,7 +3189,7 @@ Number of raw-block local NVMe SSD disks to be attached to the node.
 
 Each local SSD is 375 GB in size.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#local_ssd_count ContainerNodePool#local_ssd_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#local_ssd_count ContainerNodePool#local_ssd_count}
 
 ---
 
@@ -3198,7 +3198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigReservationAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigReservationAffinity {
 	ConsumeReservationType: *string,
@@ -3227,7 +3227,7 @@ ConsumeReservationType *string
 
 Corresponds to the type of reservation consumption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#consume_reservation_type ContainerNodePool#consume_reservation_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#consume_reservation_type ContainerNodePool#consume_reservation_type}
 
 ---
 
@@ -3241,7 +3241,7 @@ Key *string
 
 The label key of a reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#key ContainerNodePool#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#key ContainerNodePool#key}
 
 ---
 
@@ -3255,7 +3255,7 @@ Values *[]*string
 
 The label values of the reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#values ContainerNodePool#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#values ContainerNodePool#values}
 
 ---
 
@@ -3264,7 +3264,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigShieldedInstanceConfig {
 	EnableIntegrityMonitoring: interface{},
@@ -3291,7 +3291,7 @@ EnableIntegrityMonitoring interface{}
 
 Defines whether the instance has integrity monitoring enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#enable_integrity_monitoring ContainerNodePool#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#enable_integrity_monitoring ContainerNodePool#enable_integrity_monitoring}
 
 ---
 
@@ -3305,7 +3305,7 @@ EnableSecureBoot interface{}
 
 Defines whether the instance has Secure Boot enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#enable_secure_boot ContainerNodePool#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#enable_secure_boot ContainerNodePool#enable_secure_boot}
 
 ---
 
@@ -3314,7 +3314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigSoleTenantConfig {
 	NodeAffinity: interface{},
@@ -3339,7 +3339,7 @@ NodeAffinity interface{}
 
 node_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#node_affinity ContainerNodePool#node_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#node_affinity ContainerNodePool#node_affinity}
 
 ---
 
@@ -3348,7 +3348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinity {
 	Key: *string,
@@ -3377,7 +3377,7 @@ Key *string
 
 .
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#key ContainerNodePool#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#key ContainerNodePool#key}
 
 ---
 
@@ -3391,7 +3391,7 @@ Operator *string
 
 .
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#operator ContainerNodePool#operator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#operator ContainerNodePool#operator}
 
 ---
 
@@ -3405,7 +3405,7 @@ Values *[]*string
 
 .
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#values ContainerNodePool#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#values ContainerNodePool#values}
 
 ---
 
@@ -3414,7 +3414,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigTaint {
 	Effect: *string,
@@ -3443,7 +3443,7 @@ Effect *string
 
 Effect for taint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#effect ContainerNodePool#effect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#effect ContainerNodePool#effect}
 
 ---
 
@@ -3457,7 +3457,7 @@ Key *string
 
 Key for taint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#key ContainerNodePool#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#key ContainerNodePool#key}
 
 ---
 
@@ -3471,7 +3471,7 @@ Value *string
 
 Value for taint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#value ContainerNodePool#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#value ContainerNodePool#value}
 
 ---
 
@@ -3480,7 +3480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigWorkloadMetadataConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolNodeConfigWorkloadMetadataConfig {
 	Mode: *string,
@@ -3505,7 +3505,7 @@ Mode *string
 
 Mode is the configuration for how to expose metadata to workloads running on the node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#mode ContainerNodePool#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#mode ContainerNodePool#mode}
 
 ---
 
@@ -3514,7 +3514,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolPlacementPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolPlacementPolicy {
 	Type: *string,
@@ -3543,7 +3543,7 @@ Type *string
 
 Type defines the type of placement policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#type ContainerNodePool#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#type ContainerNodePool#type}
 
 ---
 
@@ -3559,7 +3559,7 @@ If set, refers to the name of a custom resource policy supplied by the user.
 
 The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#policy_name ContainerNodePool#policy_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#policy_name ContainerNodePool#policy_name}
 
 ---
 
@@ -3573,7 +3573,7 @@ TpuTopology *string
 
 TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs/types-topologies#tpu_topologies.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#tpu_topology ContainerNodePool#tpu_topology}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#tpu_topology ContainerNodePool#tpu_topology}
 
 ---
 
@@ -3582,7 +3582,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolTimeouts {
 	Create: *string,
@@ -3595,9 +3595,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#create ContainerNodePool#create}. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#delete ContainerNodePool#delete}. |
-| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#update ContainerNodePool#update}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#create ContainerNodePool#create}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#delete ContainerNodePool#delete}. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#update ContainerNodePool#update}. |
 
 ---
 
@@ -3609,7 +3609,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#create ContainerNodePool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#create ContainerNodePool#create}.
 
 ---
 
@@ -3621,7 +3621,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#delete ContainerNodePool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#delete ContainerNodePool#delete}.
 
 ---
 
@@ -3633,7 +3633,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#update ContainerNodePool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#update ContainerNodePool#update}.
 
 ---
 
@@ -3642,10 +3642,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolUpgradeSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolUpgradeSettings {
-	BlueGreenSettings: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettings,
+	BlueGreenSettings: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettings,
 	MaxSurge: *f64,
 	MaxUnavailable: *f64,
 	Strategy: *string,
@@ -3673,7 +3673,7 @@ BlueGreenSettings ContainerNodePoolUpgradeSettingsBlueGreenSettings
 
 blue_green_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#blue_green_settings ContainerNodePool#blue_green_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#blue_green_settings ContainerNodePool#blue_green_settings}
 
 ---
 
@@ -3689,7 +3689,7 @@ The number of additional nodes that can be added to the node pool during an upgr
 
 Increasing max_surge raises the number of nodes that can be upgraded simultaneously. Can be set to 0 or greater.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#max_surge ContainerNodePool#max_surge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#max_surge ContainerNodePool#max_surge}
 
 ---
 
@@ -3705,7 +3705,7 @@ The number of nodes that can be simultaneously unavailable during an upgrade.
 
 Increasing max_unavailable raises the number of nodes that can be upgraded in parallel. Can be set to 0 or greater.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#max_unavailable ContainerNodePool#max_unavailable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#max_unavailable ContainerNodePool#max_unavailable}
 
 ---
 
@@ -3719,7 +3719,7 @@ Strategy *string
 
 Update strategy for the given nodepool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#strategy ContainerNodePool#strategy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#strategy ContainerNodePool#strategy}
 
 ---
 
@@ -3728,10 +3728,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolUpgradeSettingsBlueGreenSettings {
-	StandardRolloutPolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy,
+	StandardRolloutPolicy: github.com/cdktf/cdktf-provider-google-go/google.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy,
 	NodePoolSoakDuration: *string,
 }
 ```
@@ -3755,7 +3755,7 @@ StandardRolloutPolicy ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardR
 
 standard_rollout_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#standard_rollout_policy ContainerNodePool#standard_rollout_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#standard_rollout_policy ContainerNodePool#standard_rollout_policy}
 
 ---
 
@@ -3769,7 +3769,7 @@ NodePoolSoakDuration *string
 
 Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#node_pool_soak_duration ContainerNodePool#node_pool_soak_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#node_pool_soak_duration ContainerNodePool#node_pool_soak_duration}
 
 ---
 
@@ -3778,7 +3778,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 &containernodepool.ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy {
 	BatchNodeCount: *f64,
@@ -3807,7 +3807,7 @@ BatchNodeCount *f64
 
 Number of blue nodes to drain in a batch.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#batch_node_count ContainerNodePool#batch_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#batch_node_count ContainerNodePool#batch_node_count}
 
 ---
 
@@ -3821,7 +3821,7 @@ BatchPercentage *f64
 
 Percentage of the blue pool nodes to drain in a batch.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#batch_percentage ContainerNodePool#batch_percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#batch_percentage ContainerNodePool#batch_percentage}
 
 ---
 
@@ -3835,7 +3835,7 @@ BatchSoakDuration *string
 
 Soak time after each batch gets drained.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/container_node_pool#batch_soak_duration ContainerNodePool#batch_soak_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/container_node_pool#batch_soak_duration ContainerNodePool#batch_soak_duration}
 
 ---
 
@@ -3846,7 +3846,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolAutoscalingOutputReference
 ```
@@ -4240,7 +4240,7 @@ func InternalValue() ContainerNodePoolAutoscaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolManagementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolManagementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolManagementOutputReference
 ```
@@ -4547,7 +4547,7 @@ func InternalValue() ContainerNodePoolManagement
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigNetworkPerformanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNetworkConfigNetworkPerformanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNetworkConfigNetworkPerformanceConfigOutputReference
 ```
@@ -4818,7 +4818,7 @@ func InternalValue() ContainerNodePoolNetworkConfigNetworkPerformanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNetworkConfigOutputReference
 ```
@@ -5267,7 +5267,7 @@ func InternalValue() ContainerNodePoolNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference
 ```
@@ -5538,7 +5538,7 @@ func InternalValue() ContainerNodePoolNetworkConfigPodCidrOverprovisionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigAdvancedMachineFeaturesOutputReference
 ```
@@ -5809,7 +5809,7 @@ func InternalValue() ContainerNodePoolNodeConfigAdvancedMachineFeatures
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigConfidentialNodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigConfidentialNodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigConfidentialNodesOutputReference
 ```
@@ -6080,7 +6080,7 @@ func InternalValue() ContainerNodePoolNodeConfigConfidentialNodes
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigEffectiveTaintsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigEffectiveTaintsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerNodePoolNodeConfigEffectiveTaintsList
 ```
@@ -6229,7 +6229,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigEffectiveTaintsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigEffectiveTaintsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerNodePoolNodeConfigEffectiveTaintsOutputReference
 ```
@@ -6529,7 +6529,7 @@ func InternalValue() ContainerNodePoolNodeConfigEffectiveTaints
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfigOutputReference
 ```
@@ -6800,7 +6800,7 @@ func InternalValue() ContainerNodePoolNodeConfigEphemeralStorageLocalSsdConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigFastSocketOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigFastSocketOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigFastSocketOutputReference
 ```
@@ -7071,7 +7071,7 @@ func InternalValue() ContainerNodePoolNodeConfigFastSocket
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGcfsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGcfsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigGcfsConfigOutputReference
 ```
@@ -7342,7 +7342,7 @@ func InternalValue() ContainerNodePoolNodeConfigGcfsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigList
 ```
@@ -7502,7 +7502,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfigOutputReference
 ```
@@ -7798,7 +7798,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList
 ```
@@ -7958,7 +7958,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference
 ```
@@ -8283,7 +8283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGuestAcceleratorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerNodePoolNodeConfigGuestAcceleratorList
 ```
@@ -8443,7 +8443,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGuestAcceleratorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGuestAcceleratorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerNodePoolNodeConfigGuestAcceleratorOutputReference
 ```
@@ -8881,7 +8881,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigGvnicOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigGvnicOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigGvnicOutputReference
 ```
@@ -9152,7 +9152,7 @@ func InternalValue() ContainerNodePoolNodeConfigGvnic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigHostMaintenancePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigHostMaintenancePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigHostMaintenancePolicyOutputReference
 ```
@@ -9423,7 +9423,7 @@ func InternalValue() ContainerNodePoolNodeConfigHostMaintenancePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigKubeletConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigKubeletConfigOutputReference
 ```
@@ -9781,7 +9781,7 @@ func InternalValue() ContainerNodePoolNodeConfigKubeletConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigLinuxNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigLinuxNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigLinuxNodeConfigOutputReference
 ```
@@ -10088,7 +10088,7 @@ func InternalValue() ContainerNodePoolNodeConfigLinuxNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference
 ```
@@ -10359,7 +10359,7 @@ func InternalValue() ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigOutputReference
 ```
@@ -11784,7 +11784,7 @@ func InternalValue() ContainerNodePoolNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigReservationAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigReservationAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigReservationAffinityOutputReference
 ```
@@ -12113,7 +12113,7 @@ func InternalValue() ContainerNodePoolNodeConfigReservationAffinity
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference
 ```
@@ -12420,7 +12420,7 @@ func InternalValue() ContainerNodePoolNodeConfigShieldedInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityList
 ```
@@ -12580,7 +12580,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerNodePoolNodeConfigSoleTenantConfigNodeAffinityOutputReference
 ```
@@ -12913,7 +12913,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigSoleTenantConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigSoleTenantConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigSoleTenantConfigOutputReference
 ```
@@ -13197,7 +13197,7 @@ func InternalValue() ContainerNodePoolNodeConfigSoleTenantConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigTaintList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerNodePoolNodeConfigTaintList
 ```
@@ -13357,7 +13357,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigTaintOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigTaintOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerNodePoolNodeConfigTaintOutputReference
 ```
@@ -13690,7 +13690,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference
 ```
@@ -13961,7 +13961,7 @@ func InternalValue() ContainerNodePoolNodeConfigWorkloadMetadataConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolPlacementPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolPlacementPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolPlacementPolicyOutputReference
 ```
@@ -14290,7 +14290,7 @@ func InternalValue() ContainerNodePoolPlacementPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolTimeoutsOutputReference
 ```
@@ -14626,7 +14626,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolUpgradeSettingsBlueGreenSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolUpgradeSettingsBlueGreenSettingsOutputReference
 ```
@@ -14939,7 +14939,7 @@ func InternalValue() ContainerNodePoolUpgradeSettingsBlueGreenSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference
 ```
@@ -15275,7 +15275,7 @@ func InternalValue() ContainerNodePoolUpgradeSettingsBlueGreenSettingsStandardRo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolUpgradeSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containernodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containernodepool"
 
 containernodepool.NewContainerNodePoolUpgradeSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerNodePoolUpgradeSettingsOutputReference
 ```

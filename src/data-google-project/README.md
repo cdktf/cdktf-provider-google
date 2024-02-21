@@ -1,3 +1,3 @@
 # `data_google_project`
 
-Refer to the Terraform Registry for docs: [`data_google_project`](https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/project).
+Refer to the Terraform Registry for docs: [`data_google_project`](https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/project).
