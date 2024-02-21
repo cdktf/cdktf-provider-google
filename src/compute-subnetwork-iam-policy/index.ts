@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +13,32 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeSubnetworkIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy#id ComputeSubnetworkIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy#id ComputeSubnetworkIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy#policy_data ComputeSubnetworkIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy#policy_data ComputeSubnetworkIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy#project ComputeSubnetworkIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy#project ComputeSubnetworkIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy#region ComputeSubnetworkIamPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy#region ComputeSubnetworkIamPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy#subnetwork ComputeSubnetworkIamPolicy#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy#subnetwork ComputeSubnetworkIamPolicy#subnetwork}
   */
   readonly subnetwork: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy}
 */
 export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
 
@@ -54,7 +54,7 @@ export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeSubnetworkIamPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeSubnetworkIamPolicy to import
-  * @param importFromId The id of the existing ComputeSubnetworkIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeSubnetworkIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeSubnetworkIamPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -66,7 +66,7 @@ export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -77,7 +77,7 @@ export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_subnetwork_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.16.0',
+        providerVersion: '5.17.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

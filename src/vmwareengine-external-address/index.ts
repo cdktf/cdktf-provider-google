@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address
+// https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface VmwareengineExternalAddressConfig extends cdktf.TerraformMetaAr
   /**
   * User-provided description for this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#description VmwareengineExternalAddress#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#description VmwareengineExternalAddress#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#id VmwareengineExternalAddress#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#id VmwareengineExternalAddress#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,13 +28,13 @@ export interface VmwareengineExternalAddressConfig extends cdktf.TerraformMetaAr
   /**
   * The internal IP address of a workload VM.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#internal_ip VmwareengineExternalAddress#internal_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#internal_ip VmwareengineExternalAddress#internal_ip}
   */
   readonly internalIp: string;
   /**
   * The ID of the external IP Address.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#name VmwareengineExternalAddress#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#name VmwareengineExternalAddress#name}
   */
   readonly name: string;
   /**
@@ -42,27 +42,27 @@ export interface VmwareengineExternalAddressConfig extends cdktf.TerraformMetaAr
   * Resource names are schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
   * For example: projects/my-project/locations/us-west1-a/privateClouds/my-cloud
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#parent VmwareengineExternalAddress#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#parent VmwareengineExternalAddress#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#timeouts VmwareengineExternalAddress#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#timeouts VmwareengineExternalAddress#timeouts}
   */
   readonly timeouts?: VmwareengineExternalAddressTimeouts;
 }
 export interface VmwareengineExternalAddressTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#create VmwareengineExternalAddress#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#create VmwareengineExternalAddress#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#delete VmwareengineExternalAddress#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#delete VmwareengineExternalAddress#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#update VmwareengineExternalAddress#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#update VmwareengineExternalAddress#update}
   */
   readonly update?: string;
 }
@@ -214,7 +214,7 @@ export class VmwareengineExternalAddressTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address google_vmwareengine_external_address}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address google_vmwareengine_external_address}
 */
 export class VmwareengineExternalAddress extends cdktf.TerraformResource {
 
@@ -230,7 +230,7 @@ export class VmwareengineExternalAddress extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VmwareengineExternalAddress resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VmwareengineExternalAddress to import
-  * @param importFromId The id of the existing VmwareengineExternalAddress that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VmwareengineExternalAddress that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VmwareengineExternalAddress to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -242,7 +242,7 @@ export class VmwareengineExternalAddress extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/vmwareengine_external_address google_vmwareengine_external_address} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/vmwareengine_external_address google_vmwareengine_external_address} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -253,7 +253,7 @@ export class VmwareengineExternalAddress extends cdktf.TerraformResource {
       terraformResourceType: 'google_vmwareengine_external_address',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.16.0',
+        providerVersion: '5.17.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

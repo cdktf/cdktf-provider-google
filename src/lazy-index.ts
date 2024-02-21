@@ -160,6 +160,7 @@ Object.defineProperty(exports, 'cloudbuildv2ConnectionIamBinding', { get: functi
 Object.defineProperty(exports, 'cloudbuildv2ConnectionIamMember', { get: function () { return require('./cloudbuildv2-connection-iam-member'); } });
 Object.defineProperty(exports, 'cloudbuildv2ConnectionIamPolicy', { get: function () { return require('./cloudbuildv2-connection-iam-policy'); } });
 Object.defineProperty(exports, 'cloudbuildv2Repository', { get: function () { return require('./cloudbuildv2-repository'); } });
+Object.defineProperty(exports, 'clouddeployCustomTargetType', { get: function () { return require('./clouddeploy-custom-target-type'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipeline', { get: function () { return require('./clouddeploy-delivery-pipeline'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamBinding', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-binding'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamMember', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-member'); } });
@@ -424,6 +425,7 @@ Object.defineProperty(exports, 'eventarcTrigger', { get: function () { return re
 Object.defineProperty(exports, 'filestoreBackup', { get: function () { return require('./filestore-backup'); } });
 Object.defineProperty(exports, 'filestoreInstance', { get: function () { return require('./filestore-instance'); } });
 Object.defineProperty(exports, 'filestoreSnapshot', { get: function () { return require('./filestore-snapshot'); } });
+Object.defineProperty(exports, 'firebaseAppCheckDebugToken', { get: function () { return require('./firebase-app-check-debug-token'); } });
 Object.defineProperty(exports, 'firebaseAppCheckServiceConfig', { get: function () { return require('./firebase-app-check-service-config'); } });
 Object.defineProperty(exports, 'firebaserulesRelease', { get: function () { return require('./firebaserules-release'); } });
 Object.defineProperty(exports, 'firebaserulesRuleset', { get: function () { return require('./firebaserules-ruleset'); } });

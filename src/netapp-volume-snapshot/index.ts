@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot
+// https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface NetappVolumeSnapshotConfig extends cdktf.TerraformMetaArguments
   /**
   * Description for the snapshot.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#description NetappVolumeSnapshot#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#description NetappVolumeSnapshot#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#id NetappVolumeSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#id NetappVolumeSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,49 +32,49 @@ export interface NetappVolumeSnapshotConfig extends cdktf.TerraformMetaArguments
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#labels NetappVolumeSnapshot#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#labels NetappVolumeSnapshot#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Name of the snapshot location. Snapshots are child resources of volumes and live in the same location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#location NetappVolumeSnapshot#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#location NetappVolumeSnapshot#location}
   */
   readonly location: string;
   /**
   * The name of the snapshot.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#name NetappVolumeSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#name NetappVolumeSnapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#project NetappVolumeSnapshot#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#project NetappVolumeSnapshot#project}
   */
   readonly project?: string;
   /**
   * The name of the volume to create the snapshot in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#volume_name NetappVolumeSnapshot#volume_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#volume_name NetappVolumeSnapshot#volume_name}
   */
   readonly volumeName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#timeouts NetappVolumeSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#timeouts NetappVolumeSnapshot#timeouts}
   */
   readonly timeouts?: NetappVolumeSnapshotTimeouts;
 }
 export interface NetappVolumeSnapshotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#create NetappVolumeSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#create NetappVolumeSnapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#delete NetappVolumeSnapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#delete NetappVolumeSnapshot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#update NetappVolumeSnapshot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#update NetappVolumeSnapshot#update}
   */
   readonly update?: string;
 }
@@ -226,7 +226,7 @@ export class NetappVolumeSnapshotTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot google_netapp_volume_snapshot}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot google_netapp_volume_snapshot}
 */
 export class NetappVolumeSnapshot extends cdktf.TerraformResource {
 
@@ -242,7 +242,7 @@ export class NetappVolumeSnapshot extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappVolumeSnapshot resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappVolumeSnapshot to import
-  * @param importFromId The id of the existing NetappVolumeSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappVolumeSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappVolumeSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -254,7 +254,7 @@ export class NetappVolumeSnapshot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/netapp_volume_snapshot google_netapp_volume_snapshot} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume_snapshot google_netapp_volume_snapshot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -265,7 +265,7 @@ export class NetappVolumeSnapshot extends cdktf.TerraformResource {
       terraformResourceType: 'google_netapp_volume_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.16.0',
+        providerVersion: '5.17.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

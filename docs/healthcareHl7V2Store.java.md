@@ -4,7 +4,7 @@
 
 ### HealthcareHl7V2Store <a name="HealthcareHl7V2Store" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store google_healthcare_hl7_v2_store}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store google_healthcare_hl7_v2_store}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer"></a>
 
@@ -31,6 +31,8 @@ HealthcareHl7V2Store.Builder.create(Construct scope, java.lang.String id)
 //  .notificationConfigs(IResolvable)
 //  .notificationConfigs(java.util.List<HealthcareHl7V2StoreNotificationConfigs>)
 //  .parserConfig(HealthcareHl7V2StoreParserConfig)
+//  .rejectDuplicateMessage(java.lang.Boolean)
+//  .rejectDuplicateMessage(IResolvable)
 //  .timeouts(HealthcareHl7V2StoreTimeouts)
     .build();
 ```
@@ -48,11 +50,12 @@ HealthcareHl7V2Store.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.dataset">dataset</a></code> | <code>java.lang.String</code> | Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The resource name for the Hl7V2Store. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | User-supplied key-value pairs used to organize HL7v2 stores. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.notificationConfig">notificationConfig</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig">HealthcareHl7V2StoreNotificationConfig</a></code> | notification_config block. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.notificationConfigs">notificationConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigs">HealthcareHl7V2StoreNotificationConfigs</a>></code> | notification_configs block. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.parserConfig">parserConfig</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig">HealthcareHl7V2StoreParserConfig</a></code> | parser_config block. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.rejectDuplicateMessage">rejectDuplicateMessage</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Determines whether duplicate messages are allowed. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts">HealthcareHl7V2StoreTimeouts</a></code> | timeouts block. |
 
 ---
@@ -123,7 +126,7 @@ Must be unique amongst siblings in the same scope
 
 Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#dataset HealthcareHl7V2Store#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#dataset HealthcareHl7V2Store#dataset}
 
 ---
 
@@ -135,7 +138,7 @@ The resource name for the Hl7V2Store.
 
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#name HealthcareHl7V2Store#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#name HealthcareHl7V2Store#name}
 
 ---
 
@@ -143,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -170,7 +173,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
 
 ---
 
@@ -180,7 +183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 notification_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#notification_config HealthcareHl7V2Store#notification_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#notification_config HealthcareHl7V2Store#notification_config}
 
 ---
 
@@ -190,7 +193,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 notification_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#notification_configs HealthcareHl7V2Store#notification_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#notification_configs HealthcareHl7V2Store#notification_configs}
 
 ---
 
@@ -200,7 +203,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 parser_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#parser_config HealthcareHl7V2Store#parser_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#parser_config HealthcareHl7V2Store#parser_config}
+
+---
+
+##### `rejectDuplicateMessage`<sup>Optional</sup> <a name="rejectDuplicateMessage" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer.parameter.rejectDuplicateMessage"></a>
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+Determines whether duplicate messages are allowed.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#reject_duplicate_message HealthcareHl7V2Store#reject_duplicate_message}
 
 ---
 
@@ -210,7 +223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#timeouts HealthcareHl7V2Store#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#timeouts HealthcareHl7V2Store#timeouts}
 
 ---
 
@@ -250,6 +263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetNotificationConfig">resetNotificationConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetNotificationConfigs">resetNotificationConfigs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetParserConfig">resetParserConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetRejectDuplicateMessage">resetRejectDuplicateMessage</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 
 ---
@@ -622,6 +636,12 @@ public void resetNotificationConfigs()
 public void resetParserConfig()
 ```
 
+##### `resetRejectDuplicateMessage` <a name="resetRejectDuplicateMessage" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetRejectDuplicateMessage"></a>
+
+```java
+public void resetRejectDuplicateMessage()
+```
+
 ##### `resetTimeouts` <a name="resetTimeouts" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.resetTimeouts"></a>
 
 ```java
@@ -731,7 +751,7 @@ The construct id used in the generated config for the HealthcareHl7V2Store to im
 
 The id of the existing HealthcareHl7V2Store that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -775,11 +795,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.notificationConfigInput">notificationConfigInput</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig">HealthcareHl7V2StoreNotificationConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.notificationConfigsInput">notificationConfigsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigs">HealthcareHl7V2StoreNotificationConfigs</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.parserConfigInput">parserConfigInput</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig">HealthcareHl7V2StoreParserConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.rejectDuplicateMessageInput">rejectDuplicateMessageInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts">HealthcareHl7V2StoreTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.dataset">dataset</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.rejectDuplicateMessage">rejectDuplicateMessage</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1065,6 +1087,16 @@ public HealthcareHl7V2StoreParserConfig getParserConfigInput();
 
 ---
 
+##### `rejectDuplicateMessageInput`<sup>Optional</sup> <a name="rejectDuplicateMessageInput" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.rejectDuplicateMessageInput"></a>
+
+```java
+public java.lang.Object getRejectDuplicateMessageInput();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+---
+
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.timeoutsInput"></a>
 
 ```java
@@ -1115,6 +1147,16 @@ public java.lang.String getName();
 
 ---
 
+##### `rejectDuplicateMessage`<sup>Required</sup> <a name="rejectDuplicateMessage" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.property.rejectDuplicateMessage"></a>
+
+```java
+public java.lang.Object getRejectDuplicateMessage();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+---
+
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -1162,6 +1204,8 @@ HealthcareHl7V2StoreConfig.builder()
 //  .notificationConfigs(IResolvable)
 //  .notificationConfigs(java.util.List<HealthcareHl7V2StoreNotificationConfigs>)
 //  .parserConfig(HealthcareHl7V2StoreParserConfig)
+//  .rejectDuplicateMessage(java.lang.Boolean)
+//  .rejectDuplicateMessage(IResolvable)
 //  .timeouts(HealthcareHl7V2StoreTimeouts)
     .build();
 ```
@@ -1179,11 +1223,12 @@ HealthcareHl7V2StoreConfig.builder()
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.dataset">dataset</a></code> | <code>java.lang.String</code> | Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.name">name</a></code> | <code>java.lang.String</code> | The resource name for the Hl7V2Store. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | User-supplied key-value pairs used to organize HL7v2 stores. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.notificationConfig">notificationConfig</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig">HealthcareHl7V2StoreNotificationConfig</a></code> | notification_config block. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.notificationConfigs">notificationConfigs</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigs">HealthcareHl7V2StoreNotificationConfigs</a>></code> | notification_configs block. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.parserConfig">parserConfig</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig">HealthcareHl7V2StoreParserConfig</a></code> | parser_config block. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.rejectDuplicateMessage">rejectDuplicateMessage</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Determines whether duplicate messages are allowed. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts">HealthcareHl7V2StoreTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1268,7 +1313,7 @@ public java.lang.String getDataset();
 
 Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#dataset HealthcareHl7V2Store#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#dataset HealthcareHl7V2Store#dataset}
 
 ---
 
@@ -1284,7 +1329,7 @@ The resource name for the Hl7V2Store.
 
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#name HealthcareHl7V2Store#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#name HealthcareHl7V2Store#name}
 
 ---
 
@@ -1296,7 +1341,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1327,7 +1372,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
 
 ---
 
@@ -1341,7 +1386,7 @@ public HealthcareHl7V2StoreNotificationConfig getNotificationConfig();
 
 notification_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#notification_config HealthcareHl7V2Store#notification_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#notification_config HealthcareHl7V2Store#notification_config}
 
 ---
 
@@ -1355,7 +1400,7 @@ public java.lang.Object getNotificationConfigs();
 
 notification_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#notification_configs HealthcareHl7V2Store#notification_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#notification_configs HealthcareHl7V2Store#notification_configs}
 
 ---
 
@@ -1369,7 +1414,21 @@ public HealthcareHl7V2StoreParserConfig getParserConfig();
 
 parser_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#parser_config HealthcareHl7V2Store#parser_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#parser_config HealthcareHl7V2Store#parser_config}
+
+---
+
+##### `rejectDuplicateMessage`<sup>Optional</sup> <a name="rejectDuplicateMessage" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.rejectDuplicateMessage"></a>
+
+```java
+public java.lang.Object getRejectDuplicateMessage();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+Determines whether duplicate messages are allowed.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#reject_duplicate_message HealthcareHl7V2Store#reject_duplicate_message}
 
 ---
 
@@ -1383,7 +1442,7 @@ public HealthcareHl7V2StoreTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#timeouts HealthcareHl7V2Store#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#timeouts HealthcareHl7V2Store#timeouts}
 
 ---
 
@@ -1424,7 +1483,7 @@ was published. Notifications are only sent if the topic is non-empty. Topic name
 project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
 
 ---
 
@@ -1469,7 +1528,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 
 If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
 
 ---
 
@@ -1492,7 +1551,7 @@ Fields/functions available for filtering are:
 * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
 * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#filter HealthcareHl7V2Store#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#filter HealthcareHl7V2Store#filter}
 
 ---
 
@@ -1533,7 +1592,7 @@ public java.lang.Object getAllowNullHeader();
 
 Determines whether messages with no header are allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#allow_null_header HealthcareHl7V2Store#allow_null_header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#allow_null_header HealthcareHl7V2Store#allow_null_header}
 
 ---
 
@@ -1547,7 +1606,7 @@ public java.lang.String getSchema();
 
 JSON encoded string for schemas used to parse messages in this store if schematized parsing is desired.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#schema HealthcareHl7V2Store#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#schema HealthcareHl7V2Store#schema}
 
 ---
 
@@ -1563,7 +1622,7 @@ Byte(s) to be used as the segment terminator. If this is unset, '\r' will be use
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#segment_terminator HealthcareHl7V2Store#segment_terminator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#segment_terminator HealthcareHl7V2Store#segment_terminator}
 
 ---
 
@@ -1579,7 +1638,7 @@ The version of the unschematized parser to be used when a custom 'schema' is not
 
 Default value: "V1" Possible values: ["V1", "V2", "V3"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#version HealthcareHl7V2Store#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#version HealthcareHl7V2Store#version}
 
 ---
 
@@ -1601,9 +1660,9 @@ HealthcareHl7V2StoreTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}. |
 
 ---
 
@@ -1615,7 +1674,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}.
 
 ---
 
@@ -1627,7 +1686,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}.
 
 ---
 
@@ -1639,7 +1698,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}.
 
 ---
 

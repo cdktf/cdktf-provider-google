@@ -4,7 +4,7 @@
 
 ### DataGoogleVmwareengineNetwork <a name="DataGoogleVmwareengineNetwork" id="@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network google_vmwareengine_network}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network google_vmwareengine_network}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetwork.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleVmwareengineNetw
 
 The id of the existing DataGoogleVmwareengineNetwork that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -730,8 +730,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglevmwareeng
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetworkConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetworkConfig.property.location">Location</a></code> | <code>*string</code> | The location where the VMwareEngineNetwork should reside. |
 | <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetworkConfig.property.name">Name</a></code> | <code>*string</code> | The ID of the VMwareEngineNetwork. |
-| <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network#id DataGoogleVmwareengineNetwork#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network#project DataGoogleVmwareengineNetwork#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network#id DataGoogleVmwareengineNetwork#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleVmwareengineNetwork.DataGoogleVmwareengineNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network#project DataGoogleVmwareengineNetwork#project}. |
 
 ---
 
@@ -815,7 +815,7 @@ Location *string
 
 The location where the VMwareEngineNetwork should reside.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network#location DataGoogleVmwareengineNetwork#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network#location DataGoogleVmwareengineNetwork#location}
 
 ---
 
@@ -829,7 +829,7 @@ Name *string
 
 The ID of the VMwareEngineNetwork.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network#name DataGoogleVmwareengineNetwork#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network#name DataGoogleVmwareengineNetwork#name}
 
 ---
 
@@ -841,7 +841,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network#id DataGoogleVmwareengineNetwork#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network#id DataGoogleVmwareengineNetwork#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -856,7 +856,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/data-sources/vmwareengine_network#project DataGoogleVmwareengineNetwork#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/vmwareengine_network#project DataGoogleVmwareengineNetwork#project}.
 
 ---
 

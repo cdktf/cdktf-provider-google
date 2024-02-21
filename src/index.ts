@@ -160,6 +160,7 @@ export * as cloudbuildv2ConnectionIamBinding from './cloudbuildv2-connection-iam
 export * as cloudbuildv2ConnectionIamMember from './cloudbuildv2-connection-iam-member';
 export * as cloudbuildv2ConnectionIamPolicy from './cloudbuildv2-connection-iam-policy';
 export * as cloudbuildv2Repository from './cloudbuildv2-repository';
+export * as clouddeployCustomTargetType from './clouddeploy-custom-target-type';
 export * as clouddeployDeliveryPipeline from './clouddeploy-delivery-pipeline';
 export * as clouddeployDeliveryPipelineIamBinding from './clouddeploy-delivery-pipeline-iam-binding';
 export * as clouddeployDeliveryPipelineIamMember from './clouddeploy-delivery-pipeline-iam-member';
@@ -424,6 +425,7 @@ export * as eventarcTrigger from './eventarc-trigger';
 export * as filestoreBackup from './filestore-backup';
 export * as filestoreInstance from './filestore-instance';
 export * as filestoreSnapshot from './filestore-snapshot';
+export * as firebaseAppCheckDebugToken from './firebase-app-check-debug-token';
 export * as firebaseAppCheckServiceConfig from './firebase-app-check-service-config';
 export * as firebaserulesRelease from './firebaserules-release';
 export * as firebaserulesRuleset from './firebaserules-ruleset';

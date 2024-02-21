@@ -1,3 +1,3 @@
 # `google_dataproc_workflow_template`
 
-Refer to the Terraform Registry for docs: [`google_dataproc_workflow_template`](https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/dataproc_workflow_template).
+Refer to the Terraform Registry for docs: [`google_dataproc_workflow_template`](https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dataproc_workflow_template).

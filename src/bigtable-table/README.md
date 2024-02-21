@@ -1,3 +1,3 @@
 # `google_bigtable_table`
 
-Refer to the Terraform Registry for docs: [`google_bigtable_table`](https://registry.terraform.io/providers/hashicorp/google/5.16.0/docs/resources/bigtable_table).
+Refer to the Terraform Registry for docs: [`google_bigtable_table`](https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/bigtable_table).
