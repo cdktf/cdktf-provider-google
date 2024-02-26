@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProvider(scope Construct, id *string, config IamWorkforcePoolProviderConfig) IamWorkforcePoolProvider
 ```
@@ -480,7 +480,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.IamWorkforcePoolProvider_IsConstruct(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.IamWorkforcePoolProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ iamworkforcepoolprovider.IamWorkforcePoolProvider_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.IamWorkforcePoolProvider_IsTerraformResource(x interface{}) *bool
 ```
@@ -540,7 +540,7 @@ iamworkforcepoolprovider.IamWorkforcePoolProvider_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.IamWorkforcePoolProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1055,7 +1055,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderConfig {
 	Connection: interface{},
@@ -1074,9 +1074,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolpro
 	Disabled: interface{},
 	DisplayName: *string,
 	Id: *string,
-	Oidc: github.com/cdktf/cdktf-provider-google-go/google/v13.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidc,
-	Saml: github.com/cdktf/cdktf-provider-google-go/google/v13.iamWorkforcePoolProvider.IamWorkforcePoolProviderSaml,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeouts,
+	Oidc: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidc,
+	Saml: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderSaml,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeouts,
 }
 ```
 
@@ -1427,14 +1427,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidc {
 	ClientId: *string,
 	IssuerUri: *string,
-	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google/v13.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecret,
+	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecret,
 	JwksJson: *string,
-	WebSsoConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfig,
+	WebSsoConfig: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfig,
 }
 ```
 
@@ -1550,10 +1550,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidcClientSecret {
-	Value: github.com/cdktf/cdktf-provider-google-go/google/v13.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValue,
+	Value: github.com/cdktf/cdktf-provider-google-go/google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValue,
 }
 ```
 
@@ -1584,7 +1584,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidcClientSecretValue {
 	PlainText: *string,
@@ -1618,7 +1618,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderOidcWebSsoConfig {
 	AssertionClaimsBehavior: *string,
@@ -1695,7 +1695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderSaml.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderSaml {
 	IdpMetadataXml: *string,
@@ -1745,7 +1745,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 &iamworkforcepoolprovider.IamWorkforcePoolProviderTimeouts {
 	Create: *string,
@@ -1807,7 +1807,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcClientSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcClientSecretOutputReference
 ```
@@ -2098,7 +2098,7 @@ func InternalValue() IamWorkforcePoolProviderOidcClientSecret
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcClientSecretValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcClientSecretValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcClientSecretValueOutputReference
 ```
@@ -2380,7 +2380,7 @@ func InternalValue() IamWorkforcePoolProviderOidcClientSecretValue
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcOutputReference
 ```
@@ -2786,7 +2786,7 @@ func InternalValue() IamWorkforcePoolProviderOidc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderOidcWebSsoConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderOidcWebSsoConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderOidcWebSsoConfigOutputReference
 ```
@@ -3108,7 +3108,7 @@ func InternalValue() IamWorkforcePoolProviderOidcWebSsoConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderSamlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderSamlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderSamlOutputReference
 ```
@@ -3379,7 +3379,7 @@ func InternalValue() IamWorkforcePoolProviderSaml
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamWorkforcePoolProvider.IamWorkforcePoolProviderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkforcepoolprovider"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamworkforcepoolprovider"
 
 iamworkforcepoolprovider.NewIamWorkforcePoolProviderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamWorkforcePoolProviderTimeoutsOutputReference
 ```
