@@ -1,3 +1,3 @@
 # `google_privateca_ca_pool_iam_member`
 
-Refer to the Terraform Registry for docs: [`google_privateca_ca_pool_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/privateca_ca_pool_iam_member).
+Refer to the Terraform Registry for docs: [`google_privateca_ca_pool_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/privateca_ca_pool_iam_member).

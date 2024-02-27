@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume
+// https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   /**
   * Capacity of the volume (in GiB).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#capacity_gib NetappVolume#capacity_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#capacity_gib NetappVolume#capacity_gib}
   */
   readonly capacityGib: string;
   /**
@@ -23,17 +23,17 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   * Volumes may have nested snapshot resources. Deleting such a volume will fail.
   * Setting this parameter to FORCE will delete volumes including nested snapshots.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#deletion_policy NetappVolume#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#deletion_policy NetappVolume#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#description NetappVolume#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#description NetappVolume#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#id NetappVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#id NetappVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -42,7 +42,7 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   /**
   * Flag indicating if the volume is a kerberos volume or not, export policy rules control kerberos security modes (krb5, krb5i, krb5p).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#kerberos_enabled NetappVolume#kerberos_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#kerberos_enabled NetappVolume#kerberos_enabled}
   */
   readonly kerberosEnabled?: boolean | cdktf.IResolvable;
   /**
@@ -52,90 +52,96 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#labels NetappVolume#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#labels NetappVolume#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Name of the pool location. Usually a region name, expect for some STANDARD service level pools which require a zone name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#location NetappVolume#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#location NetappVolume#location}
   */
   readonly location: string;
   /**
   * The name of the volume. Needs to be unique per location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#name NetappVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#name NetappVolume#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#project NetappVolume#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#project NetappVolume#project}
   */
   readonly project?: string;
   /**
   * The protocol of the volume. Allowed combinations are '['NFSV3']', '['NFSV4']', '['SMB']', '['NFSV3', 'NFSV4']', '['SMB', 'NFSV3']' and '['SMB', 'NFSV4']'. Possible values: ["NFSV3", "NFSV4", "SMB"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#protocols NetappVolume#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#protocols NetappVolume#protocols}
   */
   readonly protocols: string[];
   /**
   * List of actions that are restricted on this volume. Possible values: ["DELETE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#restricted_actions NetappVolume#restricted_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#restricted_actions NetappVolume#restricted_actions}
   */
   readonly restrictedActions?: string[];
   /**
   * Security Style of the Volume. Use UNIX to use UNIX or NFSV4 ACLs for file permissions.
   * Use NTFS to use NTFS ACLs for file permissions. Can only be set for volumes which use SMB together with NFS as protocol. Possible values: ["NTFS", "UNIX"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#security_style NetappVolume#security_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#security_style NetappVolume#security_style}
   */
   readonly securityStyle?: string;
   /**
   * Share name (SMB) or export path (NFS) of the volume. Needs to be unique per location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#share_name NetappVolume#share_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#share_name NetappVolume#share_name}
   */
   readonly shareName: string;
   /**
   * Settings for volumes with SMB access. Possible values: ["ENCRYPT_DATA", "BROWSABLE", "CHANGE_NOTIFY", "NON_BROWSABLE", "OPLOCKS", "SHOW_SNAPSHOT", "SHOW_PREVIOUS_VERSIONS", "ACCESS_BASED_ENUMERATION", "CONTINUOUSLY_AVAILABLE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#smb_settings NetappVolume#smb_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#smb_settings NetappVolume#smb_settings}
   */
   readonly smbSettings?: string[];
   /**
   * If enabled, a NFS volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots. Will enable "Previous Versions" support for SMB.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#snapshot_directory NetappVolume#snapshot_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#snapshot_directory NetappVolume#snapshot_directory}
   */
   readonly snapshotDirectory?: boolean | cdktf.IResolvable;
   /**
   * Name of the storage pool to create the volume in. Pool needs enough spare capacity to accomodate the volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#storage_pool NetappVolume#storage_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#storage_pool NetappVolume#storage_pool}
   */
   readonly storagePool: string;
   /**
   * Unix permission the mount point will be created with. Default is 0770. Applicable for UNIX security style volumes only.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#unix_permissions NetappVolume#unix_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#unix_permissions NetappVolume#unix_permissions}
   */
   readonly unixPermissions?: string;
   /**
   * export_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#export_policy NetappVolume#export_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#export_policy NetappVolume#export_policy}
   */
   readonly exportPolicy?: NetappVolumeExportPolicy;
   /**
+  * restore_parameters block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#restore_parameters NetappVolume#restore_parameters}
+  */
+  readonly restoreParameters?: NetappVolumeRestoreParameters;
+  /**
   * snapshot_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#snapshot_policy NetappVolume#snapshot_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#snapshot_policy NetappVolume#snapshot_policy}
   */
   readonly snapshotPolicy?: NetappVolumeSnapshotPolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
   */
   readonly timeouts?: NetappVolumeTimeouts;
 }
@@ -233,67 +239,67 @@ export interface NetappVolumeExportPolicyRules {
   /**
   * Defines the access type for clients matching the 'allowedClients' specification. Possible values: ["READ_ONLY", "READ_WRITE", "READ_NONE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#access_type NetappVolume#access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#access_type NetappVolume#access_type}
   */
   readonly accessType?: string;
   /**
   * Defines the client ingress specification (allowed clients) as a comma seperated list with IPv4 CIDRs or IPv4 host addresses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#allowed_clients NetappVolume#allowed_clients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#allowed_clients NetappVolume#allowed_clients}
   */
   readonly allowedClients?: string;
   /**
   * If enabled, the root user (UID = 0) of the specified clients doesn't get mapped to nobody (UID = 65534). This is also known as no_root_squash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#has_root_access NetappVolume#has_root_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#has_root_access NetappVolume#has_root_access}
   */
   readonly hasRootAccess?: string;
   /**
   * If enabled (true) the rule defines a read only access for clients matching the 'allowedClients' specification. It enables nfs clients to mount using 'authentication' kerberos security mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#kerberos5_read_only NetappVolume#kerberos5_read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#kerberos5_read_only NetappVolume#kerberos5_read_only}
   */
   readonly kerberos5ReadOnly?: boolean | cdktf.IResolvable;
   /**
   * If enabled (true) the rule defines read and write access for clients matching the 'allowedClients' specification. It enables nfs clients to mount using 'authentication' kerberos security mode. The 'kerberos5ReadOnly' value is ignored if this is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#kerberos5_read_write NetappVolume#kerberos5_read_write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#kerberos5_read_write NetappVolume#kerberos5_read_write}
   */
   readonly kerberos5ReadWrite?: boolean | cdktf.IResolvable;
   /**
   * If enabled (true) the rule defines a read only access for clients matching the 'allowedClients' specification. It enables nfs clients to mount using 'integrity' kerberos security mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#kerberos5i_read_only NetappVolume#kerberos5i_read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#kerberos5i_read_only NetappVolume#kerberos5i_read_only}
   */
   readonly kerberos5IReadOnly?: boolean | cdktf.IResolvable;
   /**
   * If enabled (true) the rule defines read and write access for clients matching the 'allowedClients' specification. It enables nfs clients to mount using 'integrity' kerberos security mode. The 'kerberos5iReadOnly' value is ignored if this is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#kerberos5i_read_write NetappVolume#kerberos5i_read_write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#kerberos5i_read_write NetappVolume#kerberos5i_read_write}
   */
   readonly kerberos5IReadWrite?: boolean | cdktf.IResolvable;
   /**
   * If enabled (true) the rule defines a read only access for clients matching the 'allowedClients' specification. It enables nfs clients to mount using 'privacy' kerberos security mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#kerberos5p_read_only NetappVolume#kerberos5p_read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#kerberos5p_read_only NetappVolume#kerberos5p_read_only}
   */
   readonly kerberos5PReadOnly?: boolean | cdktf.IResolvable;
   /**
   * If enabled (true) the rule defines read and write access for clients matching the 'allowedClients' specification. It enables nfs clients to mount using 'privacy' kerberos security mode. The 'kerberos5pReadOnly' value is ignored if this is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#kerberos5p_read_write NetappVolume#kerberos5p_read_write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#kerberos5p_read_write NetappVolume#kerberos5p_read_write}
   */
   readonly kerberos5PReadWrite?: boolean | cdktf.IResolvable;
   /**
   * Enable to apply the export rule to NFSV3 clients.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#nfsv3 NetappVolume#nfsv3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#nfsv3 NetappVolume#nfsv3}
   */
   readonly nfsv3?: boolean | cdktf.IResolvable;
   /**
   * Enable to apply the export rule to NFSV4.1 clients.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#nfsv4 NetappVolume#nfsv4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#nfsv4 NetappVolume#nfsv4}
   */
   readonly nfsv4?: boolean | cdktf.IResolvable;
 }
@@ -701,7 +707,7 @@ export interface NetappVolumeExportPolicy {
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#rules NetappVolume#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#rules NetappVolume#rules}
   */
   readonly rules: NetappVolumeExportPolicyRules[] | cdktf.IResolvable;
 }
@@ -780,23 +786,148 @@ export class NetappVolumeExportPolicyOutputReference extends cdktf.ComplexObject
     return this._rules.internalValue;
   }
 }
+export interface NetappVolumeRestoreParameters {
+  /**
+  * Full name of the snapshot to use for creating this volume.
+  * 'source_snapshot' and 'source_backup' cannot be used simultaneously.
+  * Format: 'projects/{{project}}/locations/{{location}}/backupVaults/{{backupVaultId}}/backups/{{backup}}'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#source_backup NetappVolume#source_backup}
+  */
+  readonly sourceBackup?: string;
+  /**
+  * Full name of the snapshot to use for creating this volume.
+  * 'source_snapshot' and 'source_backup' cannot be used simultaneously.
+  * Format: 'projects/{{project}}/locations/{{location}}/volumes/{{volume}}/snapshots/{{snapshot}}'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#source_snapshot NetappVolume#source_snapshot}
+  */
+  readonly sourceSnapshot?: string;
+}
+
+export function netappVolumeRestoreParametersToTerraform(struct?: NetappVolumeRestoreParametersOutputReference | NetappVolumeRestoreParameters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    source_backup: cdktf.stringToTerraform(struct!.sourceBackup),
+    source_snapshot: cdktf.stringToTerraform(struct!.sourceSnapshot),
+  }
+}
+
+
+export function netappVolumeRestoreParametersToHclTerraform(struct?: NetappVolumeRestoreParametersOutputReference | NetappVolumeRestoreParameters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    source_backup: {
+      value: cdktf.stringToHclTerraform(struct!.sourceBackup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_snapshot: {
+      value: cdktf.stringToHclTerraform(struct!.sourceSnapshot),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NetappVolumeRestoreParametersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetappVolumeRestoreParameters | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sourceBackup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceBackup = this._sourceBackup;
+    }
+    if (this._sourceSnapshot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceSnapshot = this._sourceSnapshot;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetappVolumeRestoreParameters | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._sourceBackup = undefined;
+      this._sourceSnapshot = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._sourceBackup = value.sourceBackup;
+      this._sourceSnapshot = value.sourceSnapshot;
+    }
+  }
+
+  // source_backup - computed: false, optional: true, required: false
+  private _sourceBackup?: string; 
+  public get sourceBackup() {
+    return this.getStringAttribute('source_backup');
+  }
+  public set sourceBackup(value: string) {
+    this._sourceBackup = value;
+  }
+  public resetSourceBackup() {
+    this._sourceBackup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceBackupInput() {
+    return this._sourceBackup;
+  }
+
+  // source_snapshot - computed: false, optional: true, required: false
+  private _sourceSnapshot?: string; 
+  public get sourceSnapshot() {
+    return this.getStringAttribute('source_snapshot');
+  }
+  public set sourceSnapshot(value: string) {
+    this._sourceSnapshot = value;
+  }
+  public resetSourceSnapshot() {
+    this._sourceSnapshot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSnapshotInput() {
+    return this._sourceSnapshot;
+  }
+}
 export interface NetappVolumeSnapshotPolicyDailySchedule {
   /**
   * Set the hour to create the snapshot (0-23), defaults to midnight (0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#hour NetappVolume#hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#hour NetappVolume#hour}
   */
   readonly hour?: number;
   /**
   * Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#minute NetappVolume#minute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#minute NetappVolume#minute}
   */
   readonly minute?: number;
   /**
   * The maximum number of snapshots to keep for the daily schedule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -937,13 +1068,13 @@ export interface NetappVolumeSnapshotPolicyHourlySchedule {
   /**
   * Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#minute NetappVolume#minute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#minute NetappVolume#minute}
   */
   readonly minute?: number;
   /**
   * The maximum number of snapshots to keep for the hourly schedule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -1055,25 +1186,25 @@ export interface NetappVolumeSnapshotPolicyMonthlySchedule {
   /**
   * Set the day or days of the month to make a snapshot (1-31). Accepts a comma separated number of days. Defaults to '1'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#days_of_month NetappVolume#days_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#days_of_month NetappVolume#days_of_month}
   */
   readonly daysOfMonth?: string;
   /**
   * Set the hour to create the snapshot (0-23), defaults to midnight (0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#hour NetappVolume#hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#hour NetappVolume#hour}
   */
   readonly hour?: number;
   /**
   * Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#minute NetappVolume#minute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#minute NetappVolume#minute}
   */
   readonly minute?: number;
   /**
   * The maximum number of snapshots to keep for the monthly schedule
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -1243,25 +1374,25 @@ export interface NetappVolumeSnapshotPolicyWeeklySchedule {
   /**
   * Set the day or days of the week to make a snapshot. Accepts a comma separated days of the week. Defaults to 'Sunday'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#day NetappVolume#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#day NetappVolume#day}
   */
   readonly day?: string;
   /**
   * Set the hour to create the snapshot (0-23), defaults to midnight (0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#hour NetappVolume#hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#hour NetappVolume#hour}
   */
   readonly hour?: number;
   /**
   * Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#minute NetappVolume#minute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#minute NetappVolume#minute}
   */
   readonly minute?: number;
   /**
   * The maximum number of snapshots to keep for the weekly schedule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -1432,31 +1563,31 @@ export interface NetappVolumeSnapshotPolicy {
   * Enables automated snapshot creation according to defined schedule. Default is false.
   * To disable automatic snapshot creation you have to remove the whole snapshot_policy block.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#enabled NetappVolume#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#enabled NetappVolume#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * daily_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#daily_schedule NetappVolume#daily_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#daily_schedule NetappVolume#daily_schedule}
   */
   readonly dailySchedule?: NetappVolumeSnapshotPolicyDailySchedule;
   /**
   * hourly_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#hourly_schedule NetappVolume#hourly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#hourly_schedule NetappVolume#hourly_schedule}
   */
   readonly hourlySchedule?: NetappVolumeSnapshotPolicyHourlySchedule;
   /**
   * monthly_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#monthly_schedule NetappVolume#monthly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#monthly_schedule NetappVolume#monthly_schedule}
   */
   readonly monthlySchedule?: NetappVolumeSnapshotPolicyMonthlySchedule;
   /**
   * weekly_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#weekly_schedule NetappVolume#weekly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#weekly_schedule NetappVolume#weekly_schedule}
   */
   readonly weeklySchedule?: NetappVolumeSnapshotPolicyWeeklySchedule;
 }
@@ -1656,15 +1787,15 @@ export class NetappVolumeSnapshotPolicyOutputReference extends cdktf.ComplexObje
 }
 export interface NetappVolumeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#create NetappVolume#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#create NetappVolume#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#delete NetappVolume#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#delete NetappVolume#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#update NetappVolume#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#update NetappVolume#update}
   */
   readonly update?: string;
 }
@@ -1816,7 +1947,7 @@ export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume google_netapp_volume}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume google_netapp_volume}
 */
 export class NetappVolume extends cdktf.TerraformResource {
 
@@ -1832,7 +1963,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappVolume resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappVolume to import
-  * @param importFromId The id of the existing NetappVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1844,7 +1975,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/netapp_volume google_netapp_volume} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/netapp_volume google_netapp_volume} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1855,7 +1986,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       terraformResourceType: 'google_netapp_volume',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.17.0',
+        providerVersion: '5.18.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -1884,6 +2015,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._storagePool = config.storagePool;
     this._unixPermissions = config.unixPermissions;
     this._exportPolicy.internalValue = config.exportPolicy;
+    this._restoreParameters.internalValue = config.restoreParameters;
     this._snapshotPolicy.internalValue = config.snapshotPolicy;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1908,6 +2040,11 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get capacityGibInput() {
     return this._capacityGib;
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
   }
 
   // deletion_policy - computed: false, optional: true, required: false
@@ -2169,6 +2306,16 @@ export class NetappVolume extends cdktf.TerraformResource {
     return this._snapshotDirectory;
   }
 
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+
+  // state_details - computed: true, optional: false, required: false
+  public get stateDetails() {
+    return this.getStringAttribute('state_details');
+  }
+
   // storage_pool - computed: false, optional: false, required: true
   private _storagePool?: string; 
   public get storagePool() {
@@ -2223,6 +2370,22 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get exportPolicyInput() {
     return this._exportPolicy.internalValue;
+  }
+
+  // restore_parameters - computed: false, optional: true, required: false
+  private _restoreParameters = new NetappVolumeRestoreParametersOutputReference(this, "restore_parameters");
+  public get restoreParameters() {
+    return this._restoreParameters;
+  }
+  public putRestoreParameters(value: NetappVolumeRestoreParameters) {
+    this._restoreParameters.internalValue = value;
+  }
+  public resetRestoreParameters() {
+    this._restoreParameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreParametersInput() {
+    return this._restoreParameters.internalValue;
   }
 
   // snapshot_policy - computed: false, optional: true, required: false
@@ -2281,6 +2444,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       storage_pool: cdktf.stringToTerraform(this._storagePool),
       unix_permissions: cdktf.stringToTerraform(this._unixPermissions),
       export_policy: netappVolumeExportPolicyToTerraform(this._exportPolicy.internalValue),
+      restore_parameters: netappVolumeRestoreParametersToTerraform(this._restoreParameters.internalValue),
       snapshot_policy: netappVolumeSnapshotPolicyToTerraform(this._snapshotPolicy.internalValue),
       timeouts: netappVolumeTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -2395,6 +2559,12 @@ export class NetappVolume extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "NetappVolumeExportPolicyList",
+      },
+      restore_parameters: {
+        value: netappVolumeRestoreParametersToHclTerraform(this._restoreParameters.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappVolumeRestoreParametersList",
       },
       snapshot_policy: {
         value: netappVolumeSnapshotPolicyToHclTerraform(this._snapshotPolicy.internalValue),

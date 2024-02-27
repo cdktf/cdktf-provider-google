@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface CloudTasksQueueIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#id CloudTasksQueueIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#id CloudTasksQueueIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#location CloudTasksQueueIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#location CloudTasksQueueIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#member CloudTasksQueueIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#member CloudTasksQueueIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#name CloudTasksQueueIamMember#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#name CloudTasksQueueIamMember#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#project CloudTasksQueueIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#project CloudTasksQueueIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#role CloudTasksQueueIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#role CloudTasksQueueIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#condition CloudTasksQueueIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#condition CloudTasksQueueIamMember#condition}
   */
   readonly condition?: CloudTasksQueueIamMemberCondition;
 }
 export interface CloudTasksQueueIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#description CloudTasksQueueIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#description CloudTasksQueueIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#expression CloudTasksQueueIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#expression CloudTasksQueueIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#title CloudTasksQueueIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#title CloudTasksQueueIamMember#title}
   */
   readonly title: string;
 }
@@ -192,7 +192,7 @@ export class CloudTasksQueueIamMemberConditionOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member google_cloud_tasks_queue_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member google_cloud_tasks_queue_iam_member}
 */
 export class CloudTasksQueueIamMember extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class CloudTasksQueueIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudTasksQueueIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudTasksQueueIamMember to import
-  * @param importFromId The id of the existing CloudTasksQueueIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudTasksQueueIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudTasksQueueIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +220,7 @@ export class CloudTasksQueueIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/cloud_tasks_queue_iam_member google_cloud_tasks_queue_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/cloud_tasks_queue_iam_member google_cloud_tasks_queue_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +231,7 @@ export class CloudTasksQueueIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_tasks_queue_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.17.0',
+        providerVersion: '5.18.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

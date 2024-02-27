@@ -425,7 +425,11 @@ Object.defineProperty(exports, 'eventarcTrigger', { get: function () { return re
 Object.defineProperty(exports, 'filestoreBackup', { get: function () { return require('./filestore-backup'); } });
 Object.defineProperty(exports, 'filestoreInstance', { get: function () { return require('./filestore-instance'); } });
 Object.defineProperty(exports, 'filestoreSnapshot', { get: function () { return require('./filestore-snapshot'); } });
+Object.defineProperty(exports, 'firebaseAppCheckAppAttestConfig', { get: function () { return require('./firebase-app-check-app-attest-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckDebugToken', { get: function () { return require('./firebase-app-check-debug-token'); } });
+Object.defineProperty(exports, 'firebaseAppCheckPlayIntegrityConfig', { get: function () { return require('./firebase-app-check-play-integrity-config'); } });
+Object.defineProperty(exports, 'firebaseAppCheckRecaptchaEnterpriseConfig', { get: function () { return require('./firebase-app-check-recaptcha-enterprise-config'); } });
+Object.defineProperty(exports, 'firebaseAppCheckRecaptchaV3Config', { get: function () { return require('./firebase-app-check-recaptcha-v3-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckServiceConfig', { get: function () { return require('./firebase-app-check-service-config'); } });
 Object.defineProperty(exports, 'firebaserulesRelease', { get: function () { return require('./firebaserules-release'); } });
 Object.defineProperty(exports, 'firebaserulesRuleset', { get: function () { return require('./firebaserules-ruleset'); } });
@@ -568,6 +572,7 @@ Object.defineProperty(exports, 'loggingProjectSink', { get: function () { return
 Object.defineProperty(exports, 'lookerInstance', { get: function () { return require('./looker-instance'); } });
 Object.defineProperty(exports, 'memcacheInstance', { get: function () { return require('./memcache-instance'); } });
 Object.defineProperty(exports, 'migrationCenterGroup', { get: function () { return require('./migration-center-group'); } });
+Object.defineProperty(exports, 'migrationCenterPreferenceSet', { get: function () { return require('./migration-center-preference-set'); } });
 Object.defineProperty(exports, 'mlEngineModel', { get: function () { return require('./ml-engine-model'); } });
 Object.defineProperty(exports, 'monitoringAlertPolicy', { get: function () { return require('./monitoring-alert-policy'); } });
 Object.defineProperty(exports, 'monitoringCustomService', { get: function () { return require('./monitoring-custom-service'); } });
@@ -585,6 +590,7 @@ Object.defineProperty(exports, 'netappBackupVault', { get: function () { return 
 Object.defineProperty(exports, 'netappKmsconfig', { get: function () { return require('./netapp-kmsconfig'); } });
 Object.defineProperty(exports, 'netappStoragePool', { get: function () { return require('./netapp-storage-pool'); } });
 Object.defineProperty(exports, 'netappVolume', { get: function () { return require('./netapp-volume'); } });
+Object.defineProperty(exports, 'netappVolumeReplication', { get: function () { return require('./netapp-volume-replication'); } });
 Object.defineProperty(exports, 'netappVolumeSnapshot', { get: function () { return require('./netapp-volume-snapshot'); } });
 Object.defineProperty(exports, 'networkConnectivityHub', { get: function () { return require('./network-connectivity-hub'); } });
 Object.defineProperty(exports, 'networkConnectivityPolicyBasedRoute', { get: function () { return require('./network-connectivity-policy-based-route'); } });
@@ -821,6 +827,7 @@ Object.defineProperty(exports, 'dataGoogleComputeDefaultServiceAccount', { get: 
 Object.defineProperty(exports, 'dataGoogleComputeDisk', { get: function () { return require('./data-google-compute-disk'); } });
 Object.defineProperty(exports, 'dataGoogleComputeDiskIamPolicy', { get: function () { return require('./data-google-compute-disk-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleComputeForwardingRule', { get: function () { return require('./data-google-compute-forwarding-rule'); } });
+Object.defineProperty(exports, 'dataGoogleComputeForwardingRules', { get: function () { return require('./data-google-compute-forwarding-rules'); } });
 Object.defineProperty(exports, 'dataGoogleComputeGlobalAddress', { get: function () { return require('./data-google-compute-global-address'); } });
 Object.defineProperty(exports, 'dataGoogleComputeGlobalForwardingRule', { get: function () { return require('./data-google-compute-global-forwarding-rule'); } });
 Object.defineProperty(exports, 'dataGoogleComputeHaVpnGateway', { get: function () { return require('./data-google-compute-ha-vpn-gateway'); } });
