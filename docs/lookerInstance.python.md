@@ -4,7 +4,7 @@
 
 ### LookerInstance <a name="LookerInstance" id="@cdktf/provider-google.lookerInstance.LookerInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance google_looker_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance google_looker_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer"></a>
 
@@ -24,6 +24,7 @@ lookerInstance.LookerInstance(
   name: str,
   admin_settings: LookerInstanceAdminSettings = None,
   consumer_network: str = None,
+  custom_domain: LookerInstanceCustomDomain = None,
   deny_maintenance_period: LookerInstanceDenyMaintenancePeriod = None,
   encryption_config: LookerInstanceEncryptionConfig = None,
   id: str = None,
@@ -54,14 +55,15 @@ lookerInstance.LookerInstance(
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.name">name</a></code> | <code>str</code> | The ID of the instance or a fully qualified identifier for the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.adminSettings">admin_settings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettings">LookerInstanceAdminSettings</a></code> | admin_settings block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.consumerNetwork">consumer_network</a></code> | <code>str</code> | Network name in the consumer project in the format of: projects/{project}/global/networks/{network} Note that the consumer network may be in a different GCP project than the consumer project that is hosting the Looker Instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.customDomain">custom_domain</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a></code> | custom_domain block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.denyMaintenancePeriod">deny_maintenance_period</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | deny_maintenance_period block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#id LookerInstance#id}. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#id LookerInstance#id}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.maintenanceWindow">maintenance_window</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceMaintenanceWindow">LookerInstanceMaintenanceWindow</a></code> | maintenance_window block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.oauthConfig">oauth_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceOauthConfig">LookerInstanceOauthConfig</a></code> | oauth_config block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.platformEdition">platform_edition</a></code> | <code>str</code> | Platform editions for a Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.privateIpEnabled">private_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether private IP is enabled on the Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#project LookerInstance#project}. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#project LookerInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.publicIpEnabled">public_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether public IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.region">region</a></code> | <code>str</code> | The name of the Looker region of the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.reservedRange">reserved_range</a></code> | <code>str</code> | Name of a reserved IP address range within the consumer network, to be used for private service access connection. |
@@ -136,7 +138,7 @@ Must be unique amongst siblings in the same scope
 
 The ID of the instance or a fully qualified identifier for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#name LookerInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#name LookerInstance#name}
 
 ---
 
@@ -146,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 admin_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#admin_settings LookerInstance#admin_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#admin_settings LookerInstance#admin_settings}
 
 ---
 
@@ -156,7 +158,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Network name in the consumer project in the format of: projects/{project}/global/networks/{network} Note that the consumer network may be in a different GCP project than the consumer project that is hosting the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#consumer_network LookerInstance#consumer_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#consumer_network LookerInstance#consumer_network}
+
+---
+
+##### `custom_domain`<sup>Optional</sup> <a name="custom_domain" id="@cdktf/provider-google.lookerInstance.LookerInstance.Initializer.parameter.customDomain"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a>
+
+custom_domain block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#custom_domain LookerInstance#custom_domain}
 
 ---
 
@@ -166,7 +178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 deny_maintenance_period block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#deny_maintenance_period LookerInstance#deny_maintenance_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#deny_maintenance_period LookerInstance#deny_maintenance_period}
 
 ---
 
@@ -176,7 +188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#encryption_config LookerInstance#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#encryption_config LookerInstance#encryption_config}
 
 ---
 
@@ -184,7 +196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#id LookerInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#id LookerInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -197,7 +209,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#maintenance_window LookerInstance#maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#maintenance_window LookerInstance#maintenance_window}
 
 ---
 
@@ -207,7 +219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 oauth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#oauth_config LookerInstance#oauth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#oauth_config LookerInstance#oauth_config}
 
 ---
 
@@ -225,7 +237,7 @@ Each edition maps to a set of instance features, like its size. Must be one of t
 * LOOKER_CORE_ENTERPRISE_ANNUAL: subscription enterprise instance
 * LOOKER_CORE_EMBED_ANNUAL: subscription embed instance Default value: "LOOKER_CORE_TRIAL" Possible values: ["LOOKER_CORE_TRIAL", "LOOKER_CORE_STANDARD", "LOOKER_CORE_STANDARD_ANNUAL", "LOOKER_CORE_ENTERPRISE_ANNUAL", "LOOKER_CORE_EMBED_ANNUAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#platform_edition LookerInstance#platform_edition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#platform_edition LookerInstance#platform_edition}
 
 ---
 
@@ -235,7 +247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether private IP is enabled on the Looker instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#private_ip_enabled LookerInstance#private_ip_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#private_ip_enabled LookerInstance#private_ip_enabled}
 
 ---
 
@@ -243,7 +255,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#project LookerInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#project LookerInstance#project}.
 
 ---
 
@@ -253,7 +265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether public IP is enabled on the Looker instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#public_ip_enabled LookerInstance#public_ip_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#public_ip_enabled LookerInstance#public_ip_enabled}
 
 ---
 
@@ -263,7 +275,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the Looker region of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#region LookerInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#region LookerInstance#region}
 
 ---
 
@@ -275,7 +287,7 @@ Name of a reserved IP address range within the consumer network, to be used for 
 
 User may or may not specify this in a request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#reserved_range LookerInstance#reserved_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#reserved_range LookerInstance#reserved_range}
 
 ---
 
@@ -285,7 +297,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#timeouts LookerInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#timeouts LookerInstance#timeouts}
 
 ---
 
@@ -295,7 +307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 user_metadata block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#user_metadata LookerInstance#user_metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#user_metadata LookerInstance#user_metadata}
 
 ---
 
@@ -327,6 +339,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.putAdminSettings">put_admin_settings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.putCustomDomain">put_custom_domain</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.putDenyMaintenancePeriod">put_deny_maintenance_period</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.putEncryptionConfig">put_encryption_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.putMaintenanceWindow">put_maintenance_window</a></code> | *No description.* |
@@ -335,6 +348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.putUserMetadata">put_user_metadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.resetAdminSettings">reset_admin_settings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.resetConsumerNetwork">reset_consumer_network</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.resetCustomDomain">reset_custom_domain</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.resetDenyMaintenancePeriod">reset_deny_maintenance_period</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.resetEncryptionConfig">reset_encryption_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.resetId">reset_id</a></code> | *No description.* |
@@ -695,7 +709,25 @@ Updating this list will restart the instance. Updating the allowed email domains
 means the value provided will be considered as the entire list and not an amendment to the
 existing list of allowed email domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#allowed_email_domains LookerInstance#allowed_email_domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#allowed_email_domains LookerInstance#allowed_email_domains}
+
+---
+
+##### `put_custom_domain` <a name="put_custom_domain" id="@cdktf/provider-google.lookerInstance.LookerInstance.putCustomDomain"></a>
+
+```python
+def put_custom_domain(
+  domain: str = None
+) -> None
+```
+
+###### `domain`<sup>Optional</sup> <a name="domain" id="@cdktf/provider-google.lookerInstance.LookerInstance.putCustomDomain.parameter.domain"></a>
+
+- *Type:* str
+
+Domain name.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#domain LookerInstance#domain}
 
 ---
 
@@ -715,7 +747,7 @@ def put_deny_maintenance_period(
 
 end_date block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#end_date LookerInstance#end_date}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#end_date LookerInstance#end_date}
 
 ---
 
@@ -725,7 +757,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 start_date block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#start_date LookerInstance#start_date}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#start_date LookerInstance#start_date}
 
 ---
 
@@ -735,7 +767,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 time block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#time LookerInstance#time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#time LookerInstance#time}
 
 ---
 
@@ -753,7 +785,7 @@ def put_encryption_config(
 
 Name of the customer managed encryption key (CMEK) in KMS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#kms_key_name LookerInstance#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#kms_key_name LookerInstance#kms_key_name}
 
 ---
 
@@ -780,7 +812,7 @@ Required. Day of the week for this MaintenanceWindow (in UTC).
 * SATURDAY: Saturday
 * SUNDAY: Sunday Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#day_of_week LookerInstance#day_of_week}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#day_of_week LookerInstance#day_of_week}
 
 ---
 
@@ -790,7 +822,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 start_time block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#start_time LookerInstance#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#start_time LookerInstance#start_time}
 
 ---
 
@@ -809,7 +841,7 @@ def put_oauth_config(
 
 The client ID for the Oauth config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#client_id LookerInstance#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#client_id LookerInstance#client_id}
 
 ---
 
@@ -819,7 +851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The client secret for the Oauth config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#client_secret LookerInstance#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#client_secret LookerInstance#client_secret}
 
 ---
 
@@ -837,7 +869,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#create LookerInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#create LookerInstance#create}.
 
 ---
 
@@ -845,7 +877,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#delete LookerInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#delete LookerInstance#delete}.
 
 ---
 
@@ -853,7 +885,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#update LookerInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#update LookerInstance#update}.
 
 ---
 
@@ -873,7 +905,7 @@ def put_user_metadata(
 
 Number of additional Developer Users to allocate to the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#additional_developer_user_count LookerInstance#additional_developer_user_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#additional_developer_user_count LookerInstance#additional_developer_user_count}
 
 ---
 
@@ -883,7 +915,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Number of additional Standard Users to allocate to the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#additional_standard_user_count LookerInstance#additional_standard_user_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#additional_standard_user_count LookerInstance#additional_standard_user_count}
 
 ---
 
@@ -893,7 +925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Number of additional Viewer Users to allocate to the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#additional_viewer_user_count LookerInstance#additional_viewer_user_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#additional_viewer_user_count LookerInstance#additional_viewer_user_count}
 
 ---
 
@@ -907,6 +939,12 @@ def reset_admin_settings() -> None
 
 ```python
 def reset_consumer_network() -> None
+```
+
+##### `reset_custom_domain` <a name="reset_custom_domain" id="@cdktf/provider-google.lookerInstance.LookerInstance.resetCustomDomain"></a>
+
+```python
+def reset_custom_domain() -> None
 ```
 
 ##### `reset_deny_maintenance_period` <a name="reset_deny_maintenance_period" id="@cdktf/provider-google.lookerInstance.LookerInstance.resetDenyMaintenancePeriod"></a>
@@ -1101,7 +1139,7 @@ The construct id used in the generated config for the LookerInstance to import.
 
 The id of the existing LookerInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1133,6 +1171,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.adminSettings">admin_settings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettingsOutputReference">LookerInstanceAdminSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.createTime">create_time</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.customDomain">custom_domain</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference">LookerInstanceCustomDomainOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.denyMaintenancePeriod">deny_maintenance_period</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriodOutputReference">LookerInstanceDenyMaintenancePeriodOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.egressPublicIp">egress_public_ip</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfigOutputReference">LookerInstanceEncryptionConfigOutputReference</a></code> | *No description.* |
@@ -1147,6 +1186,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.1
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.userMetadata">user_metadata</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceUserMetadataOutputReference">LookerInstanceUserMetadataOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.adminSettingsInput">admin_settings_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettings">LookerInstanceAdminSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.consumerNetworkInput">consumer_network_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.customDomainInput">custom_domain_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.denyMaintenancePeriodInput">deny_maintenance_period_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.encryptionConfigInput">encryption_config_input</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstance.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
@@ -1335,6 +1375,16 @@ create_time: str
 
 ---
 
+##### `custom_domain`<sup>Required</sup> <a name="custom_domain" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.customDomain"></a>
+
+```python
+custom_domain: LookerInstanceCustomDomainOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference">LookerInstanceCustomDomainOutputReference</a>
+
+---
+
 ##### `deny_maintenance_period`<sup>Required</sup> <a name="deny_maintenance_period" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.denyMaintenancePeriod"></a>
 
 ```python
@@ -1472,6 +1522,16 @@ consumer_network_input: str
 ```
 
 - *Type:* str
+
+---
+
+##### `custom_domain_input`<sup>Optional</sup> <a name="custom_domain_input" id="@cdktf/provider-google.lookerInstance.LookerInstance.property.customDomainInput"></a>
+
+```python
+custom_domain_input: LookerInstanceCustomDomain
+```
+
+- *Type:* <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a>
 
 ---
 
@@ -1760,7 +1820,7 @@ Updating this list will restart the instance. Updating the allowed email domains
 means the value provided will be considered as the entire list and not an amendment to the
 existing list of allowed email domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#allowed_email_domains LookerInstance#allowed_email_domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#allowed_email_domains LookerInstance#allowed_email_domains}
 
 ---
 
@@ -1782,6 +1842,7 @@ lookerInstance.LookerInstanceConfig(
   name: str,
   admin_settings: LookerInstanceAdminSettings = None,
   consumer_network: str = None,
+  custom_domain: LookerInstanceCustomDomain = None,
   deny_maintenance_period: LookerInstanceDenyMaintenancePeriod = None,
   encryption_config: LookerInstanceEncryptionConfig = None,
   id: str = None,
@@ -1812,14 +1873,15 @@ lookerInstance.LookerInstanceConfig(
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.name">name</a></code> | <code>str</code> | The ID of the instance or a fully qualified identifier for the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.adminSettings">admin_settings</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettings">LookerInstanceAdminSettings</a></code> | admin_settings block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.consumerNetwork">consumer_network</a></code> | <code>str</code> | Network name in the consumer project in the format of: projects/{project}/global/networks/{network} Note that the consumer network may be in a different GCP project than the consumer project that is hosting the Looker Instance. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.customDomain">custom_domain</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a></code> | custom_domain block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.denyMaintenancePeriod">deny_maintenance_period</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceDenyMaintenancePeriod">LookerInstanceDenyMaintenancePeriod</a></code> | deny_maintenance_period block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceEncryptionConfig">LookerInstanceEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#id LookerInstance#id}. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#id LookerInstance#id}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.maintenanceWindow">maintenance_window</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceMaintenanceWindow">LookerInstanceMaintenanceWindow</a></code> | maintenance_window block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.oauthConfig">oauth_config</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceOauthConfig">LookerInstanceOauthConfig</a></code> | oauth_config block. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.platformEdition">platform_edition</a></code> | <code>str</code> | Platform editions for a Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.privateIpEnabled">private_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether private IP is enabled on the Looker instance. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#project LookerInstance#project}. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#project LookerInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.publicIpEnabled">public_ip_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether public IP is enabled on the Looker instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.region">region</a></code> | <code>str</code> | The name of the Looker region of the instance. |
 | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.reservedRange">reserved_range</a></code> | <code>str</code> | Name of a reserved IP address range within the consumer network, to be used for private service access connection. |
@@ -1908,7 +1970,7 @@ name: str
 
 The ID of the instance or a fully qualified identifier for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#name LookerInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#name LookerInstance#name}
 
 ---
 
@@ -1922,7 +1984,7 @@ admin_settings: LookerInstanceAdminSettings
 
 admin_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#admin_settings LookerInstance#admin_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#admin_settings LookerInstance#admin_settings}
 
 ---
 
@@ -1936,7 +1998,21 @@ consumer_network: str
 
 Network name in the consumer project in the format of: projects/{project}/global/networks/{network} Note that the consumer network may be in a different GCP project than the consumer project that is hosting the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#consumer_network LookerInstance#consumer_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#consumer_network LookerInstance#consumer_network}
+
+---
+
+##### `custom_domain`<sup>Optional</sup> <a name="custom_domain" id="@cdktf/provider-google.lookerInstance.LookerInstanceConfig.property.customDomain"></a>
+
+```python
+custom_domain: LookerInstanceCustomDomain
+```
+
+- *Type:* <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a>
+
+custom_domain block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#custom_domain LookerInstance#custom_domain}
 
 ---
 
@@ -1950,7 +2026,7 @@ deny_maintenance_period: LookerInstanceDenyMaintenancePeriod
 
 deny_maintenance_period block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#deny_maintenance_period LookerInstance#deny_maintenance_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#deny_maintenance_period LookerInstance#deny_maintenance_period}
 
 ---
 
@@ -1964,7 +2040,7 @@ encryption_config: LookerInstanceEncryptionConfig
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#encryption_config LookerInstance#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#encryption_config LookerInstance#encryption_config}
 
 ---
 
@@ -1976,7 +2052,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#id LookerInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#id LookerInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1993,7 +2069,7 @@ maintenance_window: LookerInstanceMaintenanceWindow
 
 maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#maintenance_window LookerInstance#maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#maintenance_window LookerInstance#maintenance_window}
 
 ---
 
@@ -2007,7 +2083,7 @@ oauth_config: LookerInstanceOauthConfig
 
 oauth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#oauth_config LookerInstance#oauth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#oauth_config LookerInstance#oauth_config}
 
 ---
 
@@ -2029,7 +2105,7 @@ Each edition maps to a set of instance features, like its size. Must be one of t
 * LOOKER_CORE_ENTERPRISE_ANNUAL: subscription enterprise instance
 * LOOKER_CORE_EMBED_ANNUAL: subscription embed instance Default value: "LOOKER_CORE_TRIAL" Possible values: ["LOOKER_CORE_TRIAL", "LOOKER_CORE_STANDARD", "LOOKER_CORE_STANDARD_ANNUAL", "LOOKER_CORE_ENTERPRISE_ANNUAL", "LOOKER_CORE_EMBED_ANNUAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#platform_edition LookerInstance#platform_edition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#platform_edition LookerInstance#platform_edition}
 
 ---
 
@@ -2043,7 +2119,7 @@ private_ip_enabled: typing.Union[bool, IResolvable]
 
 Whether private IP is enabled on the Looker instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#private_ip_enabled LookerInstance#private_ip_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#private_ip_enabled LookerInstance#private_ip_enabled}
 
 ---
 
@@ -2055,7 +2131,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#project LookerInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#project LookerInstance#project}.
 
 ---
 
@@ -2069,7 +2145,7 @@ public_ip_enabled: typing.Union[bool, IResolvable]
 
 Whether public IP is enabled on the Looker instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#public_ip_enabled LookerInstance#public_ip_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#public_ip_enabled LookerInstance#public_ip_enabled}
 
 ---
 
@@ -2083,7 +2159,7 @@ region: str
 
 The name of the Looker region of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#region LookerInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#region LookerInstance#region}
 
 ---
 
@@ -2099,7 +2175,7 @@ Name of a reserved IP address range within the consumer network, to be used for 
 
 User may or may not specify this in a request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#reserved_range LookerInstance#reserved_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#reserved_range LookerInstance#reserved_range}
 
 ---
 
@@ -2113,7 +2189,7 @@ timeouts: LookerInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#timeouts LookerInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#timeouts LookerInstance#timeouts}
 
 ---
 
@@ -2127,7 +2203,41 @@ user_metadata: LookerInstanceUserMetadata
 
 user_metadata block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#user_metadata LookerInstance#user_metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#user_metadata LookerInstance#user_metadata}
+
+---
+
+### LookerInstanceCustomDomain <a name="LookerInstanceCustomDomain" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import looker_instance
+
+lookerInstance.LookerInstanceCustomDomain(
+  domain: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain.property.domain">domain</a></code> | <code>str</code> | Domain name. |
+
+---
+
+##### `domain`<sup>Optional</sup> <a name="domain" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain.property.domain"></a>
+
+```python
+domain: str
+```
+
+- *Type:* str
+
+Domain name.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#domain LookerInstance#domain}
 
 ---
 
@@ -2165,7 +2275,7 @@ end_date: LookerInstanceDenyMaintenancePeriodEndDate
 
 end_date block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#end_date LookerInstance#end_date}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#end_date LookerInstance#end_date}
 
 ---
 
@@ -2179,7 +2289,7 @@ start_date: LookerInstanceDenyMaintenancePeriodStartDate
 
 start_date block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#start_date LookerInstance#start_date}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#start_date LookerInstance#start_date}
 
 ---
 
@@ -2193,7 +2303,7 @@ time: LookerInstanceDenyMaintenancePeriodTime
 
 time block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#time LookerInstance#time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#time LookerInstance#time}
 
 ---
 
@@ -2234,7 +2344,7 @@ Day of a month.
 Must be from 1 to 31 and valid for the year and month, or 0
 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#day LookerInstance#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#day LookerInstance#day}
 
 ---
 
@@ -2251,7 +2361,7 @@ Month of a year.
 Must be from 1 to 12, or 0 to specify a year without a
 month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#month LookerInstance#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#month LookerInstance#month}
 
 ---
 
@@ -2265,7 +2375,7 @@ year: typing.Union[int, float]
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#year LookerInstance#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#year LookerInstance#year}
 
 ---
 
@@ -2306,7 +2416,7 @@ Day of a month.
 Must be from 1 to 31 and valid for the year and month, or 0
 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#day LookerInstance#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#day LookerInstance#day}
 
 ---
 
@@ -2323,7 +2433,7 @@ Month of a year.
 Must be from 1 to 12, or 0 to specify a year without a
 month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#month LookerInstance#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#month LookerInstance#month}
 
 ---
 
@@ -2337,7 +2447,7 @@ year: typing.Union[int, float]
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#year LookerInstance#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#year LookerInstance#year}
 
 ---
 
@@ -2377,7 +2487,7 @@ hours: typing.Union[int, float]
 
 Hours of day in 24 hour format. Should be from 0 to 23.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#hours LookerInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#hours LookerInstance#hours}
 
 ---
 
@@ -2391,7 +2501,7 @@ minutes: typing.Union[int, float]
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
 
 ---
 
@@ -2405,7 +2515,7 @@ nanos: typing.Union[int, float]
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
 
 ---
 
@@ -2419,7 +2529,7 @@ seconds: typing.Union[int, float]
 
 Seconds of minutes of the time. Must normally be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
 
 ---
 
@@ -2453,7 +2563,7 @@ kms_key_name: str
 
 Name of the customer managed encryption key (CMEK) in KMS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#kms_key_name LookerInstance#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#kms_key_name LookerInstance#kms_key_name}
 
 ---
 
@@ -2497,7 +2607,7 @@ Required. Day of the week for this MaintenanceWindow (in UTC).
 * SATURDAY: Saturday
 * SUNDAY: Sunday Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#day_of_week LookerInstance#day_of_week}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#day_of_week LookerInstance#day_of_week}
 
 ---
 
@@ -2511,7 +2621,7 @@ start_time: LookerInstanceMaintenanceWindowStartTime
 
 start_time block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#start_time LookerInstance#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#start_time LookerInstance#start_time}
 
 ---
 
@@ -2551,7 +2661,7 @@ hours: typing.Union[int, float]
 
 Hours of day in 24 hour format. Should be from 0 to 23.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#hours LookerInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#hours LookerInstance#hours}
 
 ---
 
@@ -2565,7 +2675,7 @@ minutes: typing.Union[int, float]
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
 
 ---
 
@@ -2579,7 +2689,7 @@ nanos: typing.Union[int, float]
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
 
 ---
 
@@ -2593,7 +2703,7 @@ seconds: typing.Union[int, float]
 
 Seconds of minutes of the time. Must normally be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
 
 ---
 
@@ -2629,7 +2739,7 @@ client_id: str
 
 The client ID for the Oauth config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#client_id LookerInstance#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#client_id LookerInstance#client_id}
 
 ---
 
@@ -2643,7 +2753,7 @@ client_secret: str
 
 The client secret for the Oauth config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#client_secret LookerInstance#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#client_secret LookerInstance#client_secret}
 
 ---
 
@@ -2665,9 +2775,9 @@ lookerInstance.LookerInstanceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#create LookerInstance#create}. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#delete LookerInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#update LookerInstance#update}. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#create LookerInstance#create}. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#delete LookerInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#update LookerInstance#update}. |
 
 ---
 
@@ -2679,7 +2789,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#create LookerInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#create LookerInstance#create}.
 
 ---
 
@@ -2691,7 +2801,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#delete LookerInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#delete LookerInstance#delete}.
 
 ---
 
@@ -2703,7 +2813,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#update LookerInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#update LookerInstance#update}.
 
 ---
 
@@ -2741,7 +2851,7 @@ additional_developer_user_count: typing.Union[int, float]
 
 Number of additional Developer Users to allocate to the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#additional_developer_user_count LookerInstance#additional_developer_user_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#additional_developer_user_count LookerInstance#additional_developer_user_count}
 
 ---
 
@@ -2755,7 +2865,7 @@ additional_standard_user_count: typing.Union[int, float]
 
 Number of additional Standard Users to allocate to the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#additional_standard_user_count LookerInstance#additional_standard_user_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#additional_standard_user_count LookerInstance#additional_standard_user_count}
 
 ---
 
@@ -2769,7 +2879,7 @@ additional_viewer_user_count: typing.Union[int, float]
 
 Number of additional Viewer Users to allocate to the Looker Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#additional_viewer_user_count LookerInstance#additional_viewer_user_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#additional_viewer_user_count LookerInstance#additional_viewer_user_count}
 
 ---
 
@@ -3074,6 +3184,320 @@ internal_value: LookerInstanceAdminSettings
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceAdminSettings">LookerInstanceAdminSettings</a>
+
+---
+
+
+### LookerInstanceCustomDomainOutputReference <a name="LookerInstanceCustomDomainOutputReference" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import looker_instance
+
+lookerInstance.LookerInstanceCustomDomainOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.resetDomain">reset_domain</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_domain` <a name="reset_domain" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.resetDomain"></a>
+
+```python
+def reset_domain() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.state">state</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.domainInput">domain_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.domain">domain</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `state`<sup>Required</sup> <a name="state" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.state"></a>
+
+```python
+state: str
+```
+
+- *Type:* str
+
+---
+
+##### `domain_input`<sup>Optional</sup> <a name="domain_input" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.domainInput"></a>
+
+```python
+domain_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `domain`<sup>Required</sup> <a name="domain" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.domain"></a>
+
+```python
+domain: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomainOutputReference.property.internalValue"></a>
+
+```python
+internal_value: LookerInstanceCustomDomain
+```
+
+- *Type:* <a href="#@cdktf/provider-google.lookerInstance.LookerInstanceCustomDomain">LookerInstanceCustomDomain</a>
 
 ---
 
@@ -3689,7 +4113,7 @@ Day of a month.
 Must be from 1 to 31 and valid for the year and month, or 0
 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#day LookerInstance#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#day LookerInstance#day}
 
 ---
 
@@ -3702,7 +4126,7 @@ Month of a year.
 Must be from 1 to 12, or 0 to specify a year without a
 month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#month LookerInstance#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#month LookerInstance#month}
 
 ---
 
@@ -3712,7 +4136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#year LookerInstance#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#year LookerInstance#year}
 
 ---
 
@@ -3735,7 +4159,7 @@ Day of a month.
 Must be from 1 to 31 and valid for the year and month, or 0
 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#day LookerInstance#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#day LookerInstance#day}
 
 ---
 
@@ -3748,7 +4172,7 @@ Month of a year.
 Must be from 1 to 12, or 0 to specify a year without a
 month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#month LookerInstance#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#month LookerInstance#month}
 
 ---
 
@@ -3758,7 +4182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#year LookerInstance#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#year LookerInstance#year}
 
 ---
 
@@ -3779,7 +4203,7 @@ def put_time(
 
 Hours of day in 24 hour format. Should be from 0 to 23.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#hours LookerInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#hours LookerInstance#hours}
 
 ---
 
@@ -3789,7 +4213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
 
 ---
 
@@ -3799,7 +4223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
 
 ---
 
@@ -3809,7 +4233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Seconds of minutes of the time. Must normally be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
 
 ---
 
@@ -5247,7 +5671,7 @@ def put_start_time(
 
 Hours of day in 24 hour format. Should be from 0 to 23.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#hours LookerInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#hours LookerInstance#hours}
 
 ---
 
@@ -5257,7 +5681,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#minutes LookerInstance#minutes}
 
 ---
 
@@ -5267,7 +5691,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#nanos LookerInstance#nanos}
 
 ---
 
@@ -5277,7 +5701,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Seconds of minutes of the time. Must normally be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/looker_instance#seconds LookerInstance#seconds}
 
 ---
 

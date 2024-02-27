@@ -4,12 +4,12 @@
 
 ### FirebaseAppCheckDebugToken <a name="FirebaseAppCheckDebugToken" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugToken"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token google_firebase_app_check_debug_token}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token google_firebase_app_check_debug_token}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 firebaseappcheckdebugtoken.NewFirebaseAppCheckDebugToken(scope Construct, id *string, config FirebaseAppCheckDebugTokenConfig) FirebaseAppCheckDebugToken
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 firebaseappcheckdebugtoken.FirebaseAppCheckDebugToken_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 firebaseappcheckdebugtoken.FirebaseAppCheckDebugToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ firebaseappcheckdebugtoken.FirebaseAppCheckDebugToken_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugToken.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 firebaseappcheckdebugtoken.FirebaseAppCheckDebugToken_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ firebaseappcheckdebugtoken.FirebaseAppCheckDebugToken_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugToken.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 firebaseappcheckdebugtoken.FirebaseAppCheckDebugToken_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the FirebaseAppCheckDebugToken
 
 The id of the existing FirebaseAppCheckDebugToken that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -844,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 &firebaseappcheckdebugtoken.FirebaseAppCheckDebugTokenConfig {
 	Connection: interface{},
@@ -859,7 +859,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdeb
 	Token: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts,
 }
 ```
 
@@ -877,8 +877,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdeb
 | <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.appId">AppId</a></code> | <code>*string</code> | The ID of a [Web App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id), [Apple App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.iosApps#IosApp.FIELDS.app_id), or [Android App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.androidApps#AndroidApp.FIELDS.app_id). |
 | <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | A human readable display name used to identify this debug token. |
 | <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.token">Token</a></code> | <code>*string</code> | The secret token itself. |
-| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#id FirebaseAppCheckDebugToken#id}. |
-| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#project FirebaseAppCheckDebugToken#project}. |
+| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#id FirebaseAppCheckDebugToken#id}. |
+| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#project FirebaseAppCheckDebugToken#project}. |
 | <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts">FirebaseAppCheckDebugTokenTimeouts</a></code> | timeouts block. |
 
 ---
@@ -963,7 +963,7 @@ AppId *string
 
 The ID of a [Web App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id), [Apple App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.iosApps#IosApp.FIELDS.app_id), or [Android App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.androidApps#AndroidApp.FIELDS.app_id).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#app_id FirebaseAppCheckDebugToken#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#app_id FirebaseAppCheckDebugToken#app_id}
 
 ---
 
@@ -977,7 +977,7 @@ DisplayName *string
 
 A human readable display name used to identify this debug token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#display_name FirebaseAppCheckDebugToken#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#display_name FirebaseAppCheckDebugToken#display_name}
 
 ---
 
@@ -1000,7 +1000,7 @@ this debug token to revoke it.
 
 For security reasons, this field will never be populated in any response.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#token FirebaseAppCheckDebugToken#token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#token FirebaseAppCheckDebugToken#token}
 
 ---
 
@@ -1012,7 +1012,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#id FirebaseAppCheckDebugToken#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#id FirebaseAppCheckDebugToken#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1027,7 +1027,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#project FirebaseAppCheckDebugToken#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#project FirebaseAppCheckDebugToken#project}.
 
 ---
 
@@ -1041,7 +1041,7 @@ Timeouts FirebaseAppCheckDebugTokenTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#timeouts FirebaseAppCheckDebugToken#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#timeouts FirebaseAppCheckDebugToken#timeouts}
 
 ---
 
@@ -1050,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 &firebaseappcheckdebugtoken.FirebaseAppCheckDebugTokenTimeouts {
 	Create: *string,
@@ -1063,9 +1063,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdeb
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#create FirebaseAppCheckDebugToken#create}. |
-| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#delete FirebaseAppCheckDebugToken#delete}. |
-| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#update FirebaseAppCheckDebugToken#update}. |
+| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#create FirebaseAppCheckDebugToken#create}. |
+| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#delete FirebaseAppCheckDebugToken#delete}. |
+| <code><a href="#@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#update FirebaseAppCheckDebugToken#update}. |
 
 ---
 
@@ -1077,7 +1077,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#create FirebaseAppCheckDebugToken#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#create FirebaseAppCheckDebugToken#create}.
 
 ---
 
@@ -1089,7 +1089,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#delete FirebaseAppCheckDebugToken#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#delete FirebaseAppCheckDebugToken#delete}.
 
 ---
 
@@ -1101,7 +1101,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/firebase_app_check_debug_token#update FirebaseAppCheckDebugToken#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/firebase_app_check_debug_token#update FirebaseAppCheckDebugToken#update}.
 
 ---
 
@@ -1112,7 +1112,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppCheckDebugToken.FirebaseAppCheckDebugTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/firebaseappcheckdebugtoken"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckdebugtoken"
 
 firebaseappcheckdebugtoken.NewFirebaseAppCheckDebugTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirebaseAppCheckDebugTokenTimeoutsOutputReference
 ```

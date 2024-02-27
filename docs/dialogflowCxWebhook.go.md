@@ -4,12 +4,12 @@
 
 ### DialogflowCxWebhook <a name="DialogflowCxWebhook" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook google_dialogflow_cx_webhook}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook google_dialogflow_cx_webhook}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhook(scope Construct, id *string, config DialogflowCxWebhookConfig) DialogflowCxWebhook
 ```
@@ -487,7 +487,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_IsConstruct(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformElement(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformResource(x interface{}) *bool
 ```
@@ -547,7 +547,7 @@ dialogflowcxwebhook.DialogflowCxWebhook_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhook.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.DialogflowCxWebhook_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -576,7 +576,7 @@ The construct id used in the generated config for the DialogflowCxWebhook to imp
 
 The id of the existing DialogflowCxWebhook that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1040,7 +1040,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookConfig {
 	Connection: interface{},
@@ -1054,13 +1054,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook
 	Disabled: interface{},
 	EnableSpellCorrection: interface{},
 	EnableStackdriverLogging: interface{},
-	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google/v13.dialogflowCxWebhook.DialogflowCxWebhookGenericWebService,
+	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookGenericWebService,
 	Id: *string,
 	Parent: *string,
 	SecuritySettings: *string,
-	ServiceDirectory: github.com/cdktf/cdktf-provider-google-go/google/v13.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectory,
+	ServiceDirectory: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectory,
 	Timeout: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.dialogflowCxWebhook.DialogflowCxWebhookTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts,
 }
 ```
 
@@ -1080,7 +1080,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook
 | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.enableSpellCorrection">EnableSpellCorrection</a></code> | <code>interface{}</code> | Indicates if automatic spell correction is enabled in detect intent requests. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.enableStackdriverLogging">EnableStackdriverLogging</a></code> | <code>interface{}</code> | Determines whether this agent should log conversation queries. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.genericWebService">GenericWebService</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookGenericWebService">DialogflowCxWebhookGenericWebService</a></code> | generic_web_service block. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#id DialogflowCxWebhook#id}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#id DialogflowCxWebhook#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.parent">Parent</a></code> | <code>*string</code> | The agent to create a webhook for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.securitySettings">SecuritySettings</a></code> | <code>*string</code> | Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookConfig.property.serviceDirectory">ServiceDirectory</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectory">DialogflowCxWebhookServiceDirectory</a></code> | service_directory block. |
@@ -1169,7 +1169,7 @@ DisplayName *string
 
 The human-readable name of the webhook, unique within the agent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#display_name DialogflowCxWebhook#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#display_name DialogflowCxWebhook#display_name}
 
 ---
 
@@ -1183,7 +1183,7 @@ Disabled interface{}
 
 Indicates whether the webhook is disabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#disabled DialogflowCxWebhook#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#disabled DialogflowCxWebhook#disabled}
 
 ---
 
@@ -1197,7 +1197,7 @@ EnableSpellCorrection interface{}
 
 Indicates if automatic spell correction is enabled in detect intent requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#enable_spell_correction DialogflowCxWebhook#enable_spell_correction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#enable_spell_correction DialogflowCxWebhook#enable_spell_correction}
 
 ---
 
@@ -1211,7 +1211,7 @@ EnableStackdriverLogging interface{}
 
 Determines whether this agent should log conversation queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#enable_stackdriver_logging DialogflowCxWebhook#enable_stackdriver_logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#enable_stackdriver_logging DialogflowCxWebhook#enable_stackdriver_logging}
 
 ---
 
@@ -1225,7 +1225,7 @@ GenericWebService DialogflowCxWebhookGenericWebService
 
 generic_web_service block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#generic_web_service DialogflowCxWebhook#generic_web_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#generic_web_service DialogflowCxWebhook#generic_web_service}
 
 ---
 
@@ -1237,7 +1237,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#id DialogflowCxWebhook#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#id DialogflowCxWebhook#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1254,7 +1254,7 @@ Parent *string
 
 The agent to create a webhook for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#parent DialogflowCxWebhook#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#parent DialogflowCxWebhook#parent}
 
 ---
 
@@ -1268,7 +1268,7 @@ SecuritySettings *string
 
 Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#security_settings DialogflowCxWebhook#security_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#security_settings DialogflowCxWebhook#security_settings}
 
 ---
 
@@ -1282,7 +1282,7 @@ ServiceDirectory DialogflowCxWebhookServiceDirectory
 
 service_directory block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#service_directory DialogflowCxWebhook#service_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#service_directory DialogflowCxWebhook#service_directory}
 
 ---
 
@@ -1296,7 +1296,7 @@ Timeout *string
 
 Webhook execution timeout.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#timeout DialogflowCxWebhook#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#timeout DialogflowCxWebhook#timeout}
 
 ---
 
@@ -1310,7 +1310,7 @@ Timeouts DialogflowCxWebhookTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#timeouts DialogflowCxWebhook#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#timeouts DialogflowCxWebhook#timeouts}
 
 ---
 
@@ -1319,7 +1319,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookGenericWebService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookGenericWebService {
 	Uri: *string,
@@ -1348,7 +1348,7 @@ Uri *string
 
 Whether to use speech adaptation for speech recognition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#uri DialogflowCxWebhook#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#uri DialogflowCxWebhook#uri}
 
 ---
 
@@ -1362,7 +1362,7 @@ AllowedCaCerts *[]*string
 
 Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#allowed_ca_certs DialogflowCxWebhook#allowed_ca_certs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#allowed_ca_certs DialogflowCxWebhook#allowed_ca_certs}
 
 ---
 
@@ -1376,7 +1376,7 @@ RequestHeaders *map[string]*string
 
 The HTTP request headers to send together with webhook requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#request_headers DialogflowCxWebhook#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#request_headers DialogflowCxWebhook#request_headers}
 
 ---
 
@@ -1385,10 +1385,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookServiceDirectory {
-	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google/v13.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebService,
+	GenericWebService: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebService,
 	Service: *string,
 }
 ```
@@ -1412,7 +1412,7 @@ GenericWebService DialogflowCxWebhookServiceDirectoryGenericWebService
 
 generic_web_service block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#generic_web_service DialogflowCxWebhook#generic_web_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#generic_web_service DialogflowCxWebhook#generic_web_service}
 
 ---
 
@@ -1426,7 +1426,7 @@ Service *string
 
 The name of Service Directory service.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#service DialogflowCxWebhook#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#service DialogflowCxWebhook#service}
 
 ---
 
@@ -1435,7 +1435,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookServiceDirectoryGenericWebService {
 	Uri: *string,
@@ -1464,7 +1464,7 @@ Uri *string
 
 Whether to use speech adaptation for speech recognition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#uri DialogflowCxWebhook#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#uri DialogflowCxWebhook#uri}
 
 ---
 
@@ -1478,7 +1478,7 @@ AllowedCaCerts *[]*string
 
 Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#allowed_ca_certs DialogflowCxWebhook#allowed_ca_certs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#allowed_ca_certs DialogflowCxWebhook#allowed_ca_certs}
 
 ---
 
@@ -1492,7 +1492,7 @@ RequestHeaders *map[string]*string
 
 The HTTP request headers to send together with webhook requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#request_headers DialogflowCxWebhook#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#request_headers DialogflowCxWebhook#request_headers}
 
 ---
 
@@ -1501,7 +1501,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 &dialogflowcxwebhook.DialogflowCxWebhookTimeouts {
 	Create: *string,
@@ -1514,9 +1514,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#create DialogflowCxWebhook#create}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#delete DialogflowCxWebhook#delete}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#update DialogflowCxWebhook#update}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#create DialogflowCxWebhook#create}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#delete DialogflowCxWebhook#delete}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#update DialogflowCxWebhook#update}. |
 
 ---
 
@@ -1528,7 +1528,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#create DialogflowCxWebhook#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#create DialogflowCxWebhook#create}.
 
 ---
 
@@ -1540,7 +1540,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#delete DialogflowCxWebhook#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#delete DialogflowCxWebhook#delete}.
 
 ---
 
@@ -1552,7 +1552,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/dialogflow_cx_webhook#update DialogflowCxWebhook#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dialogflow_cx_webhook#update DialogflowCxWebhook#update}.
 
 ---
 
@@ -1563,7 +1563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookGenericWebServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookGenericWebServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookGenericWebServiceOutputReference
 ```
@@ -1892,7 +1892,7 @@ func InternalValue() DialogflowCxWebhookGenericWebService
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference
 ```
@@ -2221,7 +2221,7 @@ func InternalValue() DialogflowCxWebhookServiceDirectoryGenericWebService
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookServiceDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookServiceDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookServiceDirectoryOutputReference
 ```
@@ -2527,7 +2527,7 @@ func InternalValue() DialogflowCxWebhookServiceDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxWebhook.DialogflowCxWebhookTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxwebhook"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxwebhook"
 
 dialogflowcxwebhook.NewDialogflowCxWebhookTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxWebhookTimeoutsOutputReference
 ```

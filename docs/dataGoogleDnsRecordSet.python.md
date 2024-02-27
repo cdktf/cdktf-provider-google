@@ -4,7 +4,7 @@
 
 ### DataGoogleDnsRecordSet <a name="DataGoogleDnsRecordSet" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set google_dns_record_set}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set google_dns_record_set}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSet.Initializer"></a>
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 The Name of the zone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The DNS name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The identifier of a supported record type. See the list of Supported DNS record types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
 
 ---
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the DataGoogleDnsRecordSet to 
 
 The id of the existing DataGoogleDnsRecordSet that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -922,7 +922,7 @@ managed_zone: str
 
 The Name of the zone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
 
 ---
 
@@ -936,7 +936,7 @@ name: str
 
 The DNS name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
 
 ---
 
@@ -950,7 +950,7 @@ type: str
 
 The identifier of a supported record type. See the list of Supported DNS record types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
 
 ---
 
@@ -964,7 +964,7 @@ project: str
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
 
 ---
 

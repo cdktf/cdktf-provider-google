@@ -4,12 +4,12 @@
 
 ### GkeonpremVmwareCluster <a name="GkeonpremVmwareCluster" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster google_gkeonprem_vmware_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster google_gkeonprem_vmware_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareCluster(scope Construct, id *string, config GkeonpremVmwareClusterConfig) GkeonpremVmwareCluster
 ```
@@ -633,7 +633,7 @@ func ResetVmTrackingEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.GkeonpremVmwareCluster_IsConstruct(x interface{}) *bool
 ```
@@ -665,7 +665,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.GkeonpremVmwareCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -679,7 +679,7 @@ gkeonpremvmwarecluster.GkeonpremVmwareCluster_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.GkeonpremVmwareCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -693,7 +693,7 @@ gkeonpremvmwarecluster.GkeonpremVmwareCluster_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.GkeonpremVmwareCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -722,7 +722,7 @@ The construct id used in the generated config for the GkeonpremVmwareCluster to 
 
 The id of the existing GkeonpremVmwareCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1527,7 +1527,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAntiAffinityGroups.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterAntiAffinityGroups {
 	AagConfigDisabled: interface{},
@@ -1552,7 +1552,7 @@ AagConfigDisabled interface{}
 
 Spread nodes across at least three physical hosts (requires at least three hosts). Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#aag_config_disabled GkeonpremVmwareCluster#aag_config_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#aag_config_disabled GkeonpremVmwareCluster#aag_config_disabled}
 
 ---
 
@@ -1561,7 +1561,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterAuthorization {
 	AdminUsers: interface{},
@@ -1586,7 +1586,7 @@ AdminUsers interface{}
 
 admin_users block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#admin_users GkeonpremVmwareCluster#admin_users}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#admin_users GkeonpremVmwareCluster#admin_users}
 
 ---
 
@@ -1595,7 +1595,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAuthorizationAdminUsers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterAuthorizationAdminUsers {
 	Username: *string,
@@ -1620,7 +1620,7 @@ Username *string
 
 The name of the user, e.g. 'my-gcp-id@gmail.com'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#username GkeonpremVmwareCluster#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#username GkeonpremVmwareCluster#username}
 
 ---
 
@@ -1629,7 +1629,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAutoRepairConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterAutoRepairConfig {
 	Enabled: interface{},
@@ -1654,7 +1654,7 @@ Enabled interface{}
 
 Whether auto repair is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#enabled GkeonpremVmwareCluster#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#enabled GkeonpremVmwareCluster#enabled}
 
 ---
 
@@ -1663,7 +1663,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterConfig {
 	Connection: interface{},
@@ -1674,25 +1674,25 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	AdminClusterMembership: *string,
-	ControlPlaneNode: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNode,
+	ControlPlaneNode: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNode,
 	Location: *string,
 	Name: *string,
 	OnPremVersion: *string,
 	Annotations: *map[string]*string,
-	AntiAffinityGroups: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterAntiAffinityGroups,
-	Authorization: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterAuthorization,
-	AutoRepairConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterAutoRepairConfig,
-	DataplaneV2: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterDataplaneV2,
+	AntiAffinityGroups: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAntiAffinityGroups,
+	Authorization: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAuthorization,
+	AutoRepairConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAutoRepairConfig,
+	DataplaneV2: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterDataplaneV2,
 	Description: *string,
 	EnableControlPlaneV2: interface{},
 	Id: *string,
-	LoadBalancer: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancer,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfig,
+	LoadBalancer: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancer,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfig,
 	Project: *string,
-	Storage: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterStorage,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts,
-	UpgradePolicy: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterUpgradePolicy,
-	Vcenter: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterVcenter,
+	Storage: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStorage,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts,
+	UpgradePolicy: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterUpgradePolicy,
+	Vcenter: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterVcenter,
 	VmTrackingEnabled: interface{},
 }
 ```
@@ -1720,10 +1720,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.dataplaneV2">DataplaneV2</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterDataplaneV2">GkeonpremVmwareClusterDataplaneV2</a></code> | dataplane_v2 block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.description">Description</a></code> | <code>*string</code> | A human readable description of this VMware User Cluster. |
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.enableControlPlaneV2">EnableControlPlaneV2</a></code> | <code>interface{}</code> | Enable control plane V2. Default to false. |
-| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#id GkeonpremVmwareCluster#id}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#id GkeonpremVmwareCluster#id}. |
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.loadBalancer">LoadBalancer</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancer">GkeonpremVmwareClusterLoadBalancer</a></code> | load_balancer block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.networkConfig">NetworkConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfig">GkeonpremVmwareClusterNetworkConfig</a></code> | network_config block. |
-| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#project GkeonpremVmwareCluster#project}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#project GkeonpremVmwareCluster#project}. |
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.storage">Storage</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStorage">GkeonpremVmwareClusterStorage</a></code> | storage block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts">GkeonpremVmwareClusterTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterConfig.property.upgradePolicy">UpgradePolicy</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterUpgradePolicy">GkeonpremVmwareClusterUpgradePolicy</a></code> | upgrade_policy block. |
@@ -1816,7 +1816,7 @@ This is the full resource name of the admin cluster's hub membership.
 In the future, references to other resource types might be allowed if
 admin clusters are modeled as their own resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#admin_cluster_membership GkeonpremVmwareCluster#admin_cluster_membership}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#admin_cluster_membership GkeonpremVmwareCluster#admin_cluster_membership}
 
 ---
 
@@ -1830,7 +1830,7 @@ ControlPlaneNode GkeonpremVmwareClusterControlPlaneNode
 
 control_plane_node block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#control_plane_node GkeonpremVmwareCluster#control_plane_node}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#control_plane_node GkeonpremVmwareCluster#control_plane_node}
 
 ---
 
@@ -1844,7 +1844,7 @@ Location *string
 
 The location of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#location GkeonpremVmwareCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#location GkeonpremVmwareCluster#location}
 
 ---
 
@@ -1858,7 +1858,7 @@ Name *string
 
 The VMware cluster name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#name GkeonpremVmwareCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#name GkeonpremVmwareCluster#name}
 
 ---
 
@@ -1872,7 +1872,7 @@ OnPremVersion *string
 
 The Anthos clusters on the VMware version for your user cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#on_prem_version GkeonpremVmwareCluster#on_prem_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#on_prem_version GkeonpremVmwareCluster#on_prem_version}
 
 ---
 
@@ -1897,7 +1897,7 @@ with dashes (-), underscores (_), dots (.), and alphanumerics between.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#annotations GkeonpremVmwareCluster#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#annotations GkeonpremVmwareCluster#annotations}
 
 ---
 
@@ -1911,7 +1911,7 @@ AntiAffinityGroups GkeonpremVmwareClusterAntiAffinityGroups
 
 anti_affinity_groups block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#anti_affinity_groups GkeonpremVmwareCluster#anti_affinity_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#anti_affinity_groups GkeonpremVmwareCluster#anti_affinity_groups}
 
 ---
 
@@ -1925,7 +1925,7 @@ Authorization GkeonpremVmwareClusterAuthorization
 
 authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#authorization GkeonpremVmwareCluster#authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#authorization GkeonpremVmwareCluster#authorization}
 
 ---
 
@@ -1939,7 +1939,7 @@ AutoRepairConfig GkeonpremVmwareClusterAutoRepairConfig
 
 auto_repair_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#auto_repair_config GkeonpremVmwareCluster#auto_repair_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#auto_repair_config GkeonpremVmwareCluster#auto_repair_config}
 
 ---
 
@@ -1953,7 +1953,7 @@ DataplaneV2 GkeonpremVmwareClusterDataplaneV2
 
 dataplane_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#dataplane_v2 GkeonpremVmwareCluster#dataplane_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#dataplane_v2 GkeonpremVmwareCluster#dataplane_v2}
 
 ---
 
@@ -1967,7 +1967,7 @@ Description *string
 
 A human readable description of this VMware User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#description GkeonpremVmwareCluster#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#description GkeonpremVmwareCluster#description}
 
 ---
 
@@ -1981,7 +1981,7 @@ EnableControlPlaneV2 interface{}
 
 Enable control plane V2. Default to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#enable_control_plane_v2 GkeonpremVmwareCluster#enable_control_plane_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#enable_control_plane_v2 GkeonpremVmwareCluster#enable_control_plane_v2}
 
 ---
 
@@ -1993,7 +1993,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#id GkeonpremVmwareCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#id GkeonpremVmwareCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2010,7 +2010,7 @@ LoadBalancer GkeonpremVmwareClusterLoadBalancer
 
 load_balancer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#load_balancer GkeonpremVmwareCluster#load_balancer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#load_balancer GkeonpremVmwareCluster#load_balancer}
 
 ---
 
@@ -2024,7 +2024,7 @@ NetworkConfig GkeonpremVmwareClusterNetworkConfig
 
 network_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#network_config GkeonpremVmwareCluster#network_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#network_config GkeonpremVmwareCluster#network_config}
 
 ---
 
@@ -2036,7 +2036,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#project GkeonpremVmwareCluster#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#project GkeonpremVmwareCluster#project}.
 
 ---
 
@@ -2050,7 +2050,7 @@ Storage GkeonpremVmwareClusterStorage
 
 storage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#storage GkeonpremVmwareCluster#storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#storage GkeonpremVmwareCluster#storage}
 
 ---
 
@@ -2064,7 +2064,7 @@ Timeouts GkeonpremVmwareClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#timeouts GkeonpremVmwareCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#timeouts GkeonpremVmwareCluster#timeouts}
 
 ---
 
@@ -2078,7 +2078,7 @@ UpgradePolicy GkeonpremVmwareClusterUpgradePolicy
 
 upgrade_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#upgrade_policy GkeonpremVmwareCluster#upgrade_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#upgrade_policy GkeonpremVmwareCluster#upgrade_policy}
 
 ---
 
@@ -2092,7 +2092,7 @@ Vcenter GkeonpremVmwareClusterVcenter
 
 vcenter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#vcenter GkeonpremVmwareCluster#vcenter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#vcenter GkeonpremVmwareCluster#vcenter}
 
 ---
 
@@ -2106,7 +2106,7 @@ VmTrackingEnabled interface{}
 
 Enable VM tracking.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#vm_tracking_enabled GkeonpremVmwareCluster#vm_tracking_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#vm_tracking_enabled GkeonpremVmwareCluster#vm_tracking_enabled}
 
 ---
 
@@ -2115,10 +2115,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterControlPlaneNode {
-	AutoResizeConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfig,
+	AutoResizeConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfig,
 	Cpus: *f64,
 	Memory: *f64,
 	Replicas: *f64,
@@ -2146,7 +2146,7 @@ AutoResizeConfig GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfig
 
 auto_resize_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#auto_resize_config GkeonpremVmwareCluster#auto_resize_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#auto_resize_config GkeonpremVmwareCluster#auto_resize_config}
 
 ---
 
@@ -2162,7 +2162,7 @@ The number of CPUs for each admin cluster node that serve as control planes for 
 
 (default: 4 CPUs)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#cpus GkeonpremVmwareCluster#cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#cpus GkeonpremVmwareCluster#cpus}
 
 ---
 
@@ -2176,7 +2176,7 @@ Memory *f64
 
 The megabytes of memory for each admin cluster node that serves as a control plane for this VMware User Cluster (default: 8192 MB memory).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#memory GkeonpremVmwareCluster#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#memory GkeonpremVmwareCluster#memory}
 
 ---
 
@@ -2190,7 +2190,7 @@ Replicas *f64
 
 The number of control plane nodes for this VMware User Cluster. (default: 1 replica).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#replicas GkeonpremVmwareCluster#replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#replicas GkeonpremVmwareCluster#replicas}
 
 ---
 
@@ -2199,7 +2199,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfig {
 	Enabled: interface{},
@@ -2224,7 +2224,7 @@ Enabled interface{}
 
 Whether to enable control plane node auto resizing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#enabled GkeonpremVmwareCluster#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#enabled GkeonpremVmwareCluster#enabled}
 
 ---
 
@@ -2233,7 +2233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeVsphereConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterControlPlaneNodeVsphereConfig {
 
@@ -2246,7 +2246,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterDataplaneV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterDataplaneV2 {
 	AdvancedNetworking: interface{},
@@ -2275,7 +2275,7 @@ AdvancedNetworking interface{}
 
 Enable advanced networking which requires dataplane_v2_enabled to be set true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#advanced_networking GkeonpremVmwareCluster#advanced_networking}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#advanced_networking GkeonpremVmwareCluster#advanced_networking}
 
 ---
 
@@ -2289,7 +2289,7 @@ DataplaneV2Enabled interface{}
 
 Enables Dataplane V2.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#dataplane_v2_enabled GkeonpremVmwareCluster#dataplane_v2_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#dataplane_v2_enabled GkeonpremVmwareCluster#dataplane_v2_enabled}
 
 ---
 
@@ -2303,7 +2303,7 @@ WindowsDataplaneV2Enabled interface{}
 
 Enable Dataplane V2 for clusters with Windows nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#windows_dataplane_v2_enabled GkeonpremVmwareCluster#windows_dataplane_v2_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#windows_dataplane_v2_enabled GkeonpremVmwareCluster#windows_dataplane_v2_enabled}
 
 ---
 
@@ -2312,7 +2312,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterFleet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterFleet {
 
@@ -2325,13 +2325,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterLoadBalancer {
-	F5Config: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerF5Config,
-	ManualLbConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerManualLbConfig,
-	MetalLbConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfig,
-	VipConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerVipConfig,
+	F5Config: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerF5Config,
+	ManualLbConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerManualLbConfig,
+	MetalLbConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfig,
+	VipConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerVipConfig,
 }
 ```
 
@@ -2356,7 +2356,7 @@ F5Config GkeonpremVmwareClusterLoadBalancerF5Config
 
 f5_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#f5_config GkeonpremVmwareCluster#f5_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#f5_config GkeonpremVmwareCluster#f5_config}
 
 ---
 
@@ -2370,7 +2370,7 @@ ManualLbConfig GkeonpremVmwareClusterLoadBalancerManualLbConfig
 
 manual_lb_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#manual_lb_config GkeonpremVmwareCluster#manual_lb_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#manual_lb_config GkeonpremVmwareCluster#manual_lb_config}
 
 ---
 
@@ -2384,7 +2384,7 @@ MetalLbConfig GkeonpremVmwareClusterLoadBalancerMetalLbConfig
 
 metal_lb_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#metal_lb_config GkeonpremVmwareCluster#metal_lb_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#metal_lb_config GkeonpremVmwareCluster#metal_lb_config}
 
 ---
 
@@ -2398,7 +2398,7 @@ VipConfig GkeonpremVmwareClusterLoadBalancerVipConfig
 
 vip_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#vip_config GkeonpremVmwareCluster#vip_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#vip_config GkeonpremVmwareCluster#vip_config}
 
 ---
 
@@ -2407,7 +2407,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerF5Config.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterLoadBalancerF5Config {
 	Address: *string,
@@ -2436,7 +2436,7 @@ Address *string
 
 The load balancer's IP address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#address GkeonpremVmwareCluster#address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#address GkeonpremVmwareCluster#address}
 
 ---
 
@@ -2454,7 +2454,7 @@ T
 his partition is usually created for the admin cluster for example:
 'my-f5-admin-partition'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#partition GkeonpremVmwareCluster#partition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#partition GkeonpremVmwareCluster#partition}
 
 ---
 
@@ -2468,7 +2468,7 @@ SnatPool *string
 
 The pool name. Only necessary, if using SNAT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#snat_pool GkeonpremVmwareCluster#snat_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#snat_pool GkeonpremVmwareCluster#snat_pool}
 
 ---
 
@@ -2477,7 +2477,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerManualLbConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterLoadBalancerManualLbConfig {
 	ControlPlaneNodePort: *f64,
@@ -2511,7 +2511,7 @@ NodePort for control plane service.
 The Kubernetes API server in the admin
 cluster is implemented as a Service of type NodePort (ex. 30968).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#control_plane_node_port GkeonpremVmwareCluster#control_plane_node_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#control_plane_node_port GkeonpremVmwareCluster#control_plane_node_port}
 
 ---
 
@@ -2528,7 +2528,7 @@ NodePort for ingress service's http.
 The ingress service in the admin
 cluster is implemented as a Service of type NodePort (ex. 32527).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ingress_http_node_port GkeonpremVmwareCluster#ingress_http_node_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ingress_http_node_port GkeonpremVmwareCluster#ingress_http_node_port}
 
 ---
 
@@ -2545,7 +2545,7 @@ NodePort for ingress service's https.
 The ingress service in the admin
 cluster is implemented as a Service of type NodePort (ex. 30139).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ingress_https_node_port GkeonpremVmwareCluster#ingress_https_node_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ingress_https_node_port GkeonpremVmwareCluster#ingress_https_node_port}
 
 ---
 
@@ -2559,7 +2559,7 @@ KonnectivityServerNodePort *f64
 
 NodePort for konnectivity server service running as a sidecar in each kube-apiserver pod (ex. 30564).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#konnectivity_server_node_port GkeonpremVmwareCluster#konnectivity_server_node_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#konnectivity_server_node_port GkeonpremVmwareCluster#konnectivity_server_node_port}
 
 ---
 
@@ -2568,7 +2568,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfig {
 	AddressPools: interface{},
@@ -2593,7 +2593,7 @@ AddressPools interface{}
 
 address_pools block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#address_pools GkeonpremVmwareCluster#address_pools}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#address_pools GkeonpremVmwareCluster#address_pools}
 
 ---
 
@@ -2602,7 +2602,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPools.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPools {
 	Addresses: *[]*string,
@@ -2637,7 +2637,7 @@ Each address
 must be either in the CIDR form (1.2.3.0/24) or range
 form (1.2.3.1-1.2.3.5).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#addresses GkeonpremVmwareCluster#addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#addresses GkeonpremVmwareCluster#addresses}
 
 ---
 
@@ -2651,7 +2651,7 @@ Pool *string
 
 The name of the address pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#pool GkeonpremVmwareCluster#pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#pool GkeonpremVmwareCluster#pool}
 
 ---
 
@@ -2665,7 +2665,7 @@ AvoidBuggyIps interface{}
 
 If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#avoid_buggy_ips GkeonpremVmwareCluster#avoid_buggy_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#avoid_buggy_ips GkeonpremVmwareCluster#avoid_buggy_ips}
 
 ---
 
@@ -2679,7 +2679,7 @@ ManualAssign interface{}
 
 If true, prevent IP addresses from being automatically assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#manual_assign GkeonpremVmwareCluster#manual_assign}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#manual_assign GkeonpremVmwareCluster#manual_assign}
 
 ---
 
@@ -2688,7 +2688,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerVipConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterLoadBalancerVipConfig {
 	ControlPlaneVip: *string,
@@ -2715,7 +2715,7 @@ ControlPlaneVip *string
 
 The VIP which you previously set aside for the Kubernetes API of this cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#control_plane_vip GkeonpremVmwareCluster#control_plane_vip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#control_plane_vip GkeonpremVmwareCluster#control_plane_vip}
 
 ---
 
@@ -2729,7 +2729,7 @@ IngressVip *string
 
 The VIP which you previously set aside for ingress traffic into this cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ingress_vip GkeonpremVmwareCluster#ingress_vip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ingress_vip GkeonpremVmwareCluster#ingress_vip}
 
 ---
 
@@ -2738,15 +2738,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfig {
 	PodAddressCidrBlocks: *[]*string,
 	ServiceAddressCidrBlocks: *[]*string,
-	ControlPlaneV2Config: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2Config,
-	DhcpIpConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigDhcpIpConfig,
-	HostConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigHostConfig,
-	StaticIpConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfig,
+	ControlPlaneV2Config: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2Config,
+	DhcpIpConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigDhcpIpConfig,
+	HostConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigHostConfig,
+	StaticIpConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfig,
 }
 ```
 
@@ -2775,7 +2775,7 @@ All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges.
 
 Only a single range is supported. This field cannot be changed after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#pod_address_cidr_blocks GkeonpremVmwareCluster#pod_address_cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#pod_address_cidr_blocks GkeonpremVmwareCluster#pod_address_cidr_blocks}
 
 ---
 
@@ -2792,7 +2792,7 @@ All services in the cluster are assigned an RFC1918 IPv4 address from these rang
 Only a single range is supported.. This field
 cannot be changed after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#service_address_cidr_blocks GkeonpremVmwareCluster#service_address_cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#service_address_cidr_blocks GkeonpremVmwareCluster#service_address_cidr_blocks}
 
 ---
 
@@ -2806,7 +2806,7 @@ ControlPlaneV2Config GkeonpremVmwareClusterNetworkConfigControlPlaneV2Config
 
 control_plane_v2_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#control_plane_v2_config GkeonpremVmwareCluster#control_plane_v2_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#control_plane_v2_config GkeonpremVmwareCluster#control_plane_v2_config}
 
 ---
 
@@ -2820,7 +2820,7 @@ DhcpIpConfig GkeonpremVmwareClusterNetworkConfigDhcpIpConfig
 
 dhcp_ip_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#dhcp_ip_config GkeonpremVmwareCluster#dhcp_ip_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#dhcp_ip_config GkeonpremVmwareCluster#dhcp_ip_config}
 
 ---
 
@@ -2834,7 +2834,7 @@ HostConfig GkeonpremVmwareClusterNetworkConfigHostConfig
 
 host_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#host_config GkeonpremVmwareCluster#host_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#host_config GkeonpremVmwareCluster#host_config}
 
 ---
 
@@ -2848,7 +2848,7 @@ StaticIpConfig GkeonpremVmwareClusterNetworkConfigStaticIpConfig
 
 static_ip_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#static_ip_config GkeonpremVmwareCluster#static_ip_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#static_ip_config GkeonpremVmwareCluster#static_ip_config}
 
 ---
 
@@ -2857,10 +2857,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2Config.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2Config {
-	ControlPlaneIpBlock: github.com/cdktf/cdktf-provider-google-go/google/v13.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlock,
+	ControlPlaneIpBlock: github.com/cdktf/cdktf-provider-google-go/google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlock,
 }
 ```
 
@@ -2882,7 +2882,7 @@ ControlPlaneIpBlock GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigContr
 
 control_plane_ip_block block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#control_plane_ip_block GkeonpremVmwareCluster#control_plane_ip_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#control_plane_ip_block GkeonpremVmwareCluster#control_plane_ip_block}
 
 ---
 
@@ -2891,7 +2891,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlock.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlock {
 	Gateway: *string,
@@ -2920,7 +2920,7 @@ Gateway *string
 
 The network gateway used by the VMware User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#gateway GkeonpremVmwareCluster#gateway}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#gateway GkeonpremVmwareCluster#gateway}
 
 ---
 
@@ -2934,7 +2934,7 @@ Ips interface{}
 
 ips block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ips GkeonpremVmwareCluster#ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ips GkeonpremVmwareCluster#ips}
 
 ---
 
@@ -2948,7 +2948,7 @@ Netmask *string
 
 The netmask used by the VMware User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#netmask GkeonpremVmwareCluster#netmask}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#netmask GkeonpremVmwareCluster#netmask}
 
 ---
 
@@ -2957,7 +2957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIps.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIps {
 	Hostname: *string,
@@ -2984,7 +2984,7 @@ Hostname *string
 
 Hostname of the machine. VM's name will be used if this field is empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#hostname GkeonpremVmwareCluster#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#hostname GkeonpremVmwareCluster#hostname}
 
 ---
 
@@ -2998,7 +2998,7 @@ Ip *string
 
 IP could be an IP address (like 1.2.3.4) or a CIDR (like 1.2.3.0/24).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ip GkeonpremVmwareCluster#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ip GkeonpremVmwareCluster#ip}
 
 ---
 
@@ -3007,7 +3007,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigDhcpIpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigDhcpIpConfig {
 	Enabled: interface{},
@@ -3032,7 +3032,7 @@ Enabled interface{}
 
 enabled is a flag to mark if DHCP IP allocation is used for VMware user clusters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#enabled GkeonpremVmwareCluster#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#enabled GkeonpremVmwareCluster#enabled}
 
 ---
 
@@ -3041,7 +3041,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigHostConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigHostConfig {
 	DnsSearchDomains: *[]*string,
@@ -3070,7 +3070,7 @@ DnsSearchDomains *[]*string
 
 DNS search domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#dns_search_domains GkeonpremVmwareCluster#dns_search_domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#dns_search_domains GkeonpremVmwareCluster#dns_search_domains}
 
 ---
 
@@ -3084,7 +3084,7 @@ DnsServers *[]*string
 
 DNS servers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#dns_servers GkeonpremVmwareCluster#dns_servers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#dns_servers GkeonpremVmwareCluster#dns_servers}
 
 ---
 
@@ -3098,7 +3098,7 @@ NtpServers *[]*string
 
 NTP servers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ntp_servers GkeonpremVmwareCluster#ntp_servers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ntp_servers GkeonpremVmwareCluster#ntp_servers}
 
 ---
 
@@ -3107,7 +3107,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfig {
 	IpBlocks: interface{},
@@ -3132,7 +3132,7 @@ IpBlocks interface{}
 
 ip_blocks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ip_blocks GkeonpremVmwareCluster#ip_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ip_blocks GkeonpremVmwareCluster#ip_blocks}
 
 ---
 
@@ -3141,7 +3141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocks {
 	Gateway: *string,
@@ -3170,7 +3170,7 @@ Gateway *string
 
 The network gateway used by the VMware User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#gateway GkeonpremVmwareCluster#gateway}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#gateway GkeonpremVmwareCluster#gateway}
 
 ---
 
@@ -3184,7 +3184,7 @@ Ips interface{}
 
 ips block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ips GkeonpremVmwareCluster#ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ips GkeonpremVmwareCluster#ips}
 
 ---
 
@@ -3198,7 +3198,7 @@ Netmask *string
 
 The netmask used by the VMware User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#netmask GkeonpremVmwareCluster#netmask}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#netmask GkeonpremVmwareCluster#netmask}
 
 ---
 
@@ -3207,7 +3207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIps.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIps {
 	Ip: *string,
@@ -3234,7 +3234,7 @@ Ip *string
 
 IP could be an IP address (like 1.2.3.4) or a CIDR (like 1.2.3.0/24).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ip GkeonpremVmwareCluster#ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ip GkeonpremVmwareCluster#ip}
 
 ---
 
@@ -3248,7 +3248,7 @@ Hostname *string
 
 Hostname of the machine. VM's name will be used if this field is empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#hostname GkeonpremVmwareCluster#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#hostname GkeonpremVmwareCluster#hostname}
 
 ---
 
@@ -3257,7 +3257,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterStatus {
 
@@ -3270,7 +3270,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStatusConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterStatusConditions {
 
@@ -3283,7 +3283,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterStorage {
 	VsphereCsiDisabled: interface{},
@@ -3308,7 +3308,7 @@ VsphereCsiDisabled interface{}
 
 Whether or not to deploy vSphere CSI components in the VMware User Cluster. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#vsphere_csi_disabled GkeonpremVmwareCluster#vsphere_csi_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#vsphere_csi_disabled GkeonpremVmwareCluster#vsphere_csi_disabled}
 
 ---
 
@@ -3317,7 +3317,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterTimeouts {
 	Create: *string,
@@ -3330,9 +3330,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#create GkeonpremVmwareCluster#create}. |
-| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#delete GkeonpremVmwareCluster#delete}. |
-| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#update GkeonpremVmwareCluster#update}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#create GkeonpremVmwareCluster#create}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#delete GkeonpremVmwareCluster#delete}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#update GkeonpremVmwareCluster#update}. |
 
 ---
 
@@ -3344,7 +3344,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#create GkeonpremVmwareCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#create GkeonpremVmwareCluster#create}.
 
 ---
 
@@ -3356,7 +3356,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#delete GkeonpremVmwareCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#delete GkeonpremVmwareCluster#delete}.
 
 ---
 
@@ -3368,7 +3368,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#update GkeonpremVmwareCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#update GkeonpremVmwareCluster#update}.
 
 ---
 
@@ -3377,7 +3377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterUpgradePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterUpgradePolicy {
 	ControlPlaneOnly: interface{},
@@ -3402,7 +3402,7 @@ ControlPlaneOnly interface{}
 
 Controls whether the upgrade applies to the control plane only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#control_plane_only GkeonpremVmwareCluster#control_plane_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#control_plane_only GkeonpremVmwareCluster#control_plane_only}
 
 ---
 
@@ -3411,7 +3411,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheck.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterValidationCheck {
 
@@ -3424,7 +3424,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterValidationCheckStatus {
 
@@ -3437,7 +3437,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckStatusResult.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterValidationCheckStatusResult {
 
@@ -3450,7 +3450,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwareclus
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterVcenter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 &gkeonpremvmwarecluster.GkeonpremVmwareClusterVcenter {
 	CaCertData: *string,
@@ -3487,7 +3487,7 @@ CaCertData *string
 
 Contains the vCenter CA certificate public key for SSL verification.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#ca_cert_data GkeonpremVmwareCluster#ca_cert_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#ca_cert_data GkeonpremVmwareCluster#ca_cert_data}
 
 ---
 
@@ -3501,7 +3501,7 @@ Cluster *string
 
 The name of the vCenter cluster for the user cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#cluster GkeonpremVmwareCluster#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#cluster GkeonpremVmwareCluster#cluster}
 
 ---
 
@@ -3515,7 +3515,7 @@ Datacenter *string
 
 The name of the vCenter datacenter for the user cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#datacenter GkeonpremVmwareCluster#datacenter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#datacenter GkeonpremVmwareCluster#datacenter}
 
 ---
 
@@ -3529,7 +3529,7 @@ Datastore *string
 
 The name of the vCenter datastore for the user cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#datastore GkeonpremVmwareCluster#datastore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#datastore GkeonpremVmwareCluster#datastore}
 
 ---
 
@@ -3543,7 +3543,7 @@ Folder *string
 
 The name of the vCenter folder for the user cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#folder GkeonpremVmwareCluster#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#folder GkeonpremVmwareCluster#folder}
 
 ---
 
@@ -3557,7 +3557,7 @@ ResourcePool *string
 
 The name of the vCenter resource pool for the user cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#resource_pool GkeonpremVmwareCluster#resource_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#resource_pool GkeonpremVmwareCluster#resource_pool}
 
 ---
 
@@ -3571,7 +3571,7 @@ StoragePolicyName *string
 
 The name of the vCenter storage policy for the user cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.17.0/docs/resources/gkeonprem_vmware_cluster#storage_policy_name GkeonpremVmwareCluster#storage_policy_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/gkeonprem_vmware_cluster#storage_policy_name GkeonpremVmwareCluster#storage_policy_name}
 
 ---
 
@@ -3582,7 +3582,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAntiAffinityGroupsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterAntiAffinityGroupsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterAntiAffinityGroupsOutputReference
 ```
@@ -3853,7 +3853,7 @@ func InternalValue() GkeonpremVmwareClusterAntiAffinityGroups
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAuthorizationAdminUsersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterAuthorizationAdminUsersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterAuthorizationAdminUsersList
 ```
@@ -4013,7 +4013,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAuthorizationAdminUsersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterAuthorizationAdminUsersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterAuthorizationAdminUsersOutputReference
 ```
@@ -4302,7 +4302,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterAuthorizationOutputReference
 ```
@@ -4593,7 +4593,7 @@ func InternalValue() GkeonpremVmwareClusterAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterAutoRepairConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterAutoRepairConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterAutoRepairConfigOutputReference
 ```
@@ -4864,7 +4864,7 @@ func InternalValue() GkeonpremVmwareClusterAutoRepairConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterControlPlaneNodeAutoResizeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfigOutputReference
 ```
@@ -5135,7 +5135,7 @@ func InternalValue() GkeonpremVmwareClusterControlPlaneNodeAutoResizeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterControlPlaneNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterControlPlaneNodeOutputReference
 ```
@@ -5524,7 +5524,7 @@ func InternalValue() GkeonpremVmwareClusterControlPlaneNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeVsphereConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterControlPlaneNodeVsphereConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterControlPlaneNodeVsphereConfigList
 ```
@@ -5673,7 +5673,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterControlPlaneNodeVsphereConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterControlPlaneNodeVsphereConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterControlPlaneNodeVsphereConfigOutputReference
 ```
@@ -5962,7 +5962,7 @@ func InternalValue() GkeonpremVmwareClusterControlPlaneNodeVsphereConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterDataplaneV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterDataplaneV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterDataplaneV2OutputReference
 ```
@@ -6298,7 +6298,7 @@ func InternalValue() GkeonpremVmwareClusterDataplaneV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterFleetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterFleetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterFleetList
 ```
@@ -6447,7 +6447,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterFleetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterFleetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterFleetOutputReference
 ```
@@ -6725,7 +6725,7 @@ func InternalValue() GkeonpremVmwareClusterFleet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerF5ConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterLoadBalancerF5ConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterLoadBalancerF5ConfigOutputReference
 ```
@@ -7061,7 +7061,7 @@ func InternalValue() GkeonpremVmwareClusterLoadBalancerF5Config
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerManualLbConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterLoadBalancerManualLbConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterLoadBalancerManualLbConfigOutputReference
 ```
@@ -7426,7 +7426,7 @@ func InternalValue() GkeonpremVmwareClusterLoadBalancerManualLbConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPoolsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPoolsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPoolsList
 ```
@@ -7586,7 +7586,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterLoadBalancerMetalLbConfigAddressPoolsOutputReference
 ```
@@ -7955,7 +7955,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerMetalLbConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterLoadBalancerMetalLbConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterLoadBalancerMetalLbConfigOutputReference
 ```
@@ -8239,7 +8239,7 @@ func InternalValue() GkeonpremVmwareClusterLoadBalancerMetalLbConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterLoadBalancerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterLoadBalancerOutputReference
 ```
@@ -8656,7 +8656,7 @@ func InternalValue() GkeonpremVmwareClusterLoadBalancer
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterLoadBalancerVipConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterLoadBalancerVipConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterLoadBalancerVipConfigOutputReference
 ```
@@ -8963,7 +8963,7 @@ func InternalValue() GkeonpremVmwareClusterLoadBalancerVipConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIpsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIpsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIpsList
 ```
@@ -9123,7 +9123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIpsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIpsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIpsOutputReference
 ```
@@ -9448,7 +9448,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockOutputReference
 ```
@@ -9797,7 +9797,7 @@ func InternalValue() GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigCont
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterNetworkConfigControlPlaneV2ConfigOutputReference
 ```
@@ -10088,7 +10088,7 @@ func InternalValue() GkeonpremVmwareClusterNetworkConfigControlPlaneV2Config
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigDhcpIpConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigDhcpIpConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterNetworkConfigDhcpIpConfigOutputReference
 ```
@@ -10359,7 +10359,7 @@ func InternalValue() GkeonpremVmwareClusterNetworkConfigDhcpIpConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigHostConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigHostConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterNetworkConfigHostConfigOutputReference
 ```
@@ -10695,7 +10695,7 @@ func InternalValue() GkeonpremVmwareClusterNetworkConfigHostConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterNetworkConfigOutputReference
 ```
@@ -11167,7 +11167,7 @@ func InternalValue() GkeonpremVmwareClusterNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIpsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIpsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIpsList
 ```
@@ -11327,7 +11327,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIpsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIpsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksIpsOutputReference
 ```
@@ -11645,7 +11645,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksList
 ```
@@ -11805,7 +11805,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterNetworkConfigStaticIpConfigIpBlocksOutputReference
 ```
@@ -12151,7 +12151,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterNetworkConfigStaticIpConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterNetworkConfigStaticIpConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterNetworkConfigStaticIpConfigOutputReference
 ```
@@ -12435,7 +12435,7 @@ func InternalValue() GkeonpremVmwareClusterNetworkConfigStaticIpConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStatusConditionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterStatusConditionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterStatusConditionsList
 ```
@@ -12584,7 +12584,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStatusConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterStatusConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterStatusConditionsOutputReference
 ```
@@ -12906,7 +12906,7 @@ func InternalValue() GkeonpremVmwareClusterStatusConditions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterStatusList
 ```
@@ -13055,7 +13055,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterStatusOutputReference
 ```
@@ -13344,7 +13344,7 @@ func InternalValue() GkeonpremVmwareClusterStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterStorageOutputReference
 ```
@@ -13615,7 +13615,7 @@ func InternalValue() GkeonpremVmwareClusterStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterTimeoutsOutputReference
 ```
@@ -13951,7 +13951,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterUpgradePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterUpgradePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterUpgradePolicyOutputReference
 ```
@@ -14229,7 +14229,7 @@ func InternalValue() GkeonpremVmwareClusterUpgradePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterValidationCheckList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterValidationCheckList
 ```
@@ -14378,7 +14378,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterValidationCheckOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterValidationCheckOutputReference
 ```
@@ -14678,7 +14678,7 @@ func InternalValue() GkeonpremVmwareClusterValidationCheck
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterValidationCheckStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterValidationCheckStatusList
 ```
@@ -14827,7 +14827,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterValidationCheckStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterValidationCheckStatusOutputReference
 ```
@@ -15105,7 +15105,7 @@ func InternalValue() GkeonpremVmwareClusterValidationCheckStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckStatusResultList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterValidationCheckStatusResultList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeonpremVmwareClusterValidationCheckStatusResultList
 ```
@@ -15254,7 +15254,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterValidationCheckStatusResultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterValidationCheckStatusResultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeonpremVmwareClusterValidationCheckStatusResultOutputReference
 ```
@@ -15576,7 +15576,7 @@ func InternalValue() GkeonpremVmwareClusterValidationCheckStatusResult
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremVmwareCluster.GkeonpremVmwareClusterVcenterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/gkeonpremvmwarecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkeonpremvmwarecluster"
 
 gkeonpremvmwarecluster.NewGkeonpremVmwareClusterVcenterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeonpremVmwareClusterVcenterOutputReference
 ```
