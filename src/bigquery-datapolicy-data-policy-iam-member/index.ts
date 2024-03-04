@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/bigquery_datapolicy_data_policy_iam_member
 // generated from terraform resource schema
 
