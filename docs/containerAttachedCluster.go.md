@@ -4,12 +4,12 @@
 
 ### ContainerAttachedCluster <a name="ContainerAttachedCluster" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster google_container_attached_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster google_container_attached_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedCluster(scope Construct, id *string, config ContainerAttachedClusterConfig) ContainerAttachedCluster
 ```
@@ -559,7 +559,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.ContainerAttachedCluster_IsConstruct(x interface{}) *bool
 ```
@@ -591,7 +591,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.ContainerAttachedCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -605,7 +605,7 @@ containerattachedcluster.ContainerAttachedCluster_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.ContainerAttachedCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -619,7 +619,7 @@ containerattachedcluster.ContainerAttachedCluster_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.ContainerAttachedCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -648,7 +648,7 @@ The construct id used in the generated config for the ContainerAttachedCluster t
 
 The id of the existing ContainerAttachedCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1332,7 +1332,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterAuthorization {
 	AdminGroups: *[]*string,
@@ -1366,7 +1366,7 @@ to the groups. Up to ten admin groups can be provided.
 For more info on RBAC, see
 https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#admin_groups ContainerAttachedCluster#admin_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#admin_groups ContainerAttachedCluster#admin_groups}
 
 ---
 
@@ -1387,7 +1387,7 @@ to the users. Up to ten admin users can be provided.
 For more info on RBAC, see
 https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#admin_users ContainerAttachedCluster#admin_users}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#admin_users ContainerAttachedCluster#admin_users}
 
 ---
 
@@ -1396,7 +1396,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterBinaryAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterBinaryAuthorization {
 	EvaluationMode: *string,
@@ -1421,7 +1421,7 @@ EvaluationMode *string
 
 Configure Binary Authorization evaluation mode. Possible values: ["DISABLED", "PROJECT_SINGLETON_POLICY_ENFORCE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#evaluation_mode ContainerAttachedCluster#evaluation_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#evaluation_mode ContainerAttachedCluster#evaluation_mode}
 
 ---
 
@@ -1430,7 +1430,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterConfig {
 	Connection: interface{},
@@ -1441,22 +1441,22 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcl
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Distribution: *string,
-	Fleet: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterFleet,
+	Fleet: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterFleet,
 	Location: *string,
 	Name: *string,
-	OidcConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterOidcConfig,
+	OidcConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterOidcConfig,
 	PlatformVersion: *string,
 	Annotations: *map[string]*string,
-	Authorization: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterAuthorization,
-	BinaryAuthorization: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterBinaryAuthorization,
+	Authorization: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterAuthorization,
+	BinaryAuthorization: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterBinaryAuthorization,
 	DeletionPolicy: *string,
 	Description: *string,
 	Id: *string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterLoggingConfig,
-	MonitoringConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterMonitoringConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterLoggingConfig,
+	MonitoringConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterMonitoringConfig,
 	Project: *string,
-	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterProxyConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterTimeouts,
+	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterProxyConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterTimeouts,
 }
 ```
 
@@ -1482,10 +1482,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcl
 | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.binaryAuthorization">BinaryAuthorization</a></code> | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterBinaryAuthorization">ContainerAttachedClusterBinaryAuthorization</a></code> | binary_authorization block. |
 | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.deletionPolicy">DeletionPolicy</a></code> | <code>*string</code> | Policy to determine what flags to send on delete. |
 | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.description">Description</a></code> | <code>*string</code> | A human readable description of this attached cluster. Cannot be longer than 255 UTF-8 encoded bytes. |
-| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#id ContainerAttachedCluster#id}. |
+| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#id ContainerAttachedCluster#id}. |
 | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.loggingConfig">LoggingConfig</a></code> | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterLoggingConfig">ContainerAttachedClusterLoggingConfig</a></code> | logging_config block. |
 | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.monitoringConfig">MonitoringConfig</a></code> | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterMonitoringConfig">ContainerAttachedClusterMonitoringConfig</a></code> | monitoring_config block. |
-| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}. |
+| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}. |
 | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.proxyConfig">ProxyConfig</a></code> | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterProxyConfig">ContainerAttachedClusterProxyConfig</a></code> | proxy_config block. |
 | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts">ContainerAttachedClusterTimeouts</a></code> | timeouts block. |
 
@@ -1571,7 +1571,7 @@ Distribution *string
 
 The Kubernetes distribution of the underlying attached cluster. Supported values: "eks", "aks".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#distribution ContainerAttachedCluster#distribution}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#distribution ContainerAttachedCluster#distribution}
 
 ---
 
@@ -1585,7 +1585,7 @@ Fleet ContainerAttachedClusterFleet
 
 fleet block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#fleet ContainerAttachedCluster#fleet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#fleet ContainerAttachedCluster#fleet}
 
 ---
 
@@ -1599,7 +1599,7 @@ Location *string
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#location ContainerAttachedCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#location ContainerAttachedCluster#location}
 
 ---
 
@@ -1613,7 +1613,7 @@ Name *string
 
 The name of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
 
 ---
 
@@ -1627,7 +1627,7 @@ OidcConfig ContainerAttachedClusterOidcConfig
 
 oidc_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#oidc_config ContainerAttachedCluster#oidc_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#oidc_config ContainerAttachedCluster#oidc_config}
 
 ---
 
@@ -1641,7 +1641,7 @@ PlatformVersion *string
 
 The platform version for the cluster (e.g. '1.23.0-gke.1').
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#platform_version ContainerAttachedCluster#platform_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#platform_version ContainerAttachedCluster#platform_version}
 
 ---
 
@@ -1665,7 +1665,7 @@ with dashes (-), underscores (_), dots (.), and alphanumerics between.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#annotations ContainerAttachedCluster#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#annotations ContainerAttachedCluster#annotations}
 
 ---
 
@@ -1679,7 +1679,7 @@ Authorization ContainerAttachedClusterAuthorization
 
 authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#authorization ContainerAttachedCluster#authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#authorization ContainerAttachedCluster#authorization}
 
 ---
 
@@ -1693,7 +1693,7 @@ BinaryAuthorization ContainerAttachedClusterBinaryAuthorization
 
 binary_authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#binary_authorization ContainerAttachedCluster#binary_authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#binary_authorization ContainerAttachedCluster#binary_authorization}
 
 ---
 
@@ -1707,7 +1707,7 @@ DeletionPolicy *string
 
 Policy to determine what flags to send on delete.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#deletion_policy ContainerAttachedCluster#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#deletion_policy ContainerAttachedCluster#deletion_policy}
 
 ---
 
@@ -1721,7 +1721,7 @@ Description *string
 
 A human readable description of this attached cluster. Cannot be longer than 255 UTF-8 encoded bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#description ContainerAttachedCluster#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#description ContainerAttachedCluster#description}
 
 ---
 
@@ -1733,7 +1733,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#id ContainerAttachedCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#id ContainerAttachedCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1750,7 +1750,7 @@ LoggingConfig ContainerAttachedClusterLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#logging_config ContainerAttachedCluster#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#logging_config ContainerAttachedCluster#logging_config}
 
 ---
 
@@ -1764,7 +1764,7 @@ MonitoringConfig ContainerAttachedClusterMonitoringConfig
 
 monitoring_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#monitoring_config ContainerAttachedCluster#monitoring_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#monitoring_config ContainerAttachedCluster#monitoring_config}
 
 ---
 
@@ -1776,7 +1776,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}.
 
 ---
 
@@ -1790,7 +1790,7 @@ ProxyConfig ContainerAttachedClusterProxyConfig
 
 proxy_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#proxy_config ContainerAttachedCluster#proxy_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#proxy_config ContainerAttachedCluster#proxy_config}
 
 ---
 
@@ -1804,7 +1804,7 @@ Timeouts ContainerAttachedClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#timeouts ContainerAttachedCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#timeouts ContainerAttachedCluster#timeouts}
 
 ---
 
@@ -1813,7 +1813,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterErrors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterErrors {
 
@@ -1826,7 +1826,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterFleet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterFleet {
 	Project: *string,
@@ -1851,7 +1851,7 @@ Project *string
 
 The number of the Fleet host project where this cluster will be registered.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}
 
 ---
 
@@ -1860,10 +1860,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterLoggingConfig {
-	ComponentConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterLoggingConfigComponentConfig,
+	ComponentConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterLoggingConfigComponentConfig,
 }
 ```
 
@@ -1885,7 +1885,7 @@ ComponentConfig ContainerAttachedClusterLoggingConfigComponentConfig
 
 component_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#component_config ContainerAttachedCluster#component_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#component_config ContainerAttachedCluster#component_config}
 
 ---
 
@@ -1894,7 +1894,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterLoggingConfigComponentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterLoggingConfigComponentConfig {
 	EnableComponents: *[]*string,
@@ -1919,7 +1919,7 @@ EnableComponents *[]*string
 
 The components to be enabled. Possible values: ["SYSTEM_COMPONENTS", "WORKLOADS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#enable_components ContainerAttachedCluster#enable_components}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#enable_components ContainerAttachedCluster#enable_components}
 
 ---
 
@@ -1928,10 +1928,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterMonitoringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterMonitoringConfig {
-	ManagedPrometheusConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig,
+	ManagedPrometheusConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig,
 }
 ```
 
@@ -1953,7 +1953,7 @@ ManagedPrometheusConfig ContainerAttachedClusterMonitoringConfigManagedPrometheu
 
 managed_prometheus_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#managed_prometheus_config ContainerAttachedCluster#managed_prometheus_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#managed_prometheus_config ContainerAttachedCluster#managed_prometheus_config}
 
 ---
 
@@ -1962,7 +1962,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig {
 	Enabled: interface{},
@@ -1987,7 +1987,7 @@ Enabled interface{}
 
 Enable Managed Collection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#enabled ContainerAttachedCluster#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#enabled ContainerAttachedCluster#enabled}
 
 ---
 
@@ -1996,7 +1996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterOidcConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterOidcConfig {
 	IssuerUrl: *string,
@@ -2023,7 +2023,7 @@ IssuerUrl *string
 
 A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#issuer_url ContainerAttachedCluster#issuer_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#issuer_url ContainerAttachedCluster#issuer_url}
 
 ---
 
@@ -2037,7 +2037,7 @@ Jwks *string
 
 OIDC verification keys in JWKS format (RFC 7517).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#jwks ContainerAttachedCluster#jwks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#jwks ContainerAttachedCluster#jwks}
 
 ---
 
@@ -2046,10 +2046,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterProxyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterProxyConfig {
-	KubernetesSecret: github.com/cdktf/cdktf-provider-google-go/google/v13.containerAttachedCluster.ContainerAttachedClusterProxyConfigKubernetesSecret,
+	KubernetesSecret: github.com/cdktf/cdktf-provider-google-go/google.containerAttachedCluster.ContainerAttachedClusterProxyConfigKubernetesSecret,
 }
 ```
 
@@ -2071,7 +2071,7 @@ KubernetesSecret ContainerAttachedClusterProxyConfigKubernetesSecret
 
 kubernetes_secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#kubernetes_secret ContainerAttachedCluster#kubernetes_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#kubernetes_secret ContainerAttachedCluster#kubernetes_secret}
 
 ---
 
@@ -2080,7 +2080,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterProxyConfigKubernetesSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterProxyConfigKubernetesSecret {
 	Name: *string,
@@ -2107,7 +2107,7 @@ Name *string
 
 Name of the kubernetes secret containing the proxy config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
 
 ---
 
@@ -2121,7 +2121,7 @@ Namespace *string
 
 Namespace of the kubernetes secret containing the proxy config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#namespace ContainerAttachedCluster#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#namespace ContainerAttachedCluster#namespace}
 
 ---
 
@@ -2130,7 +2130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterTimeouts {
 	Create: *string,
@@ -2143,9 +2143,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcl
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#create ContainerAttachedCluster#create}. |
-| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#delete ContainerAttachedCluster#delete}. |
-| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#update ContainerAttachedCluster#update}. |
+| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#create ContainerAttachedCluster#create}. |
+| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#delete ContainerAttachedCluster#delete}. |
+| <code><a href="#@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#update ContainerAttachedCluster#update}. |
 
 ---
 
@@ -2157,7 +2157,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#create ContainerAttachedCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#create ContainerAttachedCluster#create}.
 
 ---
 
@@ -2169,7 +2169,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#delete ContainerAttachedCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#delete ContainerAttachedCluster#delete}.
 
 ---
 
@@ -2181,7 +2181,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/container_attached_cluster#update ContainerAttachedCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/container_attached_cluster#update ContainerAttachedCluster#update}.
 
 ---
 
@@ -2190,7 +2190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterWorkloadIdentityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 &containerattachedcluster.ContainerAttachedClusterWorkloadIdentityConfig {
 
@@ -2205,7 +2205,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterAuthorizationOutputReference
 ```
@@ -2512,7 +2512,7 @@ func InternalValue() ContainerAttachedClusterAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterBinaryAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterBinaryAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterBinaryAuthorizationOutputReference
 ```
@@ -2790,7 +2790,7 @@ func InternalValue() ContainerAttachedClusterBinaryAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterErrorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterErrorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAttachedClusterErrorsList
 ```
@@ -2939,7 +2939,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterErrorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterErrorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAttachedClusterErrorsOutputReference
 ```
@@ -3217,7 +3217,7 @@ func InternalValue() ContainerAttachedClusterErrors
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterFleetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterFleetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterFleetOutputReference
 ```
@@ -3499,7 +3499,7 @@ func InternalValue() ContainerAttachedClusterFleet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterLoggingConfigComponentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterLoggingConfigComponentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterLoggingConfigComponentConfigOutputReference
 ```
@@ -3777,7 +3777,7 @@ func InternalValue() ContainerAttachedClusterLoggingConfigComponentConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterLoggingConfigOutputReference
 ```
@@ -4068,7 +4068,7 @@ func InternalValue() ContainerAttachedClusterLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterMonitoringConfigManagedPrometheusConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterMonitoringConfigManagedPrometheusConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterMonitoringConfigManagedPrometheusConfigOutputReference
 ```
@@ -4346,7 +4346,7 @@ func InternalValue() ContainerAttachedClusterMonitoringConfigManagedPrometheusCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterMonitoringConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterMonitoringConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterMonitoringConfigOutputReference
 ```
@@ -4637,7 +4637,7 @@ func InternalValue() ContainerAttachedClusterMonitoringConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterOidcConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterOidcConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterOidcConfigOutputReference
 ```
@@ -4937,7 +4937,7 @@ func InternalValue() ContainerAttachedClusterOidcConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterProxyConfigKubernetesSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterProxyConfigKubernetesSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterProxyConfigKubernetesSecretOutputReference
 ```
@@ -5230,7 +5230,7 @@ func InternalValue() ContainerAttachedClusterProxyConfigKubernetesSecret
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterProxyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterProxyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterProxyConfigOutputReference
 ```
@@ -5521,7 +5521,7 @@ func InternalValue() ContainerAttachedClusterProxyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAttachedClusterTimeoutsOutputReference
 ```
@@ -5857,7 +5857,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterWorkloadIdentityConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterWorkloadIdentityConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAttachedClusterWorkloadIdentityConfigList
 ```
@@ -6006,7 +6006,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAttachedCluster.ContainerAttachedClusterWorkloadIdentityConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/containerattachedcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerattachedcluster"
 
 containerattachedcluster.NewContainerAttachedClusterWorkloadIdentityConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAttachedClusterWorkloadIdentityConfigOutputReference
 ```

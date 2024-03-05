@@ -4,12 +4,12 @@
 
 ### StorageBucketIamPolicy <a name="StorageBucketIamPolicy" id="@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy google_storage_bucket_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy google_storage_bucket_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketiampolicy"
 
 storagebucketiampolicy.NewStorageBucketIamPolicy(scope Construct, id *string, config StorageBucketIamPolicyConfig) StorageBucketIamPolicy
 ```
@@ -385,7 +385,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketiampolicy"
 
 storagebucketiampolicy.StorageBucketIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -417,7 +417,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketiampolicy"
 
 storagebucketiampolicy.StorageBucketIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ storagebucketiampolicy.StorageBucketIamPolicy_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketiampolicy"
 
 storagebucketiampolicy.StorageBucketIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ storagebucketiampolicy.StorageBucketIamPolicy_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketiampolicy"
 
 storagebucketiampolicy.StorageBucketIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -474,7 +474,7 @@ The construct id used in the generated config for the StorageBucketIamPolicy to 
 
 The id of the existing StorageBucketIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -751,7 +751,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/storagebucketiampolicy"
 
 &storagebucketiampolicy.StorageBucketIamPolicyConfig {
 	Connection: interface{},
@@ -778,9 +778,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampol
 | <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.bucket">Bucket</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy#bucket StorageBucketIamPolicy#bucket}. |
-| <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy#policy_data StorageBucketIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy#id StorageBucketIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.bucket">Bucket</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy#bucket StorageBucketIamPolicy#bucket}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy#policy_data StorageBucketIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamPolicy.StorageBucketIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy#id StorageBucketIamPolicy#id}. |
 
 ---
 
@@ -862,7 +862,7 @@ Bucket *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy#bucket StorageBucketIamPolicy#bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy#bucket StorageBucketIamPolicy#bucket}.
 
 ---
 
@@ -874,7 +874,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy#policy_data StorageBucketIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy#policy_data StorageBucketIamPolicy#policy_data}.
 
 ---
 
@@ -886,7 +886,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/storage_bucket_iam_policy#id StorageBucketIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/storage_bucket_iam_policy#id StorageBucketIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
