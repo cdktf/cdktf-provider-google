@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount
+// https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +13,28 @@ import * as cdktf from 'cdktf';
 
 export interface BillingSubaccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount#deletion_policy BillingSubaccount#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount#deletion_policy BillingSubaccount#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount#display_name BillingSubaccount#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount#display_name BillingSubaccount#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount#id BillingSubaccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount#id BillingSubaccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount#master_billing_account BillingSubaccount#master_billing_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount#master_billing_account BillingSubaccount#master_billing_account}
   */
   readonly masterBillingAccount: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount google_billing_subaccount}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount google_billing_subaccount}
 */
 export class BillingSubaccount extends cdktf.TerraformResource {
 
@@ -50,7 +50,7 @@ export class BillingSubaccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BillingSubaccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BillingSubaccount to import
-  * @param importFromId The id of the existing BillingSubaccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BillingSubaccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BillingSubaccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -62,7 +62,7 @@ export class BillingSubaccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_subaccount google_billing_subaccount} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_subaccount google_billing_subaccount} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -73,7 +73,7 @@ export class BillingSubaccount extends cdktf.TerraformResource {
       terraformResourceType: 'google_billing_subaccount',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.18.0',
+        providerVersion: '5.19.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

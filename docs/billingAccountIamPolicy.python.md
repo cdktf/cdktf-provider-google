@@ -4,7 +4,7 @@
 
 ### BillingAccountIamPolicy <a name="BillingAccountIamPolicy" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy google_billing_account_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy google_billing_account_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer"></a>
 
@@ -38,9 +38,9 @@ billingAccountIamPolicy.BillingAccountIamPolicy(
 | <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.billingAccountId">billing_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.billingAccountId">billing_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}. |
 
 ---
 
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}.
 
 ---
 
@@ -116,7 +116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -607,7 +607,7 @@ The construct id used in the generated config for the BillingAccountIamPolicy to
 
 The id of the existing BillingAccountIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -911,9 +911,9 @@ billingAccountIamPolicy.BillingAccountIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.billingAccountId">billing_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.billingAccountId">billing_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamPolicy.BillingAccountIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}. |
 
 ---
 
@@ -995,7 +995,7 @@ billing_account_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#billing_account_id BillingAccountIamPolicy#billing_account_id}.
 
 ---
 
@@ -1007,7 +1007,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#policy_data BillingAccountIamPolicy#policy_data}.
 
 ---
 
@@ -1019,7 +1019,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/billing_account_iam_policy#id BillingAccountIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

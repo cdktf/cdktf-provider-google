@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +13,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataplexDatascanIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy#data_scan_id DataplexDatascanIamPolicy#data_scan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy#data_scan_id DataplexDatascanIamPolicy#data_scan_id}
   */
   readonly dataScanId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy#id DataplexDatascanIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy#id DataplexDatascanIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy#location DataplexDatascanIamPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy#location DataplexDatascanIamPolicy#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy#policy_data DataplexDatascanIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy#policy_data DataplexDatascanIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy#project DataplexDatascanIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy#project DataplexDatascanIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy google_dataplex_datascan_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy google_dataplex_datascan_iam_policy}
 */
 export class DataplexDatascanIamPolicy extends cdktf.TerraformResource {
 
@@ -54,7 +54,7 @@ export class DataplexDatascanIamPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataplexDatascanIamPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataplexDatascanIamPolicy to import
-  * @param importFromId The id of the existing DataplexDatascanIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataplexDatascanIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataplexDatascanIamPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -66,7 +66,7 @@ export class DataplexDatascanIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.18.0/docs/resources/dataplex_datascan_iam_policy google_dataplex_datascan_iam_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_datascan_iam_policy google_dataplex_datascan_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -77,7 +77,7 @@ export class DataplexDatascanIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_datascan_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.18.0',
+        providerVersion: '5.19.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

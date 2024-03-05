@@ -160,12 +160,16 @@ Object.defineProperty(exports, 'cloudbuildv2ConnectionIamBinding', { get: functi
 Object.defineProperty(exports, 'cloudbuildv2ConnectionIamMember', { get: function () { return require('./cloudbuildv2-connection-iam-member'); } });
 Object.defineProperty(exports, 'cloudbuildv2ConnectionIamPolicy', { get: function () { return require('./cloudbuildv2-connection-iam-policy'); } });
 Object.defineProperty(exports, 'cloudbuildv2Repository', { get: function () { return require('./cloudbuildv2-repository'); } });
+Object.defineProperty(exports, 'clouddeployAutomation', { get: function () { return require('./clouddeploy-automation'); } });
 Object.defineProperty(exports, 'clouddeployCustomTargetType', { get: function () { return require('./clouddeploy-custom-target-type'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipeline', { get: function () { return require('./clouddeploy-delivery-pipeline'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamBinding', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-binding'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamMember', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-member'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamPolicy', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-policy'); } });
 Object.defineProperty(exports, 'clouddeployTarget', { get: function () { return require('./clouddeploy-target'); } });
+Object.defineProperty(exports, 'clouddeployTargetIamBinding', { get: function () { return require('./clouddeploy-target-iam-binding'); } });
+Object.defineProperty(exports, 'clouddeployTargetIamMember', { get: function () { return require('./clouddeploy-target-iam-member'); } });
+Object.defineProperty(exports, 'clouddeployTargetIamPolicy', { get: function () { return require('./clouddeploy-target-iam-policy'); } });
 Object.defineProperty(exports, 'clouddomainsRegistration', { get: function () { return require('./clouddomains-registration'); } });
 Object.defineProperty(exports, 'cloudfunctions2Function', { get: function () { return require('./cloudfunctions2-function'); } });
 Object.defineProperty(exports, 'cloudfunctions2FunctionIamBinding', { get: function () { return require('./cloudfunctions2-function-iam-binding'); } });
@@ -813,6 +817,7 @@ Object.defineProperty(exports, 'dataGoogleCloudTasksQueueIamPolicy', { get: func
 Object.defineProperty(exports, 'dataGoogleCloudbuildTrigger', { get: function () { return require('./data-google-cloudbuild-trigger'); } });
 Object.defineProperty(exports, 'dataGoogleCloudbuildv2ConnectionIamPolicy', { get: function () { return require('./data-google-cloudbuildv2-connection-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleClouddeployDeliveryPipelineIamPolicy', { get: function () { return require('./data-google-clouddeploy-delivery-pipeline-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleClouddeployTargetIamPolicy', { get: function () { return require('./data-google-clouddeploy-target-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleCloudfunctions2Function', { get: function () { return require('./data-google-cloudfunctions2-function'); } });
 Object.defineProperty(exports, 'dataGoogleCloudfunctions2FunctionIamPolicy', { get: function () { return require('./data-google-cloudfunctions2-function-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleCloudfunctionsFunction', { get: function () { return require('./data-google-cloudfunctions-function'); } });

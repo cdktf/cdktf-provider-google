@@ -160,12 +160,16 @@ export * as cloudbuildv2ConnectionIamBinding from './cloudbuildv2-connection-iam
 export * as cloudbuildv2ConnectionIamMember from './cloudbuildv2-connection-iam-member';
 export * as cloudbuildv2ConnectionIamPolicy from './cloudbuildv2-connection-iam-policy';
 export * as cloudbuildv2Repository from './cloudbuildv2-repository';
+export * as clouddeployAutomation from './clouddeploy-automation';
 export * as clouddeployCustomTargetType from './clouddeploy-custom-target-type';
 export * as clouddeployDeliveryPipeline from './clouddeploy-delivery-pipeline';
 export * as clouddeployDeliveryPipelineIamBinding from './clouddeploy-delivery-pipeline-iam-binding';
 export * as clouddeployDeliveryPipelineIamMember from './clouddeploy-delivery-pipeline-iam-member';
 export * as clouddeployDeliveryPipelineIamPolicy from './clouddeploy-delivery-pipeline-iam-policy';
 export * as clouddeployTarget from './clouddeploy-target';
+export * as clouddeployTargetIamBinding from './clouddeploy-target-iam-binding';
+export * as clouddeployTargetIamMember from './clouddeploy-target-iam-member';
+export * as clouddeployTargetIamPolicy from './clouddeploy-target-iam-policy';
 export * as clouddomainsRegistration from './clouddomains-registration';
 export * as cloudfunctions2Function from './cloudfunctions2-function';
 export * as cloudfunctions2FunctionIamBinding from './cloudfunctions2-function-iam-binding';
@@ -813,6 +817,7 @@ export * as dataGoogleCloudTasksQueueIamPolicy from './data-google-cloud-tasks-q
 export * as dataGoogleCloudbuildTrigger from './data-google-cloudbuild-trigger';
 export * as dataGoogleCloudbuildv2ConnectionIamPolicy from './data-google-cloudbuildv2-connection-iam-policy';
 export * as dataGoogleClouddeployDeliveryPipelineIamPolicy from './data-google-clouddeploy-delivery-pipeline-iam-policy';
+export * as dataGoogleClouddeployTargetIamPolicy from './data-google-clouddeploy-target-iam-policy';
 export * as dataGoogleCloudfunctions2Function from './data-google-cloudfunctions2-function';
 export * as dataGoogleCloudfunctions2FunctionIamPolicy from './data-google-cloudfunctions2-function-iam-policy';
 export * as dataGoogleCloudfunctionsFunction from './data-google-cloudfunctions-function';

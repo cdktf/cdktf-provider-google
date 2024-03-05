@@ -5715,6 +5715,11 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
     return this._effectiveTaints;
   }
 
+  // enable_confidential_storage - computed: true, optional: false, required: false
+  public get enableConfidentialStorage() {
+    return this.getBooleanAttribute('enable_confidential_storage');
+  }
+
   // ephemeral_storage_local_ssd_config - computed: true, optional: false, required: false
   private _ephemeralStorageLocalSsdConfig = new DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigList(this, "ephemeral_storage_local_ssd_config", false);
   public get ephemeralStorageLocalSsdConfig() {
@@ -8000,6 +8005,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   private _effectiveTaints = new DataGoogleContainerClusterNodePoolNodeConfigEffectiveTaintsList(this, "effective_taints", false);
   public get effectiveTaints() {
     return this._effectiveTaints;
+  }
+
+  // enable_confidential_storage - computed: true, optional: false, required: false
+  public get enableConfidentialStorage() {
+    return this.getBooleanAttribute('enable_confidential_storage');
   }
 
   // ephemeral_storage_local_ssd_config - computed: true, optional: false, required: false
