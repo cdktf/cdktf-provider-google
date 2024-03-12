@@ -1,3 +1,3 @@
 # `google_tags_tag_key`
 
-Refer to the Terraform Registry for docs: [`google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/tags_tag_key).
+Refer to the Terraform Registry for docs: [`google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/tags_tag_key).
