@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service
+// https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,18 +16,18 @@ export interface DataGoogleMonitoringIstioCanonicalServiceConfig extends cdktf.T
   * The name of the canonical service underlying this service.. 
   *                         Corresponds to the destination_service_name metric label in Istio metrics.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service#canonical_service DataGoogleMonitoringIstioCanonicalService#canonical_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service#canonical_service DataGoogleMonitoringIstioCanonicalService#canonical_service}
   */
   readonly canonicalService: string;
   /**
   * The namespace of the canonical service underlying this service.
   *                         Corresponds to the destination_service_namespace metric label in Istio metrics.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service#canonical_service_namespace DataGoogleMonitoringIstioCanonicalService#canonical_service_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service#canonical_service_namespace DataGoogleMonitoringIstioCanonicalService#canonical_service_namespace}
   */
   readonly canonicalServiceNamespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service#id DataGoogleMonitoringIstioCanonicalService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service#id DataGoogleMonitoringIstioCanonicalService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,11 +37,11 @@ export interface DataGoogleMonitoringIstioCanonicalServiceConfig extends cdktf.T
   * Identifier for the Istio mesh in which this canonical service is defined.
   *                         Corresponds to the meshUid metric label in Istio metrics.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service#mesh_uid DataGoogleMonitoringIstioCanonicalService#mesh_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service#mesh_uid DataGoogleMonitoringIstioCanonicalService#mesh_uid}
   */
   readonly meshUid: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service#project DataGoogleMonitoringIstioCanonicalService#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service#project DataGoogleMonitoringIstioCanonicalService#project}
   */
   readonly project?: string;
 }
@@ -122,7 +122,7 @@ export class DataGoogleMonitoringIstioCanonicalServiceTelemetryList extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service google_monitoring_istio_canonical_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service google_monitoring_istio_canonical_service}
 */
 export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDataSource {
 
@@ -138,7 +138,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   * Generates CDKTF code for importing a DataGoogleMonitoringIstioCanonicalService resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleMonitoringIstioCanonicalService to import
-  * @param importFromId The id of the existing DataGoogleMonitoringIstioCanonicalService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleMonitoringIstioCanonicalService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleMonitoringIstioCanonicalService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -150,7 +150,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/data-sources/monitoring_istio_canonical_service google_monitoring_istio_canonical_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/monitoring_istio_canonical_service google_monitoring_istio_canonical_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -161,7 +161,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
       terraformResourceType: 'google_monitoring_istio_canonical_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.19.0',
+        providerVersion: '5.20.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

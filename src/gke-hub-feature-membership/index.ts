@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership
+// https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface GkeHubFeatureMembershipConfig extends cdktf.TerraformMetaArgume
   /**
   * The name of the feature
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#feature GkeHubFeatureMembership#feature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#feature GkeHubFeatureMembership#feature}
   */
   readonly feature: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#id GkeHubFeatureMembership#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#id GkeHubFeatureMembership#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,49 +28,49 @@ export interface GkeHubFeatureMembershipConfig extends cdktf.TerraformMetaArgume
   /**
   * The location of the feature
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#location GkeHubFeatureMembership#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#location GkeHubFeatureMembership#location}
   */
   readonly location: string;
   /**
   * The name of the membership
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#membership GkeHubFeatureMembership#membership}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#membership GkeHubFeatureMembership#membership}
   */
   readonly membership: string;
   /**
   * The location of the membership
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#membership_location GkeHubFeatureMembership#membership_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#membership_location GkeHubFeatureMembership#membership_location}
   */
   readonly membershipLocation?: string;
   /**
   * The project of the feature
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#project GkeHubFeatureMembership#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#project GkeHubFeatureMembership#project}
   */
   readonly project?: string;
   /**
   * configmanagement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#configmanagement GkeHubFeatureMembership#configmanagement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#configmanagement GkeHubFeatureMembership#configmanagement}
   */
   readonly configmanagement?: GkeHubFeatureMembershipConfigmanagement;
   /**
   * mesh block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#mesh GkeHubFeatureMembership#mesh}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#mesh GkeHubFeatureMembership#mesh}
   */
   readonly mesh?: GkeHubFeatureMembershipMesh;
   /**
   * policycontroller block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#policycontroller GkeHubFeatureMembership#policycontroller}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#policycontroller GkeHubFeatureMembership#policycontroller}
   */
   readonly policycontroller?: GkeHubFeatureMembershipPolicycontroller;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#timeouts GkeHubFeatureMembership#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#timeouts GkeHubFeatureMembership#timeouts}
   */
   readonly timeouts?: GkeHubFeatureMembershipTimeouts;
 }
@@ -78,7 +78,7 @@ export interface GkeHubFeatureMembershipConfigmanagementBinauthz {
   /**
   * Whether binauthz is enabled in this cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#enabled GkeHubFeatureMembership#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#enabled GkeHubFeatureMembership#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -164,49 +164,49 @@ export interface GkeHubFeatureMembershipConfigmanagementConfigSyncGit {
   /**
   * The GCP Service Account Email used for auth when secretType is gcpServiceAccount.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#gcp_service_account_email GkeHubFeatureMembership#gcp_service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#gcp_service_account_email GkeHubFeatureMembership#gcp_service_account_email}
   */
   readonly gcpServiceAccountEmail?: string;
   /**
   * URL for the HTTPS proxy to be used when communicating with the Git repo.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#https_proxy GkeHubFeatureMembership#https_proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#https_proxy GkeHubFeatureMembership#https_proxy}
   */
   readonly httpsProxy?: string;
   /**
   * The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#policy_dir GkeHubFeatureMembership#policy_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#policy_dir GkeHubFeatureMembership#policy_dir}
   */
   readonly policyDir?: string;
   /**
   * Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile, gcenode, token, gcpserviceaccount or none. The validation of this is case-sensitive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#secret_type GkeHubFeatureMembership#secret_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#secret_type GkeHubFeatureMembership#secret_type}
   */
   readonly secretType?: string;
   /**
   * The branch of the repository to sync from. Default: master.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#sync_branch GkeHubFeatureMembership#sync_branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#sync_branch GkeHubFeatureMembership#sync_branch}
   */
   readonly syncBranch?: string;
   /**
   * The URL of the Git repository to use as the source of truth.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#sync_repo GkeHubFeatureMembership#sync_repo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#sync_repo GkeHubFeatureMembership#sync_repo}
   */
   readonly syncRepo?: string;
   /**
   * Git revision (tag or hash) to check out. Default HEAD.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#sync_rev GkeHubFeatureMembership#sync_rev}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#sync_rev GkeHubFeatureMembership#sync_rev}
   */
   readonly syncRev?: string;
   /**
   * Period in seconds between consecutive syncs. Default: 15.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#sync_wait_secs GkeHubFeatureMembership#sync_wait_secs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#sync_wait_secs GkeHubFeatureMembership#sync_wait_secs}
   */
   readonly syncWaitSecs?: string;
 }
@@ -495,31 +495,31 @@ export interface GkeHubFeatureMembershipConfigmanagementConfigSyncOci {
   /**
   * The GCP Service Account Email used for auth when secret_type is gcpserviceaccount. 
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#gcp_service_account_email GkeHubFeatureMembership#gcp_service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#gcp_service_account_email GkeHubFeatureMembership#gcp_service_account_email}
   */
   readonly gcpServiceAccountEmail?: string;
   /**
   * The absolute path of the directory that contains the local resources. Default: the root directory of the image.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#policy_dir GkeHubFeatureMembership#policy_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#policy_dir GkeHubFeatureMembership#policy_dir}
   */
   readonly policyDir?: string;
   /**
   * Type of secret configured for access to the OCI Image. Must be one of gcenode, gcpserviceaccount or none. The validation of this is case-sensitive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#secret_type GkeHubFeatureMembership#secret_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#secret_type GkeHubFeatureMembership#secret_type}
   */
   readonly secretType?: string;
   /**
   * The OCI image repository URL for the package to sync from. e.g. LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME/PACKAGE_NAME.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#sync_repo GkeHubFeatureMembership#sync_repo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#sync_repo GkeHubFeatureMembership#sync_repo}
   */
   readonly syncRepo?: string;
   /**
   * Period in seconds(int64 format) between consecutive syncs. Default: 15.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#sync_wait_secs GkeHubFeatureMembership#sync_wait_secs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#sync_wait_secs GkeHubFeatureMembership#sync_wait_secs}
   */
   readonly syncWaitSecs?: string;
 }
@@ -721,31 +721,31 @@ export interface GkeHubFeatureMembershipConfigmanagementConfigSync {
   /**
   * The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync metrics to Cloud Monitoring. The GSA should have the Monitoring Metric Writer(roles/monitoring.metricWriter) IAM role. The Kubernetes ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the GSA.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#metrics_gcp_service_account_email GkeHubFeatureMembership#metrics_gcp_service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#metrics_gcp_service_account_email GkeHubFeatureMembership#metrics_gcp_service_account_email}
   */
   readonly metricsGcpServiceAccountEmail?: string;
   /**
   * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`, disables the Config Sync admission webhook and does not prevent drifts.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#prevent_drift GkeHubFeatureMembership#prevent_drift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#prevent_drift GkeHubFeatureMembership#prevent_drift}
   */
   readonly preventDrift?: boolean | cdktf.IResolvable;
   /**
   * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#source_format GkeHubFeatureMembership#source_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#source_format GkeHubFeatureMembership#source_format}
   */
   readonly sourceFormat?: string;
   /**
   * git block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#git GkeHubFeatureMembership#git}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#git GkeHubFeatureMembership#git}
   */
   readonly git?: GkeHubFeatureMembershipConfigmanagementConfigSyncGit;
   /**
   * oci block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#oci GkeHubFeatureMembership#oci}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#oci GkeHubFeatureMembership#oci}
   */
   readonly oci?: GkeHubFeatureMembershipConfigmanagementConfigSyncOci;
 }
@@ -947,19 +947,19 @@ export interface GkeHubFeatureMembershipConfigmanagementHierarchyController {
   /**
   * Whether hierarchical resource quota is enabled in this cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#enable_hierarchical_resource_quota GkeHubFeatureMembership#enable_hierarchical_resource_quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#enable_hierarchical_resource_quota GkeHubFeatureMembership#enable_hierarchical_resource_quota}
   */
   readonly enableHierarchicalResourceQuota?: boolean | cdktf.IResolvable;
   /**
   * Whether pod tree labels are enabled in this cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#enable_pod_tree_labels GkeHubFeatureMembership#enable_pod_tree_labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#enable_pod_tree_labels GkeHubFeatureMembership#enable_pod_tree_labels}
   */
   readonly enablePodTreeLabels?: boolean | cdktf.IResolvable;
   /**
   * Whether Hierarchy Controller is enabled in this cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#enabled GkeHubFeatureMembership#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#enabled GkeHubFeatureMembership#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -1103,7 +1103,7 @@ export interface GkeHubFeatureMembershipConfigmanagementPolicyControllerMonitori
   /**
   *  Specifies the list of backends Policy Controller will export to. Specifying an empty value `[]` disables metrics export.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#backends GkeHubFeatureMembership#backends}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#backends GkeHubFeatureMembership#backends}
   */
   readonly backends?: string[];
 }
@@ -1189,49 +1189,49 @@ export interface GkeHubFeatureMembershipConfigmanagementPolicyController {
   /**
   * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#audit_interval_seconds GkeHubFeatureMembership#audit_interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#audit_interval_seconds GkeHubFeatureMembership#audit_interval_seconds}
   */
   readonly auditIntervalSeconds?: string;
   /**
   * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#enabled GkeHubFeatureMembership#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#enabled GkeHubFeatureMembership#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#exemptable_namespaces GkeHubFeatureMembership#exemptable_namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#exemptable_namespaces GkeHubFeatureMembership#exemptable_namespaces}
   */
   readonly exemptableNamespaces?: string[];
   /**
   * Logs all denies and dry run failures.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#log_denies_enabled GkeHubFeatureMembership#log_denies_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#log_denies_enabled GkeHubFeatureMembership#log_denies_enabled}
   */
   readonly logDeniesEnabled?: boolean | cdktf.IResolvable;
   /**
   * Enable or disable mutation in policy controller. If true, mutation CRDs, webhook and controller deployment will be deployed to the cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#mutation_enabled GkeHubFeatureMembership#mutation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#mutation_enabled GkeHubFeatureMembership#mutation_enabled}
   */
   readonly mutationEnabled?: boolean | cdktf.IResolvable;
   /**
   * Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#referential_rules_enabled GkeHubFeatureMembership#referential_rules_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#referential_rules_enabled GkeHubFeatureMembership#referential_rules_enabled}
   */
   readonly referentialRulesEnabled?: boolean | cdktf.IResolvable;
   /**
   * Installs the default template library along with Policy Controller.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#template_library_installed GkeHubFeatureMembership#template_library_installed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#template_library_installed GkeHubFeatureMembership#template_library_installed}
   */
   readonly templateLibraryInstalled?: boolean | cdktf.IResolvable;
   /**
   * monitoring block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#monitoring GkeHubFeatureMembership#monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#monitoring GkeHubFeatureMembership#monitoring}
   */
   readonly monitoring?: GkeHubFeatureMembershipConfigmanagementPolicyControllerMonitoring;
 }
@@ -1520,31 +1520,31 @@ export interface GkeHubFeatureMembershipConfigmanagement {
   /**
   * Optional. Version of ACM to install. Defaults to the latest version.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#version GkeHubFeatureMembership#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#version GkeHubFeatureMembership#version}
   */
   readonly version?: string;
   /**
   * binauthz block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#binauthz GkeHubFeatureMembership#binauthz}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#binauthz GkeHubFeatureMembership#binauthz}
   */
   readonly binauthz?: GkeHubFeatureMembershipConfigmanagementBinauthz;
   /**
   * config_sync block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#config_sync GkeHubFeatureMembership#config_sync}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#config_sync GkeHubFeatureMembership#config_sync}
   */
   readonly configSync?: GkeHubFeatureMembershipConfigmanagementConfigSync;
   /**
   * hierarchy_controller block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#hierarchy_controller GkeHubFeatureMembership#hierarchy_controller}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#hierarchy_controller GkeHubFeatureMembership#hierarchy_controller}
   */
   readonly hierarchyController?: GkeHubFeatureMembershipConfigmanagementHierarchyController;
   /**
   * policy_controller block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#policy_controller GkeHubFeatureMembership#policy_controller}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#policy_controller GkeHubFeatureMembership#policy_controller}
   */
   readonly policyController?: GkeHubFeatureMembershipConfigmanagementPolicyController;
 }
@@ -1746,13 +1746,13 @@ export interface GkeHubFeatureMembershipMesh {
   /**
   * **DEPRECATED** Whether to automatically manage Service Mesh control planes. Possible values: CONTROL_PLANE_MANAGEMENT_UNSPECIFIED, AUTOMATIC, MANUAL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#control_plane GkeHubFeatureMembership#control_plane}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#control_plane GkeHubFeatureMembership#control_plane}
   */
   readonly controlPlane?: string;
   /**
   * Whether to automatically manage Service Mesh. Possible values: MANAGEMENT_UNSPECIFIED, MANAGEMENT_AUTOMATIC, MANAGEMENT_MANUAL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#management GkeHubFeatureMembership#management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#management GkeHubFeatureMembership#management}
   */
   readonly management?: string;
 }
@@ -1863,11 +1863,852 @@ export class GkeHubFeatureMembershipMeshOutputReference extends cdktf.ComplexObj
     return this._management;
   }
 }
+export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimits {
+  /**
+  * CPU requirement expressed in Kubernetes resource units.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#cpu GkeHubFeatureMembership#cpu}
+  */
+  readonly cpu?: string;
+  /**
+  * Memory requirement expressed in Kubernetes resource units.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#memory GkeHubFeatureMembership#memory}
+  */
+  readonly memory?: string;
+}
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsToTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsOutputReference | GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimits): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cpu: cdktf.stringToTerraform(struct!.cpu),
+    memory: cdktf.stringToTerraform(struct!.memory),
+  }
+}
+
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsToHclTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsOutputReference | GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimits): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cpu: {
+      value: cdktf.stringToHclTerraform(struct!.cpu),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    memory: {
+      value: cdktf.stringToHclTerraform(struct!.memory),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimits | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cpu !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpu = this._cpu;
+    }
+    if (this._memory !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.memory = this._memory;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimits | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cpu = undefined;
+      this._memory = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cpu = value.cpu;
+      this._memory = value.memory;
+    }
+  }
+
+  // cpu - computed: false, optional: true, required: false
+  private _cpu?: string; 
+  public get cpu() {
+    return this.getStringAttribute('cpu');
+  }
+  public set cpu(value: string) {
+    this._cpu = value;
+  }
+  public resetCpu() {
+    this._cpu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuInput() {
+    return this._cpu;
+  }
+
+  // memory - computed: false, optional: true, required: false
+  private _memory?: string; 
+  public get memory() {
+    return this.getStringAttribute('memory');
+  }
+  public set memory(value: string) {
+    this._memory = value;
+  }
+  public resetMemory() {
+    this._memory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryInput() {
+    return this._memory;
+  }
+}
+export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequests {
+  /**
+  * CPU requirement expressed in Kubernetes resource units.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#cpu GkeHubFeatureMembership#cpu}
+  */
+  readonly cpu?: string;
+  /**
+  * Memory requirement expressed in Kubernetes resource units.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#memory GkeHubFeatureMembership#memory}
+  */
+  readonly memory?: string;
+}
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsToTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsOutputReference | GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequests): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cpu: cdktf.stringToTerraform(struct!.cpu),
+    memory: cdktf.stringToTerraform(struct!.memory),
+  }
+}
+
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsToHclTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsOutputReference | GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequests): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cpu: {
+      value: cdktf.stringToHclTerraform(struct!.cpu),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    memory: {
+      value: cdktf.stringToHclTerraform(struct!.memory),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequests | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cpu !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpu = this._cpu;
+    }
+    if (this._memory !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.memory = this._memory;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequests | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cpu = undefined;
+      this._memory = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cpu = value.cpu;
+      this._memory = value.memory;
+    }
+  }
+
+  // cpu - computed: false, optional: true, required: false
+  private _cpu?: string; 
+  public get cpu() {
+    return this.getStringAttribute('cpu');
+  }
+  public set cpu(value: string) {
+    this._cpu = value;
+  }
+  public resetCpu() {
+    this._cpu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuInput() {
+    return this._cpu;
+  }
+
+  // memory - computed: false, optional: true, required: false
+  private _memory?: string; 
+  public get memory() {
+    return this.getStringAttribute('memory');
+  }
+  public set memory(value: string) {
+    this._memory = value;
+  }
+  public resetMemory() {
+    this._memory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryInput() {
+    return this._memory;
+  }
+}
+export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources {
+  /**
+  * limits block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#limits GkeHubFeatureMembership#limits}
+  */
+  readonly limits?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimits;
+  /**
+  * requests block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#requests GkeHubFeatureMembership#requests}
+  */
+  readonly requests?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequests;
+}
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesToTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesOutputReference | GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    limits: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsToTerraform(struct!.limits),
+    requests: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsToTerraform(struct!.requests),
+  }
+}
+
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesToHclTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesOutputReference | GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    limits: {
+      value: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsToHclTerraform(struct!.limits),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsList",
+    },
+    requests: {
+      value: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsToHclTerraform(struct!.requests),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._limits?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.limits = this._limits?.internalValue;
+    }
+    if (this._requests?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requests = this._requests?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._limits.internalValue = undefined;
+      this._requests.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._limits.internalValue = value.limits;
+      this._requests.internalValue = value.requests;
+    }
+  }
+
+  // limits - computed: false, optional: true, required: false
+  private _limits = new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimitsOutputReference(this, "limits");
+  public get limits() {
+    return this._limits;
+  }
+  public putLimits(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesLimits) {
+    this._limits.internalValue = value;
+  }
+  public resetLimits() {
+    this._limits.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get limitsInput() {
+    return this._limits.internalValue;
+  }
+
+  // requests - computed: false, optional: true, required: false
+  private _requests = new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequestsOutputReference(this, "requests");
+  public get requests() {
+    return this._requests;
+  }
+  public putRequests(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesRequests) {
+    this._requests.internalValue = value;
+  }
+  public resetRequests() {
+    this._requests.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestsInput() {
+    return this._requests.internalValue;
+  }
+}
+export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations {
+  /**
+  * Matches a taint effect.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#effect GkeHubFeatureMembership#effect}
+  */
+  readonly effect?: string;
+  /**
+  * Matches a taint key (not necessarily unique).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#key GkeHubFeatureMembership#key}
+  */
+  readonly key?: string;
+  /**
+  * Matches a taint operator.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#operator GkeHubFeatureMembership#operator}
+  */
+  readonly operator?: string;
+  /**
+  * Matches a taint value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#value GkeHubFeatureMembership#value}
+  */
+  readonly value?: string;
+}
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsToTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    effect: cdktf.stringToTerraform(struct!.effect),
+    key: cdktf.stringToTerraform(struct!.key),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsToHclTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    effect: {
+      value: cdktf.stringToHclTerraform(struct!.effect),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._effect !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.effect = this._effect;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._effect = undefined;
+      this._key = undefined;
+      this._operator = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._effect = value.effect;
+      this._key = value.key;
+      this._operator = value.operator;
+      this._value = value.value;
+    }
+  }
+
+  // effect - computed: false, optional: true, required: false
+  private _effect?: string; 
+  public get effect() {
+    return this.getStringAttribute('effect');
+  }
+  public set effect(value: string) {
+    this._effect = value;
+  }
+  public resetEffect() {
+    this._effect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get effectInput() {
+    return this._effect;
+  }
+
+  // key - computed: false, optional: true, required: false
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // operator - computed: false, optional: true, required: false
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  public resetOperator() {
+    this._operator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsList extends cdktf.ComplexList {
+  public internalValue? : GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsOutputReference {
+    return new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs {
+  /**
+  * The name for the key in the map for which this object is mapped to in the API
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#component_name GkeHubFeatureMembership#component_name}
+  */
+  readonly componentName: string;
+  /**
+  * Pod affinity configuration. Possible values: AFFINITY_UNSPECIFIED, NO_AFFINITY, ANTI_AFFINITY
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#pod_affinity GkeHubFeatureMembership#pod_affinity}
+  */
+  readonly podAffinity?: string;
+  /**
+  * Pod replica count.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#replica_count GkeHubFeatureMembership#replica_count}
+  */
+  readonly replicaCount?: number;
+  /**
+  * container_resources block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#container_resources GkeHubFeatureMembership#container_resources}
+  */
+  readonly containerResources?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources;
+  /**
+  * pod_tolerations block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#pod_tolerations GkeHubFeatureMembership#pod_tolerations}
+  */
+  readonly podTolerations?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations[] | cdktf.IResolvable;
+}
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsToTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    component_name: cdktf.stringToTerraform(struct!.componentName),
+    pod_affinity: cdktf.stringToTerraform(struct!.podAffinity),
+    replica_count: cdktf.numberToTerraform(struct!.replicaCount),
+    container_resources: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesToTerraform(struct!.containerResources),
+    pod_tolerations: cdktf.listMapper(gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsToTerraform, true)(struct!.podTolerations),
+  }
+}
+
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsToHclTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    component_name: {
+      value: cdktf.stringToHclTerraform(struct!.componentName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pod_affinity: {
+      value: cdktf.stringToHclTerraform(struct!.podAffinity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    replica_count: {
+      value: cdktf.numberToHclTerraform(struct!.replicaCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    container_resources: {
+      value: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesToHclTerraform(struct!.containerResources),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesList",
+    },
+    pod_tolerations: {
+      value: cdktf.listMapperHcl(gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsToHclTerraform, true)(struct!.podTolerations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._componentName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.componentName = this._componentName;
+    }
+    if (this._podAffinity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.podAffinity = this._podAffinity;
+    }
+    if (this._replicaCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicaCount = this._replicaCount;
+    }
+    if (this._containerResources?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.containerResources = this._containerResources?.internalValue;
+    }
+    if (this._podTolerations?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.podTolerations = this._podTolerations?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._componentName = undefined;
+      this._podAffinity = undefined;
+      this._replicaCount = undefined;
+      this._containerResources.internalValue = undefined;
+      this._podTolerations.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._componentName = value.componentName;
+      this._podAffinity = value.podAffinity;
+      this._replicaCount = value.replicaCount;
+      this._containerResources.internalValue = value.containerResources;
+      this._podTolerations.internalValue = value.podTolerations;
+    }
+  }
+
+  // component_name - computed: false, optional: false, required: true
+  private _componentName?: string; 
+  public get componentName() {
+    return this.getStringAttribute('component_name');
+  }
+  public set componentName(value: string) {
+    this._componentName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get componentNameInput() {
+    return this._componentName;
+  }
+
+  // pod_affinity - computed: false, optional: true, required: false
+  private _podAffinity?: string; 
+  public get podAffinity() {
+    return this.getStringAttribute('pod_affinity');
+  }
+  public set podAffinity(value: string) {
+    this._podAffinity = value;
+  }
+  public resetPodAffinity() {
+    this._podAffinity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podAffinityInput() {
+    return this._podAffinity;
+  }
+
+  // replica_count - computed: false, optional: true, required: false
+  private _replicaCount?: number; 
+  public get replicaCount() {
+    return this.getNumberAttribute('replica_count');
+  }
+  public set replicaCount(value: number) {
+    this._replicaCount = value;
+  }
+  public resetReplicaCount() {
+    this._replicaCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaCountInput() {
+    return this._replicaCount;
+  }
+
+  // container_resources - computed: false, optional: true, required: false
+  private _containerResources = new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesOutputReference(this, "container_resources");
+  public get containerResources() {
+    return this._containerResources;
+  }
+  public putContainerResources(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources) {
+    this._containerResources.internalValue = value;
+  }
+  public resetContainerResources() {
+    this._containerResources.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerResourcesInput() {
+    return this._containerResources.internalValue;
+  }
+
+  // pod_tolerations - computed: false, optional: true, required: false
+  private _podTolerations = new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerationsList(this, "pod_tolerations", false);
+  public get podTolerations() {
+    return this._podTolerations;
+  }
+  public putPodTolerations(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations[] | cdktf.IResolvable) {
+    this._podTolerations.internalValue = value;
+  }
+  public resetPodTolerations() {
+    this._podTolerations.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podTolerationsInput() {
+    return this._podTolerations.internalValue;
+  }
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsList extends cdktf.ComplexList {
+  public internalValue? : GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsOutputReference {
+    return new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigMonitoring {
   /**
   *  Specifies the list of backends Policy Controller will export to. Specifying an empty value `[]` disables metrics export.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#backends GkeHubFeatureMembership#backends}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#backends GkeHubFeatureMembership#backends}
   */
   readonly backends?: string[];
 }
@@ -1949,11 +2790,161 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigMon
     return this._backends;
   }
 }
+export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles {
+  /**
+  * The name for the key in the map for which this object is mapped to in the API
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#bundle_name GkeHubFeatureMembership#bundle_name}
+  */
+  readonly bundleName: string;
+  /**
+  * The set of namespaces to be exempted from the bundle.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#exempted_namespaces GkeHubFeatureMembership#exempted_namespaces}
+  */
+  readonly exemptedNamespaces?: string[];
+}
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesToTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    bundle_name: cdktf.stringToTerraform(struct!.bundleName),
+    exempted_namespaces: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exemptedNamespaces),
+  }
+}
+
+
+export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesToHclTerraform(struct?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bundle_name: {
+      value: cdktf.stringToHclTerraform(struct!.bundleName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    exempted_namespaces: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.exemptedNamespaces),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bundleName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bundleName = this._bundleName;
+    }
+    if (this._exemptedNamespaces !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exemptedNamespaces = this._exemptedNamespaces;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._bundleName = undefined;
+      this._exemptedNamespaces = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._bundleName = value.bundleName;
+      this._exemptedNamespaces = value.exemptedNamespaces;
+    }
+  }
+
+  // bundle_name - computed: false, optional: false, required: true
+  private _bundleName?: string; 
+  public get bundleName() {
+    return this.getStringAttribute('bundle_name');
+  }
+  public set bundleName(value: string) {
+    this._bundleName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bundleNameInput() {
+    return this._bundleName;
+  }
+
+  // exempted_namespaces - computed: false, optional: true, required: false
+  private _exemptedNamespaces?: string[]; 
+  public get exemptedNamespaces() {
+    return this.getListAttribute('exempted_namespaces');
+  }
+  public set exemptedNamespaces(value: string[]) {
+    this._exemptedNamespaces = value;
+  }
+  public resetExemptedNamespaces() {
+    this._exemptedNamespaces = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exemptedNamespacesInput() {
+    return this._exemptedNamespaces;
+  }
+}
+
+export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesList extends cdktf.ComplexList {
+  public internalValue? : GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesOutputReference {
+    return new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibrary {
   /**
   * Configures the manner in which the template library is installed on the cluster. Possible values: INSTALLATION_UNSPECIFIED, NOT_INSTALLED, ALL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#installation GkeHubFeatureMembership#installation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#installation GkeHubFeatureMembership#installation}
   */
   readonly installation?: string;
 }
@@ -2037,9 +3028,15 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPol
 }
 export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContent {
   /**
+  * bundles block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#bundles GkeHubFeatureMembership#bundles}
+  */
+  readonly bundles?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles[] | cdktf.IResolvable;
+  /**
   * template_library block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#template_library GkeHubFeatureMembership#template_library}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#template_library GkeHubFeatureMembership#template_library}
   */
   readonly templateLibrary?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibrary;
 }
@@ -2050,6 +3047,7 @@ export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfig
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    bundles: cdktf.listMapper(gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesToTerraform, true)(struct!.bundles),
     template_library: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibraryToTerraform(struct!.templateLibrary),
   }
 }
@@ -2061,6 +3059,12 @@ export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfig
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    bundles: {
+      value: cdktf.listMapperHcl(gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesToHclTerraform, true)(struct!.bundles),
+      isBlock: true,
+      type: "set",
+      storageClassType: "GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesList",
+    },
     template_library: {
       value: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibraryToHclTerraform(struct!.templateLibrary),
       isBlock: true,
@@ -2087,6 +3091,10 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPol
   public get internalValue(): GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContent | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._bundles?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bundles = this._bundles?.internalValue;
+    }
     if (this._templateLibrary?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.templateLibrary = this._templateLibrary?.internalValue;
@@ -2097,12 +3105,30 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPol
   public set internalValue(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContent | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._bundles.internalValue = undefined;
       this._templateLibrary.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._bundles.internalValue = value.bundles;
       this._templateLibrary.internalValue = value.templateLibrary;
     }
+  }
+
+  // bundles - computed: false, optional: true, required: false
+  private _bundles = new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundlesList(this, "bundles", true);
+  public get bundles() {
+    return this._bundles;
+  }
+  public putBundles(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentBundles[] | cdktf.IResolvable) {
+    this._bundles.internalValue = value;
+  }
+  public resetBundles() {
+    this._bundles.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bundlesInput() {
+    return this._bundles.internalValue;
   }
 
   // template_library - computed: false, optional: true, required: false
@@ -2125,55 +3151,61 @@ export interface GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfi
   /**
   * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#audit_interval_seconds GkeHubFeatureMembership#audit_interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#audit_interval_seconds GkeHubFeatureMembership#audit_interval_seconds}
   */
   readonly auditIntervalSeconds?: number;
   /**
   * The maximum number of audit violations to be stored in a constraint. If not set, the internal default of 20 will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#constraint_violation_limit GkeHubFeatureMembership#constraint_violation_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#constraint_violation_limit GkeHubFeatureMembership#constraint_violation_limit}
   */
   readonly constraintViolationLimit?: number;
   /**
   * The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#exemptable_namespaces GkeHubFeatureMembership#exemptable_namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#exemptable_namespaces GkeHubFeatureMembership#exemptable_namespaces}
   */
   readonly exemptableNamespaces?: string[];
   /**
   * Configures the mode of the Policy Controller installation. Possible values: INSTALL_SPEC_UNSPECIFIED, INSTALL_SPEC_NOT_INSTALLED, INSTALL_SPEC_ENABLED, INSTALL_SPEC_SUSPENDED, INSTALL_SPEC_DETACHED
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#install_spec GkeHubFeatureMembership#install_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#install_spec GkeHubFeatureMembership#install_spec}
   */
   readonly installSpec?: string;
   /**
   * Logs all denies and dry run failures.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#log_denies_enabled GkeHubFeatureMembership#log_denies_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#log_denies_enabled GkeHubFeatureMembership#log_denies_enabled}
   */
   readonly logDeniesEnabled?: boolean | cdktf.IResolvable;
   /**
   * Enables the ability to mutate resources using Policy Controller.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#mutation_enabled GkeHubFeatureMembership#mutation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#mutation_enabled GkeHubFeatureMembership#mutation_enabled}
   */
   readonly mutationEnabled?: boolean | cdktf.IResolvable;
   /**
   * Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#referential_rules_enabled GkeHubFeatureMembership#referential_rules_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#referential_rules_enabled GkeHubFeatureMembership#referential_rules_enabled}
   */
   readonly referentialRulesEnabled?: boolean | cdktf.IResolvable;
   /**
+  * deployment_configs block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#deployment_configs GkeHubFeatureMembership#deployment_configs}
+  */
+  readonly deploymentConfigs?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs[] | cdktf.IResolvable;
+  /**
   * monitoring block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#monitoring GkeHubFeatureMembership#monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#monitoring GkeHubFeatureMembership#monitoring}
   */
   readonly monitoring?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigMonitoring;
   /**
   * policy_content block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#policy_content GkeHubFeatureMembership#policy_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#policy_content GkeHubFeatureMembership#policy_content}
   */
   readonly policyContent?: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContent;
 }
@@ -2191,6 +3223,7 @@ export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfig
     log_denies_enabled: cdktf.booleanToTerraform(struct!.logDeniesEnabled),
     mutation_enabled: cdktf.booleanToTerraform(struct!.mutationEnabled),
     referential_rules_enabled: cdktf.booleanToTerraform(struct!.referentialRulesEnabled),
+    deployment_configs: cdktf.listMapper(gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsToTerraform, true)(struct!.deploymentConfigs),
     monitoring: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigMonitoringToTerraform(struct!.monitoring),
     policy_content: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigPolicyContentToTerraform(struct!.policyContent),
   }
@@ -2244,6 +3277,12 @@ export function gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfig
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
+    },
+    deployment_configs: {
+      value: cdktf.listMapperHcl(gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsToHclTerraform, true)(struct!.deploymentConfigs),
+      isBlock: true,
+      type: "set",
+      storageClassType: "GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsList",
     },
     monitoring: {
       value: gkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigMonitoringToHclTerraform(struct!.monitoring),
@@ -2305,6 +3344,10 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigOut
       hasAnyValues = true;
       internalValueResult.referentialRulesEnabled = this._referentialRulesEnabled;
     }
+    if (this._deploymentConfigs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deploymentConfigs = this._deploymentConfigs?.internalValue;
+    }
     if (this._monitoring?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.monitoring = this._monitoring?.internalValue;
@@ -2326,6 +3369,7 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigOut
       this._logDeniesEnabled = undefined;
       this._mutationEnabled = undefined;
       this._referentialRulesEnabled = undefined;
+      this._deploymentConfigs.internalValue = undefined;
       this._monitoring.internalValue = undefined;
       this._policyContent.internalValue = undefined;
     }
@@ -2338,6 +3382,7 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigOut
       this._logDeniesEnabled = value.logDeniesEnabled;
       this._mutationEnabled = value.mutationEnabled;
       this._referentialRulesEnabled = value.referentialRulesEnabled;
+      this._deploymentConfigs.internalValue = value.deploymentConfigs;
       this._monitoring.internalValue = value.monitoring;
       this._policyContent.internalValue = value.policyContent;
     }
@@ -2455,6 +3500,22 @@ export class GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigOut
     return this._referentialRulesEnabled;
   }
 
+  // deployment_configs - computed: false, optional: true, required: false
+  private _deploymentConfigs = new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigsList(this, "deployment_configs", true);
+  public get deploymentConfigs() {
+    return this._deploymentConfigs;
+  }
+  public putDeploymentConfigs(value: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigDeploymentConfigs[] | cdktf.IResolvable) {
+    this._deploymentConfigs.internalValue = value;
+  }
+  public resetDeploymentConfigs() {
+    this._deploymentConfigs.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentConfigsInput() {
+    return this._deploymentConfigs.internalValue;
+  }
+
   // monitoring - computed: false, optional: true, required: false
   private _monitoring = new GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfigMonitoringOutputReference(this, "monitoring");
   public get monitoring() {
@@ -2491,13 +3552,13 @@ export interface GkeHubFeatureMembershipPolicycontroller {
   /**
   * Optional. Version of Policy Controller to install. Defaults to the latest version.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#version GkeHubFeatureMembership#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#version GkeHubFeatureMembership#version}
   */
   readonly version?: string;
   /**
   * policy_controller_hub_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#policy_controller_hub_config GkeHubFeatureMembership#policy_controller_hub_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#policy_controller_hub_config GkeHubFeatureMembership#policy_controller_hub_config}
   */
   readonly policyControllerHubConfig: GkeHubFeatureMembershipPolicycontrollerPolicyControllerHubConfig;
 }
@@ -2607,15 +3668,15 @@ export class GkeHubFeatureMembershipPolicycontrollerOutputReference extends cdkt
 }
 export interface GkeHubFeatureMembershipTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#create GkeHubFeatureMembership#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#create GkeHubFeatureMembership#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#delete GkeHubFeatureMembership#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#delete GkeHubFeatureMembership#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#update GkeHubFeatureMembership#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#update GkeHubFeatureMembership#update}
   */
   readonly update?: string;
 }
@@ -2767,7 +3828,7 @@ export class GkeHubFeatureMembershipTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership google_gke_hub_feature_membership}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership google_gke_hub_feature_membership}
 */
 export class GkeHubFeatureMembership extends cdktf.TerraformResource {
 
@@ -2783,7 +3844,7 @@ export class GkeHubFeatureMembership extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GkeHubFeatureMembership resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GkeHubFeatureMembership to import
-  * @param importFromId The id of the existing GkeHubFeatureMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GkeHubFeatureMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GkeHubFeatureMembership to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2795,7 +3856,7 @@ export class GkeHubFeatureMembership extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/gke_hub_feature_membership google_gke_hub_feature_membership} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/gke_hub_feature_membership google_gke_hub_feature_membership} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2806,7 +3867,7 @@ export class GkeHubFeatureMembership extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_hub_feature_membership',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.19.0',
+        providerVersion: '5.20.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

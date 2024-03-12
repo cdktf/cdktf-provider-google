@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance
+// https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#description FilestoreInstance#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#description FilestoreInstance#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#id FilestoreInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#id FilestoreInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * KMS key name used for data encryption.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#kms_key_name FilestoreInstance#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#kms_key_name FilestoreInstance#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
@@ -38,54 +38,54 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#labels FilestoreInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#labels FilestoreInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#location FilestoreInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#location FilestoreInstance#location}
   */
   readonly location?: string;
   /**
   * The resource name of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#name FilestoreInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#name FilestoreInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#project FilestoreInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#project FilestoreInstance#project}
   */
   readonly project?: string;
   /**
   * The service tier of the instance.
   * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#tier FilestoreInstance#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#tier FilestoreInstance#tier}
   */
   readonly tier: string;
   /**
   * The name of the Filestore zone of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#zone FilestoreInstance#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#zone FilestoreInstance#zone}
   */
   readonly zone?: string;
   /**
   * file_shares block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#file_shares FilestoreInstance#file_shares}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#file_shares FilestoreInstance#file_shares}
   */
   readonly fileShares: FilestoreInstanceFileShares;
   /**
   * networks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#networks FilestoreInstance#networks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#networks FilestoreInstance#networks}
   */
   readonly networks: FilestoreInstanceNetworks[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#timeouts FilestoreInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#timeouts FilestoreInstance#timeouts}
   */
   readonly timeouts?: FilestoreInstanceTimeouts;
 }
@@ -94,7 +94,7 @@ export interface FilestoreInstanceFileSharesNfsExportOptions {
   * Either READ_ONLY, for allowing only read requests on the exported directory,
   * or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#access_mode FilestoreInstance#access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#access_mode FilestoreInstance#access_mode}
   */
   readonly accessMode?: string;
   /**
@@ -102,7 +102,7 @@ export interface FilestoreInstanceFileSharesNfsExportOptions {
   * Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
   * if this field is specified for other squashMode settings.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#anon_gid FilestoreInstance#anon_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#anon_gid FilestoreInstance#anon_gid}
   */
   readonly anonGid?: number;
   /**
@@ -110,7 +110,7 @@ export interface FilestoreInstanceFileSharesNfsExportOptions {
   * Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
   * if this field is specified for other squashMode settings.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#anon_uid FilestoreInstance#anon_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#anon_uid FilestoreInstance#anon_uid}
   */
   readonly anonUid?: number;
   /**
@@ -118,14 +118,14 @@ export interface FilestoreInstanceFileSharesNfsExportOptions {
   * Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
   * The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#ip_ranges FilestoreInstance#ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#ip_ranges FilestoreInstance#ip_ranges}
   */
   readonly ipRanges?: string[];
   /**
   * Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH,
   * for not allowing root access. The default is NO_ROOT_SQUASH. Default value: "NO_ROOT_SQUASH" Possible values: ["NO_ROOT_SQUASH", "ROOT_SQUASH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#squash_mode FilestoreInstance#squash_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#squash_mode FilestoreInstance#squash_mode}
   */
   readonly squashMode?: string;
 }
@@ -360,13 +360,13 @@ export interface FilestoreInstanceFileShares {
   * File share capacity in GiB. This must be at least 1024 GiB
   * for the standard tier, or 2560 GiB for the premium tier.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#capacity_gb FilestoreInstance#capacity_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#capacity_gb FilestoreInstance#capacity_gb}
   */
   readonly capacityGb: number;
   /**
   * The name of the fileshare (16 characters or less)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#name FilestoreInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#name FilestoreInstance#name}
   */
   readonly name: string;
   /**
@@ -374,13 +374,13 @@ export interface FilestoreInstanceFileShares {
   * projects/{projectId}/locations/{locationId}/backups/{backupId},
   * that this file share has been restored from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#source_backup FilestoreInstance#source_backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#source_backup FilestoreInstance#source_backup}
   */
   readonly sourceBackup?: string;
   /**
   * nfs_export_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#nfs_export_options FilestoreInstance#nfs_export_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#nfs_export_options FilestoreInstance#nfs_export_options}
   */
   readonly nfsExportOptions?: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable;
 }
@@ -549,28 +549,28 @@ export interface FilestoreInstanceNetworks {
   * If not provided, the connect mode defaults to
   * DIRECT_PEERING. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#connect_mode FilestoreInstance#connect_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#connect_mode FilestoreInstance#connect_mode}
   */
   readonly connectMode?: string;
   /**
   * IP versions for which the instance has
   * IP addresses assigned. Possible values: ["ADDRESS_MODE_UNSPECIFIED", "MODE_IPV4", "MODE_IPV6"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#modes FilestoreInstance#modes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#modes FilestoreInstance#modes}
   */
   readonly modes: string[];
   /**
   * The name of the GCE VPC network to which the
   * instance is connected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#network FilestoreInstance#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#network FilestoreInstance#network}
   */
   readonly network: string;
   /**
   * A /29 CIDR block that identifies the range of IP
   * addresses reserved for this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#reserved_ip_range FilestoreInstance#reserved_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#reserved_ip_range FilestoreInstance#reserved_ip_range}
   */
   readonly reservedIpRange?: string;
 }
@@ -772,15 +772,15 @@ export class FilestoreInstanceNetworksList extends cdktf.ComplexList {
 }
 export interface FilestoreInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#create FilestoreInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#create FilestoreInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#delete FilestoreInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#delete FilestoreInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#update FilestoreInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#update FilestoreInstance#update}
   */
   readonly update?: string;
 }
@@ -932,7 +932,7 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance google_filestore_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance google_filestore_instance}
 */
 export class FilestoreInstance extends cdktf.TerraformResource {
 
@@ -948,7 +948,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FilestoreInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FilestoreInstance to import
-  * @param importFromId The id of the existing FilestoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FilestoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FilestoreInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -960,7 +960,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/filestore_instance google_filestore_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/filestore_instance google_filestore_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -971,7 +971,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_filestore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.19.0',
+        providerVersion: '5.20.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

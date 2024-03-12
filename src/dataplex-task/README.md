@@ -1,3 +1,3 @@
 # `google_dataplex_task`
 
-Refer to the Terraform Registry for docs: [`google_dataplex_task`](https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/dataplex_task).
+Refer to the Terraform Registry for docs: [`google_dataplex_task`](https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/dataplex_task).

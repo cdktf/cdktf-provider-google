@@ -1,3 +1,3 @@
 # `google_organization_iam_policy`
 
-Refer to the Terraform Registry for docs: [`google_organization_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.19.0/docs/resources/organization_iam_policy).
+Refer to the Terraform Registry for docs: [`google_organization_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/organization_iam_policy).
