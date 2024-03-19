@@ -4,12 +4,12 @@
 
 ### DataGoogleLoggingProjectSettings <a name="DataGoogleLoggingProjectSettings" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/logging_project_settings google_logging_project_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/data-sources/logging_project_settings google_logging_project_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleloggingprojectsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingprojectsettings"
 
 datagoogleloggingprojectsettings.NewDataGoogleLoggingProjectSettings(scope Construct, id *string, config DataGoogleLoggingProjectSettingsConfig) DataGoogleLoggingProjectSettings
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleloggingprojectsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingprojectsettings"
 
 datagoogleloggingprojectsettings.DataGoogleLoggingProjectSettings_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleloggingprojectsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingprojectsettings"
 
 datagoogleloggingprojectsettings.DataGoogleLoggingProjectSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagoogleloggingprojectsettings.DataGoogleLoggingProjectSettings_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleloggingprojectsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingprojectsettings"
 
 datagoogleloggingprojectsettings.DataGoogleLoggingProjectSettings_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagoogleloggingprojectsettings.DataGoogleLoggingProjectSettings_IsTerraformDat
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleloggingprojectsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingprojectsettings"
 
 datagoogleloggingprojectsettings.DataGoogleLoggingProjectSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -372,7 +372,7 @@ The construct id used in the generated config for the DataGoogleLoggingProjectSe
 
 The id of the existing DataGoogleLoggingProjectSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/logging_project_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/data-sources/logging_project_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -660,7 +660,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleloggingprojectsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleloggingprojectsettings"
 
 &datagoogleloggingprojectsettings.DataGoogleLoggingProjectSettingsConfig {
 	Connection: interface{},
@@ -687,7 +687,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleloggingpr
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.project">Project</a></code> | <code>*string</code> | The project for which to retrieve settings. |
-| <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}. |
 
 ---
 
@@ -771,7 +771,7 @@ Project *string
 
 The project for which to retrieve settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/logging_project_settings#project DataGoogleLoggingProjectSettings#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/data-sources/logging_project_settings#project DataGoogleLoggingProjectSettings#project}
 
 ---
 
@@ -783,7 +783,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

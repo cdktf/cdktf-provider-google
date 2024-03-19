@@ -1,3 +1,3 @@
 # `google_apigee_sharedflow`
 
-Refer to the Terraform Registry for docs: [`google_apigee_sharedflow`](https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/apigee_sharedflow).
+Refer to the Terraform Registry for docs: [`google_apigee_sharedflow`](https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/apigee_sharedflow).

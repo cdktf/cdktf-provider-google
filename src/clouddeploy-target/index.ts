@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target
+// https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,23 +13,23 @@ export interface ClouddeployTargetConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field `effective_annotations` for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#annotations ClouddeployTarget#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#annotations ClouddeployTarget#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Optional. The deploy parameters to use for this target.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#deploy_parameters ClouddeployTarget#deploy_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#deploy_parameters ClouddeployTarget#deploy_parameters}
   */
   readonly deployParameters?: { [key: string]: string };
   /**
   * Optional. Description of the `Target`. Max length is 255 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#description ClouddeployTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#description ClouddeployTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#id ClouddeployTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#id ClouddeployTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -46,67 +41,67 @@ export interface ClouddeployTargetConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field `effective_labels` for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#labels ClouddeployTarget#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#labels ClouddeployTarget#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
   */
   readonly location: string;
   /**
   * Name of the `Target`. Format is [a-z][a-z0-9\-]{0,62}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#name ClouddeployTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#name ClouddeployTarget#name}
   */
   readonly name: string;
   /**
   * The project for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#project ClouddeployTarget#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#project ClouddeployTarget#project}
   */
   readonly project?: string;
   /**
   * Optional. Whether or not the `Target` requires approval.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#require_approval ClouddeployTarget#require_approval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#require_approval ClouddeployTarget#require_approval}
   */
   readonly requireApproval?: boolean | cdktf.IResolvable;
   /**
   * anthos_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#anthos_cluster ClouddeployTarget#anthos_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#anthos_cluster ClouddeployTarget#anthos_cluster}
   */
   readonly anthosCluster?: ClouddeployTargetAnthosCluster;
   /**
   * execution_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#execution_configs ClouddeployTarget#execution_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#execution_configs ClouddeployTarget#execution_configs}
   */
   readonly executionConfigs?: ClouddeployTargetExecutionConfigs[] | cdktf.IResolvable;
   /**
   * gke block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#gke ClouddeployTarget#gke}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#gke ClouddeployTarget#gke}
   */
   readonly gke?: ClouddeployTargetGke;
   /**
   * multi_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#multi_target ClouddeployTarget#multi_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#multi_target ClouddeployTarget#multi_target}
   */
   readonly multiTarget?: ClouddeployTargetMultiTarget;
   /**
   * run block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#run ClouddeployTarget#run}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#run ClouddeployTarget#run}
   */
   readonly run?: ClouddeployTargetRun;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#timeouts ClouddeployTarget#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#timeouts ClouddeployTarget#timeouts}
   */
   readonly timeouts?: ClouddeployTargetTimeouts;
 }
@@ -114,7 +109,7 @@ export interface ClouddeployTargetAnthosCluster {
   /**
   * Membership of the GKE Hub-registered cluster to which to apply the Skaffold configuration. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#membership ClouddeployTarget#membership}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#membership ClouddeployTarget#membership}
   */
   readonly membership?: string;
 }
@@ -200,31 +195,31 @@ export interface ClouddeployTargetExecutionConfigs {
   /**
   * Optional. Cloud Storage location in which to store execution outputs. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#artifact_storage ClouddeployTarget#artifact_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#artifact_storage ClouddeployTarget#artifact_storage}
   */
   readonly artifactStorage?: string;
   /**
   * Optional. Execution timeout for a Cloud Build Execution. This must be between 10m and 24h in seconds format. If unspecified, a default timeout of 1h is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#execution_timeout ClouddeployTarget#execution_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#execution_timeout ClouddeployTarget#execution_timeout}
   */
   readonly executionTimeout?: string;
   /**
   * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#service_account ClouddeployTarget#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#service_account ClouddeployTarget#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Required. Usages when this configuration should be applied.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#usages ClouddeployTarget#usages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#usages ClouddeployTarget#usages}
   */
   readonly usages: string[];
   /**
   * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#worker_pool ClouddeployTarget#worker_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#worker_pool ClouddeployTarget#worker_pool}
   */
   readonly workerPool?: string;
 }
@@ -455,13 +450,13 @@ export interface ClouddeployTargetGke {
   /**
   * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#cluster ClouddeployTarget#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#cluster ClouddeployTarget#cluster}
   */
   readonly cluster?: string;
   /**
   * Optional. If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#internal_ip ClouddeployTarget#internal_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#internal_ip ClouddeployTarget#internal_ip}
   */
   readonly internalIp?: boolean | cdktf.IResolvable;
 }
@@ -576,7 +571,7 @@ export interface ClouddeployTargetMultiTarget {
   /**
   * Required. The target_ids of this multiTarget.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#target_ids ClouddeployTarget#target_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#target_ids ClouddeployTarget#target_ids}
   */
   readonly targetIds: string[];
 }
@@ -659,7 +654,7 @@ export interface ClouddeployTargetRun {
   /**
   * Required. The location where the Cloud Run Service should be located. Format is `projects/{project}/locations/{location}`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
   */
   readonly location: string;
 }
@@ -740,15 +735,15 @@ export class ClouddeployTargetRunOutputReference extends cdktf.ComplexObject {
 }
 export interface ClouddeployTargetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#create ClouddeployTarget#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#create ClouddeployTarget#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#delete ClouddeployTarget#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#delete ClouddeployTarget#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#update ClouddeployTarget#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#update ClouddeployTarget#update}
   */
   readonly update?: string;
 }
@@ -900,7 +895,7 @@ export class ClouddeployTargetTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target google_clouddeploy_target}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target google_clouddeploy_target}
 */
 export class ClouddeployTarget extends cdktf.TerraformResource {
 
@@ -916,7 +911,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ClouddeployTarget resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ClouddeployTarget to import
-  * @param importFromId The id of the existing ClouddeployTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ClouddeployTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ClouddeployTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -928,7 +923,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/clouddeploy_target google_clouddeploy_target} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/clouddeploy_target google_clouddeploy_target} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -939,7 +934,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_target',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.20.0',
+        providerVersion: '5.21.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

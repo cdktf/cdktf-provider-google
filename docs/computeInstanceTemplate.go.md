@@ -4,12 +4,12 @@
 
 ### ComputeInstanceTemplate <a name="ComputeInstanceTemplate" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template google_compute_instance_template}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template google_compute_instance_template}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplate(scope Construct, id *string, config ComputeInstanceTemplateConfig) ComputeInstanceTemplate
 ```
@@ -696,7 +696,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.ComputeInstanceTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -728,7 +728,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.ComputeInstanceTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -742,7 +742,7 @@ computeinstancetemplate.ComputeInstanceTemplate_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.ComputeInstanceTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -756,7 +756,7 @@ computeinstancetemplate.ComputeInstanceTemplate_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.ComputeInstanceTemplate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -785,7 +785,7 @@ The construct id used in the generated config for the ComputeInstanceTemplate to
 
 The id of the existing ComputeInstanceTemplate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1645,7 +1645,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateAdvancedMachineFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateAdvancedMachineFeatures {
 	EnableNestedVirtualization: interface{},
@@ -1674,7 +1674,7 @@ EnableNestedVirtualization interface{}
 
 Whether to enable nested virtualization or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#enable_nested_virtualization ComputeInstanceTemplate#enable_nested_virtualization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#enable_nested_virtualization ComputeInstanceTemplate#enable_nested_virtualization}
 
 ---
 
@@ -1690,7 +1690,7 @@ The number of threads per physical core.
 
 To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#threads_per_core ComputeInstanceTemplate#threads_per_core}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#threads_per_core ComputeInstanceTemplate#threads_per_core}
 
 ---
 
@@ -1706,7 +1706,7 @@ The number of physical cores to expose to an instance.
 
 Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#visible_core_count ComputeInstanceTemplate#visible_core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#visible_core_count ComputeInstanceTemplate#visible_core_count}
 
 ---
 
@@ -1715,7 +1715,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfidentialInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateConfidentialInstanceConfig {
 	EnableConfidentialCompute: interface{},
@@ -1740,7 +1740,7 @@ EnableConfidentialCompute interface{}
 
 Defines whether the instance should have confidential compute enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#enable_confidential_compute ComputeInstanceTemplate#enable_confidential_compute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#enable_confidential_compute ComputeInstanceTemplate#enable_confidential_compute}
 
 ---
 
@@ -1749,7 +1749,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateConfig {
 	Connection: interface{},
@@ -1761,9 +1761,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemp
 	Provisioners: *[]interface{},
 	Disk: interface{},
 	MachineType: *string,
-	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateAdvancedMachineFeatures,
+	AdvancedMachineFeatures: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateAdvancedMachineFeatures,
 	CanIpForward: interface{},
-	ConfidentialInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateConfidentialInstanceConfig,
+	ConfidentialInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateConfidentialInstanceConfig,
 	Description: *string,
 	GuestAccelerator: interface{},
 	Id: *string,
@@ -1775,17 +1775,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemp
 	Name: *string,
 	NamePrefix: *string,
 	NetworkInterface: interface{},
-	NetworkPerformanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateNetworkPerformanceConfig,
+	NetworkPerformanceConfig: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateNetworkPerformanceConfig,
 	Project: *string,
 	Region: *string,
-	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinity,
+	ReservationAffinity: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinity,
 	ResourceManagerTags: *map[string]*string,
 	ResourcePolicies: *[]*string,
-	Scheduling: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateScheduling,
-	ServiceAccount: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount,
-	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateShieldedInstanceConfig,
+	Scheduling: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateScheduling,
+	ServiceAccount: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount,
+	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateShieldedInstanceConfig,
 	Tags: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateTimeouts,
 }
 ```
 
@@ -1807,7 +1807,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemp
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.confidentialInstanceConfig">ConfidentialInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfidentialInstanceConfig">ComputeInstanceTemplateConfidentialInstanceConfig</a></code> | confidential_instance_config block. |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.description">Description</a></code> | <code>*string</code> | A brief description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.guestAccelerator">GuestAccelerator</a></code> | <code>interface{}</code> | guest_accelerator block. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#id ComputeInstanceTemplate#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#id ComputeInstanceTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.instanceDescription">InstanceDescription</a></code> | <code>*string</code> | A description of the instance. |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | A set of key/value label pairs to assign to instances created from this template. |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Metadata key/value pairs to make available from within instances created from this template. |
@@ -1910,7 +1910,7 @@ Disk interface{}
 
 disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#disk ComputeInstanceTemplate#disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#disk ComputeInstanceTemplate#disk}
 
 ---
 
@@ -1926,7 +1926,7 @@ The machine type to create.
 
 To create a machine with a custom type (such as extended memory), format the value like custom-VCPUS-MEM_IN_MB like custom-6-20480 for 6 vCPU and 20GB of RAM.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#machine_type ComputeInstanceTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#machine_type ComputeInstanceTemplate#machine_type}
 
 ---
 
@@ -1940,7 +1940,7 @@ AdvancedMachineFeatures ComputeInstanceTemplateAdvancedMachineFeatures
 
 advanced_machine_features block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#advanced_machine_features ComputeInstanceTemplate#advanced_machine_features}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#advanced_machine_features ComputeInstanceTemplate#advanced_machine_features}
 
 ---
 
@@ -1954,7 +1954,7 @@ CanIpForward interface{}
 
 Whether to allow sending and receiving of packets with non-matching source or destination IPs. This defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#can_ip_forward ComputeInstanceTemplate#can_ip_forward}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#can_ip_forward ComputeInstanceTemplate#can_ip_forward}
 
 ---
 
@@ -1968,7 +1968,7 @@ ConfidentialInstanceConfig ComputeInstanceTemplateConfidentialInstanceConfig
 
 confidential_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#confidential_instance_config ComputeInstanceTemplate#confidential_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#confidential_instance_config ComputeInstanceTemplate#confidential_instance_config}
 
 ---
 
@@ -1982,7 +1982,7 @@ Description *string
 
 A brief description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#description ComputeInstanceTemplate#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#description ComputeInstanceTemplate#description}
 
 ---
 
@@ -1996,7 +1996,7 @@ GuestAccelerator interface{}
 
 guest_accelerator block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#guest_accelerator ComputeInstanceTemplate#guest_accelerator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#guest_accelerator ComputeInstanceTemplate#guest_accelerator}
 
 ---
 
@@ -2008,7 +2008,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#id ComputeInstanceTemplate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#id ComputeInstanceTemplate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2025,7 +2025,7 @@ InstanceDescription *string
 
 A description of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#instance_description ComputeInstanceTemplate#instance_description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#instance_description ComputeInstanceTemplate#instance_description}
 
 ---
 
@@ -2042,7 +2042,7 @@ A set of key/value label pairs to assign to instances created from this template
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#labels ComputeInstanceTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#labels ComputeInstanceTemplate#labels}
 
 ---
 
@@ -2056,7 +2056,7 @@ Metadata *map[string]*string
 
 Metadata key/value pairs to make available from within instances created from this template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#metadata ComputeInstanceTemplate#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#metadata ComputeInstanceTemplate#metadata}
 
 ---
 
@@ -2072,7 +2072,7 @@ An alternative to using the startup-script metadata key, mostly to match the com
 
 This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#metadata_startup_script ComputeInstanceTemplate#metadata_startup_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#metadata_startup_script ComputeInstanceTemplate#metadata_startup_script}
 
 ---
 
@@ -2088,7 +2088,7 @@ Specifies a minimum CPU platform.
 
 Applicable values are the friendly names of CPU platforms, such as Intel Haswell or Intel Skylake.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#min_cpu_platform ComputeInstanceTemplate#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#min_cpu_platform ComputeInstanceTemplate#min_cpu_platform}
 
 ---
 
@@ -2102,7 +2102,7 @@ Name *string
 
 The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#name ComputeInstanceTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#name ComputeInstanceTemplate#name}
 
 ---
 
@@ -2116,7 +2116,7 @@ NamePrefix *string
 
 Creates a unique name beginning with the specified prefix. Conflicts with name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#name_prefix ComputeInstanceTemplate#name_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#name_prefix ComputeInstanceTemplate#name_prefix}
 
 ---
 
@@ -2130,7 +2130,7 @@ NetworkInterface interface{}
 
 network_interface block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#network_interface ComputeInstanceTemplate#network_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#network_interface ComputeInstanceTemplate#network_interface}
 
 ---
 
@@ -2144,7 +2144,7 @@ NetworkPerformanceConfig ComputeInstanceTemplateNetworkPerformanceConfig
 
 network_performance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#network_performance_config ComputeInstanceTemplate#network_performance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#network_performance_config ComputeInstanceTemplate#network_performance_config}
 
 ---
 
@@ -2160,7 +2160,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#project ComputeInstanceTemplate#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#project ComputeInstanceTemplate#project}
 
 ---
 
@@ -2176,7 +2176,7 @@ An instance template is a global resource that is not bound to a zone or a regio
 
 However, you can still specify some regional resources in an instance template, which restricts the template to the region where that resource resides. For example, a custom subnetwork resource is tied to a specific region. Defaults to the region of the Provider if no value is given.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#region ComputeInstanceTemplate#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#region ComputeInstanceTemplate#region}
 
 ---
 
@@ -2190,7 +2190,7 @@ ReservationAffinity ComputeInstanceTemplateReservationAffinity
 
 reservation_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#reservation_affinity ComputeInstanceTemplate#reservation_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#reservation_affinity ComputeInstanceTemplate#reservation_affinity}
 
 ---
 
@@ -2208,7 +2208,7 @@ Resource manager tag keys and values have the same definition as resource manage
 Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.
 The field is ignored (both PUT & PATCH) when empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#resource_manager_tags ComputeInstanceTemplate#resource_manager_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#resource_manager_tags ComputeInstanceTemplate#resource_manager_tags}
 
 ---
 
@@ -2224,7 +2224,7 @@ A list of self_links of resource policies to attach to the instance.
 
 Currently a max of 1 resource policy is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#resource_policies ComputeInstanceTemplate#resource_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#resource_policies ComputeInstanceTemplate#resource_policies}
 
 ---
 
@@ -2238,7 +2238,7 @@ Scheduling ComputeInstanceTemplateScheduling
 
 scheduling block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#scheduling ComputeInstanceTemplate#scheduling}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#scheduling ComputeInstanceTemplate#scheduling}
 
 ---
 
@@ -2252,7 +2252,7 @@ ServiceAccount ComputeInstanceTemplateServiceAccount
 
 service_account block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#service_account ComputeInstanceTemplate#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#service_account ComputeInstanceTemplate#service_account}
 
 ---
 
@@ -2266,7 +2266,7 @@ ShieldedInstanceConfig ComputeInstanceTemplateShieldedInstanceConfig
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#shielded_instance_config ComputeInstanceTemplate#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#shielded_instance_config ComputeInstanceTemplate#shielded_instance_config}
 
 ---
 
@@ -2280,7 +2280,7 @@ Tags *[]*string
 
 Tags to attach to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#tags ComputeInstanceTemplate#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#tags ComputeInstanceTemplate#tags}
 
 ---
 
@@ -2294,7 +2294,7 @@ Timeouts ComputeInstanceTemplateTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#timeouts ComputeInstanceTemplate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#timeouts ComputeInstanceTemplate#timeouts}
 
 ---
 
@@ -2303,13 +2303,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateDisk {
 	AutoDelete: interface{},
 	Boot: interface{},
 	DeviceName: *string,
-	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateDiskDiskEncryptionKey,
+	DiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateDiskDiskEncryptionKey,
 	DiskName: *string,
 	DiskSizeGb: *f64,
 	DiskType: *string,
@@ -2321,9 +2321,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemp
 	ResourcePolicies: *[]*string,
 	Source: *string,
 	SourceImage: *string,
-	SourceImageEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceImageEncryptionKey,
+	SourceImageEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceImageEncryptionKey,
 	SourceSnapshot: *string,
-	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey,
+	SourceSnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey,
 	Type: *string,
 }
 ```
@@ -2364,7 +2364,7 @@ AutoDelete interface{}
 
 Whether or not the disk should be auto-deleted. This defaults to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#auto_delete ComputeInstanceTemplate#auto_delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#auto_delete ComputeInstanceTemplate#auto_delete}
 
 ---
 
@@ -2378,7 +2378,7 @@ Boot interface{}
 
 Indicates that this is a boot disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#boot ComputeInstanceTemplate#boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#boot ComputeInstanceTemplate#boot}
 
 ---
 
@@ -2394,7 +2394,7 @@ A unique device name that is reflected into the /dev/ tree of a Linux operating 
 
 If not specified, the server chooses a default device name to apply to this disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#device_name ComputeInstanceTemplate#device_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#device_name ComputeInstanceTemplate#device_name}
 
 ---
 
@@ -2408,7 +2408,7 @@ DiskEncryptionKey ComputeInstanceTemplateDiskDiskEncryptionKey
 
 disk_encryption_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#disk_encryption_key ComputeInstanceTemplate#disk_encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#disk_encryption_key ComputeInstanceTemplate#disk_encryption_key}
 
 ---
 
@@ -2422,7 +2422,7 @@ DiskName *string
 
 Name of the disk. When not provided, this defaults to the name of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#disk_name ComputeInstanceTemplate#disk_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#disk_name ComputeInstanceTemplate#disk_name}
 
 ---
 
@@ -2438,7 +2438,7 @@ The size of the image in gigabytes.
 
 If not specified, it will inherit the size of its base image. For SCRATCH disks, the size must be one of 375 or 3000 GB, with a default of 375 GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#disk_size_gb ComputeInstanceTemplate#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#disk_size_gb ComputeInstanceTemplate#disk_size_gb}
 
 ---
 
@@ -2452,7 +2452,7 @@ DiskType *string
 
 The Google Compute Engine disk type. Such as "pd-ssd", "local-ssd", "pd-balanced" or "pd-standard".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#disk_type ComputeInstanceTemplate#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#disk_type ComputeInstanceTemplate#disk_type}
 
 ---
 
@@ -2466,7 +2466,7 @@ Interface *string
 
 Specifies the disk interface to use for attaching this disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#interface ComputeInstanceTemplate#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#interface ComputeInstanceTemplate#interface}
 
 ---
 
@@ -2480,7 +2480,7 @@ Labels *map[string]*string
 
 A set of key/value label pairs to assign to disks,.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#labels ComputeInstanceTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#labels ComputeInstanceTemplate#labels}
 
 ---
 
@@ -2496,7 +2496,7 @@ The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
 
 If you are attaching or creating a boot disk, this must read-write mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#mode ComputeInstanceTemplate#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#mode ComputeInstanceTemplate#mode}
 
 ---
 
@@ -2512,7 +2512,7 @@ Indicates how many IOPS to provision for the disk.
 
 This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the [Extreme persistent disk documentation](https://cloud.google.com/compute/docs/disks/extreme-persistent-disk).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#provisioned_iops ComputeInstanceTemplate#provisioned_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#provisioned_iops ComputeInstanceTemplate#provisioned_iops}
 
 ---
 
@@ -2528,7 +2528,7 @@ A map of resource manager tags.
 
 Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT & PATCH) when empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#resource_manager_tags ComputeInstanceTemplate#resource_manager_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#resource_manager_tags ComputeInstanceTemplate#resource_manager_tags}
 
 ---
 
@@ -2544,7 +2544,7 @@ A list (short name or id) of resource policies to attach to this disk.
 
 Currently a max of 1 resource policy is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#resource_policies ComputeInstanceTemplate#resource_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#resource_policies ComputeInstanceTemplate#resource_policies}
 
 ---
 
@@ -2560,7 +2560,7 @@ The name (not self_link) of the disk (such as those managed by google_compute_di
 
 ~> Note: Either source or source_image is required when creating a new instance except for when creating a local SSD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#source ComputeInstanceTemplate#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#source ComputeInstanceTemplate#source}
 
 ---
 
@@ -2576,7 +2576,7 @@ The image from which to initialize this disk.
 
 This can be one of: the image's self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~> Note: Either source or source_image is required when creating a new instance except for when creating a local SSD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#source_image ComputeInstanceTemplate#source_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#source_image ComputeInstanceTemplate#source_image}
 
 ---
 
@@ -2590,7 +2590,7 @@ SourceImageEncryptionKey ComputeInstanceTemplateDiskSourceImageEncryptionKey
 
 source_image_encryption_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#source_image_encryption_key ComputeInstanceTemplate#source_image_encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#source_image_encryption_key ComputeInstanceTemplate#source_image_encryption_key}
 
 ---
 
@@ -2609,7 +2609,7 @@ a new instance, one of initializeParams.sourceSnapshot,
 initializeParams.sourceImage, or disks.source is
 required except for local SSD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#source_snapshot ComputeInstanceTemplate#source_snapshot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#source_snapshot ComputeInstanceTemplate#source_snapshot}
 
 ---
 
@@ -2623,7 +2623,7 @@ SourceSnapshotEncryptionKey ComputeInstanceTemplateDiskSourceSnapshotEncryptionK
 
 source_snapshot_encryption_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#source_snapshot_encryption_key ComputeInstanceTemplate#source_snapshot_encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#source_snapshot_encryption_key ComputeInstanceTemplate#source_snapshot_encryption_key}
 
 ---
 
@@ -2637,7 +2637,7 @@ Type *string
 
 The type of Google Compute Engine disk, can be either "SCRATCH" or "PERSISTENT".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#type ComputeInstanceTemplate#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#type ComputeInstanceTemplate#type}
 
 ---
 
@@ -2646,7 +2646,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateDiskDiskEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2671,7 +2671,7 @@ KmsKeySelfLink *string
 
 The self link of the encryption key that is stored in Google Cloud KMS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
 
 ---
 
@@ -2680,7 +2680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceImageEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateDiskSourceImageEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2707,7 +2707,7 @@ KmsKeySelfLink *string
 
 The self link of the encryption key that is stored in Google Cloud KMS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
 
 ---
 
@@ -2724,7 +2724,7 @@ The service account being used for the encryption request for the given KMS key.
 If absent, the Compute
 Engine default service account is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#kms_key_service_account ComputeInstanceTemplate#kms_key_service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#kms_key_service_account ComputeInstanceTemplate#kms_key_service_account}
 
 ---
 
@@ -2733,7 +2733,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -2760,7 +2760,7 @@ KmsKeySelfLink *string
 
 The self link of the encryption key that is stored in Google Cloud KMS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
 
 ---
 
@@ -2777,7 +2777,7 @@ The service account being used for the encryption request for the given KMS key.
 If absent, the Compute
 Engine default service account is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#kms_key_service_account ComputeInstanceTemplate#kms_key_service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#kms_key_service_account ComputeInstanceTemplate#kms_key_service_account}
 
 ---
 
@@ -2786,7 +2786,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateGuestAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateGuestAccelerator {
 	Count: *f64,
@@ -2813,7 +2813,7 @@ Count *f64
 
 The number of the guest accelerator cards exposed to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#count ComputeInstanceTemplate#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#count ComputeInstanceTemplate#count}
 
 ---
 
@@ -2827,7 +2827,7 @@ Type *string
 
 The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#type ComputeInstanceTemplate#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#type ComputeInstanceTemplate#type}
 
 ---
 
@@ -2836,7 +2836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateNetworkInterface {
 	AccessConfig: interface{},
@@ -2883,7 +2883,7 @@ AccessConfig interface{}
 
 access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#access_config ComputeInstanceTemplate#access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#access_config ComputeInstanceTemplate#access_config}
 
 ---
 
@@ -2897,7 +2897,7 @@ AliasIpRange interface{}
 
 alias_ip_range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#alias_ip_range ComputeInstanceTemplate#alias_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#alias_ip_range ComputeInstanceTemplate#alias_ip_range}
 
 ---
 
@@ -2911,7 +2911,7 @@ InternalIpv6PrefixLength *f64
 
 The prefix length of the primary internal IPv6 range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#internal_ipv6_prefix_length ComputeInstanceTemplate#internal_ipv6_prefix_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#internal_ipv6_prefix_length ComputeInstanceTemplate#internal_ipv6_prefix_length}
 
 ---
 
@@ -2925,7 +2925,7 @@ Ipv6AccessConfig interface{}
 
 ipv6_access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#ipv6_access_config ComputeInstanceTemplate#ipv6_access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#ipv6_access_config ComputeInstanceTemplate#ipv6_access_config}
 
 ---
 
@@ -2941,7 +2941,7 @@ An IPv6 internal network address for this network interface.
 
 If not specified, Google Cloud will automatically assign an internal IPv6 address from the instance's subnetwork.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#ipv6_address ComputeInstanceTemplate#ipv6_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#ipv6_address ComputeInstanceTemplate#ipv6_address}
 
 ---
 
@@ -2957,7 +2957,7 @@ The name or self_link of the network to attach this interface to.
 
 Use network attribute for Legacy or Auto subnetted networks and subnetwork for custom subnetted networks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#network ComputeInstanceTemplate#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#network ComputeInstanceTemplate#network}
 
 ---
 
@@ -2971,7 +2971,7 @@ NetworkIp *string
 
 The private IP address to assign to the instance. If empty, the address will be automatically assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#network_ip ComputeInstanceTemplate#network_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#network_ip ComputeInstanceTemplate#network_ip}
 
 ---
 
@@ -2985,7 +2985,7 @@ NicType *string
 
 The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#nic_type ComputeInstanceTemplate#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#nic_type ComputeInstanceTemplate#nic_type}
 
 ---
 
@@ -3001,7 +3001,7 @@ The networking queue count that's specified by users for the network interface.
 
 Both Rx and Tx queues will be set to this number. It will be empty if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#queue_count ComputeInstanceTemplate#queue_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#queue_count ComputeInstanceTemplate#queue_count}
 
 ---
 
@@ -3017,7 +3017,7 @@ The stack type for this network interface to identify whether the IPv6 feature i
 
 If not specified, IPV4_ONLY will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#stack_type ComputeInstanceTemplate#stack_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#stack_type ComputeInstanceTemplate#stack_type}
 
 ---
 
@@ -3033,7 +3033,7 @@ The name of the subnetwork to attach this interface to.
 
 The subnetwork must exist in the same region this instance will be created in. Either network or subnetwork must be provided.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#subnetwork ComputeInstanceTemplate#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#subnetwork ComputeInstanceTemplate#subnetwork}
 
 ---
 
@@ -3049,7 +3049,7 @@ The ID of the project in which the subnetwork belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#subnetwork_project ComputeInstanceTemplate#subnetwork_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#subnetwork_project ComputeInstanceTemplate#subnetwork_project}
 
 ---
 
@@ -3058,7 +3058,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateNetworkInterfaceAccessConfig {
 	NatIp: *string,
@@ -3087,7 +3087,7 @@ The IP address that will be 1:1 mapped to the instance's network ip.
 
 If not given, one will be generated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#nat_ip ComputeInstanceTemplate#nat_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#nat_ip ComputeInstanceTemplate#nat_ip}
 
 ---
 
@@ -3103,7 +3103,7 @@ The networking tier used for configuring this instance template.
 
 This field can take the following values: PREMIUM, STANDARD, FIXED_STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#network_tier ComputeInstanceTemplate#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#network_tier ComputeInstanceTemplate#network_tier}
 
 ---
 
@@ -3112,7 +3112,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceAliasIpRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateNetworkInterfaceAliasIpRange {
 	IpCidrRange: *string,
@@ -3141,7 +3141,7 @@ The IP CIDR range represented by this alias IP range.
 
 This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. At the time of writing only a netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#ip_cidr_range ComputeInstanceTemplate#ip_cidr_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#ip_cidr_range ComputeInstanceTemplate#ip_cidr_range}
 
 ---
 
@@ -3157,7 +3157,7 @@ The subnetwork secondary range name specifying the secondary range from which to
 
 If left unspecified, the primary range of the subnetwork will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#subnetwork_range_name ComputeInstanceTemplate#subnetwork_range_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#subnetwork_range_name ComputeInstanceTemplate#subnetwork_range_name}
 
 ---
 
@@ -3166,7 +3166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfig {
 	NetworkTier: *string,
@@ -3193,7 +3193,7 @@ The service-level to be provided for IPv6 traffic when the subnet has an externa
 
 Only PREMIUM tier is valid for IPv6
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#network_tier ComputeInstanceTemplate#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#network_tier ComputeInstanceTemplate#network_tier}
 
 ---
 
@@ -3202,7 +3202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkPerformanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateNetworkPerformanceConfig {
 	TotalEgressBandwidthTier: *string,
@@ -3227,7 +3227,7 @@ TotalEgressBandwidthTier *string
 
 The egress bandwidth tier to enable. Possible values:TIER_1, DEFAULT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#total_egress_bandwidth_tier ComputeInstanceTemplate#total_egress_bandwidth_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#total_egress_bandwidth_tier ComputeInstanceTemplate#total_egress_bandwidth_tier}
 
 ---
 
@@ -3236,11 +3236,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateReservationAffinity {
 	Type: *string,
-	SpecificReservation: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinitySpecificReservation,
+	SpecificReservation: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinitySpecificReservation,
 }
 ```
 
@@ -3263,7 +3263,7 @@ Type *string
 
 The type of reservation from which this instance can consume resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#type ComputeInstanceTemplate#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#type ComputeInstanceTemplate#type}
 
 ---
 
@@ -3277,7 +3277,7 @@ SpecificReservation ComputeInstanceTemplateReservationAffinitySpecificReservatio
 
 specific_reservation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#specific_reservation ComputeInstanceTemplate#specific_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#specific_reservation ComputeInstanceTemplate#specific_reservation}
 
 ---
 
@@ -3286,7 +3286,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinitySpecificReservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateReservationAffinitySpecificReservation {
 	Key: *string,
@@ -3315,7 +3315,7 @@ Corresponds to the label key of a reservation resource.
 
 To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#key ComputeInstanceTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#key ComputeInstanceTemplate#key}
 
 ---
 
@@ -3329,7 +3329,7 @@ Values *[]*string
 
 Corresponds to the label values of a reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#values ComputeInstanceTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#values ComputeInstanceTemplate#values}
 
 ---
 
@@ -3338,7 +3338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateScheduling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateScheduling {
 	AutomaticRestart: interface{},
@@ -3379,7 +3379,7 @@ Specifies whether the instance should be automatically restarted if it is termin
 
 This defaults to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#automatic_restart ComputeInstanceTemplate#automatic_restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#automatic_restart ComputeInstanceTemplate#automatic_restart}
 
 ---
 
@@ -3393,7 +3393,7 @@ InstanceTerminationAction *string
 
 Specifies the action GCE should take when SPOT VM is preempted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#instance_termination_action ComputeInstanceTemplate#instance_termination_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#instance_termination_action ComputeInstanceTemplate#instance_termination_action}
 
 ---
 
@@ -3407,7 +3407,7 @@ LocalSsdRecoveryTimeout interface{}
 
 local_ssd_recovery_timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#local_ssd_recovery_timeout ComputeInstanceTemplate#local_ssd_recovery_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#local_ssd_recovery_timeout ComputeInstanceTemplate#local_ssd_recovery_timeout}
 
 ---
 
@@ -3421,7 +3421,7 @@ MinNodeCpus *f64
 
 Minimum number of cpus for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#min_node_cpus ComputeInstanceTemplate#min_node_cpus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#min_node_cpus ComputeInstanceTemplate#min_node_cpus}
 
 ---
 
@@ -3435,7 +3435,7 @@ NodeAffinities interface{}
 
 node_affinities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#node_affinities ComputeInstanceTemplate#node_affinities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#node_affinities ComputeInstanceTemplate#node_affinities}
 
 ---
 
@@ -3449,7 +3449,7 @@ OnHostMaintenance *string
 
 Defines the maintenance behavior for this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#on_host_maintenance ComputeInstanceTemplate#on_host_maintenance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#on_host_maintenance ComputeInstanceTemplate#on_host_maintenance}
 
 ---
 
@@ -3463,7 +3463,7 @@ Preemptible interface{}
 
 Allows instance to be preempted. This defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#preemptible ComputeInstanceTemplate#preemptible}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#preemptible ComputeInstanceTemplate#preemptible}
 
 ---
 
@@ -3477,7 +3477,7 @@ ProvisioningModel *string
 
 Whether the instance is spot. If this is set as SPOT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#provisioning_model ComputeInstanceTemplate#provisioning_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#provisioning_model ComputeInstanceTemplate#provisioning_model}
 
 ---
 
@@ -3486,7 +3486,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeout {
 	Seconds: *f64,
@@ -3513,7 +3513,7 @@ Seconds *f64
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#seconds ComputeInstanceTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#seconds ComputeInstanceTemplate#seconds}
 
 ---
 
@@ -3531,7 +3531,7 @@ Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must
 be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#nanos ComputeInstanceTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#nanos ComputeInstanceTemplate#nanos}
 
 ---
 
@@ -3540,7 +3540,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateSchedulingNodeAffinities {
 	Key: *string,
@@ -3553,9 +3553,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinities.property.key">Key</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#key ComputeInstanceTemplate#key}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinities.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#operator ComputeInstanceTemplate#operator}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinities.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#values ComputeInstanceTemplate#values}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinities.property.key">Key</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#key ComputeInstanceTemplate#key}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinities.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#operator ComputeInstanceTemplate#operator}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinities.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#values ComputeInstanceTemplate#values}. |
 
 ---
 
@@ -3567,7 +3567,7 @@ Key *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#key ComputeInstanceTemplate#key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#key ComputeInstanceTemplate#key}.
 
 ---
 
@@ -3579,7 +3579,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#operator ComputeInstanceTemplate#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#operator ComputeInstanceTemplate#operator}.
 
 ---
 
@@ -3591,7 +3591,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#values ComputeInstanceTemplate#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#values ComputeInstanceTemplate#values}.
 
 ---
 
@@ -3600,7 +3600,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateServiceAccount {
 	Scopes: *[]*string,
@@ -3629,7 +3629,7 @@ A list of service scopes.
 
 Both OAuth2 URLs and gcloud short names are supported. To allow full access to all Cloud APIs, use the cloud-platform scope.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#scopes ComputeInstanceTemplate#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#scopes ComputeInstanceTemplate#scopes}
 
 ---
 
@@ -3643,7 +3643,7 @@ Email *string
 
 The service account e-mail address. If not given, the default Google Compute Engine service account is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#email ComputeInstanceTemplate#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#email ComputeInstanceTemplate#email}
 
 ---
 
@@ -3652,7 +3652,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateShieldedInstanceConfig {
 	EnableIntegrityMonitoring: interface{},
@@ -3683,7 +3683,7 @@ Compare the most recent boot measurements to the integrity policy baseline and r
 
 Defaults to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#enable_integrity_monitoring ComputeInstanceTemplate#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#enable_integrity_monitoring ComputeInstanceTemplate#enable_integrity_monitoring}
 
 ---
 
@@ -3699,7 +3699,7 @@ Verify the digital signature of all boot components, and halt the boot process i
 
 Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#enable_secure_boot ComputeInstanceTemplate#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#enable_secure_boot ComputeInstanceTemplate#enable_secure_boot}
 
 ---
 
@@ -3715,7 +3715,7 @@ Use a virtualized trusted platform module, which is a specialized computer chip 
 
 Defaults to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#enable_vtpm ComputeInstanceTemplate#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#enable_vtpm ComputeInstanceTemplate#enable_vtpm}
 
 ---
 
@@ -3724,7 +3724,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 &computeinstancetemplate.ComputeInstanceTemplateTimeouts {
 	Create: *string,
@@ -3736,8 +3736,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#create ComputeInstanceTemplate#create}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#delete ComputeInstanceTemplate#delete}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#create ComputeInstanceTemplate#create}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#delete ComputeInstanceTemplate#delete}. |
 
 ---
 
@@ -3749,7 +3749,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#create ComputeInstanceTemplate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#create ComputeInstanceTemplate#create}.
 
 ---
 
@@ -3761,7 +3761,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_instance_template#delete ComputeInstanceTemplate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_instance_template#delete ComputeInstanceTemplate#delete}.
 
 ---
 
@@ -3772,7 +3772,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateAdvancedMachineFeaturesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference
 ```
@@ -4108,7 +4108,7 @@ func InternalValue() ComputeInstanceTemplateAdvancedMachineFeatures
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateConfidentialInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateConfidentialInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateConfidentialInstanceConfigOutputReference
 ```
@@ -4379,7 +4379,7 @@ func InternalValue() ComputeInstanceTemplateConfidentialInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference
 ```
@@ -4650,7 +4650,7 @@ func InternalValue() ComputeInstanceTemplateDiskDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateDiskList
 ```
@@ -4810,7 +4810,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateDiskOutputReference
 ```
@@ -5667,7 +5667,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceImageEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateDiskSourceImageEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateDiskSourceImageEncryptionKeyOutputReference
 ```
@@ -5967,7 +5967,7 @@ func InternalValue() ComputeInstanceTemplateDiskSourceImageEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference
 ```
@@ -6267,7 +6267,7 @@ func InternalValue() ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateGuestAcceleratorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateGuestAcceleratorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateGuestAcceleratorList
 ```
@@ -6427,7 +6427,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateGuestAcceleratorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateGuestAcceleratorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateGuestAcceleratorOutputReference
 ```
@@ -6738,7 +6738,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceAccessConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceAccessConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateNetworkInterfaceAccessConfigList
 ```
@@ -6898,7 +6898,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceAccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceAccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateNetworkInterfaceAccessConfigOutputReference
 ```
@@ -7234,7 +7234,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceAliasIpRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceAliasIpRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateNetworkInterfaceAliasIpRangeList
 ```
@@ -7394,7 +7394,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceAliasIpRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceAliasIpRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateNetworkInterfaceAliasIpRangeOutputReference
 ```
@@ -7712,7 +7712,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceIpv6AccessConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfigList
 ```
@@ -7872,7 +7872,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceIpv6AccessConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateNetworkInterfaceIpv6AccessConfigOutputReference
 ```
@@ -8205,7 +8205,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateNetworkInterfaceList
 ```
@@ -8365,7 +8365,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateNetworkInterfaceOutputReference
 ```
@@ -9041,7 +9041,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateNetworkPerformanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateNetworkPerformanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateNetworkPerformanceConfigOutputReference
 ```
@@ -9312,7 +9312,7 @@ func InternalValue() ComputeInstanceTemplateNetworkPerformanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateReservationAffinityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateReservationAffinityOutputReference
 ```
@@ -9625,7 +9625,7 @@ func InternalValue() ComputeInstanceTemplateReservationAffinity
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference
 ```
@@ -9918,7 +9918,7 @@ func InternalValue() ComputeInstanceTemplateReservationAffinitySpecificReservati
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeoutList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeoutList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeoutList
 ```
@@ -10078,7 +10078,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateSchedulingLocalSsdRecoveryTimeoutOutputReference
 ```
@@ -10396,7 +10396,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinitiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateSchedulingNodeAffinitiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceTemplateSchedulingNodeAffinitiesList
 ```
@@ -10556,7 +10556,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingNodeAffinitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateSchedulingNodeAffinitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceTemplateSchedulingNodeAffinitiesOutputReference
 ```
@@ -10889,7 +10889,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateSchedulingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateSchedulingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateSchedulingOutputReference
 ```
@@ -11396,7 +11396,7 @@ func InternalValue() ComputeInstanceTemplateScheduling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateServiceAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateServiceAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateServiceAccountOutputReference
 ```
@@ -11696,7 +11696,7 @@ func InternalValue() ComputeInstanceTemplateServiceAccount
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateShieldedInstanceConfigOutputReference
 ```
@@ -12032,7 +12032,7 @@ func InternalValue() ComputeInstanceTemplateShieldedInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinstancetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate"
 
 computeinstancetemplate.NewComputeInstanceTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateTimeoutsOutputReference
 ```

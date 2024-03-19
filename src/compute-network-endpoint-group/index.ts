@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group
+// https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,18 +11,18 @@ export interface ComputeNetworkEndpointGroupConfig extends cdktf.TerraformMetaAr
   * The default port used if the port number is not specified in the
   * network endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#default_port ComputeNetworkEndpointGroup#default_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#default_port ComputeNetworkEndpointGroup#default_port}
   */
   readonly defaultPort?: number;
   /**
   * An optional description of this resource. Provide this property when
   * you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#description ComputeNetworkEndpointGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#description ComputeNetworkEndpointGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#id ComputeNetworkEndpointGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#id ComputeNetworkEndpointGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -42,14 +37,14 @@ export interface ComputeNetworkEndpointGroupConfig extends cdktf.TerraformMetaAr
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#name ComputeNetworkEndpointGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#name ComputeNetworkEndpointGroup#name}
   */
   readonly name: string;
   /**
   * The network to which all network endpoints in the NEG belong.
   * Uses "default" project network if unspecified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#network ComputeNetworkEndpointGroup#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#network ComputeNetworkEndpointGroup#network}
   */
   readonly network: string;
   /**
@@ -63,39 +58,39 @@ export interface ComputeNetworkEndpointGroupConfig extends cdktf.TerraformMetaAr
   * 
   * Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_IP_PORT, INTERNET_FQDN_PORT, SERVERLESS, and PRIVATE_SERVICE_CONNECT. Default value: "GCE_VM_IP_PORT" Possible values: ["GCE_VM_IP", "GCE_VM_IP_PORT", "NON_GCP_PRIVATE_IP_PORT", "INTERNET_IP_PORT", "INTERNET_FQDN_PORT", "SERVERLESS", "PRIVATE_SERVICE_CONNECT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#network_endpoint_type ComputeNetworkEndpointGroup#network_endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#network_endpoint_type ComputeNetworkEndpointGroup#network_endpoint_type}
   */
   readonly networkEndpointType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#project ComputeNetworkEndpointGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#project ComputeNetworkEndpointGroup#project}
   */
   readonly project?: string;
   /**
   * Optional subnetwork to which all network endpoints in the NEG belong.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#subnetwork ComputeNetworkEndpointGroup#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#subnetwork ComputeNetworkEndpointGroup#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * Zone where the network endpoint group is located.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#zone ComputeNetworkEndpointGroup#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#zone ComputeNetworkEndpointGroup#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#timeouts ComputeNetworkEndpointGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#timeouts ComputeNetworkEndpointGroup#timeouts}
   */
   readonly timeouts?: ComputeNetworkEndpointGroupTimeouts;
 }
 export interface ComputeNetworkEndpointGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#create ComputeNetworkEndpointGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#create ComputeNetworkEndpointGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#delete ComputeNetworkEndpointGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#delete ComputeNetworkEndpointGroup#delete}
   */
   readonly delete?: string;
 }
@@ -218,7 +213,7 @@ export class ComputeNetworkEndpointGroupTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group google_compute_network_endpoint_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group google_compute_network_endpoint_group}
 */
 export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
 
@@ -234,7 +229,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeNetworkEndpointGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeNetworkEndpointGroup to import
-  * @param importFromId The id of the existing ComputeNetworkEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeNetworkEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeNetworkEndpointGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -246,7 +241,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.20.0/docs/resources/compute_network_endpoint_group google_compute_network_endpoint_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/compute_network_endpoint_group google_compute_network_endpoint_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -257,7 +252,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network_endpoint_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.20.0',
+        providerVersion: '5.21.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
