@@ -57,6 +57,10 @@ Object.defineProperty(exports, 'appEngineFlexibleAppVersion', { get: function ()
 Object.defineProperty(exports, 'appEngineServiceNetworkSettings', { get: function () { return require('./app-engine-service-network-settings'); } });
 Object.defineProperty(exports, 'appEngineServiceSplitTraffic', { get: function () { return require('./app-engine-service-split-traffic'); } });
 Object.defineProperty(exports, 'appEngineStandardAppVersion', { get: function () { return require('./app-engine-standard-app-version'); } });
+Object.defineProperty(exports, 'apphubApplication', { get: function () { return require('./apphub-application'); } });
+Object.defineProperty(exports, 'apphubService', { get: function () { return require('./apphub-service'); } });
+Object.defineProperty(exports, 'apphubServiceProjectAttachment', { get: function () { return require('./apphub-service-project-attachment'); } });
+Object.defineProperty(exports, 'apphubWorkload', { get: function () { return require('./apphub-workload'); } });
 Object.defineProperty(exports, 'artifactRegistryRepository', { get: function () { return require('./artifact-registry-repository'); } });
 Object.defineProperty(exports, 'artifactRegistryRepositoryIamBinding', { get: function () { return require('./artifact-registry-repository-iam-binding'); } });
 Object.defineProperty(exports, 'artifactRegistryRepositoryIamMember', { get: function () { return require('./artifact-registry-repository-iam-member'); } });
@@ -434,6 +438,7 @@ Object.defineProperty(exports, 'filestoreInstance', { get: function () { return 
 Object.defineProperty(exports, 'filestoreSnapshot', { get: function () { return require('./filestore-snapshot'); } });
 Object.defineProperty(exports, 'firebaseAppCheckAppAttestConfig', { get: function () { return require('./firebase-app-check-app-attest-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckDebugToken', { get: function () { return require('./firebase-app-check-debug-token'); } });
+Object.defineProperty(exports, 'firebaseAppCheckDeviceCheckConfig', { get: function () { return require('./firebase-app-check-device-check-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckPlayIntegrityConfig', { get: function () { return require('./firebase-app-check-play-integrity-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckRecaptchaEnterpriseConfig', { get: function () { return require('./firebase-app-check-recaptcha-enterprise-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckRecaptchaV3Config', { get: function () { return require('./firebase-app-check-recaptcha-v3-config'); } });
@@ -516,6 +521,10 @@ Object.defineProperty(exports, 'iapAppEngineVersionIamMember', { get: function (
 Object.defineProperty(exports, 'iapAppEngineVersionIamPolicy', { get: function () { return require('./iap-app-engine-version-iam-policy'); } });
 Object.defineProperty(exports, 'iapBrand', { get: function () { return require('./iap-brand'); } });
 Object.defineProperty(exports, 'iapClient', { get: function () { return require('./iap-client'); } });
+Object.defineProperty(exports, 'iapTunnelDestGroup', { get: function () { return require('./iap-tunnel-dest-group'); } });
+Object.defineProperty(exports, 'iapTunnelDestGroupIamBinding', { get: function () { return require('./iap-tunnel-dest-group-iam-binding'); } });
+Object.defineProperty(exports, 'iapTunnelDestGroupIamMember', { get: function () { return require('./iap-tunnel-dest-group-iam-member'); } });
+Object.defineProperty(exports, 'iapTunnelDestGroupIamPolicy', { get: function () { return require('./iap-tunnel-dest-group-iam-policy'); } });
 Object.defineProperty(exports, 'iapTunnelIamBinding', { get: function () { return require('./iap-tunnel-iam-binding'); } });
 Object.defineProperty(exports, 'iapTunnelIamMember', { get: function () { return require('./iap-tunnel-iam-member'); } });
 Object.defineProperty(exports, 'iapTunnelIamPolicy', { get: function () { return require('./iap-tunnel-iam-policy'); } });
@@ -553,6 +562,7 @@ Object.defineProperty(exports, 'kmsCryptoKeyIamBinding', { get: function () { re
 Object.defineProperty(exports, 'kmsCryptoKeyIamMember', { get: function () { return require('./kms-crypto-key-iam-member'); } });
 Object.defineProperty(exports, 'kmsCryptoKeyIamPolicy', { get: function () { return require('./kms-crypto-key-iam-policy'); } });
 Object.defineProperty(exports, 'kmsCryptoKeyVersion', { get: function () { return require('./kms-crypto-key-version'); } });
+Object.defineProperty(exports, 'kmsEkmConnection', { get: function () { return require('./kms-ekm-connection'); } });
 Object.defineProperty(exports, 'kmsKeyRing', { get: function () { return require('./kms-key-ring'); } });
 Object.defineProperty(exports, 'kmsKeyRingIamBinding', { get: function () { return require('./kms-key-ring-iam-binding'); } });
 Object.defineProperty(exports, 'kmsKeyRingIamMember', { get: function () { return require('./kms-key-ring-iam-member'); } });
@@ -785,6 +795,8 @@ Object.defineProperty(exports, 'dataGoogleAlloydbLocations', { get: function () 
 Object.defineProperty(exports, 'dataGoogleAlloydbSupportedDatabaseFlags', { get: function () { return require('./data-google-alloydb-supported-database-flags'); } });
 Object.defineProperty(exports, 'dataGoogleApigeeEnvironmentIamPolicy', { get: function () { return require('./data-google-apigee-environment-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleAppEngineDefaultServiceAccount', { get: function () { return require('./data-google-app-engine-default-service-account'); } });
+Object.defineProperty(exports, 'dataGoogleApphubDiscoveredService', { get: function () { return require('./data-google-apphub-discovered-service'); } });
+Object.defineProperty(exports, 'dataGoogleApphubDiscoveredWorkload', { get: function () { return require('./data-google-apphub-discovered-workload'); } });
 Object.defineProperty(exports, 'dataGoogleArtifactRegistryRepository', { get: function () { return require('./data-google-artifact-registry-repository'); } });
 Object.defineProperty(exports, 'dataGoogleArtifactRegistryRepositoryIamPolicy', { get: function () { return require('./data-google-artifact-registry-repository-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBeyondcorpAppConnection', { get: function () { return require('./data-google-beyondcorp-app-connection'); } });
@@ -809,6 +821,7 @@ Object.defineProperty(exports, 'dataGoogleClientOpenidUserinfo', { get: function
 Object.defineProperty(exports, 'dataGoogleCloudIdentityGroupLookup', { get: function () { return require('./data-google-cloud-identity-group-lookup'); } });
 Object.defineProperty(exports, 'dataGoogleCloudIdentityGroupMemberships', { get: function () { return require('./data-google-cloud-identity-group-memberships'); } });
 Object.defineProperty(exports, 'dataGoogleCloudIdentityGroups', { get: function () { return require('./data-google-cloud-identity-groups'); } });
+Object.defineProperty(exports, 'dataGoogleCloudQuotasQuotaInfo', { get: function () { return require('./data-google-cloud-quotas-quota-info'); } });
 Object.defineProperty(exports, 'dataGoogleCloudRunLocations', { get: function () { return require('./data-google-cloud-run-locations'); } });
 Object.defineProperty(exports, 'dataGoogleCloudRunService', { get: function () { return require('./data-google-cloud-run-service'); } });
 Object.defineProperty(exports, 'dataGoogleCloudRunServiceIamPolicy', { get: function () { return require('./data-google-cloud-run-service-iam-policy'); } });
@@ -929,6 +942,7 @@ Object.defineProperty(exports, 'dataGoogleIamTestablePermissions', { get: functi
 Object.defineProperty(exports, 'dataGoogleIapAppEngineServiceIamPolicy', { get: function () { return require('./data-google-iap-app-engine-service-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleIapAppEngineVersionIamPolicy', { get: function () { return require('./data-google-iap-app-engine-version-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleIapClient', { get: function () { return require('./data-google-iap-client'); } });
+Object.defineProperty(exports, 'dataGoogleIapTunnelDestGroupIamPolicy', { get: function () { return require('./data-google-iap-tunnel-dest-group-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleIapTunnelIamPolicy', { get: function () { return require('./data-google-iap-tunnel-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleIapTunnelInstanceIamPolicy', { get: function () { return require('./data-google-iap-tunnel-instance-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleIapWebBackendServiceIamPolicy', { get: function () { return require('./data-google-iap-web-backend-service-iam-policy'); } });
