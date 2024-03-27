@@ -1,3 +1,3 @@
 # `google_pubsub_topic_iam_member`
 
-Refer to the Terraform Registry for docs: [`google_pubsub_topic_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic_iam_member).
+Refer to the Terraform Registry for docs: [`google_pubsub_topic_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic_iam_member).

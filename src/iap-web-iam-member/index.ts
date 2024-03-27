@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface IapWebIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#id IapWebIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#id IapWebIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#member IapWebIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#member IapWebIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#project IapWebIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#project IapWebIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#role IapWebIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#role IapWebIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#condition IapWebIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#condition IapWebIamMember#condition}
   */
   readonly condition?: IapWebIamMemberCondition;
 }
 export interface IapWebIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#description IapWebIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#description IapWebIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#expression IapWebIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#expression IapWebIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#title IapWebIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#title IapWebIamMember#title}
   */
   readonly title: string;
 }
@@ -184,7 +179,7 @@ export class IapWebIamMemberConditionOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member google_iap_web_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member google_iap_web_iam_member}
 */
 export class IapWebIamMember extends cdktf.TerraformResource {
 
@@ -200,7 +195,7 @@ export class IapWebIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IapWebIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IapWebIamMember to import
-  * @param importFromId The id of the existing IapWebIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IapWebIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IapWebIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -212,7 +207,7 @@ export class IapWebIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/iap_web_iam_member google_iap_web_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/iap_web_iam_member google_iap_web_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -223,7 +218,7 @@ export class IapWebIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_iap_web_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.21.0',
+        providerVersion: '5.22.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

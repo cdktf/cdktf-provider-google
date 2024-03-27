@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic
+// https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface PubsubTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#id PubsubTopic#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#id PubsubTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,7 +21,7 @@ export interface PubsubTopicConfig extends cdktf.TerraformMetaArguments {
   * 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
   * The expected format is 'projects/* /locations/* /keyRings/* /cryptoKeys/*'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#kms_key_name PubsubTopic#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#kms_key_name PubsubTopic#kms_key_name}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -38,7 +33,7 @@ export interface PubsubTopicConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#labels PubsubTopic#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#labels PubsubTopic#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -51,37 +46,315 @@ export interface PubsubTopicConfig extends cdktf.TerraformMetaArguments {
   * The rotation period has the format of a decimal number, followed by the
   * letter 's' (seconds). Cannot be more than 31 days or less than 10 minutes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#message_retention_duration PubsubTopic#message_retention_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#message_retention_duration PubsubTopic#message_retention_duration}
   */
   readonly messageRetentionDuration?: string;
   /**
   * Name of the topic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#name PubsubTopic#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#name PubsubTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#project PubsubTopic#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#project PubsubTopic#project}
   */
   readonly project?: string;
   /**
+  * ingestion_data_source_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#ingestion_data_source_settings PubsubTopic#ingestion_data_source_settings}
+  */
+  readonly ingestionDataSourceSettings?: PubsubTopicIngestionDataSourceSettings;
+  /**
   * message_storage_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#message_storage_policy PubsubTopic#message_storage_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#message_storage_policy PubsubTopic#message_storage_policy}
   */
   readonly messageStoragePolicy?: PubsubTopicMessageStoragePolicy;
   /**
   * schema_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#schema_settings PubsubTopic#schema_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#schema_settings PubsubTopic#schema_settings}
   */
   readonly schemaSettings?: PubsubTopicSchemaSettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#timeouts PubsubTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#timeouts PubsubTopic#timeouts}
   */
   readonly timeouts?: PubsubTopicTimeouts;
+}
+export interface PubsubTopicIngestionDataSourceSettingsAwsKinesis {
+  /**
+  * AWS role ARN to be used for Federated Identity authentication with
+  * Kinesis. Check the Pub/Sub docs for how to set up this role and the
+  * required permissions that need to be attached to it.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#aws_role_arn PubsubTopic#aws_role_arn}
+  */
+  readonly awsRoleArn: string;
+  /**
+  * The Kinesis consumer ARN to used for ingestion in
+  * Enhanced Fan-Out mode. The consumer must be already
+  * created and ready to be used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#consumer_arn PubsubTopic#consumer_arn}
+  */
+  readonly consumerArn: string;
+  /**
+  * The GCP service account to be used for Federated Identity authentication
+  * with Kinesis (via a 'AssumeRoleWithWebIdentity' call for the provided
+  * role). The 'awsRoleArn' must be set up with 'accounts.google.com:sub'
+  * equals to this service account number.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#gcp_service_account PubsubTopic#gcp_service_account}
+  */
+  readonly gcpServiceAccount: string;
+  /**
+  * The Kinesis stream ARN to ingest data from.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#stream_arn PubsubTopic#stream_arn}
+  */
+  readonly streamArn: string;
+}
+
+export function pubsubTopicIngestionDataSourceSettingsAwsKinesisToTerraform(struct?: PubsubTopicIngestionDataSourceSettingsAwsKinesisOutputReference | PubsubTopicIngestionDataSourceSettingsAwsKinesis): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    aws_role_arn: cdktf.stringToTerraform(struct!.awsRoleArn),
+    consumer_arn: cdktf.stringToTerraform(struct!.consumerArn),
+    gcp_service_account: cdktf.stringToTerraform(struct!.gcpServiceAccount),
+    stream_arn: cdktf.stringToTerraform(struct!.streamArn),
+  }
+}
+
+
+export function pubsubTopicIngestionDataSourceSettingsAwsKinesisToHclTerraform(struct?: PubsubTopicIngestionDataSourceSettingsAwsKinesisOutputReference | PubsubTopicIngestionDataSourceSettingsAwsKinesis): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    aws_role_arn: {
+      value: cdktf.stringToHclTerraform(struct!.awsRoleArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    consumer_arn: {
+      value: cdktf.stringToHclTerraform(struct!.consumerArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    gcp_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.gcpServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    stream_arn: {
+      value: cdktf.stringToHclTerraform(struct!.streamArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class PubsubTopicIngestionDataSourceSettingsAwsKinesisOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PubsubTopicIngestionDataSourceSettingsAwsKinesis | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._awsRoleArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.awsRoleArn = this._awsRoleArn;
+    }
+    if (this._consumerArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumerArn = this._consumerArn;
+    }
+    if (this._gcpServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gcpServiceAccount = this._gcpServiceAccount;
+    }
+    if (this._streamArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.streamArn = this._streamArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PubsubTopicIngestionDataSourceSettingsAwsKinesis | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._awsRoleArn = undefined;
+      this._consumerArn = undefined;
+      this._gcpServiceAccount = undefined;
+      this._streamArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._awsRoleArn = value.awsRoleArn;
+      this._consumerArn = value.consumerArn;
+      this._gcpServiceAccount = value.gcpServiceAccount;
+      this._streamArn = value.streamArn;
+    }
+  }
+
+  // aws_role_arn - computed: false, optional: false, required: true
+  private _awsRoleArn?: string; 
+  public get awsRoleArn() {
+    return this.getStringAttribute('aws_role_arn');
+  }
+  public set awsRoleArn(value: string) {
+    this._awsRoleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get awsRoleArnInput() {
+    return this._awsRoleArn;
+  }
+
+  // consumer_arn - computed: false, optional: false, required: true
+  private _consumerArn?: string; 
+  public get consumerArn() {
+    return this.getStringAttribute('consumer_arn');
+  }
+  public set consumerArn(value: string) {
+    this._consumerArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerArnInput() {
+    return this._consumerArn;
+  }
+
+  // gcp_service_account - computed: false, optional: false, required: true
+  private _gcpServiceAccount?: string; 
+  public get gcpServiceAccount() {
+    return this.getStringAttribute('gcp_service_account');
+  }
+  public set gcpServiceAccount(value: string) {
+    this._gcpServiceAccount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gcpServiceAccountInput() {
+    return this._gcpServiceAccount;
+  }
+
+  // stream_arn - computed: false, optional: false, required: true
+  private _streamArn?: string; 
+  public get streamArn() {
+    return this.getStringAttribute('stream_arn');
+  }
+  public set streamArn(value: string) {
+    this._streamArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamArnInput() {
+    return this._streamArn;
+  }
+}
+export interface PubsubTopicIngestionDataSourceSettings {
+  /**
+  * aws_kinesis block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#aws_kinesis PubsubTopic#aws_kinesis}
+  */
+  readonly awsKinesis?: PubsubTopicIngestionDataSourceSettingsAwsKinesis;
+}
+
+export function pubsubTopicIngestionDataSourceSettingsToTerraform(struct?: PubsubTopicIngestionDataSourceSettingsOutputReference | PubsubTopicIngestionDataSourceSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    aws_kinesis: pubsubTopicIngestionDataSourceSettingsAwsKinesisToTerraform(struct!.awsKinesis),
+  }
+}
+
+
+export function pubsubTopicIngestionDataSourceSettingsToHclTerraform(struct?: PubsubTopicIngestionDataSourceSettingsOutputReference | PubsubTopicIngestionDataSourceSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    aws_kinesis: {
+      value: pubsubTopicIngestionDataSourceSettingsAwsKinesisToHclTerraform(struct!.awsKinesis),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PubsubTopicIngestionDataSourceSettingsAwsKinesisList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class PubsubTopicIngestionDataSourceSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PubsubTopicIngestionDataSourceSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._awsKinesis?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.awsKinesis = this._awsKinesis?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PubsubTopicIngestionDataSourceSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._awsKinesis.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._awsKinesis.internalValue = value.awsKinesis;
+    }
+  }
+
+  // aws_kinesis - computed: false, optional: true, required: false
+  private _awsKinesis = new PubsubTopicIngestionDataSourceSettingsAwsKinesisOutputReference(this, "aws_kinesis");
+  public get awsKinesis() {
+    return this._awsKinesis;
+  }
+  public putAwsKinesis(value: PubsubTopicIngestionDataSourceSettingsAwsKinesis) {
+    this._awsKinesis.internalValue = value;
+  }
+  public resetAwsKinesis() {
+    this._awsKinesis.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get awsKinesisInput() {
+    return this._awsKinesis.internalValue;
+  }
 }
 export interface PubsubTopicMessageStoragePolicy {
   /**
@@ -92,7 +365,7 @@ export interface PubsubTopicMessageStoragePolicy {
   * allowed regions. An empty list means that no regions are allowed,
   * and is not a valid configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#allowed_persistence_regions PubsubTopic#allowed_persistence_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#allowed_persistence_regions PubsubTopic#allowed_persistence_regions}
   */
   readonly allowedPersistenceRegions: string[];
 }
@@ -175,7 +448,7 @@ export interface PubsubTopicSchemaSettings {
   /**
   * The encoding of messages validated against schema. Default value: "ENCODING_UNSPECIFIED" Possible values: ["ENCODING_UNSPECIFIED", "JSON", "BINARY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#encoding PubsubTopic#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#encoding PubsubTopic#encoding}
   */
   readonly encoding?: string;
   /**
@@ -184,7 +457,7 @@ export interface PubsubTopicSchemaSettings {
   * The value of this field will be _deleted-schema_
   * if the schema has been deleted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#schema PubsubTopic#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#schema PubsubTopic#schema}
   */
   readonly schema: string;
 }
@@ -294,15 +567,15 @@ export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObjec
 }
 export interface PubsubTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#create PubsubTopic#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#create PubsubTopic#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#delete PubsubTopic#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#delete PubsubTopic#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#update PubsubTopic#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#update PubsubTopic#update}
   */
   readonly update?: string;
 }
@@ -454,7 +727,7 @@ export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic google_pubsub_topic}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic google_pubsub_topic}
 */
 export class PubsubTopic extends cdktf.TerraformResource {
 
@@ -470,7 +743,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PubsubTopic resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PubsubTopic to import
-  * @param importFromId The id of the existing PubsubTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PubsubTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PubsubTopic to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -482,7 +755,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.21.0/docs/resources/pubsub_topic google_pubsub_topic} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/pubsub_topic google_pubsub_topic} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -493,7 +766,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.21.0',
+        providerVersion: '5.22.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -510,6 +783,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
     this._messageRetentionDuration = config.messageRetentionDuration;
     this._name = config.name;
     this._project = config.project;
+    this._ingestionDataSourceSettings.internalValue = config.ingestionDataSourceSettings;
     this._messageStoragePolicy.internalValue = config.messageStoragePolicy;
     this._schemaSettings.internalValue = config.schemaSettings;
     this._timeouts.internalValue = config.timeouts;
@@ -624,6 +898,22 @@ export class PubsubTopic extends cdktf.TerraformResource {
     return this._terraformLabels;
   }
 
+  // ingestion_data_source_settings - computed: false, optional: true, required: false
+  private _ingestionDataSourceSettings = new PubsubTopicIngestionDataSourceSettingsOutputReference(this, "ingestion_data_source_settings");
+  public get ingestionDataSourceSettings() {
+    return this._ingestionDataSourceSettings;
+  }
+  public putIngestionDataSourceSettings(value: PubsubTopicIngestionDataSourceSettings) {
+    this._ingestionDataSourceSettings.internalValue = value;
+  }
+  public resetIngestionDataSourceSettings() {
+    this._ingestionDataSourceSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingestionDataSourceSettingsInput() {
+    return this._ingestionDataSourceSettings.internalValue;
+  }
+
   // message_storage_policy - computed: false, optional: true, required: false
   private _messageStoragePolicy = new PubsubTopicMessageStoragePolicyOutputReference(this, "message_storage_policy");
   public get messageStoragePolicy() {
@@ -684,6 +974,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
       message_retention_duration: cdktf.stringToTerraform(this._messageRetentionDuration),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      ingestion_data_source_settings: pubsubTopicIngestionDataSourceSettingsToTerraform(this._ingestionDataSourceSettings.internalValue),
       message_storage_policy: pubsubTopicMessageStoragePolicyToTerraform(this._messageStoragePolicy.internalValue),
       schema_settings: pubsubTopicSchemaSettingsToTerraform(this._schemaSettings.internalValue),
       timeouts: pubsubTopicTimeoutsToTerraform(this._timeouts.internalValue),
@@ -727,6 +1018,12 @@ export class PubsubTopic extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      ingestion_data_source_settings: {
+        value: pubsubTopicIngestionDataSourceSettingsToHclTerraform(this._ingestionDataSourceSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PubsubTopicIngestionDataSourceSettingsList",
       },
       message_storage_policy: {
         value: pubsubTopicMessageStoragePolicyToHclTerraform(this._messageStoragePolicy.internalValue),
