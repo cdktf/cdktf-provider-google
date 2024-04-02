@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version
+// https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ export interface KmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments 
   * The name of the cryptoKey associated with the CryptoKeyVersions.
   * Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}''
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#crypto_key KmsCryptoKeyVersion#crypto_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#crypto_key KmsCryptoKeyVersion#crypto_key}
   */
   readonly cryptoKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#id KmsCryptoKeyVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#id KmsCryptoKeyVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,13 +29,19 @@ export interface KmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments 
   /**
   * The current state of the CryptoKeyVersion. Possible values: ["PENDING_GENERATION", "ENABLED", "DISABLED", "DESTROYED", "DESTROY_SCHEDULED", "PENDING_IMPORT", "IMPORT_FAILED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#state KmsCryptoKeyVersion#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#state KmsCryptoKeyVersion#state}
   */
   readonly state?: string;
   /**
+  * external_protection_level_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#external_protection_level_options KmsCryptoKeyVersion#external_protection_level_options}
+  */
+  readonly externalProtectionLevelOptions?: KmsCryptoKeyVersionExternalProtectionLevelOptions;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#timeouts KmsCryptoKeyVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#timeouts KmsCryptoKeyVersion#timeouts}
   */
   readonly timeouts?: KmsCryptoKeyVersionTimeouts;
 }
@@ -296,17 +302,138 @@ export class KmsCryptoKeyVersionAttestationList extends cdktf.ComplexList {
     return new KmsCryptoKeyVersionAttestationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface KmsCryptoKeyVersionExternalProtectionLevelOptions {
+  /**
+  * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#ekm_connection_key_path KmsCryptoKeyVersion#ekm_connection_key_path}
+  */
+  readonly ekmConnectionKeyPath?: string;
+  /**
+  * The URI for an external resource that this CryptoKeyVersion represents.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#external_key_uri KmsCryptoKeyVersion#external_key_uri}
+  */
+  readonly externalKeyUri?: string;
+}
+
+export function kmsCryptoKeyVersionExternalProtectionLevelOptionsToTerraform(struct?: KmsCryptoKeyVersionExternalProtectionLevelOptionsOutputReference | KmsCryptoKeyVersionExternalProtectionLevelOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ekm_connection_key_path: cdktf.stringToTerraform(struct!.ekmConnectionKeyPath),
+    external_key_uri: cdktf.stringToTerraform(struct!.externalKeyUri),
+  }
+}
+
+
+export function kmsCryptoKeyVersionExternalProtectionLevelOptionsToHclTerraform(struct?: KmsCryptoKeyVersionExternalProtectionLevelOptionsOutputReference | KmsCryptoKeyVersionExternalProtectionLevelOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ekm_connection_key_path: {
+      value: cdktf.stringToHclTerraform(struct!.ekmConnectionKeyPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_key_uri: {
+      value: cdktf.stringToHclTerraform(struct!.externalKeyUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class KmsCryptoKeyVersionExternalProtectionLevelOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KmsCryptoKeyVersionExternalProtectionLevelOptions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ekmConnectionKeyPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ekmConnectionKeyPath = this._ekmConnectionKeyPath;
+    }
+    if (this._externalKeyUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalKeyUri = this._externalKeyUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KmsCryptoKeyVersionExternalProtectionLevelOptions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._ekmConnectionKeyPath = undefined;
+      this._externalKeyUri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._ekmConnectionKeyPath = value.ekmConnectionKeyPath;
+      this._externalKeyUri = value.externalKeyUri;
+    }
+  }
+
+  // ekm_connection_key_path - computed: false, optional: true, required: false
+  private _ekmConnectionKeyPath?: string; 
+  public get ekmConnectionKeyPath() {
+    return this.getStringAttribute('ekm_connection_key_path');
+  }
+  public set ekmConnectionKeyPath(value: string) {
+    this._ekmConnectionKeyPath = value;
+  }
+  public resetEkmConnectionKeyPath() {
+    this._ekmConnectionKeyPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ekmConnectionKeyPathInput() {
+    return this._ekmConnectionKeyPath;
+  }
+
+  // external_key_uri - computed: false, optional: true, required: false
+  private _externalKeyUri?: string; 
+  public get externalKeyUri() {
+    return this.getStringAttribute('external_key_uri');
+  }
+  public set externalKeyUri(value: string) {
+    this._externalKeyUri = value;
+  }
+  public resetExternalKeyUri() {
+    this._externalKeyUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalKeyUriInput() {
+    return this._externalKeyUri;
+  }
+}
 export interface KmsCryptoKeyVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#create KmsCryptoKeyVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#create KmsCryptoKeyVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#delete KmsCryptoKeyVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#delete KmsCryptoKeyVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#update KmsCryptoKeyVersion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#update KmsCryptoKeyVersion#update}
   */
   readonly update?: string;
 }
@@ -458,7 +585,7 @@ export class KmsCryptoKeyVersionTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version}
 */
 export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
 
@@ -474,7 +601,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KmsCryptoKeyVersion resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KmsCryptoKeyVersion to import
-  * @param importFromId The id of the existing KmsCryptoKeyVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KmsCryptoKeyVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KmsCryptoKeyVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -486,7 +613,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/kms_crypto_key_version google_kms_crypto_key_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -497,7 +624,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_kms_crypto_key_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.22.0',
+        providerVersion: '5.23.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -511,6 +638,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
     this._cryptoKey = config.cryptoKey;
     this._id = config.id;
     this._state = config.state;
+    this._externalProtectionLevelOptions.internalValue = config.externalProtectionLevelOptions;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -589,6 +717,22 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
     return this._state;
   }
 
+  // external_protection_level_options - computed: false, optional: true, required: false
+  private _externalProtectionLevelOptions = new KmsCryptoKeyVersionExternalProtectionLevelOptionsOutputReference(this, "external_protection_level_options");
+  public get externalProtectionLevelOptions() {
+    return this._externalProtectionLevelOptions;
+  }
+  public putExternalProtectionLevelOptions(value: KmsCryptoKeyVersionExternalProtectionLevelOptions) {
+    this._externalProtectionLevelOptions.internalValue = value;
+  }
+  public resetExternalProtectionLevelOptions() {
+    this._externalProtectionLevelOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalProtectionLevelOptionsInput() {
+    return this._externalProtectionLevelOptions.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new KmsCryptoKeyVersionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -614,6 +758,7 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
       crypto_key: cdktf.stringToTerraform(this._cryptoKey),
       id: cdktf.stringToTerraform(this._id),
       state: cdktf.stringToTerraform(this._state),
+      external_protection_level_options: kmsCryptoKeyVersionExternalProtectionLevelOptionsToTerraform(this._externalProtectionLevelOptions.internalValue),
       timeouts: kmsCryptoKeyVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -637,6 +782,12 @@ export class KmsCryptoKeyVersion extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      external_protection_level_options: {
+        value: kmsCryptoKeyVersionExternalProtectionLevelOptionsToHclTerraform(this._externalProtectionLevelOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KmsCryptoKeyVersionExternalProtectionLevelOptionsList",
       },
       timeouts: {
         value: kmsCryptoKeyVersionTimeoutsToHclTerraform(this._timeouts.internalValue),

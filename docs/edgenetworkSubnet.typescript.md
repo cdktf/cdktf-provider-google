@@ -4,7 +4,7 @@
 
 ### EdgenetworkSubnet <a name="EdgenetworkSubnet" id="@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet google_edgenetwork_subnet}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet google_edgenetwork_subnet}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnet.Initializer"></a>
 
@@ -536,7 +536,7 @@ The construct id used in the generated config for the EdgenetworkSubnet to impor
 
 The id of the existing EdgenetworkSubnet that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1065,11 +1065,11 @@ const edgenetworkSubnetConfig: edgenetworkSubnet.EdgenetworkSubnetConfig = { ...
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.subnetId">subnetId</a></code> | <code>string</code> | A unique ID that identifies this subnet. |
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.zone">zone</a></code> | <code>string</code> | The name of the target Distributed Cloud Edge zone. |
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.description">description</a></code> | <code>string</code> | A free-text description of the resource. Max length 1024 characters. |
-| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#id EdgenetworkSubnet#id}. |
+| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#id EdgenetworkSubnet#id}. |
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.ipv4Cidr">ipv4Cidr</a></code> | <code>string[]</code> | The ranges of ipv4 addresses that are owned by this subnetwork, in CIDR format. |
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.ipv6Cidr">ipv6Cidr</a></code> | <code>string[]</code> | The ranges of ipv6 addresses that are owned by this subnetwork, in CIDR format. |
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | Labels associated with this resource. |
-| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#project EdgenetworkSubnet#project}. |
+| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#project EdgenetworkSubnet#project}. |
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetTimeouts">EdgenetworkSubnetTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetConfig.property.vlanId">vlanId</a></code> | <code>number</code> | VLAN ID for this subnetwork. If not specified, one is assigned automatically. |
 
@@ -1155,7 +1155,7 @@ public readonly location: string;
 
 The Google Cloud region to which the target Distributed Cloud Edge zone belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#location EdgenetworkSubnet#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#location EdgenetworkSubnet#location}
 
 ---
 
@@ -1169,7 +1169,7 @@ public readonly network: string;
 
 The ID of the network to which this router belongs. Must be of the form: 'projects/{{project}}/locations/{{location}}/zones/{{zone}}/networks/{{network_id}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#network EdgenetworkSubnet#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#network EdgenetworkSubnet#network}
 
 ---
 
@@ -1183,7 +1183,7 @@ public readonly subnetId: string;
 
 A unique ID that identifies this subnet.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#subnet_id EdgenetworkSubnet#subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#subnet_id EdgenetworkSubnet#subnet_id}
 
 ---
 
@@ -1197,7 +1197,7 @@ public readonly zone: string;
 
 The name of the target Distributed Cloud Edge zone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#zone EdgenetworkSubnet#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#zone EdgenetworkSubnet#zone}
 
 ---
 
@@ -1211,7 +1211,7 @@ public readonly description: string;
 
 A free-text description of the resource. Max length 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#description EdgenetworkSubnet#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#description EdgenetworkSubnet#description}
 
 ---
 
@@ -1223,7 +1223,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#id EdgenetworkSubnet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#id EdgenetworkSubnet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1240,7 +1240,7 @@ public readonly ipv4Cidr: string[];
 
 The ranges of ipv4 addresses that are owned by this subnetwork, in CIDR format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#ipv4_cidr EdgenetworkSubnet#ipv4_cidr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#ipv4_cidr EdgenetworkSubnet#ipv4_cidr}
 
 ---
 
@@ -1254,7 +1254,7 @@ public readonly ipv6Cidr: string[];
 
 The ranges of ipv6 addresses that are owned by this subnetwork, in CIDR format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#ipv6_cidr EdgenetworkSubnet#ipv6_cidr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#ipv6_cidr EdgenetworkSubnet#ipv6_cidr}
 
 ---
 
@@ -1268,7 +1268,7 @@ public readonly labels: {[ key: string ]: string};
 
 Labels associated with this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#labels EdgenetworkSubnet#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#labels EdgenetworkSubnet#labels}
 
 ---
 
@@ -1280,7 +1280,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#project EdgenetworkSubnet#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#project EdgenetworkSubnet#project}.
 
 ---
 
@@ -1294,7 +1294,7 @@ public readonly timeouts: EdgenetworkSubnetTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#timeouts EdgenetworkSubnet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#timeouts EdgenetworkSubnet#timeouts}
 
 ---
 
@@ -1308,7 +1308,7 @@ public readonly vlanId: number;
 
 VLAN ID for this subnetwork. If not specified, one is assigned automatically.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#vlan_id EdgenetworkSubnet#vlan_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#vlan_id EdgenetworkSubnet#vlan_id}
 
 ---
 
@@ -1326,8 +1326,8 @@ const edgenetworkSubnetTimeouts: edgenetworkSubnet.EdgenetworkSubnetTimeouts = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#create EdgenetworkSubnet#create}. |
-| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#delete EdgenetworkSubnet#delete}. |
+| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#create EdgenetworkSubnet#create}. |
+| <code><a href="#@cdktf/provider-google.edgenetworkSubnet.EdgenetworkSubnetTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#delete EdgenetworkSubnet#delete}. |
 
 ---
 
@@ -1339,7 +1339,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#create EdgenetworkSubnet#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#create EdgenetworkSubnet#create}.
 
 ---
 
@@ -1351,7 +1351,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/edgenetwork_subnet#delete EdgenetworkSubnet#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/edgenetwork_subnet#delete EdgenetworkSubnet#delete}.
 
 ---
 
