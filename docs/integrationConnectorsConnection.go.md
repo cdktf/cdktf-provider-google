@@ -4,12 +4,12 @@
 
 ### IntegrationConnectorsConnection <a name="IntegrationConnectorsConnection" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection google_integration_connectors_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection google_integration_connectors_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnection(scope Construct, id *string, config IntegrationConnectorsConnectionConfig) IntegrationConnectorsConnection
 ```
@@ -607,7 +607,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.IntegrationConnectorsConnection_IsConstruct(x interface{}) *bool
 ```
@@ -639,7 +639,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.IntegrationConnectorsConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ integrationconnectorsconnection.IntegrationConnectorsConnection_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.IntegrationConnectorsConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -667,7 +667,7 @@ integrationconnectorsconnection.IntegrationConnectorsConnection_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.IntegrationConnectorsConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -696,7 +696,7 @@ The construct id used in the generated config for the IntegrationConnectorsConne
 
 The id of the existing IntegrationConnectorsConnection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1435,17 +1435,17 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfig {
 	AuthType: *string,
 	AdditionalVariable: interface{},
 	AuthKey: *string,
-	Oauth2AuthCodeFlow: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow,
-	Oauth2ClientCredentials: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials,
-	Oauth2JwtBearer: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearer,
-	SshPublicKey: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKey,
-	UserPassword: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPassword,
+	Oauth2AuthCodeFlow: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow,
+	Oauth2ClientCredentials: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials,
+	Oauth2JwtBearer: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearer,
+	SshPublicKey: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKey,
+	UserPassword: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPassword,
 }
 ```
 
@@ -1474,7 +1474,7 @@ AuthType *string
 
 authType of the Connection Possible values: ["USER_PASSWORD", "OAUTH2_JWT_BEARER", "OAUTH2_CLIENT_CREDENTIALS", "SSH_PUBLIC_KEY", "OAUTH2_AUTH_CODE_FLOW"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
 
 ---
 
@@ -1488,7 +1488,7 @@ AdditionalVariable interface{}
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -1502,7 +1502,7 @@ AuthKey *string
 
 The type of authentication configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
 
 ---
 
@@ -1516,7 +1516,7 @@ Oauth2AuthCodeFlow IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow
 
 oauth2_auth_code_flow block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#oauth2_auth_code_flow IntegrationConnectorsConnection#oauth2_auth_code_flow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#oauth2_auth_code_flow IntegrationConnectorsConnection#oauth2_auth_code_flow}
 
 ---
 
@@ -1530,7 +1530,7 @@ Oauth2ClientCredentials IntegrationConnectorsConnectionAuthConfigOauth2ClientCre
 
 oauth2_client_credentials block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#oauth2_client_credentials IntegrationConnectorsConnection#oauth2_client_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#oauth2_client_credentials IntegrationConnectorsConnection#oauth2_client_credentials}
 
 ---
 
@@ -1544,7 +1544,7 @@ Oauth2JwtBearer IntegrationConnectorsConnectionAuthConfigOauth2JwtBearer
 
 oauth2_jwt_bearer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#oauth2_jwt_bearer IntegrationConnectorsConnection#oauth2_jwt_bearer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#oauth2_jwt_bearer IntegrationConnectorsConnection#oauth2_jwt_bearer}
 
 ---
 
@@ -1558,7 +1558,7 @@ SshPublicKey IntegrationConnectorsConnectionAuthConfigSshPublicKey
 
 ssh_public_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#ssh_public_key IntegrationConnectorsConnection#ssh_public_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#ssh_public_key IntegrationConnectorsConnection#ssh_public_key}
 
 ---
 
@@ -1572,7 +1572,7 @@ UserPassword IntegrationConnectorsConnectionAuthConfigUserPassword
 
 user_password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
 
 ---
 
@@ -1581,14 +1581,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariable {
 	Key: *string,
 	BooleanValue: interface{},
-	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue,
+	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue,
 	IntegerValue: *f64,
-	SecretValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue,
+	SecretValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue,
 	StringValue: *string,
 }
 ```
@@ -1616,7 +1616,7 @@ Key *string
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -1630,7 +1630,7 @@ BooleanValue interface{}
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -1644,7 +1644,7 @@ EncryptionKeyValue IntegrationConnectorsConnectionAuthConfigAdditionalVariableEn
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -1658,7 +1658,7 @@ IntegerValue *f64
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -1672,7 +1672,7 @@ SecretValue IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretVal
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -1686,7 +1686,7 @@ StringValue *string
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -1695,7 +1695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValue {
 	Type: *string,
@@ -1722,7 +1722,7 @@ Type *string
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -1740,7 +1740,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -1751,7 +1751,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValue {
 	SecretVersion: *string,
@@ -1776,7 +1776,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -1785,12 +1785,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow {
 	AuthUri: *string,
 	ClientId: *string,
-	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret,
+	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret,
 	EnablePkce: interface{},
 	Scopes: *[]*string,
 }
@@ -1818,7 +1818,7 @@ AuthUri *string
 
 Auth URL for Authorization Code Flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#auth_uri IntegrationConnectorsConnection#auth_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#auth_uri IntegrationConnectorsConnection#auth_uri}
 
 ---
 
@@ -1832,7 +1832,7 @@ ClientId *string
 
 Client ID for user-provided OAuth app.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
 
 ---
 
@@ -1846,7 +1846,7 @@ ClientSecret IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSe
 
 client_secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
 
 ---
 
@@ -1860,7 +1860,7 @@ EnablePkce interface{}
 
 Whether to enable PKCE when the user performs the auth code flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#enable_pkce IntegrationConnectorsConnection#enable_pkce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#enable_pkce IntegrationConnectorsConnection#enable_pkce}
 
 ---
 
@@ -1874,7 +1874,7 @@ Scopes *[]*string
 
 Scopes the connection will request when the user performs the auth code flow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#scopes IntegrationConnectorsConnection#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#scopes IntegrationConnectorsConnection#scopes}
 
 ---
 
@@ -1883,7 +1883,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecret {
 	SecretVersion: *string,
@@ -1908,7 +1908,7 @@ SecretVersion *string
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -1919,11 +1919,11 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentials {
 	ClientId: *string,
-	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsClientSecret,
+	ClientSecret: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsClientSecret,
 }
 ```
 
@@ -1946,7 +1946,7 @@ ClientId *string
 
 Secret version of Password for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_id IntegrationConnectorsConnection#client_id}
 
 ---
 
@@ -1960,7 +1960,7 @@ ClientSecret IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsCli
 
 client_secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_secret IntegrationConnectorsConnection#client_secret}
 
 ---
 
@@ -1969,7 +1969,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsClientSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsClientSecret {
 	SecretVersion: *string,
@@ -1994,7 +1994,7 @@ SecretVersion *string
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2005,11 +2005,11 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearer {
-	ClientKey: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKey,
-	JwtClaims: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaims,
+	ClientKey: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKey,
+	JwtClaims: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaims,
 }
 ```
 
@@ -2032,7 +2032,7 @@ ClientKey IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKey
 
 client_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_key IntegrationConnectorsConnection#client_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_key IntegrationConnectorsConnection#client_key}
 
 ---
 
@@ -2046,7 +2046,7 @@ JwtClaims IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaims
 
 jwt_claims block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#jwt_claims IntegrationConnectorsConnection#jwt_claims}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#jwt_claims IntegrationConnectorsConnection#jwt_claims}
 
 ---
 
@@ -2055,7 +2055,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKey {
 	SecretVersion: *string,
@@ -2080,7 +2080,7 @@ SecretVersion *string
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2091,7 +2091,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaims.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaims {
 	Audience: *string,
@@ -2120,7 +2120,7 @@ Audience *string
 
 Value for the "aud" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#audience IntegrationConnectorsConnection#audience}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#audience IntegrationConnectorsConnection#audience}
 
 ---
 
@@ -2134,7 +2134,7 @@ Issuer *string
 
 Value for the "iss" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#issuer IntegrationConnectorsConnection#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#issuer IntegrationConnectorsConnection#issuer}
 
 ---
 
@@ -2148,7 +2148,7 @@ Subject *string
 
 Value for the "sub" claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#subject IntegrationConnectorsConnection#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#subject IntegrationConnectorsConnection#subject}
 
 ---
 
@@ -2157,13 +2157,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigSshPublicKey {
 	Username: *string,
 	CertType: *string,
-	SshClientCert: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCert,
-	SshClientCertPass: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertPass,
+	SshClientCert: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCert,
+	SshClientCertPass: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertPass,
 }
 ```
 
@@ -2188,7 +2188,7 @@ Username *string
 
 The user account used to authenticate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -2202,7 +2202,7 @@ CertType *string
 
 Format of SSH Client cert.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#cert_type IntegrationConnectorsConnection#cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#cert_type IntegrationConnectorsConnection#cert_type}
 
 ---
 
@@ -2216,7 +2216,7 @@ SshClientCert IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCert
 
 ssh_client_cert block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#ssh_client_cert IntegrationConnectorsConnection#ssh_client_cert}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#ssh_client_cert IntegrationConnectorsConnection#ssh_client_cert}
 
 ---
 
@@ -2230,7 +2230,7 @@ SshClientCertPass IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClient
 
 ssh_client_cert_pass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#ssh_client_cert_pass IntegrationConnectorsConnection#ssh_client_cert_pass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#ssh_client_cert_pass IntegrationConnectorsConnection#ssh_client_cert_pass}
 
 ---
 
@@ -2239,7 +2239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCert.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCert {
 	SecretVersion: *string,
@@ -2264,7 +2264,7 @@ SecretVersion *string
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2275,7 +2275,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertPass.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertPass {
 	SecretVersion: *string,
@@ -2300,7 +2300,7 @@ SecretVersion *string
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2311,11 +2311,11 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigUserPassword {
 	Username: *string,
-	Password: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPasswordPassword,
+	Password: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPasswordPassword,
 }
 ```
 
@@ -2338,7 +2338,7 @@ Username *string
 
 Username for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -2352,7 +2352,7 @@ Password IntegrationConnectorsConnectionAuthConfigUserPasswordPassword
 
 password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
 
 ---
 
@@ -2361,7 +2361,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPasswordPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionAuthConfigUserPasswordPassword {
 	SecretVersion: *string,
@@ -2386,7 +2386,7 @@ SecretVersion *string
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2397,7 +2397,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionConfig {
 	Connection: interface{},
@@ -2410,22 +2410,22 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnecto
 	ConnectorVersion: *string,
 	Location: *string,
 	Name: *string,
-	AuthConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig,
+	AuthConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfig,
 	ConfigVariable: interface{},
 	Description: *string,
 	DestinationConfig: interface{},
-	EventingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig,
+	EventingConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig,
 	EventingEnablementType: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	LockConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig,
-	LogConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig,
-	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionNodeConfig,
+	LockConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig,
+	LogConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig,
+	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionNodeConfig,
 	Project: *string,
 	ServiceAccount: *string,
-	SslConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig,
+	SslConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig,
 	Suspended: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts,
 }
 ```
 
@@ -2449,12 +2449,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnecto
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.destinationConfig">DestinationConfig</a></code> | <code>interface{}</code> | destination_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingConfig">EventingConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig">IntegrationConnectorsConnectionEventingConfig</a></code> | eventing_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.eventingEnablementType">EventingEnablementType</a></code> | <code>*string</code> | Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"]. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Resource labels to represent user provided metadata. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.lockConfig">LockConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig">IntegrationConnectorsConnectionLockConfig</a></code> | lock_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.logConfig">LogConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig">IntegrationConnectorsConnectionLogConfig</a></code> | log_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.nodeConfig">NodeConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionNodeConfig">IntegrationConnectorsConnectionNodeConfig</a></code> | node_config block. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.serviceAccount">ServiceAccount</a></code> | <code>*string</code> | Service account needed for runtime plane to access Google Cloud resources. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.sslConfig">SslConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig">IntegrationConnectorsConnectionSslConfig</a></code> | ssl_config block. |
 | <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfig.property.suspended">Suspended</a></code> | <code>interface{}</code> | Suspended indicates if a user has suspended a connection or not. |
@@ -2542,7 +2542,7 @@ ConnectorVersion *string
 
 connectorVersion of the Connector.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#connector_version IntegrationConnectorsConnection#connector_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#connector_version IntegrationConnectorsConnection#connector_version}
 
 ---
 
@@ -2556,7 +2556,7 @@ Location *string
 
 Location in which Connection needs to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#location IntegrationConnectorsConnection#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#location IntegrationConnectorsConnection#location}
 
 ---
 
@@ -2570,7 +2570,7 @@ Name *string
 
 Name of Connection needs to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#name IntegrationConnectorsConnection#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#name IntegrationConnectorsConnection#name}
 
 ---
 
@@ -2584,7 +2584,7 @@ AuthConfig IntegrationConnectorsConnectionAuthConfig
 
 auth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
 
 ---
 
@@ -2598,7 +2598,7 @@ ConfigVariable interface{}
 
 config_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#config_variable IntegrationConnectorsConnection#config_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#config_variable IntegrationConnectorsConnection#config_variable}
 
 ---
 
@@ -2612,7 +2612,7 @@ Description *string
 
 An arbitrary description for the Conection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#description IntegrationConnectorsConnection#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#description IntegrationConnectorsConnection#description}
 
 ---
 
@@ -2626,7 +2626,7 @@ DestinationConfig interface{}
 
 destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#destination_config IntegrationConnectorsConnection#destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#destination_config IntegrationConnectorsConnection#destination_config}
 
 ---
 
@@ -2640,7 +2640,7 @@ EventingConfig IntegrationConnectorsConnectionEventingConfig
 
 eventing_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#eventing_config IntegrationConnectorsConnection#eventing_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#eventing_config IntegrationConnectorsConnection#eventing_config}
 
 ---
 
@@ -2654,7 +2654,7 @@ EventingEnablementType *string
 
 Eventing enablement type. Will be nil if eventing is not enabled. Possible values: ["EVENTING_AND_CONNECTION", "ONLY_EVENTING"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#eventing_enablement_type IntegrationConnectorsConnection#eventing_enablement_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#eventing_enablement_type IntegrationConnectorsConnection#eventing_enablement_type}
 
 ---
 
@@ -2666,7 +2666,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#id IntegrationConnectorsConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2686,7 +2686,7 @@ Resource labels to represent user provided metadata.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#labels IntegrationConnectorsConnection#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#labels IntegrationConnectorsConnection#labels}
 
 ---
 
@@ -2700,7 +2700,7 @@ LockConfig IntegrationConnectorsConnectionLockConfig
 
 lock_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#lock_config IntegrationConnectorsConnection#lock_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#lock_config IntegrationConnectorsConnection#lock_config}
 
 ---
 
@@ -2714,7 +2714,7 @@ LogConfig IntegrationConnectorsConnectionLogConfig
 
 log_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#log_config IntegrationConnectorsConnection#log_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#log_config IntegrationConnectorsConnection#log_config}
 
 ---
 
@@ -2728,7 +2728,7 @@ NodeConfig IntegrationConnectorsConnectionNodeConfig
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#node_config IntegrationConnectorsConnection#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#node_config IntegrationConnectorsConnection#node_config}
 
 ---
 
@@ -2740,7 +2740,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#project IntegrationConnectorsConnection#project}.
 
 ---
 
@@ -2754,7 +2754,7 @@ ServiceAccount *string
 
 Service account needed for runtime plane to access Google Cloud resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#service_account IntegrationConnectorsConnection#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#service_account IntegrationConnectorsConnection#service_account}
 
 ---
 
@@ -2768,7 +2768,7 @@ SslConfig IntegrationConnectorsConnectionSslConfig
 
 ssl_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#ssl_config IntegrationConnectorsConnection#ssl_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#ssl_config IntegrationConnectorsConnection#ssl_config}
 
 ---
 
@@ -2782,7 +2782,7 @@ Suspended interface{}
 
 Suspended indicates if a user has suspended a connection or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#suspended IntegrationConnectorsConnection#suspended}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#suspended IntegrationConnectorsConnection#suspended}
 
 ---
 
@@ -2796,7 +2796,7 @@ Timeouts IntegrationConnectorsConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#timeouts IntegrationConnectorsConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#timeouts IntegrationConnectorsConnection#timeouts}
 
 ---
 
@@ -2805,14 +2805,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionConfigVariable {
 	Key: *string,
 	BooleanValue: interface{},
-	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue,
+	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue,
 	IntegerValue: *f64,
-	SecretValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValue,
+	SecretValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValue,
 	StringValue: *string,
 }
 ```
@@ -2840,7 +2840,7 @@ Key *string
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -2854,7 +2854,7 @@ BooleanValue interface{}
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -2868,7 +2868,7 @@ EncryptionKeyValue IntegrationConnectorsConnectionConfigVariableEncryptionKeyVal
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -2882,7 +2882,7 @@ IntegerValue *f64
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -2896,7 +2896,7 @@ SecretValue IntegrationConnectorsConnectionConfigVariableSecretValue
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -2910,7 +2910,7 @@ StringValue *string
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -2919,7 +2919,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValue {
 	Type: *string,
@@ -2946,7 +2946,7 @@ Type *string
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -2964,7 +2964,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -2975,7 +2975,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionConfigVariableSecretValue {
 	SecretVersion: *string,
@@ -3000,7 +3000,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -3009,7 +3009,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConnectorVersionInfraConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionConnectorVersionInfraConfig {
 
@@ -3022,7 +3022,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnecto
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionDestinationConfig {
 	Key: *string,
@@ -3049,7 +3049,7 @@ Key *string
 
 The key is the destination identifier that is supported by the Connector.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -3063,7 +3063,7 @@ Destination interface{}
 
 destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
 
 ---
 
@@ -3072,7 +3072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionDestinationConfigDestination {
 	Host: *string,
@@ -3101,7 +3101,7 @@ Host *string
 
 For publicly routable host.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
 
 ---
 
@@ -3115,7 +3115,7 @@ Port *f64
 
 The port is the target port number that is accepted by the destination.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
 
 ---
 
@@ -3129,7 +3129,7 @@ ServiceAttachment *string
 
 PSC service attachments. Format: projects/* /regions/* /serviceAttachments/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3140,12 +3140,12 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfig {
-	RegistrationDestinationConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig,
+	RegistrationDestinationConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig,
 	AdditionalVariable: interface{},
-	AuthConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig,
+	AuthConfig: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig,
 	EnrichmentEnabled: interface{},
 }
 ```
@@ -3171,7 +3171,7 @@ RegistrationDestinationConfig IntegrationConnectorsConnectionEventingConfigRegis
 
 registration_destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#registration_destination_config IntegrationConnectorsConnection#registration_destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#registration_destination_config IntegrationConnectorsConnection#registration_destination_config}
 
 ---
 
@@ -3185,7 +3185,7 @@ AdditionalVariable interface{}
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -3199,7 +3199,7 @@ AuthConfig IntegrationConnectorsConnectionEventingConfigAuthConfig
 
 auth_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#auth_config IntegrationConnectorsConnection#auth_config}
 
 ---
 
@@ -3213,7 +3213,7 @@ EnrichmentEnabled interface{}
 
 Enrichment Enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#enrichment_enabled IntegrationConnectorsConnection#enrichment_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#enrichment_enabled IntegrationConnectorsConnection#enrichment_enabled}
 
 ---
 
@@ -3222,14 +3222,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariable {
 	Key: *string,
 	BooleanValue: interface{},
-	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue,
+	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue,
 	IntegerValue: *f64,
-	SecretValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue,
+	SecretValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue,
 	StringValue: *string,
 }
 ```
@@ -3257,7 +3257,7 @@ Key *string
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -3271,7 +3271,7 @@ BooleanValue interface{}
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -3285,7 +3285,7 @@ EncryptionKeyValue IntegrationConnectorsConnectionEventingConfigAdditionalVariab
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -3299,7 +3299,7 @@ IntegerValue *f64
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -3313,7 +3313,7 @@ SecretValue IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecre
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -3327,7 +3327,7 @@ StringValue *string
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -3336,7 +3336,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValue {
 	KmsKeyName: *string,
@@ -3367,7 +3367,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3383,7 +3383,7 @@ Type *string
 
 Type of Encryption Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -3392,7 +3392,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValue {
 	SecretVersion: *string,
@@ -3417,7 +3417,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -3426,11 +3426,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAuthConfig {
 	AuthType: *string,
-	UserPassword: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword,
+	UserPassword: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword,
 	AdditionalVariable: interface{},
 	AuthKey: *string,
 }
@@ -3457,7 +3457,7 @@ AuthType *string
 
 authType of the Connection Possible values: ["USER_PASSWORD"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#auth_type IntegrationConnectorsConnection#auth_type}
 
 ---
 
@@ -3471,7 +3471,7 @@ UserPassword IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword
 
 user_password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#user_password IntegrationConnectorsConnection#user_password}
 
 ---
 
@@ -3485,7 +3485,7 @@ AdditionalVariable interface{}
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -3499,7 +3499,7 @@ AuthKey *string
 
 The type of authentication configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#auth_key IntegrationConnectorsConnection#auth_key}
 
 ---
 
@@ -3508,14 +3508,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariable {
 	Key: *string,
 	BooleanValue: interface{},
-	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue,
+	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue,
 	IntegerValue: *f64,
-	SecretValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue,
+	SecretValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue,
 	StringValue: *string,
 }
 ```
@@ -3543,7 +3543,7 @@ Key *string
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -3557,7 +3557,7 @@ BooleanValue interface{}
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -3571,7 +3571,7 @@ EncryptionKeyValue IntegrationConnectorsConnectionEventingConfigAuthConfigAdditi
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -3585,7 +3585,7 @@ IntegerValue *f64
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -3599,7 +3599,7 @@ SecretValue IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVar
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -3613,7 +3613,7 @@ StringValue *string
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -3622,7 +3622,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue {
 	KmsKeyName: *string,
@@ -3653,7 +3653,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3669,7 +3669,7 @@ Type *string
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -3678,7 +3678,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValue {
 	SecretVersion: *string,
@@ -3703,7 +3703,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -3712,10 +3712,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPassword {
-	Password: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPassword,
+	Password: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPassword,
 	Username: *string,
 }
 ```
@@ -3739,7 +3739,7 @@ Password IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPass
 
 password block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#password IntegrationConnectorsConnection#password}
 
 ---
 
@@ -3753,7 +3753,7 @@ Username *string
 
 Username for Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#username IntegrationConnectorsConnection#username}
 
 ---
 
@@ -3762,7 +3762,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPassword {
 	SecretVersion: *string,
@@ -3787,7 +3787,7 @@ SecretVersion *string
 
 The resource name of the secret version in the format, format as: projects/* /secrets/* /versions/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -3798,7 +3798,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfig {
 	Destination: interface{},
@@ -3825,7 +3825,7 @@ Destination interface{}
 
 destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#destination IntegrationConnectorsConnection#destination}
 
 ---
 
@@ -3839,7 +3839,7 @@ Key *string
 
 Key for the connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -3848,7 +3848,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestination {
 	Host: *string,
@@ -3877,7 +3877,7 @@ Host *string
 
 Host.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#host IntegrationConnectorsConnection#host}
 
 ---
 
@@ -3891,7 +3891,7 @@ Port *f64
 
 port number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#port IntegrationConnectorsConnection#port}
 
 ---
 
@@ -3905,7 +3905,7 @@ ServiceAttachment *string
 
 Service Attachment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#service_attachment IntegrationConnectorsConnection#service_attachment}
 
 ---
 
@@ -3914,7 +3914,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingRuntimeData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingRuntimeData {
 
@@ -3927,7 +3927,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnecto
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingRuntimeDataStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionEventingRuntimeDataStatus {
 
@@ -3940,7 +3940,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnecto
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionLockConfig {
 	Locked: interface{},
@@ -3967,7 +3967,7 @@ Locked interface{}
 
 Indicates whether or not the connection is locked.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#locked IntegrationConnectorsConnection#locked}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#locked IntegrationConnectorsConnection#locked}
 
 ---
 
@@ -3981,7 +3981,7 @@ Reason *string
 
 Describes why a connection is locked.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#reason IntegrationConnectorsConnection#reason}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#reason IntegrationConnectorsConnection#reason}
 
 ---
 
@@ -3990,7 +3990,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionLogConfig {
 	Enabled: interface{},
@@ -4015,7 +4015,7 @@ Enabled interface{}
 
 Enabled represents whether logging is enabled or not for a connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#enabled IntegrationConnectorsConnection#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#enabled IntegrationConnectorsConnection#enabled}
 
 ---
 
@@ -4024,7 +4024,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionNodeConfig {
 	MaxNodeCount: *f64,
@@ -4051,7 +4051,7 @@ MaxNodeCount *f64
 
 Minimum number of nodes in the runtime nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#max_node_count IntegrationConnectorsConnection#max_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#max_node_count IntegrationConnectorsConnection#max_node_count}
 
 ---
 
@@ -4065,7 +4065,7 @@ MinNodeCount *f64
 
 Minimum number of nodes in the runtime nodes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#min_node_count IntegrationConnectorsConnection#min_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#min_node_count IntegrationConnectorsConnection#min_node_count}
 
 ---
 
@@ -4074,16 +4074,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfig {
 	Type: *string,
 	AdditionalVariable: interface{},
-	ClientCertificate: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificate,
+	ClientCertificate: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificate,
 	ClientCertType: *string,
-	ClientPrivateKey: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey,
-	ClientPrivateKeyPass: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyPass,
-	PrivateServerCertificate: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificate,
+	ClientPrivateKey: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey,
+	ClientPrivateKeyPass: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyPass,
+	PrivateServerCertificate: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificate,
 	ServerCertType: *string,
 	TrustModel: *string,
 	UseSsl: interface{},
@@ -4117,7 +4117,7 @@ Type *string
 
 Enum for controlling the SSL Type (TLS/MTLS) Possible values: ["TLS", "MTLS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -4131,7 +4131,7 @@ AdditionalVariable interface{}
 
 additional_variable block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#additional_variable IntegrationConnectorsConnection#additional_variable}
 
 ---
 
@@ -4145,7 +4145,7 @@ ClientCertificate IntegrationConnectorsConnectionSslConfigClientCertificate
 
 client_certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_certificate IntegrationConnectorsConnection#client_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_certificate IntegrationConnectorsConnection#client_certificate}
 
 ---
 
@@ -4159,7 +4159,7 @@ ClientCertType *string
 
 Type of Client Cert (PEM/JKS/.. etc.) Possible values: ["PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_cert_type IntegrationConnectorsConnection#client_cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_cert_type IntegrationConnectorsConnection#client_cert_type}
 
 ---
 
@@ -4173,7 +4173,7 @@ ClientPrivateKey IntegrationConnectorsConnectionSslConfigClientPrivateKey
 
 client_private_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_private_key IntegrationConnectorsConnection#client_private_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_private_key IntegrationConnectorsConnection#client_private_key}
 
 ---
 
@@ -4187,7 +4187,7 @@ ClientPrivateKeyPass IntegrationConnectorsConnectionSslConfigClientPrivateKeyPas
 
 client_private_key_pass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#client_private_key_pass IntegrationConnectorsConnection#client_private_key_pass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#client_private_key_pass IntegrationConnectorsConnection#client_private_key_pass}
 
 ---
 
@@ -4201,7 +4201,7 @@ PrivateServerCertificate IntegrationConnectorsConnectionSslConfigPrivateServerCe
 
 private_server_certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#private_server_certificate IntegrationConnectorsConnection#private_server_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#private_server_certificate IntegrationConnectorsConnection#private_server_certificate}
 
 ---
 
@@ -4215,7 +4215,7 @@ ServerCertType *string
 
 Type of Server Cert (PEM/JKS/.. etc.) Possible values: ["PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#server_cert_type IntegrationConnectorsConnection#server_cert_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#server_cert_type IntegrationConnectorsConnection#server_cert_type}
 
 ---
 
@@ -4229,7 +4229,7 @@ TrustModel *string
 
 Enum for Trust Model Possible values: ["PUBLIC", "PRIVATE", "INSECURE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#trust_model IntegrationConnectorsConnection#trust_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#trust_model IntegrationConnectorsConnection#trust_model}
 
 ---
 
@@ -4243,7 +4243,7 @@ UseSsl interface{}
 
 Bool for enabling SSL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#use_ssl IntegrationConnectorsConnection#use_ssl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#use_ssl IntegrationConnectorsConnection#use_ssl}
 
 ---
 
@@ -4252,14 +4252,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfigAdditionalVariable {
 	Key: *string,
 	BooleanValue: interface{},
-	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue,
+	EncryptionKeyValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue,
 	IntegerValue: *f64,
-	SecretValue: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue,
+	SecretValue: github.com/cdktf/cdktf-provider-google-go/google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue,
 	StringValue: *string,
 }
 ```
@@ -4287,7 +4287,7 @@ Key *string
 
 Key for the configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#key IntegrationConnectorsConnection#key}
 
 ---
 
@@ -4301,7 +4301,7 @@ BooleanValue interface{}
 
 Boolean Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#boolean_value IntegrationConnectorsConnection#boolean_value}
 
 ---
 
@@ -4315,7 +4315,7 @@ EncryptionKeyValue IntegrationConnectorsConnectionSslConfigAdditionalVariableEnc
 
 encryption_key_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#encryption_key_value IntegrationConnectorsConnection#encryption_key_value}
 
 ---
 
@@ -4329,7 +4329,7 @@ IntegerValue *f64
 
 Integer Value of configVariable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#integer_value IntegrationConnectorsConnection#integer_value}
 
 ---
 
@@ -4343,7 +4343,7 @@ SecretValue IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValu
 
 secret_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_value IntegrationConnectorsConnection#secret_value}
 
 ---
 
@@ -4357,7 +4357,7 @@ StringValue *string
 
 String Value of configVariabley.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#string_value IntegrationConnectorsConnection#string_value}
 
 ---
 
@@ -4366,7 +4366,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValue {
 	KmsKeyName: *string,
@@ -4397,7 +4397,7 @@ The expected
 format: projects/* /locations/* /keyRings/* /cryptoKeys/*.
 Will be empty string if google managed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#kms_key_name IntegrationConnectorsConnection#kms_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -4413,7 +4413,7 @@ Type *string
 
 Type of Encription Key Possible values: ["GOOGLE_MANAGED", "CUSTOMER_MANAGED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#type IntegrationConnectorsConnection#type}
 
 ---
 
@@ -4422,7 +4422,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValue {
 	SecretVersion: *string,
@@ -4447,7 +4447,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -4456,7 +4456,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfigClientCertificate {
 	SecretVersion: *string,
@@ -4481,7 +4481,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -4490,7 +4490,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfigClientPrivateKey {
 	SecretVersion: *string,
@@ -4515,7 +4515,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -4524,7 +4524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyPass.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyPass {
 	SecretVersion: *string,
@@ -4549,7 +4549,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -4558,7 +4558,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificate {
 	SecretVersion: *string,
@@ -4583,7 +4583,7 @@ SecretVersion *string
 
 Secret version of Secret Value for Config variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#secret_version IntegrationConnectorsConnection#secret_version}
 
 ---
 
@@ -4592,7 +4592,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionStatus {
 
@@ -4605,7 +4605,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnecto
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 &integrationconnectorsconnection.IntegrationConnectorsConnectionTimeouts {
 	Create: *string,
@@ -4618,9 +4618,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnecto
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}. |
-| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}. |
+| <code><a href="#@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}. |
 
 ---
 
@@ -4632,7 +4632,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#create IntegrationConnectorsConnection#create}.
 
 ---
 
@@ -4644,7 +4644,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#delete IntegrationConnectorsConnection#delete}.
 
 ---
 
@@ -4656,7 +4656,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.22.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/integration_connectors_connection#update IntegrationConnectorsConnection#update}.
 
 ---
 
@@ -4667,7 +4667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigAdditionalVariableEncryptionKeyValueOutputReference
 ```
@@ -4967,7 +4967,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigAdditionalVariable
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigAdditionalVariableList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionAuthConfigAdditionalVariableList
 ```
@@ -5127,7 +5127,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionAuthConfigAdditionalVariableOutputReference
 ```
@@ -5587,7 +5587,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigAdditionalVariableSecretValueOutputReference
 ```
@@ -5858,7 +5858,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigAdditionalVariable
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowClientSecretOutputReference
 ```
@@ -6129,7 +6129,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlowOutputReference
 ```
@@ -6536,7 +6536,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigOauth2AuthCodeFlow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsClientSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsClientSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsClientSecretOutputReference
 ```
@@ -6807,7 +6807,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigOauth2ClientCreden
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOauth2ClientCredentialsOutputReference
 ```
@@ -7120,7 +7120,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigOauth2ClientCreden
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerClientKeyOutputReference
 ```
@@ -7391,7 +7391,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerCli
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaimsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaimsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwtClaimsOutputReference
 ```
@@ -7727,7 +7727,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerJwt
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOauth2JwtBearerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOauth2JwtBearerOutputReference
 ```
@@ -8060,7 +8060,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigOauth2JwtBearer
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigOutputReference
 ```
@@ -8612,7 +8612,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigSshPublicKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigSshPublicKeyOutputReference
 ```
@@ -8996,7 +8996,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigSshPublicKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertOutputReference
 ```
@@ -9267,7 +9267,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigSshPublicKeySshCli
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertPassOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertPassOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigSshPublicKeySshClientCertPassOutputReference
 ```
@@ -9538,7 +9538,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigSshPublicKeySshCli
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigUserPasswordOutputReference
 ```
@@ -9851,7 +9851,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigUserPassword
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionAuthConfigUserPasswordPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionAuthConfigUserPasswordPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionAuthConfigUserPasswordPasswordOutputReference
 ```
@@ -10122,7 +10122,7 @@ func InternalValue() IntegrationConnectorsConnectionAuthConfigUserPasswordPasswo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableEncryptionKeyValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionConfigVariableEncryptionKeyValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionConfigVariableEncryptionKeyValueOutputReference
 ```
@@ -10422,7 +10422,7 @@ func InternalValue() IntegrationConnectorsConnectionConfigVariableEncryptionKeyV
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionConfigVariableList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionConfigVariableList
 ```
@@ -10582,7 +10582,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionConfigVariableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionConfigVariableOutputReference
 ```
@@ -11042,7 +11042,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConfigVariableSecretValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionConfigVariableSecretValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionConfigVariableSecretValueOutputReference
 ```
@@ -11313,7 +11313,7 @@ func InternalValue() IntegrationConnectorsConnectionConfigVariableSecretValue
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConnectorVersionInfraConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionConnectorVersionInfraConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionConnectorVersionInfraConfigList
 ```
@@ -11462,7 +11462,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionConnectorVersionInfraConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionConnectorVersionInfraConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionConnectorVersionInfraConfigOutputReference
 ```
@@ -11740,7 +11740,7 @@ func InternalValue() IntegrationConnectorsConnectionConnectorVersionInfraConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionDestinationConfigDestinationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionDestinationConfigDestinationList
 ```
@@ -11900,7 +11900,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionDestinationConfigDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionDestinationConfigDestinationOutputReference
 ```
@@ -12254,7 +12254,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionDestinationConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionDestinationConfigList
 ```
@@ -12414,7 +12414,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionDestinationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionDestinationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionDestinationConfigOutputReference
 ```
@@ -12745,7 +12745,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigAdditionalVariableEncryptionKeyValueOutputReference
 ```
@@ -13052,7 +13052,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigAdditionalVari
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAdditionalVariableList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionEventingConfigAdditionalVariableList
 ```
@@ -13212,7 +13212,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionEventingConfigAdditionalVariableOutputReference
 ```
@@ -13672,7 +13672,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigAdditionalVariableSecretValueOutputReference
 ```
@@ -13943,7 +13943,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigAdditionalVari
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableEncryptionKeyValueOutputReference
 ```
@@ -14250,7 +14250,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigAuthConfigAddi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableList
 ```
@@ -14410,7 +14410,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableOutputReference
 ```
@@ -14870,7 +14870,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigAuthConfigAdditionalVariableSecretValueOutputReference
 ```
@@ -15141,7 +15141,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigAuthConfigAddi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigAuthConfigOutputReference
 ```
@@ -15518,7 +15518,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigAuthConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordOutputReference
 ```
@@ -15838,7 +15838,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigAuthConfigUser
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigAuthConfigUserPasswordPasswordOutputReference
 ```
@@ -16109,7 +16109,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigAuthConfigUser
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigOutputReference
 ```
@@ -16506,7 +16506,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationList
 ```
@@ -16666,7 +16666,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigDestinationOutputReference
 ```
@@ -17020,7 +17020,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionEventingConfigRegistrationDestinationConfigOutputReference
 ```
@@ -17340,7 +17340,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingConfigRegistrationDe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingRuntimeDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingRuntimeDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionEventingRuntimeDataList
 ```
@@ -17489,7 +17489,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingRuntimeDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingRuntimeDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionEventingRuntimeDataOutputReference
 ```
@@ -17778,7 +17778,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingRuntimeData
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingRuntimeDataStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingRuntimeDataStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionEventingRuntimeDataStatusList
 ```
@@ -17927,7 +17927,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionEventingRuntimeDataStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionEventingRuntimeDataStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionEventingRuntimeDataStatusOutputReference
 ```
@@ -18216,7 +18216,7 @@ func InternalValue() IntegrationConnectorsConnectionEventingRuntimeDataStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLockConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionLockConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionLockConfigOutputReference
 ```
@@ -18516,7 +18516,7 @@ func InternalValue() IntegrationConnectorsConnectionLockConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionLogConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionLogConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionLogConfigOutputReference
 ```
@@ -18787,7 +18787,7 @@ func InternalValue() IntegrationConnectorsConnectionLogConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionNodeConfigOutputReference
 ```
@@ -19094,7 +19094,7 @@ func InternalValue() IntegrationConnectorsConnectionNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionSslConfigAdditionalVariableEncryptionKeyValueOutputReference
 ```
@@ -19401,7 +19401,7 @@ func InternalValue() IntegrationConnectorsConnectionSslConfigAdditionalVariableE
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigAdditionalVariableList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionSslConfigAdditionalVariableList
 ```
@@ -19561,7 +19561,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionSslConfigAdditionalVariableOutputReference
 ```
@@ -20021,7 +20021,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionSslConfigAdditionalVariableSecretValueOutputReference
 ```
@@ -20292,7 +20292,7 @@ func InternalValue() IntegrationConnectorsConnectionSslConfigAdditionalVariableS
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigClientCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionSslConfigClientCertificateOutputReference
 ```
@@ -20563,7 +20563,7 @@ func InternalValue() IntegrationConnectorsConnectionSslConfigClientCertificate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigClientPrivateKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionSslConfigClientPrivateKeyOutputReference
 ```
@@ -20834,7 +20834,7 @@ func InternalValue() IntegrationConnectorsConnectionSslConfigClientPrivateKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigClientPrivateKeyPassOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigClientPrivateKeyPassOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionSslConfigClientPrivateKeyPassOutputReference
 ```
@@ -21105,7 +21105,7 @@ func InternalValue() IntegrationConnectorsConnectionSslConfigClientPrivateKeyPas
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionSslConfigOutputReference
 ```
@@ -21702,7 +21702,7 @@ func InternalValue() IntegrationConnectorsConnectionSslConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionSslConfigPrivateServerCertificateOutputReference
 ```
@@ -21973,7 +21973,7 @@ func InternalValue() IntegrationConnectorsConnectionSslConfigPrivateServerCertif
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IntegrationConnectorsConnectionStatusList
 ```
@@ -22122,7 +22122,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IntegrationConnectorsConnectionStatusOutputReference
 ```
@@ -22422,7 +22422,7 @@ func InternalValue() IntegrationConnectorsConnectionStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationConnectorsConnection.IntegrationConnectorsConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationconnectorsconnection"
+import "github.com/cdktf/cdktf-provider-google-go/google/integrationconnectorsconnection"
 
 integrationconnectorsconnection.NewIntegrationConnectorsConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationConnectorsConnectionTimeoutsOutputReference
 ```
