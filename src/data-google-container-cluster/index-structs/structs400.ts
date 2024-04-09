@@ -390,6 +390,12 @@ export class DataGoogleContainerClusterNodePoolAutoConfigOutputReference extends
   public get networkTags() {
     return this._networkTags;
   }
+
+  // resource_manager_tags - computed: true, optional: false, required: false
+  private _resourceManagerTags = new cdktf.StringMap(this, "resource_manager_tags");
+  public get resourceManagerTags() {
+    return this._resourceManagerTags;
+  }
 }
 
 export class DataGoogleContainerClusterNodePoolAutoConfigList extends cdktf.ComplexList {
