@@ -1,3 +1,3 @@
 # `google_firebaserules_release`
 
-Refer to the Terraform Registry for docs: [`google_firebaserules_release`](https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/firebaserules_release).
+Refer to the Terraform Registry for docs: [`google_firebaserules_release`](https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/firebaserules_release).

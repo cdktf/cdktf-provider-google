@@ -1,3 +1,3 @@
 # `google_iap_tunnel_iam_member`
 
-Refer to the Terraform Registry for docs: [`google_iap_tunnel_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_member).
+Refer to the Terraform Registry for docs: [`google_iap_tunnel_iam_member`](https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_member).

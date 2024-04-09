@@ -4,12 +4,12 @@
 
 ### IapTunnelIamPolicy <a name="IapTunnelIamPolicy" id="@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy google_iap_tunnel_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy google_iap_tunnel_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iaptunneliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliampolicy"
 
 iaptunneliampolicy.NewIapTunnelIamPolicy(scope Construct, id *string, config IapTunnelIamPolicyConfig) IapTunnelIamPolicy
 ```
@@ -392,7 +392,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iaptunneliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliampolicy"
 
 iaptunneliampolicy.IapTunnelIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -424,7 +424,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iaptunneliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliampolicy"
 
 iaptunneliampolicy.IapTunnelIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -438,7 +438,7 @@ iaptunneliampolicy.IapTunnelIamPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iaptunneliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliampolicy"
 
 iaptunneliampolicy.IapTunnelIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -452,7 +452,7 @@ iaptunneliampolicy.IapTunnelIamPolicy_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iaptunneliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliampolicy"
 
 iaptunneliampolicy.IapTunnelIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -481,7 +481,7 @@ The construct id used in the generated config for the IapTunnelIamPolicy to impo
 
 The id of the existing IapTunnelIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -758,7 +758,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/iaptunneliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliampolicy"
 
 &iaptunneliampolicy.IapTunnelIamPolicyConfig {
 	Connection: interface{},
@@ -785,9 +785,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/iaptunneliampolicy"
 | <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy#policy_data IapTunnelIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy#id IapTunnelIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy#project IapTunnelIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy#policy_data IapTunnelIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy#id IapTunnelIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamPolicy.IapTunnelIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy#project IapTunnelIamPolicy#project}. |
 
 ---
 
@@ -869,7 +869,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy#policy_data IapTunnelIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy#policy_data IapTunnelIamPolicy#policy_data}.
 
 ---
 
@@ -881,7 +881,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy#id IapTunnelIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy#id IapTunnelIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -896,7 +896,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.23.0/docs/resources/iap_tunnel_iam_policy#project IapTunnelIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_iam_policy#project IapTunnelIamPolicy#project}.
 
 ---
 
