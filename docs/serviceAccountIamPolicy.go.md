@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccountIamPolicy.ServiceAccountIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiampolicy"
 
 serviceaccountiampolicy.NewServiceAccountIamPolicy(scope Construct, id *string, config ServiceAccountIamPolicyConfig) ServiceAccountIamPolicy
 ```
@@ -385,7 +385,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.serviceAccountIamPolicy.ServiceAccountIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiampolicy"
 
 serviceaccountiampolicy.ServiceAccountIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -417,7 +417,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.serviceAccountIamPolicy.ServiceAccountIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiampolicy"
 
 serviceaccountiampolicy.ServiceAccountIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ serviceaccountiampolicy.ServiceAccountIamPolicy_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.serviceAccountIamPolicy.ServiceAccountIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiampolicy"
 
 serviceaccountiampolicy.ServiceAccountIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ serviceaccountiampolicy.ServiceAccountIamPolicy_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.serviceAccountIamPolicy.ServiceAccountIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiampolicy"
 
 serviceaccountiampolicy.ServiceAccountIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -751,7 +751,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.serviceAccountIamPolicy.ServiceAccountIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccountiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiampolicy"
 
 &serviceaccountiampolicy.ServiceAccountIamPolicyConfig {
 	Connection: interface{},
