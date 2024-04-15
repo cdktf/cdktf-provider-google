@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/vertex_ai_deployment_resource_pool
 // generated from terraform resource schema
 
