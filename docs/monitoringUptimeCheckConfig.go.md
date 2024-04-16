@@ -4,12 +4,12 @@
 
 ### MonitoringUptimeCheckConfig <a name="MonitoringUptimeCheckConfig" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config google_monitoring_uptime_check_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config google_monitoring_uptime_check_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfig(scope Construct, id *string, config MonitoringUptimeCheckConfigConfig) MonitoringUptimeCheckConfig
 ```
@@ -560,7 +560,7 @@ func ResetUserLabels()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsConstruct(x interface{}) *bool
 ```
@@ -592,7 +592,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -606,7 +606,7 @@ monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -620,7 +620,7 @@ monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -649,7 +649,7 @@ The construct id used in the generated config for the MonitoringUptimeCheckConfi
 
 The id of the existing MonitoringUptimeCheckConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1201,7 +1201,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigConfig {
 	Connection: interface{},
@@ -1215,16 +1215,16 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimeche
 	Timeout: *string,
 	CheckerType: *string,
 	ContentMatchers: interface{},
-	HttpCheck: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheck,
+	HttpCheck: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheck,
 	Id: *string,
-	MonitoredResource: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResource,
+	MonitoredResource: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResource,
 	Period: *string,
 	Project: *string,
-	ResourceGroup: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroup,
+	ResourceGroup: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroup,
 	SelectedRegions: *[]*string,
-	SyntheticMonitor: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitor,
-	TcpCheck: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheck,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts,
+	SyntheticMonitor: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitor,
+	TcpCheck: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheck,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts,
 	UserLabels: *map[string]*string,
 }
 ```
@@ -1245,10 +1245,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimeche
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.checkerType">CheckerType</a></code> | <code>*string</code> | The checker type to use for the check. |
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.contentMatchers">ContentMatchers</a></code> | <code>interface{}</code> | content_matchers block. |
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.httpCheck">HttpCheck</a></code> | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheck">MonitoringUptimeCheckConfigHttpCheck</a></code> | http_check block. |
-| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#id MonitoringUptimeCheckConfig#id}. |
+| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#id MonitoringUptimeCheckConfig#id}. |
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.monitoredResource">MonitoredResource</a></code> | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResource">MonitoringUptimeCheckConfigMonitoredResource</a></code> | monitored_resource block. |
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.period">Period</a></code> | <code>*string</code> | How often, in seconds, the uptime check is performed. |
-| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#project MonitoringUptimeCheckConfig#project}. |
+| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#project MonitoringUptimeCheckConfig#project}. |
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.resourceGroup">ResourceGroup</a></code> | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroup">MonitoringUptimeCheckConfigResourceGroup</a></code> | resource_group block. |
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.selectedRegions">SelectedRegions</a></code> | <code>*[]*string</code> | The list of regions from which the check will be run. |
 | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.property.syntheticMonitor">SyntheticMonitor</a></code> | <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitor">MonitoringUptimeCheckConfigSyntheticMonitor</a></code> | synthetic_monitor block. |
@@ -1340,7 +1340,7 @@ A human-friendly name for the uptime check configuration.
 
 The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#display_name MonitoringUptimeCheckConfig#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#display_name MonitoringUptimeCheckConfig#display_name}
 
 ---
 
@@ -1356,7 +1356,7 @@ The maximum amount of time to wait for the request to complete (must be between 
 
 [See the accepted formats](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#timeout MonitoringUptimeCheckConfig#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#timeout MonitoringUptimeCheckConfig#timeout}
 
 ---
 
@@ -1372,7 +1372,7 @@ The checker type to use for the check.
 
 If the monitored resource type is 'servicedirectory_service', 'checker_type' must be set to 'VPC_CHECKERS'. Possible values: ["STATIC_IP_CHECKERS", "VPC_CHECKERS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#checker_type MonitoringUptimeCheckConfig#checker_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#checker_type MonitoringUptimeCheckConfig#checker_type}
 
 ---
 
@@ -1386,7 +1386,7 @@ ContentMatchers interface{}
 
 content_matchers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#content_matchers MonitoringUptimeCheckConfig#content_matchers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#content_matchers MonitoringUptimeCheckConfig#content_matchers}
 
 ---
 
@@ -1400,7 +1400,7 @@ HttpCheck MonitoringUptimeCheckConfigHttpCheck
 
 http_check block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#http_check MonitoringUptimeCheckConfig#http_check}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#http_check MonitoringUptimeCheckConfig#http_check}
 
 ---
 
@@ -1412,7 +1412,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#id MonitoringUptimeCheckConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#id MonitoringUptimeCheckConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1429,7 +1429,7 @@ MonitoredResource MonitoringUptimeCheckConfigMonitoredResource
 
 monitored_resource block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#monitored_resource MonitoringUptimeCheckConfig#monitored_resource}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#monitored_resource MonitoringUptimeCheckConfig#monitored_resource}
 
 ---
 
@@ -1445,7 +1445,7 @@ How often, in seconds, the uptime check is performed.
 
 Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#period MonitoringUptimeCheckConfig#period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#period MonitoringUptimeCheckConfig#period}
 
 ---
 
@@ -1457,7 +1457,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#project MonitoringUptimeCheckConfig#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#project MonitoringUptimeCheckConfig#project}.
 
 ---
 
@@ -1471,7 +1471,7 @@ ResourceGroup MonitoringUptimeCheckConfigResourceGroup
 
 resource_group block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#resource_group MonitoringUptimeCheckConfig#resource_group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#resource_group MonitoringUptimeCheckConfig#resource_group}
 
 ---
 
@@ -1487,7 +1487,7 @@ The list of regions from which the check will be run.
 
 Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#selected_regions MonitoringUptimeCheckConfig#selected_regions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#selected_regions MonitoringUptimeCheckConfig#selected_regions}
 
 ---
 
@@ -1501,7 +1501,7 @@ SyntheticMonitor MonitoringUptimeCheckConfigSyntheticMonitor
 
 synthetic_monitor block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#synthetic_monitor MonitoringUptimeCheckConfig#synthetic_monitor}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#synthetic_monitor MonitoringUptimeCheckConfig#synthetic_monitor}
 
 ---
 
@@ -1515,7 +1515,7 @@ TcpCheck MonitoringUptimeCheckConfigTcpCheck
 
 tcp_check block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#tcp_check MonitoringUptimeCheckConfig#tcp_check}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#tcp_check MonitoringUptimeCheckConfig#tcp_check}
 
 ---
 
@@ -1529,7 +1529,7 @@ Timeouts MonitoringUptimeCheckConfigTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#timeouts MonitoringUptimeCheckConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#timeouts MonitoringUptimeCheckConfig#timeouts}
 
 ---
 
@@ -1545,7 +1545,7 @@ User-supplied key/value data to be used for organizing and identifying the 'Upti
 
 The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#user_labels MonitoringUptimeCheckConfig#user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#user_labels MonitoringUptimeCheckConfig#user_labels}
 
 ---
 
@@ -1554,11 +1554,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigContentMatchers {
 	Content: *string,
-	JsonPathMatcher: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher,
+	JsonPathMatcher: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher,
 	Matcher: *string,
 }
 ```
@@ -1583,7 +1583,7 @@ Content *string
 
 String or regex content to match (max 1024 bytes).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#content MonitoringUptimeCheckConfig#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#content MonitoringUptimeCheckConfig#content}
 
 ---
 
@@ -1597,7 +1597,7 @@ JsonPathMatcher MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher
 
 json_path_matcher block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#json_path_matcher MonitoringUptimeCheckConfig#json_path_matcher}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#json_path_matcher MonitoringUptimeCheckConfig#json_path_matcher}
 
 ---
 
@@ -1613,7 +1613,7 @@ The type of content matcher that will be applied to the server output, compared 
 
 Default value: "CONTAINS_STRING" Possible values: ["CONTAINS_STRING", "NOT_CONTAINS_STRING", "MATCHES_REGEX", "NOT_MATCHES_REGEX", "MATCHES_JSON_PATH", "NOT_MATCHES_JSON_PATH"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#matcher MonitoringUptimeCheckConfig#matcher}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#matcher MonitoringUptimeCheckConfig#matcher}
 
 ---
 
@@ -1622,7 +1622,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher {
 	JsonPath: *string,
@@ -1649,7 +1649,7 @@ JsonPath *string
 
 JSONPath within the response output pointing to the expected 'ContentMatcher::content' to match against.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#json_path MonitoringUptimeCheckConfig#json_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#json_path MonitoringUptimeCheckConfig#json_path}
 
 ---
 
@@ -1663,7 +1663,7 @@ JsonMatcher *string
 
 Options to perform JSONPath content matching. Default value: "EXACT_MATCH" Possible values: ["EXACT_MATCH", "REGEX_MATCH"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#json_matcher MonitoringUptimeCheckConfig#json_matcher}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#json_matcher MonitoringUptimeCheckConfig#json_matcher}
 
 ---
 
@@ -1672,18 +1672,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheck.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigHttpCheck {
 	AcceptedResponseStatusCodes: interface{},
-	AuthInfo: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo,
+	AuthInfo: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo,
 	Body: *string,
 	ContentType: *string,
 	CustomContentType: *string,
 	Headers: *map[string]*string,
 	MaskHeaders: interface{},
 	Path: *string,
-	PingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckPingConfig,
+	PingConfig: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckPingConfig,
 	Port: *f64,
 	RequestMethod: *string,
 	UseSsl: interface{},
@@ -1721,7 +1721,7 @@ AcceptedResponseStatusCodes interface{}
 
 accepted_response_status_codes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#accepted_response_status_codes MonitoringUptimeCheckConfig#accepted_response_status_codes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#accepted_response_status_codes MonitoringUptimeCheckConfig#accepted_response_status_codes}
 
 ---
 
@@ -1735,7 +1735,7 @@ AuthInfo MonitoringUptimeCheckConfigHttpCheckAuthInfo
 
 auth_info block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#auth_info MonitoringUptimeCheckConfig#auth_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#auth_info MonitoringUptimeCheckConfig#auth_info}
 
 ---
 
@@ -1751,7 +1751,7 @@ The request body associated with the HTTP POST request.
 
 If 'content_type' is 'URL_ENCODED', the body passed in must be URL-encoded. Users can provide a 'Content-Length' header via the 'headers' field or the API will do so. If the 'request_method' is 'GET' and 'body' is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. 'foo=bar' in URL-encoded form is 'foo%3Dbar' and in base64 encoding is 'Zm9vJTI1M0RiYXI='.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#body MonitoringUptimeCheckConfig#body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#body MonitoringUptimeCheckConfig#body}
 
 ---
 
@@ -1765,7 +1765,7 @@ ContentType *string
 
 The content type to use for the check. Possible values: ["TYPE_UNSPECIFIED", "URL_ENCODED", "USER_PROVIDED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#content_type MonitoringUptimeCheckConfig#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#content_type MonitoringUptimeCheckConfig#content_type}
 
 ---
 
@@ -1781,7 +1781,7 @@ A user provided content type header to use for the check.
 
 The invalid configurations outlined in the 'content_type' field apply to custom_content_type', as well as the following 1. 'content_type' is 'URL_ENCODED' and 'custom_content_type' is set. 2. 'content_type' is 'USER_PROVIDED' and 'custom_content_type' is not set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#custom_content_type MonitoringUptimeCheckConfig#custom_content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#custom_content_type MonitoringUptimeCheckConfig#custom_content_type}
 
 ---
 
@@ -1797,7 +1797,7 @@ The list of headers to send as part of the uptime check request.
 
 If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described in [RFC 2616 (page 31)](https://www.w3.org/Protocols/rfc2616/rfc2616.txt). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#headers MonitoringUptimeCheckConfig#headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#headers MonitoringUptimeCheckConfig#headers}
 
 ---
 
@@ -1813,7 +1813,7 @@ Boolean specifying whether to encrypt the header information.
 
 Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if 'mask_headers' is set to 'true' then the headers will be obscured with '******'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#mask_headers MonitoringUptimeCheckConfig#mask_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#mask_headers MonitoringUptimeCheckConfig#mask_headers}
 
 ---
 
@@ -1829,7 +1829,7 @@ The path to the page to run the check against.
 
 Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with '/', a '/' will be prepended automatically. Optional (defaults to '/').
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#path MonitoringUptimeCheckConfig#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#path MonitoringUptimeCheckConfig#path}
 
 ---
 
@@ -1843,7 +1843,7 @@ PingConfig MonitoringUptimeCheckConfigHttpCheckPingConfig
 
 ping_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#ping_config MonitoringUptimeCheckConfig#ping_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#ping_config MonitoringUptimeCheckConfig#ping_config}
 
 ---
 
@@ -1859,7 +1859,7 @@ The port to the page to run the check against.
 
 Will be combined with 'host' (specified within the ['monitored_resource'](#nested_monitored_resource)) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
 
 ---
 
@@ -1875,7 +1875,7 @@ The HTTP request method to use for the check.
 
 If set to 'METHOD_UNSPECIFIED' then 'request_method' defaults to 'GET'. Default value: "GET" Possible values: ["METHOD_UNSPECIFIED", "GET", "POST"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#request_method MonitoringUptimeCheckConfig#request_method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#request_method MonitoringUptimeCheckConfig#request_method}
 
 ---
 
@@ -1889,7 +1889,7 @@ UseSsl interface{}
 
 If true, use HTTPS instead of HTTP to run the check.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#use_ssl MonitoringUptimeCheckConfig#use_ssl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#use_ssl MonitoringUptimeCheckConfig#use_ssl}
 
 ---
 
@@ -1905,7 +1905,7 @@ Boolean specifying whether to include SSL certificate validation as a part of th
 
 Only applies to checks where 'monitored_resource' is set to 'uptime_url'. If 'use_ssl' is 'false', setting 'validate_ssl' to 'true' has no effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#validate_ssl MonitoringUptimeCheckConfig#validate_ssl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#validate_ssl MonitoringUptimeCheckConfig#validate_ssl}
 
 ---
 
@@ -1914,7 +1914,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodes {
 	StatusClass: *string,
@@ -1941,7 +1941,7 @@ StatusClass *string
 
 A class of status codes to accept. Possible values: ["STATUS_CLASS_1XX", "STATUS_CLASS_2XX", "STATUS_CLASS_3XX", "STATUS_CLASS_4XX", "STATUS_CLASS_5XX", "STATUS_CLASS_ANY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#status_class MonitoringUptimeCheckConfig#status_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#status_class MonitoringUptimeCheckConfig#status_class}
 
 ---
 
@@ -1955,7 +1955,7 @@ StatusValue *f64
 
 A status code to accept.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#status_value MonitoringUptimeCheckConfig#status_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#status_value MonitoringUptimeCheckConfig#status_value}
 
 ---
 
@@ -1964,7 +1964,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo {
 	Password: *string,
@@ -1991,7 +1991,7 @@ Password *string
 
 The password to authenticate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#password MonitoringUptimeCheckConfig#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#password MonitoringUptimeCheckConfig#password}
 
 ---
 
@@ -2005,7 +2005,7 @@ Username *string
 
 The username to authenticate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#username MonitoringUptimeCheckConfig#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#username MonitoringUptimeCheckConfig#username}
 
 ---
 
@@ -2014,7 +2014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckPingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigHttpCheckPingConfig {
 	PingsCount: *f64,
@@ -2039,7 +2039,7 @@ PingsCount *f64
 
 Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#pings_count MonitoringUptimeCheckConfig#pings_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#pings_count MonitoringUptimeCheckConfig#pings_count}
 
 ---
 
@@ -2048,7 +2048,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigMonitoredResource {
 	Labels: *map[string]*string,
@@ -2077,7 +2077,7 @@ Values for all of the labels listed in the associated monitored resource descrip
 
 For example, Compute Engine VM instances use the labels 'project_id', 'instance_id', and 'zone'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#labels MonitoringUptimeCheckConfig#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#labels MonitoringUptimeCheckConfig#labels}
 
 ---
 
@@ -2093,7 +2093,7 @@ The monitored resource type.
 
 This field must match the type field of a ['MonitoredResourceDescriptor'](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is 'gce_instance'. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#type MonitoringUptimeCheckConfig#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#type MonitoringUptimeCheckConfig#type}
 
 ---
 
@@ -2102,7 +2102,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigResourceGroup {
 	GroupId: *string,
@@ -2129,7 +2129,7 @@ GroupId *string
 
 The group of resources being monitored. Should be the 'name' of a group.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#group_id MonitoringUptimeCheckConfig#group_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#group_id MonitoringUptimeCheckConfig#group_id}
 
 ---
 
@@ -2143,7 +2143,7 @@ ResourceType *string
 
 The resource type of the group members. Possible values: ["RESOURCE_TYPE_UNSPECIFIED", "INSTANCE", "AWS_ELB_LOAD_BALANCER"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#resource_type MonitoringUptimeCheckConfig#resource_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#resource_type MonitoringUptimeCheckConfig#resource_type}
 
 ---
 
@@ -2152,10 +2152,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigSyntheticMonitor {
-	CloudFunctionV2: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2,
+	CloudFunctionV2: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2,
 }
 ```
 
@@ -2177,7 +2177,7 @@ CloudFunctionV2 MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2
 
 cloud_function_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#cloud_function_v2 MonitoringUptimeCheckConfig#cloud_function_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#cloud_function_v2 MonitoringUptimeCheckConfig#cloud_function_v2}
 
 ---
 
@@ -2186,7 +2186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2 {
 	Name: *string,
@@ -2211,7 +2211,7 @@ Name *string
 
 The fully qualified name of the cloud function resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#name MonitoringUptimeCheckConfig#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#name MonitoringUptimeCheckConfig#name}
 
 ---
 
@@ -2220,11 +2220,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheck.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigTcpCheck {
 	Port: *f64,
-	PingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheckPingConfig,
+	PingConfig: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheckPingConfig,
 }
 ```
 
@@ -2249,7 +2249,7 @@ The port to the page to run the check against.
 
 Will be combined with host (specified within the 'monitored_resource') to construct the full URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
 
 ---
 
@@ -2263,7 +2263,7 @@ PingConfig MonitoringUptimeCheckConfigTcpCheckPingConfig
 
 ping_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#ping_config MonitoringUptimeCheckConfig#ping_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#ping_config MonitoringUptimeCheckConfig#ping_config}
 
 ---
 
@@ -2272,7 +2272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheckPingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigTcpCheckPingConfig {
 	PingsCount: *f64,
@@ -2297,7 +2297,7 @@ PingsCount *f64
 
 Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#pings_count MonitoringUptimeCheckConfig#pings_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#pings_count MonitoringUptimeCheckConfig#pings_count}
 
 ---
 
@@ -2306,7 +2306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigTimeouts {
 	Create: *string,
@@ -2319,9 +2319,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimeche
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#create MonitoringUptimeCheckConfig#create}. |
-| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#delete MonitoringUptimeCheckConfig#delete}. |
-| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#update MonitoringUptimeCheckConfig#update}. |
+| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#create MonitoringUptimeCheckConfig#create}. |
+| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#delete MonitoringUptimeCheckConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#update MonitoringUptimeCheckConfig#update}. |
 
 ---
 
@@ -2333,7 +2333,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#create MonitoringUptimeCheckConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#create MonitoringUptimeCheckConfig#create}.
 
 ---
 
@@ -2345,7 +2345,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#delete MonitoringUptimeCheckConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#delete MonitoringUptimeCheckConfig#delete}.
 
 ---
 
@@ -2357,7 +2357,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/monitoring_uptime_check_config#update MonitoringUptimeCheckConfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/monitoring_uptime_check_config#update MonitoringUptimeCheckConfig#update}.
 
 ---
 
@@ -2368,7 +2368,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference
 ```
@@ -2668,7 +2668,7 @@ func InternalValue() MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigContentMatchersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitoringUptimeCheckConfigContentMatchersList
 ```
@@ -2828,7 +2828,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigContentMatchersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitoringUptimeCheckConfigContentMatchersOutputReference
 ```
@@ -3188,7 +3188,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesList
 ```
@@ -3348,7 +3348,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesOutputReference
 ```
@@ -3673,7 +3673,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference
 ```
@@ -3966,7 +3966,7 @@ func InternalValue() MonitoringUptimeCheckConfigHttpCheckAuthInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigHttpCheckOutputReference
 ```
@@ -4631,7 +4631,7 @@ func InternalValue() MonitoringUptimeCheckConfigHttpCheck
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckPingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckPingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigHttpCheckPingConfigOutputReference
 ```
@@ -4902,7 +4902,7 @@ func InternalValue() MonitoringUptimeCheckConfigHttpCheckPingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigMonitoredResourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigMonitoredResourceOutputReference
 ```
@@ -5195,7 +5195,7 @@ func InternalValue() MonitoringUptimeCheckConfigMonitoredResource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigResourceGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigResourceGroupOutputReference
 ```
@@ -5502,7 +5502,7 @@ func InternalValue() MonitoringUptimeCheckConfigResourceGroup
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2OutputReference
 ```
@@ -5773,7 +5773,7 @@ func InternalValue() MonitoringUptimeCheckConfigSyntheticMonitorCloudFunctionV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigSyntheticMonitorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigSyntheticMonitorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigSyntheticMonitorOutputReference
 ```
@@ -6057,7 +6057,7 @@ func InternalValue() MonitoringUptimeCheckConfigSyntheticMonitor
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheckOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigTcpCheckOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigTcpCheckOutputReference
 ```
@@ -6370,7 +6370,7 @@ func InternalValue() MonitoringUptimeCheckConfigTcpCheck
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheckPingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigTcpCheckPingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigTcpCheckPingConfigOutputReference
 ```
@@ -6641,7 +6641,7 @@ func InternalValue() MonitoringUptimeCheckConfigTcpCheckPingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigTimeoutsOutputReference
 ```

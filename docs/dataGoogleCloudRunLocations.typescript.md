@@ -4,7 +4,7 @@
 
 ### DataGoogleCloudRunLocations <a name="DataGoogleCloudRunLocations" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_run_locations google_cloud_run_locations}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_run_locations google_cloud_run_locations}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleCloudRunLocation
 
 The id of the existing DataGoogleCloudRunLocations that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_run_locations#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_run_locations#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -628,8 +628,8 @@ const dataGoogleCloudRunLocationsConfig: dataGoogleCloudRunLocations.DataGoogleC
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
 
 ---
 
@@ -711,7 +711,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -726,7 +726,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
 
 ---
 

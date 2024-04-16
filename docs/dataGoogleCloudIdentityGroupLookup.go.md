@@ -4,12 +4,12 @@
 
 ### DataGoogleCloudIdentityGroupLookup <a name="DataGoogleCloudIdentityGroupLookup" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_identity_group_lookup google_cloud_identity_group_lookup}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_identity_group_lookup google_cloud_identity_group_lookup}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 datagooglecloudidentitygrouplookup.NewDataGoogleCloudIdentityGroupLookup(scope Construct, id *string, config DataGoogleCloudIdentityGroupLookupConfig) DataGoogleCloudIdentityGroupLookup
 ```
@@ -296,7 +296,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookup_IsConstruct(x interface{}) *bool
 ```
@@ -328,7 +328,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookup_IsTerraformElement(x interface{}) *bool
 ```
@@ -342,7 +342,7 @@ datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookup_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookup_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -385,7 +385,7 @@ The construct id used in the generated config for the DataGoogleCloudIdentityGro
 
 The id of the existing DataGoogleCloudIdentityGroupLookup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_identity_group_lookup#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_identity_group_lookup#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -618,7 +618,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 &datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookupConfig {
 	Connection: interface{},
@@ -628,7 +628,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudiden
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	GroupKey: github.com/cdktf/cdktf-provider-google-go/google/v13.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupGroupKey,
+	GroupKey: github.com/cdktf/cdktf-provider-google-go/google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupGroupKey,
 	Id: *string,
 }
 ```
@@ -645,7 +645,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudiden
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupConfig.property.groupKey">GroupKey</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupGroupKey">DataGoogleCloudIdentityGroupLookupGroupKey</a></code> | group_key block. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_identity_group_lookup#id DataGoogleCloudIdentityGroupLookup#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_identity_group_lookup#id DataGoogleCloudIdentityGroupLookup#id}. |
 
 ---
 
@@ -729,7 +729,7 @@ GroupKey DataGoogleCloudIdentityGroupLookupGroupKey
 
 group_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_identity_group_lookup#group_key DataGoogleCloudIdentityGroupLookup#group_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_identity_group_lookup#group_key DataGoogleCloudIdentityGroupLookup#group_key}
 
 ---
 
@@ -741,7 +741,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_identity_group_lookup#id DataGoogleCloudIdentityGroupLookup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_identity_group_lookup#id DataGoogleCloudIdentityGroupLookup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -753,7 +753,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupGroupKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 &datagooglecloudidentitygrouplookup.DataGoogleCloudIdentityGroupLookupGroupKey {
 	Id: *string,
@@ -784,7 +784,7 @@ For Google-managed entities, the id should be the email address of an existing g
 For external-identity-mapped entities, the id must be a string conforming to the Identity Source's requirements.
 Must be unique within a namespace.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_identity_group_lookup#id DataGoogleCloudIdentityGroupLookup#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_identity_group_lookup#id DataGoogleCloudIdentityGroupLookup#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -804,7 +804,7 @@ The namespace in which the entity exists.
 If not specified, the EntityKey represents a Google-managed entity such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of identitysources/{identity_source}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/cloud_identity_group_lookup#namespace DataGoogleCloudIdentityGroupLookup#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/cloud_identity_group_lookup#namespace DataGoogleCloudIdentityGroupLookup#namespace}
 
 ---
 
@@ -815,7 +815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudIdentityGroupLookup.DataGoogleCloudIdentityGroupLookupGroupKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecloudidentitygrouplookup"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudidentitygrouplookup"
 
 datagooglecloudidentitygrouplookup.NewDataGoogleCloudIdentityGroupLookupGroupKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataGoogleCloudIdentityGroupLookupGroupKeyOutputReference
 ```

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan
+// https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface GkeBackupBackupPlanConfig extends cdktf.TerraformMetaArguments 
   /**
   * The source cluster from which Backups will be created via this BackupPlan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#cluster GkeBackupBackupPlan#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#cluster GkeBackupBackupPlan#cluster}
   */
   readonly cluster: string;
   /**
@@ -24,17 +19,17 @@ export interface GkeBackupBackupPlanConfig extends cdktf.TerraformMetaArguments 
   * (except deletes), including the deactivated field itself. It also prevents any new Backups
   * from being created via this BackupPlan (including scheduled Backups).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#deactivated GkeBackupBackupPlan#deactivated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#deactivated GkeBackupBackupPlan#deactivated}
   */
   readonly deactivated?: boolean | cdktf.IResolvable;
   /**
   * User specified descriptive string for this BackupPlan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#description GkeBackupBackupPlan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#description GkeBackupBackupPlan#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#id GkeBackupBackupPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#id GkeBackupBackupPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -49,47 +44,47 @@ export interface GkeBackupBackupPlanConfig extends cdktf.TerraformMetaArguments 
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#labels GkeBackupBackupPlan#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#labels GkeBackupBackupPlan#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The region of the Backup Plan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#location GkeBackupBackupPlan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#location GkeBackupBackupPlan#location}
   */
   readonly location: string;
   /**
   * The full name of the BackupPlan Resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#project GkeBackupBackupPlan#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#project GkeBackupBackupPlan#project}
   */
   readonly project?: string;
   /**
   * backup_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#backup_config GkeBackupBackupPlan#backup_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#backup_config GkeBackupBackupPlan#backup_config}
   */
   readonly backupConfig?: GkeBackupBackupPlanBackupConfig;
   /**
   * backup_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#backup_schedule GkeBackupBackupPlan#backup_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#backup_schedule GkeBackupBackupPlan#backup_schedule}
   */
   readonly backupSchedule?: GkeBackupBackupPlanBackupSchedule;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#retention_policy GkeBackupBackupPlan#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#retention_policy GkeBackupBackupPlan#retention_policy}
   */
   readonly retentionPolicy?: GkeBackupBackupPlanRetentionPolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#timeouts GkeBackupBackupPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#timeouts GkeBackupBackupPlan#timeouts}
   */
   readonly timeouts?: GkeBackupBackupPlanTimeouts;
 }
@@ -97,7 +92,7 @@ export interface GkeBackupBackupPlanBackupConfigEncryptionKey {
   /**
   * Google Cloud KMS encryption key. Format: projects/* /locations/* /keyRings/* /cryptoKeys/*
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#gcp_kms_encryption_key GkeBackupBackupPlan#gcp_kms_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#gcp_kms_encryption_key GkeBackupBackupPlan#gcp_kms_encryption_key}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -182,13 +177,13 @@ export interface GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNa
   /**
   * The name of a Kubernetes Resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#name GkeBackupBackupPlan#name}
   */
   readonly name: string;
   /**
   * The namespace of a Kubernetes Resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#namespace GkeBackupBackupPlan#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#namespace GkeBackupBackupPlan#namespace}
   */
   readonly namespace: string;
 }
@@ -329,7 +324,7 @@ export interface GkeBackupBackupPlanBackupConfigSelectedApplications {
   /**
   * namespaced_names block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#namespaced_names GkeBackupBackupPlan#namespaced_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#namespaced_names GkeBackupBackupPlan#namespaced_names}
   */
   readonly namespacedNames: GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNames[] | cdktf.IResolvable;
 }
@@ -412,7 +407,7 @@ export interface GkeBackupBackupPlanBackupConfigSelectedNamespaces {
   /**
   * A list of Kubernetes Namespaces.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#namespaces GkeBackupBackupPlan#namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#namespaces GkeBackupBackupPlan#namespaces}
   */
   readonly namespaces: string[];
 }
@@ -495,39 +490,39 @@ export interface GkeBackupBackupPlanBackupConfig {
   /**
   * If True, include all namespaced resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#all_namespaces GkeBackupBackupPlan#all_namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#all_namespaces GkeBackupBackupPlan#all_namespaces}
   */
   readonly allNamespaces?: boolean | cdktf.IResolvable;
   /**
   * This flag specifies whether Kubernetes Secret resources should be included
   * when they fall into the scope of Backups.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#include_secrets GkeBackupBackupPlan#include_secrets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#include_secrets GkeBackupBackupPlan#include_secrets}
   */
   readonly includeSecrets?: boolean | cdktf.IResolvable;
   /**
   * This flag specifies whether volume data should be backed up when PVCs are
   * included in the scope of a Backup.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#include_volume_data GkeBackupBackupPlan#include_volume_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#include_volume_data GkeBackupBackupPlan#include_volume_data}
   */
   readonly includeVolumeData?: boolean | cdktf.IResolvable;
   /**
   * encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#encryption_key GkeBackupBackupPlan#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#encryption_key GkeBackupBackupPlan#encryption_key}
   */
   readonly encryptionKey?: GkeBackupBackupPlanBackupConfigEncryptionKey;
   /**
   * selected_applications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#selected_applications GkeBackupBackupPlan#selected_applications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#selected_applications GkeBackupBackupPlan#selected_applications}
   */
   readonly selectedApplications?: GkeBackupBackupPlanBackupConfigSelectedApplications;
   /**
   * selected_namespaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#selected_namespaces GkeBackupBackupPlan#selected_namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#selected_namespaces GkeBackupBackupPlan#selected_namespaces}
   */
   readonly selectedNamespaces?: GkeBackupBackupPlanBackupConfigSelectedNamespaces;
 }
@@ -754,21 +749,843 @@ export class GkeBackupBackupPlanBackupConfigOutputReference extends cdktf.Comple
     return this._selectedNamespaces.internalValue;
   }
 }
+export interface GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeek {
+  /**
+  * A list of days of week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#days_of_week GkeBackupBackupPlan#days_of_week}
+  */
+  readonly daysOfWeek?: string[];
+}
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekToTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeek): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    days_of_week: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.daysOfWeek),
+  }
+}
+
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekToHclTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeek): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeek | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._daysOfWeek !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.daysOfWeek = this._daysOfWeek;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeek | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._daysOfWeek = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._daysOfWeek = value.daysOfWeek;
+    }
+  }
+
+  // days_of_week - computed: false, optional: true, required: false
+  private _daysOfWeek?: string[]; 
+  public get daysOfWeek() {
+    return this.getListAttribute('days_of_week');
+  }
+  public set daysOfWeek(value: string[]) {
+    this._daysOfWeek = value;
+  }
+  public resetDaysOfWeek() {
+    this._daysOfWeek = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfWeekInput() {
+    return this._daysOfWeek;
+  }
+}
+export interface GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate {
+  /**
+  * Day of a month.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#day GkeBackupBackupPlan#day}
+  */
+  readonly day?: number;
+  /**
+  * Month of a year.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#month GkeBackupBackupPlan#month}
+  */
+  readonly month?: number;
+  /**
+  * Year of the date.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#year GkeBackupBackupPlan#year}
+  */
+  readonly year?: number;
+}
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateToTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day: cdktf.numberToTerraform(struct!.day),
+    month: cdktf.numberToTerraform(struct!.month),
+    year: cdktf.numberToTerraform(struct!.year),
+  }
+}
+
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateToHclTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.numberToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    month: {
+      value: cdktf.numberToHclTerraform(struct!.month),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    year: {
+      value: cdktf.numberToHclTerraform(struct!.year),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._month !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.month = this._month;
+    }
+    if (this._year !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.year = this._year;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._day = undefined;
+      this._month = undefined;
+      this._year = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._day = value.day;
+      this._month = value.month;
+      this._year = value.year;
+    }
+  }
+
+  // day - computed: false, optional: true, required: false
+  private _day?: number; 
+  public get day() {
+    return this.getNumberAttribute('day');
+  }
+  public set day(value: number) {
+    this._day = value;
+  }
+  public resetDay() {
+    this._day = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // month - computed: false, optional: true, required: false
+  private _month?: number; 
+  public get month() {
+    return this.getNumberAttribute('month');
+  }
+  public set month(value: number) {
+    this._month = value;
+  }
+  public resetMonth() {
+    this._month = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthInput() {
+    return this._month;
+  }
+
+  // year - computed: false, optional: true, required: false
+  private _year?: number; 
+  public get year() {
+    return this.getNumberAttribute('year');
+  }
+  public set year(value: number) {
+    this._year = value;
+  }
+  public resetYear() {
+    this._year = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get yearInput() {
+    return this._year;
+  }
+}
+export interface GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTime {
+  /**
+  * Hours of day in 24 hour format.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#hours GkeBackupBackupPlan#hours}
+  */
+  readonly hours?: number;
+  /**
+  * Minutes of hour of day.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#minutes GkeBackupBackupPlan#minutes}
+  */
+  readonly minutes?: number;
+  /**
+  * Fractions of seconds in nanoseconds.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#nanos GkeBackupBackupPlan#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Seconds of minutes of the time.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#seconds GkeBackupBackupPlan#seconds}
+  */
+  readonly seconds?: number;
+}
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeToTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeToHclTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTime | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hours !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTime | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // hours - computed: false, optional: true, required: false
+  private _hours?: number; 
+  public get hours() {
+    return this.getNumberAttribute('hours');
+  }
+  public set hours(value: number) {
+    this._hours = value;
+  }
+  public resetHours() {
+    this._hours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours;
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  public resetMinutes() {
+    this._minutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows {
+  /**
+  * The exclusion window occurs every day if set to "True".
+  * Specifying this field to "False" is an error.
+  * Only one of singleOccurrenceDate, daily and daysOfWeek may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#daily GkeBackupBackupPlan#daily}
+  */
+  readonly daily?: boolean | cdktf.IResolvable;
+  /**
+  * Specifies duration of the window in seconds with up to nine fractional digits,
+  * terminated by 's'. Example: "3.5s". Restrictions for duration based on the
+  * recurrence type to allow some time for backup to happen:
+  *   - single_occurrence_date:  no restriction
+  *   - daily window: duration < 24 hours
+  *   - weekly window:
+  *     - days of week includes all seven days of a week: duration < 24 hours
+  *     - all other weekly window: duration < 168 hours (i.e., 24 * 7 hours)
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#duration GkeBackupBackupPlan#duration}
+  */
+  readonly duration: string;
+  /**
+  * days_of_week block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#days_of_week GkeBackupBackupPlan#days_of_week}
+  */
+  readonly daysOfWeek?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeek;
+  /**
+  * single_occurrence_date block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#single_occurrence_date GkeBackupBackupPlan#single_occurrence_date}
+  */
+  readonly singleOccurrenceDate?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate;
+  /**
+  * start_time block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#start_time GkeBackupBackupPlan#start_time}
+  */
+  readonly startTime: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTime;
+}
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsToTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    daily: cdktf.booleanToTerraform(struct!.daily),
+    duration: cdktf.stringToTerraform(struct!.duration),
+    days_of_week: gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekToTerraform(struct!.daysOfWeek),
+    single_occurrence_date: gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateToTerraform(struct!.singleOccurrenceDate),
+    start_time: gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeToTerraform(struct!.startTime),
+  }
+}
+
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsToHclTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    daily: {
+      value: cdktf.booleanToHclTerraform(struct!.daily),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    duration: {
+      value: cdktf.stringToHclTerraform(struct!.duration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    days_of_week: {
+      value: gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekToHclTerraform(struct!.daysOfWeek),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekList",
+    },
+    single_occurrence_date: {
+      value: gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateToHclTerraform(struct!.singleOccurrenceDate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateList",
+    },
+    start_time: {
+      value: gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeToHclTerraform(struct!.startTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._daily !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.daily = this._daily;
+    }
+    if (this._duration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._daysOfWeek?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.daysOfWeek = this._daysOfWeek?.internalValue;
+    }
+    if (this._singleOccurrenceDate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.singleOccurrenceDate = this._singleOccurrenceDate?.internalValue;
+    }
+    if (this._startTime?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._daily = undefined;
+      this._duration = undefined;
+      this._daysOfWeek.internalValue = undefined;
+      this._singleOccurrenceDate.internalValue = undefined;
+      this._startTime.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._daily = value.daily;
+      this._duration = value.duration;
+      this._daysOfWeek.internalValue = value.daysOfWeek;
+      this._singleOccurrenceDate.internalValue = value.singleOccurrenceDate;
+      this._startTime.internalValue = value.startTime;
+    }
+  }
+
+  // daily - computed: false, optional: true, required: false
+  private _daily?: boolean | cdktf.IResolvable; 
+  public get daily() {
+    return this.getBooleanAttribute('daily');
+  }
+  public set daily(value: boolean | cdktf.IResolvable) {
+    this._daily = value;
+  }
+  public resetDaily() {
+    this._daily = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dailyInput() {
+    return this._daily;
+  }
+
+  // duration - computed: false, optional: false, required: true
+  private _duration?: string; 
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+  public set duration(value: string) {
+    this._duration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration;
+  }
+
+  // days_of_week - computed: false, optional: true, required: false
+  private _daysOfWeek = new GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeekOutputReference(this, "days_of_week");
+  public get daysOfWeek() {
+    return this._daysOfWeek;
+  }
+  public putDaysOfWeek(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsDaysOfWeek) {
+    this._daysOfWeek.internalValue = value;
+  }
+  public resetDaysOfWeek() {
+    this._daysOfWeek.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfWeekInput() {
+    return this._daysOfWeek.internalValue;
+  }
+
+  // single_occurrence_date - computed: false, optional: true, required: false
+  private _singleOccurrenceDate = new GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDateOutputReference(this, "single_occurrence_date");
+  public get singleOccurrenceDate() {
+    return this._singleOccurrenceDate;
+  }
+  public putSingleOccurrenceDate(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate) {
+    this._singleOccurrenceDate.internalValue = value;
+  }
+  public resetSingleOccurrenceDate() {
+    this._singleOccurrenceDate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get singleOccurrenceDateInput() {
+    return this._singleOccurrenceDate.internalValue;
+  }
+
+  // start_time - computed: false, optional: false, required: true
+  private _startTime = new GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTimeOutputReference(this, "start_time");
+  public get startTime() {
+    return this._startTime;
+  }
+  public putStartTime(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsStartTime) {
+    this._startTime.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime.internalValue;
+  }
+}
+
+export class GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsList extends cdktf.ComplexList {
+  public internalValue? : GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsOutputReference {
+    return new GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface GkeBackupBackupPlanBackupScheduleRpoConfig {
+  /**
+  * Defines the target RPO for the BackupPlan in minutes, which means the target
+  * maximum data loss in time that is acceptable for this BackupPlan. This must be
+  * at least 60, i.e., 1 hour, and at most 86400, i.e., 60 days.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#target_rpo_minutes GkeBackupBackupPlan#target_rpo_minutes}
+  */
+  readonly targetRpoMinutes: number;
+  /**
+  * exclusion_windows block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#exclusion_windows GkeBackupBackupPlan#exclusion_windows}
+  */
+  readonly exclusionWindows?: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows[] | cdktf.IResolvable;
+}
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigToTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    target_rpo_minutes: cdktf.numberToTerraform(struct!.targetRpoMinutes),
+    exclusion_windows: cdktf.listMapper(gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsToTerraform, true)(struct!.exclusionWindows),
+  }
+}
+
+
+export function gkeBackupBackupPlanBackupScheduleRpoConfigToHclTerraform(struct?: GkeBackupBackupPlanBackupScheduleRpoConfigOutputReference | GkeBackupBackupPlanBackupScheduleRpoConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    target_rpo_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.targetRpoMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    exclusion_windows: {
+      value: cdktf.listMapperHcl(gkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsToHclTerraform, true)(struct!.exclusionWindows),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class GkeBackupBackupPlanBackupScheduleRpoConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GkeBackupBackupPlanBackupScheduleRpoConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._targetRpoMinutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetRpoMinutes = this._targetRpoMinutes;
+    }
+    if (this._exclusionWindows?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exclusionWindows = this._exclusionWindows?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeBackupBackupPlanBackupScheduleRpoConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._targetRpoMinutes = undefined;
+      this._exclusionWindows.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._targetRpoMinutes = value.targetRpoMinutes;
+      this._exclusionWindows.internalValue = value.exclusionWindows;
+    }
+  }
+
+  // target_rpo_minutes - computed: false, optional: false, required: true
+  private _targetRpoMinutes?: number; 
+  public get targetRpoMinutes() {
+    return this.getNumberAttribute('target_rpo_minutes');
+  }
+  public set targetRpoMinutes(value: number) {
+    this._targetRpoMinutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetRpoMinutesInput() {
+    return this._targetRpoMinutes;
+  }
+
+  // exclusion_windows - computed: false, optional: true, required: false
+  private _exclusionWindows = new GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindowsList(this, "exclusion_windows", false);
+  public get exclusionWindows() {
+    return this._exclusionWindows;
+  }
+  public putExclusionWindows(value: GkeBackupBackupPlanBackupScheduleRpoConfigExclusionWindows[] | cdktf.IResolvable) {
+    this._exclusionWindows.internalValue = value;
+  }
+  public resetExclusionWindows() {
+    this._exclusionWindows.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exclusionWindowsInput() {
+    return this._exclusionWindows.internalValue;
+  }
+}
 export interface GkeBackupBackupPlanBackupSchedule {
   /**
   * A standard cron string that defines a repeating schedule for
   * creating Backups via this BackupPlan.
+  * This is mutually exclusive with the rpoConfig field since at most one
+  * schedule can be defined for a BackupPlan.
   * If this is defined, then backupRetainDays must also be defined.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#cron_schedule GkeBackupBackupPlan#cron_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#cron_schedule GkeBackupBackupPlan#cron_schedule}
   */
   readonly cronSchedule?: string;
   /**
   * This flag denotes whether automatic Backup creation is paused for this BackupPlan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#paused GkeBackupBackupPlan#paused}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#paused GkeBackupBackupPlan#paused}
   */
   readonly paused?: boolean | cdktf.IResolvable;
+  /**
+  * rpo_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#rpo_config GkeBackupBackupPlan#rpo_config}
+  */
+  readonly rpoConfig?: GkeBackupBackupPlanBackupScheduleRpoConfig;
 }
 
 export function gkeBackupBackupPlanBackupScheduleToTerraform(struct?: GkeBackupBackupPlanBackupScheduleOutputReference | GkeBackupBackupPlanBackupSchedule): any {
@@ -779,6 +1596,7 @@ export function gkeBackupBackupPlanBackupScheduleToTerraform(struct?: GkeBackupB
   return {
     cron_schedule: cdktf.stringToTerraform(struct!.cronSchedule),
     paused: cdktf.booleanToTerraform(struct!.paused),
+    rpo_config: gkeBackupBackupPlanBackupScheduleRpoConfigToTerraform(struct!.rpoConfig),
   }
 }
 
@@ -800,6 +1618,12 @@ export function gkeBackupBackupPlanBackupScheduleToHclTerraform(struct?: GkeBack
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
+    },
+    rpo_config: {
+      value: gkeBackupBackupPlanBackupScheduleRpoConfigToHclTerraform(struct!.rpoConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GkeBackupBackupPlanBackupScheduleRpoConfigList",
     },
   };
 
@@ -829,6 +1653,10 @@ export class GkeBackupBackupPlanBackupScheduleOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.paused = this._paused;
     }
+    if (this._rpoConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rpoConfig = this._rpoConfig?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -837,11 +1665,13 @@ export class GkeBackupBackupPlanBackupScheduleOutputReference extends cdktf.Comp
       this.isEmptyObject = false;
       this._cronSchedule = undefined;
       this._paused = undefined;
+      this._rpoConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._cronSchedule = value.cronSchedule;
       this._paused = value.paused;
+      this._rpoConfig.internalValue = value.rpoConfig;
     }
   }
 
@@ -876,6 +1706,22 @@ export class GkeBackupBackupPlanBackupScheduleOutputReference extends cdktf.Comp
   public get pausedInput() {
     return this._paused;
   }
+
+  // rpo_config - computed: false, optional: true, required: false
+  private _rpoConfig = new GkeBackupBackupPlanBackupScheduleRpoConfigOutputReference(this, "rpo_config");
+  public get rpoConfig() {
+    return this._rpoConfig;
+  }
+  public putRpoConfig(value: GkeBackupBackupPlanBackupScheduleRpoConfig) {
+    this._rpoConfig.internalValue = value;
+  }
+  public resetRpoConfig() {
+    this._rpoConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rpoConfigInput() {
+    return this._rpoConfig.internalValue;
+  }
 }
 export interface GkeBackupBackupPlanRetentionPolicy {
   /**
@@ -886,7 +1732,7 @@ export interface GkeBackupBackupPlanRetentionPolicy {
   * Updating this field of a BackupPlan does not affect existing Backups.
   * Backups created after a successful update will inherit this new value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#backup_delete_lock_days GkeBackupBackupPlan#backup_delete_lock_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#backup_delete_lock_days GkeBackupBackupPlan#backup_delete_lock_days}
   */
   readonly backupDeleteLockDays?: number;
   /**
@@ -899,9 +1745,11 @@ export interface GkeBackupBackupPlanRetentionPolicy {
   * existing Backups under it. Backups created AFTER a successful update
   * will automatically pick up the new value.
   * NOTE: backupRetainDays must be >= backupDeleteLockDays.
-  * If cronSchedule is defined, then this must be <= 360 * the creation interval.]
+  * If cronSchedule is defined, then this must be <= 360 * the creation interval.
+  * If rpo_config is defined, then this must be
+  * <= 360 * targetRpoMinutes/(1440minutes/day)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#backup_retain_days GkeBackupBackupPlan#backup_retain_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#backup_retain_days GkeBackupBackupPlan#backup_retain_days}
   */
   readonly backupRetainDays?: number;
   /**
@@ -909,7 +1757,7 @@ export interface GkeBackupBackupPlanRetentionPolicy {
   * If set to True, no further update is allowed on this policy, including
   * the locked field itself.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#locked GkeBackupBackupPlan#locked}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#locked GkeBackupBackupPlan#locked}
   */
   readonly locked?: boolean | cdktf.IResolvable;
 }
@@ -1051,15 +1899,15 @@ export class GkeBackupBackupPlanRetentionPolicyOutputReference extends cdktf.Com
 }
 export interface GkeBackupBackupPlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#create GkeBackupBackupPlan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#create GkeBackupBackupPlan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#delete GkeBackupBackupPlan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#delete GkeBackupBackupPlan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#update GkeBackupBackupPlan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#update GkeBackupBackupPlan#update}
   */
   readonly update?: string;
 }
@@ -1211,7 +2059,7 @@ export class GkeBackupBackupPlanTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan}
 */
 export class GkeBackupBackupPlan extends cdktf.TerraformResource {
 
@@ -1227,7 +2075,7 @@ export class GkeBackupBackupPlan extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GkeBackupBackupPlan resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GkeBackupBackupPlan to import
-  * @param importFromId The id of the existing GkeBackupBackupPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GkeBackupBackupPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GkeBackupBackupPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1239,7 +2087,7 @@ export class GkeBackupBackupPlan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/gke_backup_backup_plan google_gke_backup_backup_plan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1250,7 +2098,7 @@ export class GkeBackupBackupPlan extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_backup_backup_plan',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.24.0',
+        providerVersion: '5.25.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

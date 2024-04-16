@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group
+// https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,56 +10,56 @@ export interface IapTunnelDestGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of CIDRs that this group applies to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#cidrs IapTunnelDestGroup#cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#cidrs IapTunnelDestGroup#cidrs}
   */
   readonly cidrs?: string[];
   /**
   * List of FQDNs that this group applies to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#fqdns IapTunnelDestGroup#fqdns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#fqdns IapTunnelDestGroup#fqdns}
   */
   readonly fqdns?: string[];
   /**
   * Unique tunnel destination group name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#group_name IapTunnelDestGroup#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#group_name IapTunnelDestGroup#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#id IapTunnelDestGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#id IapTunnelDestGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#project IapTunnelDestGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#project IapTunnelDestGroup#project}
   */
   readonly project?: string;
   /**
   * The region of the tunnel group. Must be the same as the network resources in the group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#region IapTunnelDestGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#region IapTunnelDestGroup#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#timeouts IapTunnelDestGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#timeouts IapTunnelDestGroup#timeouts}
   */
   readonly timeouts?: IapTunnelDestGroupTimeouts;
 }
 export interface IapTunnelDestGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#create IapTunnelDestGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#create IapTunnelDestGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#delete IapTunnelDestGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#delete IapTunnelDestGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#update IapTunnelDestGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#update IapTunnelDestGroup#update}
   */
   readonly update?: string;
 }
@@ -216,7 +211,7 @@ export class IapTunnelDestGroupTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group google_iap_tunnel_dest_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group google_iap_tunnel_dest_group}
 */
 export class IapTunnelDestGroup extends cdktf.TerraformResource {
 
@@ -232,7 +227,7 @@ export class IapTunnelDestGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IapTunnelDestGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IapTunnelDestGroup to import
-  * @param importFromId The id of the existing IapTunnelDestGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IapTunnelDestGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IapTunnelDestGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -244,7 +239,7 @@ export class IapTunnelDestGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/iap_tunnel_dest_group google_iap_tunnel_dest_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/iap_tunnel_dest_group google_iap_tunnel_dest_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -255,7 +250,7 @@ export class IapTunnelDestGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_iap_tunnel_dest_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.24.0',
+        providerVersion: '5.25.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

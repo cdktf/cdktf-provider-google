@@ -4,12 +4,12 @@
 
 ### DataGoogleComputeRegions <a name="DataGoogleComputeRegions" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions google_compute_regions}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions google_compute_regions}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.NewDataGoogleComputeRegions(scope Construct, id *string, config DataGoogleComputeRegionsConfig) DataGoogleComputeRegions
 ```
@@ -297,7 +297,7 @@ func ResetStatus()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleComputeRegions t
 
 The id of the existing DataGoogleComputeRegions that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 &datagooglecomputeregions.DataGoogleComputeRegionsConfig {
 	Connection: interface{},
@@ -668,9 +668,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputere
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions#id DataGoogleComputeRegions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions#project DataGoogleComputeRegions#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.status">Status</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions#status DataGoogleComputeRegions#status}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions#id DataGoogleComputeRegions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions#project DataGoogleComputeRegions#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.property.status">Status</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions#status DataGoogleComputeRegions#status}. |
 
 ---
 
@@ -752,7 +752,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions#id DataGoogleComputeRegions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions#id DataGoogleComputeRegions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -767,7 +767,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions#project DataGoogleComputeRegions#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions#project DataGoogleComputeRegions#project}.
 
 ---
 
@@ -779,7 +779,7 @@ Status *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/data-sources/compute_regions#status DataGoogleComputeRegions#status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_regions#status DataGoogleComputeRegions#status}.
 
 ---
 
