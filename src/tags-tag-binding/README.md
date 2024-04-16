@@ -1,3 +1,3 @@
 # `google_tags_tag_binding`
 
-Refer to the Terraform Registry for docs: [`google_tags_tag_binding`](https://registry.terraform.io/providers/hashicorp/google/5.24.0/docs/resources/tags_tag_binding).
+Refer to the Terraform Registry for docs: [`google_tags_tag_binding`](https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/tags_tag_binding).

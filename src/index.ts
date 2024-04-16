@@ -229,6 +229,7 @@ export * as computeInstanceGroupNamedPort from './compute-instance-group-named-p
 export * as computeInstanceIamBinding from './compute-instance-iam-binding';
 export * as computeInstanceIamMember from './compute-instance-iam-member';
 export * as computeInstanceIamPolicy from './compute-instance-iam-policy';
+export * as computeInstanceSettings from './compute-instance-settings';
 export * as computeInstanceTemplate from './compute-instance-template';
 export * as computeInterconnectAttachment from './compute-interconnect-attachment';
 export * as computeManagedSslCertificate from './compute-managed-ssl-certificate';
@@ -1030,8 +1031,10 @@ export * as dataGoogleStorageProjectServiceAccount from './data-google-storage-p
 export * as dataGoogleStorageTransferProjectServiceAccount from './data-google-storage-transfer-project-service-account';
 export * as dataGoogleTagsTagKey from './data-google-tags-tag-key';
 export * as dataGoogleTagsTagKeyIamPolicy from './data-google-tags-tag-key-iam-policy';
+export * as dataGoogleTagsTagKeys from './data-google-tags-tag-keys';
 export * as dataGoogleTagsTagValue from './data-google-tags-tag-value';
 export * as dataGoogleTagsTagValueIamPolicy from './data-google-tags-tag-value-iam-policy';
+export * as dataGoogleTagsTagValues from './data-google-tags-tag-values';
 export * as dataGoogleTpuTensorflowVersions from './data-google-tpu-tensorflow-versions';
 export * as dataGoogleVertexAiIndex from './data-google-vertex-ai-index';
 export * as dataGoogleVmwareengineCluster from './data-google-vmwareengine-cluster';
