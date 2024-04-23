@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses
+// https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -36,11 +31,11 @@ export interface DataGoogleComputeAddressesConfig extends cdktf.TerraformMetaArg
   * (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
   * AND (scheduling.automaticRestart = true) """
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses#filter DataGoogleComputeAddresses#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses#filter DataGoogleComputeAddresses#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -49,13 +44,13 @@ export interface DataGoogleComputeAddressesConfig extends cdktf.TerraformMetaArg
   /**
   * The google project in which addresses are listed. Defaults to provider's configuration if missing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses#project DataGoogleComputeAddresses#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses#project DataGoogleComputeAddresses#project}
   */
   readonly project?: string;
   /**
   * Region that should be considered to search addresses. All regions are considered if missing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses#region DataGoogleComputeAddresses#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses#region DataGoogleComputeAddresses#region}
   */
   readonly region?: string;
 }
@@ -166,7 +161,7 @@ export class DataGoogleComputeAddressesAddressesList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses google_compute_addresses}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses google_compute_addresses}
 */
 export class DataGoogleComputeAddresses extends cdktf.TerraformDataSource {
 
@@ -182,7 +177,7 @@ export class DataGoogleComputeAddresses extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleComputeAddresses resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeAddresses to import
-  * @param importFromId The id of the existing DataGoogleComputeAddresses that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeAddresses that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeAddresses to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -194,7 +189,7 @@ export class DataGoogleComputeAddresses extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/compute_addresses google_compute_addresses} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/compute_addresses google_compute_addresses} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -205,7 +200,7 @@ export class DataGoogleComputeAddresses extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_addresses',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.25.0',
+        providerVersion: '5.26.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -4,7 +4,7 @@
 
 ### DataGoogleActiveFolder <a name="DataGoogleActiveFolder" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder google_active_folder}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder google_active_folder}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer"></a>
 
@@ -67,6 +67,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.resetApiMethod">ResetApiMethod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.resetId">ResetId</a></code> | *No description.* |
 
 ---
@@ -263,6 +264,12 @@ private IResolvable InterpolationForAttribute(string TerraformAttribute)
 
 ---
 
+##### `ResetApiMethod` <a name="ResetApiMethod" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.resetApiMethod"></a>
+
+```csharp
+private void ResetApiMethod()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.resetId"></a>
 
 ```csharp
@@ -372,7 +379,7 @@ The construct id used in the generated config for the DataGoogleActiveFolder to 
 
 The id of the existing DataGoogleActiveFolder that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -401,9 +408,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.name">Name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.apiMethodInput">ApiMethodInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.displayNameInput">DisplayNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.parentInput">ParentInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.apiMethod">ApiMethod</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.displayName">DisplayName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.parent">Parent</a></code> | <code>string</code> | *No description.* |
@@ -542,6 +551,16 @@ public string Name { get; }
 
 ---
 
+##### `ApiMethodInput`<sup>Optional</sup> <a name="ApiMethodInput" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.apiMethodInput"></a>
+
+```csharp
+public string ApiMethodInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `DisplayNameInput`<sup>Optional</sup> <a name="DisplayNameInput" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.displayNameInput"></a>
 
 ```csharp
@@ -566,6 +585,16 @@ public string IdInput { get; }
 
 ```csharp
 public string ParentInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ApiMethod`<sup>Required</sup> <a name="ApiMethod" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.apiMethod"></a>
+
+```csharp
+public string ApiMethod { get; }
 ```
 
 - *Type:* string
@@ -639,6 +668,7 @@ new DataGoogleActiveFolderConfig {
     object[] Provisioners = null,
     string DisplayName,
     string Parent,
+    string ApiMethod = null,
     string Id = null
 };
 ```
@@ -654,9 +684,10 @@ new DataGoogleActiveFolderConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.apiMethod">ApiMethod</a></code> | <code>string</code> | Provides the REST method through which to find the folder. LIST is recommended as it is strongly consistent. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}. |
 
 ---
 
@@ -738,7 +769,7 @@ public string DisplayName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}.
 
 ---
 
@@ -750,7 +781,21 @@ public string Parent { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}.
+
+---
+
+##### `ApiMethod`<sup>Optional</sup> <a name="ApiMethod" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.apiMethod"></a>
+
+```csharp
+public string ApiMethod { get; set; }
+```
+
+- *Type:* string
+
+Provides the REST method through which to find the folder. LIST is recommended as it is strongly consistent.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#api_method DataGoogleActiveFolder#api_method}
 
 ---
 
@@ -762,7 +807,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

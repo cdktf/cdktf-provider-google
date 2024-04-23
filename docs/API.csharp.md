@@ -926,6 +926,7 @@ The following submodules are available:
 - [projectIamBinding](./projectIamBinding.csharp.md)
 - [projectIamCustomRole](./projectIamCustomRole.csharp.md)
 - [projectIamMember](./projectIamMember.csharp.md)
+- [projectIamMemberRemove](./projectIamMemberRemove.csharp.md)
 - [projectIamPolicy](./projectIamPolicy.csharp.md)
 - [projectOrganizationPolicy](./projectOrganizationPolicy.csharp.md)
 - [projectService](./projectService.csharp.md)

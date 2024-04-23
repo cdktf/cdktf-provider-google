@@ -926,6 +926,7 @@ The following submodules are available:
 - [projectIamBinding](./projectIamBinding.typescript.md)
 - [projectIamCustomRole](./projectIamCustomRole.typescript.md)
 - [projectIamMember](./projectIamMember.typescript.md)
+- [projectIamMemberRemove](./projectIamMemberRemove.typescript.md)
 - [projectIamPolicy](./projectIamPolicy.typescript.md)
 - [projectOrganizationPolicy](./projectOrganizationPolicy.typescript.md)
 - [projectService](./projectService.typescript.md)

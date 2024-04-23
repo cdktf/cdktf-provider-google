@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository
+// https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,13 +11,13 @@ export interface ArtifactRegistryRepositoryConfig extends cdktf.TerraformMetaArg
   * If true, the cleanup pipeline is prevented from deleting versions in this
   * repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#cleanup_policy_dry_run ArtifactRegistryRepository#cleanup_policy_dry_run}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#cleanup_policy_dry_run ArtifactRegistryRepository#cleanup_policy_dry_run}
   */
   readonly cleanupPolicyDryRun?: boolean | cdktf.IResolvable;
   /**
   * The user-provided description of the repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#description ArtifactRegistryRepository#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#description ArtifactRegistryRepository#description}
   */
   readonly description?: string;
   /**
@@ -31,11 +26,11 @@ export interface ArtifactRegistryRepositoryConfig extends cdktf.TerraformMetaArg
   * You can only create alpha formats if you are a member of the
   * [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#format ArtifactRegistryRepository#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#format ArtifactRegistryRepository#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#id ArtifactRegistryRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#id ArtifactRegistryRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -47,7 +42,7 @@ export interface ArtifactRegistryRepositoryConfig extends cdktf.TerraformMetaArg
   * 'projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key'.
   * This value may not be changed after the Repository has been created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#kms_key_name ArtifactRegistryRepository#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#kms_key_name ArtifactRegistryRepository#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
@@ -61,66 +56,66 @@ export interface ArtifactRegistryRepositoryConfig extends cdktf.TerraformMetaArg
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#labels ArtifactRegistryRepository#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#labels ArtifactRegistryRepository#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the location this repository is located in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#location ArtifactRegistryRepository#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#location ArtifactRegistryRepository#location}
   */
   readonly location?: string;
   /**
   * The mode configures the repository to serve artifacts from different sources. Default value: "STANDARD_REPOSITORY" Possible values: ["STANDARD_REPOSITORY", "VIRTUAL_REPOSITORY", "REMOTE_REPOSITORY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#mode ArtifactRegistryRepository#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#mode ArtifactRegistryRepository#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#project ArtifactRegistryRepository#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#project ArtifactRegistryRepository#project}
   */
   readonly project?: string;
   /**
   * The last part of the repository name, for example:
   * "repo1"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#repository_id ArtifactRegistryRepository#repository_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#repository_id ArtifactRegistryRepository#repository_id}
   */
   readonly repositoryId: string;
   /**
   * cleanup_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#cleanup_policies ArtifactRegistryRepository#cleanup_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#cleanup_policies ArtifactRegistryRepository#cleanup_policies}
   */
   readonly cleanupPolicies?: ArtifactRegistryRepositoryCleanupPolicies[] | cdktf.IResolvable;
   /**
   * docker_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#docker_config ArtifactRegistryRepository#docker_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#docker_config ArtifactRegistryRepository#docker_config}
   */
   readonly dockerConfig?: ArtifactRegistryRepositoryDockerConfig;
   /**
   * maven_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#maven_config ArtifactRegistryRepository#maven_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#maven_config ArtifactRegistryRepository#maven_config}
   */
   readonly mavenConfig?: ArtifactRegistryRepositoryMavenConfig;
   /**
   * remote_repository_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#remote_repository_config ArtifactRegistryRepository#remote_repository_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#remote_repository_config ArtifactRegistryRepository#remote_repository_config}
   */
   readonly remoteRepositoryConfig?: ArtifactRegistryRepositoryRemoteRepositoryConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#timeouts ArtifactRegistryRepository#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#timeouts ArtifactRegistryRepository#timeouts}
   */
   readonly timeouts?: ArtifactRegistryRepositoryTimeouts;
   /**
   * virtual_repository_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#virtual_repository_config ArtifactRegistryRepository#virtual_repository_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#virtual_repository_config ArtifactRegistryRepository#virtual_repository_config}
   */
   readonly virtualRepositoryConfig?: ArtifactRegistryRepositoryVirtualRepositoryConfig;
 }
@@ -128,37 +123,37 @@ export interface ArtifactRegistryRepositoryCleanupPoliciesCondition {
   /**
   * Match versions newer than a duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#newer_than ArtifactRegistryRepository#newer_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#newer_than ArtifactRegistryRepository#newer_than}
   */
   readonly newerThan?: string;
   /**
   * Match versions older than a duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#older_than ArtifactRegistryRepository#older_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#older_than ArtifactRegistryRepository#older_than}
   */
   readonly olderThan?: string;
   /**
   * Match versions by package prefix. Applied on any prefix match.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#package_name_prefixes ArtifactRegistryRepository#package_name_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#package_name_prefixes ArtifactRegistryRepository#package_name_prefixes}
   */
   readonly packageNamePrefixes?: string[];
   /**
   * Match versions by tag prefix. Applied on any prefix match.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#tag_prefixes ArtifactRegistryRepository#tag_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#tag_prefixes ArtifactRegistryRepository#tag_prefixes}
   */
   readonly tagPrefixes?: string[];
   /**
   * Match versions by tag status. Default value: "ANY" Possible values: ["TAGGED", "UNTAGGED", "ANY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#tag_state ArtifactRegistryRepository#tag_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#tag_state ArtifactRegistryRepository#tag_state}
   */
   readonly tagState?: string;
   /**
   * Match versions by version name prefix. Applied on any prefix match.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#version_name_prefixes ArtifactRegistryRepository#version_name_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#version_name_prefixes ArtifactRegistryRepository#version_name_prefixes}
   */
   readonly versionNamePrefixes?: string[];
 }
@@ -389,13 +384,13 @@ export interface ArtifactRegistryRepositoryCleanupPoliciesMostRecentVersions {
   /**
   * Minimum number of versions to keep.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#keep_count ArtifactRegistryRepository#keep_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#keep_count ArtifactRegistryRepository#keep_count}
   */
   readonly keepCount?: number;
   /**
   * Match versions by package prefix. Applied on any prefix match.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#package_name_prefixes ArtifactRegistryRepository#package_name_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#package_name_prefixes ArtifactRegistryRepository#package_name_prefixes}
   */
   readonly packageNamePrefixes?: string[];
 }
@@ -510,11 +505,11 @@ export interface ArtifactRegistryRepositoryCleanupPolicies {
   /**
   * Policy action. Possible values: ["DELETE", "KEEP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#action ArtifactRegistryRepository#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#action ArtifactRegistryRepository#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#id ArtifactRegistryRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#id ArtifactRegistryRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -523,13 +518,13 @@ export interface ArtifactRegistryRepositoryCleanupPolicies {
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#condition ArtifactRegistryRepository#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#condition ArtifactRegistryRepository#condition}
   */
   readonly condition?: ArtifactRegistryRepositoryCleanupPoliciesCondition;
   /**
   * most_recent_versions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#most_recent_versions ArtifactRegistryRepository#most_recent_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#most_recent_versions ArtifactRegistryRepository#most_recent_versions}
   */
   readonly mostRecentVersions?: ArtifactRegistryRepositoryCleanupPoliciesMostRecentVersions;
 }
@@ -731,7 +726,7 @@ export interface ArtifactRegistryRepositoryDockerConfig {
   /**
   * The repository which enabled this flag prevents all tags from being modified, moved or deleted. This does not prevent tags from being created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#immutable_tags ArtifactRegistryRepository#immutable_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#immutable_tags ArtifactRegistryRepository#immutable_tags}
   */
   readonly immutableTags?: boolean | cdktf.IResolvable;
 }
@@ -818,13 +813,13 @@ export interface ArtifactRegistryRepositoryMavenConfig {
   * The repository with this flag will allow publishing the same
   * snapshot versions.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#allow_snapshot_overwrites ArtifactRegistryRepository#allow_snapshot_overwrites}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#allow_snapshot_overwrites ArtifactRegistryRepository#allow_snapshot_overwrites}
   */
   readonly allowSnapshotOverwrites?: boolean | cdktf.IResolvable;
   /**
   * Version policy defines the versions that the registry will accept. Default value: "VERSION_POLICY_UNSPECIFIED" Possible values: ["VERSION_POLICY_UNSPECIFIED", "RELEASE", "SNAPSHOT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#version_policy ArtifactRegistryRepository#version_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#version_policy ArtifactRegistryRepository#version_policy}
   */
   readonly versionPolicy?: string;
 }
@@ -939,13 +934,13 @@ export interface ArtifactRegistryRepositoryRemoteRepositoryConfigAptRepositoryPu
   /**
   * A common public repository base for Apt, e.g. '"debian/dists/buster"' Possible values: ["DEBIAN", "UBUNTU"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#repository_base ArtifactRegistryRepository#repository_base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#repository_base ArtifactRegistryRepository#repository_base}
   */
   readonly repositoryBase: string;
   /**
   * Specific repository from the base.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#repository_path ArtifactRegistryRepository#repository_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#repository_path ArtifactRegistryRepository#repository_path}
   */
   readonly repositoryPath: string;
 }
@@ -1054,7 +1049,7 @@ export interface ArtifactRegistryRepositoryRemoteRepositoryConfigAptRepository {
   /**
   * public_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
   */
   readonly publicRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigAptRepositoryPublicRepository;
 }
@@ -1136,13 +1131,105 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigAptRepositoryOutput
     return this._publicRepository.internalValue;
   }
 }
+export interface ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepository {
+  /**
+  * Specific uri to the registry, e.g. '"https://registry-1.docker.io"'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#uri ArtifactRegistryRepository#uri}
+  */
+  readonly uri?: string;
+}
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryToHclTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepository | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepository | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._uri = value.uri;
+    }
+  }
+
+  // uri - computed: false, optional: true, required: false
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  public resetUri() {
+    this._uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
 export interface ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepository {
   /**
   * Address of the remote repository. Default value: "DOCKER_HUB" Possible values: ["DOCKER_HUB"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
   */
   readonly publicRepository?: string;
+  /**
+  * custom_repository block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#custom_repository ArtifactRegistryRepository#custom_repository}
+  */
+  readonly customRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepository;
 }
 
 export function artifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepository): any {
@@ -1152,6 +1239,7 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigDockerRepository
   }
   return {
     public_repository: cdktf.stringToTerraform(struct!.publicRepository),
+    custom_repository: artifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryToTerraform(struct!.customRepository),
   }
 }
 
@@ -1167,6 +1255,12 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigDockerRepository
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    custom_repository: {
+      value: artifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryToHclTerraform(struct!.customRepository),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryList",
     },
   };
 
@@ -1192,6 +1286,10 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryOut
       hasAnyValues = true;
       internalValueResult.publicRepository = this._publicRepository;
     }
+    if (this._customRepository?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customRepository = this._customRepository?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1199,10 +1297,12 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryOut
     if (value === undefined) {
       this.isEmptyObject = false;
       this._publicRepository = undefined;
+      this._customRepository.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._publicRepository = value.publicRepository;
+      this._customRepository.internalValue = value.customRepository;
     }
   }
 
@@ -1221,14 +1321,122 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryOut
   public get publicRepositoryInput() {
     return this._publicRepository;
   }
+
+  // custom_repository - computed: false, optional: true, required: false
+  private _customRepository = new ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepositoryOutputReference(this, "custom_repository");
+  public get customRepository() {
+    return this._customRepository;
+  }
+  public putCustomRepository(value: ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryCustomRepository) {
+    this._customRepository.internalValue = value;
+  }
+  public resetCustomRepository() {
+    this._customRepository.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRepositoryInput() {
+    return this._customRepository.internalValue;
+  }
+}
+export interface ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepository {
+  /**
+  * Specific uri to the registry, e.g. '"https://repo.maven.apache.org/maven2"'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#uri ArtifactRegistryRepository#uri}
+  */
+  readonly uri?: string;
+}
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryToHclTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepository | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepository | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._uri = value.uri;
+    }
+  }
+
+  // uri - computed: false, optional: true, required: false
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  public resetUri() {
+    this._uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
 }
 export interface ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepository {
   /**
   * Address of the remote repository. Default value: "MAVEN_CENTRAL" Possible values: ["MAVEN_CENTRAL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
   */
   readonly publicRepository?: string;
+  /**
+  * custom_repository block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#custom_repository ArtifactRegistryRepository#custom_repository}
+  */
+  readonly customRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepository;
 }
 
 export function artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepository): any {
@@ -1238,6 +1446,7 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryT
   }
   return {
     public_repository: cdktf.stringToTerraform(struct!.publicRepository),
+    custom_repository: artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryToTerraform(struct!.customRepository),
   }
 }
 
@@ -1253,6 +1462,12 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryT
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    custom_repository: {
+      value: artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryToHclTerraform(struct!.customRepository),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryList",
     },
   };
 
@@ -1278,6 +1493,10 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryOutp
       hasAnyValues = true;
       internalValueResult.publicRepository = this._publicRepository;
     }
+    if (this._customRepository?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customRepository = this._customRepository?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1285,10 +1504,12 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryOutp
     if (value === undefined) {
       this.isEmptyObject = false;
       this._publicRepository = undefined;
+      this._customRepository.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._publicRepository = value.publicRepository;
+      this._customRepository.internalValue = value.customRepository;
     }
   }
 
@@ -1307,14 +1528,122 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryOutp
   public get publicRepositoryInput() {
     return this._publicRepository;
   }
+
+  // custom_repository - computed: false, optional: true, required: false
+  private _customRepository = new ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepositoryOutputReference(this, "custom_repository");
+  public get customRepository() {
+    return this._customRepository;
+  }
+  public putCustomRepository(value: ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryCustomRepository) {
+    this._customRepository.internalValue = value;
+  }
+  public resetCustomRepository() {
+    this._customRepository.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRepositoryInput() {
+    return this._customRepository.internalValue;
+  }
+}
+export interface ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepository {
+  /**
+  * Specific uri to the registry, e.g. '"https://registry.npmjs.org"'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#uri ArtifactRegistryRepository#uri}
+  */
+  readonly uri?: string;
+}
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryToHclTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepository | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepository | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._uri = value.uri;
+    }
+  }
+
+  // uri - computed: false, optional: true, required: false
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  public resetUri() {
+    this._uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
 }
 export interface ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepository {
   /**
   * Address of the remote repository. Default value: "NPMJS" Possible values: ["NPMJS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
   */
   readonly publicRepository?: string;
+  /**
+  * custom_repository block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#custom_repository ArtifactRegistryRepository#custom_repository}
+  */
+  readonly customRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepository;
 }
 
 export function artifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepository): any {
@@ -1324,6 +1653,7 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryToT
   }
   return {
     public_repository: cdktf.stringToTerraform(struct!.publicRepository),
+    custom_repository: artifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryToTerraform(struct!.customRepository),
   }
 }
 
@@ -1339,6 +1669,12 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryToH
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    custom_repository: {
+      value: artifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryToHclTerraform(struct!.customRepository),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryList",
     },
   };
 
@@ -1364,6 +1700,10 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryOutput
       hasAnyValues = true;
       internalValueResult.publicRepository = this._publicRepository;
     }
+    if (this._customRepository?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customRepository = this._customRepository?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1371,10 +1711,12 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryOutput
     if (value === undefined) {
       this.isEmptyObject = false;
       this._publicRepository = undefined;
+      this._customRepository.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._publicRepository = value.publicRepository;
+      this._customRepository.internalValue = value.customRepository;
     }
   }
 
@@ -1393,14 +1735,122 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryOutput
   public get publicRepositoryInput() {
     return this._publicRepository;
   }
+
+  // custom_repository - computed: false, optional: true, required: false
+  private _customRepository = new ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepositoryOutputReference(this, "custom_repository");
+  public get customRepository() {
+    return this._customRepository;
+  }
+  public putCustomRepository(value: ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepositoryCustomRepository) {
+    this._customRepository.internalValue = value;
+  }
+  public resetCustomRepository() {
+    this._customRepository.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRepositoryInput() {
+    return this._customRepository.internalValue;
+  }
+}
+export interface ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepository {
+  /**
+  * Specific uri to the registry, e.g. '"https://pypi.io"'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#uri ArtifactRegistryRepository#uri}
+  */
+  readonly uri?: string;
+}
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+
+export function artifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryToHclTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepository | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepository | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._uri = value.uri;
+    }
+  }
+
+  // uri - computed: false, optional: true, required: false
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  public resetUri() {
+    this._uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
 }
 export interface ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepository {
   /**
   * Address of the remote repository. Default value: "PYPI" Possible values: ["PYPI"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
   */
   readonly publicRepository?: string;
+  /**
+  * custom_repository block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#custom_repository ArtifactRegistryRepository#custom_repository}
+  */
+  readonly customRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepository;
 }
 
 export function artifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryToTerraform(struct?: ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryOutputReference | ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepository): any {
@@ -1410,6 +1860,7 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigPythonRepository
   }
   return {
     public_repository: cdktf.stringToTerraform(struct!.publicRepository),
+    custom_repository: artifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryToTerraform(struct!.customRepository),
   }
 }
 
@@ -1425,6 +1876,12 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigPythonRepository
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    custom_repository: {
+      value: artifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryToHclTerraform(struct!.customRepository),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryList",
     },
   };
 
@@ -1450,6 +1907,10 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryOut
       hasAnyValues = true;
       internalValueResult.publicRepository = this._publicRepository;
     }
+    if (this._customRepository?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customRepository = this._customRepository?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1457,10 +1918,12 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryOut
     if (value === undefined) {
       this.isEmptyObject = false;
       this._publicRepository = undefined;
+      this._customRepository.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._publicRepository = value.publicRepository;
+      this._customRepository.internalValue = value.customRepository;
     }
   }
 
@@ -1479,6 +1942,22 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryOut
   public get publicRepositoryInput() {
     return this._publicRepository;
   }
+
+  // custom_repository - computed: false, optional: true, required: false
+  private _customRepository = new ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepositoryOutputReference(this, "custom_repository");
+  public get customRepository() {
+    return this._customRepository;
+  }
+  public putCustomRepository(value: ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepositoryCustomRepository) {
+    this._customRepository.internalValue = value;
+  }
+  public resetCustomRepository() {
+    this._customRepository.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRepositoryInput() {
+    return this._customRepository.internalValue;
+  }
 }
 export interface ArtifactRegistryRepositoryRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials {
   /**
@@ -1486,13 +1965,13 @@ export interface ArtifactRegistryRepositoryRemoteRepositoryConfigUpstreamCredent
   * remote repository. Must be in the format of
   * 'projects/{project}/secrets/{secret}/versions/{version}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#password_secret_version ArtifactRegistryRepository#password_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#password_secret_version ArtifactRegistryRepository#password_secret_version}
   */
   readonly passwordSecretVersion?: string;
   /**
   * The username to access the remote repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#username ArtifactRegistryRepository#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#username ArtifactRegistryRepository#username}
   */
   readonly username?: string;
 }
@@ -1607,7 +2086,7 @@ export interface ArtifactRegistryRepositoryRemoteRepositoryConfigUpstreamCredent
   /**
   * username_password_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#username_password_credentials ArtifactRegistryRepository#username_password_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#username_password_credentials ArtifactRegistryRepository#username_password_credentials}
   */
   readonly usernamePasswordCredentials?: ArtifactRegistryRepositoryRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials;
 }
@@ -1693,13 +2172,13 @@ export interface ArtifactRegistryRepositoryRemoteRepositoryConfigYumRepositoryPu
   /**
   * A common public repository base for Yum. Possible values: ["CENTOS", "CENTOS_DEBUG", "CENTOS_VAULT", "CENTOS_STREAM", "ROCKY", "EPEL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#repository_base ArtifactRegistryRepository#repository_base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#repository_base ArtifactRegistryRepository#repository_base}
   */
   readonly repositoryBase: string;
   /**
   * Specific repository from the base, e.g. '"centos/8-stream/BaseOS/x86_64/os"'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#repository_path ArtifactRegistryRepository#repository_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#repository_path ArtifactRegistryRepository#repository_path}
   */
   readonly repositoryPath: string;
 }
@@ -1808,7 +2287,7 @@ export interface ArtifactRegistryRepositoryRemoteRepositoryConfigYumRepository {
   /**
   * public_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#public_repository ArtifactRegistryRepository#public_repository}
   */
   readonly publicRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigYumRepositoryPublicRepository;
 }
@@ -1894,49 +2373,56 @@ export interface ArtifactRegistryRepositoryRemoteRepositoryConfig {
   /**
   * The description of the remote source.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#description ArtifactRegistryRepository#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#description ArtifactRegistryRepository#description}
   */
   readonly description?: string;
   /**
+  * If true, the remote repository upstream and upstream credentials will
+  * not be validated.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#disable_upstream_validation ArtifactRegistryRepository#disable_upstream_validation}
+  */
+  readonly disableUpstreamValidation?: boolean | cdktf.IResolvable;
+  /**
   * apt_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#apt_repository ArtifactRegistryRepository#apt_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#apt_repository ArtifactRegistryRepository#apt_repository}
   */
   readonly aptRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigAptRepository;
   /**
   * docker_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#docker_repository ArtifactRegistryRepository#docker_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#docker_repository ArtifactRegistryRepository#docker_repository}
   */
   readonly dockerRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigDockerRepository;
   /**
   * maven_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#maven_repository ArtifactRegistryRepository#maven_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#maven_repository ArtifactRegistryRepository#maven_repository}
   */
   readonly mavenRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigMavenRepository;
   /**
   * npm_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#npm_repository ArtifactRegistryRepository#npm_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#npm_repository ArtifactRegistryRepository#npm_repository}
   */
   readonly npmRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigNpmRepository;
   /**
   * python_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#python_repository ArtifactRegistryRepository#python_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#python_repository ArtifactRegistryRepository#python_repository}
   */
   readonly pythonRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigPythonRepository;
   /**
   * upstream_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#upstream_credentials ArtifactRegistryRepository#upstream_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#upstream_credentials ArtifactRegistryRepository#upstream_credentials}
   */
   readonly upstreamCredentials?: ArtifactRegistryRepositoryRemoteRepositoryConfigUpstreamCredentials;
   /**
   * yum_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#yum_repository ArtifactRegistryRepository#yum_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#yum_repository ArtifactRegistryRepository#yum_repository}
   */
   readonly yumRepository?: ArtifactRegistryRepositoryRemoteRepositoryConfigYumRepository;
 }
@@ -1948,6 +2434,7 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigToTerraform(stru
   }
   return {
     description: cdktf.stringToTerraform(struct!.description),
+    disable_upstream_validation: cdktf.booleanToTerraform(struct!.disableUpstreamValidation),
     apt_repository: artifactRegistryRepositoryRemoteRepositoryConfigAptRepositoryToTerraform(struct!.aptRepository),
     docker_repository: artifactRegistryRepositoryRemoteRepositoryConfigDockerRepositoryToTerraform(struct!.dockerRepository),
     maven_repository: artifactRegistryRepositoryRemoteRepositoryConfigMavenRepositoryToTerraform(struct!.mavenRepository),
@@ -1970,6 +2457,12 @@ export function artifactRegistryRepositoryRemoteRepositoryConfigToHclTerraform(s
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    disable_upstream_validation: {
+      value: cdktf.booleanToHclTerraform(struct!.disableUpstreamValidation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
     },
     apt_repository: {
       value: artifactRegistryRepositoryRemoteRepositoryConfigAptRepositoryToHclTerraform(struct!.aptRepository),
@@ -2037,6 +2530,10 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigOutputReference ext
       hasAnyValues = true;
       internalValueResult.description = this._description;
     }
+    if (this._disableUpstreamValidation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disableUpstreamValidation = this._disableUpstreamValidation;
+    }
     if (this._aptRepository?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.aptRepository = this._aptRepository?.internalValue;
@@ -2072,6 +2569,7 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigOutputReference ext
     if (value === undefined) {
       this.isEmptyObject = false;
       this._description = undefined;
+      this._disableUpstreamValidation = undefined;
       this._aptRepository.internalValue = undefined;
       this._dockerRepository.internalValue = undefined;
       this._mavenRepository.internalValue = undefined;
@@ -2083,6 +2581,7 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigOutputReference ext
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
+      this._disableUpstreamValidation = value.disableUpstreamValidation;
       this._aptRepository.internalValue = value.aptRepository;
       this._dockerRepository.internalValue = value.dockerRepository;
       this._mavenRepository.internalValue = value.mavenRepository;
@@ -2107,6 +2606,22 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigOutputReference ext
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // disable_upstream_validation - computed: false, optional: true, required: false
+  private _disableUpstreamValidation?: boolean | cdktf.IResolvable; 
+  public get disableUpstreamValidation() {
+    return this.getBooleanAttribute('disable_upstream_validation');
+  }
+  public set disableUpstreamValidation(value: boolean | cdktf.IResolvable) {
+    this._disableUpstreamValidation = value;
+  }
+  public resetDisableUpstreamValidation() {
+    this._disableUpstreamValidation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableUpstreamValidationInput() {
+    return this._disableUpstreamValidation;
   }
 
   // apt_repository - computed: false, optional: true, required: false
@@ -2223,15 +2738,15 @@ export class ArtifactRegistryRepositoryRemoteRepositoryConfigOutputReference ext
 }
 export interface ArtifactRegistryRepositoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#create ArtifactRegistryRepository#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#create ArtifactRegistryRepository#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#delete ArtifactRegistryRepository#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#delete ArtifactRegistryRepository#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#update ArtifactRegistryRepository#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#update ArtifactRegistryRepository#update}
   */
   readonly update?: string;
 }
@@ -2385,7 +2900,7 @@ export interface ArtifactRegistryRepositoryVirtualRepositoryConfigUpstreamPolici
   /**
   * The user-provided ID of the upstream policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#id ArtifactRegistryRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#id ArtifactRegistryRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2394,14 +2909,14 @@ export interface ArtifactRegistryRepositoryVirtualRepositoryConfigUpstreamPolici
   /**
   * Entries with a greater priority value take precedence in the pull order.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#priority ArtifactRegistryRepository#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#priority ArtifactRegistryRepository#priority}
   */
   readonly priority?: number;
   /**
   * A reference to the repository resource, for example:
   * "projects/p1/locations/us-central1/repository/repo1".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#repository ArtifactRegistryRepository#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#repository ArtifactRegistryRepository#repository}
   */
   readonly repository?: string;
 }
@@ -2577,7 +3092,7 @@ export interface ArtifactRegistryRepositoryVirtualRepositoryConfig {
   /**
   * upstream_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#upstream_policies ArtifactRegistryRepository#upstream_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#upstream_policies ArtifactRegistryRepository#upstream_policies}
   */
   readonly upstreamPolicies?: ArtifactRegistryRepositoryVirtualRepositoryConfigUpstreamPolicies[] | cdktf.IResolvable;
 }
@@ -2661,7 +3176,7 @@ export class ArtifactRegistryRepositoryVirtualRepositoryConfigOutputReference ex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository google_artifact_registry_repository}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository google_artifact_registry_repository}
 */
 export class ArtifactRegistryRepository extends cdktf.TerraformResource {
 
@@ -2677,7 +3192,7 @@ export class ArtifactRegistryRepository extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ArtifactRegistryRepository resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ArtifactRegistryRepository to import
-  * @param importFromId The id of the existing ArtifactRegistryRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ArtifactRegistryRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ArtifactRegistryRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2689,7 +3204,7 @@ export class ArtifactRegistryRepository extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/artifact_registry_repository google_artifact_registry_repository} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/artifact_registry_repository google_artifact_registry_repository} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2700,7 +3215,7 @@ export class ArtifactRegistryRepository extends cdktf.TerraformResource {
       terraformResourceType: 'google_artifact_registry_repository',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.25.0',
+        providerVersion: '5.26.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -4,7 +4,7 @@
 
 ### IntegrationsClient <a name="IntegrationsClient" id="@cdktf/provider-google.integrationsClient.IntegrationsClient"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client google_integrations_client}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client google_integrations_client}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.Initializer"></a>
 
@@ -542,7 +542,7 @@ The construct id used in the generated config for the IntegrationsClient to impo
 
 The id of the existing IntegrationsClient that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -948,7 +948,7 @@ A Cloud KMS key is a named object containing one or more key versions, along wit
 A key exists on exactly one key ring tied to a
 specific location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#key IntegrationsClient#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#key IntegrationsClient#key}
 
 ---
 
@@ -962,7 +962,7 @@ public readonly kmsLocation: string;
 
 Location name of the key ring, e.g. "us-west1".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#kms_location IntegrationsClient#kms_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#kms_location IntegrationsClient#kms_location}
 
 ---
 
@@ -979,7 +979,7 @@ A key ring organizes keys in a specific Google Cloud location and allows you to 
 A key ring's name does not need to be
 unique across a Google Cloud project, but must be unique within a given location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#kms_ring IntegrationsClient#kms_ring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#kms_ring IntegrationsClient#kms_ring}
 
 ---
 
@@ -997,7 +997,7 @@ A key's version is represented by an integer, starting at 1. To decrypt data
 or verify a signature, you must use the same key version that was used to
 encrypt or sign the data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#key_version IntegrationsClient#key_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#key_version IntegrationsClient#key_version}
 
 ---
 
@@ -1016,7 +1016,7 @@ the kms key is stored at the same project as customer's project and ecrypted
 with CMEK, otherwise, the kms key is stored in the tenant project and
 encrypted with GMEK.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#kms_project_id IntegrationsClient#kms_project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#kms_project_id IntegrationsClient#kms_project_id}
 
 ---
 
@@ -1044,8 +1044,8 @@ const integrationsClientConfig: integrationsClient.IntegrationsClientConfig = { 
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.location">location</a></code> | <code>string</code> | Location in which client needs to be provisioned. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.cloudKmsConfig">cloudKmsConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientCloudKmsConfig">IntegrationsClientCloudKmsConfig</a></code> | cloud_kms_config block. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.createSampleWorkflows">createSampleWorkflows</a></code> | <code>boolean \| cdktf.IResolvable</code> | Indicates if sample workflow should be created along with provisioning. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#id IntegrationsClient#id}. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#project IntegrationsClient#project}. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#id IntegrationsClient#id}. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#project IntegrationsClient#project}. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.provisionGmek">provisionGmek</a></code> | <code>boolean \| cdktf.IResolvable</code> | Indicates provision with GMEK or CMEK. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.runAsServiceAccount">runAsServiceAccount</a></code> | <code>string</code> | User input run-as service account, if empty, will bring up a new default service account. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts">IntegrationsClientTimeouts</a></code> | timeouts block. |
@@ -1132,7 +1132,7 @@ public readonly location: string;
 
 Location in which client needs to be provisioned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#location IntegrationsClient#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#location IntegrationsClient#location}
 
 ---
 
@@ -1146,7 +1146,7 @@ public readonly cloudKmsConfig: IntegrationsClientCloudKmsConfig;
 
 cloud_kms_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#cloud_kms_config IntegrationsClient#cloud_kms_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#cloud_kms_config IntegrationsClient#cloud_kms_config}
 
 ---
 
@@ -1160,7 +1160,7 @@ public readonly createSampleWorkflows: boolean | IResolvable;
 
 Indicates if sample workflow should be created along with provisioning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#create_sample_workflows IntegrationsClient#create_sample_workflows}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#create_sample_workflows IntegrationsClient#create_sample_workflows}
 
 ---
 
@@ -1172,7 +1172,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#id IntegrationsClient#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#id IntegrationsClient#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1187,7 +1187,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#project IntegrationsClient#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#project IntegrationsClient#project}.
 
 ---
 
@@ -1201,7 +1201,7 @@ public readonly provisionGmek: boolean | IResolvable;
 
 Indicates provision with GMEK or CMEK.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#provision_gmek IntegrationsClient#provision_gmek}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#provision_gmek IntegrationsClient#provision_gmek}
 
 ---
 
@@ -1215,7 +1215,7 @@ public readonly runAsServiceAccount: string;
 
 User input run-as service account, if empty, will bring up a new default service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#run_as_service_account IntegrationsClient#run_as_service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#run_as_service_account IntegrationsClient#run_as_service_account}
 
 ---
 
@@ -1229,7 +1229,7 @@ public readonly timeouts: IntegrationsClientTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#timeouts IntegrationsClient#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#timeouts IntegrationsClient#timeouts}
 
 ---
 
@@ -1247,8 +1247,8 @@ const integrationsClientTimeouts: integrationsClient.IntegrationsClientTimeouts 
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#create IntegrationsClient#create}. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#delete IntegrationsClient#delete}. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#create IntegrationsClient#create}. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#delete IntegrationsClient#delete}. |
 
 ---
 
@@ -1260,7 +1260,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#create IntegrationsClient#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#create IntegrationsClient#create}.
 
 ---
 
@@ -1272,7 +1272,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/integrations_client#delete IntegrationsClient#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/integrations_client#delete IntegrationsClient#delete}.
 
 ---
 
