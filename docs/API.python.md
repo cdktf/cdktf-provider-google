@@ -926,6 +926,7 @@ The following submodules are available:
 - [projectIamBinding](./projectIamBinding.python.md)
 - [projectIamCustomRole](./projectIamCustomRole.python.md)
 - [projectIamMember](./projectIamMember.python.md)
+- [projectIamMemberRemove](./projectIamMemberRemove.python.md)
 - [projectIamPolicy](./projectIamPolicy.python.md)
 - [projectOrganizationPolicy](./projectOrganizationPolicy.python.md)
 - [projectService](./projectService.python.md)

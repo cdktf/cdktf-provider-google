@@ -668,6 +668,7 @@ Object.defineProperty(exports, 'projectIamAuditConfig', { get: function () { ret
 Object.defineProperty(exports, 'projectIamBinding', { get: function () { return require('./project-iam-binding'); } });
 Object.defineProperty(exports, 'projectIamCustomRole', { get: function () { return require('./project-iam-custom-role'); } });
 Object.defineProperty(exports, 'projectIamMember', { get: function () { return require('./project-iam-member'); } });
+Object.defineProperty(exports, 'projectIamMemberRemove', { get: function () { return require('./project-iam-member-remove'); } });
 Object.defineProperty(exports, 'projectIamPolicy', { get: function () { return require('./project-iam-policy'); } });
 Object.defineProperty(exports, 'projectOrganizationPolicy', { get: function () { return require('./project-organization-policy'); } });
 Object.defineProperty(exports, 'projectService', { get: function () { return require('./project-service'); } });

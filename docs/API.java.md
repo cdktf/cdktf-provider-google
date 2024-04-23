@@ -926,6 +926,7 @@ The following submodules are available:
 - [projectIamBinding](./projectIamBinding.java.md)
 - [projectIamCustomRole](./projectIamCustomRole.java.md)
 - [projectIamMember](./projectIamMember.java.md)
+- [projectIamMemberRemove](./projectIamMemberRemove.java.md)
 - [projectIamPolicy](./projectIamPolicy.java.md)
 - [projectOrganizationPolicy](./projectOrganizationPolicy.java.md)
 - [projectService](./projectService.java.md)

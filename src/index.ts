@@ -668,6 +668,7 @@ export * as projectIamAuditConfig from './project-iam-audit-config';
 export * as projectIamBinding from './project-iam-binding';
 export * as projectIamCustomRole from './project-iam-custom-role';
 export * as projectIamMember from './project-iam-member';
+export * as projectIamMemberRemove from './project-iam-member-remove';
 export * as projectIamPolicy from './project-iam-policy';
 export * as projectOrganizationPolicy from './project-organization-policy';
 export * as projectService from './project-service';

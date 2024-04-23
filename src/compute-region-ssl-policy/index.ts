@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -22,17 +22,17 @@ export interface ComputeRegionSslPolicyConfig extends cdktf.TerraformMetaArgumen
   * *must* be present when using the 'CUSTOM' profile. This argument
   * *must not* be present when using any other profile.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#custom_features ComputeRegionSslPolicy#custom_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#custom_features ComputeRegionSslPolicy#custom_features}
   */
   readonly customFeatures?: string[];
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#description ComputeRegionSslPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#description ComputeRegionSslPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#id ComputeRegionSslPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#id ComputeRegionSslPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -42,7 +42,7 @@ export interface ComputeRegionSslPolicyConfig extends cdktf.TerraformMetaArgumen
   * The minimum version of SSL protocol that can be used by the clients
   * to establish a connection with the load balancer. Default value: "TLS_1_0" Possible values: ["TLS_1_0", "TLS_1_1", "TLS_1_2"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#min_tls_version ComputeRegionSslPolicy#min_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#min_tls_version ComputeRegionSslPolicy#min_tls_version}
   */
   readonly minTlsVersion?: string;
   /**
@@ -54,7 +54,7 @@ export interface ComputeRegionSslPolicyConfig extends cdktf.TerraformMetaArgumen
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#name ComputeRegionSslPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#name ComputeRegionSslPolicy#name}
   */
   readonly name: string;
   /**
@@ -67,37 +67,37 @@ export interface ComputeRegionSslPolicyConfig extends cdktf.TerraformMetaArgumen
   * for information on what cipher suites each profile provides. If
   * 'CUSTOM' is used, the 'custom_features' attribute **must be set**. Default value: "COMPATIBLE" Possible values: ["COMPATIBLE", "MODERN", "RESTRICTED", "CUSTOM"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#profile ComputeRegionSslPolicy#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#profile ComputeRegionSslPolicy#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#project ComputeRegionSslPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#project ComputeRegionSslPolicy#project}
   */
   readonly project?: string;
   /**
   * The region where the regional SSL policy resides.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#region ComputeRegionSslPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#region ComputeRegionSslPolicy#region}
   */
   readonly region: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#timeouts ComputeRegionSslPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#timeouts ComputeRegionSslPolicy#timeouts}
   */
   readonly timeouts?: ComputeRegionSslPolicyTimeouts;
 }
 export interface ComputeRegionSslPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#create ComputeRegionSslPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#create ComputeRegionSslPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#delete ComputeRegionSslPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#delete ComputeRegionSslPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#update ComputeRegionSslPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#update ComputeRegionSslPolicy#update}
   */
   readonly update?: string;
 }
@@ -249,7 +249,7 @@ export class ComputeRegionSslPolicyTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy google_compute_region_ssl_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy google_compute_region_ssl_policy}
 */
 export class ComputeRegionSslPolicy extends cdktf.TerraformResource {
 
@@ -265,7 +265,7 @@ export class ComputeRegionSslPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRegionSslPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRegionSslPolicy to import
-  * @param importFromId The id of the existing ComputeRegionSslPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRegionSslPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRegionSslPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -277,7 +277,7 @@ export class ComputeRegionSslPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/resources/compute_region_ssl_policy google_compute_region_ssl_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/compute_region_ssl_policy google_compute_region_ssl_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -288,7 +288,7 @@ export class ComputeRegionSslPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_ssl_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.25.0',
+        providerVersion: '5.26.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/dns_managed_zones
+// https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/dns_managed_zones
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,22 +13,14 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDnsManagedZonesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * The ID of the project for the Google Cloud.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/dns_managed_zones#project DataGoogleDnsManagedZones#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/dns_managed_zones#project DataGoogleDnsManagedZones#project}
   */
   readonly project?: string;
-  /**
-  * managed_zones block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/dns_managed_zones#managed_zones DataGoogleDnsManagedZones#managed_zones}
-  */
-  readonly managedZones?: DataGoogleDnsManagedZonesManagedZones[] | cdktf.IResolvable;
 }
 export interface DataGoogleDnsManagedZonesManagedZones {
 }
 
-export function dataGoogleDnsManagedZonesManagedZonesToTerraform(struct?: DataGoogleDnsManagedZonesManagedZones | cdktf.IResolvable): any {
+export function dataGoogleDnsManagedZonesManagedZonesToTerraform(struct?: DataGoogleDnsManagedZonesManagedZones): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -38,7 +30,7 @@ export function dataGoogleDnsManagedZonesManagedZonesToTerraform(struct?: DataGo
 }
 
 
-export function dataGoogleDnsManagedZonesManagedZonesToHclTerraform(struct?: DataGoogleDnsManagedZonesManagedZones | cdktf.IResolvable): any {
+export function dataGoogleDnsManagedZonesManagedZonesToHclTerraform(struct?: DataGoogleDnsManagedZonesManagedZones): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -50,7 +42,6 @@ export function dataGoogleDnsManagedZonesManagedZonesToHclTerraform(struct?: Dat
 
 export class DataGoogleDnsManagedZonesManagedZonesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -62,27 +53,18 @@ export class DataGoogleDnsManagedZonesManagedZonesOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): DataGoogleDnsManagedZonesManagedZones | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): DataGoogleDnsManagedZonesManagedZones | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataGoogleDnsManagedZonesManagedZones | cdktf.IResolvable | undefined) {
+  public set internalValue(value: DataGoogleDnsManagedZonesManagedZones | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
     }
   }
 
@@ -128,7 +110,6 @@ export class DataGoogleDnsManagedZonesManagedZonesOutputReference extends cdktf.
 }
 
 export class DataGoogleDnsManagedZonesManagedZonesList extends cdktf.ComplexList {
-  public internalValue? : DataGoogleDnsManagedZonesManagedZones[] | cdktf.IResolvable
 
   /**
   * @param terraformResource The parent resource
@@ -148,7 +129,7 @@ export class DataGoogleDnsManagedZonesManagedZonesList extends cdktf.ComplexList
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/dns_managed_zones google_dns_managed_zones}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/dns_managed_zones google_dns_managed_zones}
 */
 export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
 
@@ -164,7 +145,7 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleDnsManagedZones resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleDnsManagedZones to import
-  * @param importFromId The id of the existing DataGoogleDnsManagedZones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/dns_managed_zones#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleDnsManagedZones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/dns_managed_zones#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleDnsManagedZones to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -176,7 +157,7 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.25.0/docs/data-sources/dns_managed_zones google_dns_managed_zones} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/data-sources/dns_managed_zones google_dns_managed_zones} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -187,7 +168,7 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_dns_managed_zones',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.25.0',
+        providerVersion: '5.26.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -199,7 +180,6 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
       forEach: config.forEach
     });
     this._project = config.project;
-    this._managedZones.internalValue = config.managedZones;
   }
 
   // ==========
@@ -209,6 +189,12 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
   // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // managed_zones - computed: true, optional: false, required: false
+  private _managedZones = new DataGoogleDnsManagedZonesManagedZonesList(this, "managed_zones", false);
+  public get managedZones() {
+    return this._managedZones;
   }
 
   // project - computed: false, optional: true, required: false
@@ -227,22 +213,6 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
     return this._project;
   }
 
-  // managed_zones - computed: false, optional: true, required: false
-  private _managedZones = new DataGoogleDnsManagedZonesManagedZonesList(this, "managed_zones", false);
-  public get managedZones() {
-    return this._managedZones;
-  }
-  public putManagedZones(value: DataGoogleDnsManagedZonesManagedZones[] | cdktf.IResolvable) {
-    this._managedZones.internalValue = value;
-  }
-  public resetManagedZones() {
-    this._managedZones.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get managedZonesInput() {
-    return this._managedZones.internalValue;
-  }
-
   // =========
   // SYNTHESIS
   // =========
@@ -250,7 +220,6 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       project: cdktf.stringToTerraform(this._project),
-      managed_zones: cdktf.listMapper(dataGoogleDnsManagedZonesManagedZonesToTerraform, true)(this._managedZones.internalValue),
     };
   }
 
@@ -261,12 +230,6 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
-      },
-      managed_zones: {
-        value: cdktf.listMapperHcl(dataGoogleDnsManagedZonesManagedZonesToHclTerraform, true)(this._managedZones.internalValue),
-        isBlock: true,
-        type: "list",
-        storageClassType: "DataGoogleDnsManagedZonesManagedZonesList",
       },
     };
 
