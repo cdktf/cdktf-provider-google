@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/gke_backup_restore_plan_iam_binding
 // generated from terraform resource schema
 

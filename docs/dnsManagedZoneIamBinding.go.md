@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 dnsmanagedzoneiambinding.NewDnsManagedZoneIamBinding(scope Construct, id *string, config DnsManagedZoneIamBindingConfig) DnsManagedZoneIamBinding
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 dnsmanagedzoneiambinding.DnsManagedZoneIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 dnsmanagedzoneiambinding.DnsManagedZoneIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ dnsmanagedzoneiambinding.DnsManagedZoneIamBinding_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 dnsmanagedzoneiambinding.DnsManagedZoneIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ dnsmanagedzoneiambinding.DnsManagedZoneIamBinding_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 dnsmanagedzoneiambinding.DnsManagedZoneIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -844,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 &dnsmanagedzoneiambinding.DnsManagedZoneIamBindingCondition {
 	Expression: *string,
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 &dnsmanagedzoneiambinding.DnsManagedZoneIamBindingConfig {
 	Connection: interface{},
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambindin
 	ManagedZone: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dnsmanagedzoneiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnsmanagedzoneiambinding"
 
 dnsmanagedzoneiambinding.NewDnsManagedZoneIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DnsManagedZoneIamBindingConditionOutputReference
 ```
